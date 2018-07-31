@@ -1,0 +1,67 @@
+---
+- block:
+  - name: 'Find paths under {{ prometheus_software_root_dir }}, exclude the current installation'
+    # Search for files and directories in this software's installation
+    # directory. If paths *other* than the current release's path exist
+    # then flag them for removal below
+    find:
+      paths: '{{ prometheus_software_root_dir }}'
+      file_type: any
+      recurse: false
+      excludes:
+        - '{{ prometheus_software_version }}'
+        - '{{ prometheus_software_version }}__go-{{ prometheus_go_version }}'
+    register: present_paths
+
+  - name: 'Remove orphan {{ prometheus_software_name }} files and directories in favor of {{ prometheus_software_install_dir }}'
+    # Remove paths flagged for deletion above
+    become: true
+    file:
+      path: '{{ prometheus_cleanup_item.path }}'
+      state: absent
+    with_items: '{{ present_paths.files }}'
+    loop_control:
+      loop_var: prometheus_cleanup_item
+    when: present_paths.files
+  when: prometheus_purge_orphans|bool
+
+- name: 'Unset {{ prometheus_software_name }} specific facts'
+  # This step is taken for the sake of safety. If every installation
+  # overrides these variables, then this step is redundant
+  set_fact:
+    prometheus_exporter: ''
+    prometheus_software_binary: ''
+    prometheus_software_files: []
+    prometheus_software_config: ''
+    prometheus_software_config_file: ''
+    prometheus_software_config_name: ''
+    prometheus_software_command_args: []
+    prometheus_software_dependencies: []
+    prometheus_software_description: ''
+    prometheus_software_documentation: ''
+    prometheus_software_env_vars: []
+    prometheus_software_extra_opts: ''
+    prometheus_software_filename: ''
+    prometheus_software_host: ''
+    prometheus_software_install_dir: ''
+    prometheus_software_installation: ''
+    prometheus_software_instance_port: ''
+    prometheus_software_make_command: 'go get -d && go build'
+    prometheus_software_makefile_make_command: 'make'
+    prometheus_software_name: ''
+    prometheus_software_name_version: ''
+    prometheus_software_port: ''
+    prometheus_software_root_dir: ''
+    prometheus_software_runas: ''
+    prometheus_software_src_path: ''
+    prometheus_software_service_name: ''
+    prometheus_software_bin_url: ''
+    prometheus_software_file_url: ''
+    prometheus_software_service_test: true
+    prometheus_software_src_dir: ''
+    prometheus_software_src_dir_suffix: ''
+    prometheus_software_src_url: ''
+    prometheus_software_src_version: ''
+    prometheus_software_version: ''
+    prometheus_software_unarchive_opts: '{{ prometheus_default_unarchive_opts }}'
+    prometheus_software_port_test: true

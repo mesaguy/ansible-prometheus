@@ -1,0 +1,24 @@
+---
+- name: 'Create {{ ansible_service_mgr }} configuration file for {{ prometheus_software_service_name }} service'
+  become: true
+  template:
+    dest: '/etc/init.d/{{ prometheus_software_service_name }}'
+    src: '../templates/daemon-{{ ansible_service_mgr }}.j2'
+    owner: root
+    group: root
+    mode: 0755
+  register: prometheus_software_init
+
+- name: 'Enable {{ prometheus_software_service_name }} service'
+  become: true
+  service:
+    state: started
+    enabled: true
+    name: '{{ prometheus_software_service_name }}'
+
+- name: 'Restart {{ prometheus_software_service_name }} service'
+  become: true
+  service:
+    name: '{{ prometheus_software_service_name }}'
+    state: restarted
+  when: (prometheus_software_installation is defined and prometheus_software_installation and prometheus_software_installation.changed) or prometheus_software_init.changed or (prometheus_software_cfg is defined and prometheus_software_cfg.changed)

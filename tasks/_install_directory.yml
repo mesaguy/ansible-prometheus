@@ -1,0 +1,14 @@
+---
+- name: 'Create {{ prometheus_software_name_version }} install directory'
+  become: true
+  file:
+    state: directory
+    path: '{{ prometheus_install_dir }}'
+    owner: root
+    group: '{{ prometheus_group }}'
+    mode: 0755
+  with_items:
+    - '{{ prometheus_software_root_dir }}'
+    - '{{ prometheus_software_install_dir }}'
+  loop_control:
+    loop_var: prometheus_install_dir

@@ -1,0 +1,13 @@
+---
+- name: Check apk index present
+  find:
+    paths: /var/cache/apk
+    file_type: file
+    patterns: '*.db'
+  register: apk_indexes
+
+- name: Run the equivalent of 'apk update'
+  become: true
+  apk:
+    update_cache: true
+  when: apk_indexes.matched | int == 0

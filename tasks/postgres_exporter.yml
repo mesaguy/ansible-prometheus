@@ -1,0 +1,38 @@
+---
+- block:
+  - name: 'Include role mesaguy.prometheus setup task'
+    include_tasks: _setup.yml
+  when: prometheus_setup_task_executed is not defined
+
+- name: 'Starting postgres_exporter install'
+  set_fact:
+    prometheus_exporter: true
+    prometheus_software_env_vars: '{{ prometheus_postgres_exporter_env_vars | default([]) }}'
+    prometheus_software_extra_opts: '{{ prometheus_postgres_exporter_extra_opts | default() }}'
+    prometheus_software_make_command: 'go run mage.go binary'
+    prometheus_software_makefile_make_command: 'go run mage.go binary'
+    prometheus_software_name: 'postgres_exporter'
+    prometheus_software_version: '{{ prometheus_postgres_exporter_version | default("0.4.6") }}'
+    prometheus_software_src_version: '{{ prometheus_postgres_exporter_src_version | default("v0.4.6") }}'
+    prometheus_software_description: 'Prometheus postgres_exporter, exporter of host statistics'
+    prometheus_software_documentation: 'https://github.com/wrouesnel/postgres_exporter/blob/master/README.md'
+    prometheus_software_host: '{{ prometheus_postgres_exporter_host | default("0.0.0.0") }}'
+    prometheus_software_port: '{{ prometheus_postgres_exporter_port | default(9187) }}'
+
+- name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
+  set_fact:
+    prometheus_software_opts:
+      - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
+    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
+    prometheus_software_bin_url: 'https://github.com/wrouesnel/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}_v{{ prometheus_software_version }}_{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_src_dir_suffix: '/src/github.com/wrouesnel/{{ prometheus_software_name }}'
+    prometheus_software_src_url: 'https://github.com/wrouesnel/{{ prometheus_software_name }}.git'
+
+- name: 'Include task to perform installation of {{ prometheus_software_name_version }}'
+  include_tasks: _install.yml
+
+- name: 'Include task to setup {{ prometheus_software_name_version }} service'
+  include_tasks: _service.yml
+
+- name: 'Include task to perform post install cleanup of {{ prometheus_software_name_version }}'
+  include_tasks: _post_install_cleanup.yml

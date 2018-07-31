@@ -1,0 +1,189 @@
+#! /bin/sh
+#
+# {{ prometheus_software_name }}
+#
+# chkconfig: 2345 55 25
+# description: {{ prometheus_software_description }}
+#
+# processname: {{ prometheus_software_name }}
+{% if installer_instance is defined and installer_instance and installer_instance.name -%}
+# pidfile: "/var/run/{{ prometheus_software_name }}__{{ installer_instance.name }}.pid"
+{% else -%}
+# pidfile: "/var/run/{{ prometheus_software_name }}.pid"
+{% endif -%}
+
+### BEGIN INIT INFO
+# Provides:          {{ prometheus_software_name }}
+# Required-Start:    $local_fs $syslog
+# Required-Stop:     $local_fs $syslog
+# Should-Start:      $network $syslog
+# Should-Stop:       $network $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: {{ prometheus_software_description }}
+# Documentation:     {{ prometheus_software_documentation }}
+### END INIT INFO
+
+{% if ansible_os_family == 'RedHat' -%}
+. /etc/rc.d/init.d/functions
+# pull in sysconfig settings
+{% if installer_instance is defined and installer_instance and installer_instance.name -%}
+[ -f /etc/sysconfig/{{ prometheus_software_name }}__{{ installer_instance.name }} ] && . /etc/sysconfig/{{ prometheus_software_name }}__{{ installer_instance.name }}
+{% else -%}
+[ -f /etc/sysconfig/{{ prometheus_software_name }} ] && . /etc/sysconfig/{{ prometheus_software_name }}
+{% endif -%}
+{% else -%}
+. /lib/lsb/init-functions
+set -e
+{% endif -%}
+
+umask 022
+
+{% if prometheus_software_env_vars is defined and prometheus_software_env_vars -%}
+# Custom environmental variables:
+{% for key in prometheus_software_env_vars.keys() -%}
+export {{ key }}="{{ prometheus_software_env_vars[key] }}"
+{% endfor -%}
+{% endif -%}
+
+DAEMON={{ prometheus_software_binary }}
+COMMAND="$DAEMON {{ prometheus_software_command_args | join(' ') }}"
+{% if installer_instance is defined and installer_instance and installer_instance.name -%}
+export PATH="${PATH:+$PATH:}/usr/sbin:/sbin"
+logfile="{{ prometheus_log_dir }}/{{ prometheus_software_name }}__{{ installer_instance.name }}.log"
+lockfile=/var/lock/subsys/{{ prometheus_software_name }}__{{ installer_instance.name }}
+pidfile="/var/run/{{ prometheus_software_name }}__{{ installer_instance.name }}.pid"
+{% else -%}
+logfile="{{ prometheus_log_dir }}/{{ prometheus_software_name }}.log"
+lockfile=/var/lock/subsys/$prog
+pidfile="/var/run/{{ prometheus_software_name }}.pid"
+{% endif -%}
+runas_user={% if prometheus_software_runas is defined and prometheus_software_runas -%}
+{{ prometheus_software_runas }}
+{% else -%}
+{{ prometheus_user }}
+{% endif -%}
+{% if ansible_os_family == 'RedHat' -%}
+RETVAL=0
+prog="{{ prometheus_software_name }}"
+
+runlevel=$(set -- $(runlevel); eval "echo \$$#" )
+
+start()
+{
+	[ -x $DAEMON ] || exit 5
+	echo -n $"Starting $prog: "
+	# Setup pidfile
+	mkdir -p $(dirname $pidfile)
+	# Start daemon
+	daemon --pidfile=$pidfile --user=$runas_user "$COMMAND >> $logfile 2>&1 &"
+	RETVAL=$?
+        if [ $RETVAL -eq 0 ];
+	then
+		ps -ef | grep "$COMMAND" | grep -v grep | awk '{print $2}' > $pidfile
+		touch $lockfile && success || failure
+		echo
+	else
+		rm -f $lockfile $pidfile
+		exit 7;
+	fi
+	echo
+	return $RETVAL
+}
+
+stop()
+{
+	echo -n $"Stopping $prog: "
+	killproc -p $pidfile $DAEMON
+	RETVAL=$?
+	[ $RETVAL -eq 0 ] && rm -f $lockfile
+	echo
+}
+
+restart() {
+	stop
+	start
+}
+
+rh_status() {
+	status -p $pidfile {{ prometheus_software_name }}
+}
+
+rh_status_q() {
+	rh_status >/dev/null 2>&1
+}
+
+case "$1" in
+	start)
+		rh_status_q && exit 0
+		start
+		;;
+	stop)
+		if ! rh_status_q; then
+			rm -f $lockfile
+			exit 0
+		fi
+		stop
+		;;
+	restart)
+		restart
+		;;
+	status)
+		rh_status
+		RETVAL=$?
+		if [ $RETVAL -eq 3 -a -f $lockfile ] ; then
+			RETVAL=2
+		fi
+		;;
+	*)
+		echo $"Usage: $0 {start|stop|restart|status}"
+		RETVAL=2
+esac
+exit $RETVAL
+{% else -%}
+start ()
+{
+	# Setup pidfile
+	mkdir -p $(dirname $pidfile)
+	log_daemon_msg "Starting {{ prometheus_software_description }}" "{{ prometheus_software_name }}" || true
+	if start-stop-daemon --background --chuid $runas_user --start --quiet --oknodo --make-pidfile --pidfile $pidfile --exec /bin/bash -- -c "$COMMAND >> $logfile 2>&1" ; then
+	    log_end_msg 0 || true
+	else
+	    log_end_msg 1 || true
+	fi
+}
+
+stop ()
+{
+	log_daemon_msg "Stopping {{ prometheus_software_description }}" "{{ prometheus_software_name }}" || true
+    bashPID=$(cat $pidfile); [ -n "$bashPID" ] && pkill -P "$bashPID"
+	if start-stop-daemon --stop --quiet --oknodo --pidfile $pidfile; then
+	    log_end_msg 0 || true
+	else
+	    log_end_msg 1 || true
+	fi
+}
+
+case "$1" in
+  start)
+	start
+	;;
+  stop)
+    stop
+	;;
+
+  restart)
+    stop
+    start
+	;;
+
+  status)
+	status_of_proc -p $pidfile {{ prometheus_software_binary }} {{ prometheus_software_name }} && exit 0 || exit $?
+	;;
+
+  *)
+	log_action_msg "Usage: $0 {start|stop|restart|status}" || true
+	exit 1
+esac
+exit 0
+{% endif -%}

@@ -1,0 +1,5 @@
+---
+- block:
+  - name: 'Include role mesaguy.prometheus setup task'
+    include_tasks: main.yml
+  when: prometheus_setup_task_executed is not defined

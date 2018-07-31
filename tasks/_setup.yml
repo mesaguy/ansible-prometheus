@@ -1,0 +1,18 @@
+---
+# - debug:
+#     msg: '{{ ansible_system }}-{{ ansible_architecture }}.yml'
+
+- name: 'Gather Architecture specific variables'
+  include_vars: '{{ os_arch_var_file }}'
+  loop_control:
+    loop_var: os_arch_var_file
+  with_first_found:
+    - 'os-architecture/{{ ansible_system }}-{{ ansible_architecture }}.yml'
+  tags: os_arch_vars
+
+- name: Include role mesaguy.prometheus common task
+  include: _common.yml
+
+- name: Define setup as complete
+  set_fact:
+    prometheus_setup_task_executed: true

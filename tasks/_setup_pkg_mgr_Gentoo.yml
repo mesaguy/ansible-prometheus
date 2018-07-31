@@ -1,0 +1,11 @@
+---
+- name: Check portage manifest present
+  stat:
+    path: /usr/portage/Manifest
+  register: portage_manifest
+
+- name: Run the equivalent of 'emerge-webrsync'
+  become: true
+  portage:
+    sync: web
+  when: not portage_manifest.stat.exists

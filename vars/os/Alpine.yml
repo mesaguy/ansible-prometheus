@@ -1,0 +1,13 @@
+---
+prometheus_shell: /sbin/nologin
+prometheus_go_compile_tools:
+ - curl
+ - gcc
+ - git
+ - gzip
+ # Needed to run go
+ - libc6-compat
+prometheus_prerequisite_packages:
+ - tar
+prometheus_user_group_packages:
+ - shadow

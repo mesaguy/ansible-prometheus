@@ -1,0 +1,11 @@
+---
+prometheus_shell: /usr/bin/nologin
+prometheus_go_compile_tools:
+ - curl
+ - gcc
+ - git
+ - glibc-static
+ - gzip
+ - make
+prometheus_software_tinyproxy_exporter_dependencies:
+ - python34

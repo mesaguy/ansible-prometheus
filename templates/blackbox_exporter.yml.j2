@@ -1,0 +1,35 @@
+---
+modules:
+{% if prometheus_blackbox_exporter_cfg is defined %}
+  {{ prometheus_blackbox_exporter_cfg | to_nice_yaml(width=80, indent=2) | indent(2) }}
+{% else %}
+  http_2xx:
+    http:
+      fail_if_not_ssl: false
+      fail_if_ssl: false
+      method: GET
+      no_follow_redirects: false
+      preferred_ip_protocol: ip4
+      tls_config:
+        insecure_skip_verify: false
+      valid_http_versions:
+      - HTTP/1.1
+      - HTTP/2
+      valid_status_codes:
+      - 200
+    prober: http
+    timeout: 5s
+  icmp:
+    icmp:
+      preferred_ip_protocol: ip4
+    prober: icmp
+    timeout: 5s
+  ssh_banner:
+    prober: tcp
+    tcp:
+      query_response:
+      - expect: ^SSH-2.0-
+  tcp_connect:
+    prober: tcp
+    timeout: 5s
+{% endif %}

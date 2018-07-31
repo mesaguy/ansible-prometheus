@@ -1,0 +1,20 @@
+---
+modules:
+{% if prometheus_statsd_exporter_cfg is defined %}
+  {{ prometheus_statsd_exporter_cfg | to_nice_yaml(width=80, indent=2) | indent(2) }}
+{% else %}
+  mappings:
+  - match: test.dispatcher.*.*.*
+    name: "dispatcher_events_total"
+    labels:
+      processor: "$1"
+      action: "$2"
+      outcome: "$3"
+      job: "test_dispatcher"
+  - match: *.signup.*.*
+    name: "signup_events_total"
+    labels:
+      provider: "$2"
+      outcome: "$3"
+      job: "${1}_server"
+{% endif %}

@@ -1,0 +1,63 @@
+---
+- block:
+  - name: 'Include role mesaguy.prometheus setup task'
+    include_tasks: _setup.yml
+  when: prometheus_setup_task_executed is not defined
+
+- name: 'Starting snmp_exporter install'
+  set_fact:
+    prometheus_exporter: true
+    prometheus_software_extra_opts: '{{ prometheus_snmp_exporter_extra_opts | default () }}'
+    prometheus_software_files:
+      - 'snmp_exporter'
+      - 'snmp.yml'
+    prometheus_software_makefile_make_command: 'make build'
+    prometheus_software_name: 'snmp_exporter'
+    prometheus_software_version: '{{ prometheus_snmp_exporter_version | default("0.11.0") }}'
+    prometheus_software_src_version: '{{ prometheus_snmp_exporter_src_version | default("v0.11.0") }}'
+    prometheus_software_description: 'Prometheus snmp_exporter, exposes information gathered from SNMP'
+    prometheus_software_documentation: 'https://github.com/prometheus/snmp_exporter/blob/master/README.md'
+    prometheus_software_host: '{{ prometheus_snmp_exporter_host | default("0.0.0.0") }}'
+    prometheus_software_port: '{{ prometheus_snmp_exporter_port | default(9116) }}'
+
+- name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
+  set_fact:
+    prometheus_software_config_name: '{{ prometheus_software_name }}'
+    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
+    prometheus_software_opts:
+      - '--config.file {{ prometheus_etc_dir }}/snmp_exporter.yml'
+      - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
+    prometheus_software_bin_url: 'https://github.com/prometheus/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_src_dir_suffix: '/src/github.com/prometheus/{{ prometheus_software_name }}'
+    prometheus_software_src_url: 'https://github.com/prometheus/{{ prometheus_software_name }}'
+
+- name: 'Include task to perform installation of {{ prometheus_software_name_version }}'
+  include_tasks: _install.yml
+
+- name: 'Link {{ prometheus_software_name_version }} configuration file to {{ prometheus_software_install_dir }}/snmp.yml'
+  become: true
+  file:
+    src: '{{ prometheus_software_install_dir }}/snmp.yml'
+    dest: '{{ prometheus_etc_dir }}/snmp_exporter.yml'
+    owner: root
+    group: '{{ prometheus_group }}'
+    state: link
+  register: prometheus_software_cfg
+  when: prometheus_snmp_exporter_yml is not defined
+
+- name: 'Setup {{ prometheus_software_version }} configuration file'
+  become: true
+  copy:
+    src: '{{ prometheus_snmp_exporter_yml }}'
+    dest: '{{ prometheus_etc_dir }}/snmp_exporter.yml'
+    owner: root
+    group: '{{ prometheus_group }}'
+    mode: '0644'
+  register: prometheus_software_cfg
+  when: prometheus_snmp_exporter_yml is defined
+
+- name: 'Include task to setup {{ prometheus_software_name_version }} service'
+  include_tasks: _service.yml
+
+- name: 'Include task to perform post install cleanup of {{ prometheus_software_version }}'
+  include_tasks: _post_install_cleanup.yml

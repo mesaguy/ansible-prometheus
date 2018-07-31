@@ -1,0 +1,15 @@
+---
+modules:
+{% if prometheus_cloudwatch_exporter_cfg is defined %}
+  {{ prometheus_cloudwatch_exporter_cfg | to_nice_yaml(width=80, indent=2) | indent(2) }}
+{% else %}
+---
+region: eu-west-1
+metrics:
+ - aws_namespace: AWS/ELB
+   aws_metric_name: RequestCount
+   aws_dimensions: [AvailabilityZone, LoadBalancerName]
+   aws_dimension_select:
+     LoadBalancerName: [myLB]
+   aws_statistics: [Sum]
+{% endif %}

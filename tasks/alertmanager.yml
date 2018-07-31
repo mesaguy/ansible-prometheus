@@ -1,0 +1,65 @@
+---
+- block:
+  - name: 'Include role mesaguy.prometheus setup task'
+    include_tasks: _setup.yml
+  when: prometheus_setup_task_executed is not defined
+
+- name: 'Starting alertmanager install'
+  set_fact:
+    prometheus_exporter: false
+    prometheus_software_config: '{{ prometheus_alertmanager_cfg | default(lookup("file", "../files/defaults/alertmanager.yml") | from_yaml) }}'
+    prometheus_software_extra_opts: '{{ prometheus_alertmanager_extra_opts | default() }}'
+    prometheus_software_files:
+      - 'alertmanager'
+      - 'amtool'
+    prometheus_software_makefile_make_command: 'make build'
+    prometheus_software_name: 'alertmanager'
+    prometheus_software_version: '{{ prometheus_alertmanager_version | default("0.15.1") }}'
+    prometheus_software_src_version: '{{ prometheus_alertmanager_src_version | default("v0.15.1") }}'
+    prometheus_software_description: 'Prometheus alertmanager'
+    prometheus_software_documentation: 'https://github.com/prometheus/alertmanager/blob/master/README.md'
+    prometheus_software_host: '{{ prometheus_alertmanager_host | default("0.0.0.0") }}'
+    prometheus_software_port: '{{ prometheus_alertmanager_port | default(9093) }}'
+    prometheus_alertmanager_storage_directory: '{{ prometheus_alertmanager_storage_dir | default(prometheus_var_dir + "/alertmanager") }}'
+
+- name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
+  set_fact:
+    prometheus_software_config_name: '{{ prometheus_software_name }}'
+    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
+    prometheus_software_opts:
+      - '--config.file {{ prometheus_etc_dir }}/alertmanager.yml'
+      - '--storage.path={{ prometheus_alertmanager_storage_directory }}'
+      - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
+    prometheus_software_bin_url: 'https://github.com/prometheus/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_src_dir_suffix: '/src/github.com/prometheus/{{ prometheus_software_name }}'
+    prometheus_software_src_url: 'https://github.com/prometheus/{{ prometheus_software_name }}'
+
+- name: 'Create {{ prometheus_software_name_version }} storage directory: {{ prometheus_alertmanager_storage_directory }}'
+  become: true
+  file:
+    path: '{{ prometheus_alertmanager_storage_directory }}'
+    owner: '{{ prometheus_user }}'
+    group: '{{ prometheus_group }}'
+    mode: '0750'
+    state: directory
+
+- name: 'Include task to perform installation of {{ prometheus_software_name_version }}'
+  include_tasks: _install.yml
+
+- name: 'Setup {{ prometheus_software_name_version }} configuration file'
+  become: true
+  template:
+    src: '../templates/generic-config.yml.j2'
+    dest: '{{ prometheus_etc_dir }}/alertmanager.yml'
+    owner: root
+    group: root
+    mode: '0644'
+    backup: true
+    validate: '{{ prometheus_software_install_dir }}/amtool check-config %s'
+  register: prometheus_software_cfg
+
+- name: 'Include task to setup {{ prometheus_software_name_version }} service'
+  include_tasks: _service.yml
+
+- name: 'Include task to perform post install cleanup of {{ prometheus_software_name_version }}'
+  include_tasks: _post_install_cleanup.yml

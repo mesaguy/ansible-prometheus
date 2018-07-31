@@ -1,0 +1,15 @@
+---
+- name: Wrapper playbook for Prometheus module testing
+  hosts: all
+  roles:
+  - {role: '../../../../mesaguy.prometheus'}
+
+  tasks:
+  - name: Setup Prometheus clients
+    include_role:
+      name: mesaguy.prometheus
+      tasks_from: '{{ prometheus_component }}'
+    loop_control:
+      loop_var: prometheus_component
+    with_items:
+      - node_exporter

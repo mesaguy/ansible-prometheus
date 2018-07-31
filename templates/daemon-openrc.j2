@@ -1,0 +1,39 @@
+#!/sbin/openrc-run
+#
+# Do not edit manually, this file is managed using automation tools
+#
+
+description="{{ prometheus_software_description }}"
+documentation="{{ prometheus_software_documentation }}"
+
+{% if installer_instance is defined and installer_instance and installer_instance.name -%}
+logfile="{{ prometheus_log_dir }}/{{ prometheus_software_name }}__{{ installer_instance.name }}.log"
+pidfile="/var/run/{{ prometheus_software_name }}__{{ installer_instance.name }}.pid"
+{% else -%}
+logfile="{{ prometheus_log_dir }}/{{ prometheus_software_name }}.log"
+pidfile="/var/run/{{ prometheus_software_name }}.pid"
+{% endif -%}
+command="{{ prometheus_software_binary }}"
+command_args="{{ prometheus_software_command_args | join(' ') }}"
+command_background=true
+runas_user={% if prometheus_software_runas is defined and prometheus_software_runas -%}
+{{ prometheus_software_runas }}
+{% else -%}
+{{ prometheus_user }}
+{% endif -%}
+start_stop_daemon_args="--pidfile ${pidfile}
+{% if prometheus_software_env_vars is defined and prometheus_software_env_vars -%}
+{% for key in prometheus_software_env_vars.keys() -%}
+  --env {{ key }}='{{ prometheus_software_env_vars[key] }}'
+{% endfor -%}
+{% endif -%}
+  --stdout ${logfile} --stderr ${logfile}
+  --user ${runas_user}:{{ prometheus_group }}"
+{% if prometheus_software_config_file is defined and prometheus_software_config_file -%}
+
+required_files="{{ prometheus_software_config_file }}"
+{% endif -%}
+
+depend() {
+	use logger dns
+}

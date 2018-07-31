@@ -1,0 +1,74 @@
+---
+- block:
+    - name: Include role mesaguy.prometheus setup package manager
+      include_tasks: '_setup_pkg_mgr_{{ ansible_os_family }}.yml'
+      when: ansible_os_family in prometheus_software_setup_pkg_mgrs
+
+    - name: Define package manager as setup
+      set_fact:
+        prometheus_setup_pkg_mgr_executed: true
+  when: prometheus_setup_pkg_mgr_executed is not defined
+
+- name: Install tools required for building go modules from source
+  become: true
+  package:
+    name: '{{ prometheus_go_tool }}'
+    state: present
+  with_items: '{{ prometheus_go_compile_tools }}'
+  loop_control:
+    loop_var: prometheus_go_tool
+
+- name: Make go compiler directories
+  become: true
+  file:
+    path: '{{ prometheus_go_directory }}'
+    state: directory
+    mode: 0755
+    owner: root
+    group: root
+  loop_control:
+    loop_var: prometheus_go_directory
+  with_items:
+    - '{{ prometheus_go_dir }}'
+    - '{{ prometheus_go_dir }}/{{ prometheus_go_version }}'
+
+- name: Download and extract go
+  become: true
+  unarchive:
+    extra_opts: ['--strip-components=1']
+    creates: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}/bin/go'
+    dest: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}'
+    mode: 0755
+    owner: root
+    group: root
+    src: 'https://storage.googleapis.com/golang/go{{ prometheus_go_version }}.{{ prometheus_architecture }}.tar.gz'
+    remote_src: true
+
+- block:
+    - name: 'Find paths under {{ prometheus_go_dir }}, exclude the current installation'
+      # Search for files and directories in this software's installation
+      # directory. If paths *other* than the current release's path exist
+      # then flag them for removal below
+      find:
+        paths: '{{ prometheus_go_dir }}'
+        file_type: any
+        recurse: false
+        excludes:
+          - '{{ prometheus_go_version }}'
+      register: present_go_paths
+
+    - name: 'Remove orphan go installations under {{ prometheus_go_dir }} in favor of {{ prometheus_go_version }}'
+      # Remove paths flagged for deletion above
+      become: true
+      file:
+        path: '{{ prometheus_cleanup_go_item.path }}'
+        state: absent
+      with_items: '{{ present_go_paths.files }}'
+      loop_control:
+        loop_var: prometheus_cleanup_go_item
+      when: present_go_paths.files
+  when: prometheus_purge_orphans|bool
+
+- name: Define 'install_go_compiler' run as complete
+  set_fact:
+    prometheus_install_go_compiler_executed: true

@@ -1,0 +1,39 @@
+---
+# defaults file for mesaguy.prometheus
+
+# General global configuration
+prometheus_link_etc: true
+prometheus_link_etc_force: false
+prometheus_purge_orphans: false
+prometheus_root_dir: '/opt/prometheus'
+prometheus_test_service_port: true
+
+# User management
+prometheus_manage_group: true
+prometheus_manage_user: true
+prometheus_group: prometheus
+prometheus_user: prometheus
+
+# When performing installations
+prometheus_default_unarchive_opts:
+ - '--strip-components=1'
+prometheus_fallback_to_build: true
+prometheus_go_version: 1.10.3
+prometheus_software_make_command: 'go get -d && go build'
+prometheus_software_makefile_make_command: 'make'
+prometheus_software_setup_pkg_mgrs:
+ - 'Alpine'
+ - 'Archlinux'
+ - 'Gentoo'
+
+# When testing
+prometheus_software_service_test: true
+prometheus_always_build_from_source: false
+
+# Base directories
+prometheus_etc_dir: '{{ prometheus_root_dir }}/etc'
+prometheus_exporters_dir: '{{ prometheus_root_dir }}/exporters'
+prometheus_go_dir: '{{ prometheus_root_dir }}/go'
+prometheus_log_dir: '/var/log/prometheus'
+prometheus_tmp_dir: '{{ prometheus_root_dir }}/tmp'
+prometheus_var_dir: '{{ prometheus_root_dir }}/var'
