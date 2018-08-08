@@ -85,3 +85,13 @@
       loop_control:
         loop_var: prometheus_component
       with_items: "{{ tasks.files | sort(attribute='path') }}"
+
+    - name: Install prometheus testing prerequisite utilities
+      become: true
+      package:
+        name: '{{ prometheus_testing_package }}'
+        state: present
+      loop_control:
+        loop_var: prometheus_test_package
+      with_items: "{{ prometheus_test_packages }}"
+      when: prometheus_testing_packages is defined
