@@ -256,8 +256,8 @@ An array of additional flags to pass to the consul_exporter daemon:
 
 The version of consul_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_consul_exporter_version: "0.3.0"
-    prometheus_consul_exporter_src_version: "v0.3.0"
+    prometheus_consul_exporter_version: "0.4.0"
+    prometheus_consul_exporter_src_version: "v0.4.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9107:
 
@@ -483,8 +483,8 @@ An array of additional flags to pass to the process_exporter daemon:
 
 The version of process_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_process_exporter_version: "0.3.2"
-    prometheus_process_exporter_src_version: "v0.3.2"
+    prometheus_process_exporter_version: "0.3.7"
+    prometheus_process_exporter_src_version: "v0.3.7"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9256. This is the default port and can/should be overridden using the configuration as exampled above in this section:
 
