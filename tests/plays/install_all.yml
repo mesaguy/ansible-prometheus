@@ -1,0 +1,35 @@
+---
+- name: Update 'apt' cache
+  become: true
+  apt:
+    update_cache: true
+  changed_when: false
+  when: ansible_os_family == 'Debian'
+
+- name: Find all prometheus software
+  delegate_to: localhost
+  local_action: find paths="{{ lookup('env', 'PWD') }}/tasks" file_type=file excludes='_*.yml,main.yml'
+  register: tasks
+
+- name: Install Prometheus tasks
+  include_role:
+    name: '../../../../mesaguy.prometheus'
+    tasks_from: '{{ prometheus_component.path | regex_replace("\.yml$", "") }}'
+  loop_control:
+    loop_var: prometheus_component
+  with_items: "{{ tasks.files | sort(attribute='path') }}"
+
+- name: Install prometheus testing prerequisite utilities
+  become: true
+  package:
+    name: '{{ prometheus_testing_package }}'
+    state: present
+  loop_control:
+    loop_var: prometheus_testing_package
+  with_items: "{{ prometheus_testing_packages }}"
+  when: prometheus_testing_packages is defined
+
+- name: Docker clean up
+  delegate_to: localhost
+  command: docker system prune -f
+  when: ansible_docker0 is defined and ansible_docker0

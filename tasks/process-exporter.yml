@@ -9,21 +9,22 @@
     prometheus_exporter: true
     prometheus_software_name: 'process-exporter'
     prometheus_software_extra_opts: '{{ prometheus_process_exporter_extra_opts | default("") }}'
-    prometheus_software_version: '{{ prometheus_process_exporter_version | default("0.3.7") }}'
-    prometheus_software_src_version: '{{ prometheus_process_exporter_src_version | default("v0.3.7") }}'
+    prometheus_software_version: '{{ prometheus_process_exporter_version | default("0.2.12") }}'
+    prometheus_software_src_version: '{{ prometheus_process_exporter_src_version | default("v0.2.12") }}'
     prometheus_software_description: 'Prometheus process_exporter, mines /proc to report on selected processes'
     prometheus_software_documentation: 'https://github.com/ncabatoff/process-exporter/blob/master/README.md'
     prometheus_software_host: '{{ prometheus_process_exporter_host | default("0.0.0.0") }}'
     prometheus_software_port: '{{ prometheus_process_exporter_port | default(9256) }}'
-    prometheus_software_unarchive_opts: []
     # defined later:
     prometheus_software_opts: []
 
 - name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
   set_fact:
     prometheus_software_filename: '{{ prometheus_software_name }}_{{ prometheus_software_version }}_{{ prometheus_architecture | replace("-", "_") }}.tar.gz'
+    # For v0.3:
+    # prometheus_software_filename: '{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
     prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
-    prometheus_software_bin_url: 'https://github.com/ncabatoff/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}_{{ prometheus_software_version }}_{{ prometheus_architecture | replace("-", "_") }}.tar.gz'
+    prometheus_software_bin_url: 'https://github.com/ncabatoff/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
     prometheus_software_src_dir_suffix: '/src/github.com/ncabatoff/{{ prometheus_software_name }}'
     prometheus_software_src_url: 'https://github.com/ncabatoff/{{ prometheus_software_name }}'
 

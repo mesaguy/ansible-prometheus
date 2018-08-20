@@ -30,7 +30,7 @@
 
 - name: 'Clone the {{ prometheus_software_name_version }} project source from {{ prometheus_software_src_url }} to {{ prometheus_software_src_dir }}'
   become: true
-  become_user: '{{ prometheus_user }}'
+  # become_user: '{{ prometheus_user }}'
   git:
     repo: '{{ prometheus_software_src_url }}'
     dest: '{{ prometheus_software_src_dir }}'

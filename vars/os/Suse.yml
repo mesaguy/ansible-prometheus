@@ -4,14 +4,9 @@ prometheus_go_compile_tools:
  - curl
  - gcc
  - git
- - gzip
- # Needed to run go
- - libc6-compat
  - make
- - musl-dev
 prometheus_prerequisite_packages:
- - ca-certificates
  - tar
 prometheus_testing_packages:
  - net-tools
- - procps
+ - net-tools-deprecated

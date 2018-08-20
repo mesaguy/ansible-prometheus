@@ -1,6 +1,10 @@
 #! /bin/sh
 #
+{% if installer_instance is defined and installer_instance and installer_instance.name -%}
+# {{ prometheus_software_name }}__{{ installer_instance.name }}
+{% else -%}
 # {{ prometheus_software_name }}
+{% endif -%}
 #
 # chkconfig: 2345 55 25
 # description: {{ prometheus_software_description }}
@@ -13,7 +17,11 @@
 {% endif -%}
 
 ### BEGIN INIT INFO
+{% if installer_instance is defined and installer_instance and installer_instance.name -%}
+# Provides:          {{ prometheus_software_name }}__{{ installer_instance.name }}
+{% else -%}
 # Provides:          {{ prometheus_software_name }}
+{% endif -%}
 # Required-Start:    $local_fs $syslog
 # Required-Stop:     $local_fs $syslog
 # Should-Start:      $network $syslog

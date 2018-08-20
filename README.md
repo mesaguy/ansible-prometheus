@@ -59,12 +59,12 @@ Most Prometheus software and exporters use yaml for the configuration files. The
 Using an external YAML file. In this example, the file would be located in your Ansible environment's 'files' directory:
 
 ``` yaml
-  prometheus_software_config: "{{ lookup('file', '../files/prometheus_server.yml') | from_yaml }}"
+  prometheus_server_cfg: "{{ lookup('file', '../files/prometheus_server.yml') | from_yaml }}"
 ```
 
 Or embedding the YAML directly into your playbook:
 ``` yaml
-  prometheus_software_config:
+  prometheus_server_cfg:
     global:
       scrape_interval: 15s
 
@@ -196,8 +196,8 @@ An array of additional flags to pass to the alertmanager daemon:
 
 The version of Alertmanager to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "0.15.1"
-    prometheus_src_version: "v0.15.1"
+    prometheus_version: "0.15.2"
+    prometheus_src_version: "v0.15.2"
 
 Where to store Alertmanager's data, defaults to /opt/prometheus/var/alertmanager
 
@@ -483,8 +483,8 @@ An array of additional flags to pass to the process_exporter daemon:
 
 The version of process_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_process_exporter_version: "0.3.7"
-    prometheus_process_exporter_src_version: "v0.3.7"
+    prometheus_process_exporter_version: "0.2.12"
+    prometheus_process_exporter_src_version: "v0.2.12"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9256. This is the default port and can/should be overridden using the configuration as exampled above in this section:
 
@@ -502,8 +502,8 @@ An array of additional flags to pass to the snmp_exporter daemon:
     prometheus_snmp_exporter_extra_opts: []
 
 The version of snmp_exporter to install. The source version defines the version as specified in version control:
-    prometheus_snmp_exporter_version: "0.11.0"
-    prometheus_snmp_exporter_src_version: "v0.11.0"
+    prometheus_snmp_exporter_version: "0.12.0"
+    prometheus_snmp_exporter_src_version: "v0.12.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9116:
 

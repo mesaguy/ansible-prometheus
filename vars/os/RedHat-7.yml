@@ -7,7 +7,6 @@ prometheus_go_compile_tools:
  - glibc-static
  - gzip
  - make
-prometheus_prerequisite_packages:
- - tar
-prometheus_software_tinyproxy_exporter_dependencies:
- - python34
+prometheus_testing_packages:
+ - net-tools
+ - procps-ng

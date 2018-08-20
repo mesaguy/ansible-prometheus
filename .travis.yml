@@ -1,0 +1,13 @@
+---
+sudo: required
+
+language: python
+python: "3.6"
+services:
+  - docker
+rvm:
+  - 2.2
+
+install:
+  - bundle install
+  - pip install -r requirements.txt

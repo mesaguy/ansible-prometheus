@@ -5,6 +5,9 @@
   loop_control:
     loop_var: os_var_file
   with_first_found:
+    - 'distribution/{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml'
+    - 'distribution/{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml'
+    - 'distribution/{{ ansible_distribution }}.yml'
     - 'os/{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml'
     - 'os/{{ ansible_os_family }}.yml'
   tags: vars
@@ -24,13 +27,6 @@
         name: '{{ prometheus_prerequisite_packages }}'
         state: present
   when: prometheus_prerequisite_packages is defined
-
-- name: Install user and group management utilities
-  become: true
-  package:
-    name: '{{ prometheus_user_group_packages }}'
-    state: present
-  when: (prometheus_manage_group or prometheus_manage_user) and prometheus_user_group_packages is defined
 
 - name: 'Add the group "{{ prometheus_group }}"'
   become: true

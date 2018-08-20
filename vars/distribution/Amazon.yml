@@ -1,17 +1,13 @@
 ---
-prometheus_shell: /sbin/nologin
+prometheus_shell: /usr/bin/nologin
 prometheus_go_compile_tools:
  - curl
  - gcc
  - git
+ - glibc-static
  - gzip
- # Needed to run go
- - libc6-compat
  - make
- - musl-dev
 prometheus_prerequisite_packages:
- - ca-certificates
  - tar
 prometheus_testing_packages:
  - net-tools
- - procps

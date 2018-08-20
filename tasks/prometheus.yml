@@ -7,7 +7,7 @@
 - name: 'Starting prometheus install'
   set_fact:
     prometheus_exporter: false
-    prometheus_software_config: '{{ prometheus_prometheus_cfg | default(lookup("file", "../files/defaults/prometheus.yml") | from_yaml) }}'
+    prometheus_software_config: '{{ prometheus_server_cfg | default(lookup("file", "../files/defaults/prometheus.yml") | from_yaml) }}'
     prometheus_software_extra_opts: '{{ prometheus_extra_opts | default() }}'
     prometheus_software_files:
       - 'prometheus'

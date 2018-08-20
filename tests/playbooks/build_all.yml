@@ -1,0 +1,10 @@
+---
+- hosts: all
+  vars:
+    prometheus_always_build_from_source: true
+  tasks:
+    - name: Include test installation variables
+      include_vars: ../vars/install.yml
+
+    - name: Include install tasks
+      include_tasks: ../plays/install_all.yml

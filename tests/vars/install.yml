@@ -1,0 +1,73 @@
+---
+# Requires a Kafka server to test against..:
+prometheus_kafka_exporter_port_test: false
+prometheus_consul_exporter_env_vars:
+  CONSUL_HTTP_TOKEN: '4391eca7bcd03f45aa43ca26829c386c329097a7'
+prometheus_jmx_exporter_cfgs:
+  bitbucket:
+    startDelaySeconds: 0
+    hostPort: 127.0.0.1:1234
+    username:
+    password:
+    jmxUrl: service:jmx:rmi:///jndi/rmi://127.0.0.1:1234/jmxrmi
+    ssl: false
+    lowercaseOutputName: false
+    lowercaseOutputLabelNames: false
+    whitelistObjectNames: ["org.apache.cassandra.metrics:*"]
+    blacklistObjectNames: ["org.apache.cassandra.metrics:type=ColumnFamily,*"]
+    rules:
+      - pattern: 'org.apache.cassandra.metrics<type=(\w+), name=(\w+)><>Value: (\d+)'
+        name: cassandra_$1_$2
+        value: $3
+        valueFactor: 0.001
+        labels: {}
+        help: "Cassandra metric $1 $2"
+        type: GAUGE
+        attrNameSnakeCase: false
+  confluence:
+    startDelaySeconds: 0
+    hostPort: 127.0.0.1:1234
+    username:
+    password:
+    jmxUrl: service:jmx:rmi:///jndi/rmi://127.0.0.1:1234/jmxrmi
+    ssl: false
+    lowercaseOutputName: false
+    lowercaseOutputLabelNames: false
+    whitelistObjectNames: ["org.apache.cassandra.metrics:*"]
+    blacklistObjectNames: ["org.apache.cassandra.metrics:type=ColumnFamily,*"]
+    rules:
+      - pattern: 'org.apache.cassandra.metrics<type=(\w+), name=(\w+)><>Value: (\d+)'
+        name: cassandra_$1_$2
+        value: $3
+        valueFactor: 0.001
+        labels: {}
+        help: "Cassandra metric $1 $2"
+        type: GAUGE
+        attrNameSnakeCase: false
+prometheus_process_exporter_cfgs:
+  - name: TEST
+    user: prometheus
+    port: 9256
+    data:
+      process_names:
+        - comm:
+            - bash
+        - exe:
+            - sshd
+      exe:
+        - /usr/local/bin/process-exporter
+      cmdline: []
+  - name: TEST2
+    user: root
+    port: 9257
+    data:
+      process_names:
+        - comm:
+            - bash
+        - exe:
+            - sshd
+      exe:
+        - /usr/local/bin/process-exporter
+      cmdline: []
+prometheus_kafka_exporter_service_test: false
+prometheus_mysqld_exporter_service_test: false
