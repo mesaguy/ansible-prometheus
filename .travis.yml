@@ -2,7 +2,7 @@
 sudo: required
 
 language: python
-python: "3.6"
+python: '3.6'
 services:
   - docker
 rvm:
@@ -11,3 +11,6 @@ rvm:
 install:
   - bundle install
   - pip install -r requirements.txt
+
+script:
+  - yamllint --config-file=tests/yamllint.yml .
