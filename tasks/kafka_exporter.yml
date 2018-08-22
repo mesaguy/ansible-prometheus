@@ -14,7 +14,7 @@
     prometheus_software_description: 'Prometheus kafka_exporter, exporter of Apache Kafka metrics'
     prometheus_software_documentation: 'https://github.com/danielqsj/kafka_exporter/blob/master/README.md'
     prometheus_software_host: '{{ prometheus_kafka_exporter_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_kafka_exporter_port | default(9092) }}'
+    prometheus_software_port: '{{ prometheus_kafka_exporter_port | default(9308) }}'
     prometheus_software_port_test: '{{ prometheus_kafka_exporter_port_test | default(true) }}'
     prometheus_software_service_test: '{{ prometheus_kafka_exporter_service_test | default(true) }}'
 

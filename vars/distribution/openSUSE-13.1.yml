@@ -1,0 +1,11 @@
+---
+prometheus_shell: /sbin/nologin
+prometheus_go_compile_tools:
+ - curl
+ - gcc
+ - git
+ - make
+prometheus_prerequisite_packages:
+ - tar
+prometheus_testing_packages:
+ - net-tools

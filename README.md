@@ -13,12 +13,15 @@ This module is intended to support as many distributions and architectures as po
 
 | OS             | Release                          | Architectures     |
 |----------------|----------------------------------|-------------------|
-|Alpine          |3.8                               | x86_64 (amd64)    |
+|Alpine          |3.2 through 3.8, edge             | x86_64 (amd64)    |
+|AmazonLinux     |1 and 2                           | x86_64 (amd64)    |
 |ArchLinux       |Current                           | x86_64 (amd64)    |
 |Enterprise Linux|6, 7                              | x86_64 (amd64)    |
-|Fedora          |25, 26, 27, 28                    | x86_64 (amd64)    |
+|Fedora          |24 through 28, rawhide            | x86_64 (amd64)    |
 |Gentoo (openrc) |Current                           | x86_64 (amd64)    |
 |Gentoo (systemd)|Current                           | x86_64 (amd64)    |
+|OpenSUSE        |42.1 through tumbleweed           | x86_64 (amd64)    |
+|Oracle Linux    |6, 7                              | x86_64 (amd64)    |
 |Ubuntu          |14.04, 16.04, 17.10, 18.04, 18.10 | x86_64 (amd64)    |
 
 ### Supported Prometheus software
@@ -346,19 +349,20 @@ The version of jmx_exporter to install:
 
 ### Kafka exporter variables
 
-An array of additional flags to pass to the kafka_exporter daemon:
+An array of additional flags to pass to the kafka_exporter daemon (ie):
 
-    prometheus_kafka_exporter_extra_opts: []
+    prometheus_kafka_exporter_extra_opts:
+      - '--kafka.server=127.0.0.1:9092'
 
 The version of kafka_exporter to install. The source version defines the version as specified in version control:
 
     prometheus_kafka_exporter_version: "1.2.0"
     prometheus_kafka_exporter_src_version: "v1.2.0"
 
-Port and IP to listen on. Defaults to listening on all available IPs on port 9092:
+Port and IP to listen on. Defaults to listening on all available IPs on port 9308:
 
     prometheus_kafka_exporter_host: "0.0.0.0"
-    prometheus_kafka_exporter_port: 9092
+    prometheus_kafka_exporter_port: 9308
 
 ### Memcached exporter variables
 
@@ -461,9 +465,6 @@ The configuration content. The example below utilizes a variables specifying the
                 - bash
             - exe:
                 - sshd
-          exe:
-            - /opt/my/test_process
-          cmdline: []
       - name: apache
         user: apache
         port: 9257
@@ -473,8 +474,6 @@ The configuration content. The example below utilizes a variables specifying the
                 - bash
             - exe:
                 - apache
-          exe: []
-          cmdline: []
 ```
 
 An array of additional flags to pass to the process_exporter daemon:
