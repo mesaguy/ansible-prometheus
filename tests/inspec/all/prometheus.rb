@@ -47,6 +47,13 @@ describe file('/opt/prometheus/prometheus') do
     its('group') { should eq 'prometheus' }
 end
 
+describe file('/opt/prometheus/prometheus/active') do
+    its('type') { should eq :symlink }
+    its('mode') { should cmp '0755' }
+    its('owner') { should eq 'prometheus' }
+    its('group') { should eq 'prometheus' }
+end
+
 # Verify that 'prometheus' service is running
 control '01' do
   impact 1.0

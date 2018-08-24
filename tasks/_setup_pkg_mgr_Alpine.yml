@@ -3,7 +3,7 @@
   find:
     paths: /var/cache/apk
     file_type: file
-    patterns: '*.db'
+    patterns: '*.tar.gz'
   register: apk_indexes
 
 - name: Run the equivalent of 'apk update'

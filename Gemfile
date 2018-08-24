@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'test-kitchen'
+gem 'awesome_bot'
 gem 'inspec'
 gem 'kitchen-ansiblepush'
 gem 'kitchen-ansible'
 gem 'kitchen-docker'
+gem 'test-kitchen'

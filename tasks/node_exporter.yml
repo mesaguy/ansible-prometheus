@@ -8,6 +8,7 @@
   set_fact:
     prometheus_exporter: true
     prometheus_software_extra_opts: '{{ prometheus_node_exporter_extra_opts | default() }}'
+    prometheus_software_fallback_to_build: '{{ prometheus_node_exporter_fallback_to_build | default(prometheus_fallback_to_build) }}'
     prometheus_software_makefile_make_command: 'make build'
     prometheus_software_name: 'node_exporter'
     prometheus_software_version: '{{ prometheus_node_exporter_version | default("0.16.0") }}'
@@ -17,6 +18,7 @@
     prometheus_node_exporter_textfiles_directory: '{{ prometheus_node_exporter_textfiles_dir | default(prometheus_etc_dir + "/node_exporter_textfiles") }}'
     prometheus_software_host: '{{ prometheus_node_exporter_host | default("0.0.0.0") }}'
     prometheus_software_port: '{{ prometheus_node_exporter_port | default(9100) }}'
+    prometheus_software_runas: '{{ prometheus_node_exporter_runas | default(prometheus_user) }}'
 
 - name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
   set_fact:

@@ -17,7 +17,7 @@ prometheus_user: prometheus
 # When performing installations
 prometheus_default_unarchive_opts:
  - '--strip-components=1'
-prometheus_fallback_to_build: true
+prometheus_fallback_to_build: false
 prometheus_go_version: 1.10.3
 prometheus_software_make_command: 'go get -d && go build'
 prometheus_software_makefile_make_command: 'make'

@@ -1,8 +1,8 @@
 ---
-prometheus_kafka_exporter_extra_opts:
+prometheus_kafka_exporter_danielqsj_extra_opts:
   '--kafka.server=127.0.0.1:9092'
 # Requires a Kafka server to test against..:
-prometheus_kafka_exporter_port_test: false
+prometheus_kafka_exporter_danielqsj_port_test: false
 prometheus_consul_exporter_env_vars:
   CONSUL_HTTP_TOKEN: '4391eca7bcd03f45aa43ca26829c386c329097a7'
 prometheus_jmx_exporter_cfgs:
@@ -46,7 +46,7 @@ prometheus_jmx_exporter_cfgs:
         help: "Cassandra metric $1 $2"
         type: GAUGE
         attrNameSnakeCase: false
-prometheus_process_exporter_cfgs:
+prometheus_process_exporter_ncabatoff_cfgs:
   - name: TEST
     user: prometheus
     port: 9256
@@ -71,5 +71,7 @@ prometheus_process_exporter_cfgs:
       exe:
         - /usr/local/bin/process-exporter
       cmdline: []
-prometheus_kafka_exporter_service_test: false
+prometheus_kafka_exporter_danielqsj_service_test: false
 prometheus_mysqld_exporter_service_test: false
+# There are no binaries:
+prometheus_zookeeper_exporter_infonova_fallback_to_build: true

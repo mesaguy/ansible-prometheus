@@ -5,8 +5,8 @@
 [Unit]
 Description={{ prometheus_software_description }}
 Documentation={{ prometheus_software_documentation }}
-Requires=network.target remote-fs.target
-After=network.target remote-fs.target
+Requires=network.target
+After=network.target
 
 [Service]
 Type=simple

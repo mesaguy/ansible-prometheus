@@ -34,7 +34,7 @@
   git:
     repo: '{{ prometheus_software_src_url }}'
     dest: '{{ prometheus_software_src_dir }}'
-    version: '{% if prometheus_software_src_version is defined and prometheus_software_src_version %}{{ prometheus_software_src_version }}{% else %}{{ prometheus_software_version }}{% endif %}'
+    version: '{{ prometheus_software_src_version | default(prometheus_software_version, true) }}'
   when: prometheus_software_src_url is not match('.*(tar.gz|zip)$')
 
 - name: 'Gather statistics on the file {{ prometheus_software_src_dir }}/Makefile'
@@ -77,7 +77,7 @@
     src: '{{ prometheus_software_src_dir }}/{{ prometheus_built_file }}'
     dest: '{{ prometheus_software_install_dir }}'
     mode: 0555
-  with_items: '{% if prometheus_software_files is defined and prometheus_software_files %}{{ prometheus_software_files }}{% else %}{% set binaries = [prometheus_software_name] %}{{ binaries }}{% endif %}'
+  with_items: '{{ prometheus_software_files | default([prometheus_software_shortname], true) }}'
   loop_control:
     loop_var: prometheus_built_file
   register: prometheus_software_installation

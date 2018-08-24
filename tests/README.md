@@ -12,3 +12,7 @@ Rerun INSPEC tests against a single docker container:
 Test yaml syntax:
 
     yamllint --config-file=tests/yamllint.yml .
+
+To test URLs:
+
+    awesome_bot --skip-save-results --allow-dupe --files README.md,tests/README.md
