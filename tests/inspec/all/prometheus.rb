@@ -48,9 +48,9 @@ describe file('/opt/prometheus/prometheus') do
 end
 
 describe file('/opt/prometheus/prometheus/active') do
-    its('type') { should eq :symlink }
+    it { should be_symlink }
     its('mode') { should cmp '0755' }
-    its('owner') { should eq 'prometheus' }
+    its('owner') { should eq 'root' }
     its('group') { should eq 'prometheus' }
 end
 

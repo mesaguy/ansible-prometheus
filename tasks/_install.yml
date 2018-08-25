@@ -18,8 +18,9 @@
   become: true
   file:
     state: link
-    src: '{{ prometheus_software_install_dir }}'
+    src: '{{ prometheus_software_install_dir | basename }}'
     dest: '{{ prometheus_software_root_dir }}/active'
     force: true
-    owner: '{{ prometheus_user }}'
+    owner: root
     group: '{{ prometheus_group }}'
+    follow: false

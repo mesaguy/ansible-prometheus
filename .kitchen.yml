@@ -1,0 +1,419 @@
+---
+driver:
+  name: docker
+
+driver_config:
+  build_options:
+    build-arg: SSH_KEY=<% if File.exists?('.kitchen/docker_id_rsa.pub') %><%= File.read('.kitchen/docker_id_rsa.pub') %><% end %>
+  disable_upstart: false
+  run_command: /sbin/init
+  use_sudo: false
+  volume:
+    - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+
+verifier:
+  name: inspec
+
+suites:
+  - name: default
+    verifier:
+      inspec_tests:
+        - tests/inspec/all
+
+provisioner:
+  name: ansible_push
+  playbook: "tests/playbooks/install_all.yml"
+  # playbook: "tests/playbooks/build_all.yml"
+  generate_inv: true
+  chef_bootstrap_url: nil
+  require_chef_omnibus: false
+  ansible_version: latest
+  ansible_extra_flags: '--extra-vars "pipelining=True"'
+  idempotency_test: true
+  fail_non_idempotent: true
+
+platforms:
+  - name: alpine-3.2
+    driver_config:
+      image: mesaguy/alpine-3.2-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-alpine-3.2
+
+  - name: alpine-3.3
+    driver_config:
+      image: mesaguy/alpine-3.3-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-alpine-3.3
+
+  - name: alpine-3.4
+    driver_config:
+      image: mesaguy/alpine-3.4-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-alpine-3.4
+
+  - name: alpine-3.5
+    driver_config:
+      image: mesaguy/alpine-3.5-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-alpine-3.5
+
+  - name: alpine-3.6
+    driver_config:
+      image: mesaguy/alpine-3.6-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-alpine-3.6
+
+  - name: alpine-3.7
+    driver_config:
+      image: mesaguy/alpine-3.7-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-alpine-3.7
+
+  - name: alpine-3.8
+    driver_config:
+      image: mesaguy/alpine-3.8-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-alpine-3.8
+
+  - name: amazonlinux-1
+    driver_config:
+      image: mesaguy/amazonlinux-1-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-amazonlinux-1
+
+  - name: amazonlinux-2
+    driver_config:
+      image: mesaguy/amazonlinux-2-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-amazonlinux-2
+      run_command: /usr/lib/systemd/systemd
+
+  - name: archlinux
+    driver_config:
+      image: mesaguy/archlinux-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-archlinux
+      run_command: /usr/lib/systemd/systemd
+
+  - name: centos-6.6
+    driver_config:
+      image: mesaguy/centos-6.6-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-6.6
+
+  - name: centos-6.7
+    driver_config:
+      image: mesaguy/centos-6.6-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-6.6
+
+  - name: centos-6.8
+    driver_config:
+      image: mesaguy/centos-6.6-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-6.6
+
+  - name: centos-6.9
+    driver_config:
+      image: mesaguy/centos-6.9-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-6.9
+
+  - name: centos-6.10
+    driver_config:
+      image: mesaguy/centos-6.10-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-6.10
+
+  - name: centos-7.0
+    driver_config:
+      image: mesaguy/centos-7.0-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-7.0
+      run_command: /usr/lib/systemd/systemd
+
+  - name: centos-7.1
+    driver_config:
+      image: mesaguy/centos-7.1-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-7.1
+      run_command: /usr/lib/systemd/systemd
+
+  - name: centos-7.2
+    driver_config:
+      image: mesaguy/centos-7.2-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-7.2
+      run_command: /usr/lib/systemd/systemd
+
+  - name: centos-7.3
+    driver_config:
+      image: mesaguy/centos-7.3-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-7.3
+      run_command: /usr/lib/systemd/systemd
+
+  - name: centos-7.4
+    driver_config:
+      image: mesaguy/centos-7.4-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-7.4
+      run_command: /usr/lib/systemd/systemd
+
+  - name: centos-7.5
+    driver_config:
+      image: mesaguy/centos-7.5-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-7.5
+      run_command: /usr/lib/systemd/systemd
+
+  - name: debian-7
+    driver_config:
+      image: mesaguy/debian-7-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-debian-7
+      privileged: true
+      volume:
+        - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+        - '/sys/fs/selinux:/sys/fs/selinux:ro'
+
+  - name: debian-8
+    driver_config:
+      image: mesaguy/debian-8-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-debian-8
+      run_command: /lib/systemd/systemd
+      privileged: true
+      volume:
+        - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+        - '/sys/fs/selinux:/sys/fs/selinux:ro'
+
+  - name: debian-9
+    driver_config:
+      image: mesaguy/debian-9-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-debian-9
+      run_command: /lib/systemd/systemd
+      privileged: true
+
+  - name: debian-10
+    driver_config:
+      image: mesaguy/debian-10-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-debian-10
+      run_command: /lib/systemd/systemd
+      privileged: true
+
+  - name: fedora-20
+    driver_config:
+      image: mesaguy/fedora-20-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-20
+      run_command: /usr/lib/systemd/systemd
+      privileged: true
+
+  - name: fedora-21
+    driver_config:
+      image: mesaguy/fedora-21-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-21
+      privileged: true
+      run_command: /usr/lib/systemd/systemd
+      volume:
+        - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+        - '/sys/fs/selinux:/sys/fs/selinux:ro'
+
+  - name: fedora-22
+    driver_config:
+      image: mesaguy/fedora-22-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-22
+      privileged: true
+      run_command: /usr/lib/systemd/systemd
+      volume:
+        - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+        - '/sys/fs/selinux:/sys/fs/selinux:ro'
+
+  - name: fedora-23
+    driver_config:
+      image: mesaguy/fedora-23-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-23
+      privileged: true
+      run_command: /usr/lib/systemd/systemd
+      volume:
+        - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+        - '/sys/fs/selinux:/sys/fs/selinux:ro'
+
+  - name: fedora-24
+    driver_config:
+      image: mesaguy/fedora-24-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-24
+      privileged: true
+      run_command: /usr/lib/systemd/systemd
+      volume:
+        - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+        - '/sys/fs/selinux:/sys/fs/selinux:ro'
+
+  - name: fedora-25
+    driver_config:
+      image: mesaguy/fedora-25-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-25
+      privileged: true
+      run_command: /usr/lib/systemd/systemd
+      volume:
+        - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+        - '/sys/fs/selinux:/sys/fs/selinux:ro'
+
+  - name: fedora-26
+    driver_config:
+      image: mesaguy/fedora-26-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-26
+      privileged: true
+      run_command: /usr/lib/systemd/systemd
+      volume:
+        - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+        - '/sys/fs/selinux:/sys/fs/selinux:ro'
+
+  - name: fedora-27
+    driver_config:
+      image: mesaguy/fedora-27-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-27
+      run_command: /usr/lib/systemd/systemd
+
+  - name: fedora-28
+    driver_config:
+      image: mesaguy/fedora-28-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-28
+      run_command: /usr/lib/systemd/systemd
+
+  - name: fedora-rawhide
+    driver_config:
+      image: mesaguy/fedora-rawhide-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-rawhide
+      privileged: true
+      run_command: /usr/lib/systemd/systemd
+
+  - name: gentoo-openrc
+    driver_config:
+      image: mesaguy/gentoo-openrc-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-gentoo-openrc
+      privileged: true
+
+  - name: gentoo-systemd
+    driver_config:
+      image: mesaguy/gentoo-systemd-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-gentoo-systemd
+      privileged: true
+      run_command: /usr/lib/systemd/systemd
+
+  - name: opensuse-13.1
+    driver_config:
+      image: mesaguy/opensuse-13.1-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-opensuse-13.1
+      run_command: /usr/lib/systemd/systemd
+      privileged: true
+
+  - name: opensuse-13.2
+    driver_config:
+      image: mesaguy/opensuse-13.2-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-opensuse-13.2
+      run_command: /usr/lib/systemd/systemd
+      privileged: true
+
+  - name: opensuse-42.1
+    driver_config:
+      image: mesaguy/opensuse-42.1-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-opensuse-42.1
+      run_command: /usr/lib/systemd/systemd
+      privileged: true
+
+  - name: opensuse-42.2
+    driver_config:
+      image: mesaguy/opensuse-42.2-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-opensuse-42.2
+      run_command: /usr/lib/systemd/systemd
+      privileged: true
+
+  - name: opensuse-42.3
+    driver_config:
+      image: mesaguy/opensuse-42.3-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-opensuse-42.3
+      run_command: /usr/lib/systemd/systemd
+      privileged: true
+
+  - name: opensuse-leap
+    driver_config:
+      image: mesaguy/opensuse-leap-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-opensuse-leap
+      run_command: /usr/lib/systemd/systemd
+      privileged: true
+
+  - name: opensuse-tumbleweed
+    driver_config:
+      image: mesaguy/opensuse-tumbleweed-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-opensuse-tumbleweed
+      run_command: /usr/lib/systemd/systemd
+      privileged: true
+
+  - name: oraclelinux-6.6
+    driver_config:
+      image: mesaguy/oraclelinux-6.6-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-6.6
+
+  - name: oraclelinux-6.7
+    driver_config:
+      image: mesaguy/oraclelinux-6.6-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-6.6
+
+  - name: oraclelinux-6.8
+    driver_config:
+      image: mesaguy/oraclelinux-6.6-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-6.6
+
+  - name: oraclelinux-6.9
+    driver_config:
+      image: mesaguy/oraclelinux-6.9-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-6.9
+
+  - name: oraclelinux-6.10
+    driver_config:
+      image: mesaguy/oraclelinux-6.10-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-6.10
+
+  - name: oraclelinux-7.0
+    driver_config:
+      image: mesaguy/oraclelinux-7.0-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-7.0
+      run_command: /usr/lib/systemd/systemd
+
+  - name: oraclelinux-7.1
+    driver_config:
+      image: mesaguy/oraclelinux-7.1-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-7.1
+      run_command: /usr/lib/systemd/systemd
+
+  - name: oraclelinux-7.2
+    driver_config:
+      image: mesaguy/oraclelinux-7.2-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-7.2
+      run_command: /usr/lib/systemd/systemd
+
+  - name: oraclelinux-7.3
+    driver_config:
+      image: mesaguy/oraclelinux-7.3-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-7.3
+      run_command: /usr/lib/systemd/systemd
+
+  - name: oraclelinux-7.4
+    driver_config:
+      image: mesaguy/oraclelinux-7.4-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-7.4
+      run_command: /usr/lib/systemd/systemd
+
+  - name: oraclelinux-7.5
+    driver_config:
+      image: mesaguy/oraclelinux-7.5-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-7.5
+      run_command: /usr/lib/systemd/systemd
+
+  - name: ubuntu-14.04
+    driver_config:
+      image: mesaguy/ubuntu-14.04-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-ubuntu-14.04
+      privileged: true
+      volume:
+        - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+        - '/sys/fs/selinux:/sys/fs/selinux:ro'
+
+  - name: ubuntu-16.04
+    driver_config:
+      image: mesaguy/ubuntu-16.04-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-ubuntu-16.04
+      run_command: /lib/systemd/systemd
+      privileged: true
+
+  - name: ubuntu-18.04
+    driver_config:
+      image: mesaguy/ubuntu-18.04-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-ubuntu-18.04
+      run_command: /lib/systemd/systemd
+      privileged: true
+
+  - name: ubuntu-18.10
+    driver_config:
+      image: mesaguy/ubuntu-18.10-kitchen-ansible-x86_64
+      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-ubuntu-18.10
+      run_command: /lib/systemd/systemd
+      privileged: true

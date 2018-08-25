@@ -6,6 +6,12 @@
   changed_when: false
   when: ansible_os_family == 'Debian'
 
+- name: Workaround for OverlayFS on Fedora 20
+  become: true
+  shell: 'touch /var/lib/rpm/*'
+  changed_when: false
+  when: ansible_distribution == 'Fedora' and ansible_distribution_major_version == '20'
+
 - name: Find all prometheus software
   delegate_to: localhost
   local_action: find paths="{{ lookup('env', 'PWD') }}/tasks" file_type=file excludes='_*.yml,main.yml'
