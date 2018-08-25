@@ -17,10 +17,10 @@ This module is intended to support as many distributions and architectures as po
 |AmazonLinux     |1 and 2                           | x86_64 (amd64)    |
 |ArchLinux       |Current                           | x86_64 (amd64)    |
 |Enterprise Linux|6, 7                              | x86_64 (amd64)    |
-|Fedora          |24 through 28, rawhide            | x86_64 (amd64)    |
+|Fedora          |20 through 28, rawhide            | x86_64 (amd64)    |
 |Gentoo (openrc) |Current                           | x86_64 (amd64)    |
 |Gentoo (systemd)|Current                           | x86_64 (amd64)    |
-|OpenSUSE        |42.1 through tumbleweed           | x86_64 (amd64)    |
+|OpenSUSE        |13.1 through tumbleweed           | x86_64 (amd64)    |
 |Oracle Linux    |6, 7                              | x86_64 (amd64)    |
 |Ubuntu          |14.04, 16.04, 17.10, 18.04, 18.10 | x86_64 (amd64)    |
 
