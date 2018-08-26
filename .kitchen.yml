@@ -18,7 +18,7 @@ suites:
   - name: default
     verifier:
       inspec_tests:
-        - tests/inspec/all
+        - path: tests/inspec/all
 
 provisioner:
   name: ansible_push
