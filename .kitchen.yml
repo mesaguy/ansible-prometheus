@@ -4,7 +4,7 @@ driver:
 
 driver_config:
   build_options:
-    build-arg: SSH_KEY=<% if File.exists?('.kitchen/docker_id_rsa.pub') %><%= File.read('.kitchen/docker_id_rsa.pub') %><% end %>
+    build-arg: SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
   disable_upstart: false
   run_command: /sbin/init
   use_sudo: false

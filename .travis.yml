@@ -20,4 +20,8 @@ script:
 
   - git clone https://github.com/mesaguy/docker ~/docker
 
+  - mkdir .kitchen
+
+  - ssh-keygen -f .kitchen/docker_id_rsa -t rsa -N ''
+
   - bundle exec kitchen test default-oraclelinux-75
