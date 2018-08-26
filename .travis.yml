@@ -8,20 +8,41 @@ services:
 rvm:
   - 2.2
 
+env:
+  - ANSIBLE_VERSION=latest
+  - ANSIBLE_VERSION=2.6.1
+  - ANSIBLE_VERSION=2.6.0
+
 install:
+  # Install gems
   - bundle install
+
+  # Install eggs
   - pip install -r requirements.txt
+
+  # Install Ansible.
+  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
 
 script:
   # Validate README.md URLs
   - awesome_bot --skip-save-results --allow-dupe --files README.md,tests/README.md
 
+  # Perform yaml lint checks
   - yamllint --config-file=tests/yamllint.yml .
 
+  # Perform ansible-lint checks
+  - ansible-lint tasks/*
+
+  # Clone Dockerfiles used for ansible tests
   - git clone https://github.com/mesaguy/docker ~/docker
 
-  - mkdir .kitchen
+  # Check playbook's syntax
+  - ansible-playbook -i tests/inventory tests/playbooks/install_all.yml --syntax-check
 
-  - ssh-keygen -f .kitchen/docker_id_rsa -t rsa -N ''
+  # Create kitchen SSH keys to be used by kitchen-docker when
+  # building Dockerfiles
+  - mkdir -p .kitchen
+  - if ! [ -f ".kitchen/docker_id_rsa" ] ; then ssh-keygen -f .kitchen/docker_id_rsa -t rsa -N ''; fi
 
+  # Perform installations, inspec tests, and idempotent tests
   - bundle exec kitchen test default-oraclelinux-75
