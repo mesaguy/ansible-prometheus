@@ -34,8 +34,3 @@
     loop_var: prometheus_testing_package
   with_items: "{{ prometheus_testing_packages }}"
   when: prometheus_testing_packages is defined
-
-- name: Docker clean up
-  delegate_to: localhost
-  command: docker system prune -f
-  when: ansible_docker0 is defined and ansible_docker0

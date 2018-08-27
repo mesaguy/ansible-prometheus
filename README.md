@@ -27,32 +27,34 @@ This module is intended to support as many distributions and architectures as po
 ### Supported Prometheus software
 The following core Prometheus software is supported in addition to the list of exporters below. This software is fully tested on all supported OS, distributions, and architectures.
 
- * [prometheus](https://github.com/prometheus/prometheus)
- * [alertmanager](https://github.com/prometheus/alertmanager)
- * [push_gateway](https://github.com/prometheus/pushgateway)
+| Prometheus software                                       | CI tested |
+|-----------------------------------------------------------|:----------|
+|[prometheus](https://github.com/prometheus/prometheus)     | Yes       |
+|[alertmanager](https://github.com/prometheus/alertmanager) | Yes       |
+|[push_gateway](https://github.com/prometheus/pushgateway)  | Yes       |
 
 ### Supported exporters
 All exporters are verified to install. Currently select modules receive testing via CI (Continuous Integration) and [Inspec](https://www.inspec.io)
 
-| Exporter                                                                   | Author      | CI testing | Use |
-| ---------------------------------------------------------------------------|:-----------:|:----------:|:----|
-|[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)        | prometheus  | No         | Yes |
-|[collectd_exporter](https://github.com/prometheus/collectd_exporter)        | prometheus  | No         | No  |
-|[consul_exporter ](https://github.com/prometheus/consul_exporter)           | prometheus  | No         | No  |
-|[gluster exporter](https://github.com/ofesseler/gluster_exporter)           | ofesseler   | No         | Yes |
-|[graphite_exporter](https://github.com/prometheus/graphite_exporter)        | prometheus  | No         | No  |
-|[haproxy_exporter](https://github.com/prometheus/haproxy_exporter)          | prometheus  | No         | No  |
-|[influxdb_exporter](https://github.com/prometheus/influxdb_exporter)        | prometheus  | No         | No  |
-|[jmx_exporter](https://github.com/prometheus/jmx_exporter)                  | prometheus  | No         | Yes |
-|[kafka_exporter](https://github.com/danielqsj/kafka_exporter)               | danielqsj   | No         | Yes |
-|[memcached_exporter](https://github.com/prometheus/memcached_exporter)      | prometheus  | No         | No  |
-|[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)            | prometheus  | No         | Yes |
-|[node_exporter](https://github.com/prometheus/node_exporter)                | prometheus  | No         | Yes |
-|[postgres_exporter](https://github.com/wrouesnel/postgres_exporter)         | wrouesnel   | No         | No  |
-|[process-exporter](https://github.com/ncabatoff/process-exporter)           | ncabatoff   | No         | Yes |
-|[snmp_exporter](https://github.com/prometheus/snmp_exporter)                | prometheus  | No         | Yes |
-|[statsd_exporter](https://github.com/prometheus/statsd_exporter)            | prometheus  | No         | No  |
-|[zookeeper_exporter](https://github.com/infonova/zookeeper_exporter)        | infonova    | No         | Yes |
+| Exporter                                                                   | Author      | CI tested |
+| ---------------------------------------------------------------------------|:-----------:|:---------:|
+|[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)        | prometheus  | Yes       |
+|[collectd_exporter](https://github.com/prometheus/collectd_exporter)        | prometheus  | Yes       |
+|[consul_exporter ](https://github.com/prometheus/consul_exporter)           | prometheus  | Yes       |
+|[gluster exporter](https://github.com/ofesseler/gluster_exporter)           | ofesseler   | Yes       |
+|[graphite_exporter](https://github.com/prometheus/graphite_exporter)        | prometheus  | Yes       |
+|[haproxy_exporter](https://github.com/prometheus/haproxy_exporter)          | prometheus  | Yes       |
+|[influxdb_exporter](https://github.com/prometheus/influxdb_exporter)        | prometheus  | Yes       |
+|[jmx_exporter](https://github.com/prometheus/jmx_exporter)                  | prometheus  | No        |
+|[kafka_exporter](https://github.com/danielqsj/kafka_exporter)               | danielqsj   | Yes       |
+|[memcached_exporter](https://github.com/prometheus/memcached_exporter)      | prometheus  | Yes       |
+|[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)            | prometheus  | Yes       |
+|[node_exporter](https://github.com/prometheus/node_exporter)                | prometheus  | Yes       |
+|[postgres_exporter](https://github.com/wrouesnel/postgres_exporter)         | wrouesnel   | Yes       |
+|[process-exporter](https://github.com/ncabatoff/process-exporter)           | ncabatoff   | Yes       |
+|[snmp_exporter](https://github.com/prometheus/snmp_exporter)                | prometheus  | Yes       |
+|[statsd_exporter](https://github.com/prometheus/statsd_exporter)            | prometheus  | Yes       |
+|[zookeeper_exporter](https://github.com/infonova/zookeeper_exporter)        | infonova    | Yes       |
 
 ## Role Variables
 There are no global variables required to get started. However, some exporters may require site specific configuration.

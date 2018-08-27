@@ -3,9 +3,8 @@ driver:
   name: docker
 
 driver_config:
-  build_options:
-    build-arg: SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
   disable_upstart: false
+  dockerfile: tests/Dockerfile
   run_command: /sbin/init
   use_sudo: false
   volume:
@@ -35,161 +34,223 @@ provisioner:
 platforms:
   - name: alpine-3.2
     driver_config:
-      image: mesaguy/alpine-3.2-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-alpine-3.2
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/alpine-3.2-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: alpine-3.3
     driver_config:
-      image: mesaguy/alpine-3.3-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-alpine-3.3
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/alpine-3.3-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: alpine-3.4
     driver_config:
-      image: mesaguy/alpine-3.4-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-alpine-3.4
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/alpine-3.4-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: alpine-3.5
     driver_config:
-      image: mesaguy/alpine-3.5-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-alpine-3.5
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/alpine-3.5-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: alpine-3.6
     driver_config:
-      image: mesaguy/alpine-3.6-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-alpine-3.6
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/alpine-3.6-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: alpine-3.7
     driver_config:
-      image: mesaguy/alpine-3.7-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-alpine-3.7
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/alpine-3.7-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: alpine-3.8
     driver_config:
-      image: mesaguy/alpine-3.8-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-alpine-3.8
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/alpine-3.8-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+
+  - name: alpine-edge
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/alpine-edge-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: amazonlinux-1
     driver_config:
-      image: mesaguy/amazonlinux-1-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-amazonlinux-1
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/amazonlinux-1-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: amazonlinux-2
     driver_config:
-      image: mesaguy/amazonlinux-2-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-amazonlinux-2
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/amazonlinux-2-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: archlinux
     driver_config:
-      image: mesaguy/archlinux-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-archlinux
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/archlinux-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: centos-6.6
     driver_config:
-      image: mesaguy/centos-6.6-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-6.6
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/centos-6.6-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: centos-6.7
     driver_config:
-      image: mesaguy/centos-6.6-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-6.6
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/centos-6.7-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: centos-6.8
     driver_config:
-      image: mesaguy/centos-6.6-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-6.6
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/centos-6.8-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: centos-6.9
     driver_config:
-      image: mesaguy/centos-6.9-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-6.9
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/centos-6.9-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: centos-6.10
     driver_config:
-      image: mesaguy/centos-6.10-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-6.10
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/centos-6.10-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: centos-7.0
     driver_config:
-      image: mesaguy/centos-7.0-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-7.0
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/centos-7.0-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: centos-7.1
     driver_config:
-      image: mesaguy/centos-7.1-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-7.1
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/centos-7.1-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: centos-7.2
     driver_config:
-      image: mesaguy/centos-7.2-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-7.2
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/centos-7.2-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: centos-7.3
     driver_config:
-      image: mesaguy/centos-7.3-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-7.3
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/centos-7.3-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: centos-7.4
     driver_config:
-      image: mesaguy/centos-7.4-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-7.4
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/centos-7.4-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: centos-7.5
     driver_config:
-      image: mesaguy/centos-7.5-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-centos-7.5
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/centos-7.5-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: debian-7
     driver_config:
-      image: mesaguy/debian-7-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-debian-7
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/debian-7-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
+      run_command: /usr/lib/systemd/systemd
       volume:
         - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
         - '/sys/fs/selinux:/sys/fs/selinux:ro'
 
   - name: debian-8
     driver_config:
-      image: mesaguy/debian-8-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-debian-8
-      run_command: /lib/systemd/systemd
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/debian-8-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
+      run_command: /usr/lib/systemd/systemd
       volume:
         - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
         - '/sys/fs/selinux:/sys/fs/selinux:ro'
 
   - name: debian-9
     driver_config:
-      image: mesaguy/debian-9-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-debian-9
-      run_command: /lib/systemd/systemd
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/debian-9-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
+      run_command: /lib/systemd/systemd
 
   - name: debian-10
     driver_config:
-      image: mesaguy/debian-10-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-debian-10
-      run_command: /lib/systemd/systemd
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/debian-10-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
+      run_command: /lib/systemd/systemd
 
   - name: fedora-20
     driver_config:
-      image: mesaguy/fedora-20-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-20
-      run_command: /usr/lib/systemd/systemd
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/fedora-20-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
+      run_command: /usr/lib/systemd/systemd
 
   - name: fedora-21
     driver_config:
-      image: mesaguy/fedora-21-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-21
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/fedora-21-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
       run_command: /usr/lib/systemd/systemd
       volume:
@@ -198,8 +259,10 @@ platforms:
 
   - name: fedora-22
     driver_config:
-      image: mesaguy/fedora-22-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-22
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/fedora-22-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
       run_command: /usr/lib/systemd/systemd
       volume:
@@ -208,8 +271,10 @@ platforms:
 
   - name: fedora-23
     driver_config:
-      image: mesaguy/fedora-23-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-23
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/fedora-23-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
       run_command: /usr/lib/systemd/systemd
       volume:
@@ -218,8 +283,10 @@ platforms:
 
   - name: fedora-24
     driver_config:
-      image: mesaguy/fedora-24-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-24
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/fedora-24-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
       run_command: /usr/lib/systemd/systemd
       volume:
@@ -228,8 +295,10 @@ platforms:
 
   - name: fedora-25
     driver_config:
-      image: mesaguy/fedora-25-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-25
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/fedora-25-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
       run_command: /usr/lib/systemd/systemd
       volume:
@@ -238,8 +307,10 @@ platforms:
 
   - name: fedora-26
     driver_config:
-      image: mesaguy/fedora-26-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-26
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/fedora-26-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
       run_command: /usr/lib/systemd/systemd
       volume:
@@ -248,150 +319,197 @@ platforms:
 
   - name: fedora-27
     driver_config:
-      image: mesaguy/fedora-27-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-27
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/fedora-27-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: fedora-28
     driver_config:
-      image: mesaguy/fedora-28-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-28
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/fedora-28-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: fedora-rawhide
     driver_config:
-      image: mesaguy/fedora-rawhide-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-fedora-rawhide
-      privileged: true
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/fedora-rawhide-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: gentoo-openrc
     driver_config:
-      image: mesaguy/gentoo-openrc-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-gentoo-openrc
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/gentoo-openrc-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
 
   - name: gentoo-systemd
     driver_config:
-      image: mesaguy/gentoo-systemd-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-gentoo-systemd
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/gentoo-systemd-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
       run_command: /usr/lib/systemd/systemd
 
   - name: opensuse-13.1
     driver_config:
-      image: mesaguy/opensuse-13.1-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-opensuse-13.1
-      run_command: /usr/lib/systemd/systemd
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/opensuse-13.1-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
+      run_command: /usr/lib/systemd/systemd
 
   - name: opensuse-13.2
     driver_config:
-      image: mesaguy/opensuse-13.2-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-opensuse-13.2
-      run_command: /usr/lib/systemd/systemd
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/opensuse-13.2-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
+      run_command: /usr/lib/systemd/systemd
 
   - name: opensuse-42.1
     driver_config:
-      image: mesaguy/opensuse-42.1-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-opensuse-42.1
-      run_command: /usr/lib/systemd/systemd
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/opensuse-42.1-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
+      run_command: /usr/lib/systemd/systemd
 
   - name: opensuse-42.2
     driver_config:
-      image: mesaguy/opensuse-42.2-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-opensuse-42.2
-      run_command: /usr/lib/systemd/systemd
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/opensuse-42.2-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
+      run_command: /usr/lib/systemd/systemd
 
   - name: opensuse-42.3
     driver_config:
-      image: mesaguy/opensuse-42.3-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-opensuse-42.3
-      run_command: /usr/lib/systemd/systemd
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/opensuse-42.3-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
+      run_command: /usr/lib/systemd/systemd
 
   - name: opensuse-leap
     driver_config:
-      image: mesaguy/opensuse-leap-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-opensuse-leap
-      run_command: /usr/lib/systemd/systemd
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/opensuse-leap-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
+      run_command: /usr/lib/systemd/systemd
 
   - name: opensuse-tumbleweed
     driver_config:
-      image: mesaguy/opensuse-tumbleweed-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-opensuse-tumbleweed
-      run_command: /usr/lib/systemd/systemd
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/opensuse-tumbleweed-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
+      run_command: /usr/lib/systemd/systemd
 
   - name: oraclelinux-6.6
     driver_config:
-      image: mesaguy/oraclelinux-6.6-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-6.6
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/oraclelinux-6.6-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: oraclelinux-6.7
     driver_config:
-      image: mesaguy/oraclelinux-6.6-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-6.6
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/oraclelinux-6.7-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: oraclelinux-6.8
     driver_config:
-      image: mesaguy/oraclelinux-6.6-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-6.6
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/oraclelinux-6.8-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: oraclelinux-6.9
     driver_config:
-      image: mesaguy/oraclelinux-6.9-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-6.9
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/oraclelinux-6.9-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: oraclelinux-6.10
     driver_config:
-      image: mesaguy/oraclelinux-6.10-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-6.10
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/oraclelinux-6.10-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: oraclelinux-7.0
     driver_config:
-      image: mesaguy/oraclelinux-7.0-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-7.0
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/oraclelinux-7.0-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: oraclelinux-7.1
     driver_config:
-      image: mesaguy/oraclelinux-7.1-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-7.1
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/oraclelinux-7.1-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: oraclelinux-7.2
     driver_config:
-      image: mesaguy/oraclelinux-7.2-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-7.2
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/oraclelinux-7.2-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: oraclelinux-7.3
     driver_config:
-      image: mesaguy/oraclelinux-7.3-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-7.3
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/oraclelinux-7.3-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: oraclelinux-7.4
     driver_config:
-      image: mesaguy/oraclelinux-7.4-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-7.4
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/oraclelinux-7.4-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: oraclelinux-7.5
     driver_config:
-      image: mesaguy/oraclelinux-7.5-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-oraclelinux-7.5
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/oraclelinux-7.5-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
   - name: ubuntu-14.04
     driver_config:
-      image: mesaguy/ubuntu-14.04-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-ubuntu-14.04
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/ubuntu-14.04-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
       volume:
         - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
@@ -399,21 +517,27 @@ platforms:
 
   - name: ubuntu-16.04
     driver_config:
-      image: mesaguy/ubuntu-16.04-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-ubuntu-16.04
-      run_command: /lib/systemd/systemd
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/ubuntu-16.04-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
+      run_command: /lib/systemd/systemd
 
   - name: ubuntu-18.04
     driver_config:
-      image: mesaguy/ubuntu-18.04-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-ubuntu-18.04
-      run_command: /lib/systemd/systemd
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/ubuntu-18.04-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
+      run_command: /lib/systemd/systemd
 
   - name: ubuntu-18.10
     driver_config:
-      image: mesaguy/ubuntu-18.10-kitchen-ansible-x86_64
-      dockerfile: ~/docker/kitchen-ansible-x86_64/Dockerfile-ubuntu-18.10
-      run_command: /lib/systemd/systemd
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/ubuntu-18.10-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
+      run_command: /lib/systemd/systemd

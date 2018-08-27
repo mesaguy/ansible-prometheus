@@ -2,7 +2,9 @@
 sudo: required
 
 language: python
-python: '3.6'
+python:
+  - '2.7'
+  - '3.6'
 services:
   - docker
 rvm:
@@ -12,6 +14,11 @@ env:
   - ANSIBLE_VERSION=latest
   - ANSIBLE_VERSION=2.6.1
   - ANSIBLE_VERSION=2.6.0
+  - KITCHEN_PLATFORM=default-archlinux
+  - KITCHEN_PLATFORM=default-centos-75
+  - KITCHEN_PLATFORM=default-oraclelinux-75
+  - KITCHEN_PLATFORM=default-ubuntu-1604
+  - KITCHEN_PLATFORM=default-ubuntu-1804
 
 install:
   # Install gems
@@ -33,9 +40,6 @@ script:
   # Perform ansible-lint checks
   - ansible-lint tasks/*
 
-  # Clone Dockerfiles used for ansible tests
-  - git clone https://github.com/mesaguy/docker ~/docker
-
   # Check playbook's syntax
   - ansible-playbook -i tests/inventory tests/playbooks/install_all.yml --syntax-check
 
@@ -45,4 +49,4 @@ script:
   - if ! [ -f ".kitchen/docker_id_rsa" ] ; then ssh-keygen -f .kitchen/docker_id_rsa -t rsa -N ''; fi
 
   # Perform installations, inspec tests, and idempotent tests
-  - bundle exec kitchen test default-oraclelinux-75
+  - bundle exec kitchen test $KITCHEN_PLATFORM
