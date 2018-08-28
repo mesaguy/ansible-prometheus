@@ -36,25 +36,25 @@ The following core Prometheus software is supported in addition to the list of e
 ### Supported exporters
 All exporters are verified to install. Currently select modules receive testing via CI (Continuous Integration) and [Inspec](https://www.inspec.io)
 
-| Exporter                                                                   | Author      | CI tested |
-| ---------------------------------------------------------------------------|:-----------:|:---------:|
-|[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)        | prometheus  | Yes       |
-|[collectd_exporter](https://github.com/prometheus/collectd_exporter)        | prometheus  | Yes       |
-|[consul_exporter ](https://github.com/prometheus/consul_exporter)           | prometheus  | Yes       |
-|[gluster exporter](https://github.com/ofesseler/gluster_exporter)           | ofesseler   | Yes       |
-|[graphite_exporter](https://github.com/prometheus/graphite_exporter)        | prometheus  | Yes       |
-|[haproxy_exporter](https://github.com/prometheus/haproxy_exporter)          | prometheus  | Yes       |
-|[influxdb_exporter](https://github.com/prometheus/influxdb_exporter)        | prometheus  | Yes       |
-|[jmx_exporter](https://github.com/prometheus/jmx_exporter)                  | prometheus  | No        |
-|[kafka_exporter](https://github.com/danielqsj/kafka_exporter)               | danielqsj   | Yes       |
-|[memcached_exporter](https://github.com/prometheus/memcached_exporter)      | prometheus  | Yes       |
-|[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)            | prometheus  | Yes       |
-|[node_exporter](https://github.com/prometheus/node_exporter)                | prometheus  | Yes       |
-|[postgres_exporter](https://github.com/wrouesnel/postgres_exporter)         | wrouesnel   | Yes       |
-|[process-exporter](https://github.com/ncabatoff/process-exporter)           | ncabatoff   | Yes       |
-|[snmp_exporter](https://github.com/prometheus/snmp_exporter)                | prometheus  | Yes       |
-|[statsd_exporter](https://github.com/prometheus/statsd_exporter)            | prometheus  | Yes       |
-|[zookeeper_exporter](https://github.com/infonova/zookeeper_exporter)        | infonova    | Yes       |
+| Exporter                                                                        | Author      | CI tested |
+| --------------------------------------------------------------------------------|:-----------:|:---------:|
+|[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)             | prometheus  | Yes       |
+|[collectd_exporter](https://github.com/prometheus/collectd_exporter)             | prometheus  | Yes       |
+|[consul_exporter ](https://github.com/prometheus/consul_exporter)                | prometheus  | Yes       |
+|[gluster exporter_ofesseler](https://github.com/ofesseler/gluster_exporter)      | ofesseler   | Yes       |
+|[graphite_exporter](https://github.com/prometheus/graphite_exporter)             | prometheus  | Yes       |
+|[haproxy_exporter](https://github.com/prometheus/haproxy_exporter)               | prometheus  | Yes       |
+|[influxdb_exporter](https://github.com/prometheus/influxdb_exporter)             | prometheus  | Yes       |
+|[jmx_exporter](https://github.com/prometheus/jmx_exporter)                       | prometheus  | No        |
+|[kafka_exporter](https://github.com/danielqsj/kafka_exporter)                    | danielqsj   | Yes       |
+|[memcached_exporter_danielqsj](https://github.com/prometheus/memcached_exporter) | prometheus  | Yes       |
+|[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)                 | prometheus  | Yes       |
+|[node_exporter](https://github.com/prometheus/node_exporter)                     | prometheus  | Yes       |
+|[postgres_exporter_wrouesnel](https://github.com/wrouesnel/postgres_exporter)    | wrouesnel   | Yes       |
+|[process_exporter_ncabatoff](https://github.com/ncabatoff/process-exporter)      | ncabatoff   | Yes       |
+|[snmp_exporter](https://github.com/prometheus/snmp_exporter)                     | prometheus  | Yes       |
+|[statsd_exporter](https://github.com/prometheus/statsd_exporter)                 | prometheus  | Yes       |
+|[zookeeper_exporter_infonova](https://github.com/infonova/zookeeper_exporter)    | infonova    | Yes       |
 
 ## Role Variables
 There are no global variables required to get started. However, some exporters may require site specific configuration.

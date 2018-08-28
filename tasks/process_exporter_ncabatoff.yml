@@ -8,7 +8,7 @@
   set_fact:
     prometheus_exporter: true
     prometheus_software_binary_name: process-exporter
-    prometheus_software_name: 'process-exporter_ncabatoff'
+    prometheus_software_name: 'process_exporter_ncabatoff'
     prometheus_software_extra_opts: '{{ prometheus_process_exporter_ncabatoff_extra_opts | default("") }}'
     prometheus_software_fallback_to_build: '{{ prometheus_process_exporter_ncabatoff_fallback_to_build | default(prometheus_fallback_to_build) }}'
     prometheus_software_version: '{{ prometheus_process_exporter_ncabatoff_version | default("0.2.12") }}'
