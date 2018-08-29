@@ -37,3 +37,10 @@ prometheus_go_dir: '{{ prometheus_root_dir }}/go'
 prometheus_log_dir: '/var/log/prometheus'
 prometheus_tmp_dir: '{{ prometheus_root_dir }}/tmp'
 prometheus_var_dir: '{{ prometheus_root_dir }}/var'
+
+# Application directories
+prometheus_tgroup_dir: '{{ prometheus_etc_dir }}/tgroups'
+prometheus_tgroup_dir_purge_orphans: false
+prometheus_tgroup_owner: '{{ prometheus_user }}'
+prometheus_tgroup_group: '{{ prometheus_group }}'
+prometheus_tgroup_mode: 0775

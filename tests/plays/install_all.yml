@@ -30,6 +30,7 @@
   package:
     name: '{{ prometheus_testing_package }}'
     state: present
+  changed_when: false
   loop_control:
     loop_var: prometheus_testing_package
   with_items: "{{ prometheus_testing_packages }}"

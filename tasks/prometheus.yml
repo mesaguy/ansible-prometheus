@@ -49,10 +49,19 @@
   become: true
   file:
     path: '{{ prometheus_storage_directory }}'
+    state: directory
     owner: '{{ prometheus_user }}'
     group: '{{ prometheus_group }}'
     mode: '0750'
+
+- name: 'Create {{ prometheus_software_name_version }} tgroup directory: {{ prometheus_tgroup_dir }}'
+  become: true
+  file:
+    path: '{{ prometheus_tgroup_dir }}'
     state: directory
+    owner: '{{ prometheus_tgroup_owner }}'
+    group: '{{ prometheus_tgroup_group }}'
+    mode: '{{ prometheus_tgroup_mode }}'
 
 - name: 'Include task to perform installation of {{ prometheus_software_name_version }}'
   include_tasks: _install.yml

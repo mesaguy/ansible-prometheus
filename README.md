@@ -1,4 +1,5 @@
 # Prometheus
+[![Build Status](https://api.travis-ci.org/mesaguy/ansible-prometheus.svg?branch=master)](https://travis-ci.org/mesaguy/ansible-prometheus)
 
 Installs and manages [Prometheus server](https://prometheus.io), [Alertmanager](https://prometheus.io/docs/alerting/overview/), [PushGateway](https://github.com/prometheus/pushgateway/blob/master/README.md), and [Prometheus exporters](https://prometheus.io/docs/instrumenting/exporters/)
 

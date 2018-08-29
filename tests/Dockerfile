@@ -1,6 +1,5 @@
 ARG DOCKER_IMAGE_NAME
 FROM $DOCKER_IMAGE_NAME
-RUN echo "Using $DOCKER_IMAGE_NAME"
 
 # Add your specific Ansible SSH public key. This only works when run via
 # kitchen, when run with the following options in your .kitchen.yml file:
