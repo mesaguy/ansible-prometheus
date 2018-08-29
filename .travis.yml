@@ -11,14 +11,13 @@ rvm:
   - 2.2
 
 env:
-  - ANSIBLE_VERSION=latest
-  - ANSIBLE_VERSION=2.6.1
-  - ANSIBLE_VERSION=2.6.0
-  - KITCHEN_PLATFORM=default-archlinux
-  - KITCHEN_PLATFORM=default-centos-75
-  - KITCHEN_PLATFORM=default-oraclelinux-75
-  - KITCHEN_PLATFORM=default-ubuntu-1604
-  - KITCHEN_PLATFORM=default-ubuntu-1804
+  - ANSIBLE_VERSION=2.6.0  KITCHEN_PLATFORM=default-ubuntu-1804
+  - ANSIBLE_VERSION=2.6.1  KITCHEN_PLATFORM=default-ubuntu-1804
+  - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-archlinux
+  - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-centos-75
+  - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-oraclelinux-75
+  - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-ubuntu-1604
+  - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-ubuntu-1804
 
 install:
   # Install gems
