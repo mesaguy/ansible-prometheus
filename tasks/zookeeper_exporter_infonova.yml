@@ -7,6 +7,7 @@
 - name: 'Starting zookeeper_exporter (infonova) install'
   set_fact:
     prometheus_exporter: true
+    prometheus_zookeeper_exporter_infonova_default_port: 9114
     prometheus_software_binary_name: 'zookeeper_exporter'
     prometheus_software_extra_opts: '{{ prometheus_zookeeper_exporter_infonova_extra_opts | default() }}'
     prometheus_software_fallback_to_build: '{{ prometheus_zookeeper_exporter_infonova_fallback_to_build | default(prometheus_fallback_to_build) }}'

@@ -6,7 +6,7 @@ Installs and manages [Prometheus server](https://prometheus.io), [Alertmanager](
 This module was designed to be extended easily and is kept current such that it always uses the latest Prometheus software.
 
 ## Requirements
-Ansible >= 2.6.2
+Ansible >= 2.5.1
 
 ## Supported Software and Operating Systems
 ### Supported Operating Systems, Distributions, and Architectures
@@ -41,7 +41,7 @@ All exporters are verified to install. Currently select modules receive testing 
 | --------------------------------------------------------------------------------|:-----------:|:---------:|
 |[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)             | prometheus  | Yes       |
 |[collectd_exporter](https://github.com/prometheus/collectd_exporter)             | prometheus  | Yes       |
-|[consul_exporter ](https://github.com/prometheus/consul_exporter)                | prometheus  | Yes       |
+|[consul_exporter](https://github.com/prometheus/consul_exporter)                 | prometheus  | Yes       |
 |[gluster exporter_ofesseler](https://github.com/ofesseler/gluster_exporter)      | ofesseler   | Yes       |
 |[graphite_exporter](https://github.com/prometheus/graphite_exporter)             | prometheus  | Yes       |
 |[haproxy_exporter](https://github.com/prometheus/haproxy_exporter)               | prometheus  | Yes       |
@@ -58,7 +58,33 @@ All exporters are verified to install. Currently select modules receive testing 
 |[zookeeper_exporter_infonova](https://github.com/infonova/zookeeper_exporter)    | infonova    | Yes       |
 
 ## Role Variables
-There are no global variables required to get started. However, some exporters may require site specific configuration.
+You should configure the 'prometheus_components' variable owner unless you are using the 'include_role' task inclusion method below. The 'prometheus_components' variable is an array specifying the prometheus software to install. This example shows all possible prometheus_components, one should pick and choose the machine applicable components:
+
+``` yaml
+prometheus_components:
+ # Core components:
+ - alertmanager
+ - prometheus
+ - push_gateway
+ # Exporters
+ - blackbox_exporter
+ - collectd_exporter
+ - consul_exporter
+ - gluster exporter_ofesseler
+ - graphite_exporter
+ - haproxy_exporter
+ - influxdb_exporter
+ - jmx_exporter
+ - kafka_exporter
+ - memcached_exporter_danielqsj
+ - mysqld_exporter
+ - node_exporter
+ - postgres_exporter_wrouesnel
+ - process_exporter_ncabatoff
+ - snmp_exporter
+ - statsd_exporter
+ - zookeeper_exporter_infonova
+```
 
 Most Prometheus software and exporters use yaml for the configuration files. The content of your configuration files be be defined using the following methods:
 
@@ -487,10 +513,10 @@ The version of mysqld_exporter to install. The source version defines the versio
     prometheus_mysqld_exporter_version: "0.11.0"
     prometheus_mysqld_exporter_src_version: "v0.11.0"
 
-Port and IP to listen on. Defaults to listening on all available IPs on port 13306:
+Port and IP to listen on. Defaults to listening on all available IPs on port 9104:
 
     prometheus_mysqld_exporter_host: "0.0.0.0"
-    prometheus_mysqld_exporter_port: 13306
+    prometheus_mysqld_exporter_port: 9104
 
 ### Node exporter variables
 
@@ -582,8 +608,8 @@ An array of additional flags to pass to the process_exporter daemon:
 
 The version of process_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_process_exporter_ncabatoff_version: "0.2.12"
-    prometheus_process_exporter_ncabatoff_src_version: "v0.2.12"
+    prometheus_process_exporter_ncabatoff_version: "0.3.9"
+    prometheus_process_exporter_ncabatoff_src_version: "v0.3.9"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9256. This is the default port and can/should be overridden using the configuration as exampled above in this section:
 
@@ -674,6 +700,25 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 911
 The following example installs Prometheus (server), alertmanager, blackbox_exporter, and the node_exporter. The Prometheus (server) port and storage retention parameters have been changed from the defaults.
 
 The Prometheus server should be installed only on designated Prometheus server hosts. Prometheus clients should only have select and specific exporters installed.
+
+Class use method:
+
+``` yaml
+- hosts: prometheus_servers
+  vars:
+    prometheus_components:
+      - prometheus
+      - alertmanager
+      - blackbox_exporter
+      - node_exporter
+    prometheus_port: 10000
+    prometheus_extra_opts:
+     - '--storage.tsdb.retention=90d'
+  roles:
+    - mesaguy.prometheus
+```
+
+Longer 'include_role' use method:
 
 ``` yaml
 - hosts: prometheus_servers

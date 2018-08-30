@@ -6,5 +6,5 @@
     prometheus_software_service_name: '{{ prometheus_software_service_name | default(prometheus_software_name, true) }}'
     # The shortname is the software's internal name. The author's name if added as a suffix
     # in some cases, the shortname never includes the author suffix
-    prometheus_software_shortname: '{{ prometheus_software_shortname | default(prometheus_software_name) }}'
+    prometheus_software_shortname: '{{ prometheus_software_shortname | default(prometheus_software_name, true) }}'
     prometheus_software_src_dir: '{{ prometheus_tmp_dir }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}{{ prometheus_software_src_dir_suffix }}'
