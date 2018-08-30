@@ -7,6 +7,7 @@
 - name: 'Starting blackbox_exporter install'
   set_fact:
     prometheus_exporter: true
+    prometheus_blackbox_exporter_default_port: 9115
     prometheus_software_extra_opts: '{{ prometheus_blackbox_exporter_extra_opts | default () }}'
     # Do not perform tests, tests only succeed where IPv6 is available
     prometheus_software_fallback_to_build: '{{ prometheus_blackbox_exporter_fallback_to_build | default(prometheus_fallback_to_build) }}'

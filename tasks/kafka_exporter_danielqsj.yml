@@ -7,6 +7,7 @@
 - name: 'Starting kafka_exporter (danielqsj) install'
   set_fact:
     prometheus_exporter: true
+    prometheus_kafka_exporter_danielqsj_default_port: 9308
     prometheus_software_binary_name: kafka_exporter
     prometheus_software_extra_opts: '{{ prometheus_kafka_exporter_danielqsj_extra_opts | default () }}'
     prometheus_software_fallback_to_build: '{{ prometheus_kafka_exporter_danielqsj_fallback_to_build | default(prometheus_fallback_to_build) }}'

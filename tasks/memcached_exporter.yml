@@ -7,6 +7,7 @@
 - name: 'Starting memcached_exporter install'
   set_fact:
     prometheus_exporter: true
+    prometheus_memcached_exporter_default_port: 9150
     prometheus_software_makefile_make_command: 'make format && make build'
     prometheus_software_extra_opts: '{{ prometheus_memcached_exporter_extra_opts | default() }}'
     prometheus_software_fallback_to_build: '{{ prometheus_memcached_exporter_fallback_to_build | default(prometheus_fallback_to_build) }}'
