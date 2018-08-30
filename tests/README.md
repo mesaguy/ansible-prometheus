@@ -16,3 +16,7 @@ Test yaml syntax:
 To test URLs:
 
     awesome_bot --skip-save-results --allow-dupe --files README.md,tests/README.md
+
+Run Ansible lint:
+
+    ansible-lint tasks/*

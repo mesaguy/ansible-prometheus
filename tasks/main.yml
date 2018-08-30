@@ -1,9 +1,4 @@
 ---
-- block:
-  - name: 'Include role mesaguy.prometheus setup task'
-    include_tasks: _setup.yml
-  when: prometheus_setup_task_executed is not defined
----
 - name: Run prometheus component installation and setup tasks
   include_role:
     name: mesaguy.prometheus
