@@ -202,7 +202,7 @@ Prometheus configuration files are validated using 'promtool' before Prometheus 
 
 The configuration content. The example below utilizes a file named 'prometheus_server.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
 
-    prometheus_software_cfg: '{{ lookup("file", "../files/prometheus_server.yml") | from_yaml) }}'
+    prometheus_server_cfg: '{{ lookup("file", "../files/prometheus_server.yml") | from_yaml }}'
 
 An array of additional flags to pass to the prometheus daemon:
 
@@ -236,7 +236,7 @@ Alertmanager configuration files are validated using 'amtool' before Alertmanage
 
 The configuration content. The example below utilizes a file named 'alertmanager.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
 
-    prometheus_alertmanager_cfg: '{{ lookup("file", "../files/alertmanager.yml") | from_yaml) }}'
+    prometheus_alertmanager_cfg: '{{ lookup("file", "../files/alertmanager.yml") | from_yaml }}'
 
 An array of additional flags to pass to the alertmanager daemon:
 
@@ -763,8 +763,9 @@ Future: When source is compiled, all compile commands are executed using an unpr
 
 ## License
 MIT
-See the LICENSE file
+See the [LICENSE](https://github.com/mesaguy/ansible-prometheus/blob/master/LICENSE) file
 
 ## Author Information
 Mesaguy
+https://mesaguy.com
 https://github.com/mesaguy/ansible-prometheus
