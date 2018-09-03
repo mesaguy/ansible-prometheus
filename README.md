@@ -608,8 +608,8 @@ An array of additional flags to pass to the process_exporter daemon:
 
 The version of process_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_process_exporter_ncabatoff_version: "0.3.9"
-    prometheus_process_exporter_ncabatoff_src_version: "v0.3.9"
+    prometheus_process_exporter_ncabatoff_version: "0.3.11"
+    prometheus_process_exporter_ncabatoff_src_version: "v0.3.11"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9256. This is the default port and can/should be overridden using the configuration as exampled above in this section:
 
