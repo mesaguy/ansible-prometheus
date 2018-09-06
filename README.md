@@ -558,6 +558,13 @@ Environmental variables to pass to the postgres_exporter_wrouesnel exporter. The
     prometheus_postgres_exporter_wrouesnel_env_vars:
       DATA_SOURCE_NAME: 'postgresql://postgres_exporter:password@localhost:5432/postgres?sslmode=disable'
 
+To avoid putting credentials in environmental variables, one can use the URI method of connection. After creating a file containing the connection password, configure as follows:
+
+    prometheus_postgres_exporter_wrouesnel_env_vars:
+      DATA_SOURCE_PASS_FILE: /opt/prometheus/etc/postgres_exporter.password
+      DATA_SOURCE_URI: "127.0.0.1:5432/postgres?sslmode=disable"
+      DATA_SOURCE_USER: postgres_exporter
+
 An array of additional flags to pass to the postgres_exporter daemon:
 
     prometheus_postgres_exporter_wrouesnel_extra_opts: []
