@@ -37,9 +37,6 @@ describe file('/opt/prometheus/var') do
     its('group') { should eq 'prometheus' }
 end
 
-
-
-
 describe file('/opt/prometheus/prometheus') do
     it { should be_directory }
     its('mode') { should cmp '0755' }
@@ -54,7 +51,31 @@ describe file('/opt/prometheus/prometheus/active') do
     its('group') { should eq 'prometheus' }
 end
 
-# Verify that 'prometheus' service is running
+describe file('/opt/prometheus/prometheus/active/promtool') do
+    it { should be_file }
+    it { should be_executable }
+    its('mode') { should cmp '0755' }
+    its('owner') { should eq 'root' }
+    its('group') { should eq 'prometheus' }
+end
+
+describe file('/opt/prometheus/prometheus/active/prometheus') do
+    it { should be_file }
+    it { should be_executable }
+    its('mode') { should cmp '0755' }
+    its('owner') { should eq 'root' }
+    its('group') { should eq 'prometheus' }
+end
+
+describe command('/opt/prometheus/prometheus/active/promtool check config /opt/prometheus/etc/prometheus.yml') do
+  its('exit_status') { should eq 0 }
+end
+
+describe command('/opt/prometheus/prometheus/active/promtool check config /etc/prometheus/prometheus.yml') do
+  its('exit_status') { should eq 0 }
+end
+
+# Verify the 'prometheus' service is running
 control '01' do
   impact 1.0
   title 'Verify prometheus service'
@@ -68,6 +89,7 @@ end
 
 describe processes('prometheus') do
     it { should exist }
+    its('list.length') { should eq 1 }
     its('users') { should include 'prometheus' }
 end
 

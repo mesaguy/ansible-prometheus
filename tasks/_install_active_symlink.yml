@@ -1,0 +1,11 @@
+---
+- name: Link {{ prometheus_software_install_dir }} to {{ prometheus_software_root_dir }}/active
+  become: true
+  file:
+    state: link
+    src: '{{ prometheus_software_install_dir | basename }}'
+    dest: '{{ prometheus_software_root_dir }}/active'
+    force: true
+    owner: root
+    group: '{{ prometheus_group }}'
+    follow: false
