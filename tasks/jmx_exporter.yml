@@ -41,5 +41,16 @@
     loop_var: jmx_instance
   with_dict: '{{ prometheus_software_config }}'
 
+- name: Link {{ prometheus_software_install_dir }}/{{prometheus_software_filename }} {{ prometheus_software_install_dir }}/jmx_exporter.jar
+  become: true
+  file:
+    state: link
+    src: '{{ prometheus_software_install_dir }}/{{prometheus_software_filename }}'
+    dest: '{{ prometheus_software_install_dir }}/jmx_exporter.jar'
+    force: true
+    owner: root
+    group: '{{ prometheus_group }}'
+    follow: false
+
 - name: 'Include task to perform post install cleanup of {{ prometheus_software_version }}'
   include_tasks: _post_install_cleanup.yml

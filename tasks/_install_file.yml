@@ -1,19 +1,22 @@
 ---
-- name: 'Include task to perform {{ prometheus_software_name_version }} fact definitions'
+- name: Include task to perform {{ prometheus_software_name_version }} fact definitions
   include_tasks: _install_facts.yml
 
-- name: 'Set variables for {{ prometheus_software_name_version }} file install'
+- name: Set variables for {{ prometheus_software_name_version }} file install
   set_fact:
     prometheus_software_binary: '{{ prometheus_software_root_dir }}/{{ prometheus_software_version }}/{{ prometheus_software_binary_name | default(prometheus_software_name, true) }}'
     prometheus_software_install_dir: '{{ prometheus_software_root_dir }}/{{ prometheus_software_version }}'
 
-- name: 'Include task to setup directories for {{ prometheus_software_name_version }} installation'
+- name: Include task to setup directories for {{ prometheus_software_name_version }} installation
   include_tasks: _install_directory.yml
 
-- name: 'Unarchive {{ prometheus_software_name_version }}'
+- name: Unarchive {{ prometheus_software_name_version }}
   become: true
   get_url:
     owner: root
     group: '{{ prometheus_group }}'
     url: '{{ prometheus_software_file_url }}'
     dest: '{{ prometheus_software_install_dir }}'
+
+- name: Include task to symlink latest {{ prometheus_software_name_version }} directory to an "active" directory
+  include_tasks: _install_active_symlink.yml
