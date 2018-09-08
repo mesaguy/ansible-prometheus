@@ -89,7 +89,7 @@ end
 
 describe processes('prometheus') do
     it { should exist }
-    its('list.length') { should eq 1 }
+    its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }
 end
 

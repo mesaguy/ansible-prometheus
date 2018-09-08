@@ -1,0 +1,30 @@
+---
+- name: List files in {{ prometheus_copy_src_dir }}
+  find:
+    path: '{{ prometheus_copy_src_dir }}'
+    recurse: true
+    file_type: any
+  register: prometheus_find_result
+
+- name: Create the {{ prometheus_copy_dest_dir }} directories
+  become: true
+  file:
+    path: '{{ item.path | regex_replace(prometheus_copy_src_dir, prometheus_copy_dest_dir) }}'
+    state: directory
+    owner: root
+    group: '{{ prometheus_group }}'
+    mode: '{{ prometheus_copy_dir_mode }}'
+  with_items: '{{ prometheus_find_result.files }}'
+  when: item.isdir
+
+- name: Copy the {{ prometheus_copy_dest_dir }} files
+  become: true
+  copy:
+    src: '{{ item.path }}'
+    dest: '{{ item.path | regex_replace(prometheus_copy_src_dir, prometheus_copy_dest_dir) }}'
+    owner: root
+    group: '{{ prometheus_group }}'
+    mode: '{{ prometheus_copy_file_mode }}'
+    remote_src: true
+  with_items: '{{ prometheus_find_result.files }}'
+  when: item.isdir == False

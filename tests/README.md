@@ -20,3 +20,7 @@ To test URLs:
 Run Ansible lint:
 
     ansible-lint tasks/*
+
+Verify that all software has an inspec test
+
+    ./tests/all_software_inspec_tested

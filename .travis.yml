@@ -43,6 +43,9 @@ script:
   # Perform yaml lint checks
   - yamllint --config-file=tests/yamllint.yml .
 
+  # Ensure an inspec test exists for each software installation
+  - chmod +x tests/all_software_inspec_tested && ./tests/all_software_inspec_tested
+
   # Perform ansible-lint checks
   - ansible-lint tasks/*
 

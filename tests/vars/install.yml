@@ -1,10 +1,12 @@
 ---
 prometheus_kafka_exporter_danielqsj_extra_opts:
-  '--kafka.server=127.0.0.1:9092'
+  - '--kafka.server=127.0.0.1:9092'
 # Requires a Kafka server to test against..:
 prometheus_kafka_exporter_danielqsj_port_test: false
 prometheus_consul_exporter_env_vars:
   CONSUL_HTTP_TOKEN: '4391eca7bcd03f45aa43ca26829c386c329097a7'
+prometheus_digitalocean_exporter_metalmatze_env_vars:
+  DIGITALOCEAN_TOKEN: '4391eca7bcd03f45aa43ca26829c386c329097a7'
 prometheus_jmx_exporter_cfgs:
   bitbucket:
     startDelaySeconds: 0
@@ -71,7 +73,9 @@ prometheus_process_exporter_ncabatoff_cfgs:
       exe:
         - /usr/local/bin/process-exporter
       cmdline: []
+prometheus_grok_exporter_fstab_cfg: '{{ lookup("file", "../tests/files/grok_exporter_fstab.yml") }}'
 prometheus_kafka_exporter_danielqsj_service_test: false
 prometheus_mysqld_exporter_service_test: false
+prometheus_nvidia_gpu_exporter_mindprince_service_test: false
 # There are no binaries:
 prometheus_zookeeper_exporter_infonova_fallback_to_build: true

@@ -6,6 +6,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+ - Exporters
+   - digitalocean_exporter_metalmatze
+   - grok_exporter_fstab
+   - nvidia_gpu_exporter_mindprince
+   - squid_exporter_boynux
+ - Inspec tests for all software
+ - Add TravisCI to ensure all software is inspec tested
+ - Add support for source and binaries in Zip files
+ - Add support for building source from a github commit
+ - Add function to remove retired Prometheus services (_remove_service.yml)
+
+### Changed
+ - Failing systemd services now restart every 60 seconds instead of 10 seconds
+
 ## [0.3.0] - 2018-09-06
 
 ### Added

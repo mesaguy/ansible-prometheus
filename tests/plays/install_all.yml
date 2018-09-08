@@ -6,6 +6,13 @@
   changed_when: false
   when: ansible_os_family == 'Debian'
 
+- name: Create test log file
+  become: true
+  copy:
+    dest: /var/log/test.log
+    content: "{{ ansible_date_time.iso8601 }} This is a test\n"
+    force: false
+
 - name: Workaround for OverlayFS on Fedora 20
   become: true
   shell: 'touch /var/lib/rpm/*'

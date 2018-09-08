@@ -19,7 +19,7 @@
   # become_user: '{% if ansible_version.full is version_compare("2.6.0", ">=") and ansible_version.full is version_compare("2.6.2", "<")  %}root{% else %}{{ prometheus_user }}{% endif %}'
   # become_user: '{{ prometheus_user }}'
   unarchive:
-    extra_opts: ['--strip-components=1']
+    extra_opts: '{{ prometheus_software_src_unarchive_opts | default(prometheus_default_src_unarchive_opts) }}'
     creates: '{{ prometheus_software_src_dir }}/*'
     dest: '{{ prometheus_software_src_dir }}'
     owner: '{{ prometheus_user }}'
@@ -76,8 +76,10 @@
     remote_src: true
     src: '{{ prometheus_software_src_dir }}/{{ prometheus_built_file }}'
     dest: '{{ prometheus_software_install_dir }}'
-    mode: 0555
-  with_items: '{{ prometheus_software_files | default([prometheus_software_shortname], true) }}'
+    mode: 0755
+    owner: root
+    group: '{{ prometheus_group }}'
+  with_items: '{{ prometheus_software_files | default([prometheus_software_binary_name], true) | default([prometheus_software_shortname], true) }}'
   loop_control:
     loop_var: prometheus_built_file
   register: prometheus_software_installation

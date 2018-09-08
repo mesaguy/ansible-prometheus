@@ -18,7 +18,6 @@
     prometheus_software_documentation: 'https://github.com/danielqsj/kafka_exporter/blob/master/README.md'
     prometheus_software_host: '{{ prometheus_kafka_exporter_danielqsj_host | default("0.0.0.0") }}'
     prometheus_software_port: '{{ prometheus_kafka_exporter_danielqsj_port | default(9308) }}'
-    prometheus_software_port_test: '{{ prometheus_kafka_exporter_danielqsj_port_test | default(true) }}'
     prometheus_software_service_test: '{{ prometheus_kafka_exporter_danielqsj_service_test | default(true) }}'
     prometheus_software_runas: '{{ prometheus_kafka_exporter_danielqsj_runas | default(prometheus_user) }}'
     prometheus_software_shortname: kafka_exporter

@@ -1,14 +1,14 @@
 # encoding: utf-8
 # author: Mesaguy
 
-describe file('/opt/prometheus/pushgateway/active') do
+describe file('/opt/prometheus/exporters/haproxy_exporter/active') do
     it { should be_symlink }
     its('mode') { should cmp '0755' }
     its('owner') { should eq 'root' }
     its('group') { should eq 'prometheus' }
 end
 
-describe file('/opt/prometheus/pushgateway/active/pushgateway') do
+describe file('/opt/prometheus/exporters/haproxy_exporter/active/haproxy_exporter') do
     it { should be_file }
     it { should be_executable }
     its('mode') { should cmp '0755' }
@@ -16,28 +16,28 @@ describe file('/opt/prometheus/pushgateway/active/pushgateway') do
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'pushgateway' service is running
+# Verify the 'haproxy_exporter' service is running
 control '01' do
   impact 1.0
-  title 'Verify pushgateway service'
-  desc 'Ensures pushgateway service is up and running'
-  describe service('pushgateway') do
+  title 'Verify haproxy_exporter service'
+  desc 'Ensures haproxy_exporter service is up and running'
+  describe service('haproxy_exporter') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
   end
 end
 
-describe processes('pushgateway') do
+describe processes('haproxy_exporter') do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }
 end
 
-describe port(9091) do
+describe port(9101) do
     it { should be_listening }
 end
 
-describe http('http://127.0.0.1:9091/metrics') do
+describe http('http://127.0.0.1:9101/metrics') do
     its('status') { should cmp 200 }
 end

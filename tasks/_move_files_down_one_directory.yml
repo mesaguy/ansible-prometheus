@@ -1,0 +1,18 @@
+---
+- name: Move {{ prometheus_software_name_version }} files down one directory
+  become: true
+  shell: 'mv {{ prometheus_move_contents_directory.path | dirname }}/* {{ prometheus_software_install_dir }}'
+  loop_control:
+    loop_var: prometheus_move_contents_directory
+  with_items: '{{ prometheus_binary_file_location.files }}'
+  when: prometheus_binary_file_location.files[0] != prometheus_software_install_dir + '/' + prometheus_software_binary_name
+
+- name: Delete {{ prometheus_software_name_version }} temporary installation directories
+  become: true
+  file:
+    path: '{{ prometheus_delete_contents_directory.path | dirname }}'
+    state: absent
+  loop_control:
+    loop_var: prometheus_delete_contents_directory
+  with_items: '{{ prometheus_binary_file_location.files }}'
+  when: prometheus_binary_file_location.files[0] != prometheus_software_install_dir + '/' + prometheus_software_binary_name

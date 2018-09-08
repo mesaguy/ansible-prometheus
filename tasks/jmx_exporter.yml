@@ -8,6 +8,7 @@
   set_fact:
     prometheus_exporter: true
     prometheus_jmx_exporter_default_port: 1234
+    prometheus_software_binary_name: 'jmx_exporter.jar'
     prometheus_software_config: '{{ prometheus_jmx_exporter_cfgs | default({"default" : ""}) }}'
     prometheus_software_extra_opts: []
     prometheus_software_name: 'jmx_exporter'
@@ -19,6 +20,7 @@
 
 - name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
   set_fact:
+    prometheus_software_filename: 'jmx_prometheus_javaagent-{{ prometheus_software_version }}.jar'
     prometheus_software_opts:
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
     prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
@@ -40,17 +42,6 @@
   loop_control:
     loop_var: jmx_instance
   with_dict: '{{ prometheus_software_config }}'
-
-- name: Link {{ prometheus_software_install_dir }}/{{prometheus_software_filename }} {{ prometheus_software_install_dir }}/jmx_exporter.jar
-  become: true
-  file:
-    state: link
-    src: '{{ prometheus_software_install_dir }}/{{prometheus_software_filename }}'
-    dest: '{{ prometheus_software_install_dir }}/jmx_exporter.jar'
-    force: true
-    owner: root
-    group: '{{ prometheus_group }}'
-    follow: false
 
 - name: 'Include task to perform post install cleanup of {{ prometheus_software_version }}'
   include_tasks: _post_install_cleanup.yml
