@@ -8,6 +8,7 @@
   set_fact:
     prometheus_exporter: false
     prometheus_software_config: '{{ prometheus_alertmanager_cfg | default(lookup("file", "../files/defaults/alertmanager.yml") | from_yaml) }}'
+    prometheus_software_env_vars: '{{ prometheus_alertmanager_env_vars | default({}) }}'
     prometheus_software_extra_opts: '{{ prometheus_alertmanager_extra_opts | default() }}'
     prometheus_software_files:
       - 'alertmanager'
@@ -18,7 +19,7 @@
     prometheus_software_version: '{{ prometheus_alertmanager_version | default("0.15.2") }}'
     prometheus_software_src_version: '{{ prometheus_alertmanager_src_version | default("v0.15.2") }}'
     prometheus_software_description: 'Prometheus alertmanager'
-    prometheus_software_documentation: 'https://github.com/prometheus/alertmanager/blob/master/README.md'
+    prometheus_software_documentation: 'https://github.com/prometheus/alertmanager'
     prometheus_software_host: '{{ prometheus_alertmanager_host | default("0.0.0.0") }}'
     prometheus_software_port: '{{ prometheus_alertmanager_port | default(9093) }}'
     prometheus_software_runas: '{{ prometheus_alertmanager_runas | default(prometheus_user) }}'

@@ -14,7 +14,7 @@
     prometheus_software_name: 'jmx_exporter'
     prometheus_software_version: '{{ prometheus_jmx_exporter_version | default("0.3.1") }}'
     prometheus_software_description: 'Prometheus jmx_exporter, JMX to Prometheus exporter'
-    prometheus_software_documentation: 'https://github.com/prometheus/jmx_exporter/blob/master/README.md'
+    prometheus_software_documentation: 'https://github.com/prometheus/jmx_exporter'
     prometheus_software_host: '{{ prometheus_jmx_exporter_host | default("0.0.0.0") }}'
     prometheus_software_port: '{{ prometheus_jmx_exporter_port | default(1234) }}'
 

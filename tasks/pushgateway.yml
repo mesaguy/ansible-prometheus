@@ -7,6 +7,7 @@
 - name: 'Starting pushgateway install'
   set_fact:
     prometheus_exporter: false
+    prometheus_software_env_vars: '{{ prometheus_pushgateway_env_vars | default({}) }}'
     prometheus_software_extra_opts: '{{ prometheus_pushgateway_extra_opts | default() }}'
     prometheus_software_fallback_to_build: '{{ prometheus_pushgateway_fallback_to_build | default(prometheus_fallback_to_build) }}'
     prometheus_software_makefile_make_command: 'make build'
@@ -14,7 +15,7 @@
     prometheus_software_version: '{{ prometheus_pushgateway_version | default("0.5.2") }}'
     prometheus_software_src_version: '{{ prometheus_pushgateway_src_version | default("v0.5.2") }}'
     prometheus_software_description: 'Prometheus pushgateway'
-    prometheus_software_documentation: 'https://github.com/prometheus/pushgateway/blob/master/README.md'
+    prometheus_software_documentation: 'https://github.com/prometheus/pushgateway'
     prometheus_software_host: '{{ prometheus_pushgateway_host | default("0.0.0.0") }}'
     prometheus_software_port: '{{ prometheus_pushgateway_port | default(9091) }}'
     prometheus_software_runas: '{{ prometheus_pushgateway_runas | default(prometheus_user) }}'

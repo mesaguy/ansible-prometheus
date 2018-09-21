@@ -24,3 +24,12 @@ Run Ansible lint:
 Verify that all software has an inspec test
 
     ./tests/all_software_inspec_tested
+
+Run ADHOC commands inside a kitchen built docker image
+1) Find the port mapped to SSH:
+
+    docker ps
+
+2) Change port 32835 in the example below:
+
+    ANSIBLE_REMOTE_PORT=32835 ANSIBLE_HOST_KEY_CHECKING=False ansible -m setup -c ssh -u kitchen all -i localhost, --extra-vars="ansible_ssh_private_key_file=.kitchen/docker_id_rsa"

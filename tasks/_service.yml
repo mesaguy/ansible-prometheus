@@ -12,9 +12,9 @@
 
 - name: 'Test that {{ prometheus_software_service_name }} port {{ prometheus_software_port }} is accessible (software is running)'
   wait_for:
-    host: '{{ prometheus_software_host | default("0.0.0.0") }}'
+    host: '{{ prometheus_software_host | default("0.0.0.0", true) }}'
     port: '{{ prometheus_software_port }}'
     connect_timeout: 10
     state: started
-    timeout: 10
+    timeout: 30
   when: prometheus_software_service_test|bool and prometheus_software_port

@@ -54,8 +54,18 @@ export {{ key }}="{{ prometheus_software_env_vars[key] }}"
 {% endfor -%}
 {% endif -%}
 
+{% if prometheus_software_prefix_command is defined and prometheus_software_prefix_command -%}
+{% set args = prometheus_software_prefix_command[1:] + [prometheus_software_binary] + prometheus_software_command_args %}
+DAEMON={{ prometheus_software_prefix_command[0] }}
+{% else -%}
+{% set args = prometheus_software_command_args %}
 DAEMON={{ prometheus_software_binary }}
-COMMAND="$DAEMON {{ prometheus_software_command_args | join(' ') }}"
+{% endif -%}
+{% if args -%}
+COMMAND="$DAEMON {{ args | join(' ') }}"
+{% else -%}
+COMMAND="$DAEMON"
+{% endif -%}
 {% if installer_instance is defined and installer_instance and installer_instance.name -%}
 export PATH="${PATH:+$PATH:}/usr/sbin:/sbin"
 logfile="{{ prometheus_log_dir }}/{{ prometheus_software_name }}__{{ installer_instance.name }}.log"

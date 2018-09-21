@@ -13,8 +13,13 @@ pidfile="/var/run/{{ prometheus_software_name }}__{{ installer_instance.name }}.
 logfile="{{ prometheus_log_dir }}/{{ prometheus_software_name }}.log"
 pidfile="/var/run/{{ prometheus_software_name }}.pid"
 {% endif -%}
+{% if prometheus_software_prefix_command is defined and prometheus_software_prefix_command %}
+command="{{ prometheus_software_prefix_command[0] }}"
+command_args="{{ prometheus_software_prefix_command[1:] | join(' ') }} {{ prometheus_software_binary }} {{ prometheus_software_command_args | join(' ') }}"
+{% else %}
 command="{{ prometheus_software_binary }}"
 command_args="{{ prometheus_software_command_args | join(' ') }}"
+{% endif %}
 command_background=true
 runas_user={% if prometheus_software_runas is defined and prometheus_software_runas -%}
 {{ prometheus_software_runas }}

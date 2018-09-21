@@ -8,7 +8,7 @@
   set_fact:
     prometheus_exporter: true
     prometheus_consul_exporter_default_port: 9107
-    prometheus_software_env_vars: '{{ prometheus_consul_exporter_env_vars | default([]) }}'
+    prometheus_software_env_vars: '{{ prometheus_consul_exporter_env_vars | default({}) }}'
     prometheus_software_extra_opts: '{{ prometheus_consul_exporter_extra_opts | default() }}'
     prometheus_software_fallback_to_build: '{{ prometheus_consul_exporter_fallback_to_build | default(prometheus_fallback_to_build) }}'
     prometheus_software_makefile_make_command: 'make build'
@@ -16,7 +16,7 @@
     prometheus_software_version: '{{ prometheus_consul_exporter_version | default("0.4.0") }}'
     prometheus_software_src_version: '{{ prometheus_consul_exporter_src_version | default("v0.4.0") }}'
     prometheus_software_description: 'Prometheus consul_exporter, exporter of host statistics'
-    prometheus_software_documentation: 'https://github.com/prometheus/consul_exporter/blob/master/README.md'
+    prometheus_software_documentation: 'https://github.com/prometheus/consul_exporter'
     prometheus_software_host: '{{ prometheus_consul_exporter_host | default("0.0.0.0") }}'
     prometheus_software_port: '{{ prometheus_consul_exporter_port | default(9107) }}'
     prometheus_software_runas: '{{ prometheus_consul_exporter_runas | default(prometheus_user) }}'

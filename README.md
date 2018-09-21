@@ -210,8 +210,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.3.2"
-    prometheus_src_version: "v2.3.2"
+    prometheus_version: "2.4.1"
+    prometheus_src_version: "v2.4.1"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -422,10 +422,10 @@ The version of haproxy_exporter to install. The source version defines the versi
     prometheus_haproxy_exporter_version: "0.9.0"
     prometheus_haproxy_exporter_src_version: "v0.9.0"
 
-Port and IP to listen on. Defaults to listening on all available IPs on port 9106:
+Port and IP to listen on. Defaults to listening on all available IPs on port 9101:
 
     prometheus_haproxy_exporter_host: "0.0.0.0"
-    prometheus_haproxy_exporter_port: 9106
+    prometheus_haproxy_exporter_port: 9101
 
 ### InfluxDB exporter variables
 
@@ -629,8 +629,8 @@ An array of additional flags to pass to the snmp_exporter daemon:
     prometheus_snmp_exporter_extra_opts: []
 
 The version of snmp_exporter to install. The source version defines the version as specified in version control:
-    prometheus_snmp_exporter_version: "0.12.0"
-    prometheus_snmp_exporter_src_version: "v0.12.0"
+    prometheus_snmp_exporter_version: "0.13.0"
+    prometheus_snmp_exporter_src_version: "v0.13.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9116:
 

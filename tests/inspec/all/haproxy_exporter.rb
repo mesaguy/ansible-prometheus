@@ -28,7 +28,7 @@ control '01' do
   end
 end
 
-describe processes('haproxy_exporter') do
+describe processes(Regexp.new("^/opt/prometheus/exporters/haproxy_exporter/([0-9.]+|[0-9.]+__go-[0-9.]+)/haproxy_exporter")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }
@@ -40,4 +40,5 @@ end
 
 describe http('http://127.0.0.1:9101/metrics') do
     its('status') { should cmp 200 }
+    its('body') { should match /haproxy_exporter_csv_parse_failures/ }
 end

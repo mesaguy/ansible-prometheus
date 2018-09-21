@@ -7,8 +7,11 @@ prometheus_go_compile_tools:
  - glibc-static
  - gzip
  - make
+prometheus_java_packages:
+ - java-1.8.0-openjdk-headless
 prometheus_prerequisite_packages:
  - tar
+ - unzip
 prometheus_testing_packages:
  - net-tools
  - procps-ng

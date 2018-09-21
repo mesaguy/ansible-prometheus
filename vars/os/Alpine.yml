@@ -7,10 +7,13 @@ prometheus_go_compile_tools:
  - gzip
  - make
  - musl-dev
+prometheus_java_packages:
+ - openjdk8-jre
 prometheus_prerequisite_packages:
  - ca-certificates
  - libc6-compat
  - tar
+ - unzip
 prometheus_testing_packages:
  - net-tools
  - procps

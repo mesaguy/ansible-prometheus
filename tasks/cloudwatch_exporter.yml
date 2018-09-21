@@ -1,0 +1,51 @@
+---
+- block:
+  - name: 'Include role mesaguy.prometheus setup task'
+    include_tasks: _setup.yml
+  when: prometheus_setup_task_executed is not defined
+
+- name: 'Starting cloudwatch_exporter install'
+  set_fact:
+    prometheus_exporter: true
+    prometheus_cloudwatch_exporter_default_port: 9106
+    prometheus_software_binary_name: 'cloudwatch_exporter.jar'
+    prometheus_software_config: '{{ prometheus_cloudwatch_exporter_cfgs | default({"default" : ""}) }}'
+    prometheus_software_env_vars: '{{ prometheus_cloudwatch_exporter_env_vars | default({}) }}'
+    prometheus_software_extra_opts: []
+    prometheus_software_name: 'cloudwatch_exporter'
+    prometheus_software_service_test: '{{ prometheus_cloudwatch_exporter_service_test | default(true) }}'
+    prometheus_software_version: '{{ prometheus_cloudwatch_exporter_version | default("0.5.0") }}'
+    prometheus_software_description: 'Prometheus cloudwatch_exporter, exporter for Amazon CloudWatch'
+    prometheus_software_documentation: 'https://github.com/prometheus/cloudwatch_exporter'
+    prometheus_software_port: '{{ prometheus_cloudwatch_exporter_port | default(9106) }}'
+
+- name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
+  set_fact:
+    prometheus_software_prefix_command:
+      - '{{ prometheus_java_path }}'
+      - '-jar'
+    prometheus_software_filename: 'jmx_prometheus_javaagent-{{ prometheus_software_version }}.jar'
+    prometheus_software_opts:
+      - '{{ prometheus_software_port }} {{ prometheus_etc_dir }}/{{ prometheus_software_name }}.yml'
+    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
+    prometheus_software_file_url: 'https://search.maven.org/remotecontent?filepath=io/prometheus/cloudwatch/{{ prometheus_software_name }}/{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}-jar-with-dependencies.jar'
+    prometheus_software_src_dir_suffix: '/src/github.com/prometheus/{{ prometheus_software_name }}'
+
+- name: 'Install standalone file for {{ prometheus_software_name_version }}'
+  include_tasks: _install_file.yml
+
+- name: 'Setup {{ prometheus_software_name_version }} configuration files'
+  become: true
+  template:
+    src: '../templates/{{ prometheus_software_name }}.yml.j2'
+    dest: '{{ prometheus_etc_dir }}/{{ prometheus_software_name }}.yml'
+    owner: root
+    group: root
+    mode: 0644
+    backup: true
+
+- name: 'Include task to setup {{ prometheus_software_name_version }} service'
+  include_tasks: _service.yml
+
+- name: 'Include task to perform post install cleanup of {{ prometheus_software_version }}'
+  include_tasks: _post_install_cleanup.yml

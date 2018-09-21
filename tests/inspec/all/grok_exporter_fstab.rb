@@ -28,7 +28,7 @@ control '01' do
   end
 end
 
-describe processes('grok_exporter') do
+describe processes(Regexp.new("^/opt/prometheus/exporters/grok_exporter_fstab/([0-9.]+|[0-9.]+__go-[0-9.]+)/grok_exporter")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }
@@ -40,4 +40,5 @@ end
 
 describe http('http://127.0.0.1:9144/metrics') do
     its('status') { should cmp 200 }
+    its('body') { should match /grok_exporter_line_buffer_peak_load/ }
 end

@@ -236,7 +236,6 @@ platforms:
           - DOCKER_IMAGE_NAME=mesaguy/debian-7-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
-      run_command: /usr/lib/systemd/systemd
       volume:
         - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
         - '/sys/fs/selinux:/sys/fs/selinux:ro'
@@ -248,7 +247,7 @@ platforms:
           - DOCKER_IMAGE_NAME=mesaguy/debian-8-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       privileged: true
-      run_command: /usr/lib/systemd/systemd
+      run_command: /lib/systemd/systemd
       volume:
         - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
         - '/sys/fs/selinux:/sys/fs/selinux:ro'
