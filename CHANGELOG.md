@@ -6,6 +6,32 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+ - Exporters
+   - apache_exporter_lusitaniae
+   - cloudwatch_exporter
+   - digitalocean_exporter_metalmatze
+   - elasticsearch_exporter_justwatchcom
+   - grok_exporter_fstab
+   - nvidia_gpu_exporter_mindprince
+   - rabbitmq_exporter_kbudde
+   - squid_exporter_boynux
+   - sql_exporter_free
+ - Allow adding environmental variables to any/all exporters
+ - Inspec tests for all software
+ - Add TravisCI to ensure all software is inspec tested
+ - Add support for source and binaries in Zip files
+ - Add support for building source from a github commit
+ - Add function to remove retired Prometheus services (_remove_service.yml)
+
+### Changed
+ - Failing systemd services now restart every 60 seconds instead of 10 seconds
+ - Upgrade prometheus from v2.3.2 to v2.4.1
+ - Upgrade snmp_exporter from v0.12.0 to v0.13.0
+
+### Fixed
+ - haproxy_exporter default port
+
 ## [0.3.0] - 2018-09-06
 
 ### Added

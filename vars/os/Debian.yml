@@ -6,8 +6,11 @@ prometheus_go_compile_tools:
  - gcc
  - git
  - gzip
+prometheus_java_packages:
+ - default-jre
 prometheus_prerequisite_packages:
  - ca-certificates
  - openssl
+ - unzip
 prometheus_testing_packages:
  - net-tools

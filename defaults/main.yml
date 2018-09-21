@@ -2,6 +2,7 @@
 # defaults file for mesaguy.prometheus
 
 # General global configuration
+prometheus_go_version: 1.10.4
 prometheus_link_etc: true
 prometheus_link_etc_force: false
 prometheus_purge_orphans: false
@@ -15,10 +16,12 @@ prometheus_group: prometheus
 prometheus_user: prometheus
 
 # When performing installations
-prometheus_default_unarchive_opts:
+prometheus_default_binary_unarchive_opts:
+ - '--strip-components=1'
+prometheus_default_src_unarchive_opts:
  - '--strip-components=1'
 prometheus_fallback_to_build: false
-prometheus_go_version: 1.10.4
+prometheus_java_path: /usr/bin/java
 prometheus_software_make_command: 'go get -d && go build'
 prometheus_software_makefile_make_command: 'make'
 prometheus_software_setup_pkg_mgrs:

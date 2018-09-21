@@ -87,9 +87,9 @@ control '01' do
   end
 end
 
-describe processes('prometheus') do
+describe processes(Regexp.new("^/opt/prometheus/prometheus/([0-9.]+|[0-9.]+__go-[0-9.]+)/prometheus")) do
     it { should exist }
-    its('list.length') { should eq 1 }
+    its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }
 end
 
@@ -99,4 +99,5 @@ end
 
 describe http('http://127.0.0.1:9090/graph') do
     its('status') { should cmp 200 }
+    its('body') { should include '<title>Prometheus Time Series Collection and Processing Server</title>' }
 end

@@ -39,19 +39,33 @@
     prometheus_software_command_args: []
     prometheus_software_dependencies: []
     prometheus_software_description: ''
+    # Link to documentation about the software. This variable is inserted
+    # in the service init/systemd file:
     prometheus_software_documentation: ''
-    prometheus_software_env_vars: []
+    # Environmental variables to pass to software via init/systemd script
+    prometheus_software_env_vars: {}
     prometheus_software_extra_opts: ''
     prometheus_software_fallback_to_build: '{{ prometheus_fallback_to_build }}'
     prometheus_software_filename: ''
+    # The IP/s the software listens on
     prometheus_software_host: ''
     prometheus_software_install_dir: ''
     prometheus_software_installation: ''
     prometheus_software_instance_port: ''
+    # Command to run when building source code (default assumes code is Golang)
+    # *without* a Makefile
     prometheus_software_make_command: 'go get -d && go build'
+    # Command to run when building source code (default assumes code is Golang)
+    # *with* a Makefile
     prometheus_software_makefile_make_command: 'make'
     prometheus_software_name: ''
+    # A combination of the software's name and version, this variables is used
+    # internally, mostly when logging actions
     prometheus_software_name_version: ''
+    prometheus_software_officialname: ''
+    # Options to pass the software's binary
+    prometheus_software_opts: []
+    # The port the software listens on
     prometheus_software_port: ''
     prometheus_software_root_dir: ''
     prometheus_software_runas: ''
@@ -59,12 +73,23 @@
     prometheus_software_service_name: ''
     prometheus_software_bin_url: ''
     prometheus_software_file_url: ''
+    # Command to run the {{ prometheus_software_binary }} via. Generally
+    # needed for java jars:
+    prometheus_software_prefix_command: []
+    # Should service's status and port be tested following the start of the
+    # service? This option exists as some exporters (ie: mysqld_exporter)
+    # require a working service (ie: MySQL) in order to run. These exporters
+    # cannot be fully tested and thus the Ansible tests can be selectively
+    # disabled
     prometheus_software_service_test: true
     prometheus_software_shortname: ''
     prometheus_software_src_dir: ''
     prometheus_software_src_dir_suffix: ''
     prometheus_software_src_url: ''
     prometheus_software_src_version: ''
+    # Version of Prometheus software to install
     prometheus_software_version: ''
-    prometheus_software_unarchive_opts: '{{ prometheus_default_unarchive_opts }}'
-    prometheus_software_port_test: true
+    # Extra options to give 'unarchive' when decompressing binary file
+    prometheus_software_binary_unarchive_opts: '{{ prometheus_default_binary_unarchive_opts }}'
+    # Extra options to give 'unarchive' when decompressing source file
+    prometheus_software_src_unarchive_opts: '{{ prometheus_default_src_unarchive_opts }}'

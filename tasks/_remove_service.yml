@@ -1,0 +1,22 @@
+---
+- name: Stop and disable Prometheus service {{ prometheus_remove_service_name }}
+  become: true
+  failed_when: false
+  service:
+    name: '{{ prometheus_remove_service_name }}'
+    state: stopped
+    enabled: false
+
+- name: Delete Prometheus service {{ prometheus_remove_service_name }} systemd init file
+  become: true
+  file:
+    path: '/etc/systemd/{{ prometheus_remove_service_name }}.service'
+    state: absent
+  when: ansible_service_mgr | regex_replace("^(openrc|upstart)$", "init") == 'init'
+
+- name: Delete Prometheus service {{ prometheus_remove_service_name }} systemd service file
+  become: true
+  file:
+    path: '/etc/systemd/{{ prometheus_remove_service_name }}.service'
+    state: absent
+  when: ansible_service_mgr == 'systemd'

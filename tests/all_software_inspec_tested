@@ -1,0 +1,23 @@
+#!/bin/bash
+
+EXIT=0
+
+function check_for_file {
+    if [ ! -f "$1" ] ; then
+        echo "Test $1 is missing"
+        EXIT=1
+    fi
+}
+
+for f in $(ls tasks | grep -Ev '^(_|main.yml$)' | sed 's/\.yml$//')
+do
+    check_for_file "tests/inspec/all/${f}.rb"
+done
+
+if [ "$EXIT" -eq "0" ] ; then
+    echo "OK"
+else
+    echo "Tests are missing"
+fi
+
+exit $EXIT

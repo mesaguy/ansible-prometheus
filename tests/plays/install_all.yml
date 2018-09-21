@@ -1,4 +1,37 @@
 ---
+- name: Gather Operating System specific variables
+  include_vars: '{{ os_var_file }}'
+  loop_control:
+    loop_var: os_var_file
+  with_first_found:
+    - '../../vars/distribution/{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml'
+    - '../../vars/distribution/{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml'
+    - '../../vars/distribution/{{ ansible_distribution }}.yml'
+    - '../../vars/os/{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml'
+    - '../../vars/os/{{ ansible_os_family }}.yml'
+
+- name: Update 'pacman' cache
+  include_tasks: ../../tasks/_setup_pkg_mgr_Archlinux.yml
+  changed_when: false
+  when: ansible_os_family == 'Archlinux'
+
+- name: Skip Java service tests on Gentoo
+  set_fact:
+    prometheus_cloudwatch_exporter_service_test: false
+  when: ansible_os_family == 'Gentoo'
+
+- name: Skip Java service tests on Fedora
+  set_fact:
+    prometheus_cloudwatch_exporter_service_test: false
+  when: ansible_distribution == 'Fedora' and ansible_distribution_major_version == '22'
+
+- name: Update 'apk' cache
+  become: true
+  apk:
+    update_cache: true
+  changed_when: false
+  when: ansible_os_family == 'Alpine'
+
 - name: Update 'apt' cache
   become: true
   apt:
@@ -6,11 +39,50 @@
   changed_when: false
   when: ansible_os_family == 'Debian'
 
-- name: Workaround for OverlayFS on Fedora 20
+- name: Create test log file
+  become: true
+  copy:
+    dest: /var/log/test.log
+    content: "{{ ansible_date_time.iso8601 }} This is a test\n"
+    force: false
+
+- name: Workaround for OverlayFS on Fedora 20 and 21
   become: true
   shell: 'touch /var/lib/rpm/*'
   changed_when: false
-  when: ansible_distribution == 'Fedora' and ansible_distribution_major_version == '20'
+  args:
+    warn: false
+  when: ansible_distribution == 'Fedora' and ansible_distribution_major_version in ['20', '21']
+
+- name: Workaround for java version on Fedora 22
+  become: true
+  package:
+    name: 'nss'
+    state: latest
+  changed_when: false
+  when: ansible_distribution == 'Fedora' and ansible_distribution_major_version == '22'
+
+- name: Install java 7 on Alpine 3.3 through 3.5
+  # This step is necessary due to poor Alpine version detection by Ansible,
+  # otherwise this would be determined via variables like other distros
+  become: true
+  package:
+    name: 'openjdk7-jre'
+    state: present
+  changed_when: false
+  register: prometheus_java_install_alpine_override
+  when: prometheus_java_packages is defined and ansible_os_family == 'Alpine' and ansible_distribution_version is version('3.3', '>=') and ansible_distribution_version is version('3.6', '<')
+
+- name: Install java
+  become: true
+  package:
+    name: '{{ prometheus_java_package }}'
+    state: present
+  changed_when: false
+  loop_control:
+    loop_var: prometheus_java_package
+  with_items: "{{ prometheus_java_packages }}"
+  when: prometheus_java_packages is defined and prometheus_java_install_alpine_override is skipped
 
 - name: Find all prometheus software
   delegate_to: localhost
