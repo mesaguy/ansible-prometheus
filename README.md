@@ -66,7 +66,7 @@ All exporters are verified to install. Currently select modules receive testing 
 |[zookeeper_exporter_infonova](https://github.com/infonova/zookeeper_exporter)                  | infonova      | Yes       |
 
 ## Role Variables
-You should configure the 'prometheus_components' variable unless you are using the 'include_role' task inclusion method below. The 'prometheus_components' variable is an array specifying the prometheus software to install. This example shows all possible prometheus_components, one should pick and choose the machine applicable components:
+The 'prometheus_components' variable is an array specifying the prometheus software to install. This example shows all possible prometheus_components:
 
 ``` yaml
 prometheus_components:
