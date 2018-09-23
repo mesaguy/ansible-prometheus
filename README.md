@@ -37,33 +37,33 @@ The following core Prometheus software is supported in addition to the list of e
 ### Supported exporters
 All exporters are verified to install. Currently select modules receive testing via CI (Continuous Integration) and [Inspec](https://www.inspec.io)
 
-| Exporter                                                                                     | Author        | CI tested |
-|----------------------------------------------------------------------------------------------|:-------------:|:---------:|
-|[apache_exporter_lusitaniae](https://github.com/Lusitaniae/apache_exporter)                   | Lusitaniae    | Yes       |
-|[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)                          | prometheus    | Yes       |
-|[cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter)                      | prometheus    | Yes       |
-|[collectd_exporter](https://github.com/prometheus/collectd_exporter)                          | prometheus    | Yes       |
-|[consul_exporter](https://github.com/prometheus/consul_exporter)                              | prometheus    | Yes       |
-|[digitalocean_exporter_metalmatze](https://github.com/metalmatze/digitalocean_exporter)       | metalmatze    | Yes       |
-|[elasticsearch_exporter_justwatchcom](https://github.com/justwatchcom/elasticsearch_exporter) | justwatchcom  | Yes       |
-|[gluster_exporter_ofesseler](https://github.com/ofesseler/gluster_exporter)                   | ofesseler     | Yes       |
-|[graphite_exporter](https://github.com/prometheus/graphite_exporter)                          | prometheus    | Yes       |
-|[grok_exporter_fstab](https://github.com/fstab/grok_exporter)                                 | fstab         | Yes       |
-|[haproxy_exporter](https://github.com/prometheus/haproxy_exporter)                            | prometheus    | Yes       |
-|[influxdb_exporter](https://github.com/prometheus/influxdb_exporter)                          | prometheus    | Yes       |
-|[jmx_exporter](https://github.com/prometheus/jmx_exporter)                                    | prometheus    | No        |
-|[kafka_exporter](https://github.com/danielqsj/kafka_exporter)                                 | danielqsj     | Yes       |
-|[memcached_exporter_danielqsj](https://github.com/prometheus/memcached_exporter)              | prometheus    | Yes       |
-|[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)                              | prometheus    | Yes       |
-|[node_exporter](https://github.com/prometheus/node_exporter)                                  | prometheus    | Yes       |
-|[nvidia_gpu_exporter_mindprince](https://github.com/mindprince/nvidia_gpu_prometheus_exporter | mindprince    | Yes       |
-|[postgres_exporter_wrouesnel](https://github.com/wrouesnel/postgres_exporter)                 | wrouesnel     | Yes       |
-|[process_exporter_ncabatoff](https://github.com/ncabatoff/process-exporter)                   | ncabatoff     | Yes       |
-|[rabbitmq_exporter_kbudde](https://github.com/kbudde/rabbitmq_exporter)                       | kbudde        | Yes       |
-|[snmp_exporter](https://github.com/prometheus/snmp_exporter)                                  | prometheus    | Yes       |
-|[squid_exporter_boynux](https://github.com/boynux/squid-exporter)                             | boynux        | Yes       |
-|[statsd_exporter](https://github.com/prometheus/statsd_exporter)                              | prometheus    | Yes       |
-|[zookeeper_exporter_infonova](https://github.com/infonova/zookeeper_exporter)                 | infonova      | Yes       |
+| Exporter                                                                                      | Author        | CI tested |
+|-----------------------------------------------------------------------------------------------|:-------------:|:---------:|
+|[apache_exporter_lusitaniae](https://github.com/Lusitaniae/apache_exporter)                    | Lusitaniae    | Yes       |
+|[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)                           | prometheus    | Yes       |
+|[cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter)                       | prometheus    | Yes       |
+|[collectd_exporter](https://github.com/prometheus/collectd_exporter)                           | prometheus    | Yes       |
+|[consul_exporter](https://github.com/prometheus/consul_exporter)                               | prometheus    | Yes       |
+|[digitalocean_exporter_metalmatze](https://github.com/metalmatze/digitalocean_exporter)        | metalmatze    | Yes       |
+|[elasticsearch_exporter_justwatchcom](https://github.com/justwatchcom/elasticsearch_exporter)  | justwatchcom  | Yes       |
+|[gluster_exporter_ofesseler](https://github.com/ofesseler/gluster_exporter)                    | ofesseler     | Yes       |
+|[graphite_exporter](https://github.com/prometheus/graphite_exporter)                           | prometheus    | Yes       |
+|[grok_exporter_fstab](https://github.com/fstab/grok_exporter)                                  | fstab         | Yes       |
+|[haproxy_exporter](https://github.com/prometheus/haproxy_exporter)                             | prometheus    | Yes       |
+|[influxdb_exporter](https://github.com/prometheus/influxdb_exporter)                           | prometheus    | Yes       |
+|[jmx_exporter](https://github.com/prometheus/jmx_exporter)                                     | prometheus    | No        |
+|[kafka_exporter](https://github.com/danielqsj/kafka_exporter)                                  | danielqsj     | Yes       |
+|[memcached_exporter_danielqsj](https://github.com/prometheus/memcached_exporter)               | prometheus    | Yes       |
+|[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)                               | prometheus    | Yes       |
+|[node_exporter](https://github.com/prometheus/node_exporter)                                   | prometheus    | Yes       |
+|[nvidia_gpu_exporter_mindprince](https://github.com/mindprince/nvidia_gpu_prometheus_exporter) | mindprince    | Yes       |
+|[postgres_exporter_wrouesnel](https://github.com/wrouesnel/postgres_exporter)                  | wrouesnel     | Yes       |
+|[process_exporter_ncabatoff](https://github.com/ncabatoff/process-exporter)                    | ncabatoff     | Yes       |
+|[rabbitmq_exporter_kbudde](https://github.com/kbudde/rabbitmq_exporter)                        | kbudde        | Yes       |
+|[snmp_exporter](https://github.com/prometheus/snmp_exporter)                                   | prometheus    | Yes       |
+|[squid_exporter_boynux](https://github.com/boynux/squid-exporter)                              | boynux        | Yes       |
+|[statsd_exporter](https://github.com/prometheus/statsd_exporter)                               | prometheus    | Yes       |
+|[zookeeper_exporter_infonova](https://github.com/infonova/zookeeper_exporter)                  | infonova      | Yes       |
 
 ## Role Variables
 You should configure the 'prometheus_components' variable unless you are using the 'include_role' task inclusion method below. The 'prometheus_components' variable is an array specifying the prometheus software to install. This example shows all possible prometheus_components, one should pick and choose the machine applicable components:
