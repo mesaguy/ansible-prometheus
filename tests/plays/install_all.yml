@@ -20,11 +20,6 @@
     prometheus_cloudwatch_exporter_service_test: false
   when: ansible_os_family == 'Gentoo'
 
-- name: Skip Java service tests on Fedora
-  set_fact:
-    prometheus_cloudwatch_exporter_service_test: false
-  when: ansible_distribution == 'Fedora' and ansible_distribution_major_version == '22'
-
 - name: Update 'apk' cache
   become: true
   apk:

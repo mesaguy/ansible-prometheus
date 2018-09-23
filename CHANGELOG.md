@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.4.0] - 2018-09-22
+
 ### Added
  - Exporters
    - apache_exporter_lusitaniae
@@ -15,10 +17,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
    - grok_exporter_fstab
    - nvidia_gpu_exporter_mindprince
    - rabbitmq_exporter_kbudde
-   - squid_exporter_boynux
    - sql_exporter_free
+   - squid_exporter_boynux
  - Allow adding environmental variables to any/all exporters
  - Inspec tests for all software
+ - Inspec tests to validate /metrics content for most exporters
  - Add TravisCI to ensure all software is inspec tested
  - Add support for source and binaries in Zip files
  - Add support for building source from a github commit
