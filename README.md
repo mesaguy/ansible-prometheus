@@ -1022,5 +1022,5 @@ See the [LICENSE](https://github.com/mesaguy/ansible-prometheus/blob/master/LICE
 
 ## Author Information
 Mesaguy
-https://mesaguy.com
-https://github.com/mesaguy/ansible-prometheus
+ - https://mesaguy.com
+ - https://github.com/mesaguy/ansible-prometheus
