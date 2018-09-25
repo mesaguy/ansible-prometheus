@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.4.1] - 2018-09-22
+
+### Fixed
+ - Travis CI awesome_bot checks were failing on 'localhost' URLs in the 
+   README.md file
+
 ## [0.4.0] - 2018-09-22
 
 ### Added
