@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+ - Upgrade squid_exporter_boynux from v1.0 to v1.1
+
 ## [0.4.1] - 2018-09-22
 
 ### Fixed
