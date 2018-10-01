@@ -885,7 +885,7 @@ An array of additional flags to pass to the squid_exporter daemon:
 
 The version of squid_exporter to install:
 
-    prometheus_squid_exporter_boynux_version: "1.1"
+    prometheus_squid_exporter_boynux_version: "1.2"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9301:
 
