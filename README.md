@@ -183,7 +183,7 @@ If installing a Prometheus application binary fails, fall back to installing the
 
 Go version to use when building Prometheus software:
 
-    prometheus_go_version: 1.10.3
+    prometheus_go_version: 1.11.1
 
 The Prometheus etc directory, defaults to '/opt/prometheus/etc':
 
@@ -226,8 +226,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.4.2"
-    prometheus_src_version: "v2.4.2"
+    prometheus_version: "2.4.3"
+    prometheus_src_version: "v2.4.3"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
