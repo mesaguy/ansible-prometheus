@@ -549,8 +549,8 @@ An array of additional flags to pass to the grok_exporter daemon:
 
 The version of grok_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_grok_exporter_fstab_version: "0.2.5"
-    prometheus_grok_exporter_fstab_src_version: "v0.2.5"
+    prometheus_grok_exporter_fstab_version: "0.2.6"
+    prometheus_grok_exporter_fstab_src_version: "v0.2.6"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9144:
 

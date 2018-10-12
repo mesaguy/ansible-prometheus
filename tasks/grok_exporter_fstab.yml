@@ -17,8 +17,8 @@
     # Do not perform tests, tests only succeed where IPv6 is available
     prometheus_software_fallback_to_build: '{{ prometheus_grok_exporter_fstab_fallback_to_build | default(prometheus_fallback_to_build) }}'
     prometheus_software_name: 'grok_exporter_fstab'
-    prometheus_software_version: '{{ prometheus_grok_exporter_fstab_version | default("0.2.5") }}'
-    prometheus_software_src_version: '{{ prometheus_grok_exporter_fstab_src_version | default("v0.2.5") }}'
+    prometheus_software_version: '{{ prometheus_grok_exporter_fstab_version | default("0.2.6") }}'
+    prometheus_software_src_version: '{{ prometheus_grok_exporter_fstab_src_version | default("v0.2.6") }}'
     prometheus_software_description: 'Prometheus grok_exporter, export from arbitrary unstructured log data'
     prometheus_software_documentation: 'https://github.com/fstab/grok_exporter'
     prometheus_software_host: '{{ prometheus_grok_exporter_fstab_host | default("0.0.0.0") }}'

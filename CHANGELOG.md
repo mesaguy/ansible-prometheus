@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+ - Upgrade grok_exporter_fstab from v0.2.5 to v0.2.6
+
+### Fixed
+ - When building Prometheus software from source, prioritize this role's
+   copy/version of Go over the system's copy/version of Go
+
 ## [0.4.3] - 2018-10-07
 
 ### Changed
