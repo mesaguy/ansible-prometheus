@@ -93,3 +93,5 @@
     prometheus_software_binary_unarchive_opts: '{{ prometheus_default_binary_unarchive_opts }}'
     # Extra options to give 'unarchive' when decompressing source file
     prometheus_software_src_unarchive_opts: '{{ prometheus_default_src_unarchive_opts }}'
+    # Additional tgroup entry labels to apply
+    prometheus_tgroup_labels: {}

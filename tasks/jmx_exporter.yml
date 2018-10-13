@@ -7,7 +7,6 @@
 - name: 'Starting jmx_exporter install'
   set_fact:
     prometheus_exporter: true
-    prometheus_jmx_exporter_default_port: 1234
     prometheus_software_binary_name: 'jmx_exporter.jar'
     prometheus_software_config: '{{ prometheus_jmx_exporter_cfgs | default({"default" : ""}) }}'
     prometheus_software_extra_opts: []
@@ -17,6 +16,7 @@
     prometheus_software_documentation: 'https://github.com/prometheus/jmx_exporter'
     prometheus_software_host: '{{ prometheus_jmx_exporter_host | default("0.0.0.0") }}'
     prometheus_software_port: '{{ prometheus_jmx_exporter_port | default(1234) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_jmx_exporter_jobname | default("jmx") }}'
 
 - name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
   set_fact:

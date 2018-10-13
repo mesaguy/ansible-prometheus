@@ -15,6 +15,11 @@ prometheus_manage_user: true
 prometheus_group: prometheus
 prometheus_user: prometheus
 
+# Firewall management
+prometheus_manage_firewalld: false
+prometheus_server_ips: []
+prometheus_firewalld_zone: public
+
 # When performing installations
 prometheus_default_binary_unarchive_opts:
  - '--strip-components=1'
@@ -28,10 +33,6 @@ prometheus_software_setup_pkg_mgrs:
  - 'Alpine'
  - 'Archlinux'
  - 'Gentoo'
-
-# When testing
-prometheus_software_service_test: true
-prometheus_always_build_from_source: false
 
 # Base directories
 prometheus_etc_dir: '{{ prometheus_root_dir }}/etc'
@@ -47,3 +48,12 @@ prometheus_tgroup_dir_purge_orphans: false
 prometheus_tgroup_owner: '{{ prometheus_user }}'
 prometheus_tgroup_group: '{{ prometheus_group }}'
 prometheus_tgroup_mode: 0775
+
+# tgroup settings to be overridden on a node-by-node basis
+prometheus_tgroup_labels: {}
+prometheus_manage_tgroups: false
+prometheus_managed_tgroup_dir: '{{ prometheus_tgroup_dir }}'
+
+# When testing
+prometheus_software_service_test: true
+prometheus_always_build_from_source: false

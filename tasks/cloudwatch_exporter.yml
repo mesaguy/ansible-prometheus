@@ -7,13 +7,13 @@
 - name: 'Starting cloudwatch_exporter install'
   set_fact:
     prometheus_exporter: true
-    prometheus_cloudwatch_exporter_default_port: 9106
     prometheus_software_binary_name: 'cloudwatch_exporter.jar'
     prometheus_software_config: '{{ prometheus_cloudwatch_exporter_cfgs | default({"default" : ""}) }}'
     prometheus_software_env_vars: '{{ prometheus_cloudwatch_exporter_env_vars | default({}) }}'
     prometheus_software_extra_opts: []
     prometheus_software_name: 'cloudwatch_exporter'
     prometheus_software_service_test: '{{ prometheus_cloudwatch_exporter_service_test | default(true) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_cloudwatch_exporter_jobname | default("cloudwatch") }}'
     prometheus_software_version: '{{ prometheus_cloudwatch_exporter_version | default("0.5.0") }}'
     prometheus_software_description: 'Prometheus cloudwatch_exporter, exporter for Amazon CloudWatch'
     prometheus_software_documentation: 'https://github.com/prometheus/cloudwatch_exporter'

@@ -1,0 +1,9 @@
+---
+- targets:
+  - {{ ansible_fqdn | default(inventory_hostname) }}:{{ prometheus_software_port }}
+  labels:
+{% set labels = { 'hostname': ansible_hostname | default(inventory_hostname), 'job': prometheus_software_tgroup_jobname } %}
+{% set labels = labels | combine(prometheus_tgroup_labels) %}
+{% for key, value in labels | dictsort %}
+    {{ key }}: {{ value }}
+{% endfor %}
