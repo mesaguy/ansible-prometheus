@@ -93,3 +93,8 @@
     prometheus_software_binary_unarchive_opts: '{{ prometheus_default_binary_unarchive_opts }}'
     # Extra options to give 'unarchive' when decompressing source file
     prometheus_software_src_unarchive_opts: '{{ prometheus_default_src_unarchive_opts }}'
+    # Software supports a kill -HUP to force a reload
+    prometheus_software_supports_reload: false
+    # Command that can be run to validate a configuration file. This command
+    # is added to services to be run ahead of starts/restarts/reloads
+    prometheus_software_validation_command: ''

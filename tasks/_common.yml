@@ -84,7 +84,7 @@
   file:
     path: '{{ prometheus_base_directory }}'
     state: directory
-    mode: 0750
+    mode: 0755
     owner: '{{ prometheus_user }}'
     group: '{{ prometheus_group }}'
   loop_control:

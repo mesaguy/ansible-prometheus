@@ -25,14 +25,14 @@ end
 
 describe file('/opt/prometheus/tmp') do
     it { should be_directory }
-    its('mode') { should cmp '0750' }
+    its('mode') { should cmp '0755' }
     its('owner') { should eq 'prometheus' }
     its('group') { should eq 'prometheus' }
 end
 
 describe file('/opt/prometheus/var') do
     it { should be_directory }
-    its('mode') { should cmp '0750' }
+    its('mode') { should cmp '0755' }
     its('owner') { should eq 'prometheus' }
     its('group') { should eq 'prometheus' }
 end

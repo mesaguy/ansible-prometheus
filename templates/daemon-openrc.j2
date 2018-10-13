@@ -8,10 +8,10 @@ documentation="{{ prometheus_software_documentation }}"
 
 {% if installer_instance is defined and installer_instance and installer_instance.name -%}
 logfile="{{ prometheus_log_dir }}/{{ prometheus_software_name }}__{{ installer_instance.name }}.log"
-pidfile="/var/run/{{ prometheus_software_name }}__{{ installer_instance.name }}.pid"
+pidfile="/var/run/prometheus/{{ prometheus_software_name }}__{{ installer_instance.name }}/{{ prometheus_software_name }}.pid"
 {% else -%}
 logfile="{{ prometheus_log_dir }}/{{ prometheus_software_name }}.log"
-pidfile="/var/run/{{ prometheus_software_name }}.pid"
+pidfile="/var/run/prometheus/{{ prometheus_software_name }}/{{ prometheus_software_name }}.pid"
 {% endif -%}
 {% if prometheus_software_prefix_command is defined and prometheus_software_prefix_command %}
 command="{{ prometheus_software_prefix_command[0] }}"
@@ -21,24 +21,76 @@ command="{{ prometheus_software_binary }}"
 command_args="{{ prometheus_software_command_args | join(' ') }}"
 {% endif %}
 command_background=true
+{% if prometheus_software_supports_reload is defined and prometheus_software_supports_reload -%}
+extra_started_commands="reload"
+{% endif -%}
 runas_user={% if prometheus_software_runas is defined and prometheus_software_runas -%}
 {{ prometheus_software_runas }}
 {% else -%}
 {{ prometheus_user }}
 {% endif -%}
 start_stop_daemon_args="--pidfile ${pidfile}
-{% if prometheus_software_env_vars is defined and prometheus_software_env_vars -%}
+{% if prometheus_software_env_vars is defined and prometheus_software_env_vars %}
 {% for key in prometheus_software_env_vars.keys() -%}
   --env {{ key }}='{{ prometheus_software_env_vars[key] }}'
 {% endfor -%}
-{% endif -%}
+{% endif %}
   --stdout ${logfile} --stderr ${logfile}
   --user ${runas_user}:{{ prometheus_group }}"
-{% if prometheus_software_config_file is defined and prometheus_software_config_file -%}
+{% if prometheus_software_config_file is defined and prometheus_software_config_file %}
 
 required_files="{{ prometheus_software_config_file }}"
-{% endif -%}
+{% endif %}
 
 depend() {
-	use logger dns
+  use logger dns
 }
+
+start_pre() {
+  # Make directory for $pidfile
+  mkdir -p $(dirname $pidfile)
+
+  # Setup logfile if not owned by root or {{ prometheus_user }}
+  if [ "$runas_user" != "root" ] && [ "$runas_user" != "{{ prometheus_user }}" ] ; then
+    touch $logfile
+    chown $runas_user $logfile
+  fi
+{% if prometheus_software_validation_command is defined and prometheus_software_validation_command %}
+
+  # If this isn't a restart, make sure that the user's config isn't
+  # busted before we try to start the daemon (this will produce
+  # better error messages than if we just try to start it blindly).
+  #
+  # If, on the other hand, this *is* a restart, then the stop_pre
+  # action will have ensured that the config is usable and we don't
+  # need to do that again.
+  if [ "${RC_CMD}" != "restart" ] ; then
+    checkconfig || return $?
+  fi
+{% endif %}
+}
+{% if prometheus_software_validation_command is defined and prometheus_software_validation_command %}
+
+checkconfig() {
+  {{ prometheus_software_validation_command }}
+}
+
+stop_pre() {
+  # If this is a restart, check to make sure the user's config
+  # isn't busted before we stop the running daemon.
+  if [ "${RC_CMD}" = "restart" ] ; then
+      checkconfig || return $?
+  fi
+}
+{% endif %}
+{% if prometheus_software_supports_reload is defined and prometheus_software_supports_reload %}
+
+reload() {
+{% if prometheus_software_validation_command is defined and prometheus_software_validation_command %}
+  checkconfig || return $?
+{% endif %}
+  ebegin "Reloading ${RC_SVCNAME}"
+  start-stop-daemon --signal HUP --pidfile "${pidfile}"
+  eend $?
+}
+{% endif %}

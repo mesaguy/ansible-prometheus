@@ -6,12 +6,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+ - Add service 'reload' support to alertmanager and prometheus. Causes
+   processes to reload configuration files without restarting processes
+ - Validate alertmanager and prometheus configuration files before
+   starting services
+
 ### Changed
  - Upgrade grok_exporter_fstab from v0.2.5 to v0.2.6
+ - Systemd based processes now maintain a PID file. Useful for sending
+   kill -HUP and other signals via scripts and consistent with OpenRC and
+   upstart implementations
 
 ### Fixed
  - When building Prometheus software from source, prioritize this role's
    copy/version of Go over the system's copy/version of Go
+ - Formatting; indents and extra newlines; in OpenRC and upstart configs
+ - Software not run as 'root' or 'prometheus' may have been unable to write
+   logs on upstart and OpenRC based systems. The log file is now created
+   with the correct permissions ahead of starting the service
 
 ## [0.4.3] - 2018-10-07
 

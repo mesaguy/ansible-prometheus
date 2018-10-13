@@ -11,9 +11,9 @@
 #
 # processname: {{ prometheus_software_name }}
 {% if installer_instance is defined and installer_instance and installer_instance.name -%}
-# pidfile: "/var/run/{{ prometheus_software_name }}__{{ installer_instance.name }}.pid"
+# pidfile: "/var/run/prometheus/{{ prometheus_software_name }}__{{ installer_instance.name }}/{{ prometheus_software_name }}.pid"
 {% else -%}
-# pidfile: "/var/run/{{ prometheus_software_name }}.pid"
+# pidfile: "/var/run/prometheus/{{ prometheus_software_name }}/{{ prometheus_software_name }}.pid"
 {% endif -%}
 
 ### BEGIN INIT INFO
@@ -32,10 +32,10 @@
 # Documentation:     {{ prometheus_software_documentation }}
 ### END INIT INFO
 
-{% if ansible_os_family == 'RedHat' -%}
+{% if ansible_os_family == 'RedHat' %}
 . /etc/rc.d/init.d/functions
 # pull in sysconfig settings
-{% if installer_instance is defined and installer_instance and installer_instance.name -%}
+{% if installer_instance is defined and installer_instance and installer_instance.name %}
 [ -f /etc/sysconfig/{{ prometheus_software_name }}__{{ installer_instance.name }} ] && . /etc/sysconfig/{{ prometheus_software_name }}__{{ installer_instance.name }}
 {% else -%}
 [ -f /etc/sysconfig/{{ prometheus_software_name }} ] && . /etc/sysconfig/{{ prometheus_software_name }}
@@ -47,7 +47,7 @@ set -e
 
 umask 022
 
-{% if prometheus_software_env_vars is defined and prometheus_software_env_vars -%}
+{% if prometheus_software_env_vars is defined and prometheus_software_env_vars %}
 # Custom environmental variables:
 {% for key in prometheus_software_env_vars.keys() -%}
 export {{ key }}="{{ prometheus_software_env_vars[key] }}"
@@ -70,11 +70,11 @@ COMMAND="$DAEMON"
 export PATH="${PATH:+$PATH:}/usr/sbin:/sbin"
 logfile="{{ prometheus_log_dir }}/{{ prometheus_software_name }}__{{ installer_instance.name }}.log"
 lockfile=/var/lock/subsys/{{ prometheus_software_name }}__{{ installer_instance.name }}
-pidfile="/var/run/{{ prometheus_software_name }}__{{ installer_instance.name }}.pid"
+pidfile="/var/run/prometheus/{{ prometheus_software_name }}__{{ installer_instance.name }}/{{ prometheus_software_name }}.pid"
 {% else -%}
 logfile="{{ prometheus_log_dir }}/{{ prometheus_software_name }}.log"
 lockfile=/var/lock/subsys/$prog
-pidfile="/var/run/{{ prometheus_software_name }}.pid"
+pidfile="/var/run/prometheus/{{ prometheus_software_name }}/{{ prometheus_software_name }}.pid"
 {% endif -%}
 runas_user={% if prometheus_software_runas is defined and prometheus_software_runas -%}
 {{ prometheus_software_runas }}
@@ -86,17 +86,41 @@ RETVAL=0
 prog="{{ prometheus_software_name }}"
 
 runlevel=$(set -- $(runlevel); eval "echo \$$#" )
+{% if prometheus_software_validation_command is defined and prometheus_software_validation_command %}
+
+validate()
+{
+	{{ prometheus_software_validation_command }}
+}
+{% endif %}
+
+reload()
+{
+{% if prometheus_software_validation_command is defined and prometheus_software_validation_command %}
+	validate
+{% endif %}
+	echo -n $"Reloading $prog: "
+	killproc -p $pidfile -HUP $DAEMON
+}
 
 start()
 {
+{% if prometheus_software_validation_command is defined and prometheus_software_validation_command %}
+	validate
+{% endif %}
 	[ -x $DAEMON ] || exit 5
 	echo -n $"Starting $prog: "
+	# Setup logfile if not owned by root or {{ prometheus_user }}
+	if [ "$runas_user" != "root" ] && [ "$runas_user" != "{{ prometheus_user }}" ] ; then
+		touch $logfile
+		chown $runas_user $logfile
+	fi
 	# Setup pidfile
 	mkdir -p $(dirname $pidfile)
 	# Start daemon
 	daemon --pidfile=$pidfile --user=$runas_user "$COMMAND >> $logfile 2>&1 &"
 	RETVAL=$?
-        if [ $RETVAL -eq 0 ];
+	if [ $RETVAL -eq 0 ];
 	then
 		ps -ef | grep "$COMMAND" | grep -v grep | awk '{print $2}' > $pidfile
 		touch $lockfile && success || failure
@@ -143,6 +167,11 @@ case "$1" in
 		fi
 		stop
 		;;
+{% if prometheus_software_supports_reload is defined and prometheus_software_supports_reload %}
+	reload)
+		reload
+		;;
+{% endif %}
 	restart)
 		restart
 		;;
@@ -154,27 +183,56 @@ case "$1" in
 		fi
 		;;
 	*)
+{% if prometheus_software_supports_reload is defined and prometheus_software_supports_reload %}
+		echo $"Usage: $0 {start|stop|reload|restart|status}"
+{% else %}
 		echo $"Usage: $0 {start|stop|restart|status}"
+{% endif %}
 		RETVAL=2
 esac
 exit $RETVAL
-{% else -%}
+{% else %}
+{% if prometheus_software_validation_command is defined and prometheus_software_validation_command %}
+
+validate ()
+{
+	{{ prometheus_software_validation_command }}
+}
+{% endif %}
+
+reload ()
+{
+{% if prometheus_software_validation_command is defined and prometheus_software_validation_command %}
+	validate
+{% endif %}
+	echo -n $"Reloading $prog: "
+	killproc -p $pidfile -HUP $DAEMON
+}
+
 start ()
 {
+{% if prometheus_software_validation_command is defined and prometheus_software_validation_command %}
+	validate
+{% endif %}
+	# Setup logfile if not owned by root or {{ prometheus_user }}
+	if [ "$runas_user" != "root" ] && [ "$runas_user" != "{{ prometheus_user }}" ] ; then
+		touch $logfile
+		chown $runas_user $logfile
+	fi
 	# Setup pidfile
 	mkdir -p $(dirname $pidfile)
 	log_daemon_msg "Starting {{ prometheus_software_description }}" "{{ prometheus_software_name }}" || true
 	if start-stop-daemon --background --chuid $runas_user --start --quiet --oknodo --make-pidfile --pidfile $pidfile --exec /bin/bash -- -c "$COMMAND >> $logfile 2>&1" ; then
-	    log_end_msg 0 || true
+		log_end_msg 0 || true
 	else
-	    log_end_msg 1 || true
+		log_end_msg 1 || true
 	fi
 }
 
 stop ()
 {
 	log_daemon_msg "Stopping {{ prometheus_software_description }}" "{{ prometheus_software_name }}" || true
-    bashPID=$(cat $pidfile); [ -n "$bashPID" ] && pkill -P "$bashPID"
+	bashPID=$(cat $pidfile); [ -n "$bashPID" ] && pkill -P "$bashPID"
 	if start-stop-daemon --stop --quiet --oknodo --pidfile $pidfile; then
 	    log_end_msg 0 || true
 	else
@@ -183,24 +241,30 @@ stop ()
 }
 
 case "$1" in
-  start)
-	start
-	;;
-  stop)
-    stop
-	;;
-
-  restart)
-    stop
-    start
-	;;
-
-  status)
-	status_of_proc -p $pidfile {{ prometheus_software_binary }} {{ prometheus_software_name }} && exit 0 || exit $?
-	;;
-
-  *)
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+{% if prometheus_software_supports_reload is defined and prometheus_software_supports_reload %}
+	reload)
+		reload
+		;;
+{% endif %}
+	restart)
+		stop
+		start
+		;;
+	status)
+		status_of_proc -p $pidfile {{ prometheus_software_binary }} {{ prometheus_software_name }} && exit 0 || exit $?
+		;;
+	*)
+{% if prometheus_software_supports_reload is defined and prometheus_software_supports_reload %}
+	log_action_msg "Usage: $0 {start|stop|reload|restart|status}" || true
+{% else %}
 	log_action_msg "Usage: $0 {start|stop|restart|status}" || true
+{% endif %}
 	exit 1
 esac
 exit 0
