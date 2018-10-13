@@ -16,3 +16,31 @@
 
 - name: Include task to symlink latest {{ prometheus_software_name_version }} directory to an "active" directory
   include_tasks: _install_active_symlink.yml
+
+- name: Create {{ prometheus_software_name }} tgroup file for {{ ansible_hostname | default(inventory_hostname) }}
+  become: true
+  template:
+    src: ../templates/tgroup_host.yml.j2
+    dest: '{{ prometheus_managed_tgroup_dir }}/{{ ansible_hostname | default(inventory_hostname) }}-{{ prometheus_software_name }}.yml'
+    owner: root
+    group: '{{ prometheus_group }}'
+    mode: '0640'
+  delegate_to: '{{ prometheus_server_name }}'
+  loop_control:
+    loop_var: prometheus_server_name
+  with_items: '{{ prometheus_servers }}'
+  when: prometheus_servers is defined and prometheus_exporter and prometheus_manage_tgroups
+
+- name: Allow incoming prometheus server connections to {{ prometheus_software_name }} via firewalld
+  become: true
+  firewalld:
+    immediate: true
+    port: '{{ prometheus_software_port }}/tcp'
+    permanent: true
+    source: '{{ prometheus_server_ip }}'
+    state: enabled
+    zone: '{{ prometheus_firewalld_zone }}'
+  loop_control:
+    loop_var: prometheus_server_ip
+  with_items: "{{ prometheus_server_ips }}"
+  when: prometheus_manage_firewalld is defined and prometheus_software_port | bool and prometheus_server_ips | bool
