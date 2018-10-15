@@ -229,6 +229,15 @@ The version of Prometheus to install. The source version defines the version as 
     prometheus_version: "2.4.3"
     prometheus_src_version: "v2.4.3"
 
+This role can manage your Prometheus server 'target groups' (tgroups) automatically, dynamically creating tgroup files in a specified directory (/etc/prometheus/tgroups by default) for each client exporter. To enable automatic tgroup file generation, you must define 'prometheus_manage_tgroups' as true and list your Prometheus servers in a 'prometheus_servers' variable in your Ansible settings. The following will create tgroup files in /etc/prometheus/ansible_tgroups:
+
+    prometheus_manage_tgroups: true
+    prometheus_servers:
+     - 'prometheus1'
+     - 'prometheus2'
+    # Optional, defaults to /etc/prometheus/tgroups:
+    prometheus_managed_tgroup_dir: '/etc/prometheus/ansible_tgroups'
+
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
     prometheus_storage_dir: /opt/prometheus/var/prometheus
@@ -242,7 +251,6 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 909
 
     prometheus_host: "0.0.0.0"
     prometheus_port: 9090
-
 
 ### Alertmanager variables
 
