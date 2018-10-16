@@ -1,0 +1,34 @@
+---
+- name: 'Create managed tgroup directory: {{ prometheus_managed_tgroup_dir }}'
+  become: true
+  file:
+    path: '{{ prometheus_managed_tgroup_dir }}'
+    state: directory
+    owner: '{{ prometheus_tgroup_owner }}'
+    group: '{{ prometheus_tgroup_group }}'
+    mode: '{{ prometheus_tgroup_mode }}'
+  loop_control:
+    loop_var: prometheus_server_name
+  delegate_to: '{{ prometheus_server_name }}'
+  with_items: '{{ prometheus_servers }}'
+  when: prometheus_tgroup_dir != prometheus_managed_tgroup_dir and not lookup('vars', 'prometheus_tgroup_dir_created__' ~ prometheus_server_name, default=false)
+
+- name: Define server tgroup directory creation as complete
+  set_fact: { 'prometheus_tgroup_dir_created__{{ prometheus_server_name }}' : true }
+  loop_control:
+    loop_var: prometheus_server_name
+  with_items: '{{ prometheus_servers }}'
+  when: prometheus_tgroup_dir != prometheus_managed_tgroup_dir
+
+- name: 'Create {{ prometheus_software_name }} tgroup file for {{ ansible_hostname | default(inventory_hostname) }}'
+  become: true
+  template:
+    src: ../templates/tgroup_host.yml.j2
+    dest: '{{ prometheus_managed_tgroup_dir }}/{{ ansible_hostname | default(inventory_hostname) }}-{{ prometheus_software_name }}.yml'
+    owner: root
+    group: '{{ prometheus_group }}'
+    mode: '0644'
+  delegate_to: '{{ prometheus_server_name }}'
+  loop_control:
+    loop_var: prometheus_server_name
+  with_items: '{{ prometheus_servers }}'

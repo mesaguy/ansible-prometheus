@@ -11,9 +11,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
    processes to reload configuration files without restarting processes
  - Validate alertmanager and prometheus configuration files before
    starting services
+ - Optionally verify that the Prometheus server/s can reach each exporter
+   service
+ - Optionally add iptables or firewalld firewall rules to permit Prometheus
+   server/s to reach exporter/s
 
 ### Changed
  - Upgrade grok_exporter_fstab from v0.2.5 to v0.2.6
+ - Upgrade statsd_exporter from v0.7.0 to v0.8.0
  - Systemd based processes now maintain a PID file. Useful for sending
    kill -HUP and other signals via scripts and consistent with OpenRC and
    upstart implementations

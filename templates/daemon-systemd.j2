@@ -39,13 +39,13 @@ ExecStartPre={{ prometheus_software_validation_command }}
 ExecReload=/bin/kill -HUP $MAINPID
 {% endif -%}
 {% if installer_instance is defined and installer_instance and installer_instance.name -%}
-ExecStartPost=/bin/sh -c "echo $MAINPID > /var/run/prometheus/{{ prometheus_software_name }}__{{ installer_instance.name }}/{{ prometheus_software_name }}.pid"
-PIDfile=/var/run/prometheus/{{ prometheus_software_name }}__{{ installer_instance.name }}/{{ prometheus_software_name }}.pid
-RuntimeDirectory=prometheus/{{ prometheus_software_name }}__{{ installer_instance.name }}
+ExecStartPost=/bin/sh -c "echo $MAINPID > /var/run/prometheus-{{ prometheus_software_name }}__{{ installer_instance.name }}/{{ prometheus_software_name }}.pid"
+PIDfile=/var/run/prometheus-{{ prometheus_software_name }}__{{ installer_instance.name }}/{{ prometheus_software_name }}.pid
+RuntimeDirectory=prometheus-{{ prometheus_software_name }}__{{ installer_instance.name }}
 {% else -%}
-ExecStartPost=/bin/sh -c "echo $MAINPID > /var/run/prometheus/{{ prometheus_software_name }}/{{ prometheus_software_name }}.pid"
-PIDfile=/var/run/prometheus/{{ prometheus_software_name }}/{{ prometheus_software_name }}.pid
-RuntimeDirectory=prometheus/{{ prometheus_software_name }}
+ExecStartPost=/bin/sh -c "echo $MAINPID > /var/run/prometheus-{{ prometheus_software_name }}/{{ prometheus_software_name }}.pid"
+PIDfile=/var/run/prometheus-{{ prometheus_software_name }}/{{ prometheus_software_name }}.pid
+RuntimeDirectory=prometheus-{{ prometheus_software_name }}
 {% endif %}
 RuntimeDirectoryPreserve=yes
 Restart=on-failure

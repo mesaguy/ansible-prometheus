@@ -9,6 +9,9 @@ prometheus_purge_orphans: false
 prometheus_root_dir: '/opt/prometheus'
 prometheus_test_service_port: true
 
+# If yes, perform a connection test from the server to the client
+prometheus_software_server_side_connect_test: false
+
 # User management
 prometheus_manage_group: true
 prometheus_manage_user: true
@@ -16,7 +19,8 @@ prometheus_group: prometheus
 prometheus_user: prometheus
 
 # Firewall management
-prometheus_manage_firewalld: false
+prometheus_manage_client_firewalld: false
+prometheus_manage_client_iptables: false
 prometheus_server_ips: []
 prometheus_firewalld_zone: public
 
@@ -51,7 +55,7 @@ prometheus_tgroup_mode: 0775
 
 # tgroup settings to be overridden on a node-by-node basis
 prometheus_tgroup_labels: {}
-prometheus_manage_tgroups: false
+prometheus_manage_client_tgroups: false
 prometheus_managed_tgroup_dir: '{{ prometheus_tgroup_dir }}'
 
 # When testing
