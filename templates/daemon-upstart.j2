@@ -61,6 +61,7 @@ DAEMON={{ prometheus_software_prefix_command[0] }}
 {% set args = prometheus_software_command_args %}
 DAEMON={{ prometheus_software_binary }}
 {% endif -%}
+ARGS="{{ args | join(' ') }}"
 {% if args -%}
 COMMAND="$DAEMON {{ args | join(' ') }}"
 {% else -%}
@@ -100,7 +101,7 @@ reload()
 	validate
 {% endif %}
 	echo -n $"Reloading $prog: "
-	killproc -p $pidfile -HUP $DAEMON
+	kill -HUP $(pidofproc -p $pidfile $DAEMON)
 }
 
 start()
@@ -206,7 +207,7 @@ reload ()
 	validate
 {% endif %}
 	echo -n $"Reloading $prog: "
-	killproc -p $pidfile -HUP $DAEMON
+	kill -HUP $(pidofproc -p $pidfile $DAEMON)
 }
 
 start ()
@@ -221,8 +222,8 @@ start ()
 	fi
 	# Setup pidfile
 	mkdir -p $(dirname $pidfile)
-	log_daemon_msg "Starting {{ prometheus_software_description }}" "{{ prometheus_software_name }}" || true
-	if start-stop-daemon --background --chuid $runas_user --start --quiet --oknodo --make-pidfile --pidfile $pidfile --exec /bin/bash -- -c "$COMMAND >> $logfile 2>&1" ; then
+	log_daemon_msg "Starting {{ prometheus_software_description }}" || true
+	if start-stop-daemon --background --chuid $runas_user --start --quiet --oknodo --make-pidfile --pidfile $pidfile --no-close --exec $DAEMON -- $ARGS >> $logfile 2>&1 ; then
 		log_end_msg 0 || true
 	else
 		log_end_msg 1 || true
@@ -231,8 +232,7 @@ start ()
 
 stop ()
 {
-	log_daemon_msg "Stopping {{ prometheus_software_description }}" "{{ prometheus_software_name }}" || true
-	bashPID=$(cat $pidfile); [ -n "$bashPID" ] && pkill -P "$bashPID"
+	log_daemon_msg "Stopping {{ prometheus_software_description }}" || true
 	if start-stop-daemon --stop --quiet --oknodo --pidfile $pidfile; then
 	    log_end_msg 0 || true
 	else

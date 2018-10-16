@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Systemd based processes now maintain a PID file. Useful for sending
    kill -HUP and other signals via scripts and consistent with OpenRC and
    upstart implementations
+ - Ubuntu on non-RHEL systems no longer starts software inside of a bash instance
 
 ### Fixed
  - When building Prometheus software from source, prioritize this role's
