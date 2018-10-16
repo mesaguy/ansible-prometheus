@@ -210,6 +210,51 @@ The directory to use when storing persistent Prometheus data (ie: The Prometheus
     prometheus_var_dir: "{{ prometheus_root_dir }}/var"
 
 
+### Prometheus client variables
+
+Cause all Prometheus servers defined in a 'prometheus_servers' array/list variable to verify connectivity to each of the client's exporters:
+
+    prometheus_software_server_side_connect_test: true
+
+Configure firewalld rules to permit server IPs defined in a 'prometheus_server_ips' array/list variable to connect to each of the client's exporters. Only enable this variable on servers that use firewalld, otherwise the task will fail:
+
+    prometheus_manage_client_firewalld: true
+
+Configure iptables rules to permit server IPs defined in a 'prometheus_server_ips' array/list variable to connect to each of the client's exporters. Only enable this variable on servers that use iptables, otherwise the task will fail:
+
+    prometheus_manage_client_iptables: true
+
+This role can manage your Prometheus server 'target groups' (tgroups) automatically, dynamically creating tgroup files in a specified directory (/etc/prometheus/tgroups by default) for each client exporter. To enable automatic tgroup file generation, you must define 'prometheus_manage_client_tgroups' as true and list your Prometheus servers in a 'prometheus_servers' variable in your Ansible settings. The following will create tgroup files in /etc/prometheus/ansible_tgroups:
+
+    prometheus_manage_client_tgroups: true
+    prometheus_servers:
+     - 'prometheus1'
+     - 'prometheus2'
+    # Optional, defaults to /etc/prometheus/tgroups:
+    prometheus_managed_tgroup_dir: '/etc/prometheus/ansible_tgroups'
+
+If this role is managing your tgroup files, you can apply labels to your exporter/s using the 'prometheus_tgroup_labels' variable:
+
+``` yaml
+- hosts: prometheus_clients
+  vars:
+    prometheus_components:
+      - node_exporter
+    prometheus_tgroup_labels:
+      environment: 'development'
+      site: primary
+  roles:
+    - mesaguy.prometheus
+```
+
+Using 'set_fact' to do the same:
+
+  - name: Set Prometheus labels for host
+    set_fact:
+      prometheus_tgroup_labels:
+        environment: 'development'
+        site: primary
+
 ### Prometheus server variables
 
 To enable [prometheus server](https://github.com/prometheus/prometheus) include role task: prometheus
@@ -242,7 +287,6 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 909
 
     prometheus_host: "0.0.0.0"
     prometheus_port: 9090
-
 
 ### Alertmanager variables
 
@@ -917,8 +961,8 @@ An array of additional flags to pass to the statsd_exporter daemon:
         --statsd.listen-udp=":9125"
 
 The version of statsd_exporter to install. The source version defines the version as specified in version control:
-    prometheus_statsd_exporter_version: "0.7.0"
-    prometheus_statsd_exporter_src_version: "v0.7.0"
+    prometheus_statsd_exporter_version: "0.8.0"
+    prometheus_statsd_exporter_src_version: "v0.8.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9102:
 

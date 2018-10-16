@@ -29,7 +29,8 @@
   # This step is taken for the sake of safety. If every installation
   # overrides these variables, then this step is redundant
   set_fact:
-    prometheus_exporter: ''
+    # Boolean that specifies if software is a Prometheus exporter
+    prometheus_exporter: false
     prometheus_software_binary: ''
     prometheus_software_binary_name: ''
     prometheus_software_files: []

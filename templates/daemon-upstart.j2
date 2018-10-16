@@ -1,5 +1,7 @@
 #! /bin/sh
 #
+# Do not edit manually, this file is managed using automation tools
+#
 {% if installer_instance is defined and installer_instance and installer_instance.name -%}
 # {{ prometheus_software_name }}__{{ installer_instance.name }}
 {% else -%}
@@ -11,9 +13,9 @@
 #
 # processname: {{ prometheus_software_name }}
 {% if installer_instance is defined and installer_instance and installer_instance.name -%}
-# pidfile: "/var/run/prometheus/{{ prometheus_software_name }}__{{ installer_instance.name }}/{{ prometheus_software_name }}.pid"
+# pidfile: "/var/run/prometheus-{{ prometheus_software_name }}__{{ installer_instance.name }}/{{ prometheus_software_name }}.pid"
 {% else -%}
-# pidfile: "/var/run/prometheus/{{ prometheus_software_name }}/{{ prometheus_software_name }}.pid"
+# pidfile: "/var/run/prometheus-{{ prometheus_software_name }}/{{ prometheus_software_name }}.pid"
 {% endif -%}
 
 ### BEGIN INIT INFO
@@ -71,11 +73,11 @@ COMMAND="$DAEMON"
 export PATH="${PATH:+$PATH:}/usr/sbin:/sbin"
 logfile="{{ prometheus_log_dir }}/{{ prometheus_software_name }}__{{ installer_instance.name }}.log"
 lockfile=/var/lock/subsys/{{ prometheus_software_name }}__{{ installer_instance.name }}
-pidfile="/var/run/prometheus/{{ prometheus_software_name }}__{{ installer_instance.name }}/{{ prometheus_software_name }}.pid"
+pidfile="/var/run/prometheus-{{ prometheus_software_name }}__{{ installer_instance.name }}/{{ prometheus_software_name }}.pid"
 {% else -%}
 logfile="{{ prometheus_log_dir }}/{{ prometheus_software_name }}.log"
 lockfile=/var/lock/subsys/$prog
-pidfile="/var/run/prometheus/{{ prometheus_software_name }}/{{ prometheus_software_name }}.pid"
+pidfile="/var/run/prometheus-{{ prometheus_software_name }}/{{ prometheus_software_name }}.pid"
 {% endif -%}
 runas_user={% if prometheus_software_runas is defined and prometheus_software_runas -%}
 {{ prometheus_software_runas }}

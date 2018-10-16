@@ -1,4 +1,7 @@
 ---
+#
+# Do not edit manually, this file is managed using automation tools
+#
 - targets:
   - {{ ansible_fqdn | default(inventory_hostname) }}:{{ prometheus_software_port }}
   labels:
