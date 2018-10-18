@@ -12,6 +12,9 @@ prometheus_test_service_port: true
 # If yes, perform a connection test from the server to the client
 prometheus_software_server_side_connect_test: false
 
+# Symlink tools (amtool, promtool, etc) to /usr/local/bin
+prometheus_symlink_tools: true
+
 # User management
 prometheus_manage_group: true
 prometheus_manage_user: true
@@ -57,6 +60,12 @@ prometheus_tgroup_mode: 0775
 prometheus_tgroup_labels: {}
 prometheus_manage_client_tgroups: false
 prometheus_managed_tgroup_dir: '{{ prometheus_tgroup_dir }}'
+
+# Create a PID file when using systemd. This can be useful for kill -HUP
+# scripts. However, older versions of systemd (ie: EL7) have a bug which causes
+# daemons to occasionally crash on start/restart:
+# https://bugzilla.redhat.com/show_bug.cgi?id=1226509
+prometheus_systemd_pid: false
 
 # When testing
 prometheus_software_service_test: true

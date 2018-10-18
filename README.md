@@ -209,6 +209,9 @@ The directory to use when storing persistent Prometheus data (ie: The Prometheus
 
     prometheus_var_dir: "{{ prometheus_root_dir }}/var"
 
+Optionally disable symlink of tool applications (amtool, promtool, etc) to /usr/local/bin. Defaults to: true:
+
+    prometheus_symlink_tools: false
 
 ### Prometheus client variables
 
@@ -219,6 +222,22 @@ Cause all Prometheus servers defined in a 'prometheus_servers' array/list variab
 Configure firewalld rules to permit server IPs defined in a 'prometheus_server_ips' array/list variable to connect to each of the client's exporters. Only enable this variable on servers that use firewalld, otherwise the task will fail:
 
     prometheus_manage_client_firewalld: true
+    # Optionally set:
+    prometheus_firewalld_zone: public
+
+If firewalld customization is required, one can add firewalld rules using a playbook as follows:
+
+    - name: Allow incoming prometheus server connections to node_exporter
+      become: true
+      firewalld:
+        immediate: true
+        port: 9100/tcp
+        permanent: true
+        source: "{{ item }}"
+        state: enabled
+        zone: public
+      with_items: "{{ prometheus_server_ips }}"
+      when: firewalld_enabled is defined and 'node_exporter' in prometheus_components
 
 Configure iptables rules to permit server IPs defined in a 'prometheus_server_ips' array/list variable to connect to each of the client's exporters. Only enable this variable on servers that use iptables, otherwise the task will fail:
 
@@ -324,8 +343,8 @@ An array of additional flags to pass to the pushgateway daemon:
 
 The version of Pushgateway to install. The source version defines the version as specified in version control:
 
-    prometheus_pushgateway_version: "0.5.2"
-    prometheus_pushgateway_src_version: "v0.5.2"
+    prometheus_pushgateway_version: "0.6.0"
+    prometheus_pushgateway_src_version: "v0.6.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9091:
 
@@ -682,8 +701,8 @@ An array of additional flags to pass to the memcached_exporter daemon:
 
 The version of memcached_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_memcached_exporter_version: "0.4.1"
-    prometheus_memcached_exporter_src_version: "v0.4.1"
+    prometheus_memcached_exporter_version: "0.5.0"
+    prometheus_memcached_exporter_src_version: "v0.5.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9150:
 

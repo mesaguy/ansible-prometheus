@@ -62,6 +62,18 @@
     validate: '{{ prometheus_software_install_dir }}/amtool check-config %s'
   register: prometheus_software_cfg
 
+- name: Symlink {{ prometheus_software_name_version }}{{ prometheus_software_install_dir }}/amtool to /usr/local/bin/amtool
+  become: true
+  file:
+    state: link
+    src: '{{ prometheus_software_install_dir }}/amtool'
+    dest: /usr/local/bin/amtool
+    force: true
+    owner: '{{ prometheus_user }}'
+    group: '{{ prometheus_group }}'
+    mode: '0750'
+  when: prometheus_symlink_tools
+
 - name: Set {{ prometheus_software_name_version }} validation command facts
   set_fact:
     prometheus_software_validation_command: '{{ prometheus_software_install_dir }}/amtool check-config {{ prometheus_etc_dir }}/alertmanager.yml'

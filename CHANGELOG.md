@@ -18,6 +18,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
  - Upgrade grok_exporter_fstab from v0.2.5 to v0.2.6
+ - Upgrade memcached_exporter from v0.4.1 to v0.5.0
+ - Upgrade pushgateway from v0.5.2 to v0.6.0
  - Upgrade statsd_exporter from v0.7.0 to v0.8.0
  - Systemd based processes now maintain a PID file. Useful for sending
    kill -HUP and other signals via scripts and consistent with OpenRC and

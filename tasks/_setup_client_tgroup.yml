@@ -20,7 +20,7 @@
   with_items: '{{ prometheus_servers }}'
   when: prometheus_tgroup_dir != prometheus_managed_tgroup_dir
 
-- name: 'Create {{ prometheus_software_name }} tgroup file for {{ ansible_hostname | default(inventory_hostname) }}'
+- name: 'Create {{ prometheus_software_name }} tgroup file for {{ prometheus_software_name }}'
   become: true
   template:
     src: ../templates/tgroup_host.yml.j2
