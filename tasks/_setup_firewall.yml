@@ -1,0 +1,30 @@
+---
+- name: Allow incoming prometheus server connections to {{ prometheus_software_name }}:{{ prometheus_software_port }} via firewalld
+  become: true
+  firewalld:
+    immediate: true
+    port: '{{ prometheus_software_port }}/tcp'
+    permanent: true
+    source: '{{ prometheus_server_ip }}'
+    state: enabled
+    zone: '{{ prometheus_firewalld_zone }}'
+  loop_control:
+    loop_var: prometheus_server_ip
+  with_items: "{{ prometheus_server_ips }}"
+  when: prometheus_manage_client_firewalld and prometheus_software_port and prometheus_server_ips
+
+- name: Allow incoming prometheus server connections to {{ prometheus_software_name }}:{{ prometheus_software_port }} via iptables
+  become: true
+  iptables:
+    chain: INPUT
+    protocol: tcp
+    destination_port: '{{ prometheus_software_port }}'
+    source: '{{ prometheus_server_ip }}'
+    ctstate: NEW
+    syn: match
+    jump: ACCEPT
+    comment: Accept new {{ prometheus_software_name }} connections
+  loop_control:
+    loop_var: prometheus_server_ip
+  with_items: "{{ prometheus_server_ips }}"
+  when: prometheus_manage_client_iptables and prometheus_software_port and prometheus_server_ips

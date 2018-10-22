@@ -5,10 +5,15 @@
   vars:
     prometheus_software_name: '{{ additional_exporter.name }}'
     prometheus_software_port: '{{ additional_exporter.port }}'
-    prometheus_tgroup_labels: '{{ prometheus_tgroup_labels | combine(additional_exporter.labels) }}'
+    prometheus_additional_tgroup_labels: '{{ additional_exporter.labels | default({}) }}'
     prometheus_software_tgroup_jobname: '{{ additional_exporter.name }}'
   loop_control:
     loop_var: additional_exporter
   when: prometheus_manage_client_tgroups and prometheus_additional_exporters is defined and prometheus_additional_exporters
 
-# Firewall
+- name: Include task to setup firewall rules additional exporters
+  include_tasks: '_setup_firewall.yml'
+  with_items: '{{ prometheus_additional_exporters }}'
+  loop_control:
+    loop_var: additional_exporter
+  when: prometheus_server_tgroup_install is undefined and (prometheus_manage_client_firewalld or prometheus_manage_client_iptables) and prometheus_software_port and prometheus_server_ips

@@ -237,7 +237,7 @@ If firewalld customization is required, one can add firewalld rules using a play
         state: enabled
         zone: public
       with_items: "{{ prometheus_server_ips }}"
-      when: firewalld_enabled is defined and 'node_exporter' in prometheus_components
+      when: uses_firewalld is defined and 'node_exporter' in prometheus_components
 
 Configure iptables rules to permit server IPs defined in a 'prometheus_server_ips' array/list variable to connect to each of the client's exporters. Only enable this variable on servers that use iptables, otherwise the task will fail:
 
@@ -260,7 +260,7 @@ If this role is managing your tgroup files, you can apply labels to your exporte
     prometheus_components:
       - node_exporter
     prometheus_tgroup_labels:
-      environment: 'development'
+      environment: development
       site: primary
   roles:
     - mesaguy.prometheus
@@ -273,6 +273,18 @@ Using 'set_fact' to do the same:
       prometheus_tgroup_labels:
         environment: 'development'
         site: primary
+
+Exporters that aren't managed by this role can be specified using a 'prometheus_additional_exporters' variable as follows. Any labels specified in 'prometheus_tgroup_labels' will be merged with labels defined in 'prometheus_additional_exporters'. Firewall rules will be created for additional exporters if 'prometheus_manage_client_firewalld' or 'prometheus_manage_client_iptables' is defined.
+
+    prometheus_additional_exporters:
+     - name: docker
+       port: 9323
+       labels: {}
+     - name: foo
+       port: 9999
+       labels:
+         team: foo
+         department: IT
 
 ### Prometheus server variables
 

@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
    service
  - Optionally add iptables or firewalld firewall rules to permit Prometheus
    server/s to reach exporter/s
+ - Symlink amtool and promtool to /usr/local/bin
+ - Ability to manage tgroups via the client (push to server) or from the
+   server based on hostvars
 
 ### Changed
  - Upgrade grok_exporter_fstab from v0.2.5 to v0.2.6

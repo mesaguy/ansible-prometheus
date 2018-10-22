@@ -3,7 +3,7 @@
 # Do not edit manually, this file is managed using automation tools
 #
 - targets:
-  - {{ ansible_fqdn | default(inventory_hostname) }}:{{ prometheus_software_port }}
+  - {{ ansible_host | default(inventory_hostname) }}:{{ prometheus_software_port }}
   labels:
 {% set labels = { 'hostname': ansible_hostname | default(inventory_hostname), 'job': prometheus_software_tgroup_jobname } %}
 {% set labels = labels | combine(prometheus_tgroup_labels) %}

@@ -1,0 +1,12 @@
+- name: Include {{ prometheus_software_name }} variable file
+  include_vars: exporters/node_exporter.yml
+
+- name: Set {{ prometheus_software_name }} facts
+  set_fact:
+    prometheus_software_port: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_default_port") }}'
+    prometheus_software_tgroup_jobname: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_default_tgroup_jobname") }}'
+
+- name: Include task to create client group files for {{ ansible_hostname | default(inventory_hostname) }}
+  include_tasks: _setup_client_tgroup.yml
+  delegate_to: localhost
+  connection: local

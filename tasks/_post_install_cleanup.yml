@@ -29,6 +29,9 @@
   # This step is taken for the sake of safety. If every installation
   # overrides these variables, then this step is redundant
   set_fact:
+    # Additional tgroup labels, usually defined for an exporter that
+    # isn't managed by this role
+    prometheus_additional_tgroup_labels: {}
     # Boolean that specifies if software is a Prometheus exporter
     prometheus_exporter: false
     prometheus_software_binary: ''
