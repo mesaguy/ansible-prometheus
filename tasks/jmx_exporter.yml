@@ -4,7 +4,7 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
-- name: 'Starting jmx_exporter install'
+- name: Starting jmx_exporter install
   set_fact:
     prometheus_exporter: true
     prometheus_software_binary_name: 'jmx_exporter.jar'

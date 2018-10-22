@@ -4,6 +4,9 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
+- name: Include gluster_exporter (ofesseler) variable file
+  include_vars: exporters/gluster_exporter_ofesseler.yml
+
 - name: Starting gluster_exporter (ofesseler) install
   set_fact:
     prometheus_exporter: true
@@ -15,11 +18,11 @@
     prometheus_software_name: gluster_exporter_ofesseler
     prometheus_software_version: '{{ prometheus_gluster_exporter_ofesseler_version | default("0.2.7") }}'
     prometheus_software_src_version: '{{ prometheus_gluster_exporter_ofesseler_src_version | default("v0.2.7") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_gluster_exporter_ofesseler_jobname | default("gluster") }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_gluster_exporter_ofesseler_jobname | default(prometheus_gluster_exporter_ofesseler_default_tgroup_jobname) }}'
     prometheus_software_description: 'Prometheus gluster_exporter (ofesseler), exporter of host statistics'
     prometheus_software_documentation: 'https://github.com/ofesseler/gluster_exporter'
     prometheus_software_host: '{{ prometheus_gluster_exporter_ofesseler_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_gluster_exporter_ofesseler_port | default(9189) }}'
+    prometheus_software_port: '{{ prometheus_gluster_exporter_ofesseler_port | default(prometheus_gluster_exporter_ofesseler_default_port) }}'
     prometheus_software_runas: '{{ prometheus_gluster_exporter_ofesseler_runas | default(prometheus_user) }}'
     prometheus_software_shortname: gluster_exporter
 

@@ -4,7 +4,10 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
-- name: 'Starting sql_exporter (free) install'
+- name: Include sql_exporter (free) variable file
+  include_vars: exporters/sql_exporter_free.yml
+
+- name: Starting sql_exporter (free) install
   set_fact:
     prometheus_exporter: true
     prometheus_software_binary_name: 'sql_exporter'
@@ -14,11 +17,11 @@
     prometheus_software_name: 'sql_exporter_free'
     prometheus_software_version: '{{ prometheus_sql_exporter_free_version | default("0.4") }}'
     prometheus_software_src_version: '{{ prometheus_sql_exporter_free_src_version | default("v0.4") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_sql_exporter_free_jobname | default("sql") }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_sql_exporter_free_jobname | default(prometheus_sql_exporter_free_default_tgroup_jobname) }}'
     prometheus_software_description: 'Prometheus sql_exporter (free), Database agnostic SQL exporter for Prometheus'
     prometheus_software_documentation: 'https://github.com/free/sql_exporter'
     prometheus_software_host: '{{ prometheus_sql_exporter_free_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_sql_exporter_free_port | default(9399) }}'
+    prometheus_software_port: '{{ prometheus_sql_exporter_free_port | default(prometheus_sql_exporter_free_default_port) }}'
     prometheus_software_runas: '{{ prometheus_sql_exporter_free_runas | default(prometheus_user) }}'
     prometheus_software_shortname: 'sql_exporter'
 

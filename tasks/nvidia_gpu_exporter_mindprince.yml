@@ -4,7 +4,10 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
-- name: 'Starting nvidia_gpu_exporter (mindprince) install'
+- name: Include nvidia_gpu_exporter (mindprince) variable file
+  include_vars: exporters/nvidia_gpu_exporter_mindprince.yml
+
+- name: Starting nvidia_gpu_exporter (mindprince) install
   set_fact:
     prometheus_exporter: true
     prometheus_software_binary_name: 'nvidia_gpu_prometheus_exporter'
@@ -18,11 +21,11 @@
     prometheus_software_description: 'Prometheus nvidia_gpu_exporter (mindprince), exporter of NVIDIA GPU metrics'
     prometheus_software_documentation: 'https://github.com/mindprince/nvidia_gpu_prometheus_exporter'
     prometheus_software_host: '{{ prometheus_nvidia_gpu_exporter_mindprince_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_nvidia_gpu_exporter_mindprince_port | default(9445) }}'
+    prometheus_software_port: '{{ prometheus_nvidia_gpu_exporter_mindprince_port | default(prometheus_nvidia_gpu_exporter_mindprince_default_port) }}'
     prometheus_software_runas: '{{ prometheus_nvidia_gpu_exporter_mindprince_runas | default(prometheus_user) }}'
     prometheus_software_service_test: '{{ prometheus_nvidia_gpu_exporter_mindprince_service_test | default(true) }}'
     prometheus_software_shortname: 'nvidia_gpu_exporter'
-    prometheus_software_tgroup_jobname: '{{ prometheus_nvidia_gpu_exporter_mindprince_jobname | default("nvidia") }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_nvidia_gpu_exporter_mindprince_jobname | default(prometheus_nvidia_gpu_exporter_mindprince_default_tgroup_jobname) }}'
 
 - name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
   set_fact:

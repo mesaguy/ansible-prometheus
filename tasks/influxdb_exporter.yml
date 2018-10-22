@@ -4,7 +4,10 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
-- name: 'Starting influxdb_exporter install'
+- name: Include influxdb_exporter variable file
+  include_vars: exporters/influxdb_exporter.yml
+
+- name: Starting influxdb_exporter install
   set_fact:
     prometheus_exporter: true
     prometheus_software_binary_name: 'influxdb_exporter'
@@ -14,11 +17,11 @@
     prometheus_software_name: 'influxdb_exporter'
     prometheus_software_version: '{{ prometheus_influxdb_exporter_version | default("0.1.0") }}'
     prometheus_software_src_version: '{{ prometheus_influxdb_exporter_src_version | default("v0.1.0") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_influxdb_exporter_jobname | default("influxdb") }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_influxdb_exporter_jobname | default(prometheus_influxdb_exporter_default_tgroup_jobname) }}'
     prometheus_software_description: 'Prometheus influxdb_exporter, probing of endpoints'
     prometheus_software_documentation: 'https://github.com/prometheus/influxdb_exporter'
     prometheus_software_host: '{{ prometheus_influxdb_exporter_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_influxdb_exporter_port | default(9122) }}'
+    prometheus_software_port: '{{ prometheus_influxdb_exporter_port | default(prometheus_influxdb_exporter_default_port) }}'
     prometheus_software_runas: '{{ prometheus_influxdb_exporter_runas | default(prometheus_user) }}'
 
 - name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'

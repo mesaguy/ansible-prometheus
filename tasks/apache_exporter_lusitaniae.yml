@@ -4,7 +4,7 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
-- name: Include apache_exporter_lusitaniae variable file
+- name: Include apache_exporter (lusitaniae) variable file
   include_vars: exporters/apache_exporter_lusitaniae.yml
 
 - name: Starting apache_exporter (lusitaniae) install

@@ -4,7 +4,10 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
-- name: 'Starting kafka_exporter (danielqsj) install'
+- name: Include kafka_exporter (danielqsj) variable file
+  include_vars: exporters/kafka_exporter_danielqsj.yml
+
+- name: Starting kafka_exporter (danielqsj) install
   set_fact:
     prometheus_exporter: true
     prometheus_software_binary_name: kafka_exporter
@@ -14,11 +17,11 @@
     prometheus_software_name: kafka_exporter_danielqsj
     prometheus_software_version: '{{ prometheus_kafka_exporter_danielqsj_version | default("1.2.0") }}'
     prometheus_software_src_version: '{{ prometheus_kafka_exporter_danielqsj_src_version | default("v1.2.0") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_kafka_exporter_danielqsj_jobname | default("kafka") }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_kafka_exporter_danielqsj_jobname | default(prometheus_kafka_exporter_danielqsj_default_tgroup_jobname) }}'
     prometheus_software_description: 'Prometheus kafka_exporter (danielqsj), exporter of Apache Kafka metrics'
     prometheus_software_documentation: 'https://github.com/danielqsj/kafka_exporter'
     prometheus_software_host: '{{ prometheus_kafka_exporter_danielqsj_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_kafka_exporter_danielqsj_port | default(9308) }}'
+    prometheus_software_port: '{{ prometheus_kafka_exporter_danielqsj_port | default(prometheus_kafka_exporter_danielqsj_default_port) }}'
     prometheus_software_service_test: '{{ prometheus_kafka_exporter_danielqsj_service_test | default(true) }}'
     prometheus_software_runas: '{{ prometheus_kafka_exporter_danielqsj_runas | default(prometheus_user) }}'
     prometheus_software_shortname: kafka_exporter
