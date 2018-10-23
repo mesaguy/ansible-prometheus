@@ -1,7 +1,7 @@
 ---
-- name: Ensure at least one prometheus component has been specified for {{ ansible_hostname | default(inventory_hostname) }}
+- name: Ensure at least one prometheus component has been specified for {{ inventory_hostname_short | default(inventory_hostname) }}
   fail:
-    msg: "No 'prometheus_components' variable (array) has been specified for {{ ansible_hostname | default(inventory_hostname) }}"
+    msg: "No 'prometheus_components' variable (array) has been specified for {{ inventory_hostname_short | default(inventory_hostname) }}"
   when: prometheus_components is not defined or not prometheus_components
 
 - name: Run prometheus component installation and setup tasks

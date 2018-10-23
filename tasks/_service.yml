@@ -25,7 +25,7 @@
 
 - name: 'Test that {{ prometheus_software_service_name }}:{{ prometheus_software_port }} is accessible from the Prometheus servers'
   wait_for:
-    host: '{{ ansible_hostname | default(inventory_hostname) }}'
+    host: '{{ inventory_hostname_short | default(inventory_hostname) }}'
     port: '{{ prometheus_software_port }}'
     connect_timeout: 10
     state: started

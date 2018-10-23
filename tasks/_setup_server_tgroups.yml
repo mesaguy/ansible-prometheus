@@ -1,0 +1,9 @@
+---
+- name: Include task to setup tgroups for all known nodes that use this server
+  include_tasks: _setup_server_node_tgroup.yml
+  with_items: '{{ hostvars.keys() | list | unique }}'
+  delegate_to: localhost
+  connection: local
+  loop_control:
+    loop_var: prometheus_client_hostname
+  when: "'prometheus_components' in hostvars[prometheus_client_hostname] and 'prometheus_servers' in hostvars[prometheus_client_hostname] and inventory_hostname in hostvars[prometheus_client_hostname]['prometheus_servers']"

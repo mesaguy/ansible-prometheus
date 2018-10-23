@@ -23,7 +23,7 @@
   delegate_to: '{{ prometheus_server_name }}'
   template:
     src: ../templates/tgroup_host.yml.j2
-    dest: '{{ prometheus_managed_tgroup_dir }}/{{ ansible_hostname | default(inventory_hostname) }}-{{ prometheus_software_name }}.yml'
+    dest: '{{ prometheus_managed_tgroup_dir }}/{{ prometheus_client_hostname }}-{{ prometheus_software_name }}.yml'
     owner: root
     group: '{{ prometheus_group }}'
     mode: '0644'
