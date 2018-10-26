@@ -9,6 +9,8 @@
 
 - name: Set {{ prometheus_software_name }} facts
   set_fact:
+    # Needed for compatibility with clients in 'gather_facts' mode
+    prometheus_client_inventory_hostname: '{{ prometheus_client_fqdn }}'
     prometheus_client_hostname: '{{ hostvars[prometheus_client_fqdn].inventory_hostname_short }}'
     prometheus_software_port: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_default_port") }}'
     prometheus_software_tgroup_jobname: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_default_tgroup_jobname") }}'
