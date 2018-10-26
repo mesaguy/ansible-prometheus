@@ -11,7 +11,7 @@ function check_for_file {
 
 for f in $(ls tasks | grep -Ev '^(_|main.yml$)' | sed 's/\.yml$//')
 do
-    check_for_file "tests/inspec/all/${f}.rb"
+    check_for_file "tests/inspec/default/${f}.rb"
 done
 
 if [ "$EXIT" -eq "0" ] ; then

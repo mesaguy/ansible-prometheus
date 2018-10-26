@@ -1,0 +1,25 @@
+---
+- hosts: all
+  tasks:
+  - name: Include test installation variables
+    include_vars: ../vars/install.yml
+
+  - name: Include install tasks
+    include_tasks: ../playbooks/tgroups_common.yml
+
+  - name: Create dummy client file for purge to delete
+    become: true
+    copy:
+      dest: /etc/prometheus/tgroups/archlinux-delete_me.yml
+      content: 'delete me\n'
+
+  - name: Create dummy server file for purge to delete
+    become: true
+    copy:
+      dest: /etc/prometheus/tgroups-server/test-delete_me.yml
+      content: 'delete me\n'
+
+  - name: Include install tasks
+    include_tasks: ../playbooks/tgroups_common.yml
+    vars:
+      tgroup_dir_purge_orphans: true

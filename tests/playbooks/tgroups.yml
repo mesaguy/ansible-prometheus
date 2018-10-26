@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+  - name: Include test installation variables
+    include_vars: ../vars/install.yml
+
+  - name: Include install tasks
+    include_tasks: ../playbooks/tgroups_common.yml

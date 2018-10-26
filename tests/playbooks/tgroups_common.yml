@@ -1,0 +1,23 @@
+- name: Include test installation variables
+  include_vars: ../vars/install.yml
+
+- name: Install Prometheus tasks
+  include_role:
+    name: '../../../../ansible-prometheus'
+    tasks_from: '{{ prometheus_component }}'
+  loop_control:
+    loop_var: prometheus_component
+  with_items: '{{ hostvars[inventory_hostname].prometheus_components }}'
+  vars:
+    prometheus_manage_client_tgroups: true
+    prometheus_tgroup_dir_purge_orphans: '{{ tgroup_dir_purge_orphans | default(false) }}'
+
+- name: Install Prometheus tasks
+  include_role:
+    name: '../../../../ansible-prometheus'
+    tasks_from: '_setup_server_tgroups'
+  vars:
+    prometheus_manage_server_tgroups: true
+    prometheus_manage_server_tgroups_only: true
+    prometheus_tgroup_dir: '/etc/prometheus/tgroups-server'
+    prometheus_tgroup_dir_purge_orphans: '{{ tgroup_dir_purge_orphans | default(false) }}'
