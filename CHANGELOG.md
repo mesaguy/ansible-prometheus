@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.5.0] - 2018-10-25
+
 ### Added
  - Add service 'reload' support to alertmanager and prometheus. Causes
    processes to reload configuration files without restarting processes
