@@ -55,10 +55,13 @@ prometheus_tgroup_dir_purge_orphans: false
 prometheus_tgroup_owner: '{{ prometheus_user }}'
 prometheus_tgroup_group: '{{ prometheus_group }}'
 prometheus_tgroup_mode: 0775
+prometheus_tgroup_use_facts: false
 
 # tgroup settings to be overridden on a node-by-node basis
 prometheus_tgroup_labels: {}
 prometheus_manage_client_tgroups: false
+prometheus_manage_server_tgroups: false
+prometheus_manage_server_tgroups_only: false
 prometheus_managed_tgroup_dir: '{{ prometheus_tgroup_dir }}'
 
 # Create a PID file when using systemd. This can be useful for kill -HUP

@@ -28,14 +28,14 @@
         state: present
   when: prometheus_prerequisite_packages is defined
 
-- name: 'Add the group "{{ prometheus_group }}"'
+- name: Add the group "{{ prometheus_group }}"
   become: true
   group:
     name: '{{ prometheus_group }}'
     gid: '{{ prometheus_gid | default(omit) }}'
   when: prometheus_manage_group
 
-- name: 'Add the user "{{ prometheus_user }}"'
+- name: Add the user "{{ prometheus_user }}"
   become: true
   user:
     name: '{{ prometheus_user }}'
@@ -54,7 +54,7 @@
     owner: root
     group: '{{ prometheus_group }}'
 
-- name: Setup prometheus base directories owned by 'root'
+- name: Setup prometheus base directories owned by "root"
   become: true
   file:
     path: '{{ root_base_directory }}'
@@ -68,7 +68,7 @@
     - '{{ prometheus_etc_dir }}'
     - '{{ prometheus_exporters_dir }}'
 
-- name: 'Link {{ prometheus_etc_dir }} to /etc/prometheus (Optional)'
+- name: Link {{ prometheus_etc_dir }} to /etc/prometheus (Optional)
   become: true
   file:
     src: '{{ prometheus_etc_dir }}'
@@ -79,7 +79,7 @@
     force: '{{ prometheus_link_etc_force }}'
   when: prometheus_link_etc|bool and prometheus_etc_dir != '/etc/prometheus'
 
-- name: Setup prometheus base directories owned by 'prometheus'
+- name: 'Setup prometheus base directories owned by "{{ prometheus_user }}"'
   become: true
   file:
     path: '{{ prometheus_base_directory }}'

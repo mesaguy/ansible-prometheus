@@ -3,10 +3,10 @@
 # Do not edit manually, this file is managed using automation tools
 #
 - targets:
-  - {{ prometheus_client_hostname }}:{{ prometheus_software_port }}
+  - {{ prometheus_client_fqdn }}:{{ prometheus_software_port }}
   labels:
-{% set labels = { 'hostname': prometheus_client_shortname, 'job': prometheus_software_tgroup_jobname } %}
-{% set labels = labels | combine(prometheus_tgroup_labels) %}
+{% set labels = { 'hostname': prometheus_client_hostname, 'job': prometheus_software_tgroup_jobname } %}
+{% set labels = labels | combine(prometheus_node_tgroup_labels) %}
 {% for key, value in labels | dictsort %}
     {{ key }}: {{ value }}
 {% endfor %}

@@ -1,7 +1,7 @@
 ---
 - name: Merge any additional labels into global tgroup labels
   set_fact:
-    prometheus_tgroup_labels: '{{ prometheus_tgroup_labels | combine(prometheus_additional_tgroup_labels | default({})) }}'
+    prometheus_node_tgroup_labels: '{{ prometheus_tgroup_labels | combine(prometheus_additional_tgroup_labels | default({})) }}'
 
 - name: 'Create managed tgroup directory: {{ prometheus_managed_tgroup_dir }}'
   become: true
@@ -16,17 +16,42 @@
   loop_control:
     loop_var: prometheus_server_name
   with_items: '{{ prometheus_servers }}'
-  when: prometheus_tgroup_dir != prometheus_managed_tgroup_dir
 
-- name: 'Create {{ prometheus_software_name }} tgroup file'
+- name: 'Create {{ prometheus_software_name }} tgroup file: {{ prometheus_managed_tgroup_dir }}/{{ prometheus_client_fqdn }}-{{ prometheus_software_name }}.yml'
   become: true
   delegate_to: '{{ prometheus_server_name }}'
   template:
     src: ../templates/tgroup_host.yml.j2
-    dest: '{{ prometheus_managed_tgroup_dir }}/{{ prometheus_client_hostname }}-{{ prometheus_software_name }}.yml'
+    dest: '{{ prometheus_managed_tgroup_dir }}/{{ prometheus_client_fqdn }}-{{ prometheus_software_name }}.yml'
     owner: root
     group: '{{ prometheus_group }}'
     mode: '0644'
   loop_control:
     loop_var: prometheus_server_name
   with_items: '{{ prometheus_servers }}'
+
+- block:
+    - name: 'Find "{{ prometheus_client_fqdn }}-*" files under {{ prometheus_managed_tgroup_dir }}'
+      find:
+        paths: '{{ prometheus_managed_tgroup_dir }}'
+        file_type: file
+        recurse: false
+        patterns: '{{ prometheus_client_fqdn }}-*'
+        # Merge exporter names in 'prometheus_additional_exporters' and 'hostvars[prometheus_client_fqdn].prometheus_components', then prepend the hostname and append '.yml'
+        excludes: '{{ (prometheus_additional_exporters | default({}) | map(attribute="name") | list + hostvars[prometheus_client_fqdn].prometheus_components) | map("regex_replace", "^", prometheus_client_fqdn + "-") | map("regex_replace", "$", ".yml") | list }}'
+      register: host_orphan_tgroup_files
+
+    - name: Remove orphan tgroup files for {{ prometheus_client_fqdn }}
+      # Remove paths flagged for deletion above
+      become: true
+      file:
+        path: '{{ prometheus_group_cleanup.path }}'
+        state: absent
+      with_items: '{{ host_orphan_tgroup_files.files }}'
+      loop_control:
+        loop_var: prometheus_group_cleanup
+      when: host_orphan_tgroup_files.files
+
+    - name: 'Define tgroup dir purge for "{{ prometheus_client_fqdn }}" as done'
+      set_fact: {"prometheus_tgroup_dir_purged_{{ prometheus_client_fqdn | hash('sha1') }}": true}
+  when: prometheus_tgroup_dir_purge_orphans|bool and not lookup('vars', 'prometheus_tgroup_dir_purged_' + prometheus_client_fqdn | hash('sha1'), default=false)

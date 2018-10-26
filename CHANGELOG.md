@@ -18,6 +18,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Symlink amtool and promtool to /usr/local/bin
  - Ability to manage tgroups via the client (push to server) or from the
    server based on hostvars
+ - Ability to purge orphaned tgroup files. Clients can purge tgroup files
+   from retired exporters and servers can purge all retired clients and
+   retired client exporter tgroup files
 
 ### Changed
  - Upgrade grok_exporter_fstab from v0.2.5 to v0.2.6

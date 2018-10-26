@@ -17,17 +17,17 @@ suites:
   - name: default
     verifier:
       inspec_tests:
-        - path: tests/inspec/all
+        - path: tests/inspec/<%= ENV['KITCHEN_INSPEC_SUITE'] || 'default' %>
 
 provisioner:
   name: ansible_push
   playbook: "tests/playbooks/<%= ENV['KITCHEN_PLAYBOOK'] || 'install_all' %>.yml"
-  generate_inv: true
   chef_bootstrap_url: nil
   require_chef_omnibus: false
   ansible_version: latest
+  raw_arguments: "-i tests/inventory"
   ansible_extra_flags: '--extra-vars "pipelining=True"'
-  idempotency_test: true
+  idempotency_test: <%= ENV['KITCHEN_IDEMPOTENY_TEST'] || true %>
   fail_non_idempotent: true
 
 platforms:

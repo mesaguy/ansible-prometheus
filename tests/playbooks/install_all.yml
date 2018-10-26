@@ -1,8 +1,16 @@
 ---
 - hosts: all
   tasks:
-  - name: Include test installation variables
-    include_vars: ../vars/install.yml
+    - name: Include test installation variables
+      include_vars: ../vars/install.yml
 
-  - name: Include install tasks
-    include_tasks: ../plays/install_all.yml
+    - name: Include install tasks
+      include_tasks: ../playbooks/install_common.yml
+
+    - name: Install Prometheus tasks
+      include_role:
+        name: '../../../../ansible-prometheus'
+        tasks_from: '{{ prometheus_component.path | regex_replace("\.yml$", "") }}'
+      loop_control:
+        loop_var: prometheus_component
+      with_items: "{{ tasks.files | sort(attribute='path') }}"

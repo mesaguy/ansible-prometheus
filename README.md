@@ -8,6 +8,8 @@ This module was designed to be extended easily and is kept current such that it 
 ## Requirements
 Ansible >= 2.5.1
 
+Facts must be gathered
+
 ## Supported Software and Operating Systems
 ### Supported Operating Systems, Distributions, and Architectures
 This module is intended to support as many distributions and architectures as possible. The following table specifies which combinations are currently tested
@@ -243,7 +245,15 @@ Configure iptables rules to permit server IPs defined in a 'prometheus_server_ip
 
     prometheus_manage_client_iptables: true
 
-This role can manage your Prometheus server 'target groups' (tgroups) automatically, dynamically creating tgroup files in a specified directory (/etc/prometheus/tgroups by default) for each client exporter. To enable automatic tgroup file generation, you must define 'prometheus_manage_client_tgroups' as true and list your Prometheus servers in a 'prometheus_servers' variable in your Ansible settings. The following will create tgroup files in /etc/prometheus/ansible_tgroups:
+This role can manage your Prometheus server 'target groups' (tgroups) automatically, dynamically creating tgroup files in a specified directory (/etc/prometheus/tgroups by default) for each client exporter.
+
+Automatic tgroup file management can be enabled for client side operation, server side operation, or both. In client mode, client's exporters are registered automatically on the Prometheus server specified in a 'prometheus_servers' array. In server mode, the inventory is parsed to determine which exporters are available on each host and *all* clients are registered with the server's specified in each client's 'prometheus_servers' array.
+
+By default, client and server tgroups use 'inventory_hostname' (fqdn) and 'inventory_hostname_short' (hostname) values for server fqdn/hostnames and ignore facts. This is done because server-side population of tgroups cannot account for client's facts unless clients are configured to cache their facts. To use fact based 'ansible_fqdn' (fqdn) and 'ansible_hostname' (hostname) variables enable 'prometheus_tgroup_use_facts'. At this time, enabling 'prometheus_tgroup_use_facts' for any clients disables server side tgroup management:
+
+    prometheus_tgroup_use_facts: true
+
+To enable automatic tgroup file generation on the client side, you must define 'prometheus_manage_client_tgroups' as true and list your Prometheus servers in a 'prometheus_servers' variable in your Ansible variables or inventory. The following will create tgroup files in /etc/prometheus/ansible_tgroups:
 
     prometheus_manage_client_tgroups: true
     prometheus_servers:
@@ -285,6 +295,25 @@ Exporters that aren't managed by this role can be specified using a 'prometheus_
        labels:
          team: foo
          department: IT
+
+
+To enable automatic tgroup file generation on the server side, you must define 'prometheus_manage_server_tgroups' as true and list your Prometheus servers in a 'prometheus_servers' variable in your Ansible variables or inventory. The following will create tgroup files in /etc/prometheus/ansible_tgroups for *all* clients that have 'prometheus_compenents' and/or 'prometheus_additional_exporters', clients must also have 'prometheus_servers' array configured:
+
+    prometheus_manage_server_tgroups: true
+
+To only configure server tgroups and perform no role tasks, enable 'prometheus_manage_server_tgroups_only':
+
+``` yaml
+- hosts: prometheus_servers
+  vars:
+    prometheus_manage_server_tgroups_only: true
+  roles:
+    - mesaguy.prometheus
+```
+
+Purge undefined (orphaned) exporters. When run in client mode, this option only effects client's orphaned files. When run in server mode this affects all tgroup files:
+
+    prometheus_tgroup_dir_purge_orphans: true
 
 ### Prometheus server variables
 

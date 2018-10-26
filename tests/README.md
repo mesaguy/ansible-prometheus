@@ -33,3 +33,13 @@ Run ADHOC commands inside a kitchen built docker image
 2) Change port 32835 in the example below:
 
     ANSIBLE_REMOTE_PORT=32835 ANSIBLE_HOST_KEY_CHECKING=False ansible -m setup -c ssh -u kitchen all -i localhost, --extra-vars="ansible_ssh_private_key_file=.kitchen/docker_id_rsa"
+
+## Run tgroup tests
+
+Test group definitions, client and server styles
+
+    KITCHEN_PLAYBOOK=tgroups KITCHEN_INSPEC_SUITE=tgroups kitchen test archlinux --destroy=never
+
+Test tgroups with purge enabled
+
+    KITCHEN_IDEMPOTENY_TEST=false KITCHEN_PLAYBOOK=tgroups_purge KITCHEN_INSPEC_SUITE=tgroups kitchen test archlinux --destroy=never

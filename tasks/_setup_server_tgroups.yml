@@ -5,5 +5,5 @@
   delegate_to: localhost
   connection: local
   loop_control:
-    loop_var: prometheus_client_hostname
-  when: "'prometheus_components' in hostvars[prometheus_client_hostname] and 'prometheus_servers' in hostvars[prometheus_client_hostname] and inventory_hostname in hostvars[prometheus_client_hostname]['prometheus_servers']"
+    loop_var: prometheus_client_fqdn
+  when: "'prometheus_components' in hostvars[prometheus_client_fqdn] and 'prometheus_servers' in hostvars[prometheus_client_fqdn] and inventory_hostname in hostvars[prometheus_client_fqdn]['prometheus_servers'] and not ('prometheus_tgroup_use_facts' in hostvars[prometheus_client_fqdn] and hostvars[prometheus_client_fqdn].prometheus_tgroup_use_facts)"

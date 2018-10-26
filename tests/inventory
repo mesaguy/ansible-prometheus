@@ -1,1 +1,18 @@
-localhost
+all:
+  hosts:
+    archlinux:
+      prometheus_components:
+        - node_exporter
+        - prometheus
+        - statsd_exporter
+    test:
+      prometheus_additional_exporters:
+       - name: docker
+         port: 9323
+         labels:
+           my_environment: development
+      prometheus_components:
+        - node_exporter
+  vars:
+    prometheus_servers:
+      - archlinux

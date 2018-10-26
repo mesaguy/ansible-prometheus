@@ -18,9 +18,11 @@
   include_tasks: _install_active_symlink.yml
 
 - block:
-    - name: 'Include task to configure {{ prometheus_software_name }} on Prometheus servers'
+    - name: Set {{ prometheus_software_name_version }} tgroup facts
+      set_fact:
+        prometheus_client_fqdn: '{% if prometheus_tgroup_use_facts %}{{ ansible_fqdn }}{% else %}{{ inventory_hostname }}{% endif %}'
+        prometheus_client_hostname: '{% if prometheus_tgroup_use_facts %}{{ ansible_hostname }}{% else %}{{ inventory_hostname_short }}{% endif %}'
+
+    - name: Include task to configure {{ prometheus_software_name }} tgroup files on Prometheus servers
       include_tasks: _setup_client_tgroup.yml
-      vars:
-        prometheus_client_hostname: '{{ ansible_host | default(inventory_hostname) }}'
-        prometheus_client_shortname: '{{ inventory_hostname_short }}'
   when: prometheus_servers is defined and prometheus_exporter and prometheus_manage_client_tgroups

@@ -84,14 +84,6 @@
   local_action: find paths="{{ lookup('env', 'PWD') }}/tasks" file_type=file excludes='_*.yml,main.yml'
   register: tasks
 
-- name: Install Prometheus tasks
-  include_role:
-    name: '../../../../ansible-prometheus'
-    tasks_from: '{{ prometheus_component.path | regex_replace("\.yml$", "") }}'
-  loop_control:
-    loop_var: prometheus_component
-  with_items: "{{ tasks.files | sort(attribute='path') }}"
-
 - name: Install prometheus testing prerequisite utilities
   become: true
   package:
