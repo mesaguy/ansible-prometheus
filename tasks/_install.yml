@@ -16,16 +16,3 @@
 
 - name: Include task to symlink latest {{ prometheus_software_name_version }} directory to an "active" directory
   include_tasks: _install_active_symlink.yml
-
-- block:
-    - name: Set {{ prometheus_software_name_version }} tgroup facts
-      set_fact:
-        prometheus_client_fqdn: '{% if prometheus_tgroup_use_facts %}{{ ansible_fqdn }}{% else %}{{ inventory_hostname }}{% endif %}'
-        prometheus_client_hostname: '{% if prometheus_tgroup_use_facts %}{{ ansible_hostname }}{% else %}{{ inventory_hostname_short }}{% endif %}'
-        # Needed when in 'gather_facts' mode, some data is still pulled
-        # from 'hostvars'
-        prometheus_client_inventory_hostname: '{{ inventory_hostname }}'
-
-    - name: Include task to configure {{ prometheus_software_name }} tgroup files on Prometheus servers
-      include_tasks: _setup_client_tgroup.yml
-  when: prometheus_servers is defined and prometheus_exporter|bool and prometheus_manage_client_tgroups|bool
