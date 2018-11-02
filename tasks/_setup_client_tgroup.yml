@@ -21,13 +21,13 @@
   include_tasks: _setup_client_tgroup_file.yml
   # Hack as this item needs to run serially. OpenSSH won't put up with dozens
   # of simultaneous connections
-  with_items: "[{% for h in play_hosts  %}'{{ h }}'{% if not loop.last %} ,{% endif %}{% endfor %}]"
+  with_items: "['{{ prometheus_client_inventory_hostname }}',]"
   when: "hostvars[prometheus_host_item].inventory_hostname == inventory_hostname"
   loop_control:
     loop_var: prometheus_host_item
 
 - block:
-    - name: Find "{{ prometheus_client_fqdn }}-*" files under {{ prometheus_managed_tgroup_dir }}
+    - name: Find existing host tgroup files
       find:
         paths: '{{ prometheus_managed_tgroup_dir }}'
         file_type: file
@@ -37,7 +37,7 @@
         excludes: '{{ (prometheus_additional_exporters | default({}) | map(attribute="name") | list + hostvars[prometheus_client_inventory_hostname].prometheus_components) | map("regex_replace", "^", prometheus_client_fqdn + "-") | map("regex_replace", "$", ".yml") | list }}'
       register: host_orphan_tgroup_files
 
-    - name: Remove orphan tgroup files for {{ prometheus_client_fqdn }}
+    - name: Remove orphan tgroup files
       # Remove paths flagged for deletion above
       become: true
       file:
@@ -48,6 +48,6 @@
         loop_var: prometheus_group_cleanup
       when: host_orphan_tgroup_files.files
 
-    - name: Define tgroup dir purge for "{{ prometheus_client_fqdn }}" as done
+    - name: Define tgroup dir purge for as done
       set_fact: {"prometheus_tgroup_dir_purged_{{ prometheus_client_fqdn | hash('sha1') }}": true}
   when: prometheus_tgroup_dir_purge_orphans|bool and not lookup('vars', 'prometheus_tgroup_dir_purged_' + prometheus_client_fqdn | hash('sha1'), default=false)
