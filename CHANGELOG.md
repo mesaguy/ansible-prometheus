@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
  - Run tgroup file creation tasks serially
+ - Clarify boolean 'when:' checks in tasks, fixes cases where a text boolean
+   is set
 
 ## [0.5.0] - 2018-10-25
 
