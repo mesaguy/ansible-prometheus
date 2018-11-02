@@ -6,9 +6,8 @@ Installs and manages [Prometheus server](https://prometheus.io), [Alertmanager](
 This module was designed to be extended easily and is kept current such that it always uses the latest Prometheus software.
 
 ## Requirements
-Ansible >= 2.5.1
-
-Facts must be gathered
+ - Ansible >= 2.5.1
+ - Facts must be gathered (gather_facts: true)
 
 ## Supported Software and Operating Systems
 ### Supported Operating Systems, Distributions, and Architectures
