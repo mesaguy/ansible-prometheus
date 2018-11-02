@@ -1,0 +1,13 @@
+---
+- name: 'Create {{ prometheus_software_name }} tgroup file: {{ prometheus_managed_tgroup_dir }}/{{ prometheus_client_fqdn }}-{{ prometheus_software_name }}.yml'
+  become: true
+  delegate_to: '{{ prometheus_server_name }}'
+  template:
+    src: ../templates/tgroup_host.yml.j2
+    dest: '{{ prometheus_managed_tgroup_dir }}/{{ prometheus_client_fqdn }}-{{ prometheus_software_name }}.yml'
+    owner: root
+    group: '{{ prometheus_group }}'
+    mode: '0644'
+  loop_control:
+    loop_var: prometheus_server_name
+  with_items: '{{ prometheus_servers }}'

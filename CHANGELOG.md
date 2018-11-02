@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
  - Upgrade squid_exporter_boynux from v1.2 to v1.3
 
+### Fixed
+ - Run tgroup file creation tasks serially
+
 ## [0.5.0] - 2018-10-25
 
 ### Added

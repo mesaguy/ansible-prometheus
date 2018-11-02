@@ -17,18 +17,14 @@
     loop_var: prometheus_server_name
   with_items: '{{ prometheus_servers }}'
 
-- name: 'Create {{ prometheus_software_name }} tgroup file: {{ prometheus_managed_tgroup_dir }}/{{ prometheus_client_fqdn }}-{{ prometheus_software_name }}.yml'
-  become: true
-  delegate_to: '{{ prometheus_server_name }}'
-  template:
-    src: ../templates/tgroup_host.yml.j2
-    dest: '{{ prometheus_managed_tgroup_dir }}/{{ prometheus_client_fqdn }}-{{ prometheus_software_name }}.yml'
-    owner: root
-    group: '{{ prometheus_group }}'
-    mode: '0644'
+- name: 'Include task to create {{ prometheus_software_name }} tgroup file'
+  include_tasks: _setup_client_tgroup_file.yml
+  # Hack as this item needs to run serially. OpenSSH won't put up with dozens
+  # of simultaneous connections
+  with_items: "[{% for h in play_hosts  %}'{{ h }}'{% if not loop.last %} ,{% endif %}{% endfor %}]"
+  when: "hostvars[prometheus_host_item].inventory_hostname == inventory_hostname"
   loop_control:
-    loop_var: prometheus_server_name
-  with_items: '{{ prometheus_servers }}'
+    loop_var: prometheus_host_item
 
 - block:
     - name: 'Find "{{ prometheus_client_fqdn }}-*" files under {{ prometheus_managed_tgroup_dir }}'
