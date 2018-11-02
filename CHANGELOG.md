@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+ - Run tgroup file creation tasks serially
+
 ## [0.5.0] - 2018-10-25
 
 ### Added
