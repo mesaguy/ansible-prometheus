@@ -3,7 +3,7 @@
     - name: Ensure at least one prometheus component has been specified for {{ inventory_hostname_short }}
       fail:
         msg: "No 'prometheus_components' variable (array) has been specified for {{ inventory_hostname_short }}"
-      when: prometheus_components is not defined or not prometheus_components
+      when: prometheus_components is not defined or not prometheus_components|bool
 
     - name: Run prometheus component installation and setup tasks
       include_role:
@@ -17,11 +17,11 @@
       include_role:
         name: mesaguy.prometheus
         tasks_from: _install_additional_exporters.yml
-      when: prometheus_additional_exporters is defined and prometheus_additional_exporters
-  when: prometheus_manage_server_tgroups_only is defined and not prometheus_manage_server_tgroups_only
+      when: prometheus_additional_exporters is defined and prometheus_additional_exporters|bool
+  when: prometheus_manage_server_tgroups_only is defined and not prometheus_manage_server_tgroups_only|bool
 
 - name: Include task to manage server tgroups
   include_role:
     name: mesaguy.prometheus
     tasks_from: _setup_server_tgroups.yml
-  when: prometheus_manage_server_tgroups
+  when: prometheus_manage_server_tgroups|bool

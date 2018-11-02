@@ -1,6 +1,6 @@
 ---
 - block:
-  - name: 'Include role mesaguy.prometheus setup task'
+  - name: Include role mesaguy.prometheus setup task
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
@@ -25,7 +25,7 @@
     prometheus_software_runas: '{{ prometheus_elasticsearch_exporter_justwatchcom_runas | default(prometheus_user) }}'
     prometheus_software_shortname: 'elasticsearch_exporter'
 
-- name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
+- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
   set_fact:
     prometheus_software_opts:
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
@@ -34,11 +34,11 @@
     prometheus_software_src_dir_suffix: '/src/github.com/justwatchcom/{{ prometheus_software_shortname }}'
     prometheus_software_src_url: 'https://github.com/justwatchcom/{{ prometheus_software_shortname }}.git'
 
-- name: 'Include task to perform installation of {{ prometheus_software_name_version }}'
+- name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml
 
-- name: 'Include task to setup {{ prometheus_software_name_version }} service'
+- name: Include task to setup {{ prometheus_software_name_version }} service
   include_tasks: _service.yml
 
-- name: 'Include task to perform post install cleanup of {{ prometheus_software_name_version }}'
+- name: Include task to perform post install cleanup of {{ prometheus_software_name_version }}
   include_tasks: _post_install_cleanup.yml

@@ -1,5 +1,5 @@
 ---
-- name: 'Set {{ prometheus_software_name_version }} ({{ installer_instance.name }} instance) facts'
+- name: Set {{ prometheus_software_name_version }} ({{ installer_instance.name }} instance) facts
   set_fact:
     prometheus_software_extra_opts: '{{ installer_instance.extra_opts | default("") }}'
     prometheus_software_service_name: '{{ prometheus_software_name }}__{{ installer_instance.name }}'
@@ -12,7 +12,7 @@
     prometheus_software_bin_url: 'https://github.com/ncabatoff/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}_{{ prometheus_software_version }}_{{ prometheus_architecture | replace("-", "_") }}.tar.gz'
     prometheus_software_opts: '{{ lookup("template", "../vars/instances/" + prometheus_software_name + "-opts.yml")|from_yaml }}'
 
-- name: 'Include task to perform {{ prometheus_software_name_version }} ({{ installer_instance.name }} instance) fact definitions'
+- name: Include task to perform {{ prometheus_software_name_version }} ({{ installer_instance.name }} instance) fact definitions
   include_tasks: _install_facts.yml
 
 - name: 'Setup {{ prometheus_software_name_version }} ({{ installer_instance.name }}) configuration file ({{ prometheus_etc_dir }}/{{ prometheus_software_name }}.{{ installer_instance.name }}.yml)'
@@ -27,5 +27,5 @@
   register: prometheus_software_cfg
   when: prometheus_software_config_file is defined and prometheus_software_config_file
 
-- name: 'Include task to setup {{ prometheus_software_name_version }} ({{ installer_instance.name }}) service'
+- name: Include task to setup {{ prometheus_software_name_version }} ({{ installer_instance.name }}) service
   include_tasks: _service.yml

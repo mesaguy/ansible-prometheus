@@ -1,10 +1,10 @@
 ---
 - block:
-  - name: 'Include role mesaguy.prometheus setup task'
+  - name: Include role mesaguy.prometheus setup task
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
-- name: 'Starting prometheus install'
+- name: Starting prometheus install
   set_fact:
     prometheus_exporter: false
     prometheus_software_config: '{{ prometheus_server_cfg | default(lookup("file", "../files/defaults/prometheus.yml") | from_yaml) }}'
@@ -26,14 +26,14 @@
     prometheus_software_runas: '{{ prometheus_runas | default(prometheus_user) }}'
     prometheus_software_supports_reload: true
 
-- name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} prometheus_software_install_dir'
+- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} prometheus_software_install_dir
   # This is a one-off need as Prometheus uses configurations files
   # distributed with Prometheus. This variable is needed in the fact
   # specifications below
   set_fact:
     prometheus_software_install_dir: '{{ prometheus_root_dir }}/{{ prometheus_software_name }}/{{ prometheus_software_version }}'
 
-- name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
+- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
   set_fact:
     prometheus_software_config_name: '{{ prometheus_software_name }}'
     prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
@@ -66,7 +66,7 @@
     group: '{{ prometheus_tgroup_group }}'
     mode: '{{ prometheus_tgroup_mode }}'
 
-- name: 'Include task to perform installation of {{ prometheus_software_name_version }}'
+- name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml
 
 - name: Symlink {{ prometheus_software_name_version }}{{ prometheus_software_install_dir }}/promtool to /usr/local/bin/promtool
@@ -78,9 +78,9 @@
     force: true
     owner: root
     group: '{{ prometheus_group }}'
-  when: prometheus_symlink_tools
+  when: prometheus_symlink_tools|bool
 
-- name: 'Setup {{ prometheus_software_name_version }} configuration file'
+- name: Setup {{ prometheus_software_name_version }} configuration file
   become: true
   template:
     src: '../templates/generic-config.yml.j2'
@@ -92,8 +92,8 @@
     validate: '{{ prometheus_software_install_dir }}/promtool check config %s'
   register: prometheus_software_cfg
 
-- name: 'Include task to setup {{ prometheus_software_name_version }} service'
+- name: Include task to setup {{ prometheus_software_name_version }} service
   include_tasks: _service.yml
 
-- name: 'Include task to perform post install cleanup of {{ prometheus_software_name_version }}'
+- name: Include task to perform post install cleanup of {{ prometheus_software_name_version }}
   include_tasks: _post_install_cleanup.yml

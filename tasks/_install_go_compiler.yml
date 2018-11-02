@@ -45,7 +45,7 @@
     remote_src: true
 
 - block:
-    - name: 'Find paths under {{ prometheus_go_dir }}, exclude the current installation'
+    - name: Find paths under {{ prometheus_go_dir }}, exclude the current installation
       # Search for files and directories in this software's installation
       # directory. If paths *other* than the current release's path exist
       # then flag them for removal below
@@ -57,7 +57,7 @@
           - '{{ prometheus_go_version }}'
       register: present_go_paths
 
-    - name: 'Remove orphan go installations under {{ prometheus_go_dir }} in favor of {{ prometheus_go_version }}'
+    - name: Remove orphan go installations under {{ prometheus_go_dir }} in favor of {{ prometheus_go_version }}
       # Remove paths flagged for deletion above
       become: true
       file:

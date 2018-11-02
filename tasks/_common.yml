@@ -33,7 +33,7 @@
   group:
     name: '{{ prometheus_group }}'
     gid: '{{ prometheus_gid | default(omit) }}'
-  when: prometheus_manage_group
+  when: prometheus_manage_group|bool
 
 - name: Add the user "{{ prometheus_user }}"
   become: true
@@ -43,7 +43,7 @@
     uid: '{{ prometheus_uid | default(omit) }}'
     group: '{{ prometheus_group }}'
     shell: '{{ prometheus_shell }}'
-  when: prometheus_manage_user
+  when: prometheus_manage_user|bool
 
 - name: 'Setup prometheus install root directory: "{{ prometheus_root_dir }}"'
   become: true

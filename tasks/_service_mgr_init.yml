@@ -1,5 +1,5 @@
 ---
-- name: 'Create {{ ansible_service_mgr }} configuration file for {{ prometheus_software_service_name }} service'
+- name: Create {{ ansible_service_mgr }} configuration file for {{ prometheus_software_service_name }} service
   become: true
   template:
     dest: '/etc/init.d/{{ prometheus_software_service_name }}'
@@ -9,7 +9,7 @@
     mode: 0755
   register: prometheus_software_init
 
-- name: 'Enable {{ prometheus_software_service_name }} service'
+- name: Enable {{ prometheus_software_service_name }} service
   become: true
   service:
     state: started
@@ -17,7 +17,7 @@
     name: '{{ prometheus_software_service_name }}'
   when: prometheus_software_service_test|bool
 
-- name: 'Restart {{ prometheus_software_service_name }} service'
+- name: Restart {{ prometheus_software_service_name }} service
   become: true
   service:
     name: '{{ prometheus_software_service_name }}'

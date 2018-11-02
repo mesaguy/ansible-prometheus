@@ -1,6 +1,6 @@
 ---
 - block:
-  - name: 'Include role mesaguy.prometheus setup task'
+  - name: Include role mesaguy.prometheus setup task
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
@@ -18,7 +18,7 @@
     prometheus_software_port: '{{ prometheus_jmx_exporter_port | default(1234) }}'
     prometheus_software_tgroup_jobname: '{{ prometheus_jmx_exporter_jobname | default("jmx") }}'
 
-- name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
+- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
   set_fact:
     prometheus_software_filename: 'jmx_prometheus_javaagent-{{ prometheus_software_version }}.jar'
     prometheus_software_opts:
@@ -27,10 +27,10 @@
     prometheus_software_file_url: 'http://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/{{ prometheus_software_version }}/jmx_prometheus_javaagent-{{ prometheus_software_version }}.jar'
     prometheus_software_src_dir_suffix: '/src/github.com/prometheus/{{ prometheus_software_name }}'
 
-- name: 'Install standalone file for {{ prometheus_software_name_version }}'
+- name: Install standalone file for {{ prometheus_software_name_version }}
   include_tasks: _install_file.yml
 
-- name: 'Setup {{ prometheus_software_name_version }} configuration files'
+- name: Setup {{ prometheus_software_name_version }} configuration files
   become: true
   template:
     src: '../templates/jmx-config.yml.j2'
@@ -43,5 +43,5 @@
     loop_var: jmx_instance
   with_dict: '{{ prometheus_software_config }}'
 
-- name: 'Include task to perform post install cleanup of {{ prometheus_software_version }}'
+- name: Include task to perform post install cleanup of {{ prometheus_software_version }}
   include_tasks: _post_install_cleanup.yml

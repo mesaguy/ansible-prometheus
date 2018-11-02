@@ -8,4 +8,4 @@
   become: true
   pacman:
     update_cache: true
-  when: pacman_core_index.stat.exists == False
+  when: not pacman_core_index.stat.exists

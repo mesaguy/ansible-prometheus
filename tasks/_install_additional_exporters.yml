@@ -9,11 +9,11 @@
     prometheus_software_tgroup_jobname: '{{ additional_exporter.name }}'
   loop_control:
     loop_var: additional_exporter
-  when: prometheus_additional_exporters
+  when: prometheus_additional_exporters|bool
 
 - name: Include task to setup firewall rules additional exporters
   include_tasks: '_setup_firewall.yml'
   with_items: '{{ prometheus_additional_exporters }}'
   loop_control:
     loop_var: additional_exporter
-  when: prometheus_client_tgroup_install is defined and prometheus_client_tgroup_install and (prometheus_manage_client_firewalld or prometheus_manage_client_iptables) and prometheus_software_port and prometheus_server_ips
+  when: prometheus_client_tgroup_install is defined and prometheus_client_tgroup_install|bool and (prometheus_manage_client_firewalld|bool or prometheus_manage_client_iptables|bool) and prometheus_software_port and prometheus_server_ips

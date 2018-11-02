@@ -11,7 +11,7 @@
   loop_control:
     loop_var: prometheus_server_ip
   with_items: "{{ prometheus_server_ips }}"
-  when: prometheus_manage_client_firewalld and prometheus_software_port and prometheus_server_ips
+  when: prometheus_manage_client_firewalld|bool and prometheus_software_port and prometheus_server_ips
 
 - name: Allow incoming prometheus server connections to {{ prometheus_software_name }}:{{ prometheus_software_port }} via iptables
   become: true
@@ -27,4 +27,4 @@
   loop_control:
     loop_var: prometheus_server_ip
   with_items: "{{ prometheus_server_ips }}"
-  when: prometheus_manage_client_iptables and prometheus_software_port and prometheus_server_ips
+  when: prometheus_manage_client_iptables|bool and prometheus_software_port and prometheus_server_ips

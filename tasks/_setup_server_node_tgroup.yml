@@ -14,7 +14,7 @@
 
 - name: Setup additional exporters for node {{ prometheus_client_fqdn }}
   include_tasks: _install_additional_exporters.yml
-  when: prometheus_additional_exporters
+  when: prometheus_additional_exporters|bool
 
 - name: Unset additional exporters variables
   set_fact:

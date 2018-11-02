@@ -27,4 +27,4 @@
     mode: '{{ prometheus_copy_file_mode }}'
     remote_src: true
   with_items: '{{ prometheus_find_result.files }}'
-  when: item.isdir == False
+  when: not item.isdir

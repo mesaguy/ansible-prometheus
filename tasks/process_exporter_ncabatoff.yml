@@ -1,6 +1,6 @@
 ---
 - block:
-  - name: 'Include role mesaguy.prometheus setup task'
+  - name: Include role mesaguy.prometheus setup task
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
@@ -26,7 +26,7 @@
     # defined later:
     prometheus_software_opts: []
 
-- name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
+- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
   set_fact:
     prometheus_software_filename: '{{ prometheus_software_shortname }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
     prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
@@ -34,14 +34,14 @@
     prometheus_software_src_dir_suffix: '/src/github.com/ncabatoff/{{ prometheus_software_shortname }}'
     prometheus_software_src_url: 'https://github.com/ncabatoff/{{ prometheus_software_shortname }}'
 
-- name: 'Include task to perform installation of {{ prometheus_software_name_version }}'
+- name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml
 
-- name: 'Include tasks to perform individual {{ prometheus_software_name_version }} configurations'
+- name: Include tasks to perform individual {{ prometheus_software_name_version }} configurations
   include_tasks: _install_instance.yml
   loop_control:
     loop_var: installer_instance
   loop: '{{ prometheus_process_exporter_ncabatoff_cfgs }}'
 
-- name: 'Include task to perform post install cleanup of {{ prometheus_software_name_version }}'
+- name: Include task to perform post install cleanup of {{ prometheus_software_name_version }}
   include_tasks: _post_install_cleanup.yml

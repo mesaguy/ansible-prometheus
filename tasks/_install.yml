@@ -4,11 +4,11 @@
   package:
     name: '{{ prometheus_software_dependencies }}'
     state: present
-  when: prometheus_software_dependencies is defined and prometheus_software_dependencies
+  when: prometheus_software_dependencies is defined and prometheus_software_dependencies|bool
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }} from binary
   include_tasks: _install_from_binary.yml
-  when: prometheus_software_bin_url is defined and prometheus_software_bin_url and not prometheus_always_build_from_source
+  when: prometheus_software_bin_url is defined and prometheus_software_bin_url and not prometheus_always_build_from_source|bool
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }} by compiling go source
   include_tasks: _install_from_go_source.yml
@@ -28,4 +28,4 @@
 
     - name: Include task to configure {{ prometheus_software_name }} tgroup files on Prometheus servers
       include_tasks: _setup_client_tgroup.yml
-  when: prometheus_servers is defined and prometheus_exporter and prometheus_manage_client_tgroups
+  when: prometheus_servers is defined and prometheus_exporter|bool and prometheus_manage_client_tgroups|bool

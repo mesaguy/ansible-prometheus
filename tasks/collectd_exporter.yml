@@ -1,6 +1,6 @@
 ---
 - block:
-  - name: 'Include role mesaguy.prometheus setup task'
+  - name: Include role mesaguy.prometheus setup task
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
@@ -24,7 +24,7 @@
     prometheus_software_port: '{{ prometheus_collectd_exporter_port | default(prometheus_collectd_exporter_default_port) }}'
     prometheus_software_runas: '{{ prometheus_collectd_exporter_runas | default(prometheus_user) }}'
 
-- name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
+- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
   set_fact:
     prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
     prometheus_software_opts:
@@ -33,11 +33,11 @@
     prometheus_software_src_dir_suffix: '/src/github.com/prometheus/{{ prometheus_software_name }}'
     prometheus_software_src_url: 'https://github.com/prometheus/{{ prometheus_software_name }}'
 
-- name: 'Include task to perform installation of {{ prometheus_software_name_version }}'
+- name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml
 
-- name: 'Include task to setup {{ prometheus_software_name_version }} service'
+- name: Include task to setup {{ prometheus_software_name_version }} service
   include_tasks: _service.yml
 
-- name: 'Include task to perform post install cleanup of {{ prometheus_software_name_version }}'
+- name: Include task to perform post install cleanup of {{ prometheus_software_name_version }}
   include_tasks: _post_install_cleanup.yml

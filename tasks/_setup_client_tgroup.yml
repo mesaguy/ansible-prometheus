@@ -17,7 +17,7 @@
     loop_var: prometheus_server_name
   with_items: '{{ prometheus_servers }}'
 
-- name: 'Include task to create {{ prometheus_software_name }} tgroup file'
+- name: Include task to create {{ prometheus_software_name }} tgroup file
   include_tasks: _setup_client_tgroup_file.yml
   # Hack as this item needs to run serially. OpenSSH won't put up with dozens
   # of simultaneous connections
@@ -27,7 +27,7 @@
     loop_var: prometheus_host_item
 
 - block:
-    - name: 'Find "{{ prometheus_client_fqdn }}-*" files under {{ prometheus_managed_tgroup_dir }}'
+    - name: Find "{{ prometheus_client_fqdn }}-*" files under {{ prometheus_managed_tgroup_dir }}
       find:
         paths: '{{ prometheus_managed_tgroup_dir }}'
         file_type: file
@@ -48,6 +48,6 @@
         loop_var: prometheus_group_cleanup
       when: host_orphan_tgroup_files.files
 
-    - name: 'Define tgroup dir purge for "{{ prometheus_client_fqdn }}" as done'
+    - name: Define tgroup dir purge for "{{ prometheus_client_fqdn }}" as done
       set_fact: {"prometheus_tgroup_dir_purged_{{ prometheus_client_fqdn | hash('sha1') }}": true}
   when: prometheus_tgroup_dir_purge_orphans|bool and not lookup('vars', 'prometheus_tgroup_dir_purged_' + prometheus_client_fqdn | hash('sha1'), default=false)
