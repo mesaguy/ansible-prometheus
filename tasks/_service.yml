@@ -44,6 +44,7 @@
         # Needed when in 'gather_facts' mode, some data is still pulled
         # from 'hostvars'
         prometheus_client_inventory_hostname: '{{ inventory_hostname }}'
+        prometheus_tgroup_client_mode: true
 
     - name: Include task to configure {{ prometheus_software_name }} tgroup files on Prometheus servers
       include_tasks: _setup_client_tgroup.yml

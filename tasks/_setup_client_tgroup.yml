@@ -17,14 +17,18 @@
     loop_var: prometheus_server_name
   with_items: '{{ prometheus_servers }}'
 
-- name: Include task to create {{ prometheus_software_name }} tgroup file
+- name: Include task to create {{ prometheus_software_name }} tgroup file (client mode)
   include_tasks: _setup_client_tgroup_file.yml
   # Hack as this item needs to run serially. OpenSSH won't put up with dozens
   # of simultaneous connections
   with_items: "['{{ prometheus_client_inventory_hostname }}',]"
-  when: "hostvars[prometheus_host_item].inventory_hostname == inventory_hostname"
+  when: (prometheus_tgroup_client_mode is defined and prometheus_tgroup_client_mode|bool) and "hostvars[prometheus_host_item].inventory_hostname == inventory_hostname"
   loop_control:
     loop_var: prometheus_host_item
+
+- name: Include task to create {{ prometheus_software_name }} tgroup file (server mode)
+  include_tasks: _setup_client_tgroup_file.yml
+  when: prometheus_tgroup_client_mode is undefined or not prometheus_tgroup_client_mode|bool
 
 - block:
     - name: Find existing host tgroup files
