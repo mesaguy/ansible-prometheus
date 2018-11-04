@@ -6,8 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.6.0] - 2018-11-03
+
 ### Changed
- - Upgrade squid_exporter_boynux from v1.2 to v1.3
+ - Upgrade Go from v1.11.1 to v1.11.2
+ - Upgrade squid_exporter_boynux from v1.2 to v1.4
  - Configure tgroup files after an exporter is running instead of after the
    exporter is installed. This ensures Prometheus servers never poll exporters
    that haven't been started.
