@@ -63,9 +63,9 @@ DAEMON={{ prometheus_software_prefix_command[0] }}
 {% set args = prometheus_software_command_args %}
 DAEMON={{ prometheus_software_binary }}
 {% endif -%}
-ARGS="{{ args | join(' ') }}"
+ARGS="{{ args | join(' ') | replace ('"', '''') }}"
 {% if args -%}
-COMMAND="$DAEMON {{ args | join(' ') }}"
+COMMAND="$DAEMON {{ args | join(' ') | replace ('"', '''') }}"
 {% else -%}
 COMMAND="$DAEMON"
 {% endif -%}

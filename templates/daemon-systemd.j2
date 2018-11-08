@@ -23,13 +23,13 @@ User={% if prometheus_software_runas is defined and prometheus_software_runas -%
 Group={{ prometheus_group }}
 {% for c in [prometheus_software_binary] + prometheus_software_command_args %}
 {% if loop.first and loop.length == 1 %}
-ExecStart={% if prometheus_software_prefix_command is defined and prometheus_software_prefix_command %}{{ prometheus_software_prefix_command | join (' ') }} {% endif %}{{ c }}
+ExecStart={% if prometheus_software_prefix_command is defined and prometheus_software_prefix_command %}{{ prometheus_software_prefix_command | join (' ') | replace ('"', '''') }} {% endif %}{{ c }}
 {% elif loop.first %}
-ExecStart={% if prometheus_software_prefix_command is defined and prometheus_software_prefix_command %}{{ prometheus_software_prefix_command | join (' ') }} {% endif %}{{ c }} \
+ExecStart={% if prometheus_software_prefix_command is defined and prometheus_software_prefix_command %}{{ prometheus_software_prefix_command | join (' ') | replace ('"', '''') }} {% endif %}{{ c }} \
 {% elif loop.last %}
-    {{ c }}
+    {{ c | replace ('"', '''') }}
 {% else %}
-    {{ c }} \
+    {{ c | replace ('"', '''') }} \
 {% endif %}
 {% endfor %}
 {% if prometheus_software_validation_command is defined and prometheus_software_validation_command -%}

@@ -41,10 +41,13 @@ All exporters are verified to install. Currently select modules receive testing 
 | Exporter                                                                                      | Author        | CI tested |
 |-----------------------------------------------------------------------------------------------|:-------------:|:---------:|
 |[apache_exporter_lusitaniae](https://github.com/Lusitaniae/apache_exporter)                    | Lusitaniae    | Yes       |
+|[bind_exporter_digitalocean](https://github.com/digitalocean/bind_exporter)                    | digitalocean  | Yes       |
 |[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)                           | prometheus    | Yes       |
 |[cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter)                       | prometheus    | Yes       |
 |[collectd_exporter](https://github.com/prometheus/collectd_exporter)                           | prometheus    | Yes       |
 |[consul_exporter](https://github.com/prometheus/consul_exporter)                               | prometheus    | Yes       |
+|[couchbase_exporter_blakelead](https://github.com/blakelead/couchbase_exporter)                | blakelead     | Yes       |
+|[couchdb_exporter_gesellix](https://github.com/gesellix/couchdb-prometheus-exporter)           | gesellix      | Yes       |
 |[digitalocean_exporter_metalmatze](https://github.com/metalmatze/digitalocean_exporter)        | metalmatze    | Yes       |
 |[elasticsearch_exporter_justwatchcom](https://github.com/justwatchcom/elasticsearch_exporter)  | justwatchcom  | Yes       |
 |[gluster_exporter_ofesseler](https://github.com/ofesseler/gluster_exporter)                    | ofesseler     | Yes       |
@@ -60,8 +63,11 @@ All exporters are verified to install. Currently select modules receive testing 
 |[nvidia_gpu_exporter_mindprince](https://github.com/mindprince/nvidia_gpu_prometheus_exporter) | mindprince    | Yes       |
 |[postgres_exporter_wrouesnel](https://github.com/wrouesnel/postgres_exporter)                  | wrouesnel     | Yes       |
 |[process_exporter_ncabatoff](https://github.com/ncabatoff/process-exporter)                    | ncabatoff     | Yes       |
+|[proxysql_exporter_percona](https://github.com/percona/proxysql_exporter)                      | percona       | Yes       |
 |[rabbitmq_exporter_kbudde](https://github.com/kbudde/rabbitmq_exporter)                        | kbudde        | Yes       |
+|[redis_exporter_oliver006](https://github.com/oliver006/redis_exporter)                        | oliver006     | Yes       |
 |[snmp_exporter](https://github.com/prometheus/snmp_exporter)                                   | prometheus    | Yes       |
+|[sql_exporter_free](https://github.com/free/sql_exporter)                                      | free          | Yes       |
 |[squid_exporter_boynux](https://github.com/boynux/squid-exporter)                              | boynux        | Yes       |
 |[statsd_exporter](https://github.com/prometheus/statsd_exporter)                               | prometheus    | Yes       |
 |[zookeeper_exporter_infonova](https://github.com/infonova/zookeeper_exporter)                  | infonova      | Yes       |
@@ -77,10 +83,13 @@ prometheus_components:
  - push_gateway
  # Exporters
  - apache_exporter_lusitaniae
+ - bind_exporter_digitalocean
  - blackbox_exporter
  - cloudwatch_exporter
  - collectd_exporter
  - consul_exporter
+ - couchbase_exporter_blakelead
+ - couchdb_exporter_gesellix
  - digitalocean_exporter_metalmatze
  - elasticsearch_exporter_justwatchcom
  - gluster exporter_ofesseler
@@ -96,8 +105,11 @@ prometheus_components:
  - nvidia_gpu_exporter_mindprince
  - postgres_exporter_wrouesnel
  - process_exporter_ncabatoff
+ - proxysql_exporter_percona
  - rabbitmq_exporter_kbudde
+ - redis_exporter_oliver006
  - snmp_exporter
+ - sql_exporter_free
  - squid_exporter_boynux
  - statsd_exporter
  - zookeeper_exporter_infonova
@@ -330,8 +342,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.4.3"
-    prometheus_src_version: "v2.4.3"
+    prometheus_version: "2.5.0"
+    prometheus_src_version: "v2.5.0"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -409,6 +421,24 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 911
 
     prometheus_apache_exporter_lusitaniae_host: "0.0.0.0"
     prometheus_apache_exporter_lusitaniae_port: 9117
+
+### BIND exporter (digitalocean) variables
+
+To enable [bind_exporter by digitalocean](https://github.com/digitalocean/bind_exporter) include role task: bind_exporter_digitalocean
+
+An array of additional flags to pass to the bind_exporter daemon (ie):
+
+    prometheus_bind_exporter_digitalocean_extra_opts:
+      - '-bind.stats-url string=http://localhost:8053/'
+
+The version of bind_exporter to install. The source version defines the version as specified in version control:
+
+    prometheus_bind_exporter_digitalocean_src_version: "v0.2.0-dev"
+
+Port and IP to listen on. Defaults to listening on all available IPs on port 8053:
+
+    prometheus_bind_exporter_digitalocean_host: "0.0.0.0"
+    prometheus_bind_exporter_digitalocean_port: 8053
 
 ### Blackbox exporter variables
 
@@ -524,6 +554,48 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 910
 
     prometheus_consul_exporter_host: "0.0.0.0"
     prometheus_consul_exporter_port: 9107
+
+### Couchbase exporter (blakelead) variables
+
+To enable [couchbase_exporter by blakelead](https://github.com/blakelead/couchbase_exporter) include role task: couchbase_exporter_blakelead
+
+Environmental variables to pass to the couchbase_exporter_blakelead exporter. These environmental variables are used as a primary method of configuring the exporter:
+
+    prometheus_couchbase_exporter_blakelead_env_vars:
+      CB_EXPORTER_DB_USER: couchbase
+      CB_EXPORTER_DB_PASSWORD: couchbase
+
+An array of additional flags to pass to the couchbase_exporter daemon:
+
+    prometheus_couchbase_exporter_blakelead_extra_opts: []
+
+The version of couchbase_exporter to install. The source version defines the version as specified in version control:
+
+    prometheus_couchbase_exporter_blakelead_version: "0.5.0"
+    prometheus_couchbase_exporter_blakelead_src_version: "0.5.0"
+
+Port and IP to listen on. Defaults to listening on all available IPs on port 9191:
+
+    prometheus_couchbase_exporter_blakelead_host: "0.0.0.0"
+    prometheus_couchbase_exporter_blakelead_port: 9191
+
+### CouchDB exporter (gesellix) variables
+
+To enable [couchdb_exporter by gesellix](https://github.com/gesellix/couchdb-prometheus-exporter) include role task: couchdb_exporter_gesellix
+
+An array of additional flags to pass to the couchdb_exporter daemon:
+
+    prometheus_couchdb_exporter_gesellix_extra_opts: []
+
+The version of couchdb_exporter to install. The source version defines the version as specified in version control:
+
+    prometheus_couchdb_exporter_gesellix_version: "16"
+    prometheus_couchdb_exporter_gesellix_src_version: "16"
+
+Port and IP to listen on. Defaults to listening on all available IPs on port 9984:
+
+    prometheus_couchdb_exporter_gesellix_host: "0.0.0.0"
+    prometheus_couchdb_exporter_gesellix_port: 9984
 
 ### DigitalOcean exporter (metalmatze) variables
 
@@ -781,6 +853,11 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 910
     prometheus_mysqld_exporter_host: "0.0.0.0"
     prometheus_mysqld_exporter_port: 9104
 
+After following the [mysqld_exporter user creation or grant instructions](https://github.com/prometheus/mysqld_exporter), the following variables can be used to define the MySQL username and password mysqld_exporter can utilize to poll MySQL:
+
+    prometheus_mysqld_exporter_username: mysqld_exporter
+    prometheus_mysqld_exporter_password: _password_
+
 ### Node exporter variables
 
 To enable [node_exporter](https://github.com/prometheus/node_exporter) include role task: node_exporter
@@ -795,7 +872,7 @@ An array of additional flags to pass to the node_exporter daemon. You will likel
 
 Common node_exporter variables can be defined as follows:
 
-    prometheus_node_exporter_extra_opts: []
+    prometheus_node_exporter_extra_opts:
       - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|run|var/lib/docker/.*)($|/)"'
       - '--collector.systemd'
       - '--no-collector.zfs'
@@ -901,6 +978,24 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 925
     prometheus_process_exporter_ncabatoff_host: "0.0.0.0"
     prometheus_process_exporter_ncabatoff_port: 9256
 
+### ProxySQL exporter (percona) variables
+
+To enable [proxysql_exporter by percona](https://github.com/percona/proxysql_exporter) include role task: proxysql_exporter_percona
+
+An array of additional flags to pass to the proxysql_exporter daemon:
+
+    prometheus_proxysql_exporter_percona_extra_opts: []
+
+The version of proxysql_exporter to install. The source version defines the version as specified in version control:
+
+    prometheus_proxysql_exporter_percona_version: "1.1.0"
+    prometheus_proxysql_exporter_percona_src_version: "v1.1.0"
+
+Port and IP to listen on. Defaults to listening on all available IPs on port 42004:
+
+    prometheus_proxysql_exporter_percona_host: "0.0.0.0"
+    prometheus_proxysql_exporter_percona_port: 42004
+
 ### RabbitMQ exporter (kbudde) variables
 
 To enable [rabbitmq_exporter by kbudde](https://github.com/kbudde/rabbitmq_exporter) include role task: rabbitmq_exporter_kbudde
@@ -924,6 +1019,24 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 941
     prometheus_rabbitmq_exporter_kbudde_host: "0.0.0.0"
     prometheus_rabbitmq_exporter_kbudde_port: 9419
 
+### Redis exporter (kbudde) variables
+
+To enable [redis_exporter by oliver006](https://github.com/oliver006/redis_exporter) include role task: redis_exporter_oliver006
+
+An array of additional flags to pass to the redis_exporter daemon:
+
+    prometheus_redis_exporter_oliver006_extra_opts: []
+
+The version of redis_exporter to install. The source version defines the version as specified in version control:
+
+    prometheus_redis_exporter_oliver006_version: "0.21.2"
+    prometheus_redis_exporter_oliver006_src_version: "v0.21.2"
+
+Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
+
+    prometheus_redis_exporter_oliver006_host: "0.0.0.0"
+    prometheus_redis_exporter_oliver006_port: 9121
+
 ### SNMP exporter variables
 
 To enable [snmp_exporter](https://github.com/prometheus/snmp_exporter) include role task: snmp_exporter
@@ -945,7 +1058,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 911
     prometheus_snmp_exporter_host: "0.0.0.0"
     prometheus_snmp_exporter_port: 9116
 
-### SQL exporter (boynux) variables
+### SQL exporter (free) variables
 
 To enable [sql_exporter by free](https://github.com/free/sql_exporter) include role task: sql_exporter_free
 
@@ -981,7 +1094,7 @@ An array of additional flags to pass to the sql_exporter daemon:
 The version of sql_exporter to install. The source version defines the version as specified in version control:
 
     prometheus_sql_exporter_free_version: "0.4"
-    prometheus_sql_exporter_free_src_version: "v0.4"
+    prometheus_sql_exporter_free_src_version: "0.4"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9399:
 

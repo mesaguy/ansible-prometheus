@@ -1,0 +1,45 @@
+---
+- block:
+  - name: Include role mesaguy.prometheus setup task
+    include_tasks: _setup.yml
+  when: prometheus_setup_task_executed is not defined
+
+- name: Include bind_exporter (digitalocean) variable file
+  include_vars: exporters/bind_exporter_digitalocean.yml
+
+- name: Starting bind_exporter (digitalocean) install
+  set_fact:
+    prometheus_exporter: true
+    prometheus_software_binary_name: bind_exporter
+    prometheus_software_env_vars: '{{ prometheus_bind_exporter_digitalocean_env_vars | default({}) }}'
+    prometheus_software_extra_opts: '{{ prometheus_bind_exporter_digitalocean_extra_opts | default () }}'
+    prometheus_software_fallback_to_build: '{{ prometheus_bind_exporter_digitalocean_fallback_to_build | default(prometheus_fallback_to_build) }}'
+    prometheus_software_name: bind_exporter_digitalocean
+    prometheus_software_version: '{{ prometheus_bind_exporter_digitalocean_src_version | default("v0.2.0-dev") }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_bind_exporter_digitalocean_jobname | default(prometheus_bind_exporter_digitalocean_default_tgroup_jobname) }}'
+    prometheus_software_description: 'Prometheus bind_exporter (digitalocean), exporter of BIND(named/dns) v9+ service metrics'
+    prometheus_software_documentation: 'https://github.com/digitalocean/bind_exporter'
+    prometheus_software_host: '{{ prometheus_bind_exporter_digitalocean_host | default("0.0.0.0") }}'
+    prometheus_software_port: '{{ prometheus_bind_exporter_digitalocean_port | default(prometheus_bind_exporter_digitalocean_default_port) }}'
+    prometheus_software_service_test: '{{ prometheus_bind_exporter_digitalocean_service_test | default(true) }}'
+    prometheus_software_runas: '{{ prometheus_bind_exporter_digitalocean_runas | default(prometheus_user) }}'
+    prometheus_software_shortname: bind_exporter
+
+- name: Set {{ prometheus_software_shortname }}-{{ prometheus_software_version }} facts
+  set_fact:
+    prometheus_software_opts:
+      - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
+    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
+    # Binary file only exists for darwin
+    # prometheus_software_file_url: '{% if prometheus_architecture == "linux-amd64" %}https://github.com/digitalocean/{{ prometheus_software_shortname }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_shortname }}{% endif %}'
+    prometheus_software_src_dir_suffix: '/src/github.com/digitalocean/{{ prometheus_software_shortname }}'
+    prometheus_software_src_url: 'https://github.com/digitalocean/{{ prometheus_software_shortname }}'
+
+- name: Include task to perform installation of {{ prometheus_software_name_version }}
+  include_tasks: _install.yml
+
+- name: Include task to setup {{ prometheus_software_name_version }} service
+  include_tasks: _service.yml
+
+- name: Include task to perform post install cleanup of {{ prometheus_software_name_version }}
+  include_tasks: _post_install_cleanup.yml

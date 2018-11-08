@@ -14,6 +14,7 @@
     prometheus_software_env_vars: '{{ prometheus_kafka_exporter_danielqsj_env_vars | default({}) }}'
     prometheus_software_extra_opts: '{{ prometheus_kafka_exporter_danielqsj_extra_opts | default () }}'
     prometheus_software_fallback_to_build: '{{ prometheus_kafka_exporter_danielqsj_fallback_to_build | default(prometheus_fallback_to_build) }}'
+    prometheus_software_makefile_make_command: 'make build'
     prometheus_software_name: kafka_exporter_danielqsj
     prometheus_software_version: '{{ prometheus_kafka_exporter_danielqsj_version | default("1.2.0") }}'
     prometheus_software_src_version: '{{ prometheus_kafka_exporter_danielqsj_src_version | default("v1.2.0") }}'

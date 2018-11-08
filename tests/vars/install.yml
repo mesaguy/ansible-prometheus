@@ -7,6 +7,9 @@ prometheus_consul_exporter_env_vars:
   CONSUL_HTTP_TOKEN: '4391eca7bcd03f45aa43ca26829c386c329097a7'
 prometheus_digitalocean_exporter_metalmatze_env_vars:
   DIGITALOCEAN_TOKEN: '4391eca7bcd03f45aa43ca26829c386c329097a7'
+prometheus_couchbase_exporter_blakelead_env_vars:
+  CB_EXPORTER_DB_USER: couchbase
+  CB_EXPORTER_DB_PASSWORD: couchbase
 prometheus_jmx_exporter_cfgs:
   bitbucket:
     startDelaySeconds: 0
@@ -76,6 +79,10 @@ prometheus_process_exporter_ncabatoff_cfgs:
 prometheus_grok_exporter_fstab_cfg: '{{ lookup("file", "../tests/files/grok_exporter_fstab.yml") }}'
 prometheus_kafka_exporter_danielqsj_service_test: false
 prometheus_mysqld_exporter_service_test: false
+prometheus_node_exporter_extra_opts:
+  - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|run|var/lib/docker/.*)($|/)"'
+  - '--collector.systemd'
+  - '--no-collector.zfs'
 prometheus_nvidia_gpu_exporter_mindprince_service_test: false
 # There are no binaries:
 prometheus_zookeeper_exporter_infonova_fallback_to_build: true

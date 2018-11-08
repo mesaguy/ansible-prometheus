@@ -7,7 +7,7 @@ Setup GO build environmental variables. Useful on machines where a build failed:
 
 Rerun INSPEC tests against a single docker container:
 
-    inspec exec tests/inspec/all -t docker://DOCKER_ID
+    inspec exec tests/inspec/default -t docker://DOCKER_ID
 
 Test yaml syntax:
 
@@ -15,7 +15,7 @@ Test yaml syntax:
 
 To test URLs:
 
-    awesome_bot --skip-save-results --allow-dupe --files README.md,tests/README.md
+    awesome_bot --skip-save-results --allow-dupe --white-list=localhost --files README.md,tests/README.md
 
 Run Ansible lint:
 
@@ -33,6 +33,17 @@ Run ADHOC commands inside a kitchen built docker image
 2) Change port 32835 in the example below:
 
     ANSIBLE_REMOTE_PORT=32835 ANSIBLE_HOST_KEY_CHECKING=False ansible -m setup -c ssh -u kitchen all -i localhost, --extra-vars="ansible_ssh_private_key_file=.kitchen/docker_id_rsa"
+
+
+## Perform testing
+
+Run standard tests for Archlinux:
+
+    kitchen test archlinux
+
+Run all tests for Archlinux, but force all software to build from source:
+
+    KITCHEN_PLAYBOOK=build_all kitchen test archlinux
 
 ## Run tgroup tests
 

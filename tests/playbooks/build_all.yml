@@ -16,3 +16,5 @@
       loop_control:
         loop_var: prometheus_component
       with_items: "{{ tasks.files | sort(attribute='path') }}"
+      # Cannot be built from source:
+      when: prometheus_component.path | regex_replace("\.yml$", "") | basename not in ['grok_exporter_fstab']

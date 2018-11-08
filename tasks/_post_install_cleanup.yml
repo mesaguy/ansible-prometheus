@@ -46,6 +46,8 @@
     # Link to documentation about the software. This variable is inserted
     # in the service init/systemd file:
     prometheus_software_documentation: ''
+    # A software download has occured, this is the registered result of that action
+    prometheus_software_download: ''
     # Environmental variables to pass to software via init/systemd script
     prometheus_software_env_vars: {}
     prometheus_software_extra_opts: ''
@@ -54,6 +56,7 @@
     # The IP/s the software listens on
     prometheus_software_host: ''
     prometheus_software_install_dir: ''
+    # An installation has occured, this is the registered result of that action
     prometheus_software_installation: ''
     prometheus_software_instance_port: ''
     # Command to run when building source code (default assumes code is Golang)
@@ -72,10 +75,15 @@
     # The port the software listens on
     prometheus_software_port: ''
     prometheus_software_root_dir: ''
+    # Cause a restart of the software currently being installed/managed
+    prometheus_software_restart: false
+    # User to run software as
     prometheus_software_runas: ''
     prometheus_software_src_path: ''
     prometheus_software_service_name: ''
+    # URL where a software's archived binary can be downloaded
     prometheus_software_bin_url: ''
+    # URL where a software's binary can be downloaded, not an archive file
     prometheus_software_file_url: ''
     # Command to run the {{ prometheus_software_binary }} via. Generally
     # needed for java jars:
@@ -89,7 +97,9 @@
     prometheus_software_shortname: ''
     prometheus_software_src_dir: ''
     prometheus_software_src_dir_suffix: ''
+    # URL where a software's source code can be downloaded from a VCS
     prometheus_software_src_url: ''
+    # Version of the software's source to checkout
     prometheus_software_src_version: ''
     # Version of Prometheus software to install
     prometheus_software_version: ''

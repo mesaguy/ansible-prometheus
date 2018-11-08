@@ -38,6 +38,28 @@
 - name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml
 
+- block:
+   - name: Collect "{{ prometheus_user}}" user information
+     user:
+       name: '{{ prometheus_user }}'
+     register: prometheus_user_registered
+
+   - name: Copy {{ prometheus_software_name_version }} credentials to {{ prometheus_user_registered.home }}/.my.cnf
+     become: true
+     template:
+       src: ../templates/mysqld_exporter-my.cnf.j2
+       dest: '{{ prometheus_user_registered.home }}/.my.cnf'
+       owner: '{{ prometheus_user }}'
+       group: '{{ prometheus_group }}'
+       mode: '0400'
+     register: prometheus_mysqld_exporter_credentials
+
+   - name: Define restart of {{ prometheus_software_name_version }}
+     set_fact:
+       prometheus_software_restart: true
+     when: prometheus_mysqld_exporter_credentials is defined and prometheus_mysqld_exporter_credentials.changed
+  when: prometheus_mysqld_exporter_username is defined and prometheus_mysqld_exporter_username and prometheus_mysqld_exporter_password is defined and prometheus_mysqld_exporter_password
+
 - name: Include task to setup {{ prometheus_software_name_version }} service
   include_tasks: _service.yml
 

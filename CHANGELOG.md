@@ -7,8 +7,27 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
+ - New exporters
+   - bind_exporter_digitalocean
+   - couchbase_exporter_blakelead
+   - couchdb_exporter_gesellix
+   - proxysql_exporter_percona
+   - redis_exporter_oliver006
  - Add support for HAProxy metrics via socket using a new options:
    'prometheus_haproxy_exporter_socket'
+ - Add support for managing ~/.my.cnf file for mysqld_exporter
+
+### Changed
+ - Upgrade Prometheus from v2.4.3 to v2.5.0
+ - Use 'get_url' to download each archive, 'unarchive' to extract each archive, and
+   then 'file' for cleanup. Using 'unarchive' alone was too limiting as 'unarchive'
+   doesn't support redirects and many of the other features of get_url
+
+### Fixed
+ - Support command line arguments that contain double quotes (like the node_exporter
+   example)
+ - kafka_exporter_danielqsj, pushgateway, rabbitmq_exporter_kbudde, and
+   sql_exporter_free  make commands when building from source
 
 ## [0.6.0] - 2018-11-03
 
