@@ -1,12 +1,23 @@
 ---
 - name: List files in {{ prometheus_copy_src_dir }}
+  become: true
   find:
     path: '{{ prometheus_copy_src_dir }}'
     recurse: true
     file_type: any
   register: prometheus_find_result
 
-- name: Create the {{ prometheus_copy_dest_dir }} directories
+- name: Create directory {{ prometheus_copy_dest_dir }}
+  become: true
+  file:
+    path: '{{ prometheus_copy_dest_dir }}'
+    state: directory
+    owner: root
+    group: '{{ prometheus_group }}'
+    mode: '{{ prometheus_copy_dir_mode }}'
+  when: prometheus_copy_dest_dir != prometheus_software_install_dir
+
+- name: Create the {{ prometheus_copy_dest_dir }} sub-directories
   become: true
   file:
     path: '{{ item.path | regex_replace(prometheus_copy_src_dir, prometheus_copy_dest_dir) }}'

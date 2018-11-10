@@ -375,8 +375,8 @@ An array of additional flags to pass to the alertmanager daemon:
 
 The version of Alertmanager to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "0.15.2"
-    prometheus_src_version: "v0.15.2"
+    prometheus_version: "0.15.3"
+    prometheus_src_version: "v0.15.3"
 
 Where to store Alertmanager's data, defaults to /opt/prometheus/var/alertmanager
 
@@ -589,8 +589,8 @@ An array of additional flags to pass to the couchdb_exporter daemon:
 
 The version of couchdb_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_couchdb_exporter_gesellix_version: "16"
-    prometheus_couchdb_exporter_gesellix_src_version: "16"
+    prometheus_couchdb_exporter_gesellix_version: "17"
+    prometheus_couchdb_exporter_gesellix_src_version: "17"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9984:
 
@@ -1029,8 +1029,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "0.21.2"
-    prometheus_redis_exporter_oliver006_src_version: "v0.21.2"
+    prometheus_redis_exporter_oliver006_version: "0.22.0"
+    prometheus_redis_exporter_oliver006_src_version: "v0.22.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 

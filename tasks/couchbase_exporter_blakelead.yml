@@ -12,6 +12,8 @@
     prometheus_exporter: true
     prometheus_software_binary_name: 'couchbase_exporter'
     prometheus_software_binary_unarchive_opts: []
+    prometheus_software_build_copy_dirs:
+      - { name: 'metrics', dir_mode: '0755', file_mode: '0644' }
     prometheus_software_env_vars: '{{ prometheus_couchbase_exporter_blakelead_env_vars | default({}) }}'
     prometheus_software_extra_opts: '{{ prometheus_couchbase_exporter_blakelead_extra_opts | default() }}'
     prometheus_software_fallback_to_build: '{{ prometheus_couchbase_exporter_blakelead_fallback_to_build | default(prometheus_fallback_to_build) }}'

@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+ - Upgrade Alertmanager from v0.15.2 to v0.15.3
+ - Upgrade couchdb_exporter_gesellix from v16 to v17
+ - Upgrade redis_exporter_oliver006 from v0.21.2 to v0.22.0
+
+### Changed
+ - Manually define the versions of tools used for testing
+
+### Fixed
+ - couchbase_exporter_blakelead build now has sample metric json files
+ - All tests now succeed after performing all builds
+
 ## [0.7.0] - 2018-11-08
 
 ### Added

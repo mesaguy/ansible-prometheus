@@ -44,15 +44,6 @@
 - name: 'Include task to perform installation of {{ prometheus_software_name_version }}'
   include_tasks: _install.yml
 
-- name: 'Create {{ prometheus_software_name_version }} patterns directory: {{ prometheus_grok_exporter_fstab_patterns_directory }}'
-  become: true
-  file:
-    path: '{{ prometheus_grok_exporter_fstab_patterns_directory }}'
-    owner: '{{ prometheus_user }}'
-    group: '{{ prometheus_group }}'
-    mode: 0775
-    state: directory
-
 - name: 'Setup {{ prometheus_software_name_version }} configuration file'
   become: true
   copy:

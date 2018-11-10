@@ -84,6 +84,18 @@
     loop_var: prometheus_built_file
   register: prometheus_software_installation
 
+- name: Synchronize the additional {{ prometheus_software_name_version }} directories to {{ prometheus_software_install_dir }} (where applicable)
+  include_tasks: _copy_remote_directory_contents.yml
+  vars:
+    prometheus_copy_dest_dir: '{{ prometheus_software_install_dir }}/{{ prometheus_software_copy_dir.name }}'
+    prometheus_copy_src_dir: '{{ prometheus_software_src_dir }}/{{ prometheus_software_copy_dir.name }}'
+    prometheus_copy_dir_mode: '{{ prometheus_software_copy_dir.dir_mode }}'
+    prometheus_copy_file_mode: '{{ prometheus_software_copy_dir.file_mode }}'
+  with_items: '{{ prometheus_software_build_copy_dirs }}'
+  loop_control:
+    loop_var: prometheus_software_copy_dir
+  when: prometheus_software_build_copy_dirs is defined and prometheus_software_build_copy_dirs
+
 - name: 'Cleanup {{ prometheus_software_build_dir }} directory from {{ prometheus_software_name_version }} build'
   become: true
   file:
