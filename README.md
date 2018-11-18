@@ -589,8 +589,8 @@ An array of additional flags to pass to the couchdb_exporter daemon:
 
 The version of couchdb_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_couchdb_exporter_gesellix_version: "17"
-    prometheus_couchdb_exporter_gesellix_src_version: "17"
+    prometheus_couchdb_exporter_gesellix_version: "18"
+    prometheus_couchdb_exporter_gesellix_src_version: "18"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9984:
 
@@ -893,7 +893,7 @@ An array of additional flags to pass to the nvidia_gpu_exporter daemon:
 
     prometheus_nvidia_gpu_exporter_mindprince_extra_opts: []
 
-The version of postgres_exporter to install. As there is no release, the version is a git commit hash:
+The version of nvidia_gpu_exporter to install. As there is no release, the version is a git commit hash:
 
     prometheus_nvidia_gpu_exporter_mindprince_version: "3897bdad246f3bc0e7105805d4442b9c9c7b06d2"
 
@@ -926,8 +926,8 @@ An array of additional flags to pass to the postgres_exporter daemon:
 
 The version of postgres_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_postgres_exporter_wrouesnel_version: "0.4.6"
-    prometheus_postgres_exporter_wrouesnel_src_version: "v0.4.6"
+    prometheus_postgres_exporter_wrouesnel_version: "0.4.7"
+    prometheus_postgres_exporter_wrouesnel_src_version: "v0.4.7"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9187:
 
@@ -1029,8 +1029,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "0.22.0"
-    prometheus_redis_exporter_oliver006_src_version: "v0.22.0"
+    prometheus_redis_exporter_oliver006_version: "0.22.1"
+    prometheus_redis_exporter_oliver006_src_version: "v0.22.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 
