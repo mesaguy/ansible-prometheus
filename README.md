@@ -13,18 +13,18 @@ This module was designed to be extended easily and is kept current such that it 
 ### Supported Operating Systems, Distributions, and Architectures
 This module is intended to support as many distributions and architectures as possible. The following table specifies which combinations are currently tested
 
-| OS             | Release                          | Architectures     |
-|----------------|----------------------------------|-------------------|
-|Alpine          |3.2 through 3.8, edge             | x86_64 (amd64)    |
-|AmazonLinux     |1 and 2                           | x86_64 (amd64)    |
-|ArchLinux       |Current                           | x86_64 (amd64)    |
-|Enterprise Linux|6, 7                              | x86_64 (amd64)    |
-|Fedora          |20 through 28, rawhide            | x86_64 (amd64)    |
-|Gentoo (openrc) |Current                           | x86_64 (amd64)    |
-|Gentoo (systemd)|Current                           | x86_64 (amd64)    |
-|OpenSUSE        |13.1 through tumbleweed           | x86_64 (amd64)    |
-|Oracle Linux    |6, 7                              | x86_64 (amd64)    |
-|Ubuntu          |14.04, 16.04, 17.10, 18.04, 18.10 | x86_64 (amd64)    |
+| OS             | Release                                 | Architectures     |
+|----------------|-----------------------------------------|-------------------|
+|Alpine          |3.2 through 3.8, edge                    | x86_64 (amd64)    |
+|AmazonLinux     |1 and 2                                  | x86_64 (amd64)    |
+|ArchLinux       |Current                                  | x86_64 (amd64)    |
+|Enterprise Linux|6, 7                                     | x86_64 (amd64)    |
+|Fedora          |20 through 29, rawhide                   | x86_64 (amd64)    |
+|Gentoo (openrc) |Current                                  | x86_64 (amd64)    |
+|Gentoo (systemd)|Current                                  | x86_64 (amd64)    |
+|OpenSUSE        |13.1 through tumbleweed                  | x86_64 (amd64)    |
+|Oracle Linux    |6, 7                                     | x86_64 (amd64)    |
+|Ubuntu          |14.04, 16.04, 17.10, 18.04, 18.10, 19.04 | x86_64 (amd64)    |
 
 ### Supported Prometheus software
 The following core Prometheus software is supported in addition to the list of exporters below. This software is fully tested on all supported OS, distributions, and architectures.
