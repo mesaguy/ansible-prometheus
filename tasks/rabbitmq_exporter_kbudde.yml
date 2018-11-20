@@ -22,7 +22,7 @@
     prometheus_software_description: 'Prometheus rabbitmq_exporter (kbudde), exporter for RabbitMQ metrics'
     prometheus_software_documentation: 'https://github.com/kbudde/rabbitmq_exporter'
     prometheus_software_host: '{{ prometheus_rabbitmq_exporter_kbudde_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_rabbitmq_exporter_kbudde_port | default(9419) }}'
+    prometheus_software_port: '{{ prometheus_rabbitmq_exporter_kbudde_port | default(prometheus_rabbitmq_exporter_kbudde_default_port) }}'
     prometheus_software_runas: '{{ prometheus_rabbitmq_exporter_kbudde_runas | default(prometheus_user) }}'
     prometheus_software_shortname: 'rabbitmq_exporter'
 

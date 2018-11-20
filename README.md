@@ -1,9 +1,11 @@
 # Prometheus
 [![Build Status](https://api.travis-ci.org/mesaguy/ansible-prometheus.svg?branch=master)](https://travis-ci.org/mesaguy/ansible-prometheus)
 
-Installs and manages [Prometheus server](https://prometheus.io), [Alertmanager](https://prometheus.io/docs/alerting/overview/), [PushGateway](https://github.com/prometheus/pushgateway/blob/master/README.md), and [Prometheus exporters](https://prometheus.io/docs/instrumenting/exporters/)
+Installs and manages [Prometheus server](https://prometheus.io), [Alertmanager](https://prometheus.io/docs/alerting/overview/), [PushGateway](https://github.com/prometheus/pushgateway/blob/master/README.md), and numerous [Prometheus exporters](https://prometheus.io/docs/instrumenting/exporters/)
 
-This module was designed to be extended easily and is kept current such that it always uses the latest Prometheus software.
+This role was designed to allow adding new exporters with ease. Regular releases ensure it always provides the latest Prometheus software.
+
+This role can also register client exporters with the Prometheus server/s automatically (see tgroup management below).
 
 ## Requirements
  - Ansible >= 2.5.1
@@ -11,7 +13,7 @@ This module was designed to be extended easily and is kept current such that it 
 
 ## Supported Software and Operating Systems
 ### Supported Operating Systems, Distributions, and Architectures
-This module is intended to support as many distributions and architectures as possible. The following table specifies which combinations are currently tested
+This module is intended to support as many distributions and architectures as possible. The following table specifies which combinations are currently tested. Most exporters will also work on ARM architectures:
 
 | OS             | Release                          | Architectures     |
 |----------------|----------------------------------|-------------------|
@@ -29,53 +31,55 @@ This module is intended to support as many distributions and architectures as po
 ### Supported Prometheus software
 The following core Prometheus software is supported in addition to the list of exporters below. This software is fully tested on all supported OS, distributions, and architectures.
 
-| Prometheus software                                       | CI tested |
-|-----------------------------------------------------------|:----------|
-|[prometheus](https://github.com/prometheus/prometheus)     | Yes       |
-|[alertmanager](https://github.com/prometheus/alertmanager) | Yes       |
-|[push_gateway](https://github.com/prometheus/pushgateway)  | Yes       |
+| Prometheus software                                       | Usage                                     | Author     | CI tested |
+|-----------------------------------------------------------|:-----------------------------------------:|:----------:|:---------:|
+|[prometheus](https://github.com/prometheus/prometheus)     | [usage](#prometheus-server-configuration) | prometheus | Yes       |
+|[alertmanager](https://github.com/prometheus/alertmanager) | [usage](#alertmanager-configuration)      | prometheus | Yes       |
+|[push_gateway](https://github.com/prometheus/pushgateway)  | [usage](#pushgateway-configuration)       | prometheus | Yes       |
 
 ### Supported exporters
 All exporters are verified to install. Currently select modules receive testing via CI (Continuous Integration) and [Inspec](https://www.inspec.io)
 
-| Exporter                                                                                      | Author        | CI tested |
-|-----------------------------------------------------------------------------------------------|:-------------:|:---------:|
-|[apache_exporter_lusitaniae](https://github.com/Lusitaniae/apache_exporter)                    | Lusitaniae    | Yes       |
-|[bind_exporter_digitalocean](https://github.com/digitalocean/bind_exporter)                    | digitalocean  | Yes       |
-|[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)                           | prometheus    | Yes       |
-|[cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter)                       | prometheus    | Yes       |
-|[collectd_exporter](https://github.com/prometheus/collectd_exporter)                           | prometheus    | Yes       |
-|[consul_exporter](https://github.com/prometheus/consul_exporter)                               | prometheus    | Yes       |
-|[couchbase_exporter_blakelead](https://github.com/blakelead/couchbase_exporter)                | blakelead     | Yes       |
-|[couchdb_exporter_gesellix](https://github.com/gesellix/couchdb-prometheus-exporter)           | gesellix      | Yes       |
-|[digitalocean_exporter_metalmatze](https://github.com/metalmatze/digitalocean_exporter)        | metalmatze    | Yes       |
-|[elasticsearch_exporter_justwatchcom](https://github.com/justwatchcom/elasticsearch_exporter)  | justwatchcom  | Yes       |
-|[gluster_exporter_ofesseler](https://github.com/ofesseler/gluster_exporter)                    | ofesseler     | Yes       |
-|[graphite_exporter](https://github.com/prometheus/graphite_exporter)                           | prometheus    | Yes       |
-|[grok_exporter_fstab](https://github.com/fstab/grok_exporter)                                  | fstab         | Yes       |
-|[haproxy_exporter](https://github.com/prometheus/haproxy_exporter)                             | prometheus    | Yes       |
-|[influxdb_exporter](https://github.com/prometheus/influxdb_exporter)                           | prometheus    | Yes       |
-|[jmx_exporter](https://github.com/prometheus/jmx_exporter)                                     | prometheus    | No        |
-|[kafka_exporter](https://github.com/danielqsj/kafka_exporter)                                  | danielqsj     | Yes       |
-|[memcached_exporter_danielqsj](https://github.com/prometheus/memcached_exporter)               | prometheus    | Yes       |
-|[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)                               | prometheus    | Yes       |
-|[node_exporter](https://github.com/prometheus/node_exporter)                                   | prometheus    | Yes       |
-|[nvidia_gpu_exporter_mindprince](https://github.com/mindprince/nvidia_gpu_prometheus_exporter) | mindprince    | Yes       |
-|[postgres_exporter_wrouesnel](https://github.com/wrouesnel/postgres_exporter)                  | wrouesnel     | Yes       |
-|[process_exporter_ncabatoff](https://github.com/ncabatoff/process-exporter)                    | ncabatoff     | Yes       |
-|[proxysql_exporter_percona](https://github.com/percona/proxysql_exporter)                      | percona       | Yes       |
-|[rabbitmq_exporter_kbudde](https://github.com/kbudde/rabbitmq_exporter)                        | kbudde        | Yes       |
-|[redis_exporter_oliver006](https://github.com/oliver006/redis_exporter)                        | oliver006     | Yes       |
-|[snmp_exporter](https://github.com/prometheus/snmp_exporter)                                   | prometheus    | Yes       |
-|[sql_exporter_free](https://github.com/free/sql_exporter)                                      | free          | Yes       |
-|[squid_exporter_boynux](https://github.com/boynux/squid-exporter)                              | boynux        | Yes       |
-|[statsd_exporter](https://github.com/prometheus/statsd_exporter)                               | prometheus    | Yes       |
-|[zookeeper_exporter_infonova](https://github.com/infonova/zookeeper_exporter)                  | infonova      | Yes       |
+| Exporter                                                                                      | Usage                                                       | Author        | CI tested |
+|-----------------------------------------------------------------------------------------------|:-----------------------------------------------------------:|:-------------:|:---------:|
+|[apache_exporter_lusitaniae](https://github.com/Lusitaniae/apache_exporter)                    | [usage](#apache-exporter-lusitaniae-configuration)          | Lusitaniae    | Yes       |
+|[bind_exporter_digitalocean](https://github.com/digitalocean/bind_exporter)                    | [usage](#bind-exporter-digitalocean-configuration)          | digitalocean  | Yes       |
+|[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)                           | [usage](#blackbox-exporter-configuration)                   | prometheus    | Yes       |
+|[cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter)                       | [usage](#cloudwatch-exporter-configuration)                 | prometheus    | Yes       |
+|[collectd_exporter](https://github.com/prometheus/collectd_exporter)                           | [usage](#collectd-exporter-configuration)                   | prometheus    | Yes       |
+|[consul_exporter](https://github.com/prometheus/consul_exporter)                               | [usage](#consul-exporter-configuration)                     | prometheus    | Yes       |
+|[couchbase_exporter_blakelead](https://github.com/blakelead/couchbase_exporter)                | [usage](#couchbase exporter-blakelead-configuration)        | blakelead     | Yes       |
+|[couchdb_exporter_gesellix](https://github.com/gesellix/couchdb-prometheus-exporter)           | [usage](#couchdb-exporter-gesellix-configuration)           | gesellix      | Yes       |
+|[digitalocean_exporter_metalmatze](https://github.com/metalmatze/digitalocean_exporter)        | [usage](#digitalocean-exporter-metalmatze-configuration)    | metalmatze    | Yes       |
+|[elasticsearch_exporter_justwatchcom](https://github.com/justwatchcom/elasticsearch_exporter)  | [usage](#elasticsearch-exporter-justwatchcom-configuration) | justwatchcom  | Yes       |
+|[gluster_exporter_ofesseler](https://github.com/ofesseler/gluster_exporter)                    | [usage](#gluster-exporter-ofesseler-configuration)          | ofesseler     | Yes       |
+|[graphite_exporter](https://github.com/prometheus/graphite_exporter)                           | [usage](#graphite-exporter-configuration)                   | prometheus    | Yes       |
+|[grok_exporter_fstab](https://github.com/fstab/grok_exporter)                                  | [usage](#grok-exporter-fstab-configuration)                 | fstab         | Yes       |
+|[haproxy_exporter](https://github.com/prometheus/haproxy_exporter)                             | [usage](#haproxy-exporter-configuration)                    | prometheus    | Yes       |
+|[influxdb_exporter](https://github.com/prometheus/influxdb_exporter)                           | [usage](#influxdb-exporter-configuration)                   | prometheus    | Yes       |
+|[jmx_exporter](https://github.com/prometheus/jmx_exporter)                                     | [usage](#jmx-exporter-configuration)                        | prometheus    | No        |
+|[kafka_exporter](https://github.com/danielqsj/kafka_exporter)                                  | [usage](#kafka-exporter-danielqsj-configuration)            | danielqsj     | Yes       |
+|[memcached_exporter_danielqsj](https://github.com/prometheus/memcached_exporter)               | [usage](#memcached-exporter-configuration)                  | prometheus    | Yes       |
+|[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)                               | [usage](#mysqld-exporter-configuration)                     | prometheus    | Yes       |
+|[node_exporter](https://github.com/prometheus/node_exporter)                                   | [usage](#node-exporter-configuration)                       | prometheus    | Yes       |
+|[nvidia_exporter_bugroger](https://github.com/BugRoger/nvidia-exporter)                        | [usage](#nvidia-cpu-exporter-bugroger-configuration)        | BugRoger      | Yes       |
+|[nvidia_gpu_exporter_mindprince](https://github.com/mindprince/nvidia_gpu_prometheus_exporter) | [usage](#nvidia-gpu-exporter-mindprince-configuration)      | mindprince    | Yes       |
+|[postgres_exporter_wrouesnel](https://github.com/wrouesnel/postgres_exporter)                  | [usage](#proxysql-exporter-percona-configuration)           | wrouesnel     | Yes       |
+|[process_exporter_ncabatoff](https://github.com/ncabatoff/process-exporter)                    | [usage](#process-exporter-ncabatoff-configuration)          | ncabatoff     | Yes       |
+|[proxysql_exporter_percona](https://github.com/percona/proxysql_exporter)                      | [usage](#proxysql-exporter-percona-configuration)           | percona       | Yes       |
+|[rabbitmq_exporter_kbudde](https://github.com/kbudde/rabbitmq_exporter)                        | [usage](#rabbitmq-exporter-kbudde-configuration)            | kbudde        | Yes       |
+|[redis_exporter_oliver006](https://github.com/oliver006/redis_exporter)                        | [usage](#redis-exporter-kbudde-configuration)               | oliver006     | Yes       |
+|[snmp_exporter](https://github.com/prometheus/snmp_exporter)                                   | [usage](#snmp-exporter-configuration)                       | prometheus    | Yes       |
+|[sql_exporter_free](https://github.com/free/sql_exporter)                                      | [usage](#sql-exporter-free-configuration)                   | free          | Yes       |
+|[squid_exporter_boynux](https://github.com/boynux/squid-exporter)                              | [usage](#squid-exporter-boynux-configuration)               | boynux        | Yes       |
+|[statsd_exporter](https://github.com/prometheus/statsd_exporter)                               | [usage](#statsd-exporter-configuration)                     | prometheus    | Yes       |
+|[zookeeper_exporter_infonova](https://github.com/infonova/zookeeper_exporter)                  | [usage](#zookeeper-exporter-infonova-configuration)         | infonova      | Yes       |
 
 ## Role Variables
-The 'prometheus_components' variable is an array specifying the prometheus software to install. This example shows all possible prometheus_components:
+A 'prometheus_components' array variable is used to specify the Prometheus software to install. This example installs all supported prometheus_components:
 
 ``` yaml
+# Demonstration only. Clients should only have applicable software and exporters defined:
 prometheus_components:
  # Core components:
  - alertmanager
@@ -102,6 +106,7 @@ prometheus_components:
  - memcached_exporter_danielqsj
  - mysqld_exporter
  - node_exporter
+ - nvidia_exporter_bugroger
  - nvidia_gpu_exporter_mindprince
  - postgres_exporter_wrouesnel
  - process_exporter_ncabatoff
@@ -115,45 +120,13 @@ prometheus_components:
  - zookeeper_exporter_infonova
 ```
 
-Most Prometheus software and exporters use yaml for the configuration files. The content of your configuration files be be defined using the following methods:
-
-Using an external YAML file. In this example, the file would be located in your Ansible environment's 'files' directory:
-
-``` yaml
-  prometheus_server_cfg: "{{ lookup('file', '../files/prometheus_server.yml') | from_yaml }}"
-```
-
-Or embedding the YAML directly into your playbook:
-``` yaml
-  prometheus_server_cfg:
-    global:
-      scrape_interval: 15s
-
-      # Attach these labels to any time series or alerts when communicating with
-      # external systems (federation, remote storage, Alertmanager).
-      external_labels:
-        monitor: 'codelab-monitor'
-
-    # A scrape configuration containing exactly one endpoint to scrape:
-    # Here it's Prometheus itself.
-    scrape_configs:
-      # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
-      - job_name: 'prometheus'
-
-        # Override the global default and scrape targets from this job every 5 seconds.
-        scrape_interval: 5s
-
-        static_configs:
-          - targets: ['localhost:9090']
-```
-
 ### Common variables
 
-By default, if a Prometheus software or exporter binary fails to install, the installation fails. This default can be overridden causing an installation via source by setting the global 'prometheus_fallback_to_build' value or a software specific override. For example, to allow the blackbox_exporter to be built from source if no binary can be found set:
+By default, if a Prometheus software or exporter binary fails to install, the installation fails. This default can be overridden causing an installation via source by setting the global 'prometheus_fallback_to_build' boolean or a software specific override. For example, to allow the blackbox_exporter to be built from source if no binary can be found set:
 
     prometheus_blackbox_exporter_fallback_to_build: true
 
-All installer tasks which control a daemon have a 'runas' parameter to specify which user the daemon will run as. By default all users run as the 'prometheus_user' (defaults to: prometheus). For instance, to have the blackbox_exporter run as user 'test' set the following variable:
+All daemon installer tasks have a 'runas' parameter to specify which user the daemon will run as. By default all users run as the 'prometheus_user' (defaults to: prometheus). For example, to have the blackbox_exporter run as user 'test' set the following variable:
 
     prometheus_blackbox_exporter_runas: test
 
@@ -190,7 +163,7 @@ Name of the Prometheus service and group:
     prometheus_group: prometheus
     prometheus_user: prometheus
 
-If installing a Prometheus application binary fails, fall back to installing the Prometheus software via source? Installation from source generally requires installing compilers. It is also possible to enable 'fallback_to_build' on a case-by-case basis (ie: prometheus_software_fallback_to_build: true):
+If installing a Prometheus application binary fails, fall back to installing the Prometheus software via source. Installation from source generally requires installing compilers. It is also possible to enable 'fallback_to_build' on a case-by-case basis (ie: prometheus_blackbox_exporter_fallback_to_build: true):
 
     prometheus_fallback_to_build: false
 
@@ -210,7 +183,7 @@ The root directory in which 'go' is installed. Go is only installed if Prometheu
 
     prometheus_go_dir: "{{ prometheus_root_dir }}/go"
 
-The directory in which logs are created:
+The directory in which logs are created. Systems using journalctl will generally log to journalctl instead of files:
 
     prometheus_log_dir: "/var/log/prometheus"
 
@@ -222,7 +195,7 @@ The directory to use when storing persistent Prometheus data (ie: The Prometheus
 
     prometheus_var_dir: "{{ prometheus_root_dir }}/var"
 
-Optionally disable symlink of tool applications (amtool, promtool, etc) to /usr/local/bin. Defaults to: true:
+Optionally disable symlink of tool applications (amtool, promtool, etc) to /usr/local/bin. Defaults to 'true':
 
     prometheus_symlink_tools: false
 
@@ -326,7 +299,7 @@ Purge undefined (orphaned) exporters. When run in client mode, this option only 
 
     prometheus_tgroup_dir_purge_orphans: true
 
-### Prometheus server variables
+### Prometheus server configuration
 
 To enable [prometheus server](https://github.com/prometheus/prometheus) include role task: prometheus
 
@@ -335,6 +308,30 @@ Prometheus configuration files are validated using 'promtool' before Prometheus 
 The configuration content. The example below utilizes a file named 'prometheus_server.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
 
     prometheus_server_cfg: '{{ lookup("file", "../files/prometheus_server.yml") | from_yaml }}'
+
+Or embedding the YAML directly into your playbook:
+``` yaml
+  prometheus_server_cfg:
+    global:
+      scrape_interval: 15s
+
+      # Attach these labels to any time series or alerts when communicating with
+      # external systems (federation, remote storage, Alertmanager).
+      external_labels:
+        monitor: 'codelab-monitor'
+
+    # A scrape configuration containing exactly one endpoint to scrape:
+    # Here it's Prometheus itself.
+    scrape_configs:
+      # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+      - job_name: 'prometheus'
+
+        # Override the global default and scrape targets from this job every 5 seconds.
+        scrape_interval: 5s
+
+        static_configs:
+          - targets: ['localhost:9090']
+```
 
 An array of additional flags to pass to the prometheus daemon:
 
@@ -359,7 +356,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 909
     prometheus_host: "0.0.0.0"
     prometheus_port: 9090
 
-### Alertmanager variables
+### Alertmanager configuration
 
 To enable [alertmanager](https://github.com/prometheus/alertmanager) include role task: alertmanager
 
@@ -385,7 +382,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 909
     prometheus_alertmanager_host: "0.0.0.0"
     prometheus_alertmanager_port: 9093
 
-### Pushgateway variables
+### Pushgateway configuration
 
 To enable [alertmanager](https://github.com/prometheus/pushgateway) include role task: pushgateway
 
@@ -403,7 +400,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 909
     prometheus_pushgateway_host: "0.0.0.0"
     prometheus_pushgateway_port: 9091
 
-### Apache exporter (Lusitaniae) variables
+### Apache exporter (Lusitaniae) configuration
 
 To enable [apache_exporter by Lusitaniae](https://github.com/Lusitaniae/apache_exporter) include role task: apache_exporter_lusitaniae
 
@@ -422,7 +419,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 911
     prometheus_apache_exporter_lusitaniae_host: "0.0.0.0"
     prometheus_apache_exporter_lusitaniae_port: 9117
 
-### BIND exporter (digitalocean) variables
+### BIND exporter (digitalocean) configuration
 
 To enable [bind_exporter by digitalocean](https://github.com/digitalocean/bind_exporter) include role task: bind_exporter_digitalocean
 
@@ -440,7 +437,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 805
     prometheus_bind_exporter_digitalocean_host: "0.0.0.0"
     prometheus_bind_exporter_digitalocean_port: 8053
 
-### Blackbox exporter variables
+### Blackbox exporter configuration
 
 To enable [blackbox_exporter](https://github.com/prometheus/blackbox_exporter) include role task: blackbox_exporter
 
@@ -480,7 +477,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 911
     prometheus_blackbox_exporter_host: "0.0.0.0"
     prometheus_blackbox_exporter_port: 9115
 
-### CloudWatch exporter variables
+### CloudWatch exporter configuration
 
 To enable [cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter) include role task: cloudwatch_exporter
 
@@ -513,7 +510,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 910
     prometheus_cloudwatch_exporter_host: "0.0.0.0"
     prometheus_cloudwatch_exporter_port: 9106
 
-### Collectd exporter variables
+### Collectd exporter configuration
 
 To enable [collectd_exporter](https://github.com/prometheus/collectd_exporter) include role task: collectd_exporter
 
@@ -531,7 +528,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 910
     prometheus_collectd_exporter_host: "0.0.0.0"
     prometheus_collectd_exporter_port: 9103
 
-### Consul exporter variables
+### Consul exporter configuration
 
 To enable [consul_exporter](https://github.com/prometheus/consul_exporter) include role task: consul_exporter
 
@@ -555,7 +552,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 910
     prometheus_consul_exporter_host: "0.0.0.0"
     prometheus_consul_exporter_port: 9107
 
-### Couchbase exporter (blakelead) variables
+### Couchbase exporter (blakelead) configuration
 
 To enable [couchbase_exporter by blakelead](https://github.com/blakelead/couchbase_exporter) include role task: couchbase_exporter_blakelead
 
@@ -579,7 +576,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 919
     prometheus_couchbase_exporter_blakelead_host: "0.0.0.0"
     prometheus_couchbase_exporter_blakelead_port: 9191
 
-### CouchDB exporter (gesellix) variables
+### CouchDB exporter (gesellix) configuration
 
 To enable [couchdb_exporter by gesellix](https://github.com/gesellix/couchdb-prometheus-exporter) include role task: couchdb_exporter_gesellix
 
@@ -597,7 +594,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 998
     prometheus_couchdb_exporter_gesellix_host: "0.0.0.0"
     prometheus_couchdb_exporter_gesellix_port: 9984
 
-### DigitalOcean exporter (metalmatze) variables
+### DigitalOcean exporter (metalmatze) configuration
 
 Environmental variables to pass to the digitalocean_exporter_metalmatze exporter. These environmental variables are used as a primary method of configuring the exporter:
 
@@ -618,7 +615,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 921
     prometheus_digitalocean_exporter_metalmatze_host: "0.0.0.0"
     prometheus_digitalocean_exporter_metalmatze_port: 9212
 
-### Elasticsearch exporter (justwatchcom) variables
+### Elasticsearch exporter (justwatchcom) configuration
 
 An array of additional flags to pass to the elasticsearch_exporter daemon:
 
@@ -634,7 +631,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 990
     prometheus_elasticsearch_exporter_justwatchcom_host: "0.0.0.0"
     prometheus_elasticsearch_exporter_justwatchcom_port: 9908
 
-### Gluster exporter (ofesseler) variables
+### Gluster exporter (ofesseler) configuration
 
 To enable [gluster_exporter by ofesseler](https://github.com/ofesseler/gluster_exporter) include role task: gluster_exporter_ofesseler
 
@@ -656,7 +653,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 918
     prometheus_gluster_exporter_ofesseler_host: "0.0.0.0"
     prometheus_gluster_exporter_ofesseler_port: 9189
 
-### Graphite exporter variables
+### Graphite exporter configuration
 
 To enable [graphite_exporter](https://github.com/prometheus/graphite_exporter) include role task: graphite_exporter
 
@@ -689,7 +686,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 910
     prometheus_graphite_exporter_host: "0.0.0.0"
     prometheus_graphite_exporter_port: 9108
 
-### Grok exporter (fstab) variables
+### Grok exporter (fstab) configuration
 
 To enable [grok_exporter by fstab](https://github.com/fstab/grok_exporter) include role task: grok_exporter_fstab
 
@@ -732,7 +729,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 914
     prometheus_grok_exporter_fstab_host: "0.0.0.0"
     prometheus_grok_exporter_fstab_port: 9144
 
-### HAProxy exporter variables
+### HAProxy exporter configuration
 
 To enable [haproxy_exporter](https://github.com/prometheus/haproxy_exporter) include role task: haproxy_exporter
 
@@ -762,7 +759,7 @@ Enable HAProxy statistics via socket in the HAProxy globals section:
       # Wait up to 2 minutes for input:
       stats timeout 2m
 
-### InfluxDB exporter variables
+### InfluxDB exporter configuration
 
 An array of additional flags to pass to the influxdb_exporter daemon:
 
@@ -778,7 +775,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 912
     prometheus_influxdb_exporter_host: "0.0.0.0"
     prometheus_influxdb_exporter_port: 9122
 
-### JMX exporter variables
+### JMX exporter configuration
 
 To enable [jmx_exporter](https://github.com/prometheus/jmx_exporter) include role task: jmx_exporter
 
@@ -796,7 +793,7 @@ The version of jmx_exporter to install:
 
     prometheus_jmx_exporter_version: "0.3.1"
 
-### Kafka exporter (danielqsj) variables
+### Kafka exporter (danielqsj) configuration
 
 To enable [kafka_exporter by danielqsj](https://github.com/danielqsj/kafka_exporter) include role task: kafka_exporter_danielqsj
 
@@ -815,7 +812,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 930
     prometheus_kafka_exporter_danielqsj_host: "0.0.0.0"
     prometheus_kafka_exporter_danielqsj_port: 9308
 
-### Memcached exporter variables
+### Memcached exporter configuration
 
 To enable [memcached_exporter](https://github.com/prometheus/memcached_exporter) include role task: memcached_exporter
 
@@ -833,7 +830,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 915
     prometheus_memcached_exporter_host: "0.0.0.0"
     prometheus_memcached_exporter_port: 9150
 
-### Mysqld exporter variables
+### Mysqld exporter configuration
 
 To enable [mysqld_exporter](https://github.com/prometheus/mysqld_exporter) include role task: mysqld_exporter
 
@@ -858,7 +855,7 @@ After following the [mysqld_exporter user creation or grant instructions](https:
     prometheus_mysqld_exporter_username: mysqld_exporter
     prometheus_mysqld_exporter_password: _password_
 
-### Node exporter variables
+### Node exporter configuration
 
 To enable [node_exporter](https://github.com/prometheus/node_exporter) include role task: node_exporter
 
@@ -887,7 +884,22 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 910
     prometheus_node_exporter_host: "0.0.0.0"
     prometheus_node_exporter_port: 9100
 
-### Nvidia GPU exporter (mindprince) variables
+### Nvidia CPU exporter (BugRoger) configuration
+
+An array of additional flags to pass to the nvidia_exporter daemon:
+
+    prometheus_nvidia_exporter_bugroger_extra_opts: []
+
+The version of nvidia_exporter to install. As there is no release, the version is a git commit hash:
+
+    prometheus_nvidia_exporter_bugroger_version: "f38931eea308b265477dc64a86594cc288bf270b"
+
+Port and IP to listen on. Defaults to listening on all available IPs on port 9401:
+
+    prometheus_nvidia_exporter_bugroger_host: "0.0.0.0"
+    prometheus_nvidia_exporter_bugroger_port: 9401
+
+### Nvidia GPU exporter (mindprince) configuration
 
 An array of additional flags to pass to the nvidia_gpu_exporter daemon:
 
@@ -902,7 +914,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 944
     prometheus_nvidia_gpu_exporter_mindprince_host: "0.0.0.0"
     prometheus_nvidia_gpu_exporter_mindprince_port: 9445
 
-### Postgres exporter (wrouesnel) variables
+### Postgres exporter (wrouesnel) configuration
 
 To enable [postgres_exporter by wrouesnel](https://github.com/wrouesnel/postgres_exporter) include role task: postgres_exporter_wrouesnel
 
@@ -934,7 +946,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 918
     prometheus_postgres_exporter_wrouesnel_host: "0.0.0.0"
     prometheus_postgres_exporter_wrouesnel_port: 9187
 
-### Process exporter (ncabatoff) variables
+### Process exporter (ncabatoff) configuration
 
 To enable [process-exporter](https://github.com/ncabatoff/process-exporter) include role task: process-exporter_ncabatoff
 
@@ -978,7 +990,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 925
     prometheus_process_exporter_ncabatoff_host: "0.0.0.0"
     prometheus_process_exporter_ncabatoff_port: 9256
 
-### ProxySQL exporter (percona) variables
+### ProxySQL exporter (percona) configuration
 
 To enable [proxysql_exporter by percona](https://github.com/percona/proxysql_exporter) include role task: proxysql_exporter_percona
 
@@ -996,7 +1008,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 420
     prometheus_proxysql_exporter_percona_host: "0.0.0.0"
     prometheus_proxysql_exporter_percona_port: 42004
 
-### RabbitMQ exporter (kbudde) variables
+### RabbitMQ exporter (kbudde) configuration
 
 To enable [rabbitmq_exporter by kbudde](https://github.com/kbudde/rabbitmq_exporter) include role task: rabbitmq_exporter_kbudde
 
@@ -1019,7 +1031,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 941
     prometheus_rabbitmq_exporter_kbudde_host: "0.0.0.0"
     prometheus_rabbitmq_exporter_kbudde_port: 9419
 
-### Redis exporter (kbudde) variables
+### Redis exporter (kbudde) configuration
 
 To enable [redis_exporter by oliver006](https://github.com/oliver006/redis_exporter) include role task: redis_exporter_oliver006
 
@@ -1037,7 +1049,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 912
     prometheus_redis_exporter_oliver006_host: "0.0.0.0"
     prometheus_redis_exporter_oliver006_port: 9121
 
-### SNMP exporter variables
+### SNMP exporter configuration
 
 To enable [snmp_exporter](https://github.com/prometheus/snmp_exporter) include role task: snmp_exporter
 
@@ -1058,7 +1070,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 911
     prometheus_snmp_exporter_host: "0.0.0.0"
     prometheus_snmp_exporter_port: 9116
 
-### SQL exporter (free) variables
+### SQL exporter (free) configuration
 
 To enable [sql_exporter by free](https://github.com/free/sql_exporter) include role task: sql_exporter_free
 
@@ -1101,7 +1113,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 939
     prometheus_sql_exporter_free_host: "0.0.0.0"
     prometheus_sql_exporter_free_port: 9399
 
-### Squid exporter (boynux) variables
+### Squid exporter (boynux) configuration
 
 To enable [squid_exporter by boynux](https://github.com/boynux/squid-exporter) include role task: squid_exporter_boynux
 
@@ -1120,7 +1132,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 930
     prometheus_squid_exporter_boynux_host: "0.0.0.0"
     prometheus_squid_exporter_boynux_port: 9301
 
-### Statsd exporter variables
+### Statsd exporter configuration
 
 To enable [statsd_exporter](https://github.com/prometheus/statsd_exporter) include role task: statsd_exporter
 
@@ -1153,7 +1165,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 910
     prometheus_statsd_exporter_host: "0.0.0.0"
     prometheus_statsd_exporter_port: 9102
 
-### Zookeeper exporter (infonova) variables
+### Zookeeper exporter (infonova) configuration
 
 To enable [zookeeper_exporter](https://github.com/infonova/zookeeper_exporter) include role task: zookeeper_exporter
 
