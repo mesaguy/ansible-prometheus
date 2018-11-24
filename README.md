@@ -571,8 +571,8 @@ An array of additional flags to pass to the couchbase_exporter daemon:
 
 The version of couchbase_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_couchbase_exporter_blakelead_version: "0.5.0"
-    prometheus_couchbase_exporter_blakelead_src_version: "0.5.0"
+    prometheus_couchbase_exporter_blakelead_version: "0.5.2"
+    prometheus_couchbase_exporter_blakelead_src_version: "0.5.2"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9191:
 
@@ -681,8 +681,8 @@ An array of additional flags to pass to the graphite_exporter daemon:
 
 The version of graphite_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_graphite_exporter_version: "0.3.0"
-    prometheus_graphite_exporter_src_version: "v0.3.0"
+    prometheus_graphite_exporter_version: "0.4.1"
+    prometheus_graphite_exporter_src_version: "v0.4.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9108:
 

@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.7.5] - 2018-11-24
+
+### Changed
+ - Upgrade couchbase_exporter_blakelead v0.5.0 to v0.5.2
+ - Upgrade graphite_exporter v0.3.0 to v0.4.1
+
 ## [0.7.4] - 2018-11-18
 
 ### Fixed
