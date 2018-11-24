@@ -3,7 +3,7 @@
   become: true
   file:
     path: '{{ prometheus_software_binary }}'
-    mode: 0755
+    mode: '0755'
     owner: root
     group: '{{ prometheus_group }}'
 
@@ -14,19 +14,19 @@
   include_tasks: '_setup_firewall.yml'
   when: (prometheus_manage_client_firewalld|bool or prometheus_manage_client_iptables|bool) and prometheus_software_port and prometheus_server_ips
 
-- name: Test that {{ prometheus_software_service_name }}:{{ prometheus_software_port }} is accessible (software is running)
+- name: Test that {{ prometheus_software_service_name }} {{ inventory_hostname }}:{{ prometheus_software_instance_port | default(prometheus_software_port) }} is accessible (software is running)
   wait_for:
     host: '{{ prometheus_software_host | default("0.0.0.0", true) }}'
-    port: '{{ prometheus_software_port }}'
+    port: '{{ prometheus_software_instance_port | default(prometheus_software_port) }}'
     connect_timeout: 10
     state: started
     timeout: 30
-  when: prometheus_software_service_test|bool and prometheus_software_port
+  when: prometheus_software_service_test|bool and prometheus_software_instance_port | default(prometheus_software_port)
 
-- name: Test that {{ prometheus_software_service_name }}:{{ prometheus_software_port }} is accessible from the Prometheus servers
+- name: Test that {{ prometheus_software_service_name }} {{ inventory_hostname }}:{{ prometheus_software_instance_port | default(prometheus_software_port) }} is accessible from the Prometheus servers
   wait_for:
     host: '{{ inventory_hostname }}'
-    port: '{{ prometheus_software_port }}'
+    port: '{{ prometheus_software_instance_port | default(prometheus_software_port) }}'
     connect_timeout: 10
     state: started
     timeout: 30
@@ -34,7 +34,7 @@
   loop_control:
     loop_var: prometheus_server_name
   with_items: '{{ prometheus_servers }}'
-  when: prometheus_software_server_side_connect_test|bool and prometheus_software_port and prometheus_servers
+  when: prometheus_software_server_side_connect_test|bool and prometheus_software_instance_port | default(prometheus_software_port) and prometheus_servers
 
 - block:
     - name: Set {{ prometheus_software_name_version }} tgroup facts

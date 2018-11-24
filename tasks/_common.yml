@@ -26,7 +26,15 @@
       package:
         name: '{{ prometheus_prerequisite_packages }}'
         state: present
-  when: prometheus_prerequisite_packages is defined
+      when: prometheus_prerequisite_packages is defined
+
+    - name: Install 'sponge'
+      become: true
+      package:
+        name: '{{ prometheus_sponge_packages }}'
+        state: present
+      when: prometheus_install_sponge
+  when: prometheus_prerequisite_packages is defined or prometheus_install_sponge
 
 - name: Add the group "{{ prometheus_group }}"
   become: true
@@ -50,7 +58,7 @@
   file:
     path: '{{ prometheus_root_dir }}'
     state: directory
-    mode: 0755
+    mode: '0755'
     owner: root
     group: '{{ prometheus_group }}'
 
@@ -59,7 +67,7 @@
   file:
     path: '{{ root_base_directory }}'
     state: directory
-    mode: 0755
+    mode: '0755'
     owner: root
     group: '{{ prometheus_group }}'
   loop_control:
@@ -67,6 +75,7 @@
   with_items:
     - '{{ prometheus_etc_dir }}'
     - '{{ prometheus_exporters_dir }}'
+    - '{{ prometheus_script_directory }}'
 
 - name: Link {{ prometheus_etc_dir }} to /etc/prometheus (Optional)
   become: true
@@ -84,7 +93,7 @@
   file:
     path: '{{ prometheus_base_directory }}'
     state: directory
-    mode: 0755
+    mode: '0755'
     owner: '{{ prometheus_user }}'
     group: '{{ prometheus_group }}'
   loop_control:

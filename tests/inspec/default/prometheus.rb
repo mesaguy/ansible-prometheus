@@ -23,6 +23,13 @@ describe file('/opt/prometheus/etc') do
     its('group') { should eq 'prometheus' }
 end
 
+describe file('/opt/prometheus/scripts') do
+    it { should be_directory }
+    its('mode') { should cmp '0755' }
+    its('owner') { should eq 'root' }
+    its('group') { should eq 'prometheus' }
+end
+
 describe file('/opt/prometheus/tmp') do
     it { should be_directory }
     its('mode') { should cmp '0755' }

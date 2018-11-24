@@ -23,7 +23,7 @@
   file:
     path: '{{ prometheus_go_directory }}'
     state: directory
-    mode: 0755
+    mode: '0755'
     owner: root
     group: root
   loop_control:
@@ -38,7 +38,7 @@
     extra_opts: ['--strip-components=1']
     creates: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}/bin/go'
     dest: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}'
-    mode: 0755
+    mode: '0755'
     owner: root
     group: root
     src: 'https://storage.googleapis.com/golang/go{{ prometheus_go_version }}.{{ prometheus_architecture }}.tar.gz'

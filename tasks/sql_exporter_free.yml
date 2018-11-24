@@ -45,7 +45,7 @@
     dest: '{{ prometheus_etc_dir }}/sql_exporter_free.yml'
     owner: root
     group: root
-    mode: 0644
+    mode: '0644'
     backup: true
   register: prometheus_software_cfg
 

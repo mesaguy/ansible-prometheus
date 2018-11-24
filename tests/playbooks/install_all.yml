@@ -10,11 +10,7 @@
     - name: Install Prometheus tasks
       include_role:
         name: '../../../../ansible-prometheus'
-        #tasks_from: '{{ prometheus_component.path | regex_replace("\.yml$", "") }}'
-        tasks_from: '{{ prometheus_component }}'
+        tasks_from: '{{ prometheus_component.path | regex_replace("\.yml$", "") }}'
       loop_control:
         loop_var: prometheus_component
-      #with_items: "{{ tasks.files | sort(attribute='path') }}"
-      with_items:
-       - 'bigip_exporter_expressenab'
-       - 'iptables_exporter_retailnext'
+      with_items: "{{ tasks.files | sort(attribute='path') }}"

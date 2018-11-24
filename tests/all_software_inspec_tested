@@ -14,10 +14,13 @@ do
     check_for_file "tests/inspec/default/${f}.rb"
 done
 
+for s in $(grep -r text_collector_examples tasks/node_exporter.yml|sed -e "s/'//g" -e 's/"//g' -e 's/.*text_collector_examples\///g')
+do
+    check_for_file "tests/inspec/default/script_${s}.rb"
+done
+
 if [ "$EXIT" -eq "0" ] ; then
     echo "OK"
-else
-    echo "Tests are missing"
 fi
 
 exit $EXIT

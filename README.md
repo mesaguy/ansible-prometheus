@@ -5,7 +5,7 @@ Installs and manages [Prometheus server](https://prometheus.io), [Alertmanager](
 
 This role was designed to allow adding new exporters with ease. Regular releases ensure it always provides the latest Prometheus software.
 
-This role can also register client exporters with the Prometheus server/s automatically (see tgroup management below).
+This role can register client exporters with the Prometheus server/s automatically (see tgroup management below).
 
 ## Requirements
  - Ansible >= 2.5.1
@@ -140,6 +140,10 @@ Link the Prometheus etc directory to '/etc/prometheus'. The Prometheus etc direc
 Attempt to force the etc directory symlink referenced above:
 
     prometheus_link_etc_force: false
+
+Install the 'sponge' utility. [Recommended by the Prometheus project](https://github.com/prometheus/node_exporter/tree/master/text_collector_examples) when writing to node_exporter's textfile directory:
+
+    prometheus_install_sponge: false
 
 Purge old and now orphaned versions of software:
 
@@ -883,6 +887,34 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 910
 
     prometheus_node_exporter_host: "0.0.0.0"
     prometheus_node_exporter_port: 9100
+
+Node exporter textfiles scripts can be installed into the 'prometheus_script_directory' directory (/opt/prometheus/scripts by default) using the following parameters:
+
+    prometheus_script_directory: '/opt/prometheus/scripts'
+    # S.M.A.R.T. monitoring script
+    prometheus_script_smartmon: true
+
+Node exporter textfiles scripts will generally need to be run via cron and ideally via [sponge](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/README.md), for instance:
+
+    hosts: prometheus_clients
+    vars:
+      prometheus_components:
+       - node_exporter
+      prometheus_script_directory: /opt/prometheus/scripts'
+      prometheus_script_smartmon: true
+      prometheus_node_exporter_textfiles_directory: /opt/prometheus/etc/node_exporter_textfiles
+    roles:
+      - mesaguy.prometheus
+    tasks:
+      - name: Setup cronjob to run smartmon.sh
+        become: true
+        copy:
+          dest: /etc/cron.d/smartmon
+          # Requires 'sponge' be installed:
+          content: "*/5 * * * * root bash {{ prometheus_script_directory }}/smartmon.sh | sponge {{ prometheus_node_exporter_textfiles_directory }}/smartmon.prom\n"
+          mode: '0555'
+          owner: root
+          group: root
 
 ### Nvidia CPU exporter (BugRoger) configuration
 

@@ -6,6 +6,7 @@ prometheus_go_version: 1.11.2
 prometheus_link_etc: true
 prometheus_link_etc_force: false
 prometheus_purge_orphans: false
+prometheus_install_sponge: false
 prometheus_root_dir: '/opt/prometheus'
 prometheus_test_service_port: true
 
@@ -54,7 +55,7 @@ prometheus_tgroup_dir: '{{ prometheus_etc_dir }}/tgroups'
 prometheus_tgroup_dir_purge_orphans: false
 prometheus_tgroup_owner: '{{ prometheus_user }}'
 prometheus_tgroup_group: '{{ prometheus_group }}'
-prometheus_tgroup_mode: 0775
+prometheus_tgroup_mode: '0775'
 prometheus_tgroup_use_facts: false
 
 # tgroup settings to be overridden on a node-by-node basis
@@ -70,6 +71,41 @@ prometheus_managed_tgroup_dir: '{{ prometheus_tgroup_dir }}'
 # https://bugzilla.redhat.com/show_bug.cgi?id=1226509
 prometheus_systemd_pid: false
 
-# When testing
+
+# Directories to install scripts into
+prometheus_script_directory: '{{ prometheus_root_dir }}/scripts'
+prometheus_script_apt: false
+prometheus_script_apt_commit: '2978728b00af959f4680a5f1153ac4507a141b32'
+prometheus_script_apt_checksum: 'sha256:0f10d6945e0cd9278482f35b7858fcadefce4ab2efa57408c5cb562fa0a05210'
+prometheus_script_deleted_libraries: false
+prometheus_script_deleted_libraries_commit: '2d5fcdeef431a92b72c0a119912111bb9faa331f'
+prometheus_script_deleted_libraries_checksum: 'sha256:37d4466bb1e0f773aa0aa1952cae3fc97f8d8519b4657aad1b520ae624cd7a6b'
+prometheus_script_directory_size: false
+prometheus_script_directory_size_commit: '578d81474449b6a7957dcf29fc854ba00e637265'
+prometheus_script_directory_size_checksum: 'sha256:3311d2a14294787616d1ffbe29eebdb444a651ab6df7c138fea1b8a7a76d21b9'
+prometheus_script_ipmitool: false
+prometheus_script_ipmitool_commit: 'f56e8fcdf48ead56f1f149dbf1301ac028ef589b'
+prometheus_script_ipmitool_checksum: 'sha256:c69e8a9a9ad5c462887735edfc949cca857ad77fff4374e818aad609842f2727'
+prometheus_script_md_info: false
+prometheus_script_md_info_commit: '9e0aee8ae7db3e012af30dd43c77535375811d1c'
+prometheus_script_md_info_checksum: 'sha256:0dcfb6fb5b79f2870801fd2289a7b227f79c5b2113041215ee82473890a0286f'
+prometheus_script_mellanox_hca_temp: false
+prometheus_script_mellanox_hca_temp_commit: '2d5fcdeef431a92b72c0a119912111bb9faa331f'
+prometheus_script_mellanox_hca_temp_checksum: 'sha256:ad306bab5b1872d66be066eeeb355a38935bcbf9f3670a80697992e42eabb83f'
+prometheus_script_ntpd_metrics: false
+prometheus_script_ntpd_metrics_commit: '58c10628d86fa5ce6f2e57f59d7d3cbe401a5bf9'
+prometheus_script_ntpd_metrics_checksum: 'sha256:0088efb3749727f5d68e098cbcb352a713935f128613ba18cb05c46fc0ae6d22'
+prometheus_script_pacman: false
+prometheus_script_pacman_commit: '29d4629f55603001e25fea65e8cb593b86e58f47'
+prometheus_script_pacman_checksum: 'sha256:8a5b3c8b0d66380e29ae0ac29ae1617be0d4d26b8809627ca54f9b6a51f15d5a'
+prometheus_script_smartmon: false
+prometheus_script_smartmon_commit: '6aa5cfba6c42ea6a9bd83787b2e595984d91f8d6'
+prometheus_script_smartmon_checksum: 'sha256:9e1cb48690de26035ee8ba9df2bf4b90994d3bc042677f64b7d3bd4da22b6378'
+prometheus_script_storcli: false
+prometheus_script_storcli_commit: '1b98db9fa72abe93541fb1a7140388504601e303'
+prometheus_script_storcli_checksum: 'sha256:44375b10f361a5ae9be783ae51f7a0d23e1e26652eeeecdba0ce32cf4d2e021c'
+
+# For use when testing
+prometheus_script_enable_all: false
 prometheus_software_service_test: true
 prometheus_always_build_from_source: false

@@ -7,8 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
+ - 'sponge' is installed to facilitate getting text to node_exporter
+ - All text_collector_examples scripts can optionally be installed
  - Exporters
+   - 389ds_exporter_terrycain
+   - bigip_exporter_expressenab
    - nvidia_exporter_bugroger
+
+### Fixed
+ - Firewall rules are created correctly when there are multiple instances
+   of an exporter
 
 ## [0.7.2] - 2018-11-18
 

@@ -6,7 +6,7 @@
     src: ../templates/daemon-systemd.j2
     owner: root
     group: root
-    mode: 0644
+    mode: '0644'
   register: prometheus_software_init
 
 - name: Enable {{ prometheus_software_service_name }} service

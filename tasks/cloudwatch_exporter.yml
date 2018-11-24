@@ -44,7 +44,7 @@
     dest: '{{ prometheus_etc_dir }}/{{ prometheus_software_name }}.yml'
     owner: root
     group: root
-    mode: 0644
+    mode: '0644'
     backup: true
 
 - name: Include task to setup {{ prometheus_software_name_version }} service

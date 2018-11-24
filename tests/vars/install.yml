@@ -1,4 +1,7 @@
 ---
+prometheus_389ds_exporter_terrycain_extra_opts:
+  - '-ldap.pass=test'
+  - '-ipa-domain=test'
 prometheus_kafka_exporter_danielqsj_extra_opts:
   - '--kafka.server=127.0.0.1:9092'
 # Requires a Kafka server to test against..:
@@ -76,6 +79,21 @@ prometheus_process_exporter_ncabatoff_cfgs:
       exe:
         - /usr/local/bin/process-exporter
       cmdline: []
+prometheus_script_exporter_adhocteam_cfgs:
+  - name: TEST
+    user: prometheus
+    port: 19172
+    data:
+      scripts:
+        - name: success
+          script: sleep 5
+  - name: TEST2
+    user: nobody
+    port: 29172
+    data:
+      scripts:
+        - name: failure
+          script: sleep 2 && exit 1
 prometheus_grok_exporter_fstab_cfg: '{{ lookup("file", "../tests/files/grok_exporter_fstab.yml") }}'
 prometheus_kafka_exporter_danielqsj_service_test: false
 prometheus_mysqld_exporter_service_test: false
@@ -84,5 +102,6 @@ prometheus_node_exporter_extra_opts:
   - '--collector.systemd'
   - '--no-collector.zfs'
 prometheus_nvidia_gpu_exporter_mindprince_service_test: false
+prometheus_script_enable_all: true
 # There are no binaries:
 prometheus_zookeeper_exporter_infonova_fallback_to_build: true

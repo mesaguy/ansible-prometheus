@@ -4,7 +4,7 @@
   file:
     owner: '{{ prometheus_user }}'
     group: '{{ prometheus_group }}'
-    mode: 0750
+    mode: '0750'
     path: '{{ prometheus_build_directory }}'
     state: directory
   with_items:
@@ -76,7 +76,7 @@
     remote_src: true
     src: '{{ prometheus_software_src_dir }}/{{ prometheus_built_file }}'
     dest: '{{ prometheus_software_install_dir }}'
-    mode: 0755
+    mode: '0755'
     owner: root
     group: '{{ prometheus_group }}'
   with_items: '{{ prometheus_software_files | default([prometheus_software_binary_name], true) | default([prometheus_software_shortname], true) }}'

@@ -15,7 +15,7 @@
   get_url:
     owner: root
     group: '{{ prometheus_group }}'
-    mode: 0755
+    mode: '0755'
     url: '{{ prometheus_software_file_url }}'
     dest: '{{ prometheus_software_install_dir }}/{{ prometheus_software_binary_name }}'
 
