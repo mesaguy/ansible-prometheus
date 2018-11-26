@@ -1,0 +1,44 @@
+---
+- block:
+  - name: Include role mesaguy.prometheus setup task
+    include_tasks: _setup.yml
+  when: prometheus_setup_task_executed is not defined
+
+- name: Include smokeping_exporter (SuperQ) variable file
+  include_vars: exporters/smokeping_prober_superq.yml
+
+- name: Starting smokeping_exporter (SuperQ) install
+  set_fact:
+    prometheus_exporter: true
+    prometheus_software_binary_name: 'smokeping_prober'
+    prometheus_software_env_vars: '{{ prometheus_smokeping_prober_superq_env_vars | default({}) }}'
+    prometheus_software_extra_opts: '{{ prometheus_smokeping_prober_superq_extra_opts | default() }}'
+    prometheus_software_fallback_to_build: '{{ prometheus_smokeping_prober_superq_fallback_to_build | default(prometheus_fallback_to_build) }}'
+    prometheus_software_name: 'smokeping_prober_superq'
+    prometheus_software_version: '{{ prometheus_smokeping_prober_superq_version | default("0.1.0") }}'
+    prometheus_software_src_version: '{{ prometheus_smokeping_prober_superq_src_version | default("v0.1.0") }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_smokeping_prober_superq_jobname | default(prometheus_smokeping_prober_superq_default_tgroup_jobname) }}'
+    prometheus_software_description: 'Prometheus smokeping_exporter (superq), exporter for Smokeping metrics'
+    prometheus_software_documentation: 'https://github.com/superq/smokeping_exporter'
+    prometheus_software_host: '{{ prometheus_smokeping_prober_superq_host | default("0.0.0.0") }}'
+    prometheus_software_port: '{{ prometheus_smokeping_prober_superq_port | default(prometheus_smokeping_prober_superq_default_port) }}'
+    prometheus_software_runas: '{{ prometheus_smokeping_prober_superq_runas | default(prometheus_user) }}'
+    prometheus_software_shortname: 'smokeping_exporter'
+
+- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
+  set_fact:
+    prometheus_software_opts:
+      - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
+    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
+    prometheus_software_bin_url: 'https://github.com/SuperQ/smokeping_prober/releases/download/v{{ prometheus_software_version }}/smokeping_prober-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_src_dir_suffix: '/src/github.com/SuperQ/smokeping_prober'
+    prometheus_software_src_url: 'https://github.com/SuperQ/smokeping_prober.git'
+
+- name: Include task to perform installation of {{ prometheus_software_name_version }}
+  include_tasks: _install.yml
+
+- name: Include task to setup {{ prometheus_software_name_version }} service
+  include_tasks: _service.yml
+
+- name: Include task to perform post install cleanup of {{ prometheus_software_name_version }}
+  include_tasks: _post_install_cleanup.yml
