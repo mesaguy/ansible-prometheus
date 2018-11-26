@@ -1,0 +1,3 @@
+---
+- '-config.file={{ prometheus_etc_dir }}/{{ prometheus_software_name }}.{{ installer_instance.name }}.yml'
+- '-web.listen-address={{ prometheus_software_host }}:{{ installer_instance.port | default(prometheus_software_port) }}'
