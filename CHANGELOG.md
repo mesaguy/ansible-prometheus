@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
  - 'sponge' is installed to facilitate getting text to node_exporter
- - All text_collector_examples scripts can optionally be installed
+ - All text_collector_examples scripts can be installed
  - Exporters
    - 389ds_exporter_terrycain
    - bigip_exporter_expressenab
