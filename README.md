@@ -15,18 +15,18 @@ This role can register client exporters with the Prometheus server/s automatical
 ### Supported Operating Systems, Distributions, and Architectures
 This module is intended to support as many distributions and architectures as possible. The following table specifies which combinations are currently tested. Most exporters will also work on ARM architectures:
 
-| OS             | Release                          | Architectures     |
-|----------------|----------------------------------|-------------------|
-|Alpine          |3.2 through 3.8, edge             | x86_64 (amd64)    |
-|AmazonLinux     |1 and 2                           | x86_64 (amd64)    |
-|ArchLinux       |Current                           | x86_64 (amd64)    |
-|Enterprise Linux|6, 7                              | x86_64 (amd64)    |
-|Fedora          |20 through 28, rawhide            | x86_64 (amd64)    |
-|Gentoo (openrc) |Current                           | x86_64 (amd64)    |
-|Gentoo (systemd)|Current                           | x86_64 (amd64)    |
-|OpenSUSE        |13.1 through tumbleweed           | x86_64 (amd64)    |
-|Oracle Linux    |6, 7                              | x86_64 (amd64)    |
-|Ubuntu          |14.04, 16.04, 17.10, 18.04, 18.10 | x86_64 (amd64)    |
+| OS             | Release                                 | Architectures     |
+|----------------|-----------------------------------------|-------------------|
+|Alpine          |3.2 through 3.8, edge                    | x86_64 (amd64)    |
+|AmazonLinux     |1 and 2                                  | x86_64 (amd64)    |
+|ArchLinux       |Current                                  | x86_64 (amd64)    |
+|Enterprise Linux|6, 7                                     | x86_64 (amd64)    |
+|Fedora          |20 through 29, rawhide                   | x86_64 (amd64)    |
+|Gentoo (openrc) |Current                                  | x86_64 (amd64)    |
+|Gentoo (systemd)|Current                                  | x86_64 (amd64)    |
+|OpenSUSE        |13.1 through tumbleweed                  | x86_64 (amd64)    |
+|Oracle Linux    |6, 7                                     | x86_64 (amd64)    |
+|Ubuntu          |14.04, 16.04, 17.10, 18.04, 18.10, 19.04 | x86_64 (amd64)    |
 
 ### Supported Prometheus software
 The following core Prometheus software is supported in addition to the list of exporters below. This software is fully tested on all supported OS, distributions, and architectures.
@@ -572,8 +572,8 @@ An array of additional flags to pass to the couchbase_exporter daemon:
 
 The version of couchbase_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_couchbase_exporter_blakelead_version: "0.5.0"
-    prometheus_couchbase_exporter_blakelead_src_version: "0.5.0"
+    prometheus_couchbase_exporter_blakelead_version: "0.5.2"
+    prometheus_couchbase_exporter_blakelead_src_version: "0.5.2"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9191:
 
@@ -682,8 +682,8 @@ An array of additional flags to pass to the graphite_exporter daemon:
 
 The version of graphite_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_graphite_exporter_version: "0.3.0"
-    prometheus_graphite_exporter_src_version: "v0.3.0"
+    prometheus_graphite_exporter_version: "0.4.1"
+    prometheus_graphite_exporter_src_version: "v0.4.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9108:
 
