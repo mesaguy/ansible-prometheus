@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.7.6] - 2018-12-01
+
+### Changed
+ - Upgrade graphite_exporter v0.4.1 to v0.4.2
+ - Upgrade node_exporter v0.16.0 to v0.17.0
+
 ## [0.7.5] - 2018-11-24
 
 ### Changed

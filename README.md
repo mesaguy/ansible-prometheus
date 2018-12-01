@@ -681,8 +681,8 @@ An array of additional flags to pass to the graphite_exporter daemon:
 
 The version of graphite_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_graphite_exporter_version: "0.4.1"
-    prometheus_graphite_exporter_src_version: "v0.4.1"
+    prometheus_graphite_exporter_version: "0.4.2"
+    prometheus_graphite_exporter_src_version: "v0.4.2"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9108:
 
@@ -879,8 +879,8 @@ Common node_exporter variables can be defined as follows:
 
 The version of node_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_node_exporter_version: "0.16.0"
-    prometheus_node_exporter_src_version: "v0.16.0"
+    prometheus_node_exporter_version: "0.17.0"
+    prometheus_node_exporter_src_version: "v0.17.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9100:
 
