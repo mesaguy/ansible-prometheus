@@ -1029,8 +1029,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "0.22.1"
-    prometheus_redis_exporter_oliver006_src_version: "v0.22.1"
+    prometheus_redis_exporter_oliver006_version: "0.23.0"
+    prometheus_redis_exporter_oliver006_src_version: "v0.23.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 
