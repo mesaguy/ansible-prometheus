@@ -36,6 +36,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
    example) when using OpenRC
  - Fix PID generation for Upstart when there are multiple instances of an exporter
 
+## [0.7.7] - 2018-12-05
+
+### Changed
+ - Upgrade redis_exporter_oliver006 from v0.22.1 to v0.23.0
+
+## [0.7.6] - 2018-12-01
+
+### Changed
+ - Upgrade graphite_exporter v0.4.1 to v0.4.2
+ - Upgrade node_exporter v0.16.0 to v0.17.0
+
 ## [0.7.5] - 2018-11-24
 
 ### Changed
