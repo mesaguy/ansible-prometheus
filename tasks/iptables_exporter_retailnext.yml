@@ -10,6 +10,9 @@
 - name: Starting iptables_exporter (retailnext) install
   set_fact:
     prometheus_exporter: true
+    prometheus_software_systemd_options:
+      - 'CapabilityBoundingSet=CAP_DAC_READ_SEARCH CAP_NET_ADMIN CAP_NET_RAW'
+      - 'AmbientCapabilities=CAP_DAC_READ_SEARCH CAP_NET_ADMIN CAP_NET_RAW'
     prometheus_software_binary_name: 'iptables_exporter'
     prometheus_software_env_vars: '{{ prometheus_iptables_exporter_retailnext_env_vars | default({}) }}'
     prometheus_software_extra_opts: '{{ prometheus_iptables_exporter_retailnext_extra_opts | default() }}'

@@ -116,6 +116,8 @@
     # Command that can be run to validate a configuration file. This command
     # is added to services to be run ahead of starts/restarts/reloads
     prometheus_software_validation_command: ''
+    # Service's systemd specific options
+    prometheus_software_systemd_options: ''
     # Run tgroup configuration file creation from the perspective of a client
     # node, not from the perspective of a Prometheus server
     prometheus_tgroup_client_mode: false
