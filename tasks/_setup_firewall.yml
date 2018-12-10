@@ -28,3 +28,7 @@
     loop_var: prometheus_server_ip
   with_items: "{{ prometheus_server_ips }}"
   when: prometheus_manage_client_iptables|bool and prometheus_software_instance_port | default(prometheus_software_port) and prometheus_server_ips
+
+- name: Include task for iptables_raw firewall management
+  include_tasks: '_setup_firewall_iptables_raw.yml'
+  when: prometheus_manage_client_iptables_raw|bool and prometheus_software_instance_port | default(prometheus_software_port) and prometheus_server_ips
