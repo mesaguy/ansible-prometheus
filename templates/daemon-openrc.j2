@@ -15,10 +15,10 @@ pidfile="/var/run/prometheus-{{ prometheus_software_name }}/{{ prometheus_softwa
 {% endif -%}
 {% if prometheus_software_prefix_command is defined and prometheus_software_prefix_command %}
 command="{{ prometheus_software_prefix_command[0] }}"
-command_args="{{ prometheus_software_prefix_command[1:] | join(' ') }} {{ prometheus_software_binary }} {{ prometheus_software_command_args | join(' ') | replace ('"', '''') }}"
+command_args="{{ prometheus_software_prefix_command[1:] | join(' ') }} {{ prometheus_software_binary }} {{ prometheus_software_command_args | join(' ') | replace ('"', "'" ) }}"
 {% else %}
 command="{{ prometheus_software_binary }}"
-command_args="{{ prometheus_software_command_args | join(' ') | replace ('"', '''') }}"
+command_args="{{ prometheus_software_command_args | join(' ') | replace ('"', "'" ) }}"
 {% endif %}
 command_background=true
 {% if prometheus_software_supports_reload is defined and prometheus_software_supports_reload -%}

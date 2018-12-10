@@ -63,11 +63,13 @@ DAEMON={{ prometheus_software_prefix_command[0] }}
 {% set args = prometheus_software_command_args %}
 DAEMON={{ prometheus_software_binary }}
 {% endif -%}
-ARGS="{{ args | join(' ') | replace ('"', '''') }}"
+ARGS="{{ args | join(' ') | replace ('"', "'" ) }}"
 {% if args -%}
-COMMAND="$DAEMON {{ args | join(' ') | replace ('"', '''') }}"
+COMMAND="$DAEMON {{ args | join(' ') | replace ('"', "'" ) }}"
+COMMAND_UNQUOTED="$DAEMON {{ args | join(' ') | replace ('"', "" ) }}"
 {% else -%}
 COMMAND="$DAEMON"
+COMMAND_UNQUOTED="$DAEMON"
 {% endif -%}
 {% if installer_instance is defined and installer_instance and installer_instance.name -%}
 export PATH="${PATH:+$PATH:}/usr/sbin:/sbin"
@@ -125,7 +127,7 @@ start()
 	RETVAL=$?
 	if [ $RETVAL -eq 0 ];
 	then
-		ps -ef | grep "$COMMAND" | grep -v grep | awk '{print $2}' > $pidfile
+		ps -ef | grep -F "${COMMAND_UNQUOTED}" | grep -v grep | awk '{print $2}' > $pidfile
 		touch $lockfile && success || failure
 		echo
 	else
