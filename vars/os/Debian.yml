@@ -12,5 +12,7 @@ prometheus_prerequisite_packages:
  - ca-certificates
  - openssl
  - unzip
+prometheus_sponge_packages:
+ - moreutils  # For 'sponge'
 prometheus_testing_packages:
  - net-tools

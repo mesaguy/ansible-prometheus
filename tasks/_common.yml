@@ -33,7 +33,13 @@
       package:
         name: '{{ prometheus_sponge_packages }}'
         state: present
-      when: prometheus_install_sponge
+      when: prometheus_sponge_packages is defined and prometheus_install_sponge
+
+    - name: Warn that 'sponge' cannot be installed
+      debug:
+        msg: "'sponge' cannot be installed because no 'prometheus_sponge_packages' variable has been defined"
+      when: prometheus_sponge_packages is undefined
+
   when: prometheus_prerequisite_packages is defined or prometheus_install_sponge
 
 - name: Add the group "{{ prometheus_group }}"
