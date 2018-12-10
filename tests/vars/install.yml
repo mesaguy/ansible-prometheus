@@ -1,4 +1,5 @@
 ---
+prometheus_install_sponge: true
 prometheus_389ds_exporter_terrycain_extra_opts:
   - '-ldap.pass=test'
   - '-ipa-domain=test'
@@ -105,3 +106,5 @@ prometheus_nvidia_gpu_exporter_mindprince_service_test: false
 prometheus_script_enable_all: true
 # There are no binaries:
 prometheus_zookeeper_exporter_infonova_fallback_to_build: true
+prometheus_smokeping_prober_superq_extra_opts:
+  - 'localhost'

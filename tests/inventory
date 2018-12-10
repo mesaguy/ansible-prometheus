@@ -5,6 +5,7 @@ all:
         - node_exporter
         - prometheus
         - statsd_exporter
+    localhost:
     test:
       prometheus_additional_exporters:
        - name: docker

@@ -12,11 +12,29 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Exporters
    - 389ds_exporter_terrycain
    - bigip_exporter_expressenab
+   - iptables_exporter_retailnext
    - nvidia_exporter_bugroger
+   - openldap_exporter_tomcz
+   - openvpn_exporter_kumina
+   - ping_exporter_czerwonk
+   - script_exporter_adhocteam
+   - smokeping_prober_superq
+   - ssl_exporter_ribbybibby
+ - Test blackbox_exporter configurations when adding new config or reloading
+ - Test snmp_exporter configurations when adding new config or reloading
+
+### Changed
+ - Upgrade blackbox_exporter v0.12.0 to v0.13.0
+ - Upgrade pushgateway from v0.6.0 to v0.7.0
+ - Upgrade snmp_exporter v0.13.0 to v0.14.0
+ - Upgrade statsd_exporter v0.8.0 to v0.8.1
 
 ### Fixed
  - Firewall rules are created correctly when there are multiple instances
    of an exporter
+ - Support command line arguments that contain double quotes (like the node_exporter
+   example) when using OpenRC
+ - Fix PID generation for Upstart when there are multiple instances of an exporter
 
 ## [0.7.5] - 2018-11-24
 
