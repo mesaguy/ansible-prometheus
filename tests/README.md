@@ -54,3 +54,7 @@ Test group definitions, client and server styles
 Test tgroups with purge enabled
 
     KITCHEN_IDEMPOTENY_TEST=false KITCHEN_PLAYBOOK=tgroups_purge KITCHEN_INSPEC_SUITE=tgroups kitchen test archlinux --destroy=never
+
+Run Ansible manually against docker container, change port in example to what is seen in 'docker ps':
+
+    ansible-playbook -i tests/inventory --ssh-extra-args="-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i $(pwd)/.kitchen/docker_id_rsa -p 32995" --extra-vars "pipelining=True" tests/playbooks/install_all.yml -u kitchen -l localhost
