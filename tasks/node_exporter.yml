@@ -48,46 +48,46 @@
 - name: Set node_exporter script facts
   set_fact:
     prometheus_node_exporter_scripts:
-      -  name: apt
-         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_apt_commit }}/text_collector_examples/apt.sh'
-         checksum: '{{ prometheus_script_apt_checksum }}'
-         enabled: '{{ prometheus_script_apt }}'
-      -  name: deleted_libraries
-         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_deleted_libraries_commit }}/text_collector_examples/deleted_libraries.py'
-         checksum: '{{ prometheus_script_deleted_libraries_checksum }}'
-         enabled: '{{ prometheus_script_deleted_libraries }}'
-      -  name: directory_size
-         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_directory_size_commit }}/text_collector_examples/directory-size.sh'
-         checksum: '{{ prometheus_script_directory_size_checksum }}'
-         enabled: '{{ prometheus_script_directory_size }}'
-      -  name: ipmitool
-         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_ipmitool_commit }}/text_collector_examples/ipmitool'
-         checksum: '{{ prometheus_script_ipmitool_checksum }}'
-         enabled: '{{ prometheus_script_ipmitool }}'
-      -  name: md_info
-         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_md_info_commit }}/text_collector_examples/md_info.sh'
-         checksum: '{{ prometheus_script_md_info_checksum }}'
-         enabled: '{{ prometheus_script_md_info }}'
-      -  name: mellanox_hca_temp
-         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_mellanox_hca_temp_commit }}/text_collector_examples/mellanox_hca_temp'
-         checksum: '{{ prometheus_script_mellanox_hca_temp_checksum }}'
-         enabled: '{{ prometheus_script_mellanox_hca_temp }}'
-      -  name: ntpd_metrics
-         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_ntpd_metrics_commit }}/text_collector_examples/ntpd_metrics.py'
-         checksum: '{{ prometheus_script_ntpd_metrics_checksum }}'
-         enabled: '{{ prometheus_script_ntpd_metrics }}'
-      -  name: pacman
-         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_pacman_commit }}/text_collector_examples/pacman.sh'
-         checksum: '{{ prometheus_script_pacman_checksum }}'
-         enabled: '{{ prometheus_script_pacman }}'
-      -  name: smartmon
-         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_smartmon_commit }}/text_collector_examples/smartmon.sh'
-         checksum: '{{ prometheus_script_smartmon_checksum }}'
-         enabled: '{{ prometheus_script_smartmon }}'
-      -  name: storcli
-         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_storcli_commit }}/text_collector_examples/storcli.py'
-         checksum: '{{ prometheus_script_storcli_checksum }}'
-         enabled: '{{ prometheus_script_storcli }}'
+      - name: apt
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_apt_commit }}/text_collector_examples/apt.sh'
+        checksum: '{{ prometheus_script_apt_checksum }}'
+        enabled: '{{ prometheus_script_apt }}'
+      - name: deleted_libraries
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_deleted_libraries_commit }}/text_collector_examples/deleted_libraries.py'
+        checksum: '{{ prometheus_script_deleted_libraries_checksum }}'
+        enabled: '{{ prometheus_script_deleted_libraries }}'
+      - name: directory_size
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_directory_size_commit }}/text_collector_examples/directory-size.sh'
+        checksum: '{{ prometheus_script_directory_size_checksum }}'
+        enabled: '{{ prometheus_script_directory_size }}'
+      - name: ipmitool
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_ipmitool_commit }}/text_collector_examples/ipmitool'
+        checksum: '{{ prometheus_script_ipmitool_checksum }}'
+        enabled: '{{ prometheus_script_ipmitool }}'
+      - name: md_info
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_md_info_commit }}/text_collector_examples/md_info.sh'
+        checksum: '{{ prometheus_script_md_info_checksum }}'
+        enabled: '{{ prometheus_script_md_info }}'
+      - name: mellanox_hca_temp
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_mellanox_hca_temp_commit }}/text_collector_examples/mellanox_hca_temp'
+        checksum: '{{ prometheus_script_mellanox_hca_temp_checksum }}'
+        enabled: '{{ prometheus_script_mellanox_hca_temp }}'
+      - name: ntpd_metrics
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_ntpd_metrics_commit }}/text_collector_examples/ntpd_metrics.py'
+        checksum: '{{ prometheus_script_ntpd_metrics_checksum }}'
+        enabled: '{{ prometheus_script_ntpd_metrics }}'
+      - name: pacman
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_pacman_commit }}/text_collector_examples/pacman.sh'
+        checksum: '{{ prometheus_script_pacman_checksum }}'
+        enabled: '{{ prometheus_script_pacman }}'
+      - name: smartmon
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_smartmon_commit }}/text_collector_examples/smartmon.sh'
+        checksum: '{{ prometheus_script_smartmon_checksum }}'
+        enabled: '{{ prometheus_script_smartmon }}'
+      - name: storcli
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_storcli_commit }}/text_collector_examples/storcli.py'
+        checksum: '{{ prometheus_script_storcli_checksum }}'
+        enabled: '{{ prometheus_script_storcli }}'
 
 - name: Install node_exporter scripts
   include_tasks: _install_script.yml
