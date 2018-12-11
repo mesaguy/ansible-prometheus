@@ -267,6 +267,10 @@ Configure iptables rules to permit server IPs defined in a 'prometheus_server_ip
 
     prometheus_manage_client_iptables: true
 
+If [iptables_raw](https://github.com/Nordeus/ansible_iptables_raw) has been installed, you can enable the following variable:
+
+    prometheus_manage_client_iptables_raw: true
+
 This role can manage your Prometheus server 'target groups' (tgroups) automatically, dynamically creating tgroup files in a specified directory (/etc/prometheus/tgroups by default) for each client exporter.
 
 Automatic tgroup file management can be enabled for client side operation, server side operation, or both. In client mode, client's exporters are registered automatically on the Prometheus server specified in a 'prometheus_servers' array. In server mode, the inventory is parsed to determine which exporters are available on each host and *all* clients are registered with the server's specified in each client's 'prometheus_servers' array.
