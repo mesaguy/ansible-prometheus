@@ -96,8 +96,17 @@
     loop_var: prometheus_software_copy_dir
   when: prometheus_software_build_copy_dirs is defined and prometheus_software_build_copy_dirs
 
-- name: 'Cleanup {{ prometheus_software_build_dir }} directory from {{ prometheus_software_name_version }} build'
+- name: 'Delete {{ prometheus_tmp_dir }} directory following {{ prometheus_software_name_version }} build'
   become: true
   file:
-    path: '{{ prometheus_software_build_dir }}'
+    path: '{{ prometheus_tmp_dir }}'
     state: absent
+
+- name: 'Create {{ prometheus_tmp_dir }} directory'
+  become: true
+  file:
+    path: '{{ prometheus_tmp_dir }}'
+    state: directory
+    mode: '0755'
+    owner: '{{ prometheus_user }}'
+    group: '{{ prometheus_group }}'
