@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.0] - 2018-12-10
+
 ### Added
  - 'sponge' is installed to facilitate getting text to node_exporter
  - All text_collector_examples scripts can be installed
@@ -22,6 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
    - ssl_exporter_ribbybibby
  - Test blackbox_exporter configurations when adding new config or reloading
  - Test snmp_exporter configurations when adding new config or reloading
+ - Optionally add iptables firewall rules via iptables_raw module
 
 ### Changed
  - Upgrade blackbox_exporter v0.12.0 to v0.13.0
