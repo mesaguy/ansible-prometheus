@@ -88,7 +88,7 @@ All exporters are verified to install. Currently select modules receive testing 
 Numerous node_exporter textfiles scripts are supported and can be installed via the following variables. These scripts are installed under '/opt/prometheus/scripts' by default:
 
 | node_exporter textfiles script                                                                                              | Source                 | Enable variable                           |
-|-----------------------------------------------------------------------------------------------------------------------------|:----------------------:|:-----------------------------------------:|
+|-----------------------------------------------------------------------------------------------------------------------------|------------------------|-------------------------------------------|
 |[apt.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/apt.sh)                             | node_exporter examples | prometheus_script_apt: true               |
 |[deleted_libraries.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/deleted_libraries.py) | node_exporter examples | prometheus_script_deleted_libraries: true |
 |[directory-size.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/directory-size.sh)       | node_exporter examples | prometheus_script_directory_size: true    |
@@ -653,8 +653,8 @@ An array of additional flags to pass to the couchbase_exporter daemon:
 
 The version of couchbase_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_couchbase_exporter_blakelead_version: "0.5.2"
-    prometheus_couchbase_exporter_blakelead_src_version: "0.5.2"
+    prometheus_couchbase_exporter_blakelead_version: "0.6.0"
+    prometheus_couchbase_exporter_blakelead_src_version: "0.6.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9191:
 
@@ -1294,23 +1294,23 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 917
 
 ### Smokeping exporter (SuperQ) configuration
 
-To enable [smokeping_exporter by SuperQ](https://github.com/SuperQ/smokeping_prober) include role task: smokeping_exporter_SuperQ
+To enable [smokeping_exporter by SuperQ](https://github.com/SuperQ/smokeping_prober) include role task: smokeping_exporter_superq
 
 An array of additional flags to pass to the smokeping_exporter daemon. You must specify a list of IPs and DNS names to ping:
 
-    prometheus_smokeping_exporter_SuperQ_extra_opts:
+    prometheus_smokeping_exporter_superq_extra_opts:
     - 'localhost'
     - '8.8.4.4'
 
 The version of smokeping_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_smokeping_exporter_SuperQ_version: "0.1.0"
-    prometheus_smokeping_exporter_SuperQ_src_version: "v0.1.0"
+    prometheus_smokeping_exporter_superq_version: "0.1.0"
+    prometheus_smokeping_exporter_superq_src_version: "v0.1.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9374:
 
-    prometheus_smokeping_exporter_SuperQ_host: "0.0.0.0"
-    prometheus_smokeping_exporter_SuperQ_port: 9374
+    prometheus_smokeping_exporter_superq_host: "0.0.0.0"
+    prometheus_smokeping_exporter_superq_port: 9374
 
 ### SNMP exporter configuration
 
