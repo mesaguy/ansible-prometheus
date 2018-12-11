@@ -25,9 +25,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
  - Upgrade blackbox_exporter v0.12.0 to v0.13.0
+ - Upgrade couchbase_exporter_blakelead v0.5.2 to v0.6.0
  - Upgrade pushgateway from v0.6.0 to v0.7.0
  - Upgrade snmp_exporter v0.13.0 to v0.14.0
  - Upgrade statsd_exporter v0.8.0 to v0.8.1
+ - The prometheus tmp directory is deleted and remade after each build
+   to ensure it is clean for the next build
 
 ### Fixed
  - Firewall rules are created correctly when there are multiple instances
@@ -35,6 +38,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Support command line arguments that contain double quotes (like the node_exporter
    example) when using OpenRC
  - Fix PID generation for Upstart when there are multiple instances of an exporter
+ - Numerous builds under Alpine when using musl
 
 ## [0.7.7] - 2018-12-05
 
