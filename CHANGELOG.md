@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.1] - 2018-12-11
+
+### Changed
+ - Fix all references of 'smokeping_prober_superq' to 'smokeping_exporter_superq'
+
 ## [0.8.0] - 2018-12-10
 
 ### Added

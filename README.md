@@ -76,7 +76,7 @@ All exporters are verified to install. Currently select modules receive testing 
 |[rabbitmq_exporter_kbudde](https://github.com/kbudde/rabbitmq_exporter)                        | [usage](#rabbitmq-exporter-kbudde-configuration)            | kbudde        | Yes       |
 |[redis_exporter_oliver006](https://github.com/oliver006/redis_exporter)                        | [usage](#redis-exporter-kbudde-configuration)               | oliver006     | Yes       |
 |[script_exporter_adhocteam](https://github.com/adhocteam/script_exporter)                      | [usage](#script-exporter-adhocteam-configuration)           | adhocteam     | Yes       |
-|[smokeping_prober_superq](https://github.com/SuperQ/smokeping_prober)                          | [usage](#smokeping-exporter-SuperQ-configuration)           | SuperQ        | Yes       |
+|[smokeping_exporter_superq](https://github.com/SuperQ/smokeping_prober)                        | [usage](#smokeping-exporter-SuperQ-configuration)           | SuperQ        | Yes       |
 |[snmp_exporter](https://github.com/prometheus/snmp_exporter)                                   | [usage](#snmp-exporter-configuration)                       | prometheus    | Yes       |
 |[sql_exporter_free](https://github.com/free/sql_exporter)                                      | [usage](#sql-exporter-free-configuration)                   | free          | Yes       |
 |[squid_exporter_boynux](https://github.com/boynux/squid-exporter)                              | [usage](#squid-exporter-boynux-configuration)               | boynux        | Yes       |
@@ -145,7 +145,7 @@ prometheus_components:
  - rabbitmq_exporter_kbudde
  - redis_exporter_oliver006
  - script_exporter_adhocteam
- - smokeping_prober_superq
+ - smokeping_exporter_superq
  - snmp_exporter
  - sql_exporter_free
  - squid_exporter_boynux
@@ -445,6 +445,8 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 909
 ### 389ds exporter (terrycain) configuration
 
 To enable [389ds_exporter by terrycain](https://github.com/terrycain/389ds_exporter) include role task: 389ds_exporter_terrycain
+
+:warning: Your LDAP password is given to the exporter as a command line argument and is visible to all via 'ps', etc. This exporter does not support storing the LDAP password in a configuration file. If access to the 389ds server is sufficiently limited, then this security exposure is reduced, but still present.
 
 An array of additional flags to pass to the 389ds_exporter daemon (ie):
 
