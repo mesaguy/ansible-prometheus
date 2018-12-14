@@ -534,7 +534,7 @@ To enable [blackbox_exporter](https://github.com/prometheus/blackbox_exporter) i
 
 The configuration content. The example below utilizes a file named 'blackbox_exporter.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
 
-    prometheus_blackbox_exporter_cfg: '{{ lookup("file", "../files/blackbox_exporter.yml") | from_yaml) }}'
+    prometheus_blackbox_exporter_cfg: '{{ lookup("file", "../files/blackbox_exporter.yml") | from_yaml }}'
 
 Alternatively, the configuration file can be defined directly:
 
@@ -574,7 +574,7 @@ To enable [cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporte
 
 The configuration content. The example below utilizes a file named 'cloudwatch_exporter.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
 
-    prometheus_cloudwatch_exporter_cfg: '{{ lookup("file", "../files/cloudwatch_exporter.yml") | from_yaml) }}'
+    prometheus_cloudwatch_exporter_cfg: '{{ lookup("file", "../files/cloudwatch_exporter.yml") | from_yaml }}'
 
 Alternatively, the configuration file can be defined directly:
 
@@ -750,7 +750,7 @@ To enable [graphite_exporter](https://github.com/prometheus/graphite_exporter) i
 
 The configuration content. The example below utilizes a file named 'graphite_exporter.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
 
-    prometheus_graphite_exporter_cfg: '{{ lookup("file", "../files/graphite_exporter.yml") | from_yaml) }}'
+    prometheus_graphite_exporter_cfg: '{{ lookup("file", "../files/graphite_exporter.yml") | from_yaml }}'
 
 Alternatively, the configuration file can be defined directly:
 
@@ -783,7 +783,7 @@ To enable [grok_exporter by fstab](https://github.com/fstab/grok_exporter) inclu
 
 The configuration content. The example below utilizes a file named 'grok_exporter_fstab.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
 
-    prometheus_grok_exporter_fstab_cfg: '{{ lookup("file", "../files/grok_exporter_fstab.yml") | from_yaml) }}'
+    prometheus_grok_exporter_fstab_cfg: '{{ lookup("file", "../files/grok_exporter_fstab.yml") | from_yaml }}'
 
 Alternatively, the configuration file can be defined directly:
 
@@ -1345,7 +1345,7 @@ To enable [sql_exporter by free](https://github.com/free/sql_exporter) include r
 
 The configuration content. The example below utilizes a file named 'sql_exporter_free.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
 
-    prometheus_sql_exporter_free_cfg: '{{ lookup("file", "../files/sql_exporter_free.yml") | from_yaml) }}'
+    prometheus_sql_exporter_free_cfg: '{{ lookup("file", "../files/sql_exporter_free.yml") | from_yaml }}'
 
 Alternatively, the configuration file can be defined directly:
 
@@ -1425,7 +1425,7 @@ To enable [statsd_exporter](https://github.com/prometheus/statsd_exporter) inclu
 
 The configuration content. The example below utilizes a file named 'statsd_exporter.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
 
-    prometheus_statsd_exporter_cfg: '{{ lookup("file", "../files/statsd_exporter.yml") | from_yaml) }}'
+    prometheus_statsd_exporter_cfg: '{{ lookup("file", "../files/statsd_exporter.yml") | from_yaml }}'
 
 Alternatively, the configuration file can be defined directly:
 
