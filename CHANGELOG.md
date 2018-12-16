@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
  - Upgrade Go from v1.11.2 to v1.11.3
  - Upgrade Go from v1.11.3 to v1.11.4
+ - Install capabilities libraries where necessary to allow the following exporters to work without running as root:
+   - blackbox_exporter
+   - ping_exporter_czerwonk
+   - smokeping_exporter_superq
 
 ### Fixed
  - Building bind_exporter_digitalocean on EL7 with SELinux enabled
