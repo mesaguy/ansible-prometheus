@@ -1097,10 +1097,6 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 917
 
 To enable [ping_exporter by czerwonk](https://github.com/czerwonk/ping_exporter) include role task: ping_exporter_czerwonk
 
-This exporter must currently be run as root:
-
-    prometheus_software_runas: root
-
 The ping_exporter can be configured by defining the prometheus_ping_exporter_czerwonk_cfg variable:
 
     prometheus_ping_exporter_czerwonk_cfg:
