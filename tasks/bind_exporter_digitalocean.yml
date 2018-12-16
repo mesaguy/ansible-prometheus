@@ -14,6 +14,7 @@
     prometheus_software_env_vars: '{{ prometheus_bind_exporter_digitalocean_env_vars | default({}) }}'
     prometheus_software_extra_opts: '{{ prometheus_bind_exporter_digitalocean_extra_opts | default () }}'
     prometheus_software_fallback_to_build: '{{ prometheus_bind_exporter_digitalocean_fallback_to_build | default(prometheus_fallback_to_build) }}'
+    prometheus_software_makefile_make_command: 'make build'
     prometheus_software_name: bind_exporter_digitalocean
     prometheus_software_version: '{{ prometheus_bind_exporter_digitalocean_src_version | default("v0.2.0-dev") }}'
     prometheus_software_tgroup_jobname: '{{ prometheus_bind_exporter_digitalocean_jobname | default(prometheus_bind_exporter_digitalocean_default_tgroup_jobname) }}'
