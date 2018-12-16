@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.2] - 2018-12-16
+
 ### Changed
  - Upgrade Go from v1.11.2 to v1.11.3
  - Upgrade Go from v1.11.3 to v1.11.4
@@ -16,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
  - Building bind_exporter_digitalocean on EL7 with SELinux enabled
+ - Fix firewall management when more than one exporter is enabled
 
 ## [0.8.1] - 2018-12-11
 
