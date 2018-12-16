@@ -1,5 +1,7 @@
 ---
 prometheus_shell: /usr/bin/nologin
+prometheus_capabilites_packages:
+ - which
 prometheus_go_compile_tools:
  - curl
  - gcc
@@ -15,6 +17,5 @@ prometheus_prerequisite_packages:
 prometheus_sponge_packages:
  - moreutils  # For 'sponge'
 prometheus_testing_packages:
- - which
  - net-tools
  - procps-ng

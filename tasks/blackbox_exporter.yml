@@ -11,6 +11,9 @@
   set_fact:
     prometheus_exporter: true
     prometheus_software_binary_name: 'blackbox_exporter'
+    prometheus_software_capabilities:
+      blackbox_exporter:
+        - cap_net_raw+ep
     prometheus_software_env_vars: '{{ prometheus_blackbox_exporter_env_vars | default({}) }}'
     prometheus_software_extra_opts: '{{ prometheus_blackbox_exporter_extra_opts | default () }}'
     # Do not perform tests, tests only succeed where IPv6 is available

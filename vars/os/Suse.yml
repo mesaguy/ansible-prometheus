@@ -1,5 +1,8 @@
 ---
 prometheus_shell: /sbin/nologin
+prometheus_capabilites_packages:
+ - libcap-progs
+ - which
 prometheus_go_compile_tools:
  - curl
  - gcc
@@ -15,4 +18,3 @@ prometheus_sponge_packages:
 prometheus_testing_packages:
  - net-tools
  - net-tools-deprecated
- - which

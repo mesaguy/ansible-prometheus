@@ -34,13 +34,6 @@
   changed_when: false
   when: ansible_os_family == 'Debian'
 
-- name: Create test log file
-  become: true
-  copy:
-    dest: /var/log/test.log
-    content: "{{ ansible_date_time.iso8601 }} This is a test\n"
-    force: false
-
 - name: Workaround for OverlayFS on Fedora 20 and 21
   become: true
   shell: 'touch /var/lib/rpm/*'
@@ -94,3 +87,10 @@
     loop_var: prometheus_testing_package
   with_items: "{{ prometheus_testing_packages }}"
   when: prometheus_testing_packages is defined
+
+- name: Create test log file
+  become: true
+  copy:
+    dest: /var/log/test.log
+    content: "{{ ansible_date_time.iso8601 }} This is a test\n"
+    force: false

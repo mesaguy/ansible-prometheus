@@ -1,5 +1,7 @@
 ---
 prometheus_shell: /sbin/nologin
+prometheus_capabilites_packages:
+ - sys-libs/libcap
 prometheus_go_compile_tools:
  - app-arch/gzip
  - dev-vcs/git

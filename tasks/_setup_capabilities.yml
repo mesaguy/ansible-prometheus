@@ -1,0 +1,18 @@
+---
+- name: Include task to install capabilites
+  include_tasks: _install_capabilities.yml
+  when:
+   - prometheus_capabilities_install_task_executed is undefined
+   - prometheus_software_capabilities is defined
+   - prometheus_software_capabilities
+
+- name: 'Set capabilites for {{ prometheus_software_name_version }} on {{ prometheus_software_install_dir }}/{{ prometheus_software_capabilities_file }}'
+  become: true
+  capabilities:
+    path: '{{ prometheus_software_install_dir }}/{{ prometheus_software_capabilities_file }}'
+    capability: '{{ prometheus_software_capability }}'
+    state: present
+  loop_control:
+    loop_var: prometheus_software_capability
+  with_items: '{{ prometheus_software_capabilities[prometheus_software_capabilities_file] }}'
+  when: prometheus_software_capabilities_present.rc == 0

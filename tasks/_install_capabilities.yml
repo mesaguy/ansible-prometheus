@@ -1,0 +1,20 @@
+---
+- name: Install capabilities packages
+  become: true
+  package:
+    name: '{{ prometheus_capabilites_package }}'
+    state: installed
+  loop_control:
+    loop_var: prometheus_capabilites_package
+  with_items: '{{ prometheus_capabilites_packages }}'
+  when: prometheus_capabilites_packages is defined and prometheus_capabilites_packages
+
+- name: Search for 'setcap' capabilities binary
+  command: which setcap
+  ignore_errors: true
+  changed_when: false
+  register: prometheus_software_capabilities_present
+
+- name: Define capabilities install as complete
+  set_fact:
+    prometheus_capabilities_install_task_executed: true

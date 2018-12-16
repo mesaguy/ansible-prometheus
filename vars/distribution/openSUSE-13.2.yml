@@ -1,5 +1,8 @@
 ---
 prometheus_shell: /sbin/nologin
+prometheus_capabilites_packages:
+ - libcap-progs
+ - which
 prometheus_go_compile_tools:
  - curl
  - gcc
