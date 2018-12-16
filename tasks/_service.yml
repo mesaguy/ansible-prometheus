@@ -13,9 +13,9 @@
 - name: Include task to setup firewall rules for {{ prometheus_software_name }}
   include_tasks: '_setup_firewall.yml'
   when:
-   - (prometheus_manage_client_firewalld|bool or prometheus_manage_client_iptables|bool or prometheus_manage_client_iptables_raw|bool)
-   - prometheus_software_instance_port|default(prometheus_software_port, true)
-   - prometheus_server_ips
+    - (prometheus_manage_client_firewalld|bool or prometheus_manage_client_iptables|bool or prometheus_manage_client_iptables_raw|bool)
+    - prometheus_software_instance_port|default(prometheus_software_port, true)
+    - prometheus_server_ips
 
 - name: Test that {{ prometheus_software_service_name }} {{ inventory_hostname }}:{{ prometheus_software_instance_port | default(prometheus_software_port, true) }} is accessible (software is running)
   wait_for:
@@ -25,8 +25,8 @@
     state: started
     timeout: 30
   when:
-   - prometheus_software_service_test|bool
-   - prometheus_software_instance_port|default(prometheus_software_port, true)
+    - prometheus_software_service_test|bool
+    - prometheus_software_instance_port|default(prometheus_software_port, true)
 
 - name: Test that {{ prometheus_software_service_name }} {{ inventory_hostname }}:{{ prometheus_software_instance_port | default(prometheus_software_port, true) }} is accessible from the Prometheus servers
   wait_for:
@@ -40,9 +40,9 @@
     loop_var: prometheus_server_name
   with_items: '{{ prometheus_servers }}'
   when:
-   - prometheus_software_server_side_connect_test|bool
-   - prometheus_software_instance_port|default(prometheus_software_port, true)
-   - prometheus_servers
+    - prometheus_software_server_side_connect_test|bool
+    - prometheus_software_instance_port|default(prometheus_software_port, true)
+    - prometheus_servers
 
 - block:
     - name: Set {{ prometheus_software_name_version }} tgroup facts
@@ -57,6 +57,6 @@
     - name: Include task to configure {{ prometheus_software_name }} tgroup files on Prometheus servers
       include_tasks: _setup_client_tgroup.yml
   when:
-   - prometheus_exporter|bool
-   - prometheus_servers
-   - prometheus_manage_client_tgroups|bool
+    - prometheus_exporter|bool
+    - prometheus_servers
+    - prometheus_manage_client_tgroups|bool
