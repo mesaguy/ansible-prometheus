@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+ - Prefer Prometheus' roles instance of Go over any system version of Go
+ - Fix GOROOT env variable in cases where multiple versions of Go are installed
+
 ## [0.8.2] - 2018-12-16
 
 ### Changed
