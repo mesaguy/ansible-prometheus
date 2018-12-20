@@ -381,8 +381,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.5.0"
-    prometheus_src_version: "v2.5.0"
+    prometheus_version: "2.6.0"
+    prometheus_src_version: "v2.6.0"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -471,7 +471,7 @@ To enable [apache_exporter by Lusitaniae](https://github.com/Lusitaniae/apache_e
 An array of additional flags to pass to the apache_exporter daemon (ie):
 
     prometheus_apache_exporter_lusitaniae_extra_opts:
-      - '-scrape_uri="http://localhost/server-status/?auto"'
+      - '-scrape_uri=http://localhost/server-status/?auto'
 
 The version of apache_exporter to install. The source version defines the version as specified in version control:
 
