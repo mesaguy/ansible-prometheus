@@ -10,7 +10,9 @@
   when: prometheus_capabilites_packages is defined and prometheus_capabilites_packages
 
 - name: Search for 'setcap' capabilities binary
-  command: which setcap
+  shell: which setcap
+  environment:
+    PATH: '/sbin:/usr/sbin:{{ ansible_env.PATH }}'
   ignore_errors: true
   changed_when: false
   register: prometheus_software_capabilities_present

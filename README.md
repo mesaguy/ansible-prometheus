@@ -90,6 +90,7 @@ Numerous node_exporter textfiles scripts are supported and can be installed via 
 | node_exporter textfiles script                                                                                              | Source                 | Enable variable                           |
 |-----------------------------------------------------------------------------------------------------------------------------|------------------------|-------------------------------------------|
 |[apt.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/apt.sh)                             | node_exporter examples | prometheus_script_apt: true               |
+|[btrfs_stats.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/btrfs_stats.py)             | node_exporter examples | prometheus_script_btrfs_stats: true       |
 |[deleted_libraries.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/deleted_libraries.py) | node_exporter examples | prometheus_script_deleted_libraries: true |
 |[directory-size.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/directory-size.sh)       | node_exporter examples | prometheus_script_directory_size: true    |
 |[ipmitool](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/ipmitool)                         | node_exporter examples | prometheus_script_ipmitool: true          |
@@ -659,8 +660,8 @@ An array of additional flags to pass to the couchbase_exporter daemon:
 
 The version of couchbase_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_couchbase_exporter_blakelead_version: "0.6.0"
-    prometheus_couchbase_exporter_blakelead_src_version: "0.6.0"
+    prometheus_couchbase_exporter_blakelead_version: "0.7.0"
+    prometheus_couchbase_exporter_blakelead_src_version: "0.7.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9191:
 
@@ -1246,8 +1247,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "0.23.0"
-    prometheus_redis_exporter_oliver006_src_version: "v0.23.0"
+    prometheus_redis_exporter_oliver006_version: "0.25.0"
+    prometheus_redis_exporter_oliver006_src_version: "v0.25.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 

@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+ - New 'btrfs_stats.py' text_collector_examples scripts can be installed
+
+### Changed
+ - Upgrade couchbase_exporter_blakelead from v0.6.0 to v0.7.0
+ - Upgrade redis_exporter_oliver006 from v0.23.0 to v0.25.0
+
+### Fixed
+ - Use Ansible 'shell' module and expand paths when looking for 'setcap' binary
+   when validating 'setcap' installation. Binary is sometimes outside of an
+   unprivileged user's path
+
 ## [0.8.3] - 2018-12-19
 
 ### Changed

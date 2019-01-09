@@ -52,6 +52,10 @@
         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_apt_commit }}/text_collector_examples/apt.sh'
         checksum: '{{ prometheus_script_apt_checksum }}'
         enabled: '{{ prometheus_script_apt }}'
+      - name: btrfs_stats
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_btrfs_stats_commit }}/text_collector_examples/btrfs_stats.py'
+        checksum: '{{ prometheus_script_btrfs_stats_checksum }}'
+        enabled: '{{ prometheus_script_btrfs_stats }}'
       - name: deleted_libraries
         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_deleted_libraries_commit }}/text_collector_examples/deleted_libraries.py'
         checksum: '{{ prometheus_script_deleted_libraries_checksum }}'
