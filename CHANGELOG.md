@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.4] - 2019-01-08
+
 ### Added
  - New 'btrfs_stats.py' text_collector_examples scripts can be installed
 
