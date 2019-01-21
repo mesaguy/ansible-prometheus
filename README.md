@@ -382,8 +382,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.6.0"
-    prometheus_src_version: "v2.6.0"
+    prometheus_version: "2.6.1"
+    prometheus_src_version: "v2.6.1"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -831,8 +831,8 @@ An array of additional flags to pass to the haproxy_exporter daemon:
 
 The version of haproxy_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_haproxy_exporter_version: "0.9.0"
-    prometheus_haproxy_exporter_src_version: "v0.9.0"
+    prometheus_haproxy_exporter_version: "0.10.0"
+    prometheus_haproxy_exporter_src_version: "v0.10.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9101:
 
@@ -905,7 +905,7 @@ prometheus_jmx_cfgs:
 
 The version of jmx_exporter to install:
 
-    prometheus_jmx_exporter_version: "0.3.1"
+    prometheus_jmx_exporter_version: "0.11.0"
 
 ### Kafka exporter (danielqsj) configuration
 
@@ -1247,8 +1247,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "0.25.0"
-    prometheus_redis_exporter_oliver006_src_version: "v0.25.0"
+    prometheus_redis_exporter_oliver006_version: "0.26.0"
+    prometheus_redis_exporter_oliver006_src_version: "v0.26.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 
@@ -1371,8 +1371,8 @@ An array of additional flags to pass to the sql_exporter daemon:
 
 The version of sql_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_sql_exporter_free_version: "0.4"
-    prometheus_sql_exporter_free_src_version: "0.4"
+    prometheus_sql_exporter_free_version: "0.5"
+    prometheus_sql_exporter_free_src_version: "0.5"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9399:
 

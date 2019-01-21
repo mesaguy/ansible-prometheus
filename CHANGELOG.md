@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+ - Upgrade Prometheus from v2.6.0 to v2.6.1
+ - Upgrade haproxy_exporter from v0.9.0 to v0.10.0
+ - Upgrade jmx_exporter from v0.3.1 to v0.11.0
+ - Upgrade sql_exporter_free from v0.4 to v0.5
+ - Upgrade redis_exporter_oliver006 from v0.25.0 to v0.26.0
+
 ## [0.8.4] - 2019-01-08
 
 ### Added
