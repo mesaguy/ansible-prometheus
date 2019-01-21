@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.5] - 2019-01-20
+
 ### Changed
  - Upgrade Prometheus from v2.6.0 to v2.6.1
  - Upgrade haproxy_exporter from v0.9.0 to v0.10.0
