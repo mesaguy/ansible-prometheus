@@ -208,7 +208,7 @@ If installing a Prometheus application binary fails, fall back to installing the
 
 Go version to use when building Prometheus software:
 
-    prometheus_go_version: 1.11.1
+    prometheus_go_version: 1.11.5
 
 The Prometheus etc directory, defaults to '/opt/prometheus/etc':
 
@@ -415,8 +415,8 @@ An array of additional flags to pass to the alertmanager daemon:
 
 The version of Alertmanager to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "0.15.3"
-    prometheus_src_version: "v0.15.3"
+    prometheus_alertmanager_version: "0.16.0"
+    prometheus_alertmanager_version_src_version: "v0.16.0"
 
 Where to store Alertmanager's data, defaults to /opt/prometheus/var/alertmanager
 
@@ -1247,8 +1247,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "0.26.0"
-    prometheus_redis_exporter_oliver006_src_version: "v0.26.0"
+    prometheus_redis_exporter_oliver006_version: "0.27.0"
+    prometheus_redis_exporter_oliver006_src_version: "v0.27.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 
