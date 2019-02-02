@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.7] - 2019-02-02
+ - Upgrade alertmanager from v0.16.0 to v0.16.1
+ - Upgrade Prometheus from v2.6.1 to v2.7.1
+ - Upgrade redis_exporter_oliver006 from v0.27.0 to v0.28.0
+
 ## [0.8.6] - 2019-01-24
 
  - Upgrade Go from v1.11.4 to v1.11.5

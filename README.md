@@ -382,8 +382,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.6.1"
-    prometheus_src_version: "v2.6.1"
+    prometheus_version: "2.7.1"
+    prometheus_src_version: "v2.7.1"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -415,8 +415,8 @@ An array of additional flags to pass to the alertmanager daemon:
 
 The version of Alertmanager to install. The source version defines the version as specified in version control:
 
-    prometheus_alertmanager_version: "0.16.0"
-    prometheus_alertmanager_version_src_version: "v0.16.0"
+    prometheus_alertmanager_version: "0.16.1"
+    prometheus_alertmanager_version_src_version: "v0.16.1"
 
 Where to store Alertmanager's data, defaults to /opt/prometheus/var/alertmanager
 
@@ -1247,8 +1247,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "0.27.0"
-    prometheus_redis_exporter_oliver006_src_version: "v0.27.0"
+    prometheus_redis_exporter_oliver006_version: "0.28.0"
+    prometheus_redis_exporter_oliver006_src_version: "v0.28.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 
