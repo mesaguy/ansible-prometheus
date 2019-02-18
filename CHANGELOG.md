@@ -6,13 +6,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.8] - 2019-02-17
+
+### Changed
+ - Upgrade ssl_exporter_ribbybibby from v0.2.0 to v0.3.0
+ - Upgrade snmp_exporter v0.14.0 to v0.15.0
+ - Upgrade smartmon text script to commit 1ba436e1949c7ab8af83642dc973cb30b118966a
+
+### Added
+ - New 'md_info_detail' text_collector_examples script can be installed
+
 ## [0.8.7] - 2019-02-02
+
+### Changed
  - Upgrade alertmanager from v0.16.0 to v0.16.1
  - Upgrade Prometheus from v2.6.1 to v2.7.1
  - Upgrade redis_exporter_oliver006 from v0.27.0 to v0.28.0
 
 ## [0.8.6] - 2019-01-24
 
+### Changed
  - Upgrade Go from v1.11.4 to v1.11.5
  - Upgrade alertmanager from v0.15.3 to v0.16.0
  - Upgrade redis_exporter_oliver006 from v0.26.0 to v0.27.0
@@ -29,7 +42,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.8.4] - 2019-01-08
 
 ### Added
- - New 'btrfs_stats.py' text_collector_examples scripts can be installed
+ - New 'btrfs_stats.py' text_collector_examples script can be installed
 
 ### Changed
  - Upgrade couchbase_exporter_blakelead from v0.6.0 to v0.7.0

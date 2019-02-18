@@ -72,6 +72,10 @@
         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_md_info_commit }}/text_collector_examples/md_info.sh'
         checksum: '{{ prometheus_script_md_info_checksum }}'
         enabled: '{{ prometheus_script_md_info }}'
+      - name: md_info_detail
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_md_info_detail_commit }}/text_collector_examples/md_info_detail.sh'
+        checksum: '{{ prometheus_script_md_info_detail_checksum }}'
+        enabled: '{{ prometheus_script_md_info_detail }}'
       - name: mellanox_hca_temp
         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_mellanox_hca_temp_commit }}/text_collector_examples/mellanox_hca_temp'
         checksum: '{{ prometheus_script_mellanox_hca_temp_checksum }}'

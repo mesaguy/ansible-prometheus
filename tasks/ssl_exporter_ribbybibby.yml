@@ -16,8 +16,8 @@
     # Do not perform tests, tests only succeed where IPv6 is available
     prometheus_software_fallback_to_build: '{{ prometheus_ssl_exporter_fallback_to_build | default(prometheus_fallback_to_build) }}'
     prometheus_software_name: 'ssl_exporter_ribbybibby'
-    prometheus_software_version: '{{ prometheus_ssl_exporter_version | default("0.2.0") }}'
-    prometheus_software_src_version: '{{ prometheus_ssl_exporter_src_version | default("v0.2.0") }}'
+    prometheus_software_version: '{{ prometheus_ssl_exporter_version | default("0.3.0") }}'
+    prometheus_software_src_version: '{{ prometheus_ssl_exporter_src_version | default("v0.3.0") }}'
     prometheus_software_tgroup_jobname: '{{ prometheus_ssl_exporter_ribbybibby_jobname | default(prometheus_ssl_exporter_ribbybibby_default_tgroup_jobname) }}'
     prometheus_software_description: 'Prometheus ssl_exporter, SSL Certificate Exporter'
     prometheus_software_documentation: 'https://github.com/ribbybibby/ssl_exporter'

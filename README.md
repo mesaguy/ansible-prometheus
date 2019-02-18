@@ -95,6 +95,7 @@ Numerous node_exporter textfiles scripts are supported and can be installed via 
 |[directory-size.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/directory-size.sh)       | node_exporter examples | prometheus_script_directory_size: true    |
 |[ipmitool](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/ipmitool)                         | node_exporter examples | prometheus_script_ipmitool: true          |
 |[md_info](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/md_info.sh)                        | node_exporter examples | prometheus_script_md_info: true           |
+|[md_info_detail](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/md_info_detail.sh)          | node_exporter examples | prometheus_script_md_info_detail: true    |
 |[mellanox_hca_temp](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/mellanox_hca_temp)       | node_exporter examples | prometheus_script_mellanox_hca_temp: true |
 |[ntpd_metrics.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/ntpd_metrics.py)           | node_exporter examples | prometheus_script_ntpd_metrics: true      |
 |[pacman.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/pacman.sh)                       | node_exporter examples | prometheus_script_pacman: true            |
@@ -1328,8 +1329,8 @@ An array of additional flags to pass to the snmp_exporter daemon:
     prometheus_snmp_exporter_extra_opts: []
 
 The version of snmp_exporter to install. The source version defines the version as specified in version control:
-    prometheus_snmp_exporter_version: "0.14.0"
-    prometheus_snmp_exporter_src_version: "v0.14.0"
+    prometheus_snmp_exporter_version: "0.15.0"
+    prometheus_snmp_exporter_src_version: "v0.15.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9116:
 
@@ -1408,8 +1409,8 @@ An array of additional flags to pass to the ssl_exporter daemon:
 
 The version of ssl_exporter to install:
 
-    prometheus_ssl_exporter_ribbybibby_version: "0.2.0"
-    prometheus_ssl_exporter_ribbybibby_src_version: "0.2.0"
+    prometheus_ssl_exporter_ribbybibby_version: "0.3.0"
+    prometheus_ssl_exporter_ribbybibby_src_version: "0.3.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9219:
 
