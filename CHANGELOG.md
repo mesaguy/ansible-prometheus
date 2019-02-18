@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.8.8] - 2019-02-17
 
 ### Changed
+ - Rename couchbase_exporter_blakelead exporter to couchbase_exporter_leansysteam to match change on github
  - Upgrade ssl_exporter_ribbybibby from v0.2.0 to v0.3.0
  - Upgrade snmp_exporter v0.14.0 to v0.15.0
  - Upgrade smartmon text script to commit 1ba436e1949c7ab8af83642dc973cb30b118966a

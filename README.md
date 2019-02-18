@@ -50,7 +50,7 @@ All exporters are verified to install. Currently select modules receive testing 
 |[cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter)                       | [usage](#cloudwatch-exporter-configuration)                 | prometheus    | Yes       |
 |[collectd_exporter](https://github.com/prometheus/collectd_exporter)                           | [usage](#collectd-exporter-configuration)                   | prometheus    | Yes       |
 |[consul_exporter](https://github.com/prometheus/consul_exporter)                               | [usage](#consul-exporter-configuration)                     | prometheus    | Yes       |
-|[couchbase_exporter_blakelead](https://github.com/blakelead/couchbase_exporter)                | [usage](#couchbase-exporter-blakelead-configuration)        | blakelead     | Yes       |
+|[couchbase_exporter_leansysteam](https://github.com/leansys-team/couchbase_exporter)           | [usage](#couchbase-exporter-leansys-team-configuration)     | leansys-team  | Yes       |
 |[couchdb_exporter_gesellix](https://github.com/gesellix/couchdb-prometheus-exporter)           | [usage](#couchdb-exporter-gesellix-configuration)           | gesellix      | Yes       |
 |[digitalocean_exporter_metalmatze](https://github.com/metalmatze/digitalocean_exporter)        | [usage](#digitalocean-exporter-metalmatze-configuration)    | metalmatze    | Yes       |
 |[elasticsearch_exporter_justwatchcom](https://github.com/justwatchcom/elasticsearch_exporter)  | [usage](#elasticsearch-exporter-justwatchcom-configuration) | justwatchcom  | Yes       |
@@ -121,7 +121,7 @@ prometheus_components:
  - cloudwatch_exporter
  - collectd_exporter
  - consul_exporter
- - couchbase_exporter_blakelead
+ - couchbase_exporter_leansysteam
  - couchdb_exporter_gesellix
  - digitalocean_exporter_metalmatze
  - elasticsearch_exporter_justwatchcom
@@ -645,29 +645,29 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 910
     prometheus_consul_exporter_host: "0.0.0.0"
     prometheus_consul_exporter_port: 9107
 
-### Couchbase exporter (blakelead) configuration
+### Couchbase exporter (leansys-team) configuration
 
-To enable [couchbase_exporter by blakelead](https://github.com/blakelead/couchbase_exporter) include role task: couchbase_exporter_blakelead
+To enable [couchbase_exporter by leansysteam](https://github.com/leansys-team/couchbase_exporter) include role task: couchbase_exporter_leansysteam
 
-Environmental variables to pass to the couchbase_exporter_blakelead exporter. These environmental variables are used as a primary method of configuring the exporter:
+Environmental variables to pass to the couchbase_exporter_leansysteam exporter. These environmental variables are used as a primary method of configuring the exporter:
 
-    prometheus_couchbase_exporter_blakelead_env_vars:
+    prometheus_couchbase_exporter_leansysteam_env_vars:
       CB_EXPORTER_DB_USER: couchbase
       CB_EXPORTER_DB_PASSWORD: couchbase
 
 An array of additional flags to pass to the couchbase_exporter daemon:
 
-    prometheus_couchbase_exporter_blakelead_extra_opts: []
+    prometheus_couchbase_exporter_leansysteam_extra_opts: []
 
 The version of couchbase_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_couchbase_exporter_blakelead_version: "0.7.0"
-    prometheus_couchbase_exporter_blakelead_src_version: "0.7.0"
+    prometheus_couchbase_exporter_leansysteam_version: "0.7.0"
+    prometheus_couchbase_exporter_leansysteam_src_version: "0.7.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9191:
 
-    prometheus_couchbase_exporter_blakelead_host: "0.0.0.0"
-    prometheus_couchbase_exporter_blakelead_port: 9191
+    prometheus_couchbase_exporter_leansysteam_host: "0.0.0.0"
+    prometheus_couchbase_exporter_leansysteam_port: 9191
 
 ### CouchDB exporter (gesellix) configuration
 

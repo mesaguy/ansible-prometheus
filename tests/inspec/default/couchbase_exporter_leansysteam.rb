@@ -1,14 +1,14 @@
 # encoding: utf-8
 # author: Mesaguy
 
-describe file('/opt/prometheus/exporters/couchbase_exporter_blakelead/active') do
+describe file('/opt/prometheus/exporters/couchbase_exporter_leansysteam/active') do
     it { should be_symlink }
     its('mode') { should cmp '0755' }
     its('owner') { should eq 'root' }
     its('group') { should eq 'prometheus' }
 end
 
-describe file('/opt/prometheus/exporters/couchbase_exporter_blakelead/active/couchbase_exporter') do
+describe file('/opt/prometheus/exporters/couchbase_exporter_leansysteam/active/couchbase_exporter') do
     it { should be_file }
     it { should be_executable }
     its('mode') { should cmp '0755' }
@@ -16,19 +16,19 @@ describe file('/opt/prometheus/exporters/couchbase_exporter_blakelead/active/cou
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'couchbase_exporter_blakelead' service is running
+# Verify the 'couchbase_exporter_leansysteam' service is running
 control '01' do
   impact 1.0
-  title 'Verify couchbase_exporter_blakelead service'
-  desc 'Ensures couchbase_exporter_blakelead service is up and running'
-  describe service('couchbase_exporter_blakelead') do
+  title 'Verify couchbase_exporter_leansysteam service'
+  desc 'Ensures couchbase_exporter_leansysteam service is up and running'
+  describe service('couchbase_exporter_leansysteam') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
   end
 end
 
-describe processes(Regexp.new("^/opt/prometheus/exporters/couchbase_exporter_blakelead/([0-9.]+|[0-9.]+__go-[0-9.]+)/couchbase_exporter")) do
+describe processes(Regexp.new("^/opt/prometheus/exporters/couchbase_exporter_leansysteam/([0-9.]+|[0-9.]+__go-[0-9.]+)/couchbase_exporter")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }
