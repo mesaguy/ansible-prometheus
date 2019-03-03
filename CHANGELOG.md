@@ -6,6 +6,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.9] - 2019-03-02
+
+### Changed
+ - Upgrade influxdb_exporter from v0.1.0 to v0.2.0
+ - Upgrade ipmitool text script to commit 83c9b117471dba863619886f2d30ff4ef92ff7b4
+ - Upgrade Go from v1.11.5 to v1.12.0
+ - Upgrade graphite_exporter from v0.4.2 to v0.5.0
+ - Upgrade Prometheus from v2.7.1 to v2.7.2
+ - Upgrade redis_exporter_oliver006 from v0.28.0 to v0.30.0
+
+### Added
+ - New 'inotify_instances' text_collector_examples script can be installed
+ - New 'smartmon.py' text_collector_examples script can be installed
+ - New 'yum.sh' text_collector_examples script can be installed
+
 ## [0.8.8] - 2019-02-17
 
 ### Changed

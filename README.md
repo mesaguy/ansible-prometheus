@@ -93,14 +93,17 @@ Numerous node_exporter textfiles scripts are supported and can be installed via 
 |[btrfs_stats.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/btrfs_stats.py)             | node_exporter examples | prometheus_script_btrfs_stats: true       |
 |[deleted_libraries.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/deleted_libraries.py) | node_exporter examples | prometheus_script_deleted_libraries: true |
 |[directory-size.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/directory-size.sh)       | node_exporter examples | prometheus_script_directory_size: true    |
+|[inotify-instances](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/inotify-instances)       | node_exporter examples | prometheus_script_inotify_instances: true |
 |[ipmitool](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/ipmitool)                         | node_exporter examples | prometheus_script_ipmitool: true          |
 |[md_info](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/md_info.sh)                        | node_exporter examples | prometheus_script_md_info: true           |
 |[md_info_detail](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/md_info_detail.sh)          | node_exporter examples | prometheus_script_md_info_detail: true    |
 |[mellanox_hca_temp](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/mellanox_hca_temp)       | node_exporter examples | prometheus_script_mellanox_hca_temp: true |
 |[ntpd_metrics.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/ntpd_metrics.py)           | node_exporter examples | prometheus_script_ntpd_metrics: true      |
 |[pacman.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/pacman.sh)                       | node_exporter examples | prometheus_script_pacman: true            |
+|[smartmon.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/smartmon.py)                   | node_exporter examples | prometheus_script_smartmon_python: true   |
 |[smartmon.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/smartmon.sh)                   | node_exporter examples | prometheus_script_smartmon: true          |
 |[storcli.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/storcli.py)                     | node_exporter examples | prometheus_script_storcli: true           |
+|[yum.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/yum.sh)                             | node_exporter examples | prometheus_script_yum: true               |
 
 ## Role Variables
 A 'prometheus_components' array variable is used to specify the Prometheus software to install. This example installs all supported prometheus_components:
@@ -209,7 +212,7 @@ If installing a Prometheus application binary fails, fall back to installing the
 
 Go version to use when building Prometheus software:
 
-    prometheus_go_version: 1.11.5
+    prometheus_go_version: 1.12
 
 The Prometheus etc directory, defaults to '/opt/prometheus/etc':
 
@@ -383,8 +386,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.7.1"
-    prometheus_src_version: "v2.7.1"
+    prometheus_version: "2.7.2"
+    prometheus_src_version: "v2.7.2"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -771,8 +774,8 @@ An array of additional flags to pass to the graphite_exporter daemon:
 
 The version of graphite_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_graphite_exporter_version: "0.4.2"
-    prometheus_graphite_exporter_src_version: "v0.4.2"
+    prometheus_graphite_exporter_version: "0.5.0"
+    prometheus_graphite_exporter_src_version: "v0.5.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9108:
 
@@ -860,8 +863,8 @@ An array of additional flags to pass to the influxdb_exporter daemon:
 
 The version of influxdb_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_influxdb_exporter_version: "0.1.0"
-    prometheus_influxdb_exporter_src_version: "v0.1.0"
+    prometheus_influxdb_exporter_version: "0.2.0"
+    prometheus_influxdb_exporter_src_version: "v0.2.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9122:
 
@@ -1248,8 +1251,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "0.28.0"
-    prometheus_redis_exporter_oliver006_src_version: "v0.28.0"
+    prometheus_redis_exporter_oliver006_version: "0.30.0"
+    prometheus_redis_exporter_oliver006_src_version: "v0.30.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 

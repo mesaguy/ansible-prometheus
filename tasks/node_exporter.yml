@@ -64,6 +64,10 @@
         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_directory_size_commit }}/text_collector_examples/directory-size.sh'
         checksum: '{{ prometheus_script_directory_size_checksum }}'
         enabled: '{{ prometheus_script_directory_size }}'
+      - name: inotify-instances
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_inotify_instances_commit }}/text_collector_examples/inotify-instances'
+        checksum: '{{ prometheus_script_inotify_instances_checksum }}'
+        enabled: '{{ prometheus_script_inotify_instances }}'
       - name: ipmitool
         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_ipmitool_commit }}/text_collector_examples/ipmitool'
         checksum: '{{ prometheus_script_ipmitool_checksum }}'
@@ -92,10 +96,18 @@
         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_smartmon_commit }}/text_collector_examples/smartmon.sh'
         checksum: '{{ prometheus_script_smartmon_checksum }}'
         enabled: '{{ prometheus_script_smartmon }}'
+      - name: smartmon_python
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_smartmon_python_commit }}/text_collector_examples/smartmon.py'
+        checksum: '{{ prometheus_script_smartmon_python_checksum }}'
+        enabled: '{{ prometheus_script_smartmon_python }}'
       - name: storcli
         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_storcli_commit }}/text_collector_examples/storcli.py'
         checksum: '{{ prometheus_script_storcli_checksum }}'
         enabled: '{{ prometheus_script_storcli }}'
+      - name: yum
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_yum_commit }}/text_collector_examples/yum.sh'
+        checksum: '{{ prometheus_script_yum_checksum }}'
+        enabled: '{{ prometheus_script_yum }}'
 
 - name: Install node_exporter scripts
   include_tasks: _install_script.yml
