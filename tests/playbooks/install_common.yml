@@ -64,12 +64,9 @@
 - name: Install java
   become: true
   package:
-    name: '{{ prometheus_java_package }}'
+    name: '{{ prometheus_java_packages }}'
     state: present
   changed_when: false
-  loop_control:
-    loop_var: prometheus_java_package
-  with_items: "{{ prometheus_java_packages }}"
   when: prometheus_java_packages is defined and prometheus_java_install_alpine_override is skipped
 
 - name: Find all prometheus software

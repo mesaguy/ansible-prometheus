@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.10] - 2019-03-17
+
+### Changed
+ - Upgrade Go from v1.12 to v1.12.1
+ - Upgrade Prometheus from v2.7.2 to v2.8.0
+ - Upgrade blackbox_exporter v0.13.0 to v0.14.0
+ - Upgrade squid_exporter_boynux from v1.4 to v1.6
+ - Upgrade statsd_exporter v0.8.1 to v0.9.0
+
 ## [0.8.9] - 2019-03-02
 
 ### Changed

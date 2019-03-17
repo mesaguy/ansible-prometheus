@@ -212,7 +212,7 @@ If installing a Prometheus application binary fails, fall back to installing the
 
 Go version to use when building Prometheus software:
 
-    prometheus_go_version: 1.12
+    prometheus_go_version: 1.12.1
 
 The Prometheus etc directory, defaults to '/opt/prometheus/etc':
 
@@ -386,8 +386,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.7.2"
-    prometheus_src_version: "v2.7.2"
+    prometheus_version: "2.8.0"
+    prometheus_src_version: "v2.8.0"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -565,8 +565,8 @@ An array of additional flags to pass to the blackbox_exporter daemon:
 
 The version of blackbox_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_blackbox_exporter_version: "0.13.0"
-    prometheus_blackbox_exporter_src_version: "v0.13.0"
+    prometheus_blackbox_exporter_version: "0.14.0"
+    prometheus_blackbox_exporter_src_version: "v0.14.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9115:
 
@@ -1395,7 +1395,7 @@ An array of additional flags to pass to the squid_exporter daemon:
 
 The version of squid_exporter to install:
 
-    prometheus_squid_exporter_boynux_version: "1.2"
+    prometheus_squid_exporter_boynux_version: "1.6"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9301:
 
@@ -1445,8 +1445,8 @@ An array of additional flags to pass to the statsd_exporter daemon:
         --statsd.listen-udp=":9125"
 
 The version of statsd_exporter to install. The source version defines the version as specified in version control:
-    prometheus_statsd_exporter_version: "0.8.1"
-    prometheus_statsd_exporter_src_version: "v0.8.1"
+    prometheus_statsd_exporter_version: "0.9.0"
+    prometheus_statsd_exporter_src_version: "v0.9.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9102:
 
