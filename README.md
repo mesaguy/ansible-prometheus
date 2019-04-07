@@ -386,8 +386,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.8.0"
-    prometheus_src_version: "v2.8.0"
+    prometheus_version: "2.8.1"
+    prometheus_src_version: "v2.8.1"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -419,8 +419,8 @@ An array of additional flags to pass to the alertmanager daemon:
 
 The version of Alertmanager to install. The source version defines the version as specified in version control:
 
-    prometheus_alertmanager_version: "0.16.1"
-    prometheus_alertmanager_version_src_version: "v0.16.1"
+    prometheus_alertmanager_version: "0.16.2"
+    prometheus_alertmanager_version_src_version: "v0.16.2"
 
 Where to store Alertmanager's data, defaults to /opt/prometheus/var/alertmanager
 
@@ -1251,8 +1251,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "0.30.0"
-    prometheus_redis_exporter_oliver006_src_version: "v0.30.0"
+    prometheus_redis_exporter_oliver006_version: "0.32.0"
+    prometheus_redis_exporter_oliver006_src_version: "v0.32.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 
@@ -1412,8 +1412,8 @@ An array of additional flags to pass to the ssl_exporter daemon:
 
 The version of ssl_exporter to install:
 
-    prometheus_ssl_exporter_ribbybibby_version: "0.3.0"
-    prometheus_ssl_exporter_ribbybibby_src_version: "0.3.0"
+    prometheus_ssl_exporter_ribbybibby_version: "0.5.0"
+    prometheus_ssl_exporter_ribbybibby_src_version: "0.5.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9219:
 
