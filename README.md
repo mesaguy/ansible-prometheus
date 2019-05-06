@@ -65,6 +65,7 @@ All exporters are verified to install. Currently select modules receive testing 
 |[memcached_exporter_danielqsj](https://github.com/prometheus/memcached_exporter)               | [usage](#memcached-exporter-configuration)                  | prometheus    | Yes       |
 |[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)                               | [usage](#mysqld-exporter-configuration)                     | prometheus    | Yes       |
 |[node_exporter](https://github.com/prometheus/node_exporter)                                   | [usage](#node-exporter-configuration)                       | prometheus    | Yes       |
+|[ntp_exporter_sapcc](https://github.com/sapcc/ntp_exporter)                                    | [usage](#ntp-exporter-sapcc-configuration)                  | sapcc         | Yes       |
 |[nvidia_exporter_bugroger](https://github.com/BugRoger/nvidia-exporter)                        | [usage](#nvidia-cpu-exporter-bugroger-configuration)        | BugRoger      | Yes       |
 |[nvidia_gpu_exporter_mindprince](https://github.com/mindprince/nvidia_gpu_prometheus_exporter) | [usage](#nvidia-gpu-exporter-mindprince-configuration)      | mindprince    | Yes       |
 |[openldap_exporter_tomcz](https://github.com/tomcz/openldap_exporter)                          | [usage](#openldap-exporter-tomcz-configuration)             | tomcz         | Yes       |
@@ -99,6 +100,7 @@ Numerous node_exporter textfiles scripts are supported and can be installed via 
 |[md_info_detail](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/md_info_detail.sh)          | node_exporter examples | prometheus_script_md_info_detail: true    |
 |[mellanox_hca_temp](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/mellanox_hca_temp)       | node_exporter examples | prometheus_script_mellanox_hca_temp: true |
 |[ntpd_metrics.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/ntpd_metrics.py)           | node_exporter examples | prometheus_script_ntpd_metrics: true      |
+|[nvme_metrics.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/nvme_metrics.sh)           | node_exporter examples | prometheus_script_nvme_metrics: true      |
 |[pacman.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/pacman.sh)                       | node_exporter examples | prometheus_script_pacman: true            |
 |[smartmon.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/smartmon.py)                   | node_exporter examples | prometheus_script_smartmon_python: true   |
 |[smartmon.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/smartmon.sh)                   | node_exporter examples | prometheus_script_smartmon: true          |
@@ -139,6 +141,7 @@ prometheus_components:
  - memcached_exporter_danielqsj
  - mysqld_exporter
  - node_exporter
+ - ntp_exporter_sapcc
  - nvidia_exporter_bugroger
  - nvidia_gpu_exporter_mindprince
  - openldap_exporter_tomcz
@@ -386,8 +389,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.8.1"
-    prometheus_src_version: "v2.8.1"
+    prometheus_version: "2.9.2"
+    prometheus_src_version: "v2.9.2"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -419,8 +422,8 @@ An array of additional flags to pass to the alertmanager daemon:
 
 The version of Alertmanager to install. The source version defines the version as specified in version control:
 
-    prometheus_alertmanager_version: "0.16.2"
-    prometheus_alertmanager_version_src_version: "v0.16.2"
+    prometheus_alertmanager_version: "0.17.0"
+    prometheus_alertmanager_version_src_version: "v0.17.0"
 
 Where to store Alertmanager's data, defaults to /opt/prometheus/var/alertmanager
 
@@ -439,8 +442,8 @@ An array of additional flags to pass to the pushgateway daemon:
 
 The version of Pushgateway to install. The source version defines the version as specified in version control:
 
-    prometheus_pushgateway_version: "0.7.0"
-    prometheus_pushgateway_src_version: "v0.7.0"
+    prometheus_pushgateway_version: "0.8.0"
+    prometheus_pushgateway_src_version: "v0.8.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9091:
 
@@ -616,8 +619,8 @@ An array of additional flags to pass to the collectd_exporter daemon:
 
 The version of collectd_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_collectd_exporter_version: "0.4.0"
-    prometheus_collectd_exporter_src_version: "v0.4.0"
+    prometheus_collectd_exporter_version: "0.5.0"
+    prometheus_collectd_exporter_src_version: "v0.5.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9103:
 
@@ -1032,6 +1035,24 @@ Node exporter textfiles scripts will generally need to be run via cron and ideal
           owner: root
           group: root
 
+### NTP exporter (sapcc) configuration
+
+To enable [ntp_exporter by sapcc](https://github.com/sapcc/ntp_exporter) include role task: ntp_exporter_sapcc
+
+An array of additional flags to pass to the ntp_exporter daemon, the '-ntp.server' variable is manditory:
+
+    prometheus_ntp_exporter_sapcc_extra_opts:
+      - '-ntp.server=time-a-g.nist.gov'
+
+The version of ntp_exporter to install. The source version defines the version as specified in version control:
+
+    prometheus_ntp_exporter_sapcc_version: "v1.0"
+
+Port and IP to listen on. Defaults to listening on all available IPs on port 9559:
+
+    prometheus_ntp_exporter_sapcc_host: "0.0.0.0"
+    prometheus_ntp_exporter_sapcc_port: 9559
+
 ### Nvidia CPU exporter (BugRoger) configuration
 
 An array of additional flags to pass to the nvidia_exporter daemon:
@@ -1251,8 +1272,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "0.32.0"
-    prometheus_redis_exporter_oliver006_src_version: "v0.32.0"
+    prometheus_redis_exporter_oliver006_version: "0.34.0"
+    prometheus_redis_exporter_oliver006_src_version: "v0.34.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 
@@ -1395,7 +1416,7 @@ An array of additional flags to pass to the squid_exporter daemon:
 
 The version of squid_exporter to install:
 
-    prometheus_squid_exporter_boynux_version: "1.6"
+    prometheus_squid_exporter_boynux_version: "1.7"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9301:
 

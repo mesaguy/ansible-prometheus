@@ -6,6 +6,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.12] - 2019-05-05
+
+### Changed
+ - Upgrade Prometheus from v2.8.1 to v2.9.2
+ - Upgrade alertmanager from v0.16.2. to v0.17.0
+ - Upgrade process_exporter_ncabatoff from v0.4.0 to v0.5.0
+ - Upgrade pushgateway from v0.7.0 to v0.8.0
+ - Upgrade redis_exporter_oliver006 from v0.32.0 to v0.34.0
+ - Upgrade squid_exporter_boynux from v1.6 to v1.7
+
+### Added
+ - New 'nvme_metrics.sh' text_collector_examples script can be installed
+ - Exporters
+   - ntp_exporter_sapcc
+
 ## [0.8.11] - 2019-04-07
 
 ### Changed
@@ -329,7 +344,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Symlink from latest software installation versioned directory to 'active' in the same directory installation root directory
 
 ### Changed
- - Upgrade process_exporter_ncabatoff from v0.3.9 to v4.0.0
+ - Upgrade process_exporter_ncabatoff from v0.3.9 to v0.4.0
 
 ### Fixed
  - Installation of latest process-exporter_ncabatoff on Alpine

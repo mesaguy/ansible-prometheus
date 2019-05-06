@@ -5,6 +5,8 @@ prometheus_389ds_exporter_terrycain_extra_opts:
   - '-ipa-domain=test'
 prometheus_kafka_exporter_danielqsj_extra_opts:
   - '--kafka.server=127.0.0.1:9092'
+prometheus_ntp_exporter_sapcc_extra_opts:
+  - '-ntp.server=time-a-g.nist.gov'
 # Requires a Kafka server to test against..:
 prometheus_kafka_exporter_danielqsj_port_test: false
 prometheus_consul_exporter_env_vars:

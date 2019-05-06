@@ -88,6 +88,10 @@
         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_ntpd_metrics_commit }}/text_collector_examples/ntpd_metrics.py'
         checksum: '{{ prometheus_script_ntpd_metrics_checksum }}'
         enabled: '{{ prometheus_script_ntpd_metrics }}'
+      - name: nvme_metrics
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_nvme_metrics_commit }}/text_collector_examples/nvme_metrics.sh'
+        checksum: '{{ prometheus_script_nvme_metrics_checksum }}'
+        enabled: '{{ prometheus_script_nvme_metrics }}'
       - name: pacman
         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_pacman_commit }}/text_collector_examples/pacman.sh'
         checksum: '{{ prometheus_script_pacman_checksum }}'
