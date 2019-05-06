@@ -22,7 +22,7 @@
     prometheus_software_version: '{{ prometheus_ping_exporter_version | default("0.4.4") }}'
     prometheus_software_src_version: '{{ prometheus_ping_exporter_src_version | default("0.44") }}'
     prometheus_software_tgroup_jobname: '{{ prometheus_ping_exporter_czerwonk_jobname | default(prometheus_ping_exporter_czerwonk_default_tgroup_jobname) }}'
-    prometheus_software_description: 'Prometheus ping_exporter, SSL Certificate Exporter'
+    prometheus_software_description: 'Prometheus ping_exporter for ICMP echo requests'
     prometheus_software_documentation: 'https://github.com/czerwonk/ping_exporter'
     prometheus_software_host: '{{ prometheus_ping_exporter_czerwonk_host | default("0.0.0.0") }}'
     prometheus_software_port: '{{ prometheus_ping_exporter_czerwonk_port | default(prometheus_ping_exporter_czerwonk_default_port) }}'
