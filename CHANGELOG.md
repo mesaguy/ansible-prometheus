@@ -6,9 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.8.12] - 2019-05-05
+## [0.8.12] - 2019-05-08
 
 ### Changed
+
+ - Upgrade Go from v1.12.2 to v1.12.5
  - Upgrade Prometheus from v2.8.1 to v2.9.2
  - Upgrade alertmanager from v0.16.2. to v0.17.0
  - Upgrade process_exporter_ncabatoff from v0.4.0 to v0.5.0
