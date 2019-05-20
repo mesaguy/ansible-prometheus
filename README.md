@@ -422,8 +422,8 @@ An array of additional flags to pass to the alertmanager daemon:
 
 The version of Alertmanager to install. The source version defines the version as specified in version control:
 
-    prometheus_alertmanager_version: "0.17.0"
-    prometheus_alertmanager_version_src_version: "v0.17.0"
+    prometheus_alertmanager_version: "0.18.0"
+    prometheus_alertmanager_version_src_version: "v0.18.0"
 
 Where to store Alertmanager's data, defaults to /opt/prometheus/var/alertmanager
 
@@ -1272,8 +1272,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "0.34.0"
-    prometheus_redis_exporter_oliver006_src_version: "v0.34.0"
+    prometheus_redis_exporter_oliver006_version: "0.34.1"
+    prometheus_redis_exporter_oliver006_src_version: "v0.34.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 
@@ -1416,7 +1416,7 @@ An array of additional flags to pass to the squid_exporter daemon:
 
 The version of squid_exporter to install:
 
-    prometheus_squid_exporter_boynux_version: "1.7"
+    prometheus_squid_exporter_boynux_version: "1.8"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9301:
 
@@ -1466,8 +1466,8 @@ An array of additional flags to pass to the statsd_exporter daemon:
         --statsd.listen-udp=":9125"
 
 The version of statsd_exporter to install. The source version defines the version as specified in version control:
-    prometheus_statsd_exporter_version: "0.9.0"
-    prometheus_statsd_exporter_src_version: "v0.9.0"
+    prometheus_statsd_exporter_version: "0.10.3"
+    prometheus_statsd_exporter_src_version: "v0.10.3"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9102:
 

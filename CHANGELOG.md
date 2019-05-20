@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.13] - 2019-05-20
+
+### Changed
+ - Upgrade node_exporter v0.17.0 to v0.18.0
+ - Upgrade redis_exporter_oliver006 from v0.34.0 to v0.34.1
+ - Upgrade squid_exporter_boynux from v1.7 to v1.8
+ - Upgrade statsd_exporter from v0.9.0 to v0.10.3
+
 ## [0.8.12] - 2019-05-05
 
 ### Changed
