@@ -12,7 +12,6 @@
 
 - name: Update 'pacman' cache
   include_tasks: ../../tasks/_setup_pkg_mgr_Archlinux.yml
-  changed_when: false
   when: ansible_os_family == 'Archlinux'
 
 - name: Skip Java service tests on Gentoo

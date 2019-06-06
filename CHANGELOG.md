@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+ - Numerous tweaks to clear warnings and errors from Ansible 2.8
+ - Upgrade Prometheus from v2.9.2 to v2.10.0
+ - Upgrade graphite_exporter from v0.5.0 to v0.6.2
+ - Upgrade node_exporter v0.18.0 to v0.18.1
+ - Upgrade redis_exporter_oliver006 from v1.0.0 to v1.0.0
+ - Upgrade statsd_exporter from v0.10.3 to v0.10.4
+
 ## [0.8.13] - 2019-05-20
 
 ### Changed

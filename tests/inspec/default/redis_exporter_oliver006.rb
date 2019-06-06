@@ -40,5 +40,5 @@ end
 
 describe http('http://127.0.0.1:9121/metrics') do
     its('status') { should cmp 200 }
-    its('body') { should match /redis_exporter_last_scrape_duration_seconds/ }
+    its('body') { should match /redis_target_scrape_request_errors_total/ }
 end

@@ -389,8 +389,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.9.2"
-    prometheus_src_version: "v2.9.2"
+    prometheus_version: "2.10.0"
+    prometheus_src_version: "v2.10.0"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -422,8 +422,8 @@ An array of additional flags to pass to the alertmanager daemon:
 
 The version of Alertmanager to install. The source version defines the version as specified in version control:
 
-    prometheus_alertmanager_version: "0.18.0"
-    prometheus_alertmanager_version_src_version: "v0.18.0"
+    prometheus_alertmanager_version: "0.18.1"
+    prometheus_alertmanager_version_src_version: "v0.18.1"
 
 Where to store Alertmanager's data, defaults to /opt/prometheus/var/alertmanager
 
@@ -777,8 +777,8 @@ An array of additional flags to pass to the graphite_exporter daemon:
 
 The version of graphite_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_graphite_exporter_version: "0.5.0"
-    prometheus_graphite_exporter_src_version: "v0.5.0"
+    prometheus_graphite_exporter_version: "0.6.2"
+    prometheus_graphite_exporter_src_version: "v0.6.2"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9108:
 
@@ -1272,8 +1272,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "0.34.1"
-    prometheus_redis_exporter_oliver006_src_version: "v0.34.1"
+    prometheus_redis_exporter_oliver006_version: "1.0.0"
+    prometheus_redis_exporter_oliver006_src_version: "v1.0.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 
@@ -1466,8 +1466,8 @@ An array of additional flags to pass to the statsd_exporter daemon:
         --statsd.listen-udp=":9125"
 
 The version of statsd_exporter to install. The source version defines the version as specified in version control:
-    prometheus_statsd_exporter_version: "0.10.3"
-    prometheus_statsd_exporter_src_version: "v0.10.3"
+    prometheus_statsd_exporter_version: "0.10.4"
+    prometheus_statsd_exporter_src_version: "v0.10.4"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9102:
 

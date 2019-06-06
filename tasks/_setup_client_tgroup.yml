@@ -15,16 +15,18 @@
     mode: '{{ prometheus_tgroup_mode }}'
   loop_control:
     loop_var: prometheus_server_name
-  with_items: '{{ prometheus_servers }}'
+  with_items: '{{ prometheus_servers | list }}'
 
 - name: Include task to create {{ prometheus_software_name }} tgroup file (client mode)
   include_tasks: _setup_client_tgroup_file.yml
   # Hack as this item needs to run serially. OpenSSH won't put up with dozens
   # of simultaneous connections
   with_items: "['{{ prometheus_client_inventory_hostname }}',]"
-  when: (prometheus_tgroup_client_mode is defined and prometheus_tgroup_client_mode|bool) and "hostvars[prometheus_host_item].inventory_hostname == inventory_hostname"
   loop_control:
     loop_var: prometheus_host_item
+  when:
+    - prometheus_tgroup_client_mode is defined and prometheus_tgroup_client_mode|bool
+    - "hostvars[prometheus_host_item].inventory_hostname == inventory_hostname"
 
 - name: Include task to create {{ prometheus_software_name }} tgroup file (server mode)
   include_tasks: _setup_client_tgroup_file.yml
@@ -50,7 +52,7 @@
       with_items: '{{ host_orphan_tgroup_files.files }}'
       loop_control:
         loop_var: prometheus_group_cleanup
-      when: host_orphan_tgroup_files.files
+      when: host_orphan_tgroup_files.files | length >= 1
 
     - name: Define tgroup dir purge for as done
       set_fact: {"prometheus_tgroup_dir_purged_{{ prometheus_client_fqdn | hash('sha1') }}": true}
