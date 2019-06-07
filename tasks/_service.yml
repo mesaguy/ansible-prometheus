@@ -15,7 +15,7 @@
   when:
     - (prometheus_manage_client_firewalld|bool or prometheus_manage_client_iptables|bool or prometheus_manage_client_iptables_raw|bool)
     - prometheus_software_instance_port|default(prometheus_software_port, true)
-    - prometheus_server_ips
+    - prometheus_server_ips|length >= 1
 
 - name: Test that {{ prometheus_software_service_name }} {{ inventory_hostname }}:{{ prometheus_software_instance_port | default(prometheus_software_port, true) }} is accessible (software is running)
   wait_for:

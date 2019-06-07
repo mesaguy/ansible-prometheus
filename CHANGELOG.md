@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.14] - 2019-06-06
+
 ### Changed
 
  - Numerous tweaks to clear warnings and errors from Ansible 2.8
