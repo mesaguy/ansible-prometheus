@@ -99,6 +99,7 @@ Numerous node_exporter textfiles scripts are supported and can be installed via 
 |[md_info](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/md_info.sh)                        | node_exporter examples | prometheus_script_md_info: true           |
 |[md_info_detail](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/md_info_detail.sh)          | node_exporter examples | prometheus_script_md_info_detail: true    |
 |[mellanox_hca_temp](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/mellanox_hca_temp)       | node_exporter examples | prometheus_script_mellanox_hca_temp: true |
+|[multipathd_info](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/multipathd_info)           | node_exporter examples | prometheus_script_multipathd_info: true   |
 |[ntpd_metrics.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/ntpd_metrics.py)           | node_exporter examples | prometheus_script_ntpd_metrics: true      |
 |[nvme_metrics.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/nvme_metrics.sh)           | node_exporter examples | prometheus_script_nvme_metrics: true      |
 |[pacman.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/pacman.sh)                       | node_exporter examples | prometheus_script_pacman: true            |
@@ -244,6 +245,26 @@ The directory to use when storing persistent Prometheus data (ie: The Prometheus
 Optionally disable symlink of tool applications (amtool, promtool, etc) to /usr/local/bin. Defaults to 'true':
 
     prometheus_symlink_tools: false
+
+### Prometheus log rotation variables
+
+Log rotation is disabled by default, but can be configured simply using the following variables. Log rotation is configured for all *.log files in the Prometheus log directory (ie: /var/log/prometheus/*.log).
+
+Enable installing a prometheus log rotation script. Defaults to 'false':
+
+    prometheus_logrotate: true
+
+Number of log rotation (days) to keep:
+
+    prometheus_logrotate_count: 31
+
+Boolean specifying whether logs should be compressed:
+
+    prometheus_logrotate_compress: true
+
+Log rotation configuration file directory:
+
+    prometheus_logrotate_dir: /etc/logrotate.d
 
 ### Prometheus client variables
 
@@ -483,8 +504,8 @@ An array of additional flags to pass to the apache_exporter daemon (ie):
 
 The version of apache_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_apache_exporter_lusitaniae_version: "0.5.0"
-    prometheus_apache_exporter_lusitaniae_src_version: "v0.5.0"
+    prometheus_apache_exporter_lusitaniae_version: "0.7.0"
+    prometheus_apache_exporter_lusitaniae_src_version: "v0.7.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9117:
 
@@ -667,8 +688,8 @@ An array of additional flags to pass to the couchbase_exporter daemon:
 
 The version of couchbase_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_couchbase_exporter_leansysteam_version: "0.7.0"
-    prometheus_couchbase_exporter_leansysteam_src_version: "0.7.0"
+    prometheus_couchbase_exporter_leansysteam_version: "0.8.1"
+    prometheus_couchbase_exporter_leansysteam_src_version: "0.8.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9191:
 
@@ -820,8 +841,8 @@ An array of additional flags to pass to the grok_exporter daemon:
 
 The version of grok_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_grok_exporter_fstab_version: "0.2.6"
-    prometheus_grok_exporter_fstab_src_version: "v0.2.6"
+    prometheus_grok_exporter_fstab_version: "0.2.8"
+    prometheus_grok_exporter_fstab_src_version: "v0.2.8"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9144:
 
@@ -1272,8 +1293,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "1.0.0"
-    prometheus_redis_exporter_oliver006_src_version: "v1.0.0"
+    prometheus_redis_exporter_oliver006_version: "1.0.3"
+    prometheus_redis_exporter_oliver006_src_version: "v1.0.3"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 
@@ -1466,8 +1487,8 @@ An array of additional flags to pass to the statsd_exporter daemon:
         --statsd.listen-udp=":9125"
 
 The version of statsd_exporter to install. The source version defines the version as specified in version control:
-    prometheus_statsd_exporter_version: "0.10.4"
-    prometheus_statsd_exporter_src_version: "v0.10.4"
+    prometheus_statsd_exporter_version: "0.11.1"
+    prometheus_statsd_exporter_src_version: "v0.11.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9102:
 

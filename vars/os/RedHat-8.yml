@@ -1,5 +1,7 @@
 ---
-prometheus_shell: /usr/bin/nologin
+prometheus_shell: /sbin/nologin
+prometheus_capabilites_packages:
+ - which
 prometheus_go_compile_tools:
  - curl
  - gcc
@@ -7,13 +9,9 @@ prometheus_go_compile_tools:
  - gzip
  - make
 prometheus_java_packages:
- - jre8-openjdk-headless
+ - java-11-openjdk-headless
 prometheus_prerequisite_packages:
- - tar
  - unzip
-prometheus_sponge_packages:
- - moreutils  # For 'sponge'
 prometheus_testing_packages:
  - net-tools
- - procps
- - which
+ - procps-ng

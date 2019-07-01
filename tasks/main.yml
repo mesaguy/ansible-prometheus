@@ -17,7 +17,18 @@
       include_role:
         name: mesaguy.prometheus
         tasks_from: _install_additional_exporters.yml
-      when: prometheus_additional_exporters is defined and prometheus_additional_exporters
+      when: prometheus_additional_exporters is defined and prometheus_additional_exporters|length >= 1
+
+    - name: Setup log rotation
+      become: true
+      template:
+        dest: '{{ prometheus_logrotate_dir }}/prometheus'
+        src: ../templates/logrotate.j2
+        owner: root
+        group: root
+        mode: '0444'
+      when: prometheus_logrotate|bool
+
   when: prometheus_manage_server_tgroups_only is defined and not prometheus_manage_server_tgroups_only|bool
 
 - name: Include task to manage server tgroups

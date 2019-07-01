@@ -82,6 +82,20 @@ platforms:
           - DOCKER_IMAGE_NAME=mesaguy/alpine-3.8-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
+  - name: alpine-3.9
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/alpine-3.9-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+
+  - name: alpine-3.10
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/alpine-3.10-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+
   - name: alpine-edge
     driver_config:
       build_options:
@@ -421,38 +435,6 @@ platforms:
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
-  - name: opensuse-13.1
-    driver_config:
-      build_options:
-        build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/opensuse-13.1-kitchen-ansible-x86_64:latest
-          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-      run_command: /usr/lib/systemd/systemd
-
-  - name: opensuse-13.2
-    driver_config:
-      build_options:
-        build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/opensuse-13.2-kitchen-ansible-x86_64:latest
-          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-      run_command: /usr/lib/systemd/systemd
-
-  - name: opensuse-42.1
-    driver_config:
-      build_options:
-        build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/opensuse-42.1-kitchen-ansible-x86_64:latest
-          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-      run_command: /usr/lib/systemd/systemd
-
-  - name: opensuse-42.2
-    driver_config:
-      build_options:
-        build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/opensuse-42.2-kitchen-ansible-x86_64:latest
-          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-      run_command: /usr/lib/systemd/systemd
-
   - name: opensuse-42.3
     driver_config:
       build_options:
@@ -466,14 +448,6 @@ platforms:
       build_options:
         build-arg:
           - DOCKER_IMAGE_NAME=mesaguy/opensuse-leap-kitchen-ansible-x86_64:latest
-          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-      run_command: /usr/lib/systemd/systemd
-
-  - name: opensuse-tumbleweed
-    driver_config:
-      build_options:
-        build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/opensuse-tumbleweed-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
@@ -599,5 +573,13 @@ platforms:
       build_options:
         build-arg:
           - DOCKER_IMAGE_NAME=mesaguy/ubuntu-18.10-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+      run_command: /lib/systemd/systemd
+
+  - name: ubuntu-19.04
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/ubuntu-19.04-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /lib/systemd/systemd

@@ -6,6 +6,29 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.15] - 2019-06-30
+
+### Added
+
+ - Support Prometheus software log file rotation. This feature is disabled by default.
+ - New 'multipathd_info' text_collector_examples script can be installed
+ - RedHat Enterprise Linux 8 support
+
+### Changed
+
+ - Tweaks to clear warnings and errors from Ansible 2.8
+ - Upgrade Go from v1.12.5 to v1.12.6
+ - Upgrade apache_exporter_lusitaniae from v0.5.0 to v0.7.0
+ - Upgrade couchbase_exporter_blakelead from v0.7.0 to v0.8.1
+ - Upgrade grok_exporter_fstab from v0.2.6 to v0.2.8
+ - Upgrade redis_exporter_oliver006 from v1.0.0 to v1.0.3
+ - Upgrade statsd_exporter from v0.10.4 to v0.11.1
+ - Upgrade apt script to commit: 03f0b4db9fc49f0c888d469ed142ed89233f08c3
+ - Upgrade btrfs_stats script to commit: dfb6002fad073a66f0439e0d620f4e4a8e963ec2
+ - Upgrade md_info_detail script to commit: bd3fc09b30e9401746f76d0d3980a3e894c5d012
+ - Upgrade storcli script to commit: b3429e4a974f362af007e23cb9a539cecc024d45
+ - Install tar on ArchLinux if not present
+
 ## [0.8.14] - 2019-06-06
 
 ### Changed
@@ -14,7 +37,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Upgrade Prometheus from v2.9.2 to v2.10.0
  - Upgrade graphite_exporter from v0.5.0 to v0.6.2
  - Upgrade node_exporter v0.18.0 to v0.18.1
- - Upgrade redis_exporter_oliver006 from v1.0.0 to v1.0.0
+ - Upgrade redis_exporter_oliver006 from v0.34.1 to v1.0.0
  - Upgrade statsd_exporter from v0.10.3 to v0.10.4
 
 ## [0.8.13] - 2019-05-20

@@ -84,6 +84,10 @@
         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_mellanox_hca_temp_commit }}/text_collector_examples/mellanox_hca_temp'
         checksum: '{{ prometheus_script_mellanox_hca_temp_checksum }}'
         enabled: '{{ prometheus_script_mellanox_hca_temp }}'
+      - name: multipathd_info
+        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_multipathd_info_commit }}/text_collector_examples/multipathd_info'
+        checksum: '{{ prometheus_script_multipathd_info_checksum }}'
+        enabled: '{{ prometheus_script_multipathd_info }}'
       - name: ntpd_metrics
         url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_ntpd_metrics_commit }}/text_collector_examples/ntpd_metrics.py'
         checksum: '{{ prometheus_script_ntpd_metrics_checksum }}'
