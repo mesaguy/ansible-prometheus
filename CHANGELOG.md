@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.17] - 2019-07-12
+
+ - Upgrade mysqld_exporter from v0.11.0 to v0.12.0
+ - Upgrade postgres_exporter_wrouesnel from v0.5.0 to v0.5.1
+
 ## [0.8.16] - 2019-07-11
 
 ### Changed

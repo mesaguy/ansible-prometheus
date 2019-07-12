@@ -984,8 +984,8 @@ An array of additional flags to pass to the mysqld_exporter daemon:
 
 The version of mysqld_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_mysqld_exporter_version: "0.11.0"
-    prometheus_mysqld_exporter_src_version: "v0.11.0"
+    prometheus_mysqld_exporter_version: "0.12.0"
+    prometheus_mysqld_exporter_src_version: "v0.12.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9104:
 
@@ -1190,8 +1190,8 @@ An array of additional flags to pass to the postgres_exporter daemon:
 
 The version of postgres_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_postgres_exporter_wrouesnel_version: "0.5.0"
-    prometheus_postgres_exporter_wrouesnel_src_version: "v0.5.0"
+    prometheus_postgres_exporter_wrouesnel_version: "0.5.1"
+    prometheus_postgres_exporter_wrouesnel_src_version: "v0.5.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9187:
 
