@@ -6,6 +6,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.16] - 2019-07-11
+
+### Changed
+
+ - Upgrade Go from v1.12.6 to v1.12.7
+ - Upgrade Prometheus from v2.10.0 to v2.11.1
+ - Upgrade alertmanager from v0.17.0. to v0.18.0
+ - Upgrade jmx_exporter from v0.11.0 to v0.12.0
+ - Upgrade postgres_exporter_wrouesnel from v0.4.7 to v0.5.0
+ - Upgrade statsd_exporter from v0.11.1 to v0.12.1
+
+### Fixed
+
+ - Include logrotate.j2 file missing in last release
+ - Fix versions listed in README.md that had been mixed up
+
 ## [0.8.15] - 2019-06-30
 
 ### Added

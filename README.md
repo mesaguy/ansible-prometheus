@@ -96,8 +96,8 @@ Numerous node_exporter textfiles scripts are supported and can be installed via 
 |[directory-size.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/directory-size.sh)       | node_exporter examples | prometheus_script_directory_size: true    |
 |[inotify-instances](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/inotify-instances)       | node_exporter examples | prometheus_script_inotify_instances: true |
 |[ipmitool](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/ipmitool)                         | node_exporter examples | prometheus_script_ipmitool: true          |
-|[md_info](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/md_info.sh)                        | node_exporter examples | prometheus_script_md_info: true           |
-|[md_info_detail](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/md_info_detail.sh)          | node_exporter examples | prometheus_script_md_info_detail: true    |
+|[md_info.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/md_info.sh)                     | node_exporter examples | prometheus_script_md_info: true           |
+|[md_info_detail.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/md_info_detail.sh)       | node_exporter examples | prometheus_script_md_info_detail: true    |
 |[mellanox_hca_temp](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/mellanox_hca_temp)       | node_exporter examples | prometheus_script_mellanox_hca_temp: true |
 |[multipathd_info](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/multipathd_info)           | node_exporter examples | prometheus_script_multipathd_info: true   |
 |[ntpd_metrics.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/ntpd_metrics.py)           | node_exporter examples | prometheus_script_ntpd_metrics: true      |
@@ -216,7 +216,7 @@ If installing a Prometheus application binary fails, fall back to installing the
 
 Go version to use when building Prometheus software:
 
-    prometheus_go_version: 1.12.5
+    prometheus_go_version: 1.12.7
 
 The Prometheus etc directory, defaults to '/opt/prometheus/etc':
 
@@ -410,8 +410,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.10.0"
-    prometheus_src_version: "v2.10.0"
+    prometheus_version: "2.11.1"
+    prometheus_src_version: "v2.11.1"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -443,8 +443,8 @@ An array of additional flags to pass to the alertmanager daemon:
 
 The version of Alertmanager to install. The source version defines the version as specified in version control:
 
-    prometheus_alertmanager_version: "0.18.1"
-    prometheus_alertmanager_version_src_version: "v0.18.1"
+    prometheus_alertmanager_version: "0.18.0"
+    prometheus_alertmanager_version_src_version: "v0.18.0"
 
 Where to store Alertmanager's data, defaults to /opt/prometheus/var/alertmanager
 
@@ -933,7 +933,7 @@ prometheus_jmx_cfgs:
 
 The version of jmx_exporter to install:
 
-    prometheus_jmx_exporter_version: "0.11.0"
+    prometheus_jmx_exporter_version: "0.12.0"
 
 ### Kafka exporter (danielqsj) configuration
 
@@ -1020,8 +1020,8 @@ Common node_exporter variables can be defined as follows:
 
 The version of node_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_node_exporter_version: "0.17.0"
-    prometheus_node_exporter_src_version: "v0.17.0"
+    prometheus_node_exporter_version: "0.18.1"
+    prometheus_node_exporter_src_version: "v0.18.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9100:
 
@@ -1190,8 +1190,8 @@ An array of additional flags to pass to the postgres_exporter daemon:
 
 The version of postgres_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_postgres_exporter_wrouesnel_version: "0.4.7"
-    prometheus_postgres_exporter_wrouesnel_src_version: "v0.4.7"
+    prometheus_postgres_exporter_wrouesnel_version: "0.5.0"
+    prometheus_postgres_exporter_wrouesnel_src_version: "v0.5.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9187:
 
@@ -1487,8 +1487,8 @@ An array of additional flags to pass to the statsd_exporter daemon:
         --statsd.listen-udp=":9125"
 
 The version of statsd_exporter to install. The source version defines the version as specified in version control:
-    prometheus_statsd_exporter_version: "0.11.1"
-    prometheus_statsd_exporter_src_version: "v0.11.1"
+    prometheus_statsd_exporter_version: "0.12.1"
+    prometheus_statsd_exporter_src_version: "v0.12.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9102:
 

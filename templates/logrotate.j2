@@ -1,0 +1,13 @@
+#
+# Do not edit manually, this file is managed using automation tools
+#
+/var/log/prometheus/*.log {
+    daily
+    copytruncate
+    missingok
+    notifempty
+    rotate {{ prometheus_logrotate_count }}
+{% if prometheus_logrotate_compress %}
+    compress
+{% endif %}
+}
