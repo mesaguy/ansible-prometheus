@@ -463,8 +463,8 @@ An array of additional flags to pass to the pushgateway daemon:
 
 The version of Pushgateway to install. The source version defines the version as specified in version control:
 
-    prometheus_pushgateway_version: "0.8.0"
-    prometheus_pushgateway_src_version: "v0.8.0"
+    prometheus_pushgateway_version: "0.9.0"
+    prometheus_pushgateway_src_version: "v0.9.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9091:
 
@@ -664,8 +664,8 @@ An array of additional flags to pass to the consul_exporter daemon:
 
 The version of consul_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_consul_exporter_version: "0.4.0"
-    prometheus_consul_exporter_src_version: "v0.4.0"
+    prometheus_consul_exporter_version: "0.5.0"
+    prometheus_consul_exporter_src_version: "v0.5.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9107:
 
@@ -1487,8 +1487,8 @@ An array of additional flags to pass to the statsd_exporter daemon:
         --statsd.listen-udp=":9125"
 
 The version of statsd_exporter to install. The source version defines the version as specified in version control:
-    prometheus_statsd_exporter_version: "0.12.1"
-    prometheus_statsd_exporter_src_version: "v0.12.1"
+    prometheus_statsd_exporter_version: "0.12.2"
+    prometheus_statsd_exporter_src_version: "v0.12.2"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9102:
 
