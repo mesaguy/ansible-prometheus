@@ -50,7 +50,7 @@ All exporters are verified to install. Currently select modules receive testing 
 |[cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter)                       | [usage](#cloudwatch-exporter-configuration)                 | prometheus    | Yes       |
 |[collectd_exporter](https://github.com/prometheus/collectd_exporter)                           | [usage](#collectd-exporter-configuration)                   | prometheus    | Yes       |
 |[consul_exporter](https://github.com/prometheus/consul_exporter)                               | [usage](#consul-exporter-configuration)                     | prometheus    | Yes       |
-|[couchbase_exporter_leansysteam](https://github.com/leansys-team/couchbase_exporter)           | [usage](#couchbase-exporter-leansys-team-configuration)     | leansys-team  | Yes       |
+|[couchbase_exporter_blakelead](https://github.com/blakelead/couchbase_exporter)                | [usage](#couchbase-exporter-leansys-team-configuration)     | leansys-team  | Yes       |
 |[couchdb_exporter_gesellix](https://github.com/gesellix/couchdb-prometheus-exporter)           | [usage](#couchdb-exporter-gesellix-configuration)           | gesellix      | Yes       |
 |[digitalocean_exporter_metalmatze](https://github.com/metalmatze/digitalocean_exporter)        | [usage](#digitalocean-exporter-metalmatze-configuration)    | metalmatze    | Yes       |
 |[elasticsearch_exporter_justwatchcom](https://github.com/justwatchcom/elasticsearch_exporter)  | [usage](#elasticsearch-exporter-justwatchcom-configuration) | justwatchcom  | Yes       |
@@ -90,23 +90,23 @@ Numerous node_exporter textfiles scripts are supported and can be installed via 
 
 | node_exporter textfiles script                                                                                              | Source                 | Enable variable                           |
 |-----------------------------------------------------------------------------------------------------------------------------|------------------------|-------------------------------------------|
-|[apt.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/apt.sh)                             | node_exporter examples | prometheus_script_apt: true               |
-|[btrfs_stats.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/btrfs_stats.py)             | node_exporter examples | prometheus_script_btrfs_stats: true       |
-|[deleted_libraries.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/deleted_libraries.py) | node_exporter examples | prometheus_script_deleted_libraries: true |
-|[directory-size.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/directory-size.sh)       | node_exporter examples | prometheus_script_directory_size: true    |
-|[inotify-instances](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/inotify-instances)       | node_exporter examples | prometheus_script_inotify_instances: true |
-|[ipmitool](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/ipmitool)                         | node_exporter examples | prometheus_script_ipmitool: true          |
-|[md_info.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/md_info.sh)                     | node_exporter examples | prometheus_script_md_info: true           |
-|[md_info_detail.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/md_info_detail.sh)       | node_exporter examples | prometheus_script_md_info_detail: true    |
-|[mellanox_hca_temp](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/mellanox_hca_temp)       | node_exporter examples | prometheus_script_mellanox_hca_temp: true |
-|[multipathd_info](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/multipathd_info)           | node_exporter examples | prometheus_script_multipathd_info: true   |
-|[ntpd_metrics.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/ntpd_metrics.py)           | node_exporter examples | prometheus_script_ntpd_metrics: true      |
-|[nvme_metrics.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/nvme_metrics.sh)           | node_exporter examples | prometheus_script_nvme_metrics: true      |
-|[pacman.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/pacman.sh)                       | node_exporter examples | prometheus_script_pacman: true            |
-|[smartmon.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/smartmon.py)                   | node_exporter examples | prometheus_script_smartmon_python: true   |
-|[smartmon.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/smartmon.sh)                   | node_exporter examples | prometheus_script_smartmon: true          |
-|[storcli.py](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/storcli.py)                     | node_exporter examples | prometheus_script_storcli: true           |
-|[yum.sh](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/yum.sh)                             | node_exporter examples | prometheus_script_yum: true               |
+|[apt.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/apt.sh)                | node_exporter examples | prometheus_script_apt: true               |
+|[btrfs_stats.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/btrfs_stats.py)             | node_exporter examples | prometheus_script_btrfs_stats: true       |
+|[deleted_libraries.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/deleted_libraries.py) | node_exporter examples | prometheus_script_deleted_libraries: true |
+|[directory-size.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/directory-size.sh)       | node_exporter examples | prometheus_script_directory_size: true    |
+|[inotify-instances](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/inotify-instances)       | node_exporter examples | prometheus_script_inotify_instances: true |
+|[ipmitool](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ipmitool)                         | node_exporter examples | prometheus_script_ipmitool: true          |
+|[md_info.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/md_info.sh)                     | node_exporter examples | prometheus_script_md_info: true           |
+|[md_info_detail.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/md_info_detail.sh)       | node_exporter examples | prometheus_script_md_info_detail: true    |
+|[mellanox_hca_temp](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/mellanox_hca_temp)       | node_exporter examples | prometheus_script_mellanox_hca_temp: true |
+|[multipathd_info](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/multipathd_info)           | node_exporter examples | prometheus_script_multipathd_info: true   |
+|[ntpd_metrics.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ntpd_metrics.py)           | node_exporter examples | prometheus_script_ntpd_metrics: true      |
+|[nvme_metrics.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/nvme_metrics.sh)           | node_exporter examples | prometheus_script_nvme_metrics: true      |
+|[pacman.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/pacman.sh)                       | node_exporter examples | prometheus_script_pacman: true            |
+|[smartmon.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.py)                   | node_exporter examples | prometheus_script_smartmon_python: true   |
+|[smartmon.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.sh)                   | node_exporter examples | prometheus_script_smartmon: true          |
+|[storcli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/storcli.py)                     | node_exporter examples | prometheus_script_storcli: true           |
+|[yum.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/yum.sh)                             | node_exporter examples | prometheus_script_yum: true               |
 
 ## Role Variables
 A 'prometheus_components' array variable is used to specify the Prometheus software to install. This example installs all supported prometheus_components:
@@ -127,7 +127,7 @@ prometheus_components:
  - cloudwatch_exporter
  - collectd_exporter
  - consul_exporter
- - couchbase_exporter_leansysteam
+ - couchbase_exporter_blakelead
  - couchdb_exporter_gesellix
  - digitalocean_exporter_metalmatze
  - elasticsearch_exporter_justwatchcom
@@ -674,27 +674,27 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 910
 
 ### Couchbase exporter (leansys-team) configuration
 
-To enable [couchbase_exporter by leansysteam](https://github.com/leansys-team/couchbase_exporter) include role task: couchbase_exporter_leansysteam
+To enable [couchbase_exporter by blakelead](https://github.com/blakelead/couchbase_exporter) include role task: couchbase_exporter_blakelead
 
-Environmental variables to pass to the couchbase_exporter_leansysteam exporter. These environmental variables are used as a primary method of configuring the exporter:
+Environmental variables to pass to the couchbase_exporter_blakelead exporter. These environmental variables are used as a primary method of configuring the exporter:
 
-    prometheus_couchbase_exporter_leansysteam_env_vars:
+    prometheus_couchbase_exporter_blakelead_env_vars:
       CB_EXPORTER_DB_USER: couchbase
       CB_EXPORTER_DB_PASSWORD: couchbase
 
 An array of additional flags to pass to the couchbase_exporter daemon:
 
-    prometheus_couchbase_exporter_leansysteam_extra_opts: []
+    prometheus_couchbase_exporter_blakelead_extra_opts: []
 
 The version of couchbase_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_couchbase_exporter_leansysteam_version: "0.9.0"
-    prometheus_couchbase_exporter_leansysteam_src_version: "0.9.0"
+    prometheus_couchbase_exporter_blakelead_version: "0.9.0"
+    prometheus_couchbase_exporter_blakelead_src_version: "0.9.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9191:
 
-    prometheus_couchbase_exporter_leansysteam_host: "0.0.0.0"
-    prometheus_couchbase_exporter_leansysteam_port: 9191
+    prometheus_couchbase_exporter_blakelead_host: "0.0.0.0"
+    prometheus_couchbase_exporter_blakelead_port: 9191
 
 ### CouchDB exporter (gesellix) configuration
 
@@ -1034,7 +1034,7 @@ Node exporter textfiles scripts can be installed into the 'prometheus_script_dir
     # S.M.A.R.T. monitoring script
     prometheus_script_smartmon: true
 
-Node exporter textfiles scripts will generally need to be run via cron and ideally via [sponge](https://github.com/prometheus/node_exporter/blob/master/text_collector_examples/README.md), for instance:
+Node exporter textfiles scripts will generally need to be run via cron and ideally via [sponge](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/README.md), for instance:
 
     hosts: prometheus_clients
     vars:

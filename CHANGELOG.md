@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.8.19] - 2019-07-29
 
+ - Rename couchbase_exporter_leansysteam to couchbase_exporter_blakelead exporter to match change on github
  - Upgrade Go from v1.12.7 to v1.12.9
  - Upgrade Prometheus from v2.11.1 to v2.12.0
  - Upgrade couchbase_exporter_blakelead from v0.8.1 to v0.9.0
