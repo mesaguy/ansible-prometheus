@@ -216,7 +216,7 @@ If installing a Prometheus application binary fails, fall back to installing the
 
 Go version to use when building Prometheus software:
 
-    prometheus_go_version: 1.12.7
+    prometheus_go_version: 1.12.9
 
 The Prometheus etc directory, defaults to '/opt/prometheus/etc':
 
@@ -410,8 +410,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.11.1"
-    prometheus_src_version: "v2.11.1"
+    prometheus_version: "2.12.0"
+    prometheus_src_version: "v2.12.0"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -463,8 +463,8 @@ An array of additional flags to pass to the pushgateway daemon:
 
 The version of Pushgateway to install. The source version defines the version as specified in version control:
 
-    prometheus_pushgateway_version: "0.9.0"
-    prometheus_pushgateway_src_version: "v0.9.0"
+    prometheus_pushgateway_version: "0.9.1"
+    prometheus_pushgateway_src_version: "v0.9.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9091:
 
@@ -688,8 +688,8 @@ An array of additional flags to pass to the couchbase_exporter daemon:
 
 The version of couchbase_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_couchbase_exporter_leansysteam_version: "0.8.1"
-    prometheus_couchbase_exporter_leansysteam_src_version: "0.8.1"
+    prometheus_couchbase_exporter_leansysteam_version: "0.9.0"
+    prometheus_couchbase_exporter_leansysteam_src_version: "0.9.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9191:
 
@@ -743,8 +743,8 @@ An array of additional flags to pass to the elasticsearch_exporter daemon:
 
 The version of elasticsearch_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_elasticsearch_exporter_justwatchcom_version: "1.0.2"
-    prometheus_elasticsearch_exporter_justwatchcom_src_version: "v1.0.2"
+    prometheus_elasticsearch_exporter_justwatchcom_version: "1.1.0"
+    prometheus_elasticsearch_exporter_justwatchcom_src_version: "v1.1.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9908:
 
@@ -984,8 +984,8 @@ An array of additional flags to pass to the mysqld_exporter daemon:
 
 The version of mysqld_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_mysqld_exporter_version: "0.12.0"
-    prometheus_mysqld_exporter_src_version: "v0.12.0"
+    prometheus_mysqld_exporter_version: "0.12.1"
+    prometheus_mysqld_exporter_src_version: "v0.12.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9104:
 
@@ -1293,8 +1293,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "1.0.3"
-    prometheus_redis_exporter_oliver006_src_version: "v1.0.3"
+    prometheus_redis_exporter_oliver006_version: "1.1.0"
+    prometheus_redis_exporter_oliver006_src_version: "v1.1.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 

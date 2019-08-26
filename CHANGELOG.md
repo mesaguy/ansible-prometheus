@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.19] - 2019-07-29
+
+ - Upgrade Go from v1.12.7 to v1.12.9
+ - Upgrade Prometheus from v2.11.1 to v2.12.0
+ - Upgrade couchbase_exporter_blakelead from v0.8.1 to v0.9.0
+ - Upgrade elasticsearch_exporter_justwatchcom from v1.0.2 to v1.1.0
+ - Upgrade mysqld_exporter from v0.12.0 to v0.12.1
+ - Upgrade pushgateway from v0.9.0 to v0.9.1
+ - Upgrade redis_exporter_oliver006 from v1.0.3 to v1.1.0
+
 ## [0.8.18] - 2019-07-28
 
 ### Changed
