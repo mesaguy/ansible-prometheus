@@ -6,7 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.8.19] - 2019-07-29
+## [0.8.20] - 2019-09-10
+
+ - Upgrade alertmanager from v0.18.0 to v0.19.0
+ - Upgrade memcached_exporter from v0.5.0 to v0.6.0
+ - Upgrade redis_exporter_oliver006 from v1.1.0 to v1.1.1
+ - Upgrade squid_exporter_boynux from v1.8 to v1.8.1
+
+## [0.8.19] - 2019-08-29
 
  - Rename couchbase_exporter_leansysteam to couchbase_exporter_blakelead exporter to match change on github
  - Upgrade Go from v1.12.7 to v1.12.9
@@ -39,7 +46,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
  - Upgrade Go from v1.12.6 to v1.12.7
  - Upgrade Prometheus from v2.10.0 to v2.11.1
- - Upgrade alertmanager from v0.17.0. to v0.18.0
+ - Upgrade alertmanager from v0.17.0 to v0.18.0
  - Upgrade jmx_exporter from v0.11.0 to v0.12.0
  - Upgrade postgres_exporter_wrouesnel from v0.4.7 to v0.5.0
  - Upgrade statsd_exporter from v0.11.1 to v0.12.1
@@ -97,7 +104,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
  - Upgrade Go from v1.12.2 to v1.12.5
  - Upgrade Prometheus from v2.8.1 to v2.9.2
- - Upgrade alertmanager from v0.16.2. to v0.17.0
+ - Upgrade alertmanager from v0.16.2 to v0.17.0
  - Upgrade process_exporter_ncabatoff from v0.4.0 to v0.5.0
  - Upgrade pushgateway from v0.7.0 to v0.8.0
  - Upgrade redis_exporter_oliver006 from v0.32.0 to v0.34.0
@@ -114,7 +121,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
  - Upgrade Go from v1.12.1 to v1.12.2
  - Upgrade Prometheus from v2.8.0 to v2.8.1
- - Upgrade alertmanager from v0.16.1. to v0.16.2
+ - Upgrade alertmanager from v0.16.1 to v0.16.2
  - Upgrade redis_exporter_oliver006 from v0.30.0 to v0.32.0
  - Upgrade ssl_exporter_ribbybibby from v0.3.0 to v0.5.0
 

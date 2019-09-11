@@ -443,8 +443,8 @@ An array of additional flags to pass to the alertmanager daemon:
 
 The version of Alertmanager to install. The source version defines the version as specified in version control:
 
-    prometheus_alertmanager_version: "0.18.0"
-    prometheus_alertmanager_version_src_version: "v0.18.0"
+    prometheus_alertmanager_version: "0.19.0"
+    prometheus_alertmanager_version_src_version: "v0.19.0"
 
 Where to store Alertmanager's data, defaults to /opt/prometheus/var/alertmanager
 
@@ -964,8 +964,8 @@ An array of additional flags to pass to the memcached_exporter daemon:
 
 The version of memcached_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_memcached_exporter_version: "0.5.0"
-    prometheus_memcached_exporter_src_version: "v0.5.0"
+    prometheus_memcached_exporter_version: "0.6.0"
+    prometheus_memcached_exporter_src_version: "v0.6.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9150:
 
@@ -1293,8 +1293,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "1.1.0"
-    prometheus_redis_exporter_oliver006_src_version: "v1.1.0"
+    prometheus_redis_exporter_oliver006_version: "1.1.1"
+    prometheus_redis_exporter_oliver006_src_version: "v1.1.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 
@@ -1437,7 +1437,7 @@ An array of additional flags to pass to the squid_exporter daemon:
 
 The version of squid_exporter to install:
 
-    prometheus_squid_exporter_boynux_version: "1.8"
+    prometheus_squid_exporter_boynux_version: "1.8.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9301:
 
