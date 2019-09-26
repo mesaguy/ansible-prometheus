@@ -216,7 +216,7 @@ If installing a Prometheus application binary fails, fall back to installing the
 
 Go version to use when building Prometheus software:
 
-    prometheus_go_version: 1.12.9
+    prometheus_go_version: 1.13.1
 
 The Prometheus etc directory, defaults to '/opt/prometheus/etc':
 
@@ -589,8 +589,8 @@ An array of additional flags to pass to the blackbox_exporter daemon:
 
 The version of blackbox_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_blackbox_exporter_version: "0.14.0"
-    prometheus_blackbox_exporter_src_version: "v0.14.0"
+    prometheus_blackbox_exporter_version: "0.15.1"
+    prometheus_blackbox_exporter_src_version: "v0.15.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9115:
 
@@ -1293,8 +1293,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "1.1.1"
-    prometheus_redis_exporter_oliver006_src_version: "v1.1.1"
+    prometheus_redis_exporter_oliver006_version: "1.2.1"
+    prometheus_redis_exporter_oliver006_src_version: "v1.2.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 
@@ -1454,8 +1454,8 @@ An array of additional flags to pass to the ssl_exporter daemon:
 
 The version of ssl_exporter to install:
 
-    prometheus_ssl_exporter_ribbybibby_version: "0.5.0"
-    prometheus_ssl_exporter_ribbybibby_src_version: "0.5.0"
+    prometheus_ssl_exporter_ribbybibby_version: "0.6.0"
+    prometheus_ssl_exporter_ribbybibby_src_version: "0.6.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9219:
 

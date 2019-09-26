@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.21] - 2019-09-25
+
+ - Upgrade Go from v1.12.9 to v1.13.1
+ - Upgrade blackbox_exporter v0.14.0 to v0.15.1
+ - Upgrade redis_exporter_oliver006 from v1.1.1 to v1.2.1
+ - Upgrade ssl_exporter_ribbybibby from v0.5.0 to v0.6.0
+
 ## [0.8.20] - 2019-09-10
 
  - Upgrade alertmanager from v0.18.0 to v0.19.0
