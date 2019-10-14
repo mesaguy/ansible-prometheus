@@ -6,7 +6,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.22] - 2019-10-14
+
+### Added
+
+ - Retry all downloads up to 5 times
+
+### Changed
+
+ - Upgrade Prometheus from v2.12.0 to v2.13.0
+ - Upgrade cloudwatch from v0.5.0 to v0.6.0
+ - Upgrade couchbase_exporter_blakelead from v0.9.0 to v0.9.2
+   - Binaries are not available fro this release
+ - Upgrade influxdb_exporter from v0.2.0 to v0.3.0
+ - Upgrade pushgateway from v0.9.1 to v0.10.0
+ - Upgrade redis_exporter_oliver006 from v1.2.1 to v1.3.1
+
 ## [0.8.21] - 2019-09-25
+
+### Changed
 
  - Upgrade Go from v1.12.9 to v1.13.1
  - Upgrade blackbox_exporter v0.14.0 to v0.15.1
@@ -15,12 +33,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.8.20] - 2019-09-10
 
+### Changed
+
  - Upgrade alertmanager from v0.18.0 to v0.19.0
  - Upgrade memcached_exporter from v0.5.0 to v0.6.0
  - Upgrade redis_exporter_oliver006 from v1.1.0 to v1.1.1
  - Upgrade squid_exporter_boynux from v1.8 to v1.8.1
 
 ## [0.8.19] - 2019-08-29
+
+### Changed
 
  - Rename couchbase_exporter_leansysteam to couchbase_exporter_blakelead exporter to match change on github
  - Upgrade Go from v1.12.7 to v1.12.9

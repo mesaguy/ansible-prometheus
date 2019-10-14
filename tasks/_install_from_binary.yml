@@ -29,6 +29,9 @@
       # Handled downstream:
       ignore_errors: '{{ prometheus_software_fallback_to_build | bool }}'
       register: prometheus_software_download
+      retries: 5
+      delay: 10
+      until: prometheus_software_download is succeeded
 
     - name: Unarchive {{ prometheus_software_name_version }}
       become: true

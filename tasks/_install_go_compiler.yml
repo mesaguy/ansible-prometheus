@@ -43,6 +43,10 @@
     group: root
     src: 'https://storage.googleapis.com/golang/go{{ prometheus_go_version }}.{{ prometheus_architecture }}.tar.gz'
     remote_src: true
+  register: prometheus_download
+  retries: 5
+  delay: 10
+  until: prometheus_download is succeeded
 
 - block:
     - name: Find paths under {{ prometheus_go_dir }}, exclude the current installation

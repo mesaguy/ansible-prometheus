@@ -410,8 +410,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.12.0"
-    prometheus_src_version: "v2.12.0"
+    prometheus_version: "2.13.0"
+    prometheus_src_version: "v2.13.0"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -463,8 +463,8 @@ An array of additional flags to pass to the pushgateway daemon:
 
 The version of Pushgateway to install. The source version defines the version as specified in version control:
 
-    prometheus_pushgateway_version: "0.9.1"
-    prometheus_pushgateway_src_version: "v0.9.1"
+    prometheus_pushgateway_version: "0.10.0"
+    prometheus_pushgateway_src_version: "v0.10.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9091:
 
@@ -623,7 +623,7 @@ An array of additional flags to pass to the cloudwatch_exporter daemon:
 
 The version of cloudwatch_exporter to install:
 
-    prometheus_cloudwatch_exporter_version: "0.5.0"
+    prometheus_cloudwatch_exporter_version: "0.6.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9106:
 
@@ -688,8 +688,8 @@ An array of additional flags to pass to the couchbase_exporter daemon:
 
 The version of couchbase_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_couchbase_exporter_blakelead_version: "0.9.0"
-    prometheus_couchbase_exporter_blakelead_src_version: "0.9.0"
+    prometheus_couchbase_exporter_blakelead_version: "0.9.2"
+    prometheus_couchbase_exporter_blakelead_src_version: "0.9.2"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9191:
 
@@ -887,8 +887,8 @@ An array of additional flags to pass to the influxdb_exporter daemon:
 
 The version of influxdb_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_influxdb_exporter_version: "0.2.0"
-    prometheus_influxdb_exporter_src_version: "v0.2.0"
+    prometheus_influxdb_exporter_version: "0.3.0"
+    prometheus_influxdb_exporter_src_version: "v0.3.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9122:
 
@@ -1293,8 +1293,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "1.2.1"
-    prometheus_redis_exporter_oliver006_src_version: "v1.2.1"
+    prometheus_redis_exporter_oliver006_version: "1.3.1"
+    prometheus_redis_exporter_oliver006_src_version: "v1.3.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 

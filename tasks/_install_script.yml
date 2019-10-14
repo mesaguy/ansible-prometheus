@@ -8,3 +8,7 @@
     group: '{{ prometheus_script.group | default(prometheus_group) }}'
     mode: '0555'
     checksum: '{{ prometheus_script.checksum }}'
+  register: prometheus_download
+  retries: 5
+  delay: 10
+  until: prometheus_download is succeeded
