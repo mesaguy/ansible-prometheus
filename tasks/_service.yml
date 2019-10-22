@@ -58,5 +58,5 @@
       include_tasks: _setup_client_tgroup.yml
   when:
     - prometheus_exporter|bool
-    - prometheus_servers|list
     - prometheus_manage_client_tgroups|bool
+    - prometheus_servers|list
