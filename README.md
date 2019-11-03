@@ -216,7 +216,7 @@ If installing a Prometheus application binary fails, fall back to installing the
 
 Go version to use when building Prometheus software:
 
-    prometheus_go_version: 1.13.1
+    prometheus_go_version: 1.13.4
 
 The Prometheus etc directory, defaults to '/opt/prometheus/etc':
 
@@ -410,8 +410,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.13.0"
-    prometheus_src_version: "v2.13.0"
+    prometheus_version: "2.13.1"
+    prometheus_src_version: "v2.13.1"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -463,8 +463,8 @@ An array of additional flags to pass to the pushgateway daemon:
 
 The version of Pushgateway to install. The source version defines the version as specified in version control:
 
-    prometheus_pushgateway_version: "0.10.0"
-    prometheus_pushgateway_src_version: "v0.10.0"
+    prometheus_pushgateway_version: "1.0.0"
+    prometheus_pushgateway_src_version: "v1.0.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9091:
 
@@ -1190,8 +1190,8 @@ An array of additional flags to pass to the postgres_exporter daemon:
 
 The version of postgres_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_postgres_exporter_wrouesnel_version: "0.5.1"
-    prometheus_postgres_exporter_wrouesnel_src_version: "v0.5.1"
+    prometheus_postgres_exporter_wrouesnel_version: "0.7.0"
+    prometheus_postgres_exporter_wrouesnel_src_version: "v0.7.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9187:
 
