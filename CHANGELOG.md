@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.8.23] - 2019-11-03
+## [0.8.23] - 2019-11-09
 
 ### Changed
 
@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Upgrade Prometheus from v2.13.0 to v2.13.1
  - Upgrade postgres_exporter_wrouesnel from v0.5.1 to v0.7.0
  - Upgrade pushgateway from v0.10.0 to v1.0.0
+ - Upgrade redis_exporter_oliver006 from v1.3.1 to v1.3.2
 
 ## [0.8.22] - 2019-10-14
 

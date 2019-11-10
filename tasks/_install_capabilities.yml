@@ -3,7 +3,7 @@
   become: true
   package:
     name: '{{ prometheus_capabilites_package }}'
-    state: installed
+    state: present
   loop_control:
     loop_var: prometheus_capabilites_package
   with_items: '{{ prometheus_capabilites_packages }}'
