@@ -81,7 +81,7 @@
   changed_when: false
   loop_control:
     loop_var: prometheus_testing_package
-  with_items: "{{ prometheus_testing_packages }}"
+  with_items: '{{ prometheus_testing_packages }}'
   when: prometheus_testing_packages is defined
 
 - name: Create test log file
