@@ -11,6 +11,7 @@ driver_config:
   use_sudo: false
   volume:
     - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+  remove_images: true
 
 verifier:
   name: inspec
@@ -28,8 +29,11 @@ provisioner:
   require_chef_omnibus: false
   ansible_version: latest
   raw_arguments: "-i tests/inventory"
-  ansible_extra_flags: '--extra-vars "pipelining=True"'
   idempotency_test: <%= ENV['KITCHEN_IDEMPOTENY_TEST'] || true %>
+  environment_vars:
+    ANSIBLE_PIPELINING: "true"
+    ANSIBLE_SSH_CONTROL_PATH: /tmp/ansible-ssh-%%h-%%p-%%r
+    ANSIBLE_SSH_ARGS: "-o ControlMaster=auto -o ControlPersist=21600s"
   fail_non_idempotent: true
 
 platforms:
@@ -277,26 +281,21 @@ platforms:
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
-  - name: debian-7
+  - name: centos-7.7
     driver_config:
       build_options:
         build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/debian-7-kitchen-ansible-x86_64:latest
+          - DOCKER_IMAGE_NAME=mesaguy/centos-7.7-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-      volume:
-        - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-        - '/sys/fs/selinux:/sys/fs/selinux:ro'
+      run_command: /usr/lib/systemd/systemd
 
-  - name: debian-8
+  - name: centos-8.0
     driver_config:
       build_options:
         build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/debian-8-kitchen-ansible-x86_64:latest
+          - DOCKER_IMAGE_NAME=mesaguy/centos-8.0-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-      run_command: /lib/systemd/systemd
-      volume:
-        - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-        - '/sys/fs/selinux:/sys/fs/selinux:ro'
+      run_command: /usr/lib/systemd/systemd
 
   - name: debian-9
     driver_config:
@@ -409,6 +408,22 @@ platforms:
       build_options:
         build-arg:
           - DOCKER_IMAGE_NAME=mesaguy/fedora-29-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+      run_command: /usr/lib/systemd/systemd
+
+  - name: fedora-30
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/fedora-30-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+      run_command: /usr/lib/systemd/systemd
+
+  - name: fedora-31
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/fedora-31-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
@@ -542,15 +557,13 @@ platforms:
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
-  - name: ubuntu-14.04
+  - name: oraclelinux-8.0
     driver_config:
       build_options:
         build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/ubuntu-14.04-kitchen-ansible-x86_64:latest
+          - DOCKER_IMAGE_NAME=mesaguy/oraclelinux-8.0-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-      volume:
-        - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-        - '/sys/fs/selinux:/sys/fs/selinux:ro'
+      run_command: /usr/lib/systemd/systemd
 
   - name: ubuntu-16.04
     driver_config:
@@ -581,5 +594,21 @@ platforms:
       build_options:
         build-arg:
           - DOCKER_IMAGE_NAME=mesaguy/ubuntu-19.04-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+      run_command: /lib/systemd/systemd
+
+  - name: ubuntu-19.10
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/ubuntu-19.10-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+      run_command: /lib/systemd/systemd
+
+  - name: ubuntu-20.04
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/ubuntu-20.04-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /lib/systemd/systemd

@@ -43,18 +43,18 @@
 
 - name: Workaround for java version on Fedora 22
   become: true
-  package:
-    name: 'nss'
+  dnf:
+    name: nss
     state: latest
   changed_when: false
   when: ansible_distribution == 'Fedora' and ansible_distribution_major_version == '22'
 
-- name: Install java 7 on Alpine 3.3 through 3.5
+- name: Install java 8 on Alpine 3.3 through 3.5
   # This step is necessary due to poor Alpine version detection by Ansible,
   # otherwise this would be determined via variables like other distros
   become: true
   package:
-    name: 'openjdk7-jre'
+    name: 'openjdk8-jre'
     state: present
   changed_when: false
   register: prometheus_java_install_alpine_override

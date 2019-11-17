@@ -44,7 +44,7 @@ describe processes(Regexp.new("^/opt/prometheus/exporters/process_exporter_ncaba
     it { should exist }
     its('entries.length') { should eq 2 }
     its('users') { should include 'prometheus' }
-    its('users') { should include 'nobody' }
+    its('users') { should include 'kitchen' }
 end
 
 describe port(9256) do

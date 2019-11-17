@@ -6,6 +6,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+ - Improve performance of tests
+
+### Changed
+
+ - Upgrade Prometheus from v2.13.1 to v2.14.0
+ - Upgrade blackbox_exporter v0.15.1 to v0.16.0
+ - Upgrade redis_exporter_oliver006 from v1.3.2 to v1.3.4
+ - Upgrade kitchen software to latest version (used when testing)
+
+### Fixed
+
+ - Tests on EL8
+ - Tests of Fedora 22
+
 ## [0.8.23] - 2019-11-11
 
 ### Changed

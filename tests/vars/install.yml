@@ -71,7 +71,7 @@ prometheus_process_exporter_ncabatoff_cfgs:
         - /usr/local/bin/process-exporter
       cmdline: []
   - name: TEST2
-    user: nobody
+    user: kitchen
     port: 9257
     data:
       process_names:
@@ -91,7 +91,7 @@ prometheus_script_exporter_adhocteam_cfgs:
         - name: success
           script: sleep 5
   - name: TEST2
-    user: nobody
+    user: kitchen
     port: 29172
     data:
       scripts:

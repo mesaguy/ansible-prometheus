@@ -32,7 +32,7 @@ describe processes(Regexp.new("^/opt/prometheus/exporters/script_exporter_adhoct
     it { should exist }
     its('entries.length') { should eq 2 }
     its('users') { should include 'prometheus' }
-    its('users') { should include 'nobody' }
+    its('users') { should include 'kitchen' }
 end
 
 describe port(19172) do

@@ -17,16 +17,16 @@ This module is intended to support as many distributions and architectures as po
 
 | OS             | Release                                 | Architectures     |
 |----------------|-----------------------------------------|-------------------|
-|Alpine          |3.2 through 3.8, edge                    | x86_64 (amd64)    |
+|Alpine          |3.2 through 3.10, edge                   | x86_64 (amd64)    |
 |AmazonLinux     |1 and 2                                  | x86_64 (amd64)    |
 |ArchLinux       |Current                                  | x86_64 (amd64)    |
-|Enterprise Linux|6, 7                                     | x86_64 (amd64)    |
-|Fedora          |20 through 29, rawhide                   | x86_64 (amd64)    |
+|Enterprise Linux|6, 7, 8                                  | x86_64 (amd64)    |
+|Fedora          |20 through 31, rawhide                   | x86_64 (amd64)    |
 |Gentoo (openrc) |Current                                  | x86_64 (amd64)    |
 |Gentoo (systemd)|Current                                  | x86_64 (amd64)    |
 |OpenSUSE        |13.1 through tumbleweed                  | x86_64 (amd64)    |
-|Oracle Linux    |6, 7                                     | x86_64 (amd64)    |
-|Ubuntu          |14.04, 16.04, 17.10, 18.04, 18.10, 19.04 | x86_64 (amd64)    |
+|Oracle Linux    |6, 7, 8                                  | x86_64 (amd64)    |
+|Ubuntu          |16.04 through 20.04                      | x86_64 (amd64)    |
 
 ### Supported Prometheus software
 The following core Prometheus software is supported in addition to the list of exporters below. This software is fully tested on all supported OS, distributions, and architectures.
@@ -410,8 +410,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.13.1"
-    prometheus_src_version: "v2.13.1"
+    prometheus_version: "2.14.0"
+    prometheus_src_version: "v2.14.0"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -589,8 +589,8 @@ An array of additional flags to pass to the blackbox_exporter daemon:
 
 The version of blackbox_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_blackbox_exporter_version: "0.15.1"
-    prometheus_blackbox_exporter_src_version: "v0.15.1"
+    prometheus_blackbox_exporter_version: "0.16.0"
+    prometheus_blackbox_exporter_src_version: "v0.16.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9115:
 
@@ -1293,8 +1293,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "1.3.2"
-    prometheus_redis_exporter_oliver006_src_version: "v1.3.2"
+    prometheus_redis_exporter_oliver006_version: "1.3.4"
+    prometheus_redis_exporter_oliver006_src_version: "v1.3.4"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 
