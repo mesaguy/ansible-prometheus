@@ -61,8 +61,8 @@ All exporters are verified to install. Currently select modules receive testing 
 |[influxdb_exporter](https://github.com/prometheus/influxdb_exporter)                           | [usage](#influxdb-exporter-configuration)                   | prometheus    | Yes       |
 |[iptables_exporter_retailnext](https://github.com/retailnext/iptables_exporter)                | [usage](#iptables-exporter-retailnext-configuration)        | retailnext    | Yes       |
 |[jmx_exporter](https://github.com/prometheus/jmx_exporter)                                     | [usage](#jmx-exporter-configuration)                        | prometheus    | No        |
-|[kafka_exporter](https://github.com/danielqsj/kafka_exporter)                                  | [usage](#kafka-exporter-danielqsj-configuration)            | danielqsj     | Yes       |
-|[memcached_exporter_danielqsj](https://github.com/prometheus/memcached_exporter)               | [usage](#memcached-exporter-configuration)                  | prometheus    | Yes       |
+|[kafka_exporter_danielqsj](https://github.com/danielqsj/kafka_exporter)                                  | [usage](#kafka-exporter-danielqsj-configuration)            | danielqsj     | Yes       |
+|[memcached_exporter](https://github.com/prometheus/memcached_exporter)               | [usage](#memcached-exporter-configuration)                  | prometheus    | Yes       |
 |[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)                               | [usage](#mysqld-exporter-configuration)                     | prometheus    | Yes       |
 |[node_exporter](https://github.com/prometheus/node_exporter)                                   | [usage](#node-exporter-configuration)                       | prometheus    | Yes       |
 |[ntp_exporter_sapcc](https://github.com/sapcc/ntp_exporter)                                    | [usage](#ntp-exporter-sapcc-configuration)                  | sapcc         | Yes       |
@@ -138,8 +138,8 @@ prometheus_components:
  - influxdb_exporter
  - iptables_exporter_retailnext
  - jmx_exporter
- - kafka_exporter
- - memcached_exporter_danielqsj
+ - kafka_exporter_danielqsj
+ - memcached_exporter
  - mysqld_exporter
  - node_exporter
  - ntp_exporter_sapcc
