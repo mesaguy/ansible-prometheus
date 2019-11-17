@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+ - Merge 3 bug-fixes from f9n
  - Tests on EL8
  - Tests of Fedora 22
 
