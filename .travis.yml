@@ -37,6 +37,10 @@ install:
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
+    on_success: always
+    on_failure: never
+    on_cancel:  never
+    on_error:   never
 
 script:
   # Validate README.md URLs

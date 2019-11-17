@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Upgrade blackbox_exporter v0.15.1 to v0.16.0
  - Upgrade redis_exporter_oliver006 from v1.3.2 to v1.3.4
  - Upgrade kitchen software to latest version (used when testing)
+ - Only update Ansible Galaxy if Travis CI checks succeed
 
 ### Fixed
 
