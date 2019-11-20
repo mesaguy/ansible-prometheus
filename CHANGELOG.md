@@ -9,20 +9,34 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
  - Improve performance of tests
+ - Ability to install sponge on EL based systems
 
 ### Changed
 
  - Upgrade Prometheus from v2.13.1 to v2.14.0
  - Upgrade blackbox_exporter v0.15.1 to v0.16.0
  - Upgrade redis_exporter_oliver006 from v1.3.2 to v1.3.4
+ - Use as the upstream source of all textfiles: https://github.com/prometheus-community/node-exporter-textfile-collector-scripts
+ - Upgrade apt script to commit: 'd24d180e330f3cafb8f0682df7ea5b19d9d0a89a'
+ - Upgrade ipmitool script to commit: 'a4121880547f48c0f56a5e4b4c24be72ff633ebf'
+ - Upgrade multipathd script to commit: 'd2f2b0e95f9a7905a0f2c535555748aa940f6032'
+ - Upgrade smartmon shell script to commit: '5a48e961343ec0896114f2dc78d1dedbbb310a69'
+ - Upgrade smartmon python script to commit: '69294bda2bbdd15080288aaad2b29db3f07db6ec'
+ - Upgrade storcli script to commit: '86018d7fbd2e89f2d062500addbd807bea835707'
  - Upgrade kitchen software to latest version (used when testing)
  - Only update Ansible Galaxy if Travis CI checks succeed
+ - Firewalld rules are now managed using rich rules
+ - The python 'netaddr' module is now a requirement when using Firewalld
+ - Improve iptables_raw implementation:
+   - Improve comment legibility
+   - Make ipversion a string instead of an integer (clears warning)
+   - Backup changes ahead of implementation
 
 ### Fixed
 
  - Merge 3 bug-fixes from f9n
- - Tests on EL8
- - Tests of Fedora 22
+ - Tests on EL8 and Fedora 22
+ - Firewalld support on Ansible 2.9.x has been fixed by switching to rich rules
 
 ## [0.8.23] - 2019-11-11
 

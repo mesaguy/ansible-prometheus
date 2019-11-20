@@ -33,6 +33,12 @@
   changed_when: false
   when: ansible_os_family == 'Debian'
 
+- name: Set install sponge variable
+  set_fact:
+    prometheus_install_sponge: true
+  when:
+   - ansible_distribution not in ['CentOS']
+
 - name: Workaround for OverlayFS on Fedora 20 and 21
   become: true
   shell: 'touch /var/lib/rpm/*'

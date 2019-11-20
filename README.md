@@ -184,7 +184,7 @@ Attempt to force the etc directory symlink referenced above:
 
     prometheus_link_etc_force: false
 
-Install the 'sponge' utility. [Recommended by the Prometheus project](https://github.com/prometheus/node_exporter/tree/master/text_collector_examples) when writing to node_exporter's textfile directory:
+Install the 'sponge' utility. [Recommended by the Prometheus project](https://github.com/prometheus/node_exporter/tree/master/text_collector_examples) when writing to node_exporter's textfile directory. The EPEL repository is required if installing on a Red Hat Enterprise Linux derivative:
 
     prometheus_install_sponge: false
 
@@ -272,7 +272,7 @@ Cause all Prometheus servers defined in a 'prometheus_servers' array/list variab
 
     prometheus_software_server_side_connect_test: true
 
-Configure firewalld rules to permit server IPs defined in a 'prometheus_server_ips' array/list variable to connect to each of the client's exporters. Only enable this variable on servers that use firewalld, otherwise the task will fail:
+Configure firewalld rules to permit server IPs defined in a 'prometheus_server_ips' array/list variable to connect to each of the client's exporters. This functionality requires that the python 'netaddr' module be installed (ie: `yum install -y python-netaddr` or `dnf install -y python-netaddr` or `pip install netaddr`). Only enable this variable on servers that use firewalld, otherwise the task will fail:
 
     prometheus_manage_client_firewalld: true
     # Optionally set:
