@@ -1,6 +1,7 @@
 ---
 driver:
   name: docker
+  remove_images: true
 
 driver_config:
   disable_upstart: false
@@ -11,7 +12,6 @@ driver_config:
   use_sudo: false
   volume:
     - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-  remove_images: true
 
 verifier:
   name: inspec
@@ -554,6 +554,14 @@ platforms:
       build_options:
         build-arg:
           - DOCKER_IMAGE_NAME=mesaguy/oraclelinux-7.6-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+      run_command: /usr/lib/systemd/systemd
+
+  - name: oraclelinux-7.7
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/oraclelinux-7.7-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
