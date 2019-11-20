@@ -3,9 +3,8 @@
   become: true
   firewalld:
     immediate: true
-    port: '{{ prometheus_software_instance_port | default(prometheus_software_port, true) }}/tcp'
     permanent: true
-    source: '{{ prometheus_server_ip }}'
+    rich_rule: 'rule family={% if prometheus_server_ip | ipv4 != False %}ipv4{% else %}ipv6{% endif %} source address={{ prometheus_server_ip }} port port={{ prometheus_software_instance_port | default(prometheus_software_port, true) }} protocol=tcp accept'
     state: enabled
     zone: '{{ prometheus_firewalld_zone }}'
   loop_control:
