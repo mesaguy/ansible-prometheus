@@ -21,7 +21,7 @@ control '01' do
   impact 1.0
   title 'Verify script_exporter_adhocteam service'
   desc 'Ensures script_exporter_adhocteam service is up and running'
-  describe service('script_exporter_adhocteam') do
+  describe service('process_exporter_ncabatoff__TEST') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
