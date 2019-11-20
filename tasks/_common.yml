@@ -45,14 +45,14 @@
 
   when: prometheus_prerequisite_packages is defined or prometheus_install_sponge|bool
 
-- name: Add the group "{{ prometheus_group }}"
+- name: Add group "{{ prometheus_group }}"
   become: true
   group:
     name: '{{ prometheus_group }}'
     gid: '{{ prometheus_gid | default(omit) }}'
   when: prometheus_manage_group|bool
 
-- name: Add the user "{{ prometheus_user }}"
+- name: Add user "{{ prometheus_user }}"
   become: true
   user:
     name: '{{ prometheus_user }}'
