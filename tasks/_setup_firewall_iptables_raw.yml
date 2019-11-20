@@ -2,11 +2,13 @@
 - name: Allow incoming prometheus server connections to {{ prometheus_software_name }}:{{ prometheus_software_instance_port | default(prometheus_software_port, true) }} via iptables_raw ipv4
   become: true
   iptables_raw:
-    ipversion: 4
+    backup: true
+    table: filter
+    ipversion: '4'
     weight: 50
-    name: 'allow_prometheus_software_{{ prometheus_software_name }}'
+    name: 'allow prometheus {{ prometheus_software_name }} on port {{ prometheus_software_instance_port | default(prometheus_software_port, true) }} from {{ prometheus_server_ip }}'
     rules: |
-     -A INPUT -p tcp -m state --state NEW -m tcp --dport {{ prometheus_software_instance_port | default(prometheus_software_port, true) }} -s {{ prometheus_server_ip }} -j ACCEPT
+     -A INPUT -p tcp -s {{ prometheus_server_ip }}/32 -m state --state NEW --dport {{ prometheus_software_instance_port | default(prometheus_software_port, true) }} -j ACCEPT
   loop_control:
     loop_var: prometheus_server_ip
   with_items: '{{ prometheus_server_ips }}'
@@ -15,11 +17,13 @@
 - name: Allow incoming prometheus server connections to {{ prometheus_software_name }}:{{ prometheus_software_instance_port | default(prometheus_software_port, true) }} via iptables_raw ipv6
   become: true
   iptables_raw:
-    ipversion: 6
+    backup: true
+    table: filter
+    ipversion: '6'
     weight: 50
-    name: 'allow_prometheus_software_{{ prometheus_software_name }}'
+    name: 'allow prometheus {{ prometheus_software_name }} on port {{ prometheus_software_instance_port | default(prometheus_software_port, true) }} from {{ prometheus_server_ip }}'
     rules: |
-     -A INPUT -p tcp -m state --state NEW -m tcp --dport {{ prometheus_software_instance_port | default(prometheus_software_port, true) }} -s {{ prometheus_server_ip }} -j ACCEPT
+     -A INPUT -p tcp -s {{ prometheus_server_ip }} -m state --state NEW --dport {{ prometheus_software_instance_port | default(prometheus_software_port, true) }} -j ACCEPT
   loop_control:
     loop_var: prometheus_server_ip
   with_items: '{{ prometheus_server_ips }}'
