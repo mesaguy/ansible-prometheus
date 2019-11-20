@@ -20,7 +20,7 @@
     prometheus_software_src_version: '{{ prometheus_node_exporter_src_version | default("v0.18.1") }}'
     prometheus_software_tgroup_jobname: '{{ prometheus_node_exporter_jobname | default(prometheus_node_exporter_default_tgroup_jobname) }}'
     prometheus_software_description: 'Prometheus node_exporter, exporter of host statistics'
-    prometheus_software_documentation: 'https://github.com/prometheus/node_exporter'
+    prometheus_software_documentation: 'https://github.com/prometheus-community/node-exporter-textfile-collector-scripts'
     prometheus_node_exporter_textfiles_directory: '{{ prometheus_node_exporter_textfiles_dir | default(prometheus_etc_dir + "/node_exporter_textfiles") }}'
     prometheus_software_host: '{{ prometheus_node_exporter_host | default("0.0.0.0") }}'
     prometheus_software_port: '{{ prometheus_node_exporter_port | default(prometheus_node_exporter_default_port) }}'
@@ -49,71 +49,71 @@
   set_fact:
     prometheus_node_exporter_scripts:
       - name: apt
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_apt_commit }}/text_collector_examples/apt.sh'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_apt_commit }}/apt.sh'
         checksum: '{{ prometheus_script_apt_checksum }}'
         enabled: '{{ prometheus_script_apt }}'
       - name: btrfs_stats
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_btrfs_stats_commit }}/text_collector_examples/btrfs_stats.py'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_btrfs_stats_commit }}/btrfs_stats.py'
         checksum: '{{ prometheus_script_btrfs_stats_checksum }}'
         enabled: '{{ prometheus_script_btrfs_stats }}'
       - name: deleted_libraries
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_deleted_libraries_commit }}/text_collector_examples/deleted_libraries.py'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_deleted_libraries_commit }}/deleted_libraries.py'
         checksum: '{{ prometheus_script_deleted_libraries_checksum }}'
         enabled: '{{ prometheus_script_deleted_libraries }}'
       - name: directory_size
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_directory_size_commit }}/text_collector_examples/directory-size.sh'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_directory_size_commit }}/directory-size.sh'
         checksum: '{{ prometheus_script_directory_size_checksum }}'
         enabled: '{{ prometheus_script_directory_size }}'
       - name: inotify-instances
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_inotify_instances_commit }}/text_collector_examples/inotify-instances'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_inotify_instances_commit }}/inotify-instances'
         checksum: '{{ prometheus_script_inotify_instances_checksum }}'
         enabled: '{{ prometheus_script_inotify_instances }}'
       - name: ipmitool
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_ipmitool_commit }}/text_collector_examples/ipmitool'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_ipmitool_commit }}/ipmitool'
         checksum: '{{ prometheus_script_ipmitool_checksum }}'
         enabled: '{{ prometheus_script_ipmitool }}'
       - name: md_info
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_md_info_commit }}/text_collector_examples/md_info.sh'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_md_info_commit }}/md_info.sh'
         checksum: '{{ prometheus_script_md_info_checksum }}'
         enabled: '{{ prometheus_script_md_info }}'
       - name: md_info_detail
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_md_info_detail_commit }}/text_collector_examples/md_info_detail.sh'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_md_info_detail_commit }}/md_info_detail.sh'
         checksum: '{{ prometheus_script_md_info_detail_checksum }}'
         enabled: '{{ prometheus_script_md_info_detail }}'
       - name: mellanox_hca_temp
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_mellanox_hca_temp_commit }}/text_collector_examples/mellanox_hca_temp'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_mellanox_hca_temp_commit }}/mellanox_hca_temp'
         checksum: '{{ prometheus_script_mellanox_hca_temp_checksum }}'
         enabled: '{{ prometheus_script_mellanox_hca_temp }}'
       - name: multipathd_info
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_multipathd_info_commit }}/text_collector_examples/multipathd_info'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_multipathd_info_commit }}/multipathd_info'
         checksum: '{{ prometheus_script_multipathd_info_checksum }}'
         enabled: '{{ prometheus_script_multipathd_info }}'
       - name: ntpd_metrics
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_ntpd_metrics_commit }}/text_collector_examples/ntpd_metrics.py'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_ntpd_metrics_commit }}/ntpd_metrics.py'
         checksum: '{{ prometheus_script_ntpd_metrics_checksum }}'
         enabled: '{{ prometheus_script_ntpd_metrics }}'
       - name: nvme_metrics
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_nvme_metrics_commit }}/text_collector_examples/nvme_metrics.sh'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_nvme_metrics_commit }}/nvme_metrics.sh'
         checksum: '{{ prometheus_script_nvme_metrics_checksum }}'
         enabled: '{{ prometheus_script_nvme_metrics }}'
       - name: pacman
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_pacman_commit }}/text_collector_examples/pacman.sh'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_pacman_commit }}/pacman.sh'
         checksum: '{{ prometheus_script_pacman_checksum }}'
         enabled: '{{ prometheus_script_pacman }}'
       - name: smartmon
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_smartmon_commit }}/text_collector_examples/smartmon.sh'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_smartmon_commit }}/smartmon.sh'
         checksum: '{{ prometheus_script_smartmon_checksum }}'
         enabled: '{{ prometheus_script_smartmon }}'
       - name: smartmon_python
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_smartmon_python_commit }}/text_collector_examples/smartmon.py'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_smartmon_python_commit }}/smartmon.py'
         checksum: '{{ prometheus_script_smartmon_python_checksum }}'
         enabled: '{{ prometheus_script_smartmon_python }}'
       - name: storcli
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_storcli_commit }}/text_collector_examples/storcli.py'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_storcli_commit }}/storcli.py'
         checksum: '{{ prometheus_script_storcli_checksum }}'
         enabled: '{{ prometheus_script_storcli }}'
       - name: yum
-        url: 'https://raw.githubusercontent.com/prometheus/node_exporter/{{ prometheus_script_yum_commit }}/text_collector_examples/yum.sh'
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_yum_commit }}/yum.sh'
         checksum: '{{ prometheus_script_yum_checksum }}'
         enabled: '{{ prometheus_script_yum }}'
 
