@@ -40,5 +40,5 @@ end
 
 describe http('http://127.0.0.1:9559/metrics') do
     its('status') { should cmp 200 }
-    its('body') { should match /process_resident_memory_bytes/ }
+    its('body') { should match /ntp_scrape_duration_seconds_sum/ }
 end

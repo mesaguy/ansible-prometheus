@@ -36,7 +36,7 @@
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
     prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
     # No binaries released for 0.9.2
-    #prometheus_software_bin_url: 'https://github.com/blakelead/{{ prometheus_software_shortname }}/releases/download/{{ prometheus_software_version }}/{{ prometheus_software_shortname }}-{{ prometheus_software_version }}-{{ prometheus_architecture }}.tar.gz'
+    # prometheus_software_bin_url: 'https://github.com/blakelead/{{ prometheus_software_shortname }}/releases/download/{{ prometheus_software_version }}/{{ prometheus_software_shortname }}-{{ prometheus_software_version }}-{{ prometheus_architecture }}.tar.gz'
     prometheus_software_src_dir_suffix: '/src/github.com/blakelead/{{ prometheus_software_shortname }}'
     prometheus_software_src_url: 'https://github.com/leansys-team/{{ prometheus_software_shortname }}.git'
 

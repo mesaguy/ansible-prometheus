@@ -37,7 +37,7 @@
   set_fact:
     prometheus_install_sponge: true
   when:
-   - ansible_distribution not in ['CentOS']
+    - ansible_distribution not in ['CentOS']
 
 - name: Workaround for OverlayFS on Fedora 20 and 21
   become: true
