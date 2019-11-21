@@ -10,13 +10,15 @@
 - name: Starting ntp_exporter (sapcc) install
   set_fact:
     prometheus_exporter: true
+    prometheus_software_files:
+      - 'build/ntp_exporter'
     prometheus_software_binary_name: 'ntp_exporter'
     prometheus_software_env_vars: '{{ prometheus_ntp_exporter_sapcc_env_vars | default({}) }}'
     prometheus_software_extra_opts: '{{ prometheus_ntp_exporter_sapcc_extra_opts | default () }}'
     # Do not perform tests, tests only succeed where IPv6 is available
     prometheus_software_fallback_to_build: '{{ prometheus_ntp_exporter_fallback_to_build | default(prometheus_fallback_to_build) }}'
     prometheus_software_name: 'ntp_exporter_sapcc'
-    prometheus_software_version: '{{ prometheus_ntp_exporter_src_version | default("v1.0") }}'
+    prometheus_software_version: '{{ prometheus_ntp_exporter_src_version | default("v1.1.0") }}'
     prometheus_software_tgroup_jobname: '{{ prometheus_ntp_exporter_sapcc_jobname | default(prometheus_ntp_exporter_sapcc_default_tgroup_jobname) }}'
     prometheus_software_description: "Prometheus ntp_exporter, checks the drift of that node's clock against a given NTP server"
     prometheus_software_documentation: 'https://github.com/sapcc/ntp_exporter'

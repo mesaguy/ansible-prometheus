@@ -1067,7 +1067,7 @@ An array of additional flags to pass to the ntp_exporter daemon, the '-ntp.serve
 
 The version of ntp_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_ntp_exporter_sapcc_version: "v1.0"
+    prometheus_ntp_exporter_sapcc_version: "v1.1.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9559:
 

@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
  - Upgrade Prometheus from v2.13.1 to v2.14.0
  - Upgrade blackbox_exporter v0.15.1 to v0.16.0
+ - Upgrade ntp_exporter_sapcc v1.0 to v1.0.0
  - Upgrade redis_exporter_oliver006 from v1.3.2 to v1.3.4
  - Use as the upstream source of all textfiles: https://github.com/prometheus-community/node-exporter-textfile-collector-scripts
  - Upgrade apt script to commit: 'd24d180e330f3cafb8f0682df7ea5b19d9d0a89a'
