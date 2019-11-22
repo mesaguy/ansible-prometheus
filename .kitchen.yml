@@ -1,7 +1,6 @@
 ---
 driver:
   name: docker
-  remove_images: true
 
 driver_config:
   disable_upstart: false
@@ -32,8 +31,7 @@ provisioner:
   idempotency_test: <%= ENV['KITCHEN_IDEMPOTENY_TEST'] || true %>
   environment_vars:
     ANSIBLE_PIPELINING: "true"
-    ANSIBLE_SSH_CONTROL_PATH: /tmp/ansible-ssh-%%h-%%p-%%r
-    ANSIBLE_SSH_ARGS: "-o ControlMaster=auto -o ControlPersist=21600s"
+    ANSIBLE_SSH_ARGS: "-o ControlMaster=yes -o ControlPersist=21600s"
   fail_non_idempotent: true
 
 platforms:
