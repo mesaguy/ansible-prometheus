@@ -6,6 +6,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.9.2] - 2019-12-14
+
+### Changed
+
+ - Upgrade Go from v1.13.4 to v1.13.5
+ - Upgrade alertmanager from v0.19.0 to v0.20.0
+ - Upgrade cloudwatch from v0.6.0 to v0.7.0
+ - Upgrade couchbase_exporter_blakelead from v0.9.2 to v0.9.5
+ - Upgrade postgres_exporter_wrouesnel from v0.7.0 to v0.8.0
+ - Upgrade snmp_exporter v0.15.0 to v0.16.1
+ - Upgrade statsd_exporter from v0.12.2 to v0.13.0
+
+### Fixed
+
+  - Fix adding firewall rules for 'prometheus_additional_exporters'
+
 ## [0.9.1] - 2019-11-22
 
 ### Changed

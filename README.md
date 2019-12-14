@@ -216,7 +216,7 @@ If installing a Prometheus application binary fails, fall back to installing the
 
 Go version to use when building Prometheus software:
 
-    prometheus_go_version: 1.13.4
+    prometheus_go_version: 1.13.5
 
 The Prometheus etc directory, defaults to '/opt/prometheus/etc':
 
@@ -443,8 +443,8 @@ An array of additional flags to pass to the alertmanager daemon:
 
 The version of Alertmanager to install. The source version defines the version as specified in version control:
 
-    prometheus_alertmanager_version: "0.19.0"
-    prometheus_alertmanager_version_src_version: "v0.19.0"
+    prometheus_alertmanager_version: "0.20.0"
+    prometheus_alertmanager_version_src_version: "v0.20.0"
 
 Where to store Alertmanager's data, defaults to /opt/prometheus/var/alertmanager
 
@@ -623,7 +623,7 @@ An array of additional flags to pass to the cloudwatch_exporter daemon:
 
 The version of cloudwatch_exporter to install:
 
-    prometheus_cloudwatch_exporter_version: "0.6.0"
+    prometheus_cloudwatch_exporter_version: "0.7.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9106:
 
@@ -688,8 +688,8 @@ An array of additional flags to pass to the couchbase_exporter daemon:
 
 The version of couchbase_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_couchbase_exporter_blakelead_version: "0.9.2"
-    prometheus_couchbase_exporter_blakelead_src_version: "0.9.2"
+    prometheus_couchbase_exporter_blakelead_version: "0.9.5"
+    prometheus_couchbase_exporter_blakelead_src_version: "0.9.5"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9191:
 
@@ -1190,8 +1190,8 @@ An array of additional flags to pass to the postgres_exporter daemon:
 
 The version of postgres_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_postgres_exporter_wrouesnel_version: "0.7.0"
-    prometheus_postgres_exporter_wrouesnel_src_version: "v0.7.0"
+    prometheus_postgres_exporter_wrouesnel_version: "0.8.0"
+    prometheus_postgres_exporter_wrouesnel_src_version: "v0.8.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9187:
 
@@ -1374,8 +1374,8 @@ An array of additional flags to pass to the snmp_exporter daemon:
     prometheus_snmp_exporter_extra_opts: []
 
 The version of snmp_exporter to install. The source version defines the version as specified in version control:
-    prometheus_snmp_exporter_version: "0.15.0"
-    prometheus_snmp_exporter_src_version: "v0.15.0"
+    prometheus_snmp_exporter_version: "0.16.1"
+    prometheus_snmp_exporter_src_version: "v0.16.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9116:
 
@@ -1487,8 +1487,8 @@ An array of additional flags to pass to the statsd_exporter daemon:
         --statsd.listen-udp=":9125"
 
 The version of statsd_exporter to install. The source version defines the version as specified in version control:
-    prometheus_statsd_exporter_version: "0.12.2"
-    prometheus_statsd_exporter_src_version: "v0.12.2"
+    prometheus_statsd_exporter_version: "0.13.0"
+    prometheus_statsd_exporter_src_version: "v0.13.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9102:
 
