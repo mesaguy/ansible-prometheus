@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'awesome_bot', '1.19.1'
-gem 'inspec', '4.18.24'
+gem 'inspec', '4.18.51
 gem 'kitchen-ansible', '0.50.1'
 gem 'kitchen-ansiblepush', '0.10.1'
 gem 'kitchen-docker', '2.9.0'
