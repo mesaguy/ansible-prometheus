@@ -14,12 +14,15 @@ driver_config:
 
 verifier:
   name: inspec
+  sudo: false
 
 suites:
   - name: default
     verifier:
       inspec_tests:
         - path: tests/inspec/<%= ENV['KITCHEN_INSPEC_SUITE'] || 'default' %>
+    env:
+      SUDO: false
 
 provisioner:
   name: ansible_push
