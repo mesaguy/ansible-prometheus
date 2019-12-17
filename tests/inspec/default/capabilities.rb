@@ -26,7 +26,7 @@ elsif os.name == 'amazon' and ['2018.03'].include?(os.release)
 #elsif os.family == 'suse' and ['13.1', '13.2', '42.1'].include?(os.release)
 #    # Unsupported
 else
-    describe command('which setcap') do
+    describe command('PATH=/usr/bin:/usr/sbin:/bin:/sbin which setcap') do
         its('stdout') { should match /bin/ }
         its('stderr') { should eq '' }
         its('exit_status') { should eq 0 }
