@@ -18,6 +18,7 @@
     name: '../../../../ansible-prometheus'
     tasks_from: '_setup_server_tgroups'
   vars:
+    prometheus_manage_client_tgroups: true
     prometheus_manage_server_tgroups: true
     prometheus_manage_server_tgroups_only: true
     prometheus_tgroup_dir: '/etc/prometheus/tgroups-server'
