@@ -11,8 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Upgrade Go from v1.13.4 to v1.13.5
  - Upgrade alertmanager from v0.19.0 to v0.20.0
  - Upgrade cloudwatch from v0.6.0 to v0.7.0
- - Upgrade couchbase_exporter_blakelead from v0.9.2 to v0.9.5
+ - Upgrade consul_exporter from v0.5.0 to v0.6.0
+ - Upgrade couchbase_exporter_blakelead from v0.9.2 to v0.9.6
  - Upgrade postgres_exporter_wrouesnel from v0.7.0 to v0.8.0
+ - Upgrade redis_exporter_oliver006 from v1.3.4 to v1.3.5
  - Upgrade snmp_exporter v0.15.0 to v0.16.1
  - Upgrade statsd_exporter from v0.12.2 to v0.13.0
 

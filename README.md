@@ -664,8 +664,8 @@ An array of additional flags to pass to the consul_exporter daemon:
 
 The version of consul_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_consul_exporter_version: "0.5.0"
-    prometheus_consul_exporter_src_version: "v0.5.0"
+    prometheus_consul_exporter_version: "0.6.0"
+    prometheus_consul_exporter_src_version: "v0.6.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9107:
 
@@ -688,8 +688,8 @@ An array of additional flags to pass to the couchbase_exporter daemon:
 
 The version of couchbase_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_couchbase_exporter_blakelead_version: "0.9.5"
-    prometheus_couchbase_exporter_blakelead_src_version: "0.9.5"
+    prometheus_couchbase_exporter_blakelead_version: "0.9.6"
+    prometheus_couchbase_exporter_blakelead_src_version: "0.9.6"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9191:
 
@@ -1264,7 +1264,7 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 420
 
 To enable [rabbitmq_exporter by kbudde](https://github.com/kbudde/rabbitmq_exporter) include role task: rabbitmq_exporter_kbudde
 
-Environmental variables to pass to the consul_exporter exporter. These environmental variables are used as a primary method of configuring the exporter:
+Environmental variables to pass to the rabbitmq_exporter exporter. These environmental variables are used as a primary method of configuring the exporter:
 
     prometheus_rabbitmq_exporter_kbudde_env_vars:
       RABBIT_URL: http://localhost:15672
@@ -1293,8 +1293,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "1.3.4"
-    prometheus_redis_exporter_oliver006_src_version: "v1.3.4"
+    prometheus_redis_exporter_oliver006_version: "1.3.5"
+    prometheus_redis_exporter_oliver006_src_version: "v1.3.5"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 
