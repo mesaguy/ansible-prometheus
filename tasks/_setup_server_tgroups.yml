@@ -1,7 +1,11 @@
 ---
 - name: Include task to setup tgroups for all known nodes that use this server
   include_tasks: _setup_server_node_tgroup.yml
-  with_items: '{{ hostvars.keys() | list | unique }}'
   loop_control:
     loop_var: prometheus_client_fqdn
-  when: "'prometheus_components' in hostvars[prometheus_client_fqdn] and 'prometheus_servers' in hostvars[prometheus_client_fqdn] and inventory_hostname in hostvars[prometheus_client_fqdn]['prometheus_servers'] and not ('prometheus_tgroup_use_facts' in hostvars[prometheus_client_fqdn] and hostvars[prometheus_client_fqdn].prometheus_tgroup_use_facts)"
+  with_items: '{{ hostvars.keys() | list | unique | sort }}'
+  when:
+    - "'prometheus_components' in hostvars[prometheus_client_fqdn]"
+    - "'prometheus_servers' in hostvars[prometheus_client_fqdn]"
+    - inventory_hostname in hostvars[prometheus_client_fqdn]['prometheus_servers']
+    - not ('prometheus_tgroup_use_facts' in hostvars[prometheus_client_fqdn] and hostvars[prometheus_client_fqdn].prometheus_tgroup_use_facts)
