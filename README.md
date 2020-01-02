@@ -61,8 +61,8 @@ All exporters are verified to install. Currently select modules receive testing 
 |[influxdb_exporter](https://github.com/prometheus/influxdb_exporter)                           | [usage](#influxdb-exporter-configuration)                   | prometheus    | Yes       |
 |[iptables_exporter_retailnext](https://github.com/retailnext/iptables_exporter)                | [usage](#iptables-exporter-retailnext-configuration)        | retailnext    | Yes       |
 |[jmx_exporter](https://github.com/prometheus/jmx_exporter)                                     | [usage](#jmx-exporter-configuration)                        | prometheus    | No        |
-|[kafka_exporter_danielqsj](https://github.com/danielqsj/kafka_exporter)                                  | [usage](#kafka-exporter-danielqsj-configuration)            | danielqsj     | Yes       |
-|[memcached_exporter](https://github.com/prometheus/memcached_exporter)               | [usage](#memcached-exporter-configuration)                  | prometheus    | Yes       |
+|[kafka_exporter_danielqsj](https://github.com/danielqsj/kafka_exporter)                        | [usage](#kafka-exporter-danielqsj-configuration)            | danielqsj     | Yes       |
+|[memcached_exporter](https://github.com/prometheus/memcached_exporter)                         | [usage](#memcached-exporter-configuration)                  | prometheus    | Yes       |
 |[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)                               | [usage](#mysqld-exporter-configuration)                     | prometheus    | Yes       |
 |[node_exporter](https://github.com/prometheus/node_exporter)                                   | [usage](#node-exporter-configuration)                       | prometheus    | Yes       |
 |[ntp_exporter_sapcc](https://github.com/sapcc/ntp_exporter)                                    | [usage](#ntp-exporter-sapcc-configuration)                  | sapcc         | Yes       |
@@ -72,6 +72,7 @@ All exporters are verified to install. Currently select modules receive testing 
 |[openvpn_exporter_kumina](https://github.com/kumina/openvpn_exporter)                          | [usage](#openvpn-exporter-kumina-configuration)             | kumina        | Yes       |
 |[ping_exporter_czerwonk](https://github.com/czerwonk/ping_exporter)                            | [usage](#ping-exporter-czerwonk-configuration)              | czerwonk      | Yes       |
 |[postgres_exporter_wrouesnel](https://github.com/wrouesnel/postgres_exporter)                  | [usage](#proxysql-exporter-percona-configuration)           | wrouesnel     | Yes       |
+|[powerdns_exporter_ledgr](https://github.com/ledgr/powerdns_exporter)                          | [usage](#powerdns-exporter-ledgr-configuration)             | ledgr         | No        |
 |[process_exporter_ncabatoff](https://github.com/ncabatoff/process-exporter)                    | [usage](#process-exporter-ncabatoff-configuration)          | ncabatoff     | Yes       |
 |[proxysql_exporter_percona](https://github.com/percona/proxysql_exporter)                      | [usage](#proxysql-exporter-percona-configuration)           | percona       | Yes       |
 |[rabbitmq_exporter_kbudde](https://github.com/kbudde/rabbitmq_exporter)                        | [usage](#rabbitmq-exporter-kbudde-configuration)            | kbudde        | Yes       |
@@ -1259,6 +1260,16 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 420
 
     prometheus_proxysql_exporter_percona_host: "0.0.0.0"
     prometheus_proxysql_exporter_percona_port: 42004
+
+### Powerdns exporter (ledgr) configuration
+
+To enable [powerdns_exporter_ledgr](https://github.com/ledgr/powerdns_exporter), include the role task: `powerdns_exporter_ledgr`
+
+Powerdns setup requires webserver and API options to be set, see README in that repo.
+
+The following options are configurable for the api_url and api_key needed to connect to the powerdns api. 
+    prometheus_powerdns_exporter_ledgr_api_url: '{{prometheus_powerdns_exporter_ledgr_api_url | default("http://localhost:8081/api/v1/") }}'
+    prometheus_powerdns_exporter_ledgr_api_key: '{{prometheus_powerdns_exporter_ledgr_api_key | default("") }}'
 
 ### RabbitMQ exporter (kbudde) configuration
 
