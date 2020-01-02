@@ -1,8 +1,10 @@
+# powerdns will have a native built-in exporter as of v4.3.0 apparently, so this is for earlier versions!
 ---
 - block:
   - name: Include role mesaguy.prometheus setup task
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
+
 
 - name: Include powerdns_exporter (ledgr) variable file
   include_vars: exporters/powerdns_exporter_ledgr.yml
@@ -14,10 +16,10 @@
     prometheus_software_env_vars: '{{ prometheus_powerdns_exporter_ledgr_env_vars | default({}) }}'
     prometheus_software_extra_opts: '{{ prometheus_powerdns_exporter_ledgr_extra_opts | default() }}'
     prometheus_software_fallback_to_build: '{{ prometheus_powerdns_exporter_ledgr_fallback_to_build | default(prometheus_fallback_to_build) }}'
-    prometheus_software_make_command: 'go run mage.go binary'
-    prometheus_software_makefile_make_command: 'go run mage.go binary'
+    # prometheus_software_make_command: 'make'
+    # prometheus_software_makefile_make_command: 'make'
     prometheus_software_name: 'powerdns_exporter_ledgr'
-    # prometheus_software_version: '{{ prometheus_powerdns_exporter_ledgr_version | default("0.8.0") }}'
+    prometheus_software_version: '{{ prometheus_powerdns_exporter_ledgr_version | default("master") }}'
     # prometheus_software_src_version: '{{ prometheus_powerdns_exporter_ledgr_src_version | default("v0.8.0") }}'
     prometheus_software_tgroup_jobname: '{{ prometheus_powerdns_exporter_ledgr_jobname | default(prometheus_powerdns_exporter_ledgr_default_tgroup_jobname) }}'
     prometheus_software_description: 'Prometheus powerdns_exporter (ledgr), exporter of host statistics'
@@ -26,14 +28,17 @@
     prometheus_software_port: '{{ prometheus_powerdns_exporter_ledgr_port | default(prometheus_powerdns_exporter_ledgr_default_port) }}'
     prometheus_software_runas: '{{ prometheus_powerdns_exporter_ledgr_runas | default(prometheus_user) }}'
     prometheus_software_shortname: 'powerdns_exporter'
+    prometheus_powerdns_exporter_ledgr_api_url: '{{prometheus_powerdns_exporter_ledgr_api_url | default("http://localhost:8081/api/v1/") }}'
+    prometheus_powerdns_exporter_ledgr_api_key: '{{prometheus_powerdns_exporter_ledgr_api_key | default("") }}'
 
+- debug:
+    var: prometheus_powerdns_exporter_ledgr_api_key
 
 - name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
   set_fact:
     prometheus_software_opts:
       - '--listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }} --api-url={{prometheus_powerdns_exporter_ledgr_api_url}} --api-key={{prometheus_powerdns_exporter_ledgr_api_key}}'
     prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
-    # prometheus_software_bin_url: 'https://github.com/ledgr/{{ prometheus_software_shortname }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_shortname }}_v{{ prometheus_software_version }}_{{ prometheus_architecture }}.tar.gz'
     prometheus_software_src_dir_suffix: '/src/github.com/ledgr/{{ prometheus_software_shortname }}'
     prometheus_software_src_url: 'https://github.com/ledgr/{{ prometheus_software_shortname }}.git'
 
