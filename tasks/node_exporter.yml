@@ -112,6 +112,10 @@
         url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_storcli_commit }}/storcli.py'
         checksum: '{{ prometheus_script_storcli_checksum }}'
         enabled: '{{ prometheus_script_storcli }}'
+      - name: tw_cli
+        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_tw_cli_commit }}/tw_cli.py'
+        checksum: '{{ prometheus_script_tw_cli_checksum }}'
+        enabled: '{{ prometheus_script_tw_cli }}'
       - name: yum
         url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_yum_commit }}/yum.sh'
         checksum: '{{ prometheus_script_yum_checksum }}'

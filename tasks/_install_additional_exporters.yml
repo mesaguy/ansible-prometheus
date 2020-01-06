@@ -10,8 +10,8 @@
     loop_var: additional_exporter
   with_items: '{{ prometheus_additional_exporters }}'
   when:
-    - prometheus_manage_client_tgroups|bool
-    - prometheus_additional_exporters|length > 0
+    - prometheus_manage_client_tgroups | bool
+    - prometheus_additional_exporters | length > 0
 
 - name: Include task to setup firewall rules additional exporters
   include_tasks: '_setup_firewall.yml'
@@ -22,6 +22,6 @@
     loop_var: additional_exporter
   with_items: '{{ prometheus_additional_exporters }}'
   when:
-    - (prometheus_manage_client_firewalld|bool or prometheus_manage_client_iptables|bool)
-    - prometheus_server_ips|length > 0
-    - prometheus_additional_exporters|length > 0
+    - (prometheus_manage_client_firewalld | bool or prometheus_manage_client_iptables | bool)
+    - prometheus_server_ips | length > 0
+    - prometheus_additional_exporters | length > 0

@@ -36,21 +36,23 @@
       package:
         name: '{{ prometheus_sponge_packages }}'
         state: present
-      when: prometheus_sponge_packages is defined and prometheus_install_sponge|bool
+      when:
+        - prometheus_sponge_packages is defined
+        - prometheus_install_sponge | bool
 
     - name: Warn that 'sponge' cannot be installed
       debug:
         msg: "'sponge' cannot be installed because no 'prometheus_sponge_packages' variable has been defined"
       when: prometheus_sponge_packages is undefined
 
-  when: prometheus_prerequisite_packages is defined or prometheus_install_sponge|bool
+  when: prometheus_prerequisite_packages is defined or prometheus_install_sponge | bool
 
 - name: Add group "{{ prometheus_group }}"
   become: true
   group:
     name: '{{ prometheus_group }}'
     gid: '{{ prometheus_gid | default(omit) }}'
-  when: prometheus_manage_group|bool
+  when: prometheus_manage_group | bool
 
 - name: Add user "{{ prometheus_user }}"
   become: true
@@ -60,7 +62,7 @@
     uid: '{{ prometheus_uid | default(omit) }}'
     group: '{{ prometheus_group }}'
     shell: '{{ prometheus_shell }}'
-  when: prometheus_manage_user|bool
+  when: prometheus_manage_user | bool
 
 - name: 'Setup prometheus install root directory: "{{ prometheus_root_dir }}"'
   become: true
@@ -95,7 +97,9 @@
     group: '{{ prometheus_group }}'
     state: link
     force: '{{ prometheus_link_etc_force }}'
-  when: prometheus_link_etc|bool and prometheus_etc_dir != '/etc/prometheus'
+  when:
+    - prometheus_link_etc | bool
+    - prometheus_etc_dir != '/etc/prometheus'
 
 - name: 'Setup prometheus base directories owned by "{{ prometheus_user }}"'
   become: true

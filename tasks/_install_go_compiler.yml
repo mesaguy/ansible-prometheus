@@ -71,7 +71,7 @@
       loop_control:
         loop_var: prometheus_cleanup_go_item
       when: present_go_paths.files
-  when: prometheus_purge_orphans|bool
+  when: prometheus_purge_orphans | bool
 
 - name: Define 'install_go_compiler' run as complete
   set_fact:

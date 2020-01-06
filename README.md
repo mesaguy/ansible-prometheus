@@ -17,7 +17,7 @@ This module is intended to support as many distributions and architectures as po
 
 | OS             | Release                                 | Architectures     |
 |----------------|-----------------------------------------|-------------------|
-|Alpine          |3.2 through 3.10, edge                   | x86_64 (amd64)    |
+|Alpine          |3.2 through 3.11, edge                   | x86_64 (amd64)    |
 |AmazonLinux     |1 and 2                                  | x86_64 (amd64)    |
 |ArchLinux       |Current                                  | x86_64 (amd64)    |
 |Enterprise Linux|6, 7, 8                                  | x86_64 (amd64)    |
@@ -47,6 +47,7 @@ All exporters are verified to install. Currently select modules receive testing 
 |[bigip_exporter_expressenab](https://github.com/ExpressenAB/bigip_exporter)                    | [usage](#bigip-exporter-expressenab-configuration)          | ExpressenAB   | Yes       |
 |[bind_exporter_digitalocean](https://github.com/digitalocean/bind_exporter)                    | [usage](#bind-exporter-digitalocean-configuration)          | digitalocean  | Yes       |
 |[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)                           | [usage](#blackbox-exporter-configuration)                   | prometheus    | Yes       |
+|[ceph_exporter](https://github.com/digitalocean/ceph_exporter)                                 | [usage](#ceph-exporter-configuration)                       | digitalocean  | Partly    |
 |[cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter)                       | [usage](#cloudwatch-exporter-configuration)                 | prometheus    | Yes       |
 |[collectd_exporter](https://github.com/prometheus/collectd_exporter)                           | [usage](#collectd-exporter-configuration)                   | prometheus    | Yes       |
 |[consul_exporter](https://github.com/prometheus/consul_exporter)                               | [usage](#consul-exporter-configuration)                     | prometheus    | Yes       |
@@ -72,7 +73,7 @@ All exporters are verified to install. Currently select modules receive testing 
 |[openvpn_exporter_kumina](https://github.com/kumina/openvpn_exporter)                          | [usage](#openvpn-exporter-kumina-configuration)             | kumina        | Yes       |
 |[ping_exporter_czerwonk](https://github.com/czerwonk/ping_exporter)                            | [usage](#ping-exporter-czerwonk-configuration)              | czerwonk      | Yes       |
 |[postgres_exporter_wrouesnel](https://github.com/wrouesnel/postgres_exporter)                  | [usage](#proxysql-exporter-percona-configuration)           | wrouesnel     | Yes       |
-|[powerdns_exporter_ledgr](https://github.com/ledgr/powerdns_exporter)                          | [usage](#powerdns-exporter-ledgr-configuration)             | ledgr         | No        |
+|[powerdns_exporter_ledgr](https://github.com/ledgr/powerdns_exporter)                          | [usage](#powerdns-exporter-ledgr-configuration)             | ledgr         | Partly    |
 |[process_exporter_ncabatoff](https://github.com/ncabatoff/process-exporter)                    | [usage](#process-exporter-ncabatoff-configuration)          | ncabatoff     | Yes       |
 |[proxysql_exporter_percona](https://github.com/percona/proxysql_exporter)                      | [usage](#proxysql-exporter-percona-configuration)           | percona       | Yes       |
 |[rabbitmq_exporter_kbudde](https://github.com/kbudde/rabbitmq_exporter)                        | [usage](#rabbitmq-exporter-kbudde-configuration)            | kbudde        | Yes       |
@@ -89,9 +90,9 @@ All exporters are verified to install. Currently select modules receive testing 
 ### Supported node_exporter textfiles scripts
 Numerous node_exporter textfiles scripts are supported and can be installed via the following variables. These scripts are installed under '/opt/prometheus/scripts' by default:
 
-| node_exporter textfiles script                                                                                              | Source                 | Enable variable                           |
-|-----------------------------------------------------------------------------------------------------------------------------|------------------------|-------------------------------------------|
-|[apt.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/apt.sh)                | node_exporter examples | prometheus_script_apt: true               |
+| node_exporter textfiles script                                                                                                           | Source                 | Enable variable                           |
+|------------------------------------------------------------------------------------------------------------------------------------------|------------------------|-------------------------------------------|
+|[apt.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/apt.sh)                             | node_exporter examples | prometheus_script_apt: true               |
 |[btrfs_stats.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/btrfs_stats.py)             | node_exporter examples | prometheus_script_btrfs_stats: true       |
 |[deleted_libraries.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/deleted_libraries.py) | node_exporter examples | prometheus_script_deleted_libraries: true |
 |[directory-size.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/directory-size.sh)       | node_exporter examples | prometheus_script_directory_size: true    |
@@ -107,6 +108,7 @@ Numerous node_exporter textfiles scripts are supported and can be installed via 
 |[smartmon.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.py)                   | node_exporter examples | prometheus_script_smartmon_python: true   |
 |[smartmon.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.sh)                   | node_exporter examples | prometheus_script_smartmon: true          |
 |[storcli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/storcli.py)                     | node_exporter examples | prometheus_script_storcli: true           |
+|[tw_cli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/tw_cli.py)                       | node_exporter examples | prometheus_script_tw_cli: true            |
 |[yum.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/yum.sh)                             | node_exporter examples | prometheus_script_yum: true               |
 
 ## Role Variables
@@ -125,6 +127,7 @@ prometheus_components:
  - bigip_exporter_expressenab
  - bind_exporter_digitalocean
  - blackbox_exporter
+ - ceph_exporter_digitalocean
  - cloudwatch_exporter
  - collectd_exporter
  - consul_exporter
@@ -150,6 +153,7 @@ prometheus_components:
  - openvpn_exporter_kumina
  - ping_exporter_czerwonk
  - postgres_exporter_wrouesnel
+ - powerdns_exporter_ledgr
  - process_exporter_ncabatoff
  - proxysql_exporter_percona
  - rabbitmq_exporter_kbudde
@@ -411,8 +415,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.14.0"
-    prometheus_src_version: "v2.14.0"
+    prometheus_version: "2.15.1"
+    prometheus_src_version: "v2.15.1"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -464,8 +468,8 @@ An array of additional flags to pass to the pushgateway daemon:
 
 The version of Pushgateway to install. The source version defines the version as specified in version control:
 
-    prometheus_pushgateway_version: "1.0.0"
-    prometheus_pushgateway_src_version: "v1.0.0"
+    prometheus_pushgateway_version: "1.0.1"
+    prometheus_pushgateway_src_version: "v1.0.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9091:
 
@@ -597,6 +601,27 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 911
 
     prometheus_blackbox_exporter_host: "0.0.0.0"
     prometheus_blackbox_exporter_port: 9115
+
+### Ceph exporter (digitalocean) configuration
+
+To enable [ceph_exporter by digitalocean](https://github.com/digitalocean/ceph_exporter) include role task: ceph_exporter_digitalocean
+
+Ceph libraries must be installed in order to compile this exporter. This Ansible role does not install the prerequisite Ceph libraries as your source and version may vary.
+
+An array of additional flags to pass to the ceph_exporter daemon (ie):
+
+    prometheus_ceph_exporter_digitalocean_extra_opts:
+      - '--ceph.config=/etc/ceph/ceph.conf'
+      - '--exporter.config=/etc/ceph/exporter.yml'
+
+The version of ceph_exporter to install. The source version defines the version as specified in version control:
+
+    prometheus_ceph_exporter_digitalocean_src_version: "2.0.6-luminous"
+
+Port and IP to listen on. Defaults to listening on all available IPs on port 9128:
+
+    prometheus_ceph_exporter_digitalocean_host: "0.0.0.0"
+    prometheus_ceph_exporter_digitalocean_port: 9128
 
 ### CloudWatch exporter configuration
 
@@ -1235,8 +1260,8 @@ An array of additional flags to pass to the process_exporter daemon:
 
 The version of process_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_process_exporter_ncabatoff_version: "0.4.0"
-    prometheus_process_exporter_ncabatoff_src_version: "v0.4.0"
+    prometheus_process_exporter_ncabatoff_version: "0.6.0"
+    prometheus_process_exporter_ncabatoff_src_version: "v0.6.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9256. This is the default port and can/should be overridden using the configuration as exampled above in this section:
 
@@ -1449,7 +1474,7 @@ An array of additional flags to pass to the squid_exporter daemon:
 
 The version of squid_exporter to install:
 
-    prometheus_squid_exporter_boynux_version: "1.8.1"
+    prometheus_squid_exporter_boynux_version: "1.8.2"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9301:
 

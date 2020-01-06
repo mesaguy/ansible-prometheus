@@ -27,6 +27,7 @@
     prometheus_software_host: '{{ prometheus_powerdns_exporter_ledgr_host | default("0.0.0.0") }}'
     prometheus_software_port: '{{ prometheus_powerdns_exporter_ledgr_port | default(prometheus_powerdns_exporter_ledgr_default_port) }}'
     prometheus_software_runas: '{{ prometheus_powerdns_exporter_ledgr_runas | default(prometheus_user) }}'
+    prometheus_software_service_test: '{{ prometheus_powerdns_exporter_ledgr_service_test | default(true) }}'
     prometheus_software_shortname: 'powerdns_exporter'
     prometheus_powerdns_exporter_ledgr_api_url: '{{prometheus_powerdns_exporter_ledgr_api_url | default("http://localhost:8081/api/v1/") }}'
     prometheus_powerdns_exporter_ledgr_api_key: '{{prometheus_powerdns_exporter_ledgr_api_key | default("") }}'

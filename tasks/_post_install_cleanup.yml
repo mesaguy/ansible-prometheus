@@ -23,7 +23,7 @@
     loop_control:
       loop_var: prometheus_cleanup_item
     when: present_paths.files
-  when: prometheus_purge_orphans|bool
+  when: prometheus_purge_orphans | bool
 
 - name: Unset {{ prometheus_software_name }} specific facts
   # This step is taken for the sake of safety. If every installation

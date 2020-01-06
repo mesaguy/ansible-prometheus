@@ -14,6 +14,8 @@ prometheus_prerequisite_packages:
 prometheus_sponge_packages:
  - moreutils  # For 'sponge'
 prometheus_testing_packages:
+ - ceph
  - net-tools
  - procps-ng
  - which
+prometheus_ceph_exporter_digitalocean_install_test: true

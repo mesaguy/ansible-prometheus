@@ -71,7 +71,7 @@
     force: true
     owner: root
     group: '{{ prometheus_group }}'
-  when: prometheus_symlink_tools|bool
+  when: prometheus_symlink_tools | bool
 
 - name: Set {{ prometheus_software_name_version }} validation command facts
   set_fact:

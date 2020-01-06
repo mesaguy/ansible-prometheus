@@ -25,12 +25,12 @@
   loop_control:
     loop_var: prometheus_host_item
   when:
-    - prometheus_tgroup_client_mode is defined and prometheus_tgroup_client_mode|bool
+    - prometheus_tgroup_client_mode is defined and prometheus_tgroup_client_mode | bool
     - "hostvars[prometheus_host_item].inventory_hostname == inventory_hostname"
 
 - name: Include task to create {{ prometheus_software_name }} tgroup file (server mode)
   include_tasks: _setup_client_tgroup_file.yml
-  when: prometheus_tgroup_client_mode is undefined or not prometheus_tgroup_client_mode|bool
+  when: prometheus_tgroup_client_mode is undefined or not prometheus_tgroup_client_mode | bool
 
 - block:
     - name: Find existing host tgroup files
@@ -56,4 +56,6 @@
 
     - name: Define tgroup dir purge for as done
       set_fact: {"prometheus_tgroup_dir_purged_{{ prometheus_client_fqdn | hash('sha1') }}": true}
-  when: prometheus_tgroup_dir_purge_orphans|bool and not lookup('vars', 'prometheus_tgroup_dir_purged_' + prometheus_client_fqdn | hash('sha1'), default=false)
+  when:
+    - prometheus_tgroup_dir_purge_orphans | bool
+    - not lookup('vars', 'prometheus_tgroup_dir_purged_' + prometheus_client_fqdn | hash('sha1'), default=false)

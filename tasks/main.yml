@@ -27,12 +27,14 @@
         owner: root
         group: root
         mode: '0444'
-      when: prometheus_logrotate|bool
+      when: prometheus_logrotate | bool
 
-  when: prometheus_manage_server_tgroups_only is defined and not prometheus_manage_server_tgroups_only|bool
+  when:
+    - prometheus_manage_server_tgroups_only is defined
+    - not prometheus_manage_server_tgroups_only | bool
 
 - name: Include task to manage server tgroups
   include_role:
     name: mesaguy.prometheus
     tasks_from: _setup_server_tgroups.yml
-  when: prometheus_manage_server_tgroups|bool
+  when: prometheus_manage_server_tgroups | bool

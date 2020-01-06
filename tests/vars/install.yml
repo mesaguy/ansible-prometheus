@@ -6,8 +6,12 @@ prometheus_kafka_exporter_danielqsj_extra_opts:
   - '--kafka.server=127.0.0.1:9092'
 prometheus_ntp_exporter_sapcc_extra_opts:
   - '-ntp.server=time-a-g.nist.gov'
-# Requires a Kafka server to test against..:
+# Requires a Ceph cluster to test against...:
+prometheus_ceph_exporter_digitalocean_service_test: false
+# Requires a Kafka server to test against...:
 prometheus_kafka_exporter_danielqsj_port_test: false
+# Requires a PowerDNS server to test against...:
+prometheus_powerdns_exporter_ledgr_service_test: false
 prometheus_consul_exporter_env_vars:
   CONSUL_HTTP_TOKEN: '4391eca7bcd03f45aa43ca26829c386c329097a7'
 prometheus_digitalocean_exporter_metalmatze_env_vars:
@@ -15,6 +19,9 @@ prometheus_digitalocean_exporter_metalmatze_env_vars:
 prometheus_couchbase_exporter_blakelead_env_vars:
   CB_EXPORTER_DB_USER: couchbase
   CB_EXPORTER_DB_PASSWORD: couchbase
+# Do not install Ceph by default, requires Ceph libraries are present.
+# Each distro has different library versions and methods of installing
+prometheus_ceph_exporter_digitalocean_install_test: false
 prometheus_jmx_exporter_cfgs:
   bitbucket:
     startDelaySeconds: 0
