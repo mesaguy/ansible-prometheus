@@ -12,14 +12,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Upgrade pushgateway from v1.0.0 to v1.0.1
  - Upgrade process_exporter_ncabatoff from v0.5.0 to v0.6.0
  - Upgrade squid_exporter_boynux from v1.8.1 to v1.8.2
+ - Task "bind_exporter_digitalocean" has been renamed "bind_exporter_prometheus_community"
+ - Use https://github.com/prometheus-community/bind_exporter as the new upstream provider of bind_exporter
  - Improved Jinja formatting
-
-## [0.9.2] - 2019-12-19
 
 ### Added
 
  - ceph_exporter (digitalocean)
  - powerdns_exporter (ledgr) from pull request of [defenestration](https://github.com/defenestration)
+
+## [0.9.2] - 2019-12-19
 
 ### Changed
 

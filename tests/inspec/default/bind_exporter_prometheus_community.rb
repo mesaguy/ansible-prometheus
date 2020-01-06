@@ -1,14 +1,14 @@
 # encoding: utf-8
 # author: Mesaguy
 
-describe file('/opt/prometheus/exporters/bind_exporter_digitalocean/active') do
+describe file('/opt/prometheus/exporters/bind_exporter_prometheus_community/active') do
     it { should be_symlink }
     its('mode') { should cmp '0755' }
     its('owner') { should eq 'root' }
     its('group') { should eq 'prometheus' }
 end
 
-describe file('/opt/prometheus/exporters/bind_exporter_digitalocean/active/bind_exporter') do
+describe file('/opt/prometheus/exporters/bind_exporter_prometheus_community/active/bind_exporter') do
     it { should be_file }
     it { should be_executable }
     its('mode') { should cmp '0755' }
@@ -16,19 +16,19 @@ describe file('/opt/prometheus/exporters/bind_exporter_digitalocean/active/bind_
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'bind_exporter_digitalocean' service is running
+# Verify the 'bind_exporter_prometheus_community' service is running
 control '01' do
   impact 1.0
-  title 'Verify bind_exporter_digitalocean service'
-  desc 'Ensures bind_exporter_digitalocean service is up and running'
-  describe service('bind_exporter_digitalocean') do
+  title 'Verify bind_exporter_prometheus_community service'
+  desc 'Ensures bind_exporter_prometheus_community service is up and running'
+  describe service('bind_exporter_prometheus_community') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
   end
 end
 
-describe processes(Regexp.new("^/opt/prometheus/exporters/bind_exporter_digitalocean/(v[0-9.]+|[0-9.a-z\-]+__go-[0-9.]+)/bind_exporter")) do
+describe processes(Regexp.new("^/opt/prometheus/exporters/bind_exporter_prometheus_community/(v[0-9.]+|[0-9.a-z\-]+__go-[0-9.]+)/bind_exporter")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }
