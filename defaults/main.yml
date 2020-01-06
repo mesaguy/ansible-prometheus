@@ -35,6 +35,10 @@ prometheus_manage_client_iptables_raw: false
 prometheus_server_ips: []
 prometheus_firewalld_zone: public
 
+# Promcron script
+prometheus_install_promcron: false
+prometheus_promcron_install_dir: /usr/local/bin
+
 # When performing installations
 prometheus_default_binary_unarchive_opts:
  - '--strip-components=1'

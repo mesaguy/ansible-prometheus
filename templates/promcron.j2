@@ -1,0 +1,144 @@
+#!/bin/bash
+
+# Promcron script for monitoring cronjob success and last run time
+
+# Author: MesaGuy
+# Source: https://github.com/mesaguy/ansible-prometheus/tree/master/templates/promcron.j2
+# License:  MIT
+
+set -e
+
+if [ "{{ prometheus_promcron_ansible_managed }}" == "True" ] ; then
+    # This section is only utilized if script is installed via Ansible
+    TEXTFILE_DIRECTORY="{{ prometheus_node_exporter_textfiles_directory }}"
+    HAS_SPONGE="{{ prometheus_promcron_has_sponge }}"
+else
+    TEXTFILE_DIRECTORY="/etc/prometheus/node_exporter_textfiles"
+    if which sponge > /dev/null 2>&1 ; then
+        HAS_SPONGE=True
+    fi
+fi
+
+function usage () {
+    echo "Usage: $(basename $0) [ -Dhv ] [ -d DESCRIPTION ] [ -l label_name=LABEL_VALUE ]"
+    echo "                      [ -s USERNAME ] NAME VALUE"
+    echo
+    echo NAME and VALUE are required
+    echo
+    echo " Options:"
+    echo "    -d                         Optional description"
+    echo "    -D                         Enable dryrun mode"
+    echo "    -h                         Print usage"
+    echo "    -l label_name=label_value  Optionally add specified labels to node_exporter"
+    echo "                               textfile data (May be specified multiple times)"
+    echo "    -s USERNAME                Optionally Setup textfile directory file"
+    echo "                               permissions for specified username. Must be run"
+    echo "                               as root. Run in dryrun mode to inspect changed"
+    echo "    -v                         Enable verbose mode"
+    echo
+    echo "Basic example creating $TEXTFILE_DIRECTORY/cron_ls_test.prom:"
+    echo "    ls ; $0 ls_test \$?"
+
+    echo "Example with description and custom labels:"
+    echo "    ls ; $0 -l environment="Production Environment" -l test=true -d "ls command test" ls_test \$?"
+    echo
+    exit 1
+}
+
+# read the option and store in the variable, $option
+while getopts "d:Dhl:s:v" option; do
+    case ${option} in
+        d)
+	    DESCRIPTION="$OPTARG"
+            ;;
+        D)
+	    DRYRUN=1
+            ;;
+        h)
+	    usage
+            ;;
+        l)
+            LABELS="$LABELS,$(echo $OPTARG | cut -d '=' -f 1)=\"$(echo $OPTARG | cut -d "=" -f 2-)\""
+            ;;
+        s)
+	    SETUP_USER="$OPTARG"
+            ;;
+        v)
+	    VERBOSE=1
+            ;;
+        \?)
+	    usage
+            ;;
+    esac
+done
+
+NAME="cron_${@:$OPTIND:1}"
+LABELS="job_type=\"cron\""
+VALUE="${@:$OPTIND+1:1}"
+TEXTFILE_PATH="${TEXTFILE_DIRECTORY}/${NAME}.prom"
+
+if [ -z "$VALUE" ] ; then
+    echo "NAME and VALUE must be defined"
+    exit 2
+fi
+
+if [ -n "$DESCRIPTION" ] ; then
+    LABELS="$LABELS,description=\"$DESCRIPTION\""
+fi
+
+if [ -n "$SETUP_USER" ] ; then
+    if [ "$USER" != "root" ] ; then
+        echo "Command must be run as root"
+        exit 2
+    fi
+    if ! id $SETUP_USER > /dev/null 2>&1 ; then
+        echo "No such user $SETUP_USER"
+        exit 2
+    fi
+    if [ "$HAS_SPONGE" == "True" ] ; then
+        if [ -n "$DRYRUN" ] ; then
+            echo "[DRYRUN] touch \"$TEXTFILE_PATH\" && chown $SETUP_USER \"$TEXTFILE_PATH\""
+        else
+            touch "$TEXTFILE_PATH" && chown $SETUP_USER "$TEXTFILE_PATH"
+        fi
+    else
+        if [ -n "$DRYRUN" ] ; then
+            echo "[DRYRUN] touch \"$TEXTFILE_PATH\" \"${TEXTFILE_PATH}.tmp\" && chown $SETUP_USER \"$TEXTFILE_PATH\" \"${TEXTFILE_PATH}.tmp\""
+        else
+            touch "$TEXTFILE_PATH" "${TEXTFILE_PATH}.tmp" && chown $SETUP_USER "$TEXTFILE_PATH" "${TEXTFILE_PATH}.tmp"
+        fi
+    fi
+    exit 0
+fi
+
+if [[ $NAME == *".."* ]] || [[ $NAME == *"/"* ]] ; then
+    echo 'Filename cannot contain slashes or ".."'
+    exit 1
+fi
+
+if [ "$HAS_SPONGE" == "True" ] ; then
+    if [ -n "$DRYRUN" ] ; then
+        echo "[DRYRUN] echo $NAME{$LABELS} $VALUE | sponge \"$TEXTFILE_PATH\""
+    else
+        if [ -n "$VERBOSE" ] ; then
+            echo "echo $NAME{$LABELS} $VALUE | sponge \"$TEXTFILE_PATH\""
+	fi
+        echo $NAME{$LABELS} $VALUE | sponge "$TEXTFILE_PATH"
+    fi
+else
+    if [ -n "$DRYRUN" ] ; then
+        echo "[DRYRUN] echo $NAME{$LABELS} $VALUE > \"$TEXTFILE_PATH.tmp\""
+        echo "[DRYRUN] cp -p \"${TEXTFILE_PATH}.tmp\" \"$TEXTFILE_PATH\""
+    else
+        if [ -n "$VERBOSE" ] ; then
+            echo "echo $NAME{$LABELS} $VALUE > \"${TEXTILE_PATH}.tmp\""
+	fi
+        echo $NAME{$LABELS} $VALUE > "${TEXTILE_PATH}.tmp"
+        if [ -n "$VERBOSE" ] ; then
+            echo "cp -p \"${TEXTFILE_PATH}.tmp\" \"$TEXTFILE_PATH\""
+	fi
+        cp -p "${TEXTFILE_PATH}.tmp" "$TEXTFILE_PATH"
+    fi
+fi
+
+exit 0

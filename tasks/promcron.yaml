@@ -1,0 +1,23 @@
+---
+# Installs promcron script for monitoring cronjob success and last run time
+
+- name: Check if sponge is installed and in PATH
+  command: which sponge
+  changed_when: false
+  ignore_errors: true
+  register: prometheus_sponge_installed
+
+- name: Set promcron facts
+  set_fact:
+    prometheus_promcron_ansible_managed: true
+    prometheus_promcron_has_sponge: '{% if prometheus_sponge_installed.rc == 0 %}true{% else %}false{% endif %}'
+    prometheus_node_exporter_textfiles_directory: '{{ prometheus_node_exporter_textfiles_dir | default(prometheus_etc_dir + "/node_exporter_textfiles") }}'
+
+- name: Install promcron script to {{ prometheus_promcron_install_dir }}/promcron
+  become: true
+  template:
+    dest: '{{ prometheus_promcron_install_dir }}/promcron'
+    src: ../templates/promcron.j2
+    owner: root
+    group: root
+    mode: '0755'
