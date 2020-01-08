@@ -7,6 +7,10 @@
     - name: Include install tasks
       include_tasks: ../playbooks/install_common.yml
 
+    - name: Set install filters from environment
+      set_fact:
+        prometheus_install_only: '{{ lookup("env", "PROMETHEUS_INSTALL_ONLY").split(",") | reject("equalto", "") | list }}'
+
     - name: Install Prometheus tasks
       include_role:
         name: '../../../../ansible-prometheus'
@@ -14,3 +18,4 @@
       loop_control:
         loop_var: prometheus_component
       with_items: "{{ tasks.files | sort(attribute='path') }}"
+      when: prometheus_install_only | length == 0 or prometheus_component.path | basename in prometheus_install_only

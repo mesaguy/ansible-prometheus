@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.9.4] - 2020-01-07
+
+### Changed
+
+ - Upgrade Prometheus from v2.15.1 to v2.15.2
+ - Upgrade bind_exporter_prometheus_community from v0.2.0-dev to commit '103ead78209e9971994fc89ccda69cff555807b9' to fix build problems
+ - Upgrade smokeping_exporter_superq from v0.1.0 to v0.3.0
+
+### Added
+
+ - keepalived_exporter_gen2brain
+
+## [0.9.3] - 2020-01-05
+
 ### Changed
 
  - Upgrade Prometheus from v2.14.0 to v2.15.1
@@ -18,8 +32,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
- - ceph_exporter (digitalocean)
- - powerdns_exporter (ledgr) from pull request of [defenestration](https://github.com/defenestration)
+ - ceph_exporter_digitalocean
+ - powerdns_exporter_ledgr from pull request of [defenestration](https://github.com/defenestration)
 
 ## [0.9.2] - 2019-12-19
 
