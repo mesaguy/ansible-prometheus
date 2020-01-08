@@ -37,10 +37,10 @@ function usage () {
     echo "    -v                         Enable verbose mode"
     echo
     echo "Basic example creating $TEXTFILE_DIRECTORY/cron_ls_test.prom:"
-    echo "    ls ; $0 ls_test \$?"
+    echo "* * * * *    ls ; $0 ls_test \$?"
 
     echo "Example with description and custom labels:"
-    echo "    ls ; $0 -l environment="Production Environment" -l test=true -d "ls command test" ls_test \$?"
+    echo "* * * * *    ls ; $0 -l environment="Production Environment" -l test=true -d "ls command test" ls_test \$?"
     echo
     exit 1
 }
@@ -77,15 +77,6 @@ LABELS="job_type=\"cron\",cron_user=\"${USER}\""
 VALUE="${@:$OPTIND+1:1}"
 TEXTFILE_PATH="${TEXTFILE_DIRECTORY}/${NAME}.prom"
 
-if [ -z "$VALUE" ] ; then
-    echo "NAME and VALUE must be defined"
-    exit 2
-fi
-
-if [ -n "$DESCRIPTION" ] ; then
-    LABELS="$LABELS,description=\"$DESCRIPTION\""
-fi
-
 if [ -n "$SETUP_USER" ] ; then
     if [ "$USER" != "root" ] ; then
         echo "Command must be run as root"
@@ -109,6 +100,15 @@ if [ -n "$SETUP_USER" ] ; then
         fi
     fi
     exit 0
+fi
+
+if [ -z "$VALUE" ] ; then
+    echo "NAME and VALUE must be defined"
+    exit 2
+fi
+
+if [ -n "$DESCRIPTION" ] ; then
+    LABELS="$LABELS,description=\"$DESCRIPTION\""
 fi
 
 if [[ $NAME == *".."* ]] || [[ $NAME == *"/"* ]] ; then
