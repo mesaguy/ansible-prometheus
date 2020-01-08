@@ -1,4 +1,4 @@
-# Prometheus
+# Ansible Prometheus
 [![Build Status](https://api.travis-ci.org/mesaguy/ansible-prometheus.svg?branch=master)](https://travis-ci.org/mesaguy/ansible-prometheus)
 
 Installs and manages [Prometheus server](https://prometheus.io), [Alertmanager](https://prometheus.io/docs/alerting/overview/), [PushGateway](https://github.com/prometheus/pushgateway/blob/master/README.md), and numerous [Prometheus exporters](https://prometheus.io/docs/instrumenting/exporters/)
@@ -8,8 +8,9 @@ This role was designed to allow adding new exporters with ease. Regular releases
 This role can register client exporters with the Prometheus server/s automatically (see tgroup management below).
 
 ## Requirements
- - Ansible >= 2.5.1
- - Facts must be gathered (gather_facts: true)
+
+- Ansible >= 2.5.1
+- Facts must be gathered (gather_facts: true)
 
 ## Supported Software and Operating Systems
 ### Supported Operating Systems, Distributions, and Architectures
@@ -90,26 +91,27 @@ All exporters are verified to install. Currently select modules receive testing 
 ### Supported node_exporter textfiles scripts
 Numerous node_exporter textfiles scripts are supported and can be installed via the following variables. These scripts are installed under '/opt/prometheus/scripts' by default:
 
-| node_exporter textfiles script                                                                                                           | Source                 | Enable variable                           |
-|------------------------------------------------------------------------------------------------------------------------------------------|------------------------|-------------------------------------------|
-|[apt.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/apt.sh)                             | node_exporter examples | prometheus_script_apt: true               |
-|[btrfs_stats.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/btrfs_stats.py)             | node_exporter examples | prometheus_script_btrfs_stats: true       |
-|[deleted_libraries.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/deleted_libraries.py) | node_exporter examples | prometheus_script_deleted_libraries: true |
-|[directory-size.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/directory-size.sh)       | node_exporter examples | prometheus_script_directory_size: true    |
-|[inotify-instances](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/inotify-instances)       | node_exporter examples | prometheus_script_inotify_instances: true |
-|[ipmitool](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ipmitool)                         | node_exporter examples | prometheus_script_ipmitool: true          |
-|[md_info.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/md_info.sh)                     | node_exporter examples | prometheus_script_md_info: true           |
-|[md_info_detail.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/md_info_detail.sh)       | node_exporter examples | prometheus_script_md_info_detail: true    |
-|[mellanox_hca_temp](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/mellanox_hca_temp)       | node_exporter examples | prometheus_script_mellanox_hca_temp: true |
-|[multipathd_info](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/multipathd_info)           | node_exporter examples | prometheus_script_multipathd_info: true   |
-|[ntpd_metrics.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ntpd_metrics.py)           | node_exporter examples | prometheus_script_ntpd_metrics: true      |
-|[nvme_metrics.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/nvme_metrics.sh)           | node_exporter examples | prometheus_script_nvme_metrics: true      |
-|[pacman.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/pacman.sh)                       | node_exporter examples | prometheus_script_pacman: true            |
-|[smartmon.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.py)                   | node_exporter examples | prometheus_script_smartmon_python: true   |
-|[smartmon.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.sh)                   | node_exporter examples | prometheus_script_smartmon: true          |
-|[storcli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/storcli.py)                     | node_exporter examples | prometheus_script_storcli: true           |
-|[tw_cli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/tw_cli.py)                       | node_exporter examples | prometheus_script_tw_cli: true            |
-|[yum.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/yum.sh)                             | node_exporter examples | prometheus_script_yum: true               |
+| node_exporter textfiles script                                                                                                           | Source                    | Enable variable                           |
+|------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|-------------------------------------------|
+|[apt.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/apt.sh)                             | node_exporter examples    | prometheus_script_apt: true               |
+|[btrfs_stats.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/btrfs_stats.py)             | node_exporter examples    | prometheus_script_btrfs_stats: true       |
+|[deleted_libraries.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/deleted_libraries.py) | node_exporter examples    | prometheus_script_deleted_libraries: true |
+|[directory-size.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/directory-size.sh)       | node_exporter examples    | prometheus_script_directory_size: true    |
+|[inotify-instances](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/inotify-instances)       | node_exporter examples    | prometheus_script_inotify_instances: true |
+|[ipmitool](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ipmitool)                         | node_exporter examples    | prometheus_script_ipmitool: true          |
+|[md_info.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/md_info.sh)                     | node_exporter examples    | prometheus_script_md_info: true           |
+|[md_info_detail.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/md_info_detail.sh)       | node_exporter examples    | prometheus_script_md_info_detail: true    |
+|[mellanox_hca_temp](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/mellanox_hca_temp)       | node_exporter examples    | prometheus_script_mellanox_hca_temp: true |
+|[multipathd_info](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/multipathd_info)           | node_exporter examples    | prometheus_script_multipathd_info: true   |
+|[ntpd_metrics.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ntpd_metrics.py)           | node_exporter examples    | prometheus_script_ntpd_metrics: true      |
+|[nvme_metrics.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/nvme_metrics.sh)           | node_exporter examples    | prometheus_script_nvme_metrics: true      |
+|[pacman.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/pacman.sh)                       | node_exporter examples    | prometheus_script_pacman: true            |
+|[promcron](https://github.com/mesaguy/ansible-prometheus/tree/master/templates/promcron.j2)                                               | mesaguy/ansible-prometheus|prometheus_install_promcron: true       |
+|[smartmon.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.py)                   | node_exporter examples    | prometheus_script_smartmon_python: true   |
+|[smartmon.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.sh)                   | node_exporter examples    | prometheus_script_smartmon: true          |
+|[storcli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/storcli.py)                     | node_exporter examples    | prometheus_script_storcli: true           |
+|[tw_cli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/tw_cli.py)                       | node_exporter examples    | prometheus_script_tw_cli: true            |
+|[yum.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/yum.sh)                             | node_exporter examples    | prometheus_script_yum: true               |
 
 ## Role Variables
 A 'prometheus_components' array variable is used to specify the Prometheus software to install. This example installs all supported prometheus_components:
@@ -167,6 +169,10 @@ prometheus_components:
  - statsd_exporter
  - zookeeper_exporter_infonova
 ```
+
+### Cron job monitoring
+
+See [promcron](promcron.md)
 
 ### Common variables
 
