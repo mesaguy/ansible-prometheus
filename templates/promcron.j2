@@ -73,7 +73,7 @@ while getopts "d:Dhl:s:v" option; do
 done
 
 NAME="cron_${@:$OPTIND:1}"
-LABELS="job_type=\"cron\""
+LABELS="job_type=\"cron\",cron_user=\"${USER}\""
 VALUE="${@:$OPTIND+1:1}"
 TEXTFILE_PATH="${TEXTFILE_DIRECTORY}/${NAME}.prom"
 
