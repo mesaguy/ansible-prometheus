@@ -63,6 +63,7 @@ All exporters are verified to install. Currently select modules receive testing 
 |[iptables_exporter_retailnext](https://github.com/retailnext/iptables_exporter)                | [usage](#iptables-exporter-retailnext-configuration)        | retailnext           | Yes       |
 |[jmx_exporter](https://github.com/prometheus/jmx_exporter)                                     | [usage](#jmx-exporter-configuration)                        | prometheus           | No        |
 |[kafka_exporter_danielqsj](https://github.com/danielqsj/kafka_exporter)                        | [usage](#kafka-exporter-danielqsj-configuration)            | danielqsj            | Yes       |
+|[keepalived_exporter_gen2brain](https://github.com/gen2brain/keepalived_exporter)              | [usage](#keepalived-exporter-gen2brain-configuration)       | gen2brain            | Yes       |
 |[memcached_exporter](https://github.com/prometheus/memcached_exporter)                         | [usage](#memcached-exporter-configuration)                  | prometheus           | Yes       |
 |[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)                               | [usage](#mysqld-exporter-configuration)                     | prometheus           | Yes       |
 |[node_exporter](https://github.com/prometheus/node_exporter)                                   | [usage](#node-exporter-configuration)                       | prometheus           | Yes       |
@@ -143,6 +144,7 @@ prometheus_components:
  - iptables_exporter_retailnext
  - jmx_exporter
  - kafka_exporter_danielqsj
+ - keepalived_exporter_gen2brain
  - memcached_exporter
  - mysqld_exporter
  - node_exporter
@@ -415,8 +417,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.15.1"
-    prometheus_src_version: "v2.15.1"
+    prometheus_version: "2.15.2"
+    prometheus_src_version: "v2.15.2"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -555,7 +557,7 @@ An array of additional flags to pass to the bind_exporter daemon (ie):
 
 The version of bind_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_bind_exporter_prometheus_community_src_version: "v0.2.0-dev"
+    prometheus_bind_exporter_prometheus_community_src_version: "103ead78209e9971994fc89ccda69cff555807b9"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 8053:
 
@@ -980,6 +982,24 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 930
     prometheus_kafka_exporter_danielqsj_host: "0.0.0.0"
     prometheus_kafka_exporter_danielqsj_port: 9308
 
+### Keepalived exporter (gen2brain) configuration
+
+To enable [keepalived_exporter by gen2brain](https://github.com/gen2brain/keepalived_exporter) include role task: keepalived_exporter_gen2brain
+
+An array of additional flags to pass to the keepalived_exporter daemon (ie):
+
+    prometheus_keepalived_exporter_gen2brain_extra_opts: []
+
+The version of keepalived_exporter to install. The source version defines the version as specified in version control:
+
+    prometheus_keepalived_exporter_gen2brain_version: "0.3.0"
+    prometheus_keepalived_exporter_gen2brain_src_version: "0.3.0"
+
+Port and IP to listen on. Defaults to listening on all available IPs on port 9650:
+
+    prometheus_keepalived_exporter_gen2brain_host: "0.0.0.0"
+    prometheus_keepalived_exporter_gen2brain_port: 9650
+
 ### Memcached exporter configuration
 
 To enable [memcached_exporter](https://github.com/prometheus/memcached_exporter) include role task: memcached_exporter
@@ -1390,8 +1410,8 @@ An array of additional flags to pass to the smokeping_exporter daemon. You must 
 
 The version of smokeping_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_smokeping_exporter_superq_version: "0.1.0"
-    prometheus_smokeping_exporter_superq_src_version: "v0.1.0"
+    prometheus_smokeping_exporter_superq_version: "0.3.0"
+    prometheus_smokeping_exporter_superq_src_version: "v0.3.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9374:
 

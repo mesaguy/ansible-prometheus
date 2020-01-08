@@ -14,10 +14,9 @@
     prometheus_software_env_vars: '{{ prometheus_bind_exporter_prometheus_community_env_vars | default({}) }}'
     prometheus_software_extra_opts: '{{ prometheus_bind_exporter_prometheus_community_extra_opts | default () }}'
     prometheus_software_fallback_to_build: '{{ prometheus_bind_exporter_prometheus_community_fallback_to_build | default(prometheus_fallback_to_build) }}'
-    # 'go get -d' is needed while digitalocean/bind_exporter is still a dependency (v0.2.0-dev)
-    prometheus_software_makefile_make_command: 'go get -d && make build'
+    prometheus_software_makefile_make_command: 'make build'
     prometheus_software_name: bind_exporter_prometheus_community
-    prometheus_software_version: '{{ prometheus_bind_exporter_prometheus_community_src_version | default("v0.2.0-dev") }}'
+    prometheus_software_version: '{{ prometheus_bind_exporter_prometheus_community_src_version | default("103ead78209e9971994fc89ccda69cff555807b9") }}'
     prometheus_software_tgroup_jobname: '{{ prometheus_bind_exporter_prometheus_community_jobname | default(prometheus_bind_exporter_prometheus_community_default_tgroup_jobname) }}'
     prometheus_software_description: 'Prometheus bind_exporter (prometheus-community), exporter of BIND(named/dns) v9+ service metrics'
     prometheus_software_documentation: 'https://github.com/prometheus-community/bind_exporter'

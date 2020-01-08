@@ -9,7 +9,7 @@
 
     - name: Set install filters from environment
       set_fact:
-         prometheus_install_only: '{{ lookup("env", "PROMETHEUS_INSTALL_ONLY").split(",") | reject("equalto", "") | list }}'
+        prometheus_install_only: '{{ lookup("env", "PROMETHEUS_INSTALL_ONLY").split(",") | reject("equalto", "") | list }}'
 
     - name: Install Prometheus tasks
       include_role:
