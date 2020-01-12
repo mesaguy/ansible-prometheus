@@ -2,7 +2,7 @@
 # defaults file for mesaguy.prometheus
 
 # General global configuration
-prometheus_go_version: 1.13.5
+prometheus_go_version: 1.13.6
 prometheus_link_etc: true
 prometheus_link_etc_force: false
 prometheus_purge_orphans: false
@@ -37,7 +37,11 @@ prometheus_firewalld_zone: public
 
 # Promcron script
 prometheus_install_promcron: false
-prometheus_promcron_install_dir: /usr/local/bin
+prometheus_promcron_link_dir: /usr/bin
+
+# Promit script
+prometheus_install_promit: false
+prometheus_promit_link_dir: /usr/bin
 
 # When performing installations
 prometheus_default_binary_unarchive_opts:
@@ -140,8 +144,8 @@ prometheus_script_tw_cli: false
 prometheus_script_tw_cli_commit: '18c3ea40b49b815cc9d8fb667c8c640ab3076e91'
 prometheus_script_tw_cli_checksum: 'sha256:d7ee66ee7b20baf90ea76aec036fb2e0866ddcd359facfe1f087639d41c1a250'
 prometheus_script_yum: false
-prometheus_script_yum_commit: 'b87dcb4ebf1e76d0ff9e497368ac463e3f3f302e'
-prometheus_script_yum_checksum: 'sha256:2da2cf3efe55379a117e809046b0dacb1b46265c8ebce208b26dded6a0ff249d'
+prometheus_script_yum_commit: '354acdf76a8befc66bfba43df02e155221891e21'
+prometheus_script_yum_checksum: 'sha256:ec15318d3beeea5f4eeb4b50e2c7c4ec349f4bf978519056c811412a39dccee4'
 
 # For use when testing
 prometheus_script_enable_all: false

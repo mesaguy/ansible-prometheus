@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+ - Upgrade Go from v1.13.5 to v1.13.6
+ - Upgrade statsd_exporter from v0.13.0 to v0.14.0
+ - Upgrade yum.sh script to commit: '354acdf76a8befc66bfba43df02e155221891e21'
+
 ## [0.9.4] - 2020-01-07
 
 ### Changed

@@ -107,7 +107,7 @@ Numerous node_exporter textfiles scripts are supported and can be installed via 
 |[ntpd_metrics.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ntpd_metrics.py)           | node_exporter examples    | prometheus_script_ntpd_metrics: true      |
 |[nvme_metrics.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/nvme_metrics.sh)           | node_exporter examples    | prometheus_script_nvme_metrics: true      |
 |[pacman.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/pacman.sh)                       | node_exporter examples    | prometheus_script_pacman: true            |
-|[promcron](https://github.com/mesaguy/ansible-prometheus/tree/master/templates/promcron.j2)                                               | mesaguy/ansible-prometheus|prometheus_install_promcron: true       |
+|[promcron](https://github.com/mesaguy/ansible-prometheus/tree/master/templates/promcron.sh.j2)                                            | mesaguy/ansible-prometheus|prometheus_install_promcron: true          |
 |[smartmon.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.py)                   | node_exporter examples    | prometheus_script_smartmon_python: true   |
 |[smartmon.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.sh)                   | node_exporter examples    | prometheus_script_smartmon: true          |
 |[storcli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/storcli.py)                     | node_exporter examples    | prometheus_script_storcli: true           |
@@ -229,7 +229,7 @@ If installing a Prometheus application binary fails, fall back to installing the
 
 Go version to use when building Prometheus software:
 
-    prometheus_go_version: 1.13.5
+    prometheus_go_version: 1.13.6
 
 The Prometheus etc directory, defaults to '/opt/prometheus/etc':
 
@@ -1098,7 +1098,7 @@ Node exporter textfiles scripts will generally need to be run via cron and ideal
     roles:
       - mesaguy.prometheus
     tasks:
-      - name: Setup cronjob to run smartmon.sh
+      - name: Setup cron job to run smartmon.sh
         become: true
         copy:
           dest: /etc/cron.d/smartmon
@@ -1550,8 +1550,8 @@ An array of additional flags to pass to the statsd_exporter daemon:
         --statsd.listen-udp=":9125"
 
 The version of statsd_exporter to install. The source version defines the version as specified in version control:
-    prometheus_statsd_exporter_version: "0.13.0"
-    prometheus_statsd_exporter_src_version: "v0.13.0"
+    prometheus_statsd_exporter_version: "0.14.0"
+    prometheus_statsd_exporter_src_version: "v0.14.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9102:
 
