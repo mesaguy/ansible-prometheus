@@ -74,16 +74,17 @@ while getopts "d:Dhl:s:v" option; do
 done
 
 NAME="cron_${@:$OPTIND:1}"
-LABELS="cron_user=\"${USER}\""
+# Remove any prefixed ',' characters from $LABELS, add 'user' label
+LABELS="${LABELS#,},user=\"${USER}\""
 VALUE="${@:$OPTIND+1:1}"
 TEXTFILE_PATH="${TEXTFILE_DIRECTORY}/${NAME}.prom"
 
 if [ -n "$DESCRIPTION" ] ; then
-    LABELS="$LABELS,description=\"$DESCRIPTION\""
+    LABELS="${LABELS},description=\"$DESCRIPTION\""
 fi
 
-TIME_LABELS="$LABELS,job_type=\"cron_time\""
-LABELS="$LABELS,job_type=\"cron\""
+TIME_LABELS="${LABELS#,},job_type=\"cron_time\""
+LABELS="${LABELS#,},job_type=\"cron\""
 
 if [ -n "$SETUP_USER" ] ; then
     if [ "$USER" != "root" ] && [ -z "$DRYRUN" ]; then
