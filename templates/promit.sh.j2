@@ -32,7 +32,7 @@ function usage () {
 }
 
 # read the option and store in the variable, $option
-while getopts "Dhln::s:v" option; do
+while getopts "Dhl:n::s:v" option; do
     case ${option} in
         d)
 	        DESCRIPTION="$OPTARG"
@@ -71,7 +71,8 @@ if [ -z "$HAS_TIME" ] ; then
     exit 2
 fi
 
-LABELS="user=\"${USER}\""
+# Remove any prefixed ',' characters from $LABELS, add 'user' label
+LABELS="${LABELS#,},user=\"${USER}\""
 TEXTFILE_PATH="${TEXTFILE_DIRECTORY}/promit_${NAME}.prom"
 NAME="promit_${NAME}"
 
