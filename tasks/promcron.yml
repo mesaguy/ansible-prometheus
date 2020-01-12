@@ -1,8 +1,8 @@
 ---
 # Installs promcron script for monitoring cron job success and last run time
 
-- name: Include task to check if sponge is installed and in PATH
-  include_tasks: _check_sponge_installed.yml
+- name: Include task to install and locate sponge
+  include_tasks: _install_sponge.yml
 
 - name: Set promcron facts
   set_fact:

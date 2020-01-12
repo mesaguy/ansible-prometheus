@@ -31,14 +31,8 @@
       with_items: '{{ prometheus_prerequisite_packages }}'
       when: prometheus_prerequisite_packages is defined
 
-    - name: Install 'sponge'
-      become: true
-      package:
-        name: '{{ prometheus_sponge_packages }}'
-        state: present
-      when:
-        - prometheus_sponge_packages is defined
-        - prometheus_install_sponge | bool
+    - name: Include task to install and locate sponge
+      include_tasks: _install_sponge.yml
 
     - name: Warn that 'sponge' cannot be installed
       debug:
