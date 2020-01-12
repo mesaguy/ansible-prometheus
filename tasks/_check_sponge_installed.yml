@@ -1,0 +1,12 @@
+---
+- name: Check if "sponge" is installed and in PATH
+  command: which sponge
+  changed_when: false
+  ignore_errors: true
+  register: prometheus_sponge_installed
+  when: prometheus_sponge_installed is undefined
+
+- name: Set "sponge" installed fact
+  set_fact:
+    prometheus_sponge_is_installed: '{% if prometheus_sponge_installed.rc == 0 %}true{% else %}false{% endif %}'
+  when: prometheus_sponge_is_installed is undefined

@@ -1,15 +1,15 @@
 # Promcron
 
-[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.j2) is a bash script for monitoring cronjob success and last run time
+[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.sh.j2) is a bash script for monitoring cron job success and last run time
 
-[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.j2) leverages the [textfile directory feature of node_exporter](https://github.com/prometheus/node_exporter#textfile-collector)
+[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.sh.j2) leverages the [textfile directory feature of node_exporter](https://github.com/prometheus/node_exporter#textfile-collector)
 
 # Features
 - Script automatically leverages sponge if present. If sponge is not present, script writes to a .tmp file in the textfile directory, then copies the resulting .tmp file and overwrites the .prom file. This ensures that the .prom file is always complete when prometheus polls it.
 - Script automatically adds two labels to each .prom file.
   - job_type=cron
   - cron_user=*The USER who ran the cron*
-- Script can add a description label to describe the cronjob
+- Script can add a description label to describe the cron job
 - Script can take custom labels
 - Script prefixes each .prom file with ```cron_```
 
@@ -41,11 +41,11 @@ Help menu (-h):
 
 ## Basic usage
 
-One starts with a simple cronjob that requires monitoring:
+One starts with a simple cron job that requires monitoring:
 
     0 0 * * * find /var/app/tmp -mtime +1 -delete
 
-This cronjob can be monitored as simply as:
+This cron job can be monitored as simply as:
 
     0 0 * * * find /var/app/tmp -mtime +1 -delete; promcron daily_delete_app_tmp $?
 
@@ -70,7 +70,7 @@ The resulting .prom file is created:
 
 By default, the Prometheus node_exporter textfiles directory cannot be written to by non-privileged users. The permissions can be altered to allow non-privileged users to write to the textfiles directory or the destination files can be created with the correct permissions in advance.
 
-To allow user 'app' to run the following cronjob:
+To allow user 'app' to run the following cron job:
 
     0 0 * * * find /var/app/tmp -mtime +1 -delete; promcron daily_delete_app_tmp $?
 
@@ -85,9 +85,9 @@ Root can see what will occur by running:
 
 # Installation
 
-[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.j2) can be downloaded and used as is. The TEXTFILE_DIRECTORY variable near the top may need to be changed to match your environment.
+[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.sh.j2) can be downloaded and used as is. The TEXTFILE_DIRECTORY variable near the top may need to be changed to match your environment.
 
-[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.j2) can be installed via the mesaguy/ansible-prometheus module using the following parameter:
+[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.sh.j2) can be installed via the mesaguy/ansible-prometheus module using the following parameter:
 
     prometheus_install_promcron: true
 
@@ -97,6 +97,6 @@ The installation location defaults to /usr/local/bin, but the destination can be
 
 # Alerting
 
-All Prometheus monitored cronjobs can be seen by leveraging the following query:
+All Prometheus monitored cron jobs can be seen by leveraging the following query:
 
     {job_type=~"cron"}

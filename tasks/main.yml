@@ -44,3 +44,9 @@
     name: mesaguy.prometheus
     tasks_from: promcron
   when: prometheus_install_promcron | bool
+
+- name: Install promit script
+  include_role:
+    name: mesaguy.prometheus
+    tasks_from: promit
+  when: prometheus_install_promit | bool

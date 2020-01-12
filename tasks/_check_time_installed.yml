@@ -1,0 +1,13 @@
+---
+- name: Check if "time" is installed and in PATH
+  command: which time
+  changed_when: false
+  ignore_errors: true
+  register: prometheus_time_installed
+  when: prometheus_time_installed is undefined
+
+- name: Set "time" installed fact
+  set_fact:
+    prometheus_gnu_time_path: '{{ prometheus_time_installed.stdout }}'
+    prometheus_time_is_installed: '{% if prometheus_time_installed.rc == 0 %}true{% else %}false{% endif %}'
+  when: prometheus_time_is_installed is undefined

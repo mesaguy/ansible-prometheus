@@ -1,0 +1,30 @@
+---
+# Installs promcron script for monitoring cron job success and last run time
+
+- name: Include task to check if sponge is installed and in PATH
+  include_tasks: _check_sponge_installed.yml
+
+- name: Set promcron facts
+  set_fact:
+    prometheus_node_exporter_textfiles_directory: '{{ prometheus_node_exporter_textfiles_dir | default(prometheus_etc_dir + "/node_exporter_textfiles") }}'
+
+- name: Install promcron script to {{ prometheus_script_directory }}/promcron
+  become: true
+  template:
+    dest: '{{ prometheus_script_directory }}/promcron'
+    src: ../templates/promcron.sh.j2
+    owner: root
+    group: root
+    mode: '0555'
+  vars:
+    prometheus_promcron_ansible_managed: true
+
+- name: Symlink {{ prometheus_script_directory }}/promcron to {{ prometheus_promcron_link_dir }}/promcron
+  become: true
+  file:
+    src: '{{ prometheus_script_directory }}/promcron'
+    dest: '{{ prometheus_promcron_link_dir }}/promcron'
+    owner: root
+    group: root
+    state: link
+    force: true
