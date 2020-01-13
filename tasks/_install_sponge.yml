@@ -1,6 +1,8 @@
 ---
 - name: Install 'sponge'
   become: true
+  # Can fail in cases like EL without EPEL enabled
+  ignore_errors: true
   package:
     name: '{{ prometheus_sponge_packages }}'
     state: present
@@ -19,7 +21,7 @@
 
 - name: Set "sponge" installed fact
   set_fact:
-    prometheus_sponge_is_installed: '{% if prometheus_sponge_installed.rc == 0 %}true{% else %}false{% endif %}'
+    prometheus_sponge_is_installed: '{% if "rc" in prometheus_sponge_installed and prometheus_sponge_installed.rc == 0 %}true{% else %}false{% endif %}'
   when:
     - prometheus_sponge_is_installed is undefined
     - prometheus_sponge_packages is defined
