@@ -1,5 +1,5 @@
 ---
-# Installs promit script for monitoring the running of commands
+# Installs promrun script for monitoring the running of commands
 
 - name: Include task to check if "time" is installed and in PATH
   include_tasks: _check_time_installed.yml
@@ -11,26 +11,26 @@
     state: present
   when: prometheus_gnu_time_packages is defined and prometheus_gnu_time_packages | length > 0
 
-- name: Set promit facts
+- name: Set promrun facts
   set_fact:
     prometheus_node_exporter_textfiles_directory: '{{ prometheus_node_exporter_textfiles_dir | default(prometheus_etc_dir + "/node_exporter_textfiles") }}'
 
-- name: Install promit script to {{ prometheus_script_directory }}/promit
+- name: Install promrun script to {{ prometheus_script_directory }}/promrun
   become: true
   template:
-    dest: '{{ prometheus_script_directory }}/promit'
-    src: ../templates/promit.sh.j2
+    dest: '{{ prometheus_script_directory }}/promrun'
+    src: ../templates/promrun.sh.j2
     owner: root
     group: root
     mode: '0555'
   vars:
-    prometheus_promit_ansible_managed: true
+    prometheus_promrun_ansible_managed: true
 
-- name: Symlink {{ prometheus_script_directory }}/promit to {{ prometheus_promit_link_dir }}/promit
+- name: Symlink {{ prometheus_script_directory }}/promrun to {{ prometheus_promrun_link_dir }}/promrun
   become: true
   file:
-    src: '{{ prometheus_script_directory }}/promit'
-    dest: '{{ prometheus_promit_link_dir }}/promit'
+    src: '{{ prometheus_script_directory }}/promrun'
+    dest: '{{ prometheus_promrun_link_dir }}/promrun'
     owner: root
     group: root
     state: link

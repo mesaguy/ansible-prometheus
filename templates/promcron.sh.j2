@@ -4,6 +4,7 @@
 
 # Author: MesaGuy (https://github.com/mesaguy)
 # Source: https://github.com/mesaguy/ansible-prometheus/tree/master/templates/promcron.sh.j2
+# Tests: https://github.com/mesaguy/ansible-prometheus/tree/master/tests/inspec/promcron
 # License: MIT
 # Version: 0.1 (2020-01-09)
 
@@ -50,25 +51,25 @@ function usage () {
 while getopts "d:Dhl:s:v" option; do
     case ${option} in
         d)
-	        DESCRIPTION="$OPTARG"
+            DESCRIPTION="$OPTARG"
             ;;
         D)
-	        DRYRUN=1
+            DRYRUN=1
             ;;
         h)
-	        usage
+            usage
             ;;
         l)
             LABELS="$LABELS,$(echo $OPTARG | cut -d '=' -f 1)=\"$(echo $OPTARG | cut -d "=" -f 2-)\""
             ;;
         s)
-	        SETUP_USER="$OPTARG"
+            SETUP_USER="$OPTARG"
             ;;
         v)
-	        VERBOSE=1
+            VERBOSE=1
             ;;
         \?)
-	        usage
+            usage
             ;;
     esac
 done
@@ -86,25 +87,36 @@ fi
 TIME_LABELS="${LABELS#,},job_type=\"cron_time\""
 LABELS="${LABELS#,},job_type=\"cron\""
 
+if [ -z "$NAME" ] ; then
+    echo "NAME must be defined" >&2
+    exit 2
+fi
+
 if [ -n "$SETUP_USER" ] ; then
     if [ "$USER" != "root" ] && [ -z "$DRYRUN" ]; then
-        echo "Command must be run as root"
+        echo "Command must be run as root" >&2
         exit 2
     fi
     if ! id $SETUP_USER > /dev/null 2>&1 ; then
-        echo "No such user $SETUP_USER"
+        echo "No such user $SETUP_USER" >&2
         exit 2
     fi
     if [ "$HAS_SPONGE" == "True" ] ; then
         if [ -n "$DRYRUN" ] ; then
             echo "[DRYRUN] touch \"$TEXTFILE_PATH\" && chown $SETUP_USER \"$TEXTFILE_PATH\""
         else
+            if [ -n "$VERBOSE" ] ; then
+                echo "touch \"$TEXTFILE_PATH\" && chown $SETUP_USER \"$TEXTFILE_PATH\""
+            fi
             touch "$TEXTFILE_PATH" && chown $SETUP_USER "$TEXTFILE_PATH"
         fi
     else
         if [ -n "$DRYRUN" ] ; then
             echo "[DRYRUN] touch \"$TEXTFILE_PATH\" \"${TEXTFILE_PATH}.tmp\" && chown $SETUP_USER \"$TEXTFILE_PATH\" \"${TEXTFILE_PATH}.tmp\""
         else
+            if [ -n "$VERBOSE" ] ; then
+                echo "touch \"$TEXTFILE_PATH\" \"${TEXTFILE_PATH}.tmp\" && chown $SETUP_USER \"$TEXTFILE_PATH\" \"${TEXTFILE_PATH}.tmp\""
+            fi
             touch "$TEXTFILE_PATH" "${TEXTFILE_PATH}.tmp" && chown $SETUP_USER "$TEXTFILE_PATH" "${TEXTFILE_PATH}.tmp"
         fi
     fi
@@ -112,12 +124,17 @@ if [ -n "$SETUP_USER" ] ; then
 fi
 
 if [ -z "$VALUE" ] ; then
-    echo "NAME and VALUE must be defined"
+    echo "NAME and VALUE must be defined" >&2
+    exit 2
+fi
+
+if ! [[ "$VALUE" =~ ^[0-9]+$ ]] || [ "$VALUE" -gt "255" ] ; then
+    echo "VALUE must be a return code (Integer between 0 and 255)" >&2
     exit 2
 fi
 
 if [[ ! $NAME =~ $RE_METRIC_NAME ]] ; then
-    echo "Metric name \"$NAME\" must match regex: $RE_METRIC_NAME"
+    echo "Metric name \"$NAME\" must match regex: $RE_METRIC_NAME" >&2
     exit 2
 fi
 
@@ -135,7 +152,7 @@ if [ -n "$DRYRUN" ] ; then
     if [ "$HAS_SPONGE" == "True" ] ; then
         echo "[DRYRUN] cp -p \"${TEXTFILE_PATH}.tmp\" \"$TEXTFILE_PATH\""
     fi
-    exit
+    exit 0
 elif [ -n "$VERBOSE" ] ; then
     printf "$DATA"
 fi
@@ -143,9 +160,12 @@ fi
 if [ "$HAS_SPONGE" == "True" ] ; then
     printf "$DATA" | sponge "$TEXTFILE_PATH"
 else
-    printf "$DATA" > "${TEXTILE_PATH}.tmp"
+    printf "$DATA" > "${TEXTFILE_PATH}.tmp"
     if [ -n "$VERBOSE" ] ; then
         echo "cp -p \"${TEXTFILE_PATH}.tmp\" \"$TEXTFILE_PATH\""
-	fi
+    fi
     cp -p "${TEXTFILE_PATH}.tmp" "$TEXTFILE_PATH"
 fi
+
+# Return exit code that was given as argument
+exit $VALUE

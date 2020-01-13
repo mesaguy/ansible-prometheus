@@ -26,6 +26,7 @@ env:
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-ubuntu-1804
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-archlinux KITCHEN_PLAYBOOK=tgroups KITCHEN_INSPEC_SUITE=tgroups
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-archlinux KITCHEN_PLAYBOOK=tgroups_purge KITCHEN_INSPEC_SUITE=tgroups KITCHEN_IDEMPOTENY_TEST=false
+  - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-archlinux KITCHEN_PLAYBOOK=promcron KITCHEN_INSPEC_SUITE=promcron
 
 install:
   # Install gems

@@ -2,6 +2,8 @@
 
 [promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.sh.j2) is a bash script for monitoring cron job success and last run time
 
+[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.sh.j2) tests are located [here](https://github.com/mesaguy/ansible-prometheus/tree/master/tests/inspec/promcron)
+
 [promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.sh.j2) leverages the [textfile directory feature of node_exporter](https://github.com/prometheus/node_exporter#textfile-collector)
 
 # Features

@@ -174,7 +174,7 @@ prometheus_components:
 
 ### Cron job monitoring
 
-See [promcron](promcron.md)
+See beta of [promcron](promcron.md)
 
 ### Common variables
 

@@ -1,16 +1,17 @@
 #!/bin/bash
 
-# The "promit" script runs and monitors a specified command
+# The "promrun" script runs and monitors a specified command
 #
 # 'sponge' isn't used as a temporary file is required by the GNU 'time'
 # command
 
 # Author: MesaGuy (https://github.com/mesaguy)
-# Source: https://github.com/mesaguy/ansible-prometheus/tree/master/templates/promit.sh.j2
+# Source: https://github.com/mesaguy/ansible-prometheus/tree/master/templates/promrun.sh.j2
+# Tests: https://github.com/mesaguy/ansible-prometheus/tree/master/tests/inspec/promrun
 # License: MIT
 # Version: 0.1 (2020-01-09)
 
-if [ "{{ prometheus_promit_ansible_managed }}" == "True" ] ; then
+if [ "{{ prometheus_promrun_ansible_managed }}" == "True" ] ; then
     HAS_TIME="{{ prometheus_time_is_installed }}"
     GNU_TIME_COMMAND="{{ prometheus_gnu_time_path }}"
     # This section is only utilized if script is installed via Ansible
@@ -62,26 +63,26 @@ while getopts "Dhln::s:v" option; do
 done
 
 if [ -z "$NAME" ] ; then
-    echo "NAME (-n) must be defined"
+    echo "NAME (-n) must be defined" >&2
     exit 2
 fi
 
 if [ -z "$HAS_TIME" ] ; then
-    echo "'time' command must be in PATH"
+    echo "'time' command must be in PATH" >&2
     exit 2
 fi
 
 LABELS="user=\"${USER}\""
-TEXTFILE_PATH="${TEXTFILE_DIRECTORY}/promit_${NAME}.prom"
-NAME="promit_${NAME}"
+TEXTFILE_PATH="${TEXTFILE_DIRECTORY}/promrun_${NAME}.prom"
+NAME="promrun_${NAME}"
 
 if [ -n "$SETUP_USER" ] ; then
     if [ "$USER" != "root" ] && [ -z "$DRYRUN" ]; then
-        echo "Command must be run as root"
+        echo "Command must be run as root" >&2
         exit 2
     fi
     if ! id $SETUP_USER > /dev/null 2>&1 ; then
-        echo "No such user $SETUP_USER"
+        echo "No such user $SETUP_USER" >&2
         exit 2
     fi
     if [ -n "$DRYRUN" ] ; then
@@ -97,12 +98,12 @@ if [ -n "$DESCRIPTION" ] ; then
 fi
 
 if [ -n "$DRYRUN" ] ; then
-    echo "Dry-run is not supported outside of the setup (-s) argument"
+    echo "Dry-run is not supported outside of the setup (-s) argument" >&2
     exit 2
 fi
 
 if [[ ! $NAME =~ $RE_METRIC_NAME ]] ; then
-    echo "Metric name \"$NAME\" must match regex: $RE_METRIC_NAME"
+    echo "Metric name \"$NAME\" must match regex: $RE_METRIC_NAME" >&2
     exit 2
 fi
 
