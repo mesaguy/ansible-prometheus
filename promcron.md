@@ -23,7 +23,7 @@ Help menu (-h):
     Usage: promcron [ -Dhv ] [ -d DESCRIPTION ] [ -l label_name=LABEL_VALUE ]
                           [ -s USERNAME ] NAME VALUE
     
-    NAME and VALUE are required
+    NAME and VALUE are required and must be specified after arguments
     
      Options:
         -d                         Optional description
@@ -38,6 +38,7 @@ Help menu (-h):
     
     Basic example creating /opt/prometheus/etc/node_exporter_textfiles/cron_ls_test.prom:
         ls ; /usr/local/bin/promcron ls_test $?
+
     Example with description and custom labels:
         ls ; /usr/local/bin/promcron -l environment=Production Environment -l test=true -d ls command test ls_test $?
 
@@ -54,7 +55,12 @@ This cron job can be monitored as simply as:
 The following node_exporter textfile .prom file is created:
 
     $ cat /etc/prometheus/node_exporter_textfiles/cron_daily_delete_app_tmp.prom 
-    cron_daily_delete_app_tmp{job_type="cron",cron_user="app"} 0
+    # HELP cron_daily_delete_app_tmp_endtime Unix time in microseconds.
+    # TYPE cron_daily_delete_app_tmp_endtime gauge
+    cron_daily_delete_app_tmp_endtime{user="root",job_type="cron_time"} 1578897540129
+    # HELP cron_daily_delete_app_tmp Process return code.
+    # TYPE cron_daily_delete_app_tmp gauge
+    cron_daily_delete_app_tmp{user="root",job_type="cron"} 1
 
 ## Advanced usage
 
@@ -66,7 +72,12 @@ The above example would result in a node_exporter textfile directory file:
 The resulting .prom file is created:
 
     $ cat /etc/prometheus/node_exporter_textfiles/cron_daily_delete_app_tmp.prom 
-    cron_daily_delete_app_tmp{job_type="cron",cron_user="app",description="Daily job to delete app tmp files older than 1 day"} 0
+    # HELP cron_daily_delete_app_tmp_endtime Unix time in microseconds.
+    # TYPE cron_daily_delete_app_tmp_endtime gauge
+    cron_daily_delete_app_tmp_endtime{environment="production",department="tomcat",user="root",description="Daily job to delete app tmp files older than 1 day",job_type="cron_time"} 1578897616823
+    # HELP cron_daily_delete_app_tmp Process return code.
+    # TYPE cron_daily_delete_app_tmp gauge
+    cron_daily_delete_app_tmp{environment="production",department="tomcat",user="root",description="Daily job to delete app tmp files older than 1 day",job_type="cron"} 1
 
 ## Setup use by non-privileged user
 
