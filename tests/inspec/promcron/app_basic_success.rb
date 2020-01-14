@@ -11,7 +11,7 @@ describe command('sudo -u app promcron app_basic $?') do
 end
 
 # Get dryrun output for permissions for app to create prom file
-if ((os.name == 'alpine' ) or (os.name == 'amazon' and ['2', '2016.09', '2017.03', '2017.09', '2018.03'].include?(os.release)) or (os.family == 'redhat' and os.release.match('^[6-8]\.*')) or (os.family == 'suse' and ['13.1', '13.2', '42.1', '42.2', '42.3'].include?(os.release)))
+if ((os.name == 'alpine' and os.release.match('^3\.[0-8]\..*')) or (os.name == 'amazon' and ['2', '2016.09', '2017.03', '2017.09', '2018.03'].include?(os.release)) or (os.family == 'redhat' and os.release.match('^[6-8]\..*')) or (os.family == 'suse' and ['13.1', '13.2', '42.1', '42.2', '42.3'].include?(os.release)))
     describe command('sudo promcron -D -s app app_basic') do
       its('exit_status') { should eq 0 }
       its('stderr') { should eq '' }
@@ -25,7 +25,7 @@ else
     end
 end
 
-if ((os.name == 'alpine' ) or (os.name == 'amazon' and ['2', '2016.09', '2017.03', '2017.09', '2018.03'].include?(os.release)) or (os.family == 'redhat' and os.release.match('^[6-8]\.*')) or (os.family == 'suse' and ['13.1', '13.2', '42.1', '42.2', '42.3'].include?(os.release)))
+if ((os.name == 'alpine' and os.release.match('^3\.[0-8]\..*')) or (os.name == 'amazon' and ['2', '2016.09', '2017.03', '2017.09', '2018.03'].include?(os.release)) or (os.family == 'redhat' and os.release.match('^[6-8]\..*')) or (os.family == 'suse' and ['13.1', '13.2', '42.1', '42.2', '42.3'].include?(os.release)))
     # Setup permissions for app to create prom file (verbose mode)
     describe command('sudo promcron -v -s app app_basic') do
       its('exit_status') { should eq 0 }
@@ -71,6 +71,6 @@ describe file('/etc/prometheus/node_exporter_textfiles/cron_app_basic.prom') do
 end
 
 # Remove prom file
-describe command('sudo rm -f /etc/prometheus/node_exporter_textfiles/cron_app_basic.prom') do
-  its('exit_status') { should eq 0 }
-end
+#describe command('sudo rm -f /etc/prometheus/node_exporter_textfiles/cron_app_basic.prom') do
+#  its('exit_status') { should eq 0 }
+#end

@@ -15,11 +15,11 @@
 #  it { should eq 'release' }
 #end
 
-if os.name == 'alpine'
+if (os.name == 'alpine' and os.release.match('^3\.[0-8]\..*')
     # Unsupported
 elsif os.name == 'amazon' and ['2', '2016.09', '2017.03', '2017.09', '2018.03'].include?(os.release)
     # Unsupported
-elsif os.family == 'redhat' and os.release.match('^[6-8]\.*')
+elsif os.family == 'redhat' and os.release.match('^[6-8]\..*')
     # Unsupported
 elsif os.family == 'suse' and ['13.1', '13.2', '42.1', '42.2', '42.3'].include?(os.release)
     # Unsupported
