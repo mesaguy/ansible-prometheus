@@ -4,6 +4,22 @@
   - name: Include test installation variables
     include_vars: ../vars/install.yml
 
+  - block:
+    - name: Update 'apk' cache
+      become: true
+      apk:
+        update_cache: true
+      changed_when: false
+
+    - name: Install coreutils on Alpine <3.9 for 'cp' and 'mv'
+      become: true
+      package:
+        name: coreutils
+        state: present
+    when:
+      - ansible_os_family == 'Alpine'
+      - ansible_distribution_version is version('3.9', '<')
+
   - name: Install node_exporter and promcron
     include_role:
       name: '../../../../ansible-prometheus'
@@ -27,66 +43,3 @@
     user:
       name: app
       group: app
-      
-#  - name: Install cron daemon
-#    become: true
-#    package:
-#      name: cronie
-#      state: present
-#
-#  - name: Enable and start cron
-#    become: true
-#    service:
-#      name: cronie
-#      state: started
-#
-#  - name: Allow 'app' user to create prom file
-#    become: true
-#    changed_when: false # For idempotency test
-#    command: /usr/bin/promcron -s app app_test_success
-#
-#  - name: Install a simple root user cron (return 0)
-#    become: true
-#    cron:
-#      name: root test return 0
-#      minute: '*'
-#      hour: '*'
-#      job: 'ls > /dev/null; promcron root_test_0 $?'
-#
-#  - name: Install a simple root user cron (return 2)
-#    become: true
-#    cron:
-#      name: root test return 2
-#      minute: "*"
-#      hour: "*"
-#      job: 'ls /nosuchpath > /dev/null; promcron root_test_2 $?'
-#
-#  - name: Install a simple root user cron (return 0) with advanced parameters
-#    become: true
-#    cron:
-#      name: root test advanced
-#      minute: '*'
-#      hour: '*'
-#      job: 'ls > /dev/null; promcron -d "This is a test" -l env=dev -l test=true root_test_adv $?'
-#
-#  - name: Install a simple 'app' user cron without privileges to write (will fail)
-#    become: true
-#    cron:
-#      name: app test fail
-#      user: app
-#      minute: '*'
-#      hour: '*'
-#      job: 'ls > /dev/null; promcron app_test_fail $?'
-#
-#  - name: Install a simple 'app' user cron with privileges to write (will succeed)
-#    become: true
-#    cron:
-#      name: app test success
-#      user: app
-#      minute: '*'
-#      hour: '*'
-#      job: 'ls > /dev/null; promcron app_test_success $?'
-#
-#  - name: Sleep for 2 minutes to allow crons to run
-#    pause: 
-#      minutes: 2
