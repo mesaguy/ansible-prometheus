@@ -12,7 +12,7 @@ end
 
 # Creates the prom file, returns '2' because 'ls' returned '2'
 describe command('ls /no_such_file 2> /dev/null ; sudo -u app promcron app_fail $?') do
-  its('exit_status') { should eq 2 }
+  its('exit_status') { should_not eq '0' }
   its('stderr') { should eq '' }
   its('stdout') { should eq '' }
 end
@@ -25,7 +25,7 @@ describe file('/etc/prometheus/node_exporter_textfiles/cron_app_fail.prom') do
   its('content') { should match /cron_app_fail_endtime{user="app",job_type="cron_time"}/ }
   its('content') { should match /# HELP cron_app_fail Process return code./ }
   its('content') { should match /# TYPE cron_app_fail gauge/ }
-  its('content') { should match /cron_app_fail{user="app",job_type="cron"} 2/ }
+  its('content') { should match /cron_app_fail{user="app",job_type="cron"} [1-2]/ }
   its('size') { should > 200 }
   its('mode') { should cmp '0644' }
   its('owner') { should eq 'app' }
