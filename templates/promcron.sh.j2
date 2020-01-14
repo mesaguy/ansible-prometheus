@@ -155,7 +155,7 @@ $NAME{$LABELS} $VALUE
 if [ -n "$DRYRUN" ] ; then
     printf "$DATA" | sed 's/^/[DRYRUN] /g'
     if [ "$HAS_SPONGE" == "True" ] ; then
-        echo "[DRYRUN] cp -p \"${TEXTFILE_PATH}.tmp\" \"$TEXTFILE_PATH\""
+        echo "[DRYRUN] cp -fp \"${TEXTFILE_PATH}.tmp\" \"$TEXTFILE_PATH\""
     fi
     exit 0
 elif [ -n "$VERBOSE" ] ; then
@@ -167,9 +167,9 @@ if [ "$HAS_SPONGE" == "True" ] ; then
 else
     printf "$DATA" > "${TEXTFILE_PATH}.tmp"
     if [ -n "$VERBOSE" ] ; then
-        echo "cp -p \"${TEXTFILE_PATH}.tmp\" \"$TEXTFILE_PATH\""
+        echo "cp -fp \"${TEXTFILE_PATH}.tmp\" \"$TEXTFILE_PATH\""
     fi
-    cp -p "${TEXTFILE_PATH}.tmp" "$TEXTFILE_PATH"
+    cp -fp "${TEXTFILE_PATH}.tmp" "$TEXTFILE_PATH"
 fi
 
 # Return exit code that was given as argument
