@@ -1,15 +1,15 @@
 ---
 # Installs promrun script for monitoring the running of commands
 
-- name: Include task to check if "time" is installed and in PATH
-  include_tasks: _check_time_installed.yml
-
 - name: Install GNU time packages
   become: true
   package:
     name: '{{ prometheus_gnu_time_packages }}'
     state: present
   when: prometheus_gnu_time_packages is defined and prometheus_gnu_time_packages | length > 0
+
+- name: Include task to check if "time" is installed and in PATH
+  include_tasks: _check_time_installed.yml
 
 - name: Set promrun facts
   set_fact:
