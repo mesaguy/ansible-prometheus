@@ -24,11 +24,8 @@
     - name: Install prometheus prerequisite utilities
       become: true
       package:
-        name: '{{ prometheus_prerequisite_package }}'
+        name: '{{ prometheus_prerequisite_packages }}'
         state: present
-      loop_control:
-        loop_var: prometheus_prerequisite_package
-      with_items: '{{ prometheus_prerequisite_packages }}'
       when: prometheus_prerequisite_packages is defined
 
     - name: Include task to install and locate sponge

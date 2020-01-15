@@ -2,11 +2,8 @@
 - name: Install capabilities packages
   become: true
   package:
-    name: '{{ prometheus_capabilites_package }}'
+    name: '{{ prometheus_capabilites_packages }}'
     state: present
-  loop_control:
-    loop_var: prometheus_capabilites_package
-  with_items: '{{ prometheus_capabilites_packages }}'
   when: prometheus_capabilites_packages is defined and prometheus_capabilites_packages
 
 - name: Search for 'setcap' capabilities binary
