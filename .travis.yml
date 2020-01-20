@@ -30,6 +30,9 @@ env:
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-archlinux KITCHEN_PLAYBOOK=promcron KITCHEN_INSPEC_SUITE=promcron
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-centos-77 KITCHEN_PLAYBOOK=promcron KITCHEN_INSPEC_SUITE=promcron
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-centos-81 KITCHEN_PLAYBOOK=promcron KITCHEN_INSPEC_SUITE=promcron
+  - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-archlinux KITCHEN_PLAYBOOK=promrun KITCHEN_INSPEC_SUITE=promcron
+  - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-centos-77 KITCHEN_PLAYBOOK=promrun KITCHEN_INSPEC_SUITE=promcron
+  - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-centos-81 KITCHEN_PLAYBOOK=promrun KITCHEN_INSPEC_SUITE=promcron
 
 install:
   # Install gems
@@ -52,7 +55,7 @@ notifications:
 
 script:
   # Validate README.md URLs
-  - awesome_bot --skip-save-results --allow-dupe --white-list=localhost --files README.md,tests/README.md
+  - awesome_bot --skip-save-results --allow-dupe --white-list=localhost --files $(ls *.md docs/*.md tests/*.md | paste -sd "," -)
 
   # Perform yaml lint checks
   - yamllint --config-file=tests/yamllint.yml .
