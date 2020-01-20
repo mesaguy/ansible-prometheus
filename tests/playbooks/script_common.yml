@@ -1,0 +1,41 @@
+---
+- name: Include test installation variables
+  include_vars: ../vars/install.yml
+
+- name: Install prometheus testing prerequisite utilities
+  become: true
+  package:
+    name: '{{ prometheus_testing_package }}'
+    state: present
+  changed_when: false
+  loop_control:
+    loop_var: prometheus_testing_package
+  with_items: '{{ prometheus_testing_packages }}'
+  when: prometheus_testing_packages is defined
+
+- block:
+  - name: Update 'apk' cache
+    become: true
+    apk:
+      update_cache: true
+    changed_when: false
+
+  - name: Install coreutils on Alpine <3.9 for 'cp' and 'mv'
+    become: true
+    package:
+      name: coreutils
+      state: present
+  when:
+    - ansible_os_family == 'Alpine'
+    - ansible_distribution_version is version('3.9', '<')
+
+- name: Add group 'app'
+  become: true
+  group:
+    name: app
+
+- name: Add user 'app'
+  become: true
+  user:
+    name: app
+    group: app

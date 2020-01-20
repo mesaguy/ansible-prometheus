@@ -12,7 +12,7 @@
       loop_var: prometheus_component
     with_items:
        - node_exporter
-       - promcron
+       - promrun
     vars:
-      prometheus_install_sponge: true
+      prometheus_install_sponge: false
       prometheus_script_enable_all: false
