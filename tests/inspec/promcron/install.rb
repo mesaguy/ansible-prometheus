@@ -27,6 +27,20 @@ describe command('promcron test- 0') do
   its('stdout') { should eq '' }
 end
 
+# Label name must conform to regex
+describe command('promcron -l will-fail=test test 0') do
+  its('exit_status') { should eq 2 }
+  its('stderr') { should match /Label name "will-fail" must match regex: / }
+  its('stdout') { should eq '' }
+end
+
+# Run help
+describe command('promcron -h') do
+  its('exit_status') { should eq 1 }
+  its('stderr') { should eq '' }
+  its('stdout') { should match /Usage: promcron/ }
+end
+
 # Value must be a number and must be 0 through 255
 describe command('promcron test test') do
   its('exit_status') { should eq 2 }

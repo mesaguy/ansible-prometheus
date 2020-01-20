@@ -60,10 +60,10 @@ describe file('/etc/prometheus/node_exporter_textfiles/cron_app_basic.prom') do
   it { should be_file }
   its('content') { should match /# HELP cron_app_basic_endtime Unix time in microseconds./ }
   its('content') { should match /# TYPE cron_app_basic_endtime gauge/ }
-  its('content') { should match /cron_app_basic_endtime{user="app",job_type="cron_time"}/ }
+  its('content') { should match /cron_app_basic_endtime{user="app",promcron="endtime"}/ }
   its('content') { should match /# HELP cron_app_basic Process return code./ }
   its('content') { should match /# TYPE cron_app_basic gauge/ }
-  its('content') { should match /cron_app_basic{user="app",job_type="cron"} 0/ }
+  its('content') { should match /cron_app_basic{user="app",promcron="value"} 0/ }
   its('size') { should > 200 }
   its('mode') { should cmp '0644' }
   its('owner') { should eq 'app' }
@@ -71,6 +71,6 @@ describe file('/etc/prometheus/node_exporter_textfiles/cron_app_basic.prom') do
 end
 
 # Remove prom file
-#describe command('sudo rm -f /etc/prometheus/node_exporter_textfiles/cron_app_basic.prom') do
-#  its('exit_status') { should eq 0 }
-#end
+describe command('sudo rm -f /etc/prometheus/node_exporter_textfiles/cron_app_basic.prom*') do
+  its('exit_status') { should eq 0 }
+end

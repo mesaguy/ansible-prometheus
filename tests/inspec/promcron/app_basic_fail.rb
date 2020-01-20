@@ -22,10 +22,10 @@ describe file('/etc/prometheus/node_exporter_textfiles/cron_app_fail.prom') do
   it { should be_file }
   its('content') { should match /# HELP cron_app_fail_endtime Unix time in microseconds./ }
   its('content') { should match /# TYPE cron_app_fail_endtime gauge/ }
-  its('content') { should match /cron_app_fail_endtime{user="app",job_type="cron_time"}/ }
+  its('content') { should match /cron_app_fail_endtime{user="app",promcron="endtime"}/ }
   its('content') { should match /# HELP cron_app_fail Process return code./ }
   its('content') { should match /# TYPE cron_app_fail gauge/ }
-  its('content') { should match /cron_app_fail{user="app",job_type="cron"} [1-2]/ }
+  its('content') { should match /cron_app_fail{user="app",promcron="value"} [1-2]/ }
   its('size') { should > 200 }
   its('mode') { should cmp '0644' }
   its('owner') { should eq 'app' }
@@ -33,6 +33,6 @@ describe file('/etc/prometheus/node_exporter_textfiles/cron_app_fail.prom') do
 end
 
 # Remove prom file
-describe command('sudo rm -f /etc/prometheus/node_exporter_textfiles/cron_app_fail.prom') do
+describe command('sudo rm -f /etc/prometheus/node_exporter_textfiles/cron_app_fail.prom*') do
   its('exit_status') { should eq 0 }
 end
