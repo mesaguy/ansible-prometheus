@@ -19,7 +19,20 @@ else
     fi
 fi
 
+RE_LABEL_NAME="^[a-zA-Z_][a-zA-Z0-9_]*$"
 RE_METRIC_NAME="^[a-zA-Z_:][a-zA-Z0-9_:]*$"
+
+function add_label () {
+    LABELS="$1"
+    LABEL="$2"
+    KEY=$(echo $LABEL | cut -d '=' -f 1)
+    if [[ ! $KEY =~ $RE_LABEL_NAME ]] ; then
+        echo "Label name \"$KEY\" must match regex: $RE_LABEL_NAME" >&2
+        exit 2
+    fi
+    LABELS="$LABELS,$KEY=\"$(echo $LABEL | cut -d "=" -f 2-)\""
+    echo "$LABELS"
+}
 
 function usage () {
     echo "Usage: $(basename $0) [ -Dhv ] [ -d DESCRIPTION ] [ -l label_name=LABEL_VALUE ]"
@@ -36,19 +49,21 @@ function usage () {
     echo "    -s USERNAME                Optionally Setup textfile directory file"
     echo "                               permissions for specified username. Must be run"
     echo "                               as root. Run in dryrun mode to inspect changed"
+    echo "    -t                         Specify a textfiles directory (Defaults"
+    echo "                               to: $TEXTFILE_DIRECTORY)"
     echo "    -v                         Enable verbose mode"
     echo
     echo "Basic example creating $TEXTFILE_DIRECTORY/cron_ls_test.prom:"
     echo "* * * * *    ls ; $0 ls_test \$?"
     echo
     echo "Example with description and custom labels:"
-    echo "* * * * *    ls ; $0 -l environment="Production Environment" -l test=true -d "ls command test" ls_test \$?"
+    echo "* * * * *    ls ; $0 -l environment=\"Production Environment\" -l test=true -d \"ls command test\" ls_test \$?"
     echo
     exit 1
 }
 
 # read the option and store in the variable, $option
-while getopts "d:Dhl:s:v" option; do
+while getopts "d:Dhl:s:t:v" option; do
     case ${option} in
         d)
             DESCRIPTION="$OPTARG"
@@ -60,10 +75,14 @@ while getopts "d:Dhl:s:v" option; do
             usage
             ;;
         l)
-            LABELS="$LABELS,$(echo $OPTARG | cut -d '=' -f 1)=\"$(echo $OPTARG | cut -d "=" -f 2-)\""
+            LABELS=$(add_label "$LABELS" "$OPTARG")
+            if [ "$?" -ne "0" ] ; then exit 2 ; fi
             ;;
         s)
             SETUP_USER="$OPTARG"
+            ;;
+        t)
+            TEXTFILE_DIRECTORY="${OPTARG}"
             ;;
         v)
             VERBOSE=1
@@ -81,16 +100,17 @@ fi
 
 NAME="cron_${@:$OPTIND:1}"
 # Remove any prefixed ',' characters from $LABELS, add 'user' label
-LABELS="${LABELS#,},user=\"${USER}\""
+if [ -n "$LABELS" ] ; then
+    LABELS="${LABELS#,},user=\"${USER}\""
+else
+    LABELS="user=\"${USER}\""
+fi
 VALUE="${@:$OPTIND+1:1}"
 TEXTFILE_PATH="${TEXTFILE_DIRECTORY}/${NAME}.prom"
 
 if [ -n "$DESCRIPTION" ] ; then
     LABELS="${LABELS},description=\"$DESCRIPTION\""
 fi
-
-TIME_LABELS="${LABELS#,},job_type=\"cron_time\""
-LABELS="${LABELS#,},job_type=\"cron\""
 
 if [ -z "$NAME" ] ; then
     echo "NAME must be defined" >&2
@@ -146,10 +166,10 @@ fi
 END_DATE=$(date +%s%3N)
 DATA="# HELP ${NAME}_endtime Unix time in microseconds.
 # TYPE ${NAME}_endtime gauge
-${NAME}_endtime{$TIME_LABELS} ${END_DATE}
+${NAME}_endtime{$LABELS,promcron=\"endtime\"} ${END_DATE}
 # HELP ${NAME} Process return code.
 # TYPE ${NAME} gauge
-$NAME{$LABELS} $VALUE
+$NAME{$LABELS,promcron=\"value\"} $VALUE
 "
 
 if [ -n "$DRYRUN" ] ; then
