@@ -27,7 +27,7 @@ describe file('/etc/prometheus/node_exporter_textfiles/cron_app_fail.prom') do
   its('content') { should match /# TYPE cron_app_fail gauge/ }
   its('content') { should match /cron_app_fail{user="app",promcron="value"} [1-2]/ }
   its('size') { should > 200 }
-  its('mode') { should cmp '0644' }
+  it { should_not be_more_permissive_than('0664') }
   its('owner') { should eq 'app' }
   its('group') { should eq 'root' }
 end

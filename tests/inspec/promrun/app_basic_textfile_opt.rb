@@ -15,7 +15,7 @@ describe file('/tmp/promrun_app_textfile_dir.prom') do
   it { should be_file }
   its('content') { should match /# HELP promrun_app_textfile_dir_starttime Start time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_app_textfile_dir_starttime gauge/ }
-  its('content') { should match /promrun_app_textfile_dir_starttime\{user="app"\} [0-9]+/ }
+  its('content') { should match /promrun_app_textfile_dir_starttime\{user="app",promrun="starttime"\} [0-9]+/ }
   its('content') { should match /# HELP promrun_app_textfile_dir_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode./ }
   its('content') { should match /# TYPE promrun_app_textfile_dir_cpu_kernel_mode_seconds gauge/ }
   its('content') { should match /promrun_app_textfile_dir_cpu_kernel_mode_seconds\{user="app"\} 0.00/ }
@@ -57,14 +57,33 @@ describe file('/tmp/promrun_app_textfile_dir.prom') do
   its('content') { should match /promrun_app_textfile_dir_socket_messages_sent_count\{user="app"\} 0/ }
   its('content') { should match /# HELP promrun_app_textfile_dir_exit_status Exit status of the command./ }
   its('content') { should match /# TYPE promrun_app_textfile_dir_exit_status gauge/ }
-  its('content') { should match /promrun_app_textfile_dir_exit_status\{user="app"\} 0/ }
+  its('content') { should match /promrun_app_textfile_dir_exit_status\{user="app",promrun="exit"\} 0/ }
   its('content') { should match /# HELP promrun_app_textfile_dir_process_avg_size_resident_set_kb Average resident set size of the process, in Kbytes./ }
   its('content') { should match /# TYPE promrun_app_textfile_dir_process_avg_size_resident_set_kb gauge/ }
   its('content') { should match /promrun_app_textfile_dir_process_avg_size_resident_set_kb\{user="app"\} 0/ }
   its('content') { should match /# HELP promrun_app_textfile_dir_process_avg_size_unshared_data_area_kb Average size of the process's unshared data area, in Kbytes./ }
   its('content') { should match /# TYPE promrun_app_textfile_dir_process_avg_size_unshared_data_area_kb gauge/ }
+  its('content') { should match /promrun_app_textfile_dir_process_avg_size_unshared_data_area_kb\{user="app"\} 0/ }
+  its('content') { should match /# HELP promrun_app_textfile_dir_process_avg_size_unshared_stack_space_kb Average size of the process's unshared stack space, in Kbytes./ }
+  its('content') { should match /# TYPE promrun_app_textfile_dir_process_avg_size_unshared_stack_space_kb gauge/ }
+  its('content') { should match /promrun_app_textfile_dir_process_avg_size_unshared_stack_space_kb\{user="app"\} 0/ }
+  its('content') { should match /# HELP promrun_app_textfile_dir_process_avg_size_shared_text_space_kb Average size of the process's shared text space, in Kbytes./ }
+  its('content') { should match /# TYPE promrun_app_textfile_dir_process_avg_size_shared_text_space_kb gauge/ }
+  its('content') { should match /promrun_app_textfile_dir_process_avg_size_shared_text_space_kb\{user="app"\} 0/ }
+  its('content') { should match /# HELP promrun_app_textfile_dir_major_page_fault_count Number of major page faults that occurred while the process was running. These are faults where the page has to be read in from disk./ }
+  its('content') { should match /# TYPE promrun_app_textfile_dir_major_page_fault_count gauge/ }
+  its('content') { should match /promrun_app_textfile_dir_major_page_fault_count\{user="app"\} [0-9]+/ }
+  its('content') { should match /# HELP promrun_app_textfile_dir_minor_page_fault_count Number of minor, or recoverable, page faults. These are faults for pages that are not valid but which have not yet been claimed by other virtual pages. Thus the data in the page is still valid but the system tables must be updated./ }
+  its('content') { should match /# TYPE promrun_app_textfile_dir_minor_page_fault_count gauge/ }
+  its('content') { should match /promrun_app_textfile_dir_minor_page_fault_count\{user="app"\} [0-9]+/ }
+  its('content') { should match /# HELP promrun_app_textfile_dir_command Name and command-line arguments of the command being timed. See Label./ }
+  its('content') { should match /# TYPE promrun_app_textfile_dir_command gauge/ }
+  its('content') { should match /promrun_app_textfile_dir_command\{user="app",command="ls \/tmp"\} 1/ }
+  its('content') { should match /# HELP promrun_app_textfile_dir_endtime Start time in Unix time with microseconds./ }
+  its('content') { should match /# TYPE promrun_app_textfile_dir_endtime gauge/ }
+  its('content') { should match /promrun_app_textfile_dir_endtime\{user="app",promrun="endtime"\} [0-9]+/ }
   its('size') { should > 200 }
-  its('mode') { should cmp '0644' }
+  it { should_not be_more_permissive_than('0664') }
   its('owner') { should eq 'app' }
   its('group') { should eq 'app' }
 end

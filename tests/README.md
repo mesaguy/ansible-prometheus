@@ -5,6 +5,11 @@ Test only specified software:
 
     PROMETHEUS_INSTALL_ONLY=node_exporter.yml,script_exporter_adhocteam.yml kitchen test archlinux
 
+SSH to a kitchen docker container. Replace port in 'ssh' command with port found when running 'docker ps':
+
+    docker ps
+    ssh -o StrictHostKeyChecking=no -i .kitchen/docker_id_rsa -p 33035 kitchen@127.0.0.1
+
 Setup GO build environmental variables. Useful on machines where a build failed:
 
     export GOROOT=/opt/prometheus/go/$(ls /opt/prometheus/go|tail -1) ; export GOPATH="/opt/prometheus/tmp/$(ls /opt/prometheus/tmp)"; export PATH="$PATH:/opt/prometheus/go/$(ls /opt/prometheus/go)/bin"

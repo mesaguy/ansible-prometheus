@@ -2,6 +2,8 @@
 prometheus_shell: /usr/bin/nologin
 prometheus_capabilites_packages:
  - which
+prometheus_gnu_time_packages:
+ - time
 prometheus_go_compile_tools:
  - curl
  - gcc
@@ -14,6 +16,7 @@ prometheus_java_packages:
 prometheus_prerequisite_packages:
  - tar
  - unzip
+ - which
 prometheus_testing_packages:
  - net-tools
  - procps-ng

@@ -3,21 +3,21 @@
 # The "promcron" script monitors the return code of an exited command
 
 # Author: MesaGuy (https://github.com/mesaguy)
-# Source: https://github.com/mesaguy/ansible-prometheus/tree/master/templates/promcron.sh.j2
+# Source: https://github.com/mesaguy/ansible-prometheus/tree/master/scripts/promcron.sh
+# Ansible template: https://github.com/mesaguy/ansible-prometheus/tree/master/templates/promcron.sh.j2
 # Tests: https://github.com/mesaguy/ansible-prometheus/tree/master/tests/inspec/promcron
 # License: MIT
-# Version: 0.1 (2020-01-09)
+# Version: 0.2 (2020-01-20)
 
-if [ "{{ prometheus_promcron_ansible_managed }}" == "True" ] ; then
-    # This section is only utilized if script is installed via Ansible
-    TEXTFILE_DIRECTORY="{{ prometheus_node_exporter_textfiles_directory }}"
-    HAS_SPONGE="{{ prometheus_sponge_is_installed }}"
-else
-    TEXTFILE_DIRECTORY="/etc/prometheus/node_exporter_textfiles"
-    if which sponge > /dev/null 2>&1 ; then
-        HAS_SPONGE=True
-    fi
+{% if prometheus_promcron_ansible_managed | default(false) %}
+TEXTFILE_DIRECTORY="{{ prometheus_node_exporter_textfiles_directory }}"
+HAS_SPONGE="{{ prometheus_sponge_is_installed }}"
+{% else %}
+TEXTFILE_DIRECTORY="/etc/prometheus/node_exporter_textfiles"
+if which sponge > /dev/null 2>&1 ; then
+    HAS_SPONGE=True
 fi
+{% endif %}
 
 RE_LABEL_NAME="^[a-zA-Z_][a-zA-Z0-9_]*$"
 RE_METRIC_NAME="^[a-zA-Z_:][a-zA-Z0-9_:]*$"
@@ -54,10 +54,10 @@ function usage () {
     echo "    -v                         Enable verbose mode"
     echo
     echo "Basic example creating $TEXTFILE_DIRECTORY/cron_ls_test.prom:"
-    echo "* * * * *    ls ; $0 ls_test \$?"
+    echo "* * * * *    ls ; $(basename $0) ls_test \$?"
     echo
     echo "Example with description and custom labels:"
-    echo "* * * * *    ls ; $0 -l environment=\"Production Environment\" -l test=true -d \"ls command test\" ls_test \$?"
+    echo "* * * * *    ls ; $(basename $0) -l environment=\"Production Environment\" -l test=true -d \"ls command test\" ls_test \$?"
     echo
     exit 1
 }

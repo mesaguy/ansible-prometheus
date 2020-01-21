@@ -20,7 +20,7 @@ describe file('/etc/prometheus/node_exporter_textfiles/cron_root_basic.prom') do
   its('content') { should match /# TYPE cron_root_basic gauge/ }
   its('content') { should match /cron_root_basic{user="root",promcron="value"} 0/ }
   its('size') { should > 200 }
-  its('mode') { should cmp '0644' }
+  it { should_not be_more_permissive_than('0664') }
   its('owner') { should eq 'root' }
   its('group') { should eq 'root' }
 end
@@ -47,7 +47,7 @@ describe file('/etc/prometheus/node_exporter_textfiles/cron_root_basic.prom') do
   its('content') { should match /# TYPE cron_root_basic gauge/ }
   its('content') { should match /cron_root_basic{user="root",promcron="value"} 0/ }
   its('size') { should > 200 }
-  its('mode') { should cmp '0644' }
+  it { should_not be_more_permissive_than('0664') }
   its('owner') { should eq 'root' }
   its('group') { should eq 'root' }
 end

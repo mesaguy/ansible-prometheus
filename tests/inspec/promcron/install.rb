@@ -1,7 +1,6 @@
 describe file('/opt/prometheus/scripts/promcron') do
   it { should be_file }
   it { should be_executable }
-  its('content') { should match /"True" == "True"/ }
   its('size') { should > 1500 }
   its('mode') { should cmp '0555' }
   its('owner') { should eq 'root' }
@@ -53,7 +52,7 @@ describe command('promcron test 256') do
   its('stdout') { should eq '' }
 end
 
-if ((os.name == 'alpine' and os.release.match('^3\.[0-8]\..*')) or (os.name == 'amazon' and ['2', '2016.09', '2017.03', '2017.09', '2018.03'].include?(os.release)) or (os.family == 'redhat' and os.release.match('^[6-8]\..*')) or (os.family == 'suse' and ['13.1', '13.2', '42.1', '42.2', '42.3'].include?(os.release)))
+if ((os.name == 'alpine' and os.release.match('^3\.[1,2,3,4,6,7,8]\..*')) or (os.name == 'amazon' and ['2', '2016.09', '2017.03', '2017.09', '2018.03'].include?(os.release)) or (os.name == 'oracle' and os.release.match('^[7-8]\..*')) or (os.family == 'redhat' and os.name != 'oracle' and os.release.match('^[6-8]\..*')) or (os.family == 'suse' and ['13.1', '13.2', '42.1', '42.2', '42.3'].include?(os.release)))
     # No sponge
     describe file('/opt/prometheus/scripts/promcron') do
       its('content') { should match /HAS_SPONGE="False"/ }

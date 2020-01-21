@@ -3,6 +3,8 @@ prometheus_shell: /sbin/nologin
 prometheus_capabilites_packages:
  - libcap-progs
  - which
+prometheus_gnu_time_packages:
+ - time
 prometheus_go_compile_tools:
  - curl
  - gcc
@@ -14,6 +16,7 @@ prometheus_prerequisite_packages:
  - gzip
  - tar
  - unzip
+ - which
 prometheus_sponge_packages:
  - moreutils
 prometheus_testing_packages:
