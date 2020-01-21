@@ -4,6 +4,18 @@
     - name: Include test installation variables
       include_vars: ../vars/install.yml
 
+    - name: Install script templates to local "scripts" directory
+      copy:
+        content: '{{ lookup("template", lookup("env", "PWD") + "/templates/{{ prometheus_script_name }}.sh.j2") }}'
+        dest: '{{ lookup("env", "PWD") }}/scripts/{{ prometheus_script_name }}.sh'
+        mode: '0750'
+      loop_control:
+        loop_var: prometheus_script_name
+      delegate_to: localhost
+      with_items:
+       - promcron
+       - promrun
+
     - name: Include install tasks
       include_tasks: ../playbooks/install_common.yml
 
