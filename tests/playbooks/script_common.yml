@@ -14,17 +14,17 @@
   when: prometheus_testing_packages is defined
 
 - block:
-  - name: Update 'apk' cache
-    become: true
-    apk:
-      update_cache: true
-    changed_when: false
+    - name: Update 'apk' cache
+      become: true
+      apk:
+        update_cache: true
+      changed_when: false
 
-  - name: Install coreutils on Alpine <3.9 for 'cp' and 'mv'
-    become: true
-    package:
-      name: coreutils
-      state: present
+    - name: Install coreutils on Alpine <3.9 for 'cp' and 'mv'
+      become: true
+      package:
+        name: coreutils
+        state: present
   when:
     - ansible_os_family == 'Alpine'
     - ansible_distribution_version is version('3.9', '<')

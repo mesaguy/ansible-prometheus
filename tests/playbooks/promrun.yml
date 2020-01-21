@@ -11,8 +11,8 @@
     loop_control:
       loop_var: prometheus_component
     with_items:
-       - node_exporter
-       - promrun
+      - node_exporter
+      - promrun
     vars:
       prometheus_install_sponge: false
       prometheus_script_enable_all: false

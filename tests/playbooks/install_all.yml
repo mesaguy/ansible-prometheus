@@ -13,8 +13,8 @@
         loop_var: prometheus_script_name
       delegate_to: localhost
       with_items:
-       - promcron
-       - promrun
+        - promcron
+        - promrun
 
     - name: Include install tasks
       include_tasks: ../playbooks/install_common.yml
