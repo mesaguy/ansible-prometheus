@@ -6,8 +6,11 @@
 
 [promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.sh.j2) leverages the [textfile directory feature of node_exporter](https://github.com/prometheus/node_exporter#textfile-collector)
 
+# Requirements
+This script leverages requires a working node_exporter instance and must write data into the node_exporter's textfile directory
+
 # Features
-- Script automatically leverages sponge if present. If sponge is not present, script writes to a .tmp file in the textfile directory, then copies the resulting .tmp file and overwrites the .prom file. This ensures that the .prom file is always complete when prometheus polls it.
+- Script automatically leverages sponge if present. If sponge is not present, script writes to a .tmp file in the textfile directory, then copies the resulting .tmp file and overwrites the .prom file. This ensures that the .prom file is always complete when prometheus polls the node_exporter instance.
 - Script automatically adds two labels to each .prom file.
   - job_type=cron
   - cron_user=*The USER who ran the cron*
@@ -19,12 +22,11 @@
 
 Help menu (-h):
 
-    $ promcron -h
     Usage: promcron [ -Dhv ] [ -d DESCRIPTION ] [ -l label_name=LABEL_VALUE ]
                           [ -s USERNAME ] NAME VALUE
-    
+
     NAME and VALUE are required and must be specified after arguments
-    
+
      Options:
         -d                         Optional description
         -D                         Enable dryrun mode
@@ -34,13 +36,15 @@ Help menu (-h):
         -s USERNAME                Optionally Setup textfile directory file
                                    permissions for specified username. Must be run
                                    as root. Run in dryrun mode to inspect changed
+        -t                         Specify a textfiles directory (Defaults
+                                   to: /etc/prometheus/node_exporter_textfiles)
         -v                         Enable verbose mode
-    
-    Basic example creating /opt/prometheus/etc/node_exporter_textfiles/cron_ls_test.prom:
-        ls ; /usr/local/bin/promcron ls_test $?
+
+    Basic example creating /etc/prometheus/node_exporter_textfiles/cron_ls_test.prom:
+    * * * * *    ls ; promcron ls_test $?
 
     Example with description and custom labels:
-        ls ; /usr/local/bin/promcron -l environment=Production Environment -l test=true -d ls command test ls_test $?
+    * * * * *    ls ; promcron -l environment="Production Environment" -l test=true -d "ls command test" ls_test $?
 
 ## Basic usage
 
@@ -54,7 +58,7 @@ This cron job can be monitored as simply as:
 
 The following node_exporter textfile .prom file is created:
 
-    $ cat /etc/prometheus/node_exporter_textfiles/cron_daily_delete_app_tmp.prom 
+    $ cat /etc/prometheus/node_exporter_textfiles/cron_daily_delete_app_tmp.prom
     # HELP cron_daily_delete_app_tmp_endtime Unix time in microseconds.
     # TYPE cron_daily_delete_app_tmp_endtime gauge
     cron_daily_delete_app_tmp_endtime{user="root",job_type="cron_time"} 1578897540129
@@ -71,7 +75,7 @@ The above example would result in a node_exporter textfile directory file:
 
 The resulting .prom file is created:
 
-    $ cat /etc/prometheus/node_exporter_textfiles/cron_daily_delete_app_tmp.prom 
+    $ cat /etc/prometheus/node_exporter_textfiles/cron_daily_delete_app_tmp.prom
     # HELP cron_daily_delete_app_tmp_endtime Unix time in microseconds.
     # TYPE cron_daily_delete_app_tmp_endtime gauge
     cron_daily_delete_app_tmp_endtime{environment="production",department="tomcat",user="root",description="Daily job to delete app tmp files older than 1 day",job_type="cron_time"} 1578897616823
