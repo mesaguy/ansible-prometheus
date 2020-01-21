@@ -1,21 +1,22 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
 ### Added
 
-- Beta of promcron script
-- Beta of promrun script
+- promcron script
+- promrun script
 
 ### Changed
 
 - Upgrade Go from v1.13.5 to v1.13.6
 - Upgrade statsd_exporter from v0.13.0 to v0.14.0
 - Upgrade yum.sh script to commit: '354acdf76a8befc66bfba43df02e155221891e21'
+- Download jmx_exporter via HTTPS instead of HTTP
 
 ## [0.9.4] - 2020-01-07
 
