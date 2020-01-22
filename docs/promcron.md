@@ -12,8 +12,8 @@ This script leverages requires a working node_exporter instance and must write d
 # Features
 - Script automatically leverages sponge if present. If sponge is not present, script writes to a .tmp file in the textfile directory, then copies the resulting .tmp file and overwrites the .prom file. This ensures that the .prom file is always complete when prometheus polls the node_exporter instance.
 - Script automatically adds two labels to each .prom file.
-  - job_type=cron
-  - cron_user=*The USER who ran the cron*
+  - promcron="endtime" or promcron="value"
+  - user="CRON_USER"
 - Script can add a description label to describe the cron job
 - Script can take custom labels
 - Script prefixes each .prom file with ```cron_```
@@ -58,30 +58,28 @@ This cron job can be monitored as simply as:
 
 The following node_exporter textfile .prom file is created:
 
-    $ cat /etc/prometheus/node_exporter_textfiles/cron_daily_delete_app_tmp.prom
-    # HELP cron_daily_delete_app_tmp_endtime Unix time in microseconds.
-    # TYPE cron_daily_delete_app_tmp_endtime gauge
-    cron_daily_delete_app_tmp_endtime{user="root",job_type="cron_time"} 1578897540129
-    # HELP cron_daily_delete_app_tmp Process return code.
-    # TYPE cron_daily_delete_app_tmp gauge
-    cron_daily_delete_app_tmp{user="root",job_type="cron"} 1
+    # HELP cron_test_endtime Unix time in microseconds.
+    # TYPE cron_test_endtime gauge
+    cron_test_endtime{user="root",description="Copy bank files",promcron="endtime"} 1579669082027
+    # HELP cron_test Process return code.
+    # TYPE cron_test gauge
+    cron_test{user="root",description="Copy bank files",promcron="value"} 0
 
 ## Advanced usage
 
 Building on the basic usage example above, this example adds a description and a few custom labels
 The above example would result in a node_exporter textfile directory file:
 
-    * * * * * find /var/app/tmp -mtime +1 -delete; promcron -l environment=production -l department=tomcat -d "Daily job to delete app tmp files older than 1 day" daily_delete_app_tmp $?
+    * * * * * find /var/app/tmp -mtime +1 -delete; promcron -l environment=production -l application=tomcat -d "Daily job to delete app tmp files older than 1 day" daily_delete_app_tmp $?
 
 The resulting .prom file is created:
 
-    $ cat /etc/prometheus/node_exporter_textfiles/cron_daily_delete_app_tmp.prom
     # HELP cron_daily_delete_app_tmp_endtime Unix time in microseconds.
     # TYPE cron_daily_delete_app_tmp_endtime gauge
-    cron_daily_delete_app_tmp_endtime{environment="production",department="tomcat",user="root",description="Daily job to delete app tmp files older than 1 day",job_type="cron_time"} 1578897616823
+    cron_daily_delete_app_tmp_endtime{environment="production",application="tomcat",user="root",description="Daily job to delete app tmp files older than 1 day",promcron="endtime"} 1579669484929
     # HELP cron_daily_delete_app_tmp Process return code.
     # TYPE cron_daily_delete_app_tmp gauge
-    cron_daily_delete_app_tmp{environment="production",department="tomcat",user="root",description="Daily job to delete app tmp files older than 1 day",job_type="cron"} 1
+    cron_daily_delete_app_tmp{environment="production",application="tomcat",user="root",description="Daily job to delete app tmp files older than 1 day",promcron="value"} 0
 
 ## Setup use by non-privileged user
 
@@ -97,7 +95,7 @@ Run the following as root to create the resulting files with the correct permiss
 
 Root can see what will occur by running:
 
-    # promcron -D -s app daily_delete_app_tmp
+    # promcron -D -s app  daily_delete_app_tmp
     [DRYRUN] touch "/opt/prometheus/etc/node_exporter_textfiles/cron_daily_delete_app_tmp.prom" && chown app "/opt/prometheus/etc/node_exporter_textfiles/cron_daily_delete_app_tmp.prom"
 
 # Installation
@@ -106,7 +104,7 @@ Root can see what will occur by running:
 
 [promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.sh.j2) can be installed via the mesaguy/ansible-prometheus module using the following parameter:
 
-    prometheus_install_promcron: true
+    prometheus_script_promcron: true
 
 The installation location defaults to /usr/local/bin, but the destination can be overridden using the 'prometheus_promcron_install_dir' parameter:
 
@@ -116,4 +114,4 @@ The installation location defaults to /usr/local/bin, but the destination can be
 
 All Prometheus monitored cron jobs can be seen by leveraging the following query:
 
-    {job_type=~"cron"}
+    {promcron=~"endtime"}
