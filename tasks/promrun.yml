@@ -26,11 +26,11 @@
   vars:
     prometheus_promrun_ansible_managed: true
 
-- name: Symlink {{ prometheus_script_directory }}/promrun to {{ prometheus_promrun_link_dir }}/promrun
+- name: Symlink {{ prometheus_script_directory }}/promrun to {{ prometheus_script_promrun_link_dir }}/promrun
   become: true
   file:
     src: '{{ prometheus_script_directory }}/promrun'
-    dest: '{{ prometheus_promrun_link_dir }}/promrun'
+    dest: '{{ prometheus_script_promrun_link_dir }}/promrun'
     owner: root
     group: root
     state: link

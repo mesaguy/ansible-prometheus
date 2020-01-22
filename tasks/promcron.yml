@@ -19,11 +19,11 @@
   vars:
     prometheus_promcron_ansible_managed: true
 
-- name: Symlink {{ prometheus_script_directory }}/promcron to {{ prometheus_promcron_link_dir }}/promcron
+- name: Symlink {{ prometheus_script_directory }}/promcron to {{ prometheus_script_promcron_link_dir }}/promcron
   become: true
   file:
     src: '{{ prometheus_script_directory }}/promcron'
-    dest: '{{ prometheus_promcron_link_dir }}/promcron'
+    dest: '{{ prometheus_script_promcron_link_dir }}/promcron'
     owner: root
     group: root
     state: link

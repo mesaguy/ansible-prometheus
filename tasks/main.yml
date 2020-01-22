@@ -43,10 +43,10 @@
   include_role:
     name: mesaguy.prometheus
     tasks_from: promcron
-  when: prometheus_install_promcron | bool
+  when: prometheus_script_promcron | bool
 
 - name: Install promrun script
   include_role:
     name: mesaguy.prometheus
     tasks_from: promrun
-  when: prometheus_install_promrun | bool
+  when: prometheus_script_promrun | bool

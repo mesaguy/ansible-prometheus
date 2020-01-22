@@ -35,14 +35,6 @@ prometheus_manage_client_iptables_raw: false
 prometheus_server_ips: []
 prometheus_firewalld_zone: public
 
-# Promcron script
-prometheus_install_promcron: false
-prometheus_promcron_link_dir: /usr/bin
-
-# Promit script
-prometheus_install_promrun: false
-prometheus_promrun_link_dir: /usr/bin
-
 # When performing installations
 prometheus_default_binary_unarchive_opts:
  - '--strip-components=1'
@@ -146,6 +138,14 @@ prometheus_script_tw_cli_checksum: 'sha256:d7ee66ee7b20baf90ea76aec036fb2e0866dd
 prometheus_script_yum: false
 prometheus_script_yum_commit: '354acdf76a8befc66bfba43df02e155221891e21'
 prometheus_script_yum_checksum: 'sha256:ec15318d3beeea5f4eeb4b50e2c7c4ec349f4bf978519056c811412a39dccee4'
+
+# Promcron script
+prometheus_script_promcron: false
+prometheus_script_promcron_link_dir: /usr/bin
+
+# Promit script
+prometheus_script_promrun: false
+prometheus_script_promrun_link_dir: /usr/bin
 
 # For use when testing
 prometheus_script_enable_all: false
