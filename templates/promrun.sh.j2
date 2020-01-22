@@ -70,15 +70,15 @@ function usage () {
 }
 
 function end_time_text () {
-    printf "# HELP ${NAME}_endtime Start time in Unix time with microseconds.
+    printf "# HELP ${NAME}_endtime End time in Unix time with microseconds.
 # TYPE ${NAME}_endtime gauge
-${NAME}_endtime{$LABELS,promrun=\"endtime\"} $(date +%s%3N)\n"
+${NAME}_endtime{$LABELS,promrun=\"endtime\"} $(date +%s.%3N)\n"
 }
 
 function start_time_text () {
     printf "# HELP ${NAME}_starttime Start time in Unix time with microseconds.
 # TYPE ${NAME}_starttime gauge
-${NAME}_starttime{$LABELS,promrun=\"starttime\"} $(date +%s%3N)\n"
+${NAME}_starttime{$LABELS,promrun=\"starttime\"} $(date +%s.%3N)\n"
 }
 
 # read the option and store in the variable, $option

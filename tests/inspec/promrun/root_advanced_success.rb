@@ -18,7 +18,7 @@ describe file('/etc/prometheus/node_exporter_textfiles/promrun_root_advanced.pro
   it { should be_file }
   its('content') { should match /# HELP promrun_root_advanced_starttime Start time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_root_advanced_starttime gauge/ }
-  its('content') { should match /promrun_root_advanced_starttime\{org="Test",env="test",user="root",description="RUN OF echo COMMAND",promrun="starttime"\} [0-9]+/ }
+  its('content') { should match /promrun_root_advanced_starttime\{org="Test",env="test",user="root",description="RUN OF echo COMMAND",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('content') { should match /# HELP promrun_root_advanced_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode./ }
   its('content') { should match /# TYPE promrun_root_advanced_cpu_kernel_mode_seconds gauge/ }
   its('content') { should match /promrun_root_advanced_cpu_kernel_mode_seconds\{org="Test",env="test",user="root",description="RUN OF echo COMMAND"\} 0.00/ }
@@ -82,9 +82,9 @@ describe file('/etc/prometheus/node_exporter_textfiles/promrun_root_advanced.pro
   its('content') { should match /# HELP promrun_root_advanced_command Name and command-line arguments of the command being timed. See Label./ }
   its('content') { should match /# TYPE promrun_root_advanced_command gauge/ }
   its('content') { should match /promrun_root_advanced_command\{org="Test",env="test",user="root",description="RUN OF echo COMMAND",command="echo -n 123"\} 1/ }
-  its('content') { should match /# HELP promrun_root_advanced_endtime Start time in Unix time with microseconds./ }
+  its('content') { should match /# HELP promrun_root_advanced_endtime End time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_root_advanced_endtime gauge/ }
-  its('content') { should match /promrun_root_advanced_endtime\{org="Test",env="test",user="root",description="RUN OF echo COMMAND",promrun="endtime"\} [0-9]+/ }
+  its('content') { should match /promrun_root_advanced_endtime\{org="Test",env="test",user="root",description="RUN OF echo COMMAND",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('size') { should > 5000 }
   it { should_not be_more_permissive_than('0664') }
   its('owner') { should eq 'root' }
@@ -98,7 +98,7 @@ describe command('sudo promrun -v -l org=Test -d "RUN OF echo COMMAND" -l env=te
   its('stdout') { should match /321/ }
   its('stdout') { should match /# HELP promrun_root_advanced_verbose_starttime Start time in Unix time with microseconds./ }
   its('stdout') { should match /# TYPE promrun_root_advanced_verbose_starttime gauge/ }
-  its('stdout') { should match /promrun_root_advanced_verbose_starttime\{org="Test",env="test",user="root",description="RUN OF echo COMMAND",promrun="starttime"\} [0-9]+/ }
+  its('stdout') { should match /promrun_root_advanced_verbose_starttime\{org="Test",env="test",user="root",description="RUN OF echo COMMAND",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('stdout') { should match /# HELP promrun_root_advanced_verbose_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode./ }
   its('stdout') { should match /# TYPE promrun_root_advanced_verbose_cpu_kernel_mode_seconds gauge/ }
   its('stdout') { should match /promrun_root_advanced_verbose_cpu_kernel_mode_seconds\{org="Test",env="test",user="root",description="RUN OF echo COMMAND"\} 0.00/ }
@@ -162,9 +162,9 @@ describe command('sudo promrun -v -l org=Test -d "RUN OF echo COMMAND" -l env=te
   its('stdout') { should match /# HELP promrun_root_advanced_verbose_command Name and command-line arguments of the command being timed. See Label./ }
   its('stdout') { should match /# TYPE promrun_root_advanced_verbose_command gauge/ }
   its('stdout') { should match /promrun_root_advanced_verbose_command\{org="Test",env="test",user="root",description="RUN OF echo COMMAND",command="echo -n 321"\} 1/ }
-  its('stdout') { should match /# HELP promrun_root_advanced_verbose_endtime Start time in Unix time with microseconds./ }
+  its('stdout') { should match /# HELP promrun_root_advanced_verbose_endtime End time in Unix time with microseconds./ }
   its('stdout') { should match /# TYPE promrun_root_advanced_verbose_endtime gauge/ }
-  its('stdout') { should match /promrun_root_advanced_verbose_endtime\{org="Test",env="test",user="root",description="RUN OF echo COMMAND",promrun="endtime"\} [0-9]+/ }
+  its('stdout') { should match /promrun_root_advanced_verbose_endtime\{org="Test",env="test",user="root",description="RUN OF echo COMMAND",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
 end
 
 # Resulting prom file is as expected
@@ -172,7 +172,7 @@ describe file('/etc/prometheus/node_exporter_textfiles/promrun_root_advanced_ver
   it { should be_file }
   its('content') { should match /# HELP promrun_root_advanced_verbose_starttime Start time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_root_advanced_verbose_starttime gauge/ }
-  its('content') { should match /promrun_root_advanced_verbose_starttime\{org="Test",env="test",user="root",description="RUN OF echo COMMAND",promrun="starttime"\} [0-9]+/ }
+  its('content') { should match /promrun_root_advanced_verbose_starttime\{org="Test",env="test",user="root",description="RUN OF echo COMMAND",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('content') { should match /# HELP promrun_root_advanced_verbose_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode./ }
   its('content') { should match /# TYPE promrun_root_advanced_verbose_cpu_kernel_mode_seconds gauge/ }
   its('content') { should match /promrun_root_advanced_verbose_cpu_kernel_mode_seconds\{org="Test",env="test",user="root",description="RUN OF echo COMMAND"\} 0.00/ }
@@ -236,9 +236,9 @@ describe file('/etc/prometheus/node_exporter_textfiles/promrun_root_advanced_ver
   its('content') { should match /# HELP promrun_root_advanced_verbose_command Name and command-line arguments of the command being timed. See Label./ }
   its('content') { should match /# TYPE promrun_root_advanced_verbose_command gauge/ }
   its('content') { should match /promrun_root_advanced_verbose_command\{org="Test",env="test",user="root",description="RUN OF echo COMMAND",command="echo -n 321"\} 1/ }
-  its('content') { should match /# HELP promrun_root_advanced_verbose_endtime Start time in Unix time with microseconds./ }
+  its('content') { should match /# HELP promrun_root_advanced_verbose_endtime End time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_root_advanced_verbose_endtime gauge/ }
-  its('content') { should match /promrun_root_advanced_verbose_endtime\{org="Test",env="test",user="root",description="RUN OF echo COMMAND",promrun="endtime"\} [0-9]+/ }
+  its('content') { should match /promrun_root_advanced_verbose_endtime\{org="Test",env="test",user="root",description="RUN OF echo COMMAND",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('size') { should > 5000 }
   it { should_not be_more_permissive_than('0664') }
   its('owner') { should eq 'root' }

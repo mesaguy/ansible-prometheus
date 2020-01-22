@@ -197,7 +197,7 @@ Attempt to force the etc directory symlink referenced above:
 
     prometheus_link_etc_force: false
 
-Install the 'sponge' utility. [Recommended by the Prometheus project](https://github.com/prometheus/node_exporter/tree/master/text_collector_examples) when writing to node_exporter's textfile directory. The EPEL repository is required if installing on a Red Hat Enterprise Linux derivative:
+Install the 'sponge' utility. [Recommended by the Prometheus project](https://github.com/prometheus/node_exporter/tree/master/text_collector_examples) when writing to node_exporter's textfile directory. The EPEL repository is required if installing on a Red Hat Enterprise Linux derivative. CentOS 8.x requires the 'CentOS-PowerTools' yum repository, OracleLinux 7 requires the 'ol7_optional_archive' repository,  and Red Hat Enterprise Linux 8 requires the 'Red Hat CodeReady Linux Builder' yum repository be enabled:
 
     prometheus_install_sponge: false
 
@@ -563,7 +563,8 @@ An array of additional flags to pass to the bind_exporter daemon (ie):
 
 The version of bind_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_bind_exporter_prometheus_community_src_version: "103ead78209e9971994fc89ccda69cff555807b9"
+    prometheus_bind_exporter_prometheus_community_version: "0.3.0"
+    prometheus_bind_exporter_prometheus_community_src_version: "v0.3.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 8053:
 
@@ -1550,8 +1551,8 @@ An array of additional flags to pass to the statsd_exporter daemon:
         --statsd.listen-udp=":9125"
 
 The version of statsd_exporter to install. The source version defines the version as specified in version control:
-    prometheus_statsd_exporter_version: "0.14.0"
-    prometheus_statsd_exporter_src_version: "v0.14.0"
+    prometheus_statsd_exporter_version: "0.14.1"
+    prometheus_statsd_exporter_src_version: "v0.14.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9102:
 

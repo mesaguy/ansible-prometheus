@@ -16,7 +16,8 @@
     prometheus_software_fallback_to_build: '{{ prometheus_bind_exporter_prometheus_community_fallback_to_build | default(prometheus_fallback_to_build) }}'
     prometheus_software_makefile_make_command: 'make build'
     prometheus_software_name: bind_exporter_prometheus_community
-    prometheus_software_version: '{{ prometheus_bind_exporter_prometheus_community_src_version | default("103ead78209e9971994fc89ccda69cff555807b9") }}'
+    prometheus_software_version: '{{ prometheus_bind_exporter_prometheus_community_version | default("0.3.0") }}'
+    prometheus_software_src_version: '{{ prometheus_bind_exporter_prometheus_community_src_version | default("v0.3.0") }}'
     prometheus_software_tgroup_jobname: '{{ prometheus_bind_exporter_prometheus_community_jobname | default(prometheus_bind_exporter_prometheus_community_default_tgroup_jobname) }}'
     prometheus_software_description: 'Prometheus bind_exporter (prometheus-community), exporter of BIND(named/dns) v9+ service metrics'
     prometheus_software_documentation: 'https://github.com/prometheus-community/bind_exporter'
@@ -31,8 +32,7 @@
     prometheus_software_opts:
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
     prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
-    # Binary file only exists for darwin
-    # prometheus_software_file_url: '{% if prometheus_architecture == "linux-amd64" %}https://github.com/prometheus-community/{{ prometheus_software_shortname }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_shortname }}{% endif %}'
+    prometheus_software_bin_url: 'https://github.com/prometheus-community/{{ prometheus_software_shortname }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_shortname }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
     prometheus_software_src_dir_suffix: '/src/github.com/prometheus-community/{{ prometheus_software_shortname }}'
     prometheus_software_src_url: 'https://github.com/prometheus-community/{{ prometheus_software_shortname }}'
 

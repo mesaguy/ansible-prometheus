@@ -9,7 +9,7 @@ describe command('ls > /dev/null ; sudo promcron -D root_dryrun $?') do
   its('stderr') { should eq '' }
   its('stdout') { should match /\[DRYRUN\] # HELP cron_root_dryrun_endtime Unix time in microseconds./ }
   its('stdout') { should match /\[DRYRUN\] # TYPE cron_root_dryrun_endtime gauge/ }
-  its('stdout') { should match /\[DRYRUN\] cron_root_dryrun_endtime{user="root",promcron="endtime"}/ }
+  its('stdout') { should match /\[DRYRUN\] cron_root_dryrun_endtime{user="root",promcron="endtime"} [0-9]{10}\.[0-9]{3}$/ }
   its('stdout') { should match /\[DRYRUN\] # HELP cron_root_dryrun Process return code./ }
   its('stdout') { should match /\[DRYRUN\] # TYPE cron_root_dryrun gauge/ }
   its('stdout') { should match /\[DRYRUN\] cron_root_dryrun{user="root",promcron="value"} 0/ }

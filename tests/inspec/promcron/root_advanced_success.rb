@@ -15,7 +15,7 @@ describe file('/etc/prometheus/node_exporter_textfiles/cron_root_advanced.prom')
   it { should be_file }
   its('content') { should match /# HELP cron_root_advanced_endtime Unix time in microseconds./ }
   its('content') { should match /# TYPE cron_root_advanced_endtime gauge/ }
-  its('content') { should match /cron_root_advanced_endtime{org="Test",env="test",user="root",description="RUN OF ls COMMAND",promcron="endtime"}/ }
+  its('content') { should match /cron_root_advanced_endtime{org="Test",env="test",user="root",description="RUN OF ls COMMAND",promcron="endtime"} [0-9]{10}\.[0-9]{3}$/ }
   its('content') { should match /# HELP cron_root_advanced Process return code./ }
   its('content') { should match /# TYPE cron_root_advanced gauge/ }
   its('content') { should match /cron_root_advanced{org="Test",env="test",user="root",description="RUN OF ls COMMAND",promcron="value"} 0/ }
@@ -31,7 +31,7 @@ describe command('ls > /dev/null ; sudo promcron -v -l org=Test -d "RUN OF ls CO
   its('stderr') { should eq '' }
   its('stdout') { should match /# HELP cron_root_advanced_endtime Unix time in microseconds./ }
   its('stdout') { should match /# TYPE cron_root_advanced_endtime gauge/ }
-  its('stdout') { should match /cron_root_advanced_endtime{org="Test",env="test",user="root",description="RUN OF ls COMMAND",promcron="endtime"}/ }
+  its('stdout') { should match /cron_root_advanced_endtime{org="Test",env="test",user="root",description="RUN OF ls COMMAND",promcron="endtime"} [0-9]{10}\.[0-9]{3}$/ }
   its('stdout') { should match /# HELP cron_root_advanced Process return code./ }
   its('stdout') { should match /# TYPE cron_root_advanced gauge/ }
   its('stdout') { should match /cron_root_advanced{org="Test",env="test",user="root",description="RUN OF ls COMMAND",promcron="value"} 0/ }
@@ -42,7 +42,7 @@ describe file('/etc/prometheus/node_exporter_textfiles/cron_root_advanced.prom')
   it { should be_file }
   its('content') { should match /# HELP cron_root_advanced_endtime Unix time in microseconds./ }
   its('content') { should match /# TYPE cron_root_advanced_endtime gauge/ }
-  its('content') { should match /cron_root_advanced_endtime{org="Test",env="test",user="root",description="RUN OF ls COMMAND",promcron="endtime"}/ }
+  its('content') { should match /cron_root_advanced_endtime{org="Test",env="test",user="root",description="RUN OF ls COMMAND",promcron="endtime"} [0-9]{10}\.[0-9]{3}$/ }
   its('content') { should match /# HELP cron_root_advanced Process return code./ }
   its('content') { should match /# TYPE cron_root_advanced gauge/ }
   its('content') { should match /cron_root_advanced{org="Test",env="test",user="root",description="RUN OF ls COMMAND",promcron="value"} 0/ }
