@@ -9,7 +9,7 @@ describe command('sudo promrun -D -n root_dryrun ls /tmp > /dev/null') do
   its('stdout') { should eq '' }
   its('stderr') { should match /\[DRYRUN\] # HELP promrun_root_dryrun_starttime Start time in Unix time with microseconds./ }
   its('stderr') { should match /\[DRYRUN\] # TYPE promrun_root_dryrun_starttime gauge/ }
-  its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_starttime\{user="root",promrun="starttime"\} [0-9]+/ }
+  its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_starttime\{user="root",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('stderr') { should match /\[DRYRUN\] # HELP promrun_root_dryrun_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode./ }
   its('stderr') { should match /\[DRYRUN\] # TYPE promrun_root_dryrun_cpu_kernel_mode_seconds gauge/ }
   its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_cpu_kernel_mode_seconds\{user="root"\} 0.00/ }
@@ -73,9 +73,9 @@ describe command('sudo promrun -D -n root_dryrun ls /tmp > /dev/null') do
   its('stderr') { should match /\[DRYRUN\] # HELP promrun_root_dryrun_command Name and command-line arguments of the command being timed. See Label./ }
   its('stderr') { should match /\[DRYRUN\] # TYPE promrun_root_dryrun_command gauge/ }
   its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_command\{user="root",command="ls \/tmp"\} 1/ }
-  its('stderr') { should match /\[DRYRUN\] # HELP promrun_root_dryrun_endtime Start time in Unix time with microseconds./ }
+  its('stderr') { should match /\[DRYRUN\] # HELP promrun_root_dryrun_endtime End time in Unix time with microseconds./ }
   its('stderr') { should match /\[DRYRUN\] # TYPE promrun_root_dryrun_endtime gauge/ }
-  its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_endtime\{user="root",promrun="endtime"\} [0-9]+/ }
+  its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_endtime\{user="root",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('stderr') { should match /\[DRYRUN\] cp -fp "\/opt\/prometheus\/etc\/node_exporter_textfiles\/promrun_root_dryrun.prom.tmp" "\/opt\/prometheus\/etc\/node_exporter_textfiles\/promrun_root_dryrun.prom"/ }
 end
 

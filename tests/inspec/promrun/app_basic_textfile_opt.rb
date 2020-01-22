@@ -15,7 +15,7 @@ describe file('/tmp/promrun_app_textfile_dir.prom') do
   it { should be_file }
   its('content') { should match /# HELP promrun_app_textfile_dir_starttime Start time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_app_textfile_dir_starttime gauge/ }
-  its('content') { should match /promrun_app_textfile_dir_starttime\{user="app",promrun="starttime"\} [0-9]+/ }
+  its('content') { should match /promrun_app_textfile_dir_starttime\{user="app",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('content') { should match /# HELP promrun_app_textfile_dir_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode./ }
   its('content') { should match /# TYPE promrun_app_textfile_dir_cpu_kernel_mode_seconds gauge/ }
   its('content') { should match /promrun_app_textfile_dir_cpu_kernel_mode_seconds\{user="app"\} 0.00/ }
@@ -79,9 +79,9 @@ describe file('/tmp/promrun_app_textfile_dir.prom') do
   its('content') { should match /# HELP promrun_app_textfile_dir_command Name and command-line arguments of the command being timed. See Label./ }
   its('content') { should match /# TYPE promrun_app_textfile_dir_command gauge/ }
   its('content') { should match /promrun_app_textfile_dir_command\{user="app",command="ls \/tmp"\} 1/ }
-  its('content') { should match /# HELP promrun_app_textfile_dir_endtime Start time in Unix time with microseconds./ }
+  its('content') { should match /# HELP promrun_app_textfile_dir_endtime End time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_app_textfile_dir_endtime gauge/ }
-  its('content') { should match /promrun_app_textfile_dir_endtime\{user="app",promrun="endtime"\} [0-9]+/ }
+  its('content') { should match /promrun_app_textfile_dir_endtime\{user="app",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('size') { should > 200 }
   it { should_not be_more_permissive_than('0664') }
   its('owner') { should eq 'app' }

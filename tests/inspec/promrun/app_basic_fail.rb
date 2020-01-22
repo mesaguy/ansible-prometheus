@@ -22,7 +22,7 @@ describe file('/etc/prometheus/node_exporter_textfiles/promrun_app_fail.prom') d
   it { should be_file }
   its('content') { should match /# HELP promrun_app_fail_starttime Start time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_app_fail_starttime gauge/ }
-  its('content') { should match /promrun_app_fail_starttime\{user="app",promrun="starttime"\} [0-9]+/ }
+  its('content') { should match /promrun_app_fail_starttime\{user="app",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('content') { should match /# HELP promrun_app_fail_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode./ }
   its('content') { should match /# TYPE promrun_app_fail_cpu_kernel_mode_seconds gauge/ }
   its('content') { should match /promrun_app_fail_cpu_kernel_mode_seconds\{user="app"\} 0.00/ }
@@ -86,9 +86,9 @@ describe file('/etc/prometheus/node_exporter_textfiles/promrun_app_fail.prom') d
   its('content') { should match /# HELP promrun_app_fail_command Name and command-line arguments of the command being timed. See Label./ }
   its('content') { should match /# TYPE promrun_app_fail_command gauge/ }
   its('content') { should match /promrun_app_fail_command\{user="app",command="ls \/no_such_file"\} 1/ }
-  its('content') { should match /# HELP promrun_app_fail_endtime Start time in Unix time with microseconds./ }
+  its('content') { should match /# HELP promrun_app_fail_endtime End time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_app_fail_endtime gauge/ }
-  its('content') { should match /promrun_app_fail_endtime\{user="app",promrun="endtime"\} [0-9]+/ }
+  its('content') { should match /promrun_app_fail_endtime\{user="app",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('size') { should > 200 }
   it { should_not be_more_permissive_than('0664') }
   its('owner') { should eq 'app' }

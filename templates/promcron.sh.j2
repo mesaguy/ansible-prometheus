@@ -163,7 +163,7 @@ if [[ ! $NAME =~ $RE_METRIC_NAME ]] ; then
     exit 2
 fi
 
-END_DATE=$(date +%s%3N)
+END_DATE=$(date +%s.%3N)
 DATA="# HELP ${NAME}_endtime Unix time in microseconds.
 # TYPE ${NAME}_endtime gauge
 ${NAME}_endtime{$LABELS,promcron=\"endtime\"} ${END_DATE}
