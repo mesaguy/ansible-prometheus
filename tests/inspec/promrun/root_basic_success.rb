@@ -245,6 +245,11 @@ describe file('/etc/prometheus/node_exporter_textfiles/promrun_root_basic.prom')
   its('owner') { should eq 'root' }
   its('group') { should eq 'root' }
 end
+describe command('wc -l /etc/prometheus/node_exporter_textfiles/promrun_root_basic.prom') do
+  its('exit_status') { should eq 0 }
+  its('stderr') { should eq '' }
+  its('stdout') { should match /^69 / }
+end
 
 # Remove prom file
 describe command('sudo rm -f /etc/prometheus/node_exporter_textfiles/promrun_root_basic.prom*') do
