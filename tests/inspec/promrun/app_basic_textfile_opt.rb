@@ -90,7 +90,7 @@ end
 describe command('wc -l /tmp/promrun_app_textfile_dir.prom') do
   its('exit_status') { should eq 0 }
   its('stderr') { should eq '' }
-  its('stdout') { should match /^69 / }
+  its('stdout') { should match /^70 / }
 end
 
 # Remove prom file

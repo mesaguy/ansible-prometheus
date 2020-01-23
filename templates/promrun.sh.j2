@@ -76,9 +76,13 @@ ${NAME}_endtime{$LABELS,promrun=\"endtime\"} $(date +%s.%3N)\n"
 }
 
 function start_time_text () {
+    # The trailing hash here Comments out the error line left by 'time'
+    # command if there is an error. node_exporter fails to parse the
+    # error line. For instance:
+    # Command exited with non-zero status 1
     printf "# HELP ${NAME}_starttime Start time in Unix time with microseconds.
 # TYPE ${NAME}_starttime gauge
-${NAME}_starttime{$LABELS,promrun=\"starttime\"} $(date +%s.%3N)\n"
+${NAME}_starttime{$LABELS,promrun=\"starttime\"} $(date +%s.%3N)\n#"
 }
 
 # read the option and store in the variable, $option
@@ -173,7 +177,10 @@ if [[ ! $NAME =~ $RE_METRIC_NAME ]] ; then
     exit 2
 fi
 
-TIME_FORMAT="# HELP ${NAME}_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode.
+# Start with a newline in case the command doesn't return a '0' and 'time'
+# adds an error line. See comment in the 'start_time_text' function
+TIME_FORMAT="
+# HELP ${NAME}_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode.
 # TYPE ${NAME}_cpu_kernel_mode_seconds gauge
 ${NAME}_cpu_kernel_mode_seconds{$LABELS} %S
 # HELP ${NAME}_elapsed_seconds Elapsed real time (in seconds).
@@ -241,11 +248,6 @@ if [ -z "$DRYRUN" ] ; then
     start_time_text > "${TEXTFILE_PATH}.tmp"
     $GNU_TIME_COMMAND --append --output="${TEXTFILE_PATH}.tmp" --format="$TIME_FORMAT" ${@:$OPTIND}
     EXIT=$?
-    if [ "$EXIT" -ne "0" ] ; then
-        # Delete error line left by 'time' command. For instance:
-        # Command exited with non-zero status 1
-        sed -i '/^Command.*/d' "${TEXTFILE_PATH}.tmp"
-    fi
     end_time_text >> "${TEXTFILE_PATH}.tmp"
     # Copy contents of temporary file to permanent path
     cp -fp "${TEXTFILE_PATH}.tmp" "$TEXTFILE_PATH"
@@ -257,6 +259,7 @@ else
     TIME_FORMAT=$(echo -e "$TIME_FORMAT" | sed 's/^/\[DRYRUN\] /g')
     $GNU_TIME_COMMAND --format="$TIME_FORMAT" ${@:$OPTIND}
     EXIT=$?
+    echo $EXIT > "${TEXTFILE_PATH}.tmp.exit"
     echo "[DRYRUN] cp -fp \"${TEXTFILE_PATH}.tmp\" \"$TEXTFILE_PATH\"" >&2
     end_time_text | sed 's/^/\[DRYRUN\] /g' >&2
 fi

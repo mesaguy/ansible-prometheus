@@ -97,10 +97,10 @@ end
 describe command('wc -l /etc/prometheus/node_exporter_textfiles/promrun_app_fail.prom') do
   its('exit_status') { should eq 0 }
   its('stderr') { should eq '' }
-  its('stdout') { should match /^69 / }
+  its('stdout') { should match /^71 / }
 end
 
 # Remove prom file
-describe command('sudo rm -f /etc/prometheus/node_exporter_textfiles/promrun_app_fail.prom*') do
-  its('exit_status') { should eq 0 }
-end
+#describe command('sudo rm -f /etc/prometheus/node_exporter_textfiles/promrun_app_fail.prom*') do
+#  its('exit_status') { should eq 0 }
+#end

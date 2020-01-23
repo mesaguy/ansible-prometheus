@@ -93,7 +93,7 @@ end
 describe command('wc -l /etc/prometheus/node_exporter_textfiles/promrun_root_advanced.prom') do
   its('exit_status') { should eq 0 }
   its('stderr') { should eq '' }
-  its('stdout') { should match /^69 / }
+  its('stdout') { should match /^70 / }
 end
 
 # Run command again, this time in verbose mode
@@ -252,7 +252,7 @@ end
 describe command('wc -l /etc/prometheus/node_exporter_textfiles/promrun_root_advanced_verbose.prom') do
   its('exit_status') { should eq 0 }
   its('stderr') { should eq '' }
-  its('stdout') { should match /^69 / }
+  its('stdout') { should match /^70 / }
 end
 
 # Remove prom file
