@@ -139,11 +139,19 @@ prometheus_script_yum: false
 prometheus_script_yum_commit: '354acdf76a8befc66bfba43df02e155221891e21'
 prometheus_script_yum_checksum: 'sha256:ec15318d3beeea5f4eeb4b50e2c7c4ec349f4bf978519056c811412a39dccee4'
 
-# Promcron script
+prometheus_mesaguy_scripts:
+ - promcron
+ - promrun
+ - sssd_check
+
+# sssd_check script
+prometheus_script_sssd_check: false
+
+# promcron script
 prometheus_script_promcron: false
 prometheus_script_promcron_link_dir: /usr/bin
 
-# Promit script
+# promit script
 prometheus_script_promrun: false
 prometheus_script_promrun_link_dir: /usr/bin
 

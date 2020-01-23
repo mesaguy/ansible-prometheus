@@ -1,0 +1,10 @@
+---
+# Installs sssd_check script for monitoring SSSD
+- name: Install sssd_check script to {{ prometheus_script_directory }}/sssd_check
+  become: true
+  copy:
+    dest: '{{ prometheus_script_directory }}/sssd_check'
+    src: ../scripts/sssd_check.sh
+    owner: root
+    group: root
+    mode: '0555'
