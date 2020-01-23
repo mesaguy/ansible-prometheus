@@ -241,6 +241,11 @@ if [ -z "$DRYRUN" ] ; then
     start_time_text > "${TEXTFILE_PATH}.tmp"
     $GNU_TIME_COMMAND --append --output="${TEXTFILE_PATH}.tmp" --format="$TIME_FORMAT" ${@:$OPTIND}
     EXIT=$?
+    if [ "$EXIT" -ne "0" ] ; then
+        # Delete error line left by 'time' command. For instance:
+        # Command exited with non-zero status 1
+        sed -i '/^Command.*/d' "${TEXTFILE_PATH}.tmp"
+    fi
     end_time_text >> "${TEXTFILE_PATH}.tmp"
     # Copy contents of temporary file to permanent path
     cp -fp "${TEXTFILE_PATH}.tmp" "$TEXTFILE_PATH"
