@@ -2,7 +2,7 @@
 
 [promrun](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promrun.sh) is a bash script wrapper around the GNU 'time' command useful for monitoring the timing, success, and resource utilization of commands
 
-[promrun](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promrun.sh) tests are located [here](https://github.com/mesaguy/ansible-prometheus/tree/master/tests/inspec/promrun)
+[promrun](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promrun.sh) pre-release validation tests are located [here](https://github.com/mesaguy/ansible-prometheus/tree/master/tests/inspec/promrun)
 
 [promrun](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promrun.sh) leverages the [textfile directory feature of node_exporter](https://github.com/prometheus/node_exporter#textfile-collector)
 
