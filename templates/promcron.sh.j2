@@ -3,11 +3,10 @@
 # The "promcron" script monitors the return code of an exited command
 
 # Author: MesaGuy (https://github.com/mesaguy)
+# Documentation: https://github.com/mesaguy/ansible-prometheus/blob/master/docs/promcron.md
 # Source: https://github.com/mesaguy/ansible-prometheus/tree/master/scripts/promcron.sh
-# Ansible template: https://github.com/mesaguy/ansible-prometheus/tree/master/templates/promcron.sh.j2
-# Tests: https://github.com/mesaguy/ansible-prometheus/tree/master/tests/inspec/promcron
 # License: MIT
-# Version: 0.2 (2020-01-20)
+# Version: 1.0 (2020-01-23)
 
 {% if prometheus_promcron_ansible_managed | default(false) %}
 TEXTFILE_DIRECTORY="{{ prometheus_node_exporter_textfiles_directory }}"
