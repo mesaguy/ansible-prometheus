@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - promcron script
 - promrun script
+- sssd_check script
 
 ### Changed
 
@@ -18,6 +19,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgrade yum.sh script to commit: '354acdf76a8befc66bfba43df02e155221891e21'
 - Upgrade bind_exporter_prometheus_community from commit '103ead78209e9971994fc89ccda69cff555807b9' to v0.3.0
 - Download jmx_exporter via HTTPS instead of HTTP
+
+### Fixed
+
+  - Formatting of the CHANGELOG file
 
 ## [0.9.4] - 2020-01-07
 
