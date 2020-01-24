@@ -3,18 +3,15 @@
 # "sssd_check" leverages the sssctl interface to determine SSSD's health
 
 # "sssd_check" is a wrapper around the 'sssctl' command and SSSD's ifp
-# interface. The SSSD configuration file and status is checked and detailed
+# interface. The SSSD configuration file and status is checked and detailed.
+# Script supports the use of multiple authentication backends (ie: Multiple
+# domains, etc)
 
 # Author: MesaGuy (https://github.com/mesaguy)
-# Source: https://github.com/mesaguy/ansible-prometheus/tree/master/scripts/sssd_check.sh
+# Documentation: https://github.com/mesaguy/ansible-prometheus/blob/master/docs/promcron.md
+# Source: https://github.com/mesaguy/ansible-prometheus/blockmaster/scripts/sssd_check.sh
 # License: MIT
-# Version: 0.2 (2020-01-22)
-
-# Requirements:
-# - The 'sssctl' command must be installed
-# - On SSSD 2.x ifp (SSSD InfoPipe responder) must be an enabled service in
-#    sssd.conf, see man sssd-ifp (5).
-# - On EL, install: sssd-dbus sssd-tools
+# Version: 0.3 (2020-01-23)
 
 PROBLEM_COUNT=0
 
@@ -24,7 +21,16 @@ if [ -z "$USER" ] ; then
 fi
 
 function usage () {
-    echo "USAGE"
+    echo "Usage: $(basename $0) [ -hv ]"
+    echo
+    echo " Options:"
+    echo "    -h                         Print usage"
+    echo "    -v                         Enable verbose mode (for debugging only)"
+    echo
+    echo "Output of non-verbose mode should be written to the node_exporter"
+    echo "textfiles directory. Example cron job:"
+    echo "    */5 * * * * /opt/prometheus/scripts/sssd_check.sh | sponge /etc/prometheus/node_exporter_textfiles/sssd_check.prom"
+    echo
     exit 1
 }
 
