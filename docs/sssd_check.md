@@ -1,8 +1,8 @@
 # sssd_check
 
-[sssd_check](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/sssd_check) is a bash script wrapper around the 'sssctl' command and SSSD's ifp interface for monitoring the status of SSSD
+[sssd_check](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/sssd_check.sh) is a bash script wrapper around the 'sssctl' command and SSSD's ifp interface for monitoring the status of SSSD
 
-[sssd_check](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/sssd_check) leverages the [textfile directory feature of node_exporter](https://github.com/prometheus/node_exporter#textfile-collector)
+[sssd_check](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/sssd_check.sh) leverages the [textfile directory feature of node_exporter](https://github.com/prometheus/node_exporter#textfile-collector)
 
 # Requirements
 This script leverages requires a working node_exporter instance and must write data into the node_exporter's textfile directory
