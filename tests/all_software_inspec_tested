@@ -9,7 +9,7 @@ function check_for_file {
     fi
 }
 
-for f in $(ls tasks | grep -Ev '^(_|main.yml$)' | sed 's/\.yml$//')
+for f in $(ls tasks | grep -Ev '^(_|main.yml$|promcron|promrun|sssd_check)' | sed 's/\.yml$//')
 do
     check_for_file "tests/inspec/default/${f}.rb"
 done
