@@ -1,13 +1,15 @@
 # Promcron
 
-[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.sh.j2) is a bash script for monitoring cron job success and last run time
+[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promcron.sh) is a bash script for monitoring cron job success and last run time
 
-[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.sh.j2) tests are located [here](https://github.com/mesaguy/ansible-prometheus/tree/master/tests/inspec/promcron)
+[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promcron.sh) tests are located [here](https://github.com/mesaguy/ansible-prometheus/tree/master/tests/inspec/promcron)
 
-[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.sh.j2) leverages the [textfile directory feature of node_exporter](https://github.com/prometheus/node_exporter#textfile-collector)
+[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promcron.sh) leverages the [textfile directory feature of node_exporter](https://github.com/prometheus/node_exporter#textfile-collector)
 
 # Requirements
-This script leverages requires a working node_exporter instance and must write data into the node_exporter's textfile directory
+- This script leverages requires a working node_exporter instance and must write data into the node_exporter's textfile directory
+- The defined "TEXTFILE_DIRECTORY" parameter should match your node_exporter textfile directory path
+- A fully functional 'sed' (not busybox, etc)
 
 # Features
 - Script automatically leverages sponge if present. If sponge is not present, script writes to a .tmp file in the textfile directory, then copies the resulting .tmp file and overwrites the .prom file. This ensures that the .prom file is always complete when prometheus polls the node_exporter instance.
@@ -17,6 +19,8 @@ This script leverages requires a working node_exporter instance and must write d
 - Script can add a description label to describe the cron job
 - Script can take custom labels
 - Script prefixes each .prom file with ```cron_```
+- Exits returning the 'value' given to it. This is useful is additional shell logic follows running promcron.
+- Leverages 'sponge' if present
 
 # Usage
 
@@ -60,7 +64,7 @@ The following node_exporter textfile .prom file is created:
 
     # HELP cron_test_endtime Unix time in microseconds.
     # TYPE cron_test_endtime gauge
-    cron_test_endtime{user="root",description="Copy bank files",promcron="endtime"} 1579669082027
+    cron_test_endtime{user="root",description="Copy bank files",promcron="endtime"} 1579669082.027
     # HELP cron_test Process return code.
     # TYPE cron_test gauge
     cron_test{user="root",description="Copy bank files",promcron="value"} 0
@@ -76,7 +80,7 @@ The resulting .prom file is created:
 
     # HELP cron_daily_delete_app_tmp_endtime Unix time in microseconds.
     # TYPE cron_daily_delete_app_tmp_endtime gauge
-    cron_daily_delete_app_tmp_endtime{environment="production",application="tomcat",user="root",description="Daily job to delete app tmp files older than 1 day",promcron="endtime"} 1579669484929
+    cron_daily_delete_app_tmp_endtime{environment="production",application="tomcat",user="root",description="Daily job to delete app tmp files older than 1 day",promcron="endtime"} 1579669484.929
     # HELP cron_daily_delete_app_tmp Process return code.
     # TYPE cron_daily_delete_app_tmp gauge
     cron_daily_delete_app_tmp{environment="production",application="tomcat",user="root",description="Daily job to delete app tmp files older than 1 day",promcron="value"} 0
@@ -100,9 +104,9 @@ Root can see what will occur by running:
 
 # Installation
 
-[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.sh.j2) can be downloaded and used as is. The TEXTFILE_DIRECTORY variable near the top may need to be changed to match your environment.
+[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promcron.sh) can be downloaded and used as is. The TEXTFILE_DIRECTORY variable near the top may need to be changed to match your environment.
 
-[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/templates/promcron.sh.j2) can be installed via the mesaguy/ansible-prometheus module using the following parameter:
+[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promcron.sh) can be installed via the [mesaguy/prometheus](https://galaxy.ansible.com/mesaguy/prometheus) Ansible role using the following parameter:
 
     prometheus_script_promcron: true
 
@@ -112,6 +116,44 @@ The installation location defaults to /usr/local/bin, but the destination can be
 
 # Alerting
 
-All Prometheus monitored cron jobs can be seen by leveraging the following query:
+All Prometheus monitored cron jobs can be seen by leveraging one of the following queries:
+
+    {promcron=~"value"}
+
+or
 
     {promcron=~"endtime"}
+
+An alert for the cronjob ```@weekly /sbin/mdadm --monitor --scan -1 --test; promcron -d "Test and scan mdadm weekly" mdadm_weekly_test $?``` could be configured as follows:
+
+    - alert: mdadm weekly test is not running
+      expr: (time() - cron_mdadm_weekly_test_endtime) / 86400 > 7
+      for: 1m
+      labels:
+        severity: warning
+      annotations:
+        description: mdadm weekly test has not run in over {{ $value }} days.
+        summary: mdadm weekly test is not running
+
+The following sends an alerts if *any* cronjob doesn't return '0':
+
+    - alert: Failing cron job
+      expr: |
+        {__name__=~'.*', promcron='value'} != 0
+      for: 1m
+      labels:
+        severity: warning
+      annotations:
+        description: Cron of {{ $labels.user }} on {{ $labels.instance }} is failing.
+        summary: Cron job is failing
+
+The following sends and alert if the 'backup' cron job is failing, example assumes 'backup' cronjob has a description configued (-d):
+
+    - alert: Backup cron job is failing
+      expr: cron_backup != 0
+      for: 1m
+      labels:
+        severity: warning
+      annotations:
+        description: Backup of "{{ $labels.description }}" of {{ $labels.user }} on {{ $labels.instance }} is failing.
+        summary: Backup is failing
