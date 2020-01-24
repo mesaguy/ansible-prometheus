@@ -107,11 +107,11 @@ Numerous node_exporter textfiles scripts are supported and can be installed via 
 |[ntpd_metrics.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ntpd_metrics.py)           | node_exporter examples     | prometheus_script_ntpd_metrics: true      |
 |[nvme_metrics.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/nvme_metrics.sh)           | node_exporter examples     | prometheus_script_nvme_metrics: true      |
 |[pacman.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/pacman.sh)                       | node_exporter examples     | prometheus_script_pacman: true            |
-|[promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promcron.sh)                                                 | mesaguy/ansible-prometheus | prometheus_script_promcron: true          |
-|[promrun](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promrun.sh)                                                   | mesaguy/ansible-prometheus | prometheus_script_promrun: true           |
+|[promcron.sh](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promcron.sh)                                              | mesaguy/ansible-prometheus | prometheus_script_promcron: true          |
+|[promrun.sh](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promrun.sh)                                                | mesaguy/ansible-prometheus | prometheus_script_promrun: true           |
 |[smartmon.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.py)                   | node_exporter examples     | prometheus_script_smartmon_python: true   |
 |[smartmon.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.sh)                   | node_exporter examples     | prometheus_script_smartmon: true          |
-|[sssd_check](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/sssd_check.sh)                                             | mesaguy/ansible-prometheus | prometheus_script_sssd_check: true        |
+|[sssd_check.sh](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/sssd_check.sh)                                          | mesaguy/ansible-prometheus | prometheus_script_sssd_check: true        |
 |[storcli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/storcli.py)                     | node_exporter examples     | prometheus_script_storcli: true           |
 |[tw_cli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/tw_cli.py)                       | node_exporter examples     | prometheus_script_tw_cli: true            |
 |[yum.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/yum.sh)                             | node_exporter examples     | prometheus_script_yum: true               |
@@ -176,9 +176,9 @@ prometheus_components:
 
 ### Mesaguy script documentation
 
-- [promcron](promcron.md) for monitoring the execution of cron jobs
-- [promrun](promrun.md) for monitoring the execution of commands
-- [sssd_check](sssd_check.md) for monitoring the status of SSSD
+- [promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/docs/promcron.md) for monitoring the execution of cron jobs
+- [promrun](https://github.com/mesaguy/ansible-prometheus/blob/master/docs/promrun.md) for monitoring the execution of commands
+- [sssd_check](https://github.com/mesaguy/ansible-prometheus/blob/master/docs/sssd_check.md) for monitoring the status of SSSD
 
 ### Common variables
 
