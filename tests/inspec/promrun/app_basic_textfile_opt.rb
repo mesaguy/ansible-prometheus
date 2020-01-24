@@ -87,6 +87,11 @@ describe file('/tmp/promrun_app_textfile_dir.prom') do
   its('owner') { should eq 'app' }
   its('group') { should eq 'app' }
 end
+describe command('wc -l /tmp/promrun_app_textfile_dir.prom') do
+  its('exit_status') { should eq 0 }
+  its('stderr') { should eq '' }
+  its('stdout') { should match /^69 / }
+end
 
 # Remove prom file
 describe command('sudo rm -f /tmp/promrun_app_textfile_dir.prom*') do

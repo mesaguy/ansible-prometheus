@@ -90,6 +90,11 @@ describe file('/etc/prometheus/node_exporter_textfiles/promrun_root_advanced.pro
   its('owner') { should eq 'root' }
   its('group') { should eq 'root' }
 end
+describe command('wc -l /etc/prometheus/node_exporter_textfiles/promrun_root_advanced.prom') do
+  its('exit_status') { should eq 0 }
+  its('stderr') { should eq '' }
+  its('stdout') { should match /^69 / }
+end
 
 # Run command again, this time in verbose mode
 describe command('sudo promrun -v -l org=Test -d "RUN OF echo COMMAND" -l env=test -n root_advanced_verbose echo -n 321') do
@@ -243,6 +248,11 @@ describe file('/etc/prometheus/node_exporter_textfiles/promrun_root_advanced_ver
   it { should_not be_more_permissive_than('0664') }
   its('owner') { should eq 'root' }
   its('group') { should eq 'root' }
+end
+describe command('wc -l /etc/prometheus/node_exporter_textfiles/promrun_root_advanced_verbose.prom') do
+  its('exit_status') { should eq 0 }
+  its('stderr') { should eq '' }
+  its('stdout') { should match /^69 / }
 end
 
 # Remove prom file

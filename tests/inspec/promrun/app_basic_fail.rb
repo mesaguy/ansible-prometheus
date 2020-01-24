@@ -94,6 +94,11 @@ describe file('/etc/prometheus/node_exporter_textfiles/promrun_app_fail.prom') d
   its('owner') { should eq 'app' }
   its('group') { should eq 'root' }
 end
+describe command('wc -l /etc/prometheus/node_exporter_textfiles/promrun_app_fail.prom') do
+  its('exit_status') { should eq 0 }
+  its('stderr') { should eq '' }
+  its('stdout') { should match /^69 / }
+end
 
 # Remove prom file
 describe command('sudo rm -f /etc/prometheus/node_exporter_textfiles/promrun_app_fail.prom*') do
