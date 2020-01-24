@@ -3,11 +3,10 @@
 # The "promcron" script monitors the return code of an exited command
 
 # Author: MesaGuy (https://github.com/mesaguy)
+# Documentation: https://github.com/mesaguy/ansible-prometheus/blob/master/docs/promcron.md
 # Source: https://github.com/mesaguy/ansible-prometheus/tree/master/scripts/promcron.sh
-# Ansible template: https://github.com/mesaguy/ansible-prometheus/tree/master/templates/promcron.sh.j2
-# Tests: https://github.com/mesaguy/ansible-prometheus/tree/master/tests/inspec/promcron
 # License: MIT
-# Version: 0.2 (2020-01-20)
+# Version: 1.0 (2020-01-23)
 
 TEXTFILE_DIRECTORY="/etc/prometheus/node_exporter_textfiles"
 if which sponge > /dev/null 2>&1 ; then
@@ -158,7 +157,7 @@ if [[ ! $NAME =~ $RE_METRIC_NAME ]] ; then
     exit 2
 fi
 
-END_DATE=$(date +%s%3N)
+END_DATE=$(date +%s.%3N)
 DATA="# HELP ${NAME}_endtime Unix time in microseconds.
 # TYPE ${NAME}_endtime gauge
 ${NAME}_endtime{$LABELS,promcron=\"endtime\"} ${END_DATE}
