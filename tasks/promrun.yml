@@ -11,10 +11,6 @@
 - name: Include task to check if "time" is installed and in PATH
   include_tasks: _check_time_installed.yml
 
-- name: Set promrun facts
-  set_fact:
-    prometheus_node_exporter_textfiles_directory: '{{ prometheus_node_exporter_textfiles_dir | default(prometheus_etc_dir + "/node_exporter_textfiles") }}'
-
 - name: Install promrun script to {{ prometheus_script_directory }}/promrun
   become: true
   template:

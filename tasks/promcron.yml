@@ -4,10 +4,6 @@
 - name: Include task to install and locate sponge
   include_tasks: _install_sponge.yml
 
-- name: Set promcron facts
-  set_fact:
-    prometheus_node_exporter_textfiles_directory: '{{ prometheus_node_exporter_textfiles_dir | default(prometheus_etc_dir + "/node_exporter_textfiles") }}'
-
 - name: Install promcron script to {{ prometheus_script_directory }}/promcron
   become: true
   template:
