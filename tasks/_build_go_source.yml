@@ -52,6 +52,10 @@
   become: true
   # become_user: '{{ prometheus_user }}'
   shell: '{{ prometheus_software_makefile_make_command }}'
+  register: prometheus_software_build
+  retries: 5
+  delay: 10
+  until: prometheus_software_build is succeeded
   args:
     chdir: '{{ prometheus_software_src_dir }}'
     creates: '{{ prometheus_software_name }}'
