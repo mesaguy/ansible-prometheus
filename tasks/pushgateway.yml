@@ -31,6 +31,16 @@
     prometheus_software_src_dir_suffix: '/src/github.com/prometheus/{{ prometheus_software_name }}'
     prometheus_software_src_url: 'https://github.com/prometheus/{{ prometheus_software_name }}'
 
+- name: 'Create {{ prometheus_software_name_version }} persistence storage file directory'
+  become: true
+  file:
+    path: '{{ prometheus_pushgateway_persistence_dir }}'
+    state: directory
+    owner: '{{ prometheus_user }}'
+    group: '{{ prometheus_group }}'
+    mode: '0750'
+  when: prometheus_pushgateway_persistence_dir is defined
+
 - name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml
 

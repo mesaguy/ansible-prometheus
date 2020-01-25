@@ -190,7 +190,6 @@ All daemon installer tasks have a 'runas' parameter to specify which user the da
 
     prometheus_blackbox_exporter_runas: test
 
-
 ### Global variables
 
 Link the Prometheus etc directory to '/etc/prometheus'. The Prometheus etc directory defaults to '/opt/prometheus/etc':
@@ -477,6 +476,12 @@ To enable [alertmanager](https://github.com/prometheus/pushgateway) include role
 An array of additional flags to pass to the pushgateway daemon:
 
     prometheus_pushgateway_extra_opts: []
+
+To configure persistence storage configure the following variables with a path for the persistence file location:
+
+    prometheus_pushgateway_extra_opts:
+     - '--persistence.file=/opt/prometheus/var/pushgateway/pushgateway.persistence'
+    prometheus_pushgateway_persistence_dir: /opt/prometheus/var/pushgateway
 
 The version of Pushgateway to install. The source version defines the version as specified in version control:
 
