@@ -3,6 +3,7 @@
   become: true
   # Can fail in cases like EL without EPEL enabled
   ignore_errors: true
+  register: prometheus_sponge_installation
   package:
     name: '{{ prometheus_sponge_packages }}'
     state: present
@@ -10,17 +11,5 @@
     - prometheus_sponge_packages is defined
     - prometheus_install_sponge | bool
 
-- name: Check if "sponge" is installed and in PATH
-  command: which sponge
-  changed_when: false
-  ignore_errors: true
-  register: prometheus_sponge_installed
-  when:
-    - prometheus_sponge_installed is undefined
-    - prometheus_sponge_packages is defined
-
-- name: Set "sponge" installed fact
-  set_fact:
-    prometheus_sponge_is_installed: '{% if prometheus_sponge_installed is defined and "rc" in prometheus_sponge_installed and prometheus_sponge_installed.rc == 0 %}true{% else %}false{% endif %}'
-  when:
-    - prometheus_sponge_is_installed is undefined
+- name: Check for sponge in PATH
+  include_tasks: _check_for_sponge.yml

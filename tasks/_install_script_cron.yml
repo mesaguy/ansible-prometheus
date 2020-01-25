@@ -1,0 +1,31 @@
+- name: Check for sponge in PATH
+  include_tasks: _check_for_sponge.yml
+  when: prometheus_sponge_is_installed is undefined
+
+- name: Include task to create textfiles directory
+  include_tasks: _create_textfiles_directory.yml
+  when: prometheus_create_testfile_directory is undefined
+
+- name: Set {{ prometheus_script_name }} facts
+  set_fact:
+    prometheus_script_cron_file: 'prometheus_script_{{ prometheus_script_name }}'
+  when: prometheus_script_use_cron_files
+
+- name: Setup PATH variable for {{ prometheus_script_name }} cronjob
+  become: true
+  cron:
+    cron_file: '{{ prometheus_script_cron_file }}'
+    user: '{{ prometheus_script_cron_user | default("root") }}'
+    name: PATH
+    env: true
+    job: '{{ prometheus_script_env_path | join(":") }}'
+  when: prometheus_script_cron_file is defined and prometheus_script_cron_file | bool
+
+- name: Setup {{ prometheus_script_name }} cronjob
+  become: true
+  cron:
+    name: 'Run Prometheus script {{ prometheus_script_name }}'
+    cron_file: '{{ prometheus_script_cron_file | default(omit) }}'
+    user: '{{ prometheus_script_cron_user | default("root") }}'
+    minute: '{{ prometheus_script_cron_minute | default("*") }}'
+    job: '{{ prometheus_script_path }} {% if prometheus_sponge_is_installed | bool %}| sponge{% else %}>{% endif %} {{ prometheus_node_exporter_textfiles_directory }}/{{ prometheus_script_name }}.prom'

@@ -34,6 +34,13 @@
     prometheus_additional_tgroup_labels: {}
     # Boolean that specifies if software is a Prometheus exporter
     prometheus_exporter: false
+    # User to install scripts for (defaults to root unless overridden for each
+    # script
+    prometheus_script_cron_user: root
+    # Reset cron timing defaults
+    prometheus_script_cron_minute: '*'
+    # Name of cron file to use for script installation
+    prometheus_script_cron_file: '{{ omit }}'
     prometheus_software_binary: ''
     prometheus_software_binary_name: ''
     # Hash of additional directories to copy from build's source directory
