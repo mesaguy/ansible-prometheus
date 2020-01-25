@@ -13,6 +13,18 @@ This script leverages requires a working node_exporter instance and must write d
 - Distribution specific:
   - On EL, install: sssd-dbus sssd-tools
 - A fully functional 'sed' (not busybox, etc)
+- Systems with SELinux in enforcing mode will need to add a policy like the following:
+
+    module sssd_check 1.0;
+
+    require {
+            type sssd_t;
+            type system_cronjob_t;
+            class dbus send_msg;
+    }
+
+    #============= sssd_t ==============
+    allow sssd_t system_cronjob_t:dbus send_msg;
 
 # Features
 

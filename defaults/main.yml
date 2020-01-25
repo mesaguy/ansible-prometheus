@@ -56,6 +56,7 @@ prometheus_go_dir: '{{ prometheus_root_dir }}/go'
 prometheus_log_dir: '/var/log/prometheus'
 prometheus_tmp_dir: '{{ prometheus_root_dir }}/tmp'
 prometheus_var_dir: '{{ prometheus_root_dir }}/var'
+prometheus_node_exporter_textfiles_directory: '{{ prometheus_node_exporter_textfiles_dir | default(prometheus_etc_dir + "/node_exporter_textfiles") }}'
 
 # Local Prometheus source directory
 prometheus_software_local_src_dir: '{{ lookup("env", "HOME") }}/prometheus_src'
@@ -143,6 +144,14 @@ prometheus_mesaguy_scripts:
  - promcron
  - promrun
  - sssd_check
+
+prometheus_script_use_cron_files: false
+prometheus_script_cron_user: root
+prometheus_script_env_path:
+ - /usr/bin
+ - /usr/sbin
+ - /bin
+ - /sbin
 
 # sssd_check script
 prometheus_script_sssd_check: false
