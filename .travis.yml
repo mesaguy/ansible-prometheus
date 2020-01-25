@@ -34,6 +34,11 @@ env:
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-centos-77 KITCHEN_PLAYBOOK=promrun KITCHEN_INSPEC_SUITE=promrun
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-centos-81 KITCHEN_PLAYBOOK=promrun KITCHEN_INSPEC_SUITE=promrun
 
+before_install:
+  # To pacify CentOS 8.x when running tasks that are delegated to localhost
+  - sudo mkdir -p /usr/libexec
+  - sudo ln -s /usr/bin/python /usr/libexec/platform-python
+
 install:
   # Install gems
   - bundle install

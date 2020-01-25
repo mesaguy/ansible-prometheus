@@ -1,3 +1,4 @@
+---
 - name: Check for sponge in PATH
   include_tasks: _check_for_sponge.yml
   when: prometheus_sponge_is_installed is undefined
