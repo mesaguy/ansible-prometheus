@@ -10,6 +10,10 @@ prometheus_install_sponge: false
 prometheus_root_dir: '/opt/prometheus'
 prometheus_test_service_port: true
 
+# Optionally purge old backups of prometheus configuration files
+prometheus_purge_etc_backups: false
+prometheus_etc_backup_max_age: 31d
+
 # If yes, perform a connection test from the server to the client
 prometheus_software_server_side_connect_test: false
 
@@ -57,13 +61,15 @@ prometheus_log_dir: '/var/log/prometheus'
 prometheus_tmp_dir: '{{ prometheus_root_dir }}/tmp'
 prometheus_var_dir: '{{ prometheus_root_dir }}/var'
 prometheus_node_exporter_textfiles_directory: '{{ prometheus_node_exporter_textfiles_dir | default(prometheus_etc_dir + "/node_exporter_textfiles") }}'
+prometheus_node_exporter_textfile_purge: false
+prometheus_node_exporter_textfile_max_age: 14d
 
 # Local Prometheus source directory
 prometheus_software_local_src_dir: '{{ lookup("env", "HOME") }}/prometheus_src'
 
 # Application directories
 prometheus_tgroup_dir: '{{ prometheus_etc_dir }}/tgroups'
-prometheus_tgroup_dir_purge_orphans: false
+prometheus_tgroup_dir_prune_orphans: false
 prometheus_tgroup_owner: '{{ prometheus_user }}'
 prometheus_tgroup_group: '{{ prometheus_group }}'
 prometheus_tgroup_mode: '0775'

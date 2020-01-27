@@ -5,7 +5,9 @@
 
 - name: Include task to create textfiles directory
   include_tasks: _create_textfiles_directory.yml
-  when: prometheus_create_testfile_directory is undefined
+  # prometheus_create_textfile_directory is defined as last step, this
+  # variable ensures the job isn't run twice
+  when: prometheus_create_textfile_directory is undefined
 
 - name: Set {{ prometheus_script_name }} facts
   set_fact:

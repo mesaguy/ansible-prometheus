@@ -37,7 +37,19 @@
 
 - name: Include task to create textfiles directory
   include_tasks: _create_textfiles_directory.yml
-  when: prometheus_create_testfile_directory is undefined
+  # prometheus_create_textfile_directory is defined as last step, this
+  # variable ensures the job isn't run twice
+  when: prometheus_create_textfile_directory is undefined
+
+- name: Include task purge long untouched textfiles
+  include_tasks: _purge_files.yml
+  vars:
+    prometheus_purge_files_age: '{{ prometheus_node_exporter_textfile_max_age }}'
+    prometheus_purge_files_patterns:
+      - "*.prom"
+      - "*.prom.tmp"
+    prometheus_purge_files_path: '{{ prometheus_node_exporter_textfiles_directory }}'
+  when: prometheus_node_exporter_textfile_purge
 
 - name: Set node_exporter script facts
   set_fact:

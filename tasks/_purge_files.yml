@@ -1,0 +1,19 @@
+---
+- name: Find {{ prometheus_purge_files_path }} files untouched for more than {{ prometheus_purge_files_age }}
+  find:
+    paths: '{{ prometheus_purge_files_path }}'
+    age: '{{ prometheus_purge_files_age }}'
+    patterns: '{{ prometheus_purge_files_patterns }}'
+    file_type: file
+  register: prometheus_purge_files
+
+- name : Purge {{ prometheus_purge_files_path }} files untouched in over {{ prometheus_purge_files_age }}
+  become: true
+  file:
+    path: '{{ prometheus_purge_file.path }}'
+    state: absent
+  loop_control:
+    loop_var: prometheus_purge_file
+  with_items: '{{ prometheus_purge_files.files }}'
+  when:
+    - prometheus_purge_files.files | default([]) | length > 0

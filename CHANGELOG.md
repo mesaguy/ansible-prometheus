@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Ability to purge old 'etc' backups and node_exporter's textfile directory .prom files
+
+### Changed
+
+- Ensure all references to Prometheus's 'etc' directory are to /opt/prometheus/etc instead of /etc/prometheus
+
 ## [0.10.0] - 2020-01-25
 
 ### Added
