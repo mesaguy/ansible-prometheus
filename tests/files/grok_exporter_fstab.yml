@@ -6,7 +6,7 @@ input:
     path: /var/log/test.log
     readall: true
 grok:
-    patterns_dir: /etc/prometheus/grok_patterns
+    patterns_dir: /opt/prometheus/etc/grok_patterns
 metrics:
     - type: counter
       name: grok_example_lines_total

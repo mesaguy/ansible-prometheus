@@ -1,5 +1,5 @@
 # Cron prom file does not exist
-describe file('/etc/prometheus/node_exporter_textfiles/cron_root_dryrun.prom') do
+describe file('/opt/prometheus/etc/node_exporter_textfiles/cron_root_dryrun.prom') do
   it { should_not exist }
 end
 
@@ -16,11 +16,11 @@ describe command('ls > /dev/null ; sudo promcron -D root_dryrun $?') do
 end
 
 # Cron prom file does not exist
-describe file('/etc/prometheus/node_exporter_textfiles/cron_root_dryrun.prom') do
+describe file('/opt/prometheus/etc/node_exporter_textfiles/cron_root_dryrun.prom') do
   it { should_not exist }
 end
 
 # Remove prom file (so other tests pass even if this fails)
-describe command('sudo rm -f /etc/prometheus/node_exporter_textfiles/cron_root_dryrun.prom*') do
+describe command('sudo rm -f /opt/prometheus/etc/node_exporter_textfiles/cron_root_dryrun.prom*') do
   its('exit_status') { should eq 0 }
 end

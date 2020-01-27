@@ -10,13 +10,13 @@
   - name: Create dummy client file for purge to delete
     become: true
     copy:
-      dest: /etc/prometheus/tgroups/archlinux-delete_me.yml
+      dest: /opt/prometheus/etc/tgroups/archlinux-delete_me.yml
       content: 'delete me\n'
 
   - name: Create dummy server file for purge to delete
     become: true
     copy:
-      dest: /etc/prometheus/tgroups-server/test-delete_me.yml
+      dest: /opt/prometheus/etc/tgroups-server/test-delete_me.yml
       content: 'delete me\n'
 
   - name: Include install tasks

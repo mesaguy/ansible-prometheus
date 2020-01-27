@@ -1,5 +1,5 @@
 # prom file does not exist
-describe file('/etc/prometheus/node_exporter_textfiles/promrun_root_basic.prom') do
+describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_root_basic.prom') do
   it { should_not exist }
 end
 
@@ -11,7 +11,7 @@ describe command('sudo promrun -n root_basic echo -n 1') do
 end
 
 # Resulting prom file is as expected
-describe file('/etc/prometheus/node_exporter_textfiles/promrun_root_basic.prom') do
+describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_root_basic.prom') do
   it { should be_file }
   its('content') { should match /# HELP promrun_root_basic_starttime Start time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_root_basic_starttime gauge/ }
@@ -87,7 +87,7 @@ describe file('/etc/prometheus/node_exporter_textfiles/promrun_root_basic.prom')
   its('owner') { should eq 'root' }
   its('group') { should eq 'root' }
 end
-describe command('wc -l /etc/prometheus/node_exporter_textfiles/promrun_root_basic.prom') do
+describe command('wc -l /opt/prometheus/etc/node_exporter_textfiles/promrun_root_basic.prom') do
   its('exit_status') { should eq 0 }
   its('stderr') { should eq '' }
   its('stdout') { should match /^70 / }
@@ -169,7 +169,7 @@ describe command('sudo promrun -v -n root_basic echo -n 1') do
 end
 
 # Resulting prom file is as expected
-describe file('/etc/prometheus/node_exporter_textfiles/promrun_root_basic.prom') do
+describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_root_basic.prom') do
   it { should be_file }
   its('content') { should match /# HELP promrun_root_basic_starttime Start time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_root_basic_starttime gauge/ }
@@ -245,13 +245,13 @@ describe file('/etc/prometheus/node_exporter_textfiles/promrun_root_basic.prom')
   its('owner') { should eq 'root' }
   its('group') { should eq 'root' }
 end
-describe command('wc -l /etc/prometheus/node_exporter_textfiles/promrun_root_basic.prom') do
+describe command('wc -l /opt/prometheus/etc/node_exporter_textfiles/promrun_root_basic.prom') do
   its('exit_status') { should eq 0 }
   its('stderr') { should eq '' }
   its('stdout') { should match /^70 / }
 end
 
 # Remove prom file
-describe command('sudo rm -f /etc/prometheus/node_exporter_textfiles/promrun_root_basic.prom*') do
+describe command('sudo rm -f /opt/prometheus/etc/node_exporter_textfiles/promrun_root_basic.prom*') do
   its('exit_status') { should eq 0 }
 end

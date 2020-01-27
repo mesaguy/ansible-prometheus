@@ -1,5 +1,5 @@
 # Cron prom file does not exist
-describe file('/etc/prometheus/node_exporter_textfiles/cron_app_basic.prom') do
+describe file('/opt/prometheus/etc/node_exporter_textfiles/cron_app_basic.prom') do
   it { should_not exist }
 end
 
@@ -56,7 +56,7 @@ describe command('ls > /dev/null ; sudo -u app promcron app_basic $?') do
 end
 
 ## Resulting prom file is as expected
-describe file('/etc/prometheus/node_exporter_textfiles/cron_app_basic.prom') do
+describe file('/opt/prometheus/etc/node_exporter_textfiles/cron_app_basic.prom') do
   it { should be_file }
   its('content') { should match /# HELP cron_app_basic_endtime Unix time in microseconds./ }
   its('content') { should match /# TYPE cron_app_basic_endtime gauge/ }
@@ -71,6 +71,6 @@ describe file('/etc/prometheus/node_exporter_textfiles/cron_app_basic.prom') do
 end
 
 # Remove prom file
-describe command('sudo rm -f /etc/prometheus/node_exporter_textfiles/cron_app_basic.prom*') do
+describe command('sudo rm -f /opt/prometheus/etc/node_exporter_textfiles/cron_app_basic.prom*') do
   its('exit_status') { should eq 0 }
 end

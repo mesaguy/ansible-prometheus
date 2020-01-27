@@ -1,5 +1,5 @@
 # Cron prom file does not exist
-describe file('/etc/prometheus/node_exporter_textfiles/cron_root_advanced.prom') do
+describe file('/opt/prometheus/etc/node_exporter_textfiles/cron_root_advanced.prom') do
   it { should_not exist }
 end
 
@@ -11,7 +11,7 @@ describe command('ls > /dev/null ; sudo promcron -l org=Test -d "RUN OF ls COMMA
 end
 
 # Resulting prom file is as expected
-describe file('/etc/prometheus/node_exporter_textfiles/cron_root_advanced.prom') do
+describe file('/opt/prometheus/etc/node_exporter_textfiles/cron_root_advanced.prom') do
   it { should be_file }
   its('content') { should match /# HELP cron_root_advanced_endtime Unix time in microseconds./ }
   its('content') { should match /# TYPE cron_root_advanced_endtime gauge/ }
@@ -38,7 +38,7 @@ describe command('ls > /dev/null ; sudo promcron -v -l org=Test -d "RUN OF ls CO
 end
 
 # Resulting prom file is as expected
-describe file('/etc/prometheus/node_exporter_textfiles/cron_root_advanced.prom') do
+describe file('/opt/prometheus/etc/node_exporter_textfiles/cron_root_advanced.prom') do
   it { should be_file }
   its('content') { should match /# HELP cron_root_advanced_endtime Unix time in microseconds./ }
   its('content') { should match /# TYPE cron_root_advanced_endtime gauge/ }
@@ -53,6 +53,6 @@ describe file('/etc/prometheus/node_exporter_textfiles/cron_root_advanced.prom')
 end
 
 # Remove prom file
-describe command('sudo rm -f /etc/prometheus/node_exporter_textfiles/cron_root_advanced.prom*') do
+describe command('sudo rm -f /opt/prometheus/etc/node_exporter_textfiles/cron_root_advanced.prom*') do
   its('exit_status') { should eq 0 }
 end

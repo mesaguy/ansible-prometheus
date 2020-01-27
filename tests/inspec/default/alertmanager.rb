@@ -28,7 +28,7 @@ describe command('/opt/prometheus/alertmanager/active/amtool check-config /opt/p
   its('exit_status') { should eq 0 }
 end
 
-describe command('/opt/prometheus/alertmanager/active/amtool check-config /etc/prometheus/alertmanager.yml') do
+describe command('/opt/prometheus/alertmanager/active/amtool check-config /opt/prometheus/etc/alertmanager.yml') do
   its('exit_status') { should eq 0 }
 end
 

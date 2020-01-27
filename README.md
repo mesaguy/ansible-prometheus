@@ -316,7 +316,7 @@ If [iptables_raw](https://github.com/Nordeus/ansible_iptables_raw) has been inst
 
     prometheus_manage_client_iptables_raw: true
 
-This role can manage your Prometheus server 'target groups' (tgroups) automatically, dynamically creating tgroup files in a specified directory (/etc/prometheus/tgroups by default) for each client exporter.
+This role can manage your Prometheus server 'target groups' (tgroups) automatically, dynamically creating tgroup files in a specified directory (/opt/prometheus/etc/tgroups by default) for each client exporter.
 
 Automatic tgroup file management can be enabled for client side operation, server side operation, or both. In client mode, client's exporters are registered automatically on the Prometheus server specified in a 'prometheus_servers' array. In server mode, the inventory is parsed to determine which exporters are available on each host and *all* clients are registered with the server's specified in each client's 'prometheus_servers' array.
 
@@ -324,14 +324,14 @@ By default, client and server tgroups use 'inventory_hostname' (fqdn) and 'inven
 
     prometheus_tgroup_use_facts: true
 
-To enable automatic tgroup file generation on the client side, you must define 'prometheus_manage_client_tgroups' as true and list your Prometheus servers in a 'prometheus_servers' variable in your Ansible variables or inventory. The following will create tgroup files in /etc/prometheus/ansible_tgroups:
+To enable automatic tgroup file generation on the client side, you must define 'prometheus_manage_client_tgroups' as true and list your Prometheus servers in a 'prometheus_servers' variable in your Ansible variables or inventory. The following will create tgroup files in /opt/prometheus/etc/ansible_tgroups:
 
     prometheus_manage_client_tgroups: true
     prometheus_servers:
      - 'prometheus1'
      - 'prometheus2'
-    # Optional, defaults to /etc/prometheus/tgroups:
-    prometheus_managed_tgroup_dir: '/etc/prometheus/ansible_tgroups'
+    # Optional, defaults to /opt/prometheus/etc/tgroups:
+    prometheus_managed_tgroup_dir: '/opt/prometheus/etc/ansible_tgroups'
 
 If this role is managing your tgroup files, you can apply labels to your exporter/s using the 'prometheus_tgroup_labels' variable:
 
@@ -368,7 +368,7 @@ Exporters that aren't managed by this role can be specified using a 'prometheus_
          department: IT
 
 
-To enable automatic tgroup file generation on the server side, you must define 'prometheus_manage_server_tgroups' as true and list your Prometheus servers in a 'prometheus_servers' variable in your Ansible variables or inventory. The following will create tgroup files in /etc/prometheus/ansible_tgroups for *all* clients that have 'prometheus_compenents' and/or 'prometheus_additional_exporters', clients must also have 'prometheus_servers' array configured:
+To enable automatic tgroup file generation on the server side, you must define 'prometheus_manage_server_tgroups' as true and list your Prometheus servers in a 'prometheus_servers' variable in your Ansible variables or inventory. The following will create tgroup files in /opt/prometheus/etc/ansible_tgroups for *all* clients that have 'prometheus_compenents' and/or 'prometheus_additional_exporters', clients must also have 'prometheus_servers' array configured:
 
     prometheus_manage_server_tgroups: true
 
