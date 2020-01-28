@@ -22,4 +22,4 @@
   service:
     name: '{{ prometheus_software_service_name }}'
     state: restarted
-  when: (prometheus_software_restart is defined and prometheus_software_restart | bool) or (prometheus_software_service_test | bool and ((prometheus_software_installation is defined and prometheus_software_installation and prometheus_software_installation.changed) or prometheus_software_init.changed or (prometheus_software_cfg is defined and prometheus_software_cfg.changed)))
+  when: (prometheus_software_restart is defined and prometheus_software_restart | bool) or (prometheus_software_service_test | bool and ((prometheus_software_installation is defined and prometheus_software_installation and prometheus_software_installation.changed) or prometheus_software_init.changed or (prometheus_software_cfg is defined and prometheus_software_cfg.changed) or (prometheus_ulimits is defined and prometheus_ulimits.changed)))

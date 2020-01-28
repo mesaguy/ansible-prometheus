@@ -226,6 +226,12 @@ Name of the Prometheus service and group:
     prometheus_group: prometheus
     prometheus_user: prometheus
 
+Configure ulimits for 'prometheus' user:
+
+    prometheus_configure_ulimits: false
+    prometheus_ulimit_hard_nofile: 8192
+    prometheus_ulimit_soft_nofile: 4096
+
 If installing a Prometheus application binary fails, fall back to installing the Prometheus software via source. Installation from source generally requires installing compilers. It is also possible to enable 'fallback_to_build' on a case-by-case basis (ie: prometheus_blackbox_exporter_fallback_to_build: true):
 
     prometheus_fallback_to_build: false
@@ -1058,6 +1064,11 @@ After following the [mysqld_exporter user creation or grant instructions](https:
 
     prometheus_mysqld_exporter_username: mysqld_exporter
     prometheus_mysqld_exporter_password: _password_
+
+The following variables can optionally define a host and/or socket used by mysqld_exporter to connect to MySQL:
+
+    prometheus_mysqld_exporter_host: mysql.example.org
+    prometheus_mysqld_exporter_socket: /var/lib/mysql/mysql.sock
 
 ### Node exporter configuration
 

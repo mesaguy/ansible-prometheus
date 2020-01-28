@@ -1,3 +1,9 @@
 [client]
 user="{{ prometheus_mysqld_exporter_username }}"
 password="{{ prometheus_mysqld_exporter_password }}"
+{% if prometheus_mysqld_exporter_socket is defined and prometheus_mysqld_exporter_socket %}
+socket="{{ prometheus_mysqld_exporter_socket }}"
+{% endif %}
+{% if prometheus_mysqld_exporter_host is defined and prometheus_mysqld_exporter_host %}
+host={{ prometheus_mysqld_exporter_host }}
+{% endif %}

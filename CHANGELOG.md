@@ -8,7 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Ability to purge old 'etc' backups and node_exporter's textfile directory .prom files
+- Ability to purge old 'etc' directory backups and node_exporter's textfile directory .prom files
+- Ability to configure ulimits for the Prometheus user, all services are restarted if the ulimits change
+- A 'socket' and/or 'host' can be defined for mysql_exporter's ~prometheus/.my.cnf file
 
 ### Changed
 

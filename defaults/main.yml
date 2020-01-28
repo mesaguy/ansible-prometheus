@@ -32,6 +32,11 @@ prometheus_logrotate_count: 31
 prometheus_logrotate_compress: true
 prometheus_logrotate_dir: /etc/logrotate.d
 
+# Prometheus ulimits
+prometheus_configure_ulimits: false
+prometheus_ulimit_hard_nofile: 8192
+prometheus_ulimit_soft_nofile: 4096
+
 # Firewall management
 prometheus_manage_client_firewalld: false
 prometheus_manage_client_iptables: false

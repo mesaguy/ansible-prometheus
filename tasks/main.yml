@@ -5,6 +5,12 @@
         msg: "No 'prometheus_components' variable (array) has been specified for {{ inventory_hostname_short }}"
       when: prometheus_components is not defined or not prometheus_components
 
+    - name: Setup Prometheus ulimits
+      include_role:
+        name: mesaguy.prometheus
+        tasks_from: _ulimits.yml
+      when: prometheus_configure_ulimits | bool
+
     - name: Run prometheus component installation and setup tasks
       include_role:
         name: mesaguy.prometheus
