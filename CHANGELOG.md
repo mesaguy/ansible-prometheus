@@ -16,6 +16,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Ensure all references to Prometheus's 'etc' directory are to /opt/prometheus/etc instead of /etc/prometheus
 
+## [0.10.1] - 2020-01-28
+
+### Changed
+
+- Upgrade pushgateway from v1.0.1 to v1.1.0
+
+### Fixed
+
+  - When 'prometheus_purge_orphans' is enabled, do not delete release 'active' version symlinks
+  - Set fact 'prometheus_node_exporter_textfiles_directory' so fact is available outside of role. Useful for playbooks that call role, then perform their own actions. This fact was automatically present until version v0.10.0
+
 ## [0.10.0] - 2020-01-25
 
 ### Added
