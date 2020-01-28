@@ -485,8 +485,8 @@ To configure persistence storage configure the following variables with a path f
 
 The version of Pushgateway to install. The source version defines the version as specified in version control:
 
-    prometheus_pushgateway_version: "1.0.1"
-    prometheus_pushgateway_src_version: "v1.0.1"
+    prometheus_pushgateway_version: "1.1.0"
+    prometheus_pushgateway_src_version: "v1.1.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9091:
 

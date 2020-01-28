@@ -9,6 +9,7 @@
       file_type: any
       recurse: false
       excludes:
+        - active
         - '{{ prometheus_software_version }}'
         - '{{ prometheus_software_version }}__go-{{ prometheus_go_version }}'
     register: present_paths
