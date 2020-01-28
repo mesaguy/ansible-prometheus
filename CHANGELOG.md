@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.10.1] - 2020-01-28
+
 ### Changed
 
 - Upgrade pushgateway from v1.0.1 to v1.1.0
