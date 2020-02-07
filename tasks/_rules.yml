@@ -1,0 +1,69 @@
+---
+- name: Create Prometheus rules directory {{ prometheus_rules_dir }}
+  become: true
+  file:
+    path: '{{ prometheus_rules_dir }}'
+    owner: '{{ prometheus_rules_owner }}'
+    group: '{{ prometheus_rules_group }}'
+    mode: '{{ prometheus_rules_dir_mode }}'
+
+- name: Copy rules files to {{ prometheus_rules_dir }}
+  become: true
+  copy:
+    src: '{{ prometheus_rules_source_dir }}/'
+    dest: '{{ prometheus_rules_dir }}/'
+    owner: '{{ prometheus_rules_owner }}'
+    group: '{{ prometheus_rules_group }}'
+    mode: '{{ prometheus_rules_file_mode }}'
+    backup: true
+    validate: '{{ prometheus_software_install_dir }}/promtool check rules %s'
+  loop_control:
+    loop_var: prometheus_rules_source_dir
+  with_items: '{{ prometheus_rules_source_dirs }}'
+  notify:
+    - Reload Prometheus service
+
+- block:
+    - name: Find local Prometheus alert rule files
+      find:
+        paths: '{{ prometheus_rules_source_dirs }}'
+      delegate_to: localhost
+      register: prometheus_local_rules
+
+    - name: Find remote Prometheus alert rule files
+      find:
+        paths: '{{ prometheus_rules_dir }}'
+        excludes:
+          # Backups
+          - "*.*-*-*@*:*:*~"
+      register: prometheus_remote_rules
+
+    - name: Set Prometheus alert rule file facts (part 1 of 2)
+      set_fact:
+        prometheus_local_rule_files: '[{% for filepath in prometheus_local_rules.files | map(attribute="path") | sort | unique | list %}"{{ filepath | basename }}",{% endfor %}]'
+        prometheus_remote_rule_files: '[{% for filepath in prometheus_remote_rules.files | map(attribute="path") | sort | unique | list %}"{{ filepath | basename }}",{% endfor %}]'
+
+    - name: Set Prometheus alert rule file facts (part 2 of 2)
+      set_fact:
+        prometheus_orphan_rule_filenames: '{{ prometheus_remote_rule_files | difference(prometheus_local_rule_files) }}'
+
+    - name: Purge orphaned (unreferenced) Prometheus alert rule files
+      become: true
+      file:
+        path: '{{ prometheus_rules_dir }}/{{ prometheus_orphan_rule_filename }}'
+        state: absent
+      loop_control:
+        loop_var: prometheus_orphan_rule_filename
+      with_items: '{{ prometheus_orphan_rule_filenames }}'
+      when:
+        - prometheus_orphan_rule_filename | length > 0
+  when: prometheus_rules_purge_orphans is defined and prometheus_rules_purge_orphans
+
+- name: Include task purge old prometheus rules file backups
+  include_tasks: _purge_files.yml
+  vars:
+    prometheus_purge_files_age: '{{ prometheus_rules_backup_max_age }}'
+    prometheus_purge_files_patterns:
+      - "*.*-*-*@*:*:*~"
+    prometheus_purge_files_path: '{{ prometheus_rules_dir }}'
+  when: prometheus_rules_purge_backups

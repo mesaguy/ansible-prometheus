@@ -9,11 +9,11 @@
     owner: root
     group: root
     mode: '0444'
-  register: prometheus_ulimits
   loop_control:
     loop_var: prometheus_ulimit
+  register: prometheus_ulimits
   with_items:
-   - line: "{{ prometheus_user }}\thard\tnofile\t{{ prometheus_ulimit_hard_nofile }}"
-     regex: '^prometheus\s+hard'
-   - line: "{{ prometheus_user }}\tsoft\tnofile\t{{ prometheus_ulimit_soft_nofile }}"
-     regex: '^prometheus\s+soft'
+    - line: "{{ prometheus_user }}\thard\tnofile\t{{ prometheus_ulimit_hard_nofile }}"
+      regex: '^prometheus\s+hard'
+    - line: "{{ prometheus_user }}\tsoft\tnofile\t{{ prometheus_ulimit_soft_nofile }}"
+      regex: '^prometheus\s+soft'

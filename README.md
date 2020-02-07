@@ -1,6 +1,7 @@
 # Ansible Prometheus
 [![Build Status](https://api.travis-ci.org/mesaguy/ansible-prometheus.svg?branch=master)](https://travis-ci.org/mesaguy/ansible-prometheus)
 
+
 Installs and manages [Prometheus server](https://prometheus.io), [Alertmanager](https://prometheus.io/docs/alerting/overview/), [PushGateway](https://github.com/prometheus/pushgateway/blob/master/README.md), and numerous [Prometheus exporters](https://prometheus.io/docs/instrumenting/exporters/)
 
 This role was designed to allow adding new exporters with ease. Regular releases ensure it always provides the latest Prometheus software.
@@ -11,6 +12,9 @@ This role can register client exporters with the Prometheus server/s automatical
 
 - Ansible >= 2.5.1
 - Facts must be gathered (gather_facts: true)
+
+## TOC
+[TOC]
 
 ## Supported Software and Operating Systems
 ### Supported Operating Systems, Distributions, and Architectures
@@ -208,6 +212,11 @@ Purge old and now orphaned versions of software:
 
     prometheus_purge_orphans: false
 
+Purge backups of prometheus configuration files from the prometheus 'etc' directory files after 'prometheus_etc_backup_max_age' days (Default: 31d). Option 'prometheus_etc_purge_backups' defaults to 'false':
+
+    prometheus_etc_purge_backups: true
+    prometheus_etc_backup_max_age: 31d
+
 Root directory to install Prometheus software:
 
     prometheus_root_dir: '/opt/prometheus'
@@ -267,6 +276,30 @@ The directory to use when storing persistent Prometheus data (ie: The Prometheus
 Optionally disable symlink of tool applications (amtool, promtool, etc) to /usr/local/bin. Defaults to 'true':
 
     prometheus_symlink_tools: false
+
+### Prometheus rule management variables
+
+Local location to find rules files, defaults to empty (disabled):
+
+    prometheus_rules_source_dirs:
+     - ../files/prometheus/rules
+     - ../files/prometheus/additional_rules
+
+Ownership and permissions of rules files, defaults:
+
+    prometheus_rules_dir_mode: '0755'
+    prometheus_rules_file_mode: '0644'
+    prometheus_rules_group: '{{ prometheus_group }}' # prometheus
+    prometheus_rules_owner: '{{ prometheus_user }}'  # prometheus
+
+Purge backups of rules files after 'prometheus_rules_backup_max_age' days (Default: 90d). Option 'prometheus_rules_purge_backups' defaults to 'false':
+
+    prometheus_rules_purge_backups: true
+    prometheus_rules_backup_max_age: 90d
+
+Purge undefined (orphaned) rules from Prometheus servers. Defaults to 'false':
+
+    prometheus_rules_purge_orphans: true
 
 ### Prometheus log rotation variables
 
@@ -1106,6 +1139,11 @@ Node exporter textfiles scripts can be installed into the 'prometheus_script_dir
     prometheus_script_directory: '/opt/prometheus/scripts'
     # S.M.A.R.T. monitoring script
     prometheus_script_smartmon: true
+
+Purge textfiles older than 'prometheus_node_exporter_textfile_max_age' days (Default: 14d). Option 'prometheus_node_exporter_textfile_purge' defaults to 'false':
+
+    prometheus_node_exporter_textfile_purge: true
+    prometheus_node_exporter_textfile_max_age: 14d
 
 Node exporter textfiles scripts will generally need to be run via cron and ideally via [sponge](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/README.md), for instance:
 

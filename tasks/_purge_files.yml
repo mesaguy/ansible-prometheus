@@ -7,7 +7,7 @@
     file_type: file
   register: prometheus_purge_files
 
-- name : Purge {{ prometheus_purge_files_path }} files untouched in over {{ prometheus_purge_files_age }}
+- name: Purge {{ prometheus_purge_files_path }} files untouched in over {{ prometheus_purge_files_age }}
   become: true
   file:
     path: '{{ prometheus_purge_file.path }}'

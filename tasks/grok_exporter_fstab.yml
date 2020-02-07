@@ -53,7 +53,8 @@
     group: root
     mode: '0644'
     backup: true
-  register: prometheus_software_cfg
+  notify:
+    - Restart Prometheus service
 
 - name: Find the {{ prometheus_software_shortname }} binary
   find:

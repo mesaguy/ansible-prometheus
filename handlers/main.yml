@@ -1,2 +1,21 @@
 ---
 # handlers file for mesaguy.prometheus
+
+- name: Force systemd to reread configs
+  become: true
+  systemd:
+    daemon_reload: true
+
+- name: Restart Prometheus service
+  become: true
+  service:
+    name: '{{ prometheus_software_service_name }}'
+    state: restarted
+  # If prometheus_restart_all, we are restarting all processes in a later step
+  when: prometheus_restart_all is undefined
+
+- name: Reload Prometheus service
+  become: true
+  service:
+    name: '{{ prometheus_software_service_name }}'
+    state: reloaded

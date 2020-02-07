@@ -10,6 +10,25 @@
 - name: Include task to setup {{ prometheus_software_name_version }} {{ ansible_service_mgr }} service
   include_tasks: '_service_mgr_{{ ansible_service_mgr | regex_replace("^(openrc|upstart)$", "init") }}.yml'
 
+- name: Force all notified handlers to run at this point, not waiting for normal sync points
+  meta: flush_handlers
+
+- name: Restart {{ prometheus_software_service_name }} service as part of restarting all
+  become: true
+  service:
+    state: restarted
+    name: '{{ prometheus_software_service_name }}'
+  when:
+    - prometheus_ulimits is defined and prometheus_ulimits.changed
+
+- name: Enable {{ prometheus_software_service_name }} service
+  become: true
+  systemd:
+    state: started
+    enabled: true
+    name: '{{ prometheus_software_service_name }}'
+  when: prometheus_software_service_test | bool
+
 - name: Include task to setup firewall rules for {{ prometheus_software_name }}
   include_tasks: '_setup_firewall.yml'
   when:
