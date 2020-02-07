@@ -46,6 +46,8 @@
       # Handled downstream:
       ignore_errors: '{{ prometheus_software_fallback_to_build | bool }}'
       register: prometheus_software_installation
+      notify:
+        - Restart Prometheus service
       when: not prometheus_software_download.failed
   when: not prometheus_software_installed.stat.exists
 

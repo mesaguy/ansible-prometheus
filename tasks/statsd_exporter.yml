@@ -47,7 +47,8 @@
     group: root
     mode: '0644'
     backup: true
-  register: prometheus_software_cfg
+  notify:
+    - Restart Prometheus service
 
 - name: Include task to setup {{ prometheus_software_name_version }} service
   include_tasks: _service.yml

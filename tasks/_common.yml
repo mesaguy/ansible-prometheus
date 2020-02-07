@@ -79,14 +79,14 @@
     - '{{ prometheus_exporters_dir }}'
     - '{{ prometheus_script_directory }}'
 
-- name: Include task purge long untouched prometheus etc files
+- name: Include task purge old prometheus etc file backups
   include_tasks: _purge_files.yml
   vars:
     prometheus_purge_files_age: '{{ prometheus_etc_backup_max_age }}'
     prometheus_purge_files_patterns:
-        - "*.*-*-*@*:*:*~"
+      - "*.*-*-*@*:*:*~"
     prometheus_purge_files_path: '{{ prometheus_etc_dir }}'
-  when: prometheus_purge_etc_backups
+  when: prometheus_etc_purge_backups
 
 - name: Link {{ prometheus_etc_dir }} to /etc/prometheus (Optional)
   become: true

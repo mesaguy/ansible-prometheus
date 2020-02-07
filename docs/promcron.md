@@ -135,7 +135,7 @@ An alert for the cronjob ```@weekly /sbin/mdadm --monitor --scan -1 --test; prom
         description: mdadm weekly test has not run in over {{ $value }} days.
         summary: mdadm weekly test is not running
 
-The following sends an alerts if *any* cronjob doesn't return '0':
+The following sends an alerts if *any* cronjob doesn't return '0'. In this example, if a failing promcron script is retired, its node_exporter textfiles directory *.prom file must be deleted to stop alerting:
 
     - alert: Failing cron job
       expr: |

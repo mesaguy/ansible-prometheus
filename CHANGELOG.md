@@ -11,10 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ability to purge old 'etc' directory backups and node_exporter's textfile directory .prom files
 - Ability to configure ulimits for the Prometheus user, all services are restarted if the ulimits change
 - A 'socket' and/or 'host' can be defined for mysql_exporter's ~prometheus/.my.cnf file
+- Add support for managing Prometheus 'rule' files
 
 ### Changed
 
+- Prometheus and AlertManager are reloaded instead of restarted when configuration files change
 - Ensure all references to Prometheus's 'etc' directory are to /opt/prometheus/etc instead of /etc/prometheus
+- Utilize handlers for 'reloading' and 'restarting' activities. Simplify tasks
 
 ## [0.10.1] - 2020-01-28
 
