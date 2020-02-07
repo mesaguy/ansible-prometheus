@@ -7,28 +7,62 @@
   include_tasks: _create_textfiles_directory.yml
   # prometheus_create_textfile_directory is defined as last step, this
   # variable ensures the job isn't run twice
-  when: prometheus_create_textfile_directory is undefined
+  when:
+    - prometheus_create_textfile_directory is undefined
 
-- name: Set {{ prometheus_script_name }} facts
-  set_fact:
-    prometheus_script_cron_file: 'prometheus_script_{{ prometheus_script_name }}'
+- block:
+    - name: Find existing Prometheus cron files prefixed with "prometheus_script" in {{ prometheus_script_cron_directory }}
+      become: true
+      find:
+        paths: '{{ prometheus_script_cron_directory }}'
+        patterns: 'prometheus_script_*'
+      register: prometheus_script_crons_found
+
+    - name: Set Prometheus script cron files facts
+      set_fact:
+        prometheus_script_cron_names: '{{ prometheus_setup_script_crons | map(attribute="name") | sort | list }}'
+        prometheus_script_crons_names_found: '{{ prometheus_script_crons_found.files | map(attribute="path") | sort | list }}'
+      when:
+        - prometheus_script_crons_found.matched > 0
+
+    - name: Purge unreferenced cron files in {{ prometheus_script_cron_directory }}
+      become: true
+      file:
+        path: '{{ prometheus_script_cron_path }}'
+        state: absent
+      loop_control:
+        loop_var: prometheus_script_cron_path
+      with_items: '{{ prometheus_script_crons_names_found }}'
+      when:
+        - prometheus_script_crons_found.matched > 0
+        - prometheus_script_cron_path | basename | regex_replace('^prometheus_script_', '') not in prometheus_script_cron_names
+
+    - name: Setup PATH variable for cronjobs
+      become: true
+      cron:
+        cron_file: '{% if prometheus_script_use_cron_files %}prometheus_script_{{ prometheus_script_cron_job.name }}{% else %}omit{% endif %}'
+        user: '{{ prometheus_script_cron_job.user | default("root") }}'
+        name: PATH
+        env: true
+        job: '{{ prometheus_script_env_path | join(":") }}'
+      loop_control:
+        loop_var: prometheus_script_cron_job
+      with_items: '{{ prometheus_setup_script_crons }}'
+
   when: prometheus_script_use_cron_files
 
-- name: Setup PATH variable for {{ prometheus_script_name }} cronjob
+- name: Setup script cronjobs
   become: true
   cron:
-    cron_file: '{{ prometheus_script_cron_file }}'
-    user: '{{ prometheus_script_cron_user | default("root") }}'
-    name: PATH
-    env: true
-    job: '{{ prometheus_script_env_path | join(":") }}'
-  when: prometheus_script_cron_file is defined and prometheus_script_cron_file | bool
-
-- name: Setup {{ prometheus_script_name }} cronjob
-  become: true
-  cron:
-    name: 'Run Prometheus script {{ prometheus_script_name }}'
-    cron_file: '{{ prometheus_script_cron_file | default(omit) }}'
-    user: '{{ prometheus_script_cron_user | default("root") }}'
-    minute: '{{ prometheus_script_cron_minute | default("*") }}'
-    job: '{{ prometheus_script_path }} {% if prometheus_sponge_is_installed | bool %}| sponge{% else %}>{% endif %} {{ prometheus_node_exporter_textfiles_directory }}/{{ prometheus_script_name }}.prom'
+    name: 'Run Prometheus script {{ prometheus_script_cron_job.name }}'
+    cron_file: '{% if prometheus_script_use_cron_files %}prometheus_script_{{ prometheus_script_cron_job.name }}{% else %}omit{% endif %}'
+    user: '{{ prometheus_script_cron_job.user | default("root") }}'
+    day: '{{ prometheus_script_cron_job.day | default("*") }}'
+    hour: '{{ prometheus_script_cron_job.hour | default("*") }}'
+    month: '{{ prometheus_script_cron_job.month | default("*") }}'
+    weekday: '{{ prometheus_script_cron_job.weekday | default("*") }}'
+    minute: '{{ prometheus_script_cron_job.minute | default("*") }}'
+    job: '{{ prometheus_script_directory }}/{{ prometheus_script_cron_job.script }} {% if prometheus_sponge_is_installed | bool %}| sponge{% else %}>{% endif %} {{ prometheus_node_exporter_textfiles_directory }}/{{ prometheus_script_cron_job.name }}.prom'
+  loop_control:
+    loop_var: prometheus_script_cron_job
+  with_items: '{{ prometheus_setup_script_crons }}'

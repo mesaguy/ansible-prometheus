@@ -11,7 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ability to purge old 'etc' directory backups and node_exporter's textfile directory .prom files
 - Ability to configure ulimits for the Prometheus user, all services are restarted if the ulimits change
 - A 'socket' and/or 'host' can be defined for mysql_exporter's ~prometheus/.my.cnf file
-- Add support for managing Prometheus 'rule' files
+- Add support for managing Prometheus 'rules' files
+- A 'promrun_name' label to the start, end, and exit metrics outputted by the 'promrun' script. This is helpful when alerting on all promrun jobs
+- A 'promcron_name' label to the end and exit metrics outputted by the 'promcron' script. This is helpful when alerting on all promcron jobs
+- Ability to simply create cronjobs for Ansible scripts
 
 ### Changed
 

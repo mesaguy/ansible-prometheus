@@ -6,7 +6,7 @@
 # Documentation: https://github.com/mesaguy/ansible-prometheus/blob/master/docs/promcron.md
 # Source: https://github.com/mesaguy/ansible-prometheus/tree/master/scripts/promcron.sh
 # License: MIT
-# Version: 1.0 (2020-01-23)
+# Version: 1.1 (2020-01-29)
 
 {% if prometheus_promcron_ansible_managed | default(false) %}
 TEXTFILE_DIRECTORY="{{ prometheus_node_exporter_textfiles_directory }}"
@@ -18,6 +18,7 @@ if which sponge > /dev/null 2>&1 ; then
 fi
 {% endif %}
 
+NAME="${@:$OPTIND:1}"
 RE_LABEL_NAME="^[a-zA-Z_][a-zA-Z0-9_]*$"
 RE_METRIC_NAME="^[a-zA-Z_:][a-zA-Z0-9_:]*$"
 
@@ -97,7 +98,7 @@ if [ -z "$USER" ] ; then
     USER=$(whoami)
 fi
 
-NAME="cron_${@:$OPTIND:1}"
+METRIC_NAME="cron_${@:$OPTIND:1}"
 # Remove any prefixed ',' characters from $LABELS, add 'user' label
 if [ -n "$LABELS" ] ; then
     LABELS="${LABELS#,},user=\"${USER}\""
@@ -157,18 +158,18 @@ if ! [[ "$VALUE" =~ ^[0-9]+$ ]] || [ "$VALUE" -gt "255" ] ; then
     exit 2
 fi
 
-if [[ ! $NAME =~ $RE_METRIC_NAME ]] ; then
-    echo "Metric name \"$NAME\" must match regex: $RE_METRIC_NAME" >&2
+if [[ ! $METRIC_NAME =~ $RE_METRIC_NAME ]] ; then
+    echo "Metric name \"$METRIC_NAME\" must match regex: $RE_METRIC_NAME" >&2
     exit 2
 fi
 
 END_DATE=$(date +%s.%3N)
-DATA="# HELP ${NAME}_endtime Unix time in microseconds.
+DATA="# HELP ${METRIC_NAME}_endtime Unix time in microseconds.
 # TYPE ${NAME}_endtime gauge
-${NAME}_endtime{$LABELS,promcron=\"endtime\"} ${END_DATE}
-# HELP ${NAME} Process return code.
-# TYPE ${NAME} gauge
-$NAME{$LABELS,promcron=\"value\"} $VALUE
+${METRIC_NAME}_endtime{$LABELS,promcron_name=\"${NAME}\",promcron=\"endtime\"} ${END_DATE}
+# HELP ${METRIC_NAME} Process return code.
+# TYPE ${METRIC_NAME} gauge
+$METRIC_NAME{$LABELS,promcron_name=\"${NAME}\",promcron=\"value\"} $VALUE
 "
 
 if [ -n "$DRYRUN" ] ; then

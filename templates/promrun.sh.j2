@@ -9,7 +9,7 @@
 # Documentation: https://github.com/mesaguy/ansible-prometheus/blob/master/docs/promrun.md
 # Source: https://github.com/mesaguy/ansible-prometheus/tree/master/scripts/promrun.sh
 # License: MIT
-# Version: 0.1 (2020-01-09)
+# Version: 0.2 (2020-01-29)
 
 {% if prometheus_promrun_ansible_managed | default(false) %}
 HAS_TIME="{{ prometheus_time_is_installed }}"
@@ -69,9 +69,9 @@ function usage () {
 }
 
 function end_time_text () {
-    printf "# HELP ${NAME}_endtime End time in Unix time with microseconds.
-# TYPE ${NAME}_endtime gauge
-${NAME}_endtime{$LABELS,promrun=\"endtime\"} $(date +%s.%3N)\n"
+    printf "# HELP ${METRIC_NAME}_endtime End time in Unix time with microseconds.
+# TYPE ${METRIC_NAME}_endtime gauge
+${METRIC_NAME}_endtime{$LABELS,promrun_name=\"${NAME}\",promrun=\"endtime\"} $(date +%s.%3N)\n"
 }
 
 function start_time_text () {
@@ -79,9 +79,9 @@ function start_time_text () {
     # command if there is an error. node_exporter fails to parse the
     # error line. For instance:
     # Command exited with non-zero status 1
-    printf "# HELP ${NAME}_starttime Start time in Unix time with microseconds.
-# TYPE ${NAME}_starttime gauge
-${NAME}_starttime{$LABELS,promrun=\"starttime\"} $(date +%s.%3N)\n#"
+    printf "# HELP ${METRIC_NAME}_starttime Start time in Unix time with microseconds.
+# TYPE ${METRIC_NAME}_starttime gauge
+${METRIC_NAME}_starttime{$LABELS,promrun_name=\"${NAME}\",promrun=\"starttime\"} $(date +%s.%3N)\n#"
 }
 
 # read the option and store in the variable, $option
@@ -135,7 +135,7 @@ else
     LABELS="user=\"${USER}\""
 fi
 TEXTFILE_PATH="${TEXTFILE_DIRECTORY}/promrun_${NAME}.prom"
-NAME="promrun_${NAME}"
+METRIC_NAME="promrun_${NAME}"
 
 if [ -n "$SETUP_USER" ] ; then
     if [ "$USER" != "root" ] && [ -z "$DRYRUN" ]; then
@@ -171,77 +171,77 @@ if [ -n "$DESCRIPTION" ] ; then
     LABELS="${LABELS},description=\"$DESCRIPTION\""
 fi
 
-if [[ ! $NAME =~ $RE_METRIC_NAME ]] ; then
-    echo "Metric name \"$NAME\" must match regex: $RE_METRIC_NAME" >&2
+if [[ ! $METRIC_NAME =~ $RE_METRIC_NAME ]] ; then
+    echo "Metric name \"$METRIC_NAME\" must match regex: $RE_METRIC_NAME" >&2
     exit 2
 fi
 
 # Start with a newline in case the command doesn't return a '0' and 'time'
 # adds an error line. See comment in the 'start_time_text' function
 TIME_FORMAT="
-# HELP ${NAME}_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode.
-# TYPE ${NAME}_cpu_kernel_mode_seconds gauge
-${NAME}_cpu_kernel_mode_seconds{$LABELS} %S
-# HELP ${NAME}_elapsed_seconds Elapsed real time (in seconds).
-# TYPE ${NAME}_elapsed_seconds gauge
-${NAME}_elapsed_seconds{$LABELS} %e
-# HELP ${NAME}_cpu_user_mode_seconds Total number of CPU-seconds that the process spent in user mode.
-# TYPE ${NAME}_cpu_user_mode_seconds gauge
-${NAME}_cpu_user_mode_seconds{$LABELS} %U
-# HELP ${NAME}_max_resident_memory_kb Maximum resident set size of the process during its lifetime, in Kbytes.
-# TYPE ${NAME}_max_resident_memory_kb gauge
-${NAME}_max_resident_memory_kb{$LABELS} %M
-# HELP ${NAME}_avg_total_memory_kb Average total (data+stack+text) memory use of the process, in Kbytes.
-# TYPE ${NAME}_avg_total_memory_kb gauge
-${NAME}_avg_total_memory_kb{$LABELS} %K
-# HELP ${NAME}_swapped_from_main_memory_count Number of times the process was swapped out of main memory.
-# TYPE ${NAME}_swapped_from_main_memory_count gauge
-${NAME}_swapped_from_main_memory_count{$LABELS} %W
-# HELP ${NAME}_signals_delivered_to_process_count Number of signals delivered to the process.
-# TYPE ${NAME}_signals_delivered_to_process_count gauge
-${NAME}_signals_delivered_to_process_count{$LABELS} %k
-# HELP ${NAME}_context_switch_count_involuntary_count Number of times the process was context-switched involuntarily (because the time slice expired).
-# TYPE ${NAME}_context_switch_count_involuntary_count gauge
-${NAME}_context_switch_count_involuntary_count{$LABELS} %c
-# HELP ${NAME}_context_switch_count_voluntary_count Number of waits, times that the program was context-switched voluntarily, for instance while waiting for an I/O operation to complete.
-# TYPE ${NAME}_context_switch_count_voluntary_count gauge
-${NAME}_context_switch_count_voluntary_count{$LABELS} %w
-# HELP ${NAME}_filesystem_inputs_count Number of filesystem inputs by the process.
-# TYPE ${NAME}_filesystem_inputs_count gauge
-${NAME}_filesystem_inputs_count{$LABELS} %I
-# HELP ${NAME}_filesystem_outputs_count Number of filesystem outputs by the process.
-# TYPE ${NAME}_filesystem_outputs_count gauge
-${NAME}_filesystem_outputs_count{$LABELS} %O
-# HELP ${NAME}_socket_messages_received_count Number of socket messages received by the process.
-# TYPE ${NAME}_socket_messages_received_count gauge
-${NAME}_socket_messages_received_count{$LABELS} %r
-# HELP ${NAME}_socket_messages_sent_count Number of socket messages sent by the process.
-# TYPE ${NAME}_socket_messages_sent_count gauge
-${NAME}_socket_messages_sent_count{$LABELS} %s
-# HELP ${NAME}_exit_status Exit status of the command.
-# TYPE ${NAME}_exit_status gauge
-${NAME}_exit_status{$LABELS,promrun=\"exit\"} %x
-# HELP ${NAME}_process_avg_size_resident_set_kb Average resident set size of the process, in Kbytes.
-# TYPE ${NAME}_process_avg_size_resident_set_kb gauge
-${NAME}_process_avg_size_resident_set_kb{$LABELS} %t
-# HELP ${NAME}_process_avg_size_unshared_data_area_kb Average size of the process's unshared data area, in Kbytes.
-# TYPE ${NAME}_process_avg_size_unshared_data_area_kb gauge
-${NAME}_process_avg_size_unshared_data_area_kb{$LABELS} %D
-# HELP ${NAME}_process_avg_size_unshared_stack_space_kb Average size of the process's unshared stack space, in Kbytes.
-# TYPE ${NAME}_process_avg_size_unshared_stack_space_kb gauge
-${NAME}_process_avg_size_unshared_stack_space_kb{$LABELS} %p
-# HELP ${NAME}_process_avg_size_shared_text_space_kb Average size of the process's shared text space, in Kbytes.
-# TYPE ${NAME}_process_avg_size_shared_text_space_kb gauge
-${NAME}_process_avg_size_shared_text_space_kb{$LABELS} %X
-# HELP ${NAME}_major_page_fault_count Number of major page faults that occurred while the process was running. These are faults where the page has to be read in from disk.
-# TYPE ${NAME}_major_page_fault_count gauge
-${NAME}_major_page_fault_count{$LABELS} %F
-# HELP ${NAME}_minor_page_fault_count Number of minor, or recoverable, page faults. These are faults for pages that are not valid but which have not yet been claimed by other virtual pages. Thus the data in the page is still valid but the system tables must be updated.
-# TYPE ${NAME}_minor_page_fault_count gauge
-${NAME}_minor_page_fault_count{$LABELS} %R
-# HELP ${NAME}_command Name and command-line arguments of the command being timed. See Label.
-# TYPE ${NAME}_command gauge
-${NAME}_command{$LABELS,command=\"%C\"} 1"
+# HELP ${METRIC_NAME}_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode.
+# TYPE ${METRIC_NAME}_cpu_kernel_mode_seconds gauge
+${METRIC_NAME}_cpu_kernel_mode_seconds{$LABELS} %S
+# HELP ${METRIC_NAME}_elapsed_seconds Elapsed real time (in seconds).
+# TYPE ${METRIC_NAME}_elapsed_seconds gauge
+${METRIC_NAME}_elapsed_seconds{$LABELS} %e
+# HELP ${METRIC_NAME}_cpu_user_mode_seconds Total number of CPU-seconds that the process spent in user mode.
+# TYPE ${METRIC_NAME}_cpu_user_mode_seconds gauge
+${METRIC_NAME}_cpu_user_mode_seconds{$LABELS} %U
+# HELP ${METRIC_NAME}_max_resident_memory_kb Maximum resident set size of the process during its lifetime, in Kbytes.
+# TYPE ${METRIC_NAME}_max_resident_memory_kb gauge
+${METRIC_NAME}_max_resident_memory_kb{$LABELS} %M
+# HELP ${METRIC_NAME}_avg_total_memory_kb Average total (data+stack+text) memory use of the process, in Kbytes.
+# TYPE ${METRIC_NAME}_avg_total_memory_kb gauge
+${METRIC_NAME}_avg_total_memory_kb{$LABELS} %K
+# HELP ${METRIC_NAME}_swapped_from_main_memory_count Number of times the process was swapped out of main memory.
+# TYPE ${METRIC_NAME}_swapped_from_main_memory_count gauge
+${METRIC_NAME}_swapped_from_main_memory_count{$LABELS} %W
+# HELP ${METRIC_NAME}_signals_delivered_to_process_count Number of signals delivered to the process.
+# TYPE ${METRIC_NAME}_signals_delivered_to_process_count gauge
+${METRIC_NAME}_signals_delivered_to_process_count{$LABELS} %k
+# HELP ${METRIC_NAME}_context_switch_count_involuntary_count Number of times the process was context-switched involuntarily (because the time slice expired).
+# TYPE ${METRIC_NAME}_context_switch_count_involuntary_count gauge
+${METRIC_NAME}_context_switch_count_involuntary_count{$LABELS} %c
+# HELP ${METRIC_NAME}_context_switch_count_voluntary_count Number of waits, times that the program was context-switched voluntarily, for instance while waiting for an I/O operation to complete.
+# TYPE ${METRIC_NAME}_context_switch_count_voluntary_count gauge
+${METRIC_NAME}_context_switch_count_voluntary_count{$LABELS} %w
+# HELP ${METRIC_NAME}_filesystem_inputs_count Number of filesystem inputs by the process.
+# TYPE ${METRIC_NAME}_filesystem_inputs_count gauge
+${METRIC_NAME}_filesystem_inputs_count{$LABELS} %I
+# HELP ${METRIC_NAME}_filesystem_outputs_count Number of filesystem outputs by the process.
+# TYPE ${METRIC_NAME}_filesystem_outputs_count gauge
+${METRIC_NAME}_filesystem_outputs_count{$LABELS} %O
+# HELP ${METRIC_NAME}_socket_messages_received_count Number of socket messages received by the process.
+# TYPE ${METRIC_NAME}_socket_messages_received_count gauge
+${METRIC_NAME}_socket_messages_received_count{$LABELS} %r
+# HELP ${METRIC_NAME}_socket_messages_sent_count Number of socket messages sent by the process.
+# TYPE ${METRIC_NAME}_socket_messages_sent_count gauge
+${METRIC_NAME}_socket_messages_sent_count{$LABELS} %s
+# HELP ${METRIC_NAME}_exit_status Exit status of the command.
+# TYPE ${METRIC_NAME}_exit_status gauge
+${METRIC_NAME}_exit_status{$LABELS,promrun_name=\"${NAME}\",promrun=\"exit\"} %x
+# HELP ${METRIC_NAME}_process_avg_size_resident_set_kb Average resident set size of the process, in Kbytes.
+# TYPE ${METRIC_NAME}_process_avg_size_resident_set_kb gauge
+${METRIC_NAME}_process_avg_size_resident_set_kb{$LABELS} %t
+# HELP ${METRIC_NAME}_process_avg_size_unshared_data_area_kb Average size of the process's unshared data area, in Kbytes.
+# TYPE ${METRIC_NAME}_process_avg_size_unshared_data_area_kb gauge
+${METRIC_NAME}_process_avg_size_unshared_data_area_kb{$LABELS} %D
+# HELP ${METRIC_NAME}_process_avg_size_unshared_stack_space_kb Average size of the process's unshared stack space, in Kbytes.
+# TYPE ${METRIC_NAME}_process_avg_size_unshared_stack_space_kb gauge
+${METRIC_NAME}_process_avg_size_unshared_stack_space_kb{$LABELS} %p
+# HELP ${METRIC_NAME}_process_avg_size_shared_text_space_kb Average size of the process's shared text space, in Kbytes.
+# TYPE ${METRIC_NAME}_process_avg_size_shared_text_space_kb gauge
+${METRIC_NAME}_process_avg_size_shared_text_space_kb{$LABELS} %X
+# HELP ${METRIC_NAME}_major_page_fault_count Number of major page faults that occurred while the process was running. These are faults where the page has to be read in from disk.
+# TYPE ${METRIC_NAME}_major_page_fault_count gauge
+${METRIC_NAME}_major_page_fault_count{$LABELS} %F
+# HELP ${METRIC_NAME}_minor_page_fault_count Number of minor, or recoverable, page faults. These are faults for pages that are not valid but which have not yet been claimed by other virtual pages. Thus the data in the page is still valid but the system tables must be updated.
+# TYPE ${METRIC_NAME}_minor_page_fault_count gauge
+${METRIC_NAME}_minor_page_fault_count{$LABELS} %R
+# HELP ${METRIC_NAME}_command Name and command-line arguments of the command being timed. See Label.
+# TYPE ${METRIC_NAME}_command gauge
+${METRIC_NAME}_command{$LABELS,command=\"%C\"} 1"
 
 if [ -z "$DRYRUN" ] ; then
     start_time_text > "${TEXTFILE_PATH}.tmp"
