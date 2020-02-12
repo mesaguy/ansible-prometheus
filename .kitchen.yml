@@ -13,7 +13,7 @@ driver_config:
     - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
 
 verifier:
-  name: inspec
+  name: <%= ENV['KITCHEN_INSPEC_VERIFIER'] || 'inspec' %>
   sudo: false
 
 suites:

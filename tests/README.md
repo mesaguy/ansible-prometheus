@@ -3,7 +3,7 @@
 
 Test only specified software:
 
-    PROMETHEUS_INSTALL_ONLY=node_exporter.yml,script_exporter_adhocteam.yml kitchen test archlinux
+    KITCHEN_INSPEC_VERIFIER=dummy PROMETHEUS_INSTALL_ONLY=node_exporter.yml kitchen test archlinux
 
 SSH to a kitchen docker container. Replace port in 'ssh' command with port found when running 'docker ps':
 
