@@ -4,52 +4,87 @@
 
 - name: Set variables for {{ prometheus_software_name_version }} binary install
   set_fact:
-    prometheus_software_archive_file: '{{ prometheus_tmp_dir }}/{{ prometheus_software_bin_url | basename }}'
     prometheus_software_binary: '{{ prometheus_software_root_dir }}/{{ prometheus_software_version }}/{{ prometheus_software_binary_name | default(prometheus_software_name, true) }}'
     prometheus_software_install_dir: '{{ prometheus_software_root_dir }}/{{ prometheus_software_version }}'
 
 - name: Include task to setup directories for {{ prometheus_software_name_version }} installation
   include_tasks: _install_directory.yml
 
+- name: Set variables for {{ prometheus_software_name_version }} binary archive file with extended metadata
+  set_fact:
+    prometheus_software_archive_file: '{{ prometheus_tmp_dir }}/{{ prometheus_software_bin_metadata.name }}'
+  when:
+     - prometheus_software_bin_metadata is defined and prometheus_software_bin_metadata
+
+- name: Set variables for {{ prometheus_software_name_version }} binary archive file
+  set_fact:
+    prometheus_software_archive_file: '{{ prometheus_tmp_dir }}/{{ prometheus_software_bin_url | basename }}'
+  when:
+    - prometheus_software_bin_metadata is undefined or not prometheus_software_bin_metadata
+
 - name: Check {{ prometheus_software_name_version }} existence
+  become: true
   stat:
     path: '{{ prometheus_software_binary }}'
   register: prometheus_software_installed
 
 # Download and unarchive seperately as 'get_url' can follow redirects
 # and github uses redirects for some downloads
-- block:
-    - name: Download {{ prometheus_software_name_version }}
-      become: true
-      get_url:
-        url: '{{ prometheus_software_bin_url }}'
-        owner: '{{ prometheus_user }}'
-        group: '{{ prometheus_group }}'
-        dest: '{{ prometheus_software_archive_file }}'
-      # Handled downstream:
-      ignore_errors: '{{ prometheus_software_fallback_to_build | bool }}'
-      register: prometheus_software_download
-      retries: 5
-      delay: 10
-      until: prometheus_software_download is succeeded
+- name: Download {{ prometheus_software_name_version }} and validate checksum
+  become: true
+  get_url:
+    url: '{{ prometheus_software_bin_metadata.url }}'
+    checksum: '{{ prometheus_software_bin_metadata.sha256 }}'
+    timeout: 20
+    owner: '{{ prometheus_user }}'
+    group: '{{ prometheus_group }}'
+    dest: '{{ prometheus_software_archive_file }}'
+  # Handled downstream:
+  ignore_errors: '{{ prometheus_software_fallback_to_build | bool }}'
+  register: prometheus_software_download
+  retries: 5
+  delay: 10
+  until: prometheus_software_download is succeeded
+  when:
+    - not prometheus_software_installed.stat.exists
+    - prometheus_software_bin_metadata is defined and prometheus_software_bin_metadata
 
-    - name: Unarchive {{ prometheus_software_name_version }}
-      become: true
-      unarchive:
-        extra_opts: '{{ prometheus_software_binary_unarchive_opts | default(prometheus_default_binary_unarchive_opts) }}'
-        creates: '{{ prometheus_software_binary }}'
-        owner: root
-        group: '{{ prometheus_group }}'
-        src: '{{ prometheus_software_archive_file }}'
-        dest: '{{ prometheus_software_install_dir }}'
-        remote_src: true
-      # Handled downstream:
-      ignore_errors: '{{ prometheus_software_fallback_to_build | bool }}'
-      register: prometheus_software_installation
-      notify:
-        - Restart Prometheus service
-      when: not prometheus_software_download.failed
-  when: not prometheus_software_installed.stat.exists
+- name: Download {{ prometheus_software_name_version }}
+  become: true
+  get_url:
+    url: '{{ prometheus_software_bin_url }}'
+    timeout: 20
+    owner: '{{ prometheus_user }}'
+    group: '{{ prometheus_group }}'
+    dest: '{{ prometheus_software_archive_file }}'
+  # Handled downstream:
+  ignore_errors: '{{ prometheus_software_fallback_to_build | bool }}'
+  register: prometheus_software_download
+  retries: 5
+  delay: 10
+  until: prometheus_software_download is succeeded
+  when:
+    - not prometheus_software_installed.stat.exists
+    - prometheus_software_bin_metadata is undefined or not prometheus_software_bin_metadata
+
+- name: Unarchive {{ prometheus_software_name_version }}
+  become: true
+  unarchive:
+    extra_opts: '{{ prometheus_software_binary_unarchive_opts | default(prometheus_default_binary_unarchive_opts) }}'
+    creates: '{{ prometheus_software_binary }}'
+    owner: root
+    group: '{{ prometheus_group }}'
+    src: '{{ prometheus_software_archive_file }}'
+    dest: '{{ prometheus_software_install_dir }}'
+    remote_src: true
+  # Handled downstream:
+  ignore_errors: '{{ prometheus_software_fallback_to_build | bool }}'
+  register: prometheus_software_installation
+  notify:
+    - Restart Prometheus service
+  when:
+    - not prometheus_software_installed.stat.exists
+    - prometheus_software_download is succeeded
 
 - name: Remove {{ prometheus_software_name_version }} archive file
   become: true

@@ -1,13 +1,13 @@
 ---
-- name: 'Download Prometheus script {{ prometheus_script.name }} to {{ prometheus_script.directory | default(prometheus_script_directory) }}/{{ prometheus_script.filename | default(prometheus_script.url | basename) }}'
+- name: Download Prometheus script {{ prometheus_script.name }} to {{ prometheus_script.directory | default(prometheus_script_directory) }}/{{ prometheus_script.name }} and verify checksum
   become: true
   get_url:
     url: '{{ prometheus_script.url }}'
-    dest: '{{ prometheus_script.directory | default(prometheus_script_directory) }}/{{ prometheus_script.filename | default(prometheus_script.url | basename) }}'
+    dest: '{{ prometheus_script.directory | default(prometheus_script_directory) }}/{{ prometheus_script.name }}'
     owner: root
     group: '{{ prometheus_script.group | default(prometheus_group) }}'
     mode: '0555'
-    checksum: '{{ prometheus_script.checksum }}'
+    checksum: '{{ prometheus_script.sha256 }}'
   register: prometheus_download
   retries: 5
   delay: 10

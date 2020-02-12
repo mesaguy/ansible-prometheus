@@ -74,11 +74,7 @@ describe file('/opt/prometheus/prometheus/active/prometheus') do
     its('group') { should eq 'prometheus' }
 end
 
-describe command('/opt/prometheus/prometheus/active/promtool check config /opt/prometheus/opt/prometheus/etc.yml') do
-  its('exit_status') { should eq 0 }
-end
-
-describe command('/opt/prometheus/prometheus/active/promtool check config /opt/prometheus/opt/prometheus/etc.yml') do
+describe command('/opt/prometheus/prometheus/active/promtool check config /opt/prometheus/etc/prometheus.yml') do
   its('exit_status') { should eq 0 }
 end
 

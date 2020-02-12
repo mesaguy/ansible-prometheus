@@ -5,7 +5,14 @@
   when: prometheus_setup_task_executed is not defined
 
 - name: Include node_exporter variable file
-  include_vars: exporters/node_exporter.yml
+  include_vars:
+    name: prometheus_node_exporter_vars
+    file: exporters/node_exporter.yml
+
+- name: Include node_exporter textfile scripts variable file
+  include_vars:
+    name: prometheus_node_exporter_scripts_vars
+    file: node-exporter-textfile-collector-scripts.yml
 
 - name: Starting node_exporter install
   set_fact:
@@ -16,13 +23,13 @@
     prometheus_software_fallback_to_build: '{{ prometheus_node_exporter_fallback_to_build | default(prometheus_fallback_to_build) }}'
     prometheus_software_makefile_make_command: 'make build'
     prometheus_software_name: 'node_exporter'
-    prometheus_software_version: '{{ prometheus_node_exporter_version | default("0.18.1") }}'
-    prometheus_software_src_version: '{{ prometheus_node_exporter_src_version | default("v0.18.1") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_node_exporter_jobname | default(prometheus_node_exporter_default_tgroup_jobname) }}'
+    prometheus_software_version: '{{ prometheus_node_exporter_version | default(prometheus_node_exporter_vars.metadata.release) }}'
+    prometheus_software_src_version: '{{ prometheus_node_exporter_src_version | default(prometheus_node_exporter_vars.metadata.release) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_node_exporter_jobname | default(prometheus_node_exporter_vars.defaults.tgroup_jobname) }}'
     prometheus_software_description: 'Prometheus node_exporter, exporter of host statistics'
     prometheus_software_documentation: 'https://github.com/prometheus-community/node-exporter-textfile-collector-scripts'
     prometheus_software_host: '{{ prometheus_node_exporter_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_node_exporter_port | default(prometheus_node_exporter_default_port) }}'
+    prometheus_software_port: '{{ prometheus_node_exporter_port | default(prometheus_node_exporter_vars.defaults.port) }}'
     prometheus_software_runas: '{{ prometheus_node_exporter_runas | default(prometheus_user) }}'
 
 - name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
@@ -30,10 +37,12 @@
     prometheus_software_opts:
       - '--collector.textfile.directory={{ prometheus_node_exporter_textfiles_directory }}'
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
-    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
+    prometheus_software_bin_metadata: '{{ prometheus_node_exporter_vars["software"][prometheus_software_version].files | selectattr("name", "match", "^.*" + prometheus_architecture + ".*$") | list | first }}'
     prometheus_software_bin_url: 'https://github.com/prometheus/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
     prometheus_software_src_dir_suffix: '/src/github.com/prometheus/{{ prometheus_software_name }}'
     prometheus_software_src_url: 'https://github.com/prometheus/{{ prometheus_software_name }}.git'
+    prometheus_node_exporter_scripts_vars: '{{ prometheus_node_exporter_scripts_vars["software"]["master"].files }}'
 
 - name: Include task to create textfiles directory
   include_tasks: _create_textfiles_directory.yml
@@ -54,78 +63,24 @@
 - name: Set node_exporter script facts
   set_fact:
     prometheus_node_exporter_scripts:
-      - name: apt
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_apt_commit }}/apt.sh'
-        checksum: '{{ prometheus_script_apt_checksum }}'
-        enabled: '{{ prometheus_script_apt }}'
-      - name: btrfs_stats
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_btrfs_stats_commit }}/btrfs_stats.py'
-        checksum: '{{ prometheus_script_btrfs_stats_checksum }}'
-        enabled: '{{ prometheus_script_btrfs_stats }}'
-      - name: deleted_libraries
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_deleted_libraries_commit }}/deleted_libraries.py'
-        checksum: '{{ prometheus_script_deleted_libraries_checksum }}'
-        enabled: '{{ prometheus_script_deleted_libraries }}'
-      - name: directory_size
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_directory_size_commit }}/directory-size.sh'
-        checksum: '{{ prometheus_script_directory_size_checksum }}'
-        enabled: '{{ prometheus_script_directory_size }}'
-      - name: inotify-instances
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_inotify_instances_commit }}/inotify-instances'
-        checksum: '{{ prometheus_script_inotify_instances_checksum }}'
-        enabled: '{{ prometheus_script_inotify_instances }}'
-      - name: ipmitool
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_ipmitool_commit }}/ipmitool'
-        checksum: '{{ prometheus_script_ipmitool_checksum }}'
-        enabled: '{{ prometheus_script_ipmitool }}'
-      - name: md_info
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_md_info_commit }}/md_info.sh'
-        checksum: '{{ prometheus_script_md_info_checksum }}'
-        enabled: '{{ prometheus_script_md_info }}'
-      - name: md_info_detail
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_md_info_detail_commit }}/md_info_detail.sh'
-        checksum: '{{ prometheus_script_md_info_detail_checksum }}'
-        enabled: '{{ prometheus_script_md_info_detail }}'
-      - name: mellanox_hca_temp
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_mellanox_hca_temp_commit }}/mellanox_hca_temp'
-        checksum: '{{ prometheus_script_mellanox_hca_temp_checksum }}'
-        enabled: '{{ prometheus_script_mellanox_hca_temp }}'
-      - name: multipathd_info
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_multipathd_info_commit }}/multipathd_info'
-        checksum: '{{ prometheus_script_multipathd_info_checksum }}'
-        enabled: '{{ prometheus_script_multipathd_info }}'
-      - name: ntpd_metrics
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_ntpd_metrics_commit }}/ntpd_metrics.py'
-        checksum: '{{ prometheus_script_ntpd_metrics_checksum }}'
-        enabled: '{{ prometheus_script_ntpd_metrics }}'
-      - name: nvme_metrics
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_nvme_metrics_commit }}/nvme_metrics.sh'
-        checksum: '{{ prometheus_script_nvme_metrics_checksum }}'
-        enabled: '{{ prometheus_script_nvme_metrics }}'
-      - name: pacman
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_pacman_commit }}/pacman.sh'
-        checksum: '{{ prometheus_script_pacman_checksum }}'
-        enabled: '{{ prometheus_script_pacman }}'
-      - name: smartmon
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_smartmon_commit }}/smartmon.sh'
-        checksum: '{{ prometheus_script_smartmon_checksum }}'
-        enabled: '{{ prometheus_script_smartmon }}'
-      - name: smartmon_python
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_smartmon_python_commit }}/smartmon.py'
-        checksum: '{{ prometheus_script_smartmon_python_checksum }}'
-        enabled: '{{ prometheus_script_smartmon_python }}'
-      - name: storcli
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_storcli_commit }}/storcli.py'
-        checksum: '{{ prometheus_script_storcli_checksum }}'
-        enabled: '{{ prometheus_script_storcli }}'
-      - name: tw_cli
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_tw_cli_commit }}/tw_cli.py'
-        checksum: '{{ prometheus_script_tw_cli_checksum }}'
-        enabled: '{{ prometheus_script_tw_cli }}'
-      - name: yum
-        url: 'https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/{{ prometheus_script_yum_commit }}/yum.sh'
-        checksum: '{{ prometheus_script_yum_checksum }}'
-        enabled: '{{ prometheus_script_yum }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "apt.sh") | list | combine({ "enabled": prometheus_script_apt }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "btrfs_stats.py") | list | combine({ "enabled": prometheus_script_btrfs_stats }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "deleted_libraries.py") | list | combine({ "enabled": prometheus_script_deleted_libraries }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "directory-size.sh") | list | combine({ "enabled": prometheus_script_directory_size }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "inotify-instances") | list | combine({ "enabled": prometheus_script_inotify_instances }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "ipmitool") | list | combine({ "enabled": prometheus_script_ipmitool }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "md_info.sh") | list | combine({ "enabled": prometheus_script_md_info }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "md_info_detail.sh") | list | combine({ "enabled": prometheus_script_md_info_detail }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "mellanox_hca_temp") | list | combine({ "enabled": prometheus_script_mellanox_hca_temp }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "multipathd_info") | list | combine({ "enabled": prometheus_script_multipathd_info }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "ntpd_metrics.py") | list | combine({ "enabled": prometheus_script_ntpd_metrics }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "nvme_metrics.sh") | list | combine({ "enabled": prometheus_script_nvme_metrics }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "pacman.sh") | list | combine({ "enabled": prometheus_script_pacman }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "smartmon.sh") | list | combine({ "enabled": prometheus_script_smartmon }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "smartmon.py") | list | combine({ "enabled": prometheus_script_smartmon_python }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "storcli.py") | list | combine({ "enabled": prometheus_script_storcli }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "tw_cli.py") | list | combine({ "enabled": prometheus_script_tw_cli }) }}'
+      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "yum.sh") | list | combine({ "enabled": prometheus_script_yum }) }}'
 
 - name: Install node_exporter scripts
   include_tasks: _install_script.yml
