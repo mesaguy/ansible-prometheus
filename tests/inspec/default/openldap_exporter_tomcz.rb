@@ -28,7 +28,7 @@ control '01' do
   end
 end
 
-describe processes(Regexp.new("^/opt/prometheus/exporters/openldap_exporter_tomcz/([0-9.]+|[0-9.]+__go-[0-9.]+)/openldap_exporter")) do
+describe processes(Regexp.new("^/opt/prometheus/exporters/openldap_exporter_tomcz/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/openldap_exporter")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }

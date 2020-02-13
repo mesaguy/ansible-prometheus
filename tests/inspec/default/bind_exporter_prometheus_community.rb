@@ -28,7 +28,7 @@ control '01' do
   end
 end
 
-describe processes(Regexp.new("^/opt/prometheus/exporters/bind_exporter_prometheus_community/([0-9.]+|[0-9.]+__go-[0-9.]+)/bind_exporter")) do
+describe processes(Regexp.new("^/opt/prometheus/exporters/bind_exporter_prometheus_community/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/bind_exporter")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }
