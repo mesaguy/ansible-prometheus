@@ -14,13 +14,13 @@
   set_fact:
     prometheus_software_archive_file: '{{ prometheus_tmp_dir }}/{{ prometheus_software_bin_metadata.name }}'
   when:
-     - prometheus_software_bin_metadata is defined and prometheus_software_bin_metadata
+     - prometheus_software_bin_metadata is defined and prometheus_software_bin_metadata | length > 0
 
 - name: Set variables for {{ prometheus_software_name_version }} binary archive file
   set_fact:
     prometheus_software_archive_file: '{{ prometheus_tmp_dir }}/{{ prometheus_software_bin_url | basename }}'
   when:
-    - prometheus_software_bin_metadata is undefined or not prometheus_software_bin_metadata
+    - prometheus_software_bin_metadata is undefined or prometheus_software_bin_metadata | length == 0
 
 - name: Check {{ prometheus_software_name_version }} existence
   become: true
@@ -47,7 +47,7 @@
   until: prometheus_software_download is succeeded
   when:
     - not prometheus_software_installed.stat.exists
-    - prometheus_software_bin_metadata is defined and prometheus_software_bin_metadata
+    - prometheus_software_bin_metadata is defined and prometheus_software_bin_metadata | length > 0
 
 - name: Download {{ prometheus_software_name_version }}
   become: true
@@ -65,7 +65,7 @@
   until: prometheus_software_download is succeeded
   when:
     - not prometheus_software_installed.stat.exists
-    - prometheus_software_bin_metadata is undefined or not prometheus_software_bin_metadata
+    - prometheus_software_bin_metadata is undefined or prometheus_software_bin_metadata | length == 0
 
 - name: Unarchive {{ prometheus_software_name_version }}
   become: true
