@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade Go from v1.13.6 to v1.13.8
+- Upgrade Prometheus from v2.15.2 to v2.16.0
+- Upgrade ntp_exporter_sapcc v1.1.0 to v1.1.1
+
 ## [0.10.1] - 2020-01-28
 
 ### Changed
