@@ -44,7 +44,7 @@ control '01' do
   end
 end
 
-describe processes(Regexp.new("^/opt/prometheus/alertmanager/([0-9.]+|[0-9.]+__go-[0-9.]+)/alertmanager")) do
+describe processes(Regexp.new("^/opt/prometheus/alertmanager/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/alertmanager")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }

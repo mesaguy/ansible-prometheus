@@ -90,7 +90,7 @@ control '01' do
   end
 end
 
-describe processes(Regexp.new("^/opt/prometheus/prometheus/([0-9.]+|[0-9.]+__go-[0-9.]+)/prometheus")) do
+describe processes(Regexp.new("^/opt/prometheus/prometheus/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/prometheus")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }

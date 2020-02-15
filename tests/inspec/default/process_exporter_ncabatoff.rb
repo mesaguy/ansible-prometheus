@@ -40,7 +40,7 @@ control '02' do
   end
 end
 
-describe processes(Regexp.new("^/opt/prometheus/exporters/process_exporter_ncabatoff/([0-9.]+|[0-9.]+__go-[0-9.]+)/process-exporter")) do
+describe processes(Regexp.new("^/opt/prometheus/exporters/process_exporter_ncabatoff/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/process-exporter")) do
     it { should exist }
     its('entries.length') { should eq 2 }
     its('users') { should include 'prometheus' }

@@ -11,7 +11,7 @@
 - name: Include task to perform installation of {{ prometheus_software_name_version }} from binary
   include_tasks: _install_from_binary.yml
   when:
-    - (prometheus_software_bin_metadata is defined and prometheus_software_bin_metadata) or (prometheus_software_bin_url is defined and prometheus_software_bin_url)
+    - (prometheus_software_bin_metadata is defined and prometheus_software_bin_metadata | length > 0) or (prometheus_software_bin_url is defined and prometheus_software_bin_url)
     - not prometheus_always_build_from_source | bool
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }} by compiling go source

@@ -28,7 +28,7 @@ control '01' do
   end
 end
 
-describe processes(Regexp.new("^/opt/prometheus/exporters/squid_exporter_boynux/([0-9.]+|[0-9.]+__go-[0-9.]+)/squid-exporter")) do
+describe processes(Regexp.new("^/opt/prometheus/exporters/squid_exporter_boynux/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/squid-exporter")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }

@@ -28,7 +28,7 @@ control '01' do
   end
 end
 
-describe processes(Regexp.new("^/opt/prometheus/exporters/couchbase_exporter_blakelead/([0-9.]+|[0-9.]+__go-[0-9.]+)/couchbase_exporter")) do
+describe processes(Regexp.new("^/opt/prometheus/exporters/couchbase_exporter_blakelead/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/couchbase_exporter")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }

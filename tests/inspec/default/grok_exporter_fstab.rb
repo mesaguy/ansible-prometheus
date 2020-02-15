@@ -30,7 +30,7 @@ if ( os_env('KITCHEN_PLAYBOOK').content() == 'build_all')
       end
     end
 
-    describe processes(Regexp.new("^/opt/prometheus/exporters/grok_exporter_fstab/([0-9.]+|[0-9.]+__go-[0-9.]+)/grok_exporter")) do
+    describe processes(Regexp.new("^/opt/prometheus/exporters/grok_exporter_fstab/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/grok_exporter")) do
         it { should exist }
         its('entries.length') { should eq 1 }
         its('users') { should include 'prometheus' }

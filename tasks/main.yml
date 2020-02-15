@@ -56,5 +56,8 @@
     tasks_from: '{{ prometheus_mesaguy_script }}'
   loop_control:
     loop_var: prometheus_mesaguy_script
-  with_items: '{{ prometheus_mesaguy_scripts }}'
+  with_items:
+    - promcron
+    - promrun
+    - sssd_check
   when: lookup('vars', 'prometheus_script_' + prometheus_mesaguy_script) | bool

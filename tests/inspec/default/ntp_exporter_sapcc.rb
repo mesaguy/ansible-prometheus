@@ -28,7 +28,7 @@ control '01' do
   end
 end
 
-describe processes(Regexp.new("^/opt/prometheus/exporters/ntp_exporter_sapcc/(v[0-9.]+|[0-9.a-z\-]+__go-[0-9.]+)/ntp_exporter")) do
+describe processes(Regexp.new("^/opt/prometheus/exporters/ntp_exporter_sapcc/(v)?([0-9.]+|[0-9.a-z\-]+__go-[0-9.]+)/ntp_exporter")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }

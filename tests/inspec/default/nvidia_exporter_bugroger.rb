@@ -28,7 +28,7 @@ control '01' do
   end
 end
 
-describe processes(Regexp.new("^/opt/prometheus/exporters/nvidia_exporter_bugroger/([0-9a-z]+__go-[0-9.]+)/nvidia-exporter")) do
+describe processes(Regexp.new("^/opt/prometheus/exporters/nvidia_exporter_bugroger/(v)?([0-9a-z]+__go-[0-9.]+)/nvidia-exporter")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }

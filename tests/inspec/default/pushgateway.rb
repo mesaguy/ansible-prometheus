@@ -28,7 +28,7 @@ control '01' do
   end
 end
 
-describe processes(Regexp.new("^/opt/prometheus/pushgateway/([0-9.]+|[0-9.]+__go-[0-9.]+)/pushgateway")) do
+describe processes(Regexp.new("^/opt/prometheus/pushgateway/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/pushgateway")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }
