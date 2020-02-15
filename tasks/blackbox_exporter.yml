@@ -22,11 +22,11 @@
     prometheus_software_name: 'blackbox_exporter'
     prometheus_software_version: '{{ prometheus_blackbox_exporter_version | default("0.16.0") }}'
     prometheus_software_src_version: '{{ prometheus_blackbox_exporter_src_version | default("v0.16.0") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_blackbox_exporter_jobname | default(prometheus_blackbox_exporter_default_tgroup_jobname) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_blackbox_exporter_jobname | default("blackbox") }}'
     prometheus_software_description: 'Prometheus blackbox_exporter, probing of endpoints'
     prometheus_software_documentation: 'https://github.com/prometheus/blackbox_exporter'
     prometheus_software_host: '{{ prometheus_blackbox_exporter_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_blackbox_exporter_port | default(prometheus_blackbox_exporter_default_port) }}'
+    prometheus_software_port: '{{ prometheus_blackbox_exporter_port | default(9115) }}'
     prometheus_software_runas: '{{ prometheus_blackbox_exporter_runas | default(prometheus_user) }}'
 
 - name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts

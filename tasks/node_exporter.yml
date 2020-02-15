@@ -23,13 +23,13 @@
     prometheus_software_fallback_to_build: '{{ prometheus_node_exporter_fallback_to_build | default(prometheus_fallback_to_build) }}'
     prometheus_software_makefile_make_command: 'make build'
     prometheus_software_name: 'node_exporter'
-    prometheus_software_version: '{{ prometheus_node_exporter_version | default(prometheus_node_exporter_vars.metadata.release) }}'
-    prometheus_software_src_version: '{{ prometheus_node_exporter_src_version | default(prometheus_node_exporter_vars.metadata.release) }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_node_exporter_jobname | default(prometheus_node_exporter_vars.defaults.tgroup_jobname) }}'
+    prometheus_software_version: '{{ prometheus_node_exporter_version | default(prometheus_node_exporter_vars.software_metadata.release) }}'
+    prometheus_software_src_version: '{{ prometheus_node_exporter_src_version | default(prometheus_node_exporter_vars.software_metadata.release) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_node_exporter_jobname | default("node") }}'
     prometheus_software_description: 'Prometheus node_exporter, exporter of host statistics'
     prometheus_software_documentation: 'https://github.com/prometheus-community/node-exporter-textfile-collector-scripts'
     prometheus_software_host: '{{ prometheus_node_exporter_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_node_exporter_port | default(prometheus_node_exporter_vars.defaults.port) }}'
+    prometheus_software_port: '{{ prometheus_node_exporter_port | default(9100) }}'
     prometheus_software_runas: '{{ prometheus_node_exporter_runas | default(prometheus_user) }}'
 
 - name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts

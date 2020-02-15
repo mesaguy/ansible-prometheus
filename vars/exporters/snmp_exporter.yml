@@ -1,3 +1,1609 @@
 ---
-prometheus_snmp_exporter_default_port: 9116
-prometheus_snmp_exporter_default_tgroup_jobname: snmp
+defaults:
+  port: 9116
+  tgroup_jobname: snmp
+metadata:
+  prerelease: v0.16.1
+  release: v0.16.1
+  updated: 2020-02-12 20:25:43.701522
+software:
+  0.0.4:
+    files: []
+    prerelease: false
+    commit_sha: 7914fa6917b15679aaa1e3bbd012c4568a0a7e52
+  0.0.5:
+    files: []
+    prerelease: false
+    commit_sha: b671bda47bb83fc99bd979f32166978454db3421
+  0.0.6:
+    files: []
+    prerelease: false
+    commit_sha: 30cb5cc264d1a3c2329ed40e740f57f3670fe1ee
+  v0.1.0:
+    files:
+    - name: snmp_exporter-0.1.0.darwin-386.tar.gz
+      sha256: sha256:693366f669bb218f67ddcb0c005dd6ae46130d4ac273fd033080ff48f082afeb
+      size: 3310980
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.darwin-386.tar.gz
+    - name: snmp_exporter-0.1.0.darwin-amd64.tar.gz
+      sha256: sha256:0447326a4803418b1ae320a73e3a7dacaddb8538076543a50366148e9848ee73
+      size: 3547765
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.1.0.dragonfly-amd64.tar.gz
+      sha256: sha256:ea9b40f3f6fbe9327af405e1d83ebd64e4f82d40f7e3fbc899aff58ba8b791ca
+      size: 3521721
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.1.0.freebsd-386.tar.gz
+      sha256: sha256:4727b214fff0a58ff9c73c69ce0b0b909dc39fcebcd1c06eca7f5630ea7cbcb1
+      size: 3291438
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.freebsd-386.tar.gz
+    - name: snmp_exporter-0.1.0.freebsd-amd64.tar.gz
+      sha256: sha256:ca398f8493a9552dcf4fdd5e0f15d504fb1c0502fbd6c90407488913a9691a11
+      size: 3528139
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.1.0.freebsd-armv5.tar.gz
+      sha256: sha256:0a12f4ac2923a74337131482c9aa087130667b557d54bffa43a054b62428ba5b
+      size: 3194239
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.freebsd-armv5.tar.gz
+    - name: snmp_exporter-0.1.0.freebsd-armv6.tar.gz
+      sha256: sha256:fb8d9bcd8bae761036db2d34af71e3db2d8a420220928bc9df682b305d583708
+      size: 3173241
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.freebsd-armv6.tar.gz
+    - name: snmp_exporter-0.1.0.freebsd-armv7.tar.gz
+      sha256: sha256:98f978e47bdfadd206de585f56b8a0c4d185bf13541acfda3a711c02aabd5d48
+      size: 3171328
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.freebsd-armv7.tar.gz
+    - name: snmp_exporter-0.1.0.linux-386.tar.gz
+      sha256: sha256:2d85f45c9a712ae4f860439c636128d86432f801119adeedbafba4d841dd2d87
+      size: 3294235
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.linux-386.tar.gz
+    - name: snmp_exporter-0.1.0.linux-amd64.tar.gz
+      sha256: sha256:6cee463653d9998664da790d44a4a849778f66a8b5f81592eca513cc7efca94a
+      size: 3528852
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.linux-amd64.tar.gz
+    - name: snmp_exporter-0.1.0.linux-arm64.tar.gz
+      sha256: sha256:7730737882e006bb74d0a16b53c5fec988d3a238b5bafb149798b39454805fe7
+      size: 3240703
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.linux-arm64.tar.gz
+    - name: snmp_exporter-0.1.0.linux-armv5.tar.gz
+      sha256: sha256:d3e604e7d918dee58081490dbf3f87a8dd0cc4af95360b8b97f8dc63d771aa5c
+      size: 3191238
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.linux-armv5.tar.gz
+    - name: snmp_exporter-0.1.0.linux-armv6.tar.gz
+      sha256: sha256:1a873010fbf536ac9144c088ee7456ccac8c0ee5b32f10620563cd4365ce96c0
+      size: 3170353
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.linux-armv6.tar.gz
+    - name: snmp_exporter-0.1.0.linux-armv7.tar.gz
+      sha256: sha256:5fa1f34a1149d918394c313b2d7f5bb83ff0bbcd763f46d64960056c7d9ceeb5
+      size: 3168731
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.linux-armv7.tar.gz
+    - name: snmp_exporter-0.1.0.linux-mips64.tar.gz
+      sha256: sha256:b2a3e73ababcf8507f1538d5dc994a0b7c83a2ae9c5d7becf1552bf44852d543
+      size: 3248467
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.linux-mips64.tar.gz
+    - name: snmp_exporter-0.1.0.linux-mips64le.tar.gz
+      sha256: sha256:e60f749cacff9d377ef0b5495787c42fbc6611ddfb416415ab3af401931e17e9
+      size: 3110270
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.linux-mips64le.tar.gz
+    - name: snmp_exporter-0.1.0.linux-ppc64.tar.gz
+      sha256: sha256:4a651a2b7b8591c291c057d44bd96f501d2d320f4a87caf733b199bb2b0d394b
+      size: 3347961
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.1.0.linux-ppc64le.tar.gz
+      sha256: sha256:1a8b658f7137a30f35ee7065e1efee4c388aa311a2b9b7a5b52178508c1c92ea
+      size: 3240834
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.1.0.netbsd-386.tar.gz
+      sha256: sha256:b906b9592559e8f9df44498a65a32dd864c5b2fc497601069706a2305c9796af
+      size: 3287813
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.netbsd-386.tar.gz
+    - name: snmp_exporter-0.1.0.netbsd-amd64.tar.gz
+      sha256: sha256:e1ee41ab7e9d3f4957136215e539d37e7736c18a0601d504d2a708df4c2bb011
+      size: 3518402
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.1.0.netbsd-armv5.tar.gz
+      sha256: sha256:3c47afb18e769cc305647afc435fb8e85ffab616e9ba501cdaeb4bbfbc30062b
+      size: 3187361
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.netbsd-armv5.tar.gz
+    - name: snmp_exporter-0.1.0.netbsd-armv6.tar.gz
+      sha256: sha256:1148c16fe1d932e9c2976220d65201882cced63ae3e8ec8c14df2c6a6b7e592c
+      size: 3168093
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.1.0.netbsd-armv7.tar.gz
+      sha256: sha256:2f4df38369826fd5366cfaf5f9d9415223c4adac398530306e48a6073a330c7e
+      size: 3167088
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.1.0.openbsd-386.tar.gz
+      sha256: sha256:59ceb858828682988b6a7576364bb98f02dced70904f0f54602b65d46dc63284
+      size: 3287860
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.openbsd-386.tar.gz
+    - name: snmp_exporter-0.1.0.openbsd-amd64.tar.gz
+      sha256: sha256:0eed25df89f3385ba3e8bbfb7c9729967a0b8cd936edf99f65817cf14542a4d9
+      size: 3519973
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.1.0.openbsd-armv5.tar.gz
+      sha256: sha256:4a2657749c7da58a586cd55e9fae65264e629852cf4b07221c6f2dcebeab2a54
+      size: 3188999
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.openbsd-armv5.tar.gz
+    - name: snmp_exporter-0.1.0.openbsd-armv6.tar.gz
+      sha256: sha256:45bf3ed6225a9c93f8396b871386db3658759a8274a785b20b013bf893e04987
+      size: 3167704
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.openbsd-armv6.tar.gz
+    - name: snmp_exporter-0.1.0.openbsd-armv7.tar.gz
+      sha256: sha256:2d02a96a9a5eb4c982064762219ed92ae78ede9436eec53b85109edfd1a0d7ba
+      size: 3166795
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.openbsd-armv7.tar.gz
+    - name: snmp_exporter-0.1.0.windows-386.tar.gz
+      sha256: sha256:6b6acaf83c493237fd5be4737e36a0a63c4be809299ae888d80f5a167a545886
+      size: 3281968
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.windows-386.tar.gz
+    - name: snmp_exporter-0.1.0.windows-amd64.tar.gz
+      sha256: sha256:85beed967184f5272014cef390d96596cc23d4c7ce01927bc83cdaad4f13c92a
+      size: 3522850
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.1.0/snmp_exporter-0.1.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: fc0e62d141beedb7aa826c6ab1563ceeed724228
+  v0.10.0:
+    files:
+    - name: sha256sums.txt
+      sha256: sha256:b87ca8dec0c0bcafceceac40487fda6f5069f1dd53a1f651ceb150dd89673f28
+      size: 2238
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/sha256sums.txt
+    - name: snmp_exporter-0.10.0.darwin-386.tar.gz
+      sha256: sha256:5329f9e3e9a1dff831679dfe323c529ec643b9d6654faeb42acc0a7a6b472057
+      size: 4292477
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.darwin-386.tar.gz
+    - name: snmp_exporter-0.10.0.darwin-amd64.tar.gz
+      sha256: sha256:e906dab3aaabc8a3ae6a5ca720d958d63e61887ecf5c04b5895cc10113c6566e
+      size: 4458530
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.10.0.dragonfly-amd64.tar.gz
+      sha256: sha256:753c81d3eadae68997677069223f4c3a9158eba5d5ae51c95eee1e45c12f4b8c
+      size: 4424255
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.10.0.freebsd-386.tar.gz
+      sha256: sha256:2a79edf850bc04ed4279337d159602fa1d83fa0cb844c42c0a8488924c819497
+      size: 4265505
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.freebsd-386.tar.gz
+    - name: snmp_exporter-0.10.0.freebsd-amd64.tar.gz
+      sha256: sha256:bc227006c35a2e8b5f89a86f38bf2690efbfefd93696ba0b5401b38c3cbef5ad
+      size: 4431055
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.10.0.linux-386.tar.gz
+      sha256: sha256:005a0510847ad40d49e0e5478d25426b855c94f2d80352bb4ce10e92c9f0be8e
+      size: 4268763
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.linux-386.tar.gz
+    - name: snmp_exporter-0.10.0.linux-amd64.tar.gz
+      sha256: sha256:1b1ee99fa4ce1fe0ae66382af926c3038419c9d3b6dd8150bd1c9d589c804470
+      size: 4428903
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.linux-amd64.tar.gz
+    - name: snmp_exporter-0.10.0.linux-arm64.tar.gz
+      sha256: sha256:77086fd687ba57c1b40791a789bd3c09533274d3d6bf7d5d244edc755ff5bb4b
+      size: 4145643
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.linux-arm64.tar.gz
+    - name: snmp_exporter-0.10.0.linux-armv5.tar.gz
+      sha256: sha256:538875508af2698479d71148a5295fb8842216f641c2b8769c7a6935bcf309b1
+      size: 4178645
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.linux-armv5.tar.gz
+    - name: snmp_exporter-0.10.0.linux-armv6.tar.gz
+      sha256: sha256:c997b6df29646cf3336be4a4f48148382980efd97bba3fe460baf3bf620d9b90
+      size: 4157114
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.linux-armv6.tar.gz
+    - name: snmp_exporter-0.10.0.linux-armv7.tar.gz
+      sha256: sha256:f3785535a8e14e544e80eb52e132c576bb74270e95552a85e92a5cfc5506dbc5
+      size: 4153811
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.linux-armv7.tar.gz
+    - name: snmp_exporter-0.10.0.linux-ppc64.tar.gz
+      sha256: sha256:bc1569877cbe3acb1071175d339963faa7f8839eb5af6ada3a9bee9b784b1677
+      size: 4250429
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.10.0.linux-ppc64le.tar.gz
+      sha256: sha256:f81c591b5d462e1c8fff69d1641cad3ec1a5f08de13bd195db1a82ae73bd109e
+      size: 4143993
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.10.0.netbsd-386.tar.gz
+      sha256: sha256:9f2809f540ea78d45eed8f01441696850993a85bc1c3d042c9c4e3c198853665
+      size: 4257501
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.netbsd-386.tar.gz
+    - name: snmp_exporter-0.10.0.netbsd-amd64.tar.gz
+      sha256: sha256:62b41ce7cab90235359924eaaa20fed968df506fcfe45874badb23f288e734e1
+      size: 4423697
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.10.0.netbsd-armv6.tar.gz
+      sha256: sha256:af7fc2cf5411a80ea040eebd582de8788465eb8bc3845d9191edde6708826727
+      size: 4159232
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.10.0.netbsd-armv7.tar.gz
+      sha256: sha256:57d9215a494dd7f132074a801c48b80e25fb46697e8bd23f47869e429235cdb4
+      size: 4155982
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.10.0.openbsd-386.tar.gz
+      sha256: sha256:79feff85a2c903cd6eb9d5332c90e98a53e8130cc9d5d0f0039897a7367d6a98
+      size: 4257795
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.openbsd-386.tar.gz
+    - name: snmp_exporter-0.10.0.openbsd-amd64.tar.gz
+      sha256: sha256:173e289dcc587e7c8b3420d2ec7e29dd5d3da0f61bcb65eb92ad6c777cc67569
+      size: 4425955
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.10.0.windows-386.tar.gz
+      sha256: sha256:ce0765a4302465bbe9c2746a78ea24a3d0d28d7499f918c6175eb95ce7b8dc48
+      size: 4233050
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.windows-386.tar.gz
+    - name: snmp_exporter-0.10.0.windows-amd64.tar.gz
+      sha256: sha256:3c4af254796aec52a194a06a2c3ea02abd4902ec795b8128d55979151cf89a5a
+      size: 4405346
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.10.0/snmp_exporter-0.10.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: 5c997da9e9ee79dc6c72641f02d204f4eafc14b3
+  v0.11.0:
+    files:
+    - name: sha256sums.txt
+      sha256: sha256:7247d6e637bea97214cacd19988a22ba869fc04ff0c948f5e9a51b5083c5d342
+      size: 2238
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/sha256sums.txt
+    - name: snmp_exporter-0.11.0.darwin-386.tar.gz
+      sha256: sha256:28937e0a474fa2a1de38c0f74f106fc8738c7f78f0f5f4eabe91a563e87343b1
+      size: 4296031
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.darwin-386.tar.gz
+    - name: snmp_exporter-0.11.0.darwin-amd64.tar.gz
+      sha256: sha256:6e7b750fa416c6a5bdcb162cf520ff4f24e586a888ef44999a8015a4a2816808
+      size: 4463723
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.11.0.dragonfly-amd64.tar.gz
+      sha256: sha256:0481aa9d7b025193b9dad009cd95e7fd27cbdfd9724145d53ee33f019f546d04
+      size: 4425962
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.11.0.freebsd-386.tar.gz
+      sha256: sha256:e949b9bc37c07dd796ac10ccc136e1b44fdb59554d86486d34c31403868b9305
+      size: 4268628
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.freebsd-386.tar.gz
+    - name: snmp_exporter-0.11.0.freebsd-amd64.tar.gz
+      sha256: sha256:7a22bdc350076190a9bab4a98ec284a0ecbd8b623f26f104465342a072e3366b
+      size: 4435483
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.11.0.linux-386.tar.gz
+      sha256: sha256:d399415ffffb2d47634546f28ed333687e025127b6202d8c0abb9a0b0a6817c0
+      size: 4279628
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.linux-386.tar.gz
+    - name: snmp_exporter-0.11.0.linux-amd64.tar.gz
+      sha256: sha256:8bfd4b439b6a24e76200ed089c5c931806e1b93b3f6c89cd32c555790f3afb66
+      size: 4438761
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.linux-amd64.tar.gz
+    - name: snmp_exporter-0.11.0.linux-arm64.tar.gz
+      sha256: sha256:d833cec7668e16cfd37d16ea96a59b89fe271b5dade46949d8cb5d9444ed65dd
+      size: 4153778
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.linux-arm64.tar.gz
+    - name: snmp_exporter-0.11.0.linux-armv5.tar.gz
+      sha256: sha256:69deb2afa33a4f3da0217c919e446c6bccb52ea4c84d32fa284023f2c8f47fb8
+      size: 4188528
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.linux-armv5.tar.gz
+    - name: snmp_exporter-0.11.0.linux-armv6.tar.gz
+      sha256: sha256:3dfdedcefef47e53afb424410e8e3a9d95c9d9248ca8a83d88c0011c6086a4a9
+      size: 4168309
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.linux-armv6.tar.gz
+    - name: snmp_exporter-0.11.0.linux-armv7.tar.gz
+      sha256: sha256:e3905d8d4c64e014e37e68c3a8f344e1f9d9dc13dc69093456196537e171d491
+      size: 4163701
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.linux-armv7.tar.gz
+    - name: snmp_exporter-0.11.0.linux-ppc64.tar.gz
+      sha256: sha256:9ace9e593a4d2894e496595edad08f2277d127985491a8ee1aa8ba387fc41454
+      size: 4256946
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.11.0.linux-ppc64le.tar.gz
+      sha256: sha256:9feffc352b43fbeae45eff82b107d50ace2d8f63aaae1494145bb969d5d904e2
+      size: 4154716
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.11.0.netbsd-386.tar.gz
+      sha256: sha256:cb38969046555e8a9cc8c0d04b1b079fe320e7a554ee5e74dd1726aae0834bea
+      size: 4260022
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.netbsd-386.tar.gz
+    - name: snmp_exporter-0.11.0.netbsd-amd64.tar.gz
+      sha256: sha256:0edd9e23ab47f9a0c15cbd72c711792079883f169aec577f8b6a42a446f1c356
+      size: 4426978
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.11.0.netbsd-armv6.tar.gz
+      sha256: sha256:b897911beebe765f23580afc30ccca5223ae2b02caf510c947bf1c793814401e
+      size: 4163043
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.11.0.netbsd-armv7.tar.gz
+      sha256: sha256:c595a30d84599c9b2411b807cca063e119d4432b0e50151c4fee1792e5b8cfd0
+      size: 4158540
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.11.0.openbsd-386.tar.gz
+      sha256: sha256:2010c793e3486315726511ef0a57bfe94ce2845147cb8c197464711faabddf0e
+      size: 4260473
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.openbsd-386.tar.gz
+    - name: snmp_exporter-0.11.0.openbsd-amd64.tar.gz
+      sha256: sha256:aab1eeb1f079492256c1d3e71ef18d3310e7483400e018832336f9061e835234
+      size: 4429597
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.11.0.windows-386.tar.gz
+      sha256: sha256:083f3db5b171438940661192d28f11ab07fe4c083953c843d1b0f157ad966f47
+      size: 4232784
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.windows-386.tar.gz
+    - name: snmp_exporter-0.11.0.windows-amd64.tar.gz
+      sha256: sha256:bb22c9ffd6177a3bdb6ade588f72bfc0deb6c442613a31388eb4ffdcefd7d74a
+      size: 4407891
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.11.0/snmp_exporter-0.11.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: e4591716c29459cb2a12b1bed129af519ad91d23
+  v0.12.0:
+    files:
+    - name: sha256sums.txt
+      sha256: sha256:b01bae4f6d0ab00450622a4423fb267dfe0f3d540c410ecb070ed4aaea7bf09e
+      size: 2238
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/sha256sums.txt
+    - name: snmp_exporter-0.12.0.darwin-386.tar.gz
+      sha256: sha256:a0aab1a374145feae30b79a9d8f5f7682b71bcd4a02fe50d18d7b5ebc8e52e9d
+      size: 4295939
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.darwin-386.tar.gz
+    - name: snmp_exporter-0.12.0.darwin-amd64.tar.gz
+      sha256: sha256:e7913f8ecf194caeed53f2f89529819ace33d4f416b704da2fbeb9be611867bc
+      size: 4461913
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.12.0.dragonfly-amd64.tar.gz
+      sha256: sha256:5be10f12fa77832604a47e2892be803de0aa3f4c35cf52e8d63b4144aa6fc6d5
+      size: 4425911
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.12.0.freebsd-386.tar.gz
+      sha256: sha256:d78de3a66f692d49d34344978bc834d84ffab893747d4c3eac45e657bcac9114
+      size: 4266341
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.freebsd-386.tar.gz
+    - name: snmp_exporter-0.12.0.freebsd-amd64.tar.gz
+      sha256: sha256:e168e256f5460562fa52ab5d7d803c53af7b056f568bab2f4c07d136c493e0cb
+      size: 4433339
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.12.0.linux-386.tar.gz
+      sha256: sha256:937885d9899892c22213d4d2531e15b4424d49b3f3c16b1cf02cedabc6fb56e8
+      size: 4276773
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.linux-386.tar.gz
+    - name: snmp_exporter-0.12.0.linux-amd64.tar.gz
+      sha256: sha256:bd90c6563ae8428691efd114d61fb10ee22f221c9bad47780f89b67d0c1ffcff
+      size: 4436580
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.linux-amd64.tar.gz
+    - name: snmp_exporter-0.12.0.linux-arm64.tar.gz
+      sha256: sha256:fbea37189ae24197340573b363aa3c2a733e7cc528bc56fef9915d42f110e989
+      size: 4151820
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.linux-arm64.tar.gz
+    - name: snmp_exporter-0.12.0.linux-armv5.tar.gz
+      sha256: sha256:a77a85e7edf865cd333b68f41b01898c22e9fead9eb61d03857d237ae3beb05b
+      size: 4186805
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.linux-armv5.tar.gz
+    - name: snmp_exporter-0.12.0.linux-armv6.tar.gz
+      sha256: sha256:780009d405cd90a5888372bc1442e048b50caed68a6d1959c96ca26041e0d0d5
+      size: 4165962
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.linux-armv6.tar.gz
+    - name: snmp_exporter-0.12.0.linux-armv7.tar.gz
+      sha256: sha256:68712fa14d7ddc3e56844643934a32c69b0fbc9aded793425b4550a09236cfbf
+      size: 4162752
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.linux-armv7.tar.gz
+    - name: snmp_exporter-0.12.0.linux-ppc64.tar.gz
+      sha256: sha256:b52ca5bfe60bb98df25c718fb632dd6a408451bdd2db8cdc071826a7dc0b2789
+      size: 4257042
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.12.0.linux-ppc64le.tar.gz
+      sha256: sha256:9717d9d457fb3e56e921564555b3c6dcfde033aecc834fa574771b2175194ed7
+      size: 4153155
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.12.0.netbsd-386.tar.gz
+      sha256: sha256:c5b822a295feb290188a5967254f089c9f8ef1b50234001b65580c7bb6ce9070
+      size: 4259582
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.netbsd-386.tar.gz
+    - name: snmp_exporter-0.12.0.netbsd-amd64.tar.gz
+      sha256: sha256:0c9554162f42e9255e8654fab471c99537e970b42fd2d27e315d717d8ef5fc09
+      size: 4424792
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.12.0.netbsd-armv6.tar.gz
+      sha256: sha256:e2dc69e81a40b42dd6f083b7ec0af0078067adad480f64ada24e33a812921e06
+      size: 4161814
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.12.0.netbsd-armv7.tar.gz
+      sha256: sha256:c069bbcc90a3a15007b58867f335894c1c3a2e7130a6752b1c09b41760de18fc
+      size: 4158916
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.12.0.openbsd-386.tar.gz
+      sha256: sha256:8c529b8950df7a3be26fc56760c11a81cdf321510bfe99c394b6df80efeb0107
+      size: 4262212
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.openbsd-386.tar.gz
+    - name: snmp_exporter-0.12.0.openbsd-amd64.tar.gz
+      sha256: sha256:b3c5fb90bf6660294f08dfdf96d8716d447eea15d03a9eab0c1dfa4f9caca3e1
+      size: 4429456
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.12.0.windows-386.tar.gz
+      sha256: sha256:05bcb4b60dfe2b3119251cdaaf70b361e031bdca9acb4379c670ae6218b2f9f6
+      size: 4235878
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.windows-386.tar.gz
+    - name: snmp_exporter-0.12.0.windows-amd64.tar.gz
+      sha256: sha256:90620f65ad640c2937bd79887bfd5a0b7cca2890f437bda943974c9362277208
+      size: 4407926
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.12.0/snmp_exporter-0.12.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: 26b3c855fb72b64527881a5acb8597ef49b00f9f
+  v0.13.0:
+    files:
+    - name: sha256sums.txt
+      sha256: sha256:145259ef3fc512fe97f71309d3bc47895dfa42033c48a64911953c544a447584
+      size: 2238
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/sha256sums.txt
+    - name: snmp_exporter-0.13.0.darwin-386.tar.gz
+      sha256: sha256:5fb155572ad4994e38697ccfcdcdf7c2a07fb5812612565ccce10f85c7d93893
+      size: 4653970
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.darwin-386.tar.gz
+    - name: snmp_exporter-0.13.0.darwin-amd64.tar.gz
+      sha256: sha256:2ba64e745bdc799c868ee300aa8857bf7262a1c4c5725c8167c5655cbfada406
+      size: 4811098
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.13.0.dragonfly-amd64.tar.gz
+      sha256: sha256:447797a91fc3750eb99f75aa73452394f849c1a8110774c8d848254e71893006
+      size: 4778164
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.13.0.freebsd-386.tar.gz
+      sha256: sha256:f487b27ac771823c87f65b8862a9c0968912020d69fbbb9bd54a42a6a31e6ae4
+      size: 4627625
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.freebsd-386.tar.gz
+    - name: snmp_exporter-0.13.0.freebsd-amd64.tar.gz
+      sha256: sha256:fdef90a9e2dbeee0589801adfaffccbf7914d9cd39d0cc4794deb878c2dd28fc
+      size: 4787257
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.13.0.linux-386.tar.gz
+      sha256: sha256:ff452a23df12975a6adccbbbea796ebc1f7aaad7a54bf27c93dc343cc018a032
+      size: 4638397
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.linux-386.tar.gz
+    - name: snmp_exporter-0.13.0.linux-amd64.tar.gz
+      sha256: sha256:a6c0795109e55c422ec20ee88aa0e966acbe0a6ad1f2642180375a092ed7b3b1
+      size: 4791762
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.linux-amd64.tar.gz
+    - name: snmp_exporter-0.13.0.linux-arm64.tar.gz
+      sha256: sha256:b36bc17d6ed614158feba2f936ae59c016cc1f39531782790b5769c7d67b1f61
+      size: 4481537
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.linux-arm64.tar.gz
+    - name: snmp_exporter-0.13.0.linux-armv5.tar.gz
+      sha256: sha256:1079207eb22b496d8e08ead559f22600d611588f71728e950e90e84f6350b516
+      size: 4533679
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.linux-armv5.tar.gz
+    - name: snmp_exporter-0.13.0.linux-armv6.tar.gz
+      sha256: sha256:e5ffbea3ff36beb8dca3ffdfb5725b4fbf3a2db189ea421a4062c84f5c302a2d
+      size: 4509855
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.linux-armv6.tar.gz
+    - name: snmp_exporter-0.13.0.linux-armv7.tar.gz
+      sha256: sha256:040a44cae81c6f82ee660a0e2bc7d4cabf6efd32f9f222e9b6687d45aeb33568
+      size: 4504830
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.linux-armv7.tar.gz
+    - name: snmp_exporter-0.13.0.linux-ppc64.tar.gz
+      sha256: sha256:c82607ae9e4ca2794213b9fab2175ff5dcc232273f8c40f7b2a6ae5d3ed27714
+      size: 4599519
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.13.0.linux-ppc64le.tar.gz
+      sha256: sha256:682c6cbc2c5e94982762ddcebffe9d796fb02940bf4d9fabf4eaebe8bc85686a
+      size: 4477716
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.13.0.netbsd-386.tar.gz
+      sha256: sha256:ac37593d9a2dc6bc2e9a79f8586bdf8af752887d47ef9d0ec46825f851ef5f0d
+      size: 4621311
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.netbsd-386.tar.gz
+    - name: snmp_exporter-0.13.0.netbsd-amd64.tar.gz
+      sha256: sha256:9a617b8d44ac9f8ce895fd9e2aea1c01cd190d8a68c653a0a9e0467b484f329e
+      size: 4778436
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.13.0.netbsd-armv6.tar.gz
+      sha256: sha256:8f75657c72d9547d64a05e4d068958e3d62401ac00d80ff5f667fce8a5b7a0db
+      size: 4505071
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.13.0.netbsd-armv7.tar.gz
+      sha256: sha256:8fa183e1ddd74d128059b0131d541a8221133125bff1bb1700114836dccf1e35
+      size: 4500295
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.13.0.openbsd-386.tar.gz
+      sha256: sha256:e714917956c3a5b8006d1cd96e30b1f391a31479c8063a43b58b42879aed8a5a
+      size: 4620931
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.openbsd-386.tar.gz
+    - name: snmp_exporter-0.13.0.openbsd-amd64.tar.gz
+      sha256: sha256:ff8bcb24b03123c2a488f534f53d34727d015d2b381518896d27547ee4ea2e4c
+      size: 4779901
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.13.0.windows-386.tar.gz
+      sha256: sha256:098b7fc32a5e982a836904f0f713ae98b6f6f61782ec2b1bcc1d400f6e54f40e
+      size: 4595084
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.windows-386.tar.gz
+    - name: snmp_exporter-0.13.0.windows-amd64.tar.gz
+      sha256: sha256:a0af213a967d85f070cf30989c664c6b9efc4636099a4c0b1b9b22f22ed27e8f
+      size: 4760130
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.13.0/snmp_exporter-0.13.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: 84cab6d72f4c70e6239e1efa4f7ea9cba2b7acc8
+  v0.14.0:
+    files:
+    - name: sha256sums.txt
+      sha256: sha256:e5c70bb7e46a54ec24e0afe0af8c9ae0d24be8ff9bcc81c4a484158c1c273518
+      size: 2238
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/sha256sums.txt
+    - name: snmp_exporter-0.14.0.darwin-386.tar.gz
+      sha256: sha256:ef33ff0f2e925beaa2315c59cc6536b8b5a73a222c3a5b5ba983f50ebfcfcf1c
+      size: 6307960
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.darwin-386.tar.gz
+    - name: snmp_exporter-0.14.0.darwin-amd64.tar.gz
+      sha256: sha256:ff2d731e66ec2c59320b5b40f41715c685b46a73b4e6c93beda627f3763a30f9
+      size: 6460204
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.14.0.dragonfly-amd64.tar.gz
+      sha256: sha256:0759ef1dec40f3f097389c565b08a8c27af0bd8c3d4ca75d75af3120a894d2d0
+      size: 6442492
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.14.0.freebsd-386.tar.gz
+      sha256: sha256:68c0d9c0a637ecbdb78741abac51bd77f15d7306aa52b8df4aa6d923935f2421
+      size: 6253279
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.freebsd-386.tar.gz
+    - name: snmp_exporter-0.14.0.freebsd-amd64.tar.gz
+      sha256: sha256:e5fe4f3657935584cca17b3406c7459264271c73497de04e9a821f238895e599
+      size: 6456575
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.14.0.linux-386.tar.gz
+      sha256: sha256:f475448b9cfd2378fc6a5566938d7eab8e7e5091636b6c3efa9f4fd6451a7c64
+      size: 6263723
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.linux-386.tar.gz
+    - name: snmp_exporter-0.14.0.linux-amd64.tar.gz
+      sha256: sha256:9eb7aa19cc9e6fe0cd3a8686227a0c83decc8e0901a45a1bd756b83f7a38204e
+      size: 6457757
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.linux-amd64.tar.gz
+    - name: snmp_exporter-0.14.0.linux-arm64.tar.gz
+      sha256: sha256:de2e38ef96139182aac9dd8c945184a3b59f42c7c9eccffd388f7ae6a2184ae6
+      size: 5985912
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.linux-arm64.tar.gz
+    - name: snmp_exporter-0.14.0.linux-armv5.tar.gz
+      sha256: sha256:36e59d45012dc2d7e34a63a5a3f1c40c2974d9ff9944648e2639e07593ac50f0
+      size: 5985332
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.linux-armv5.tar.gz
+    - name: snmp_exporter-0.14.0.linux-armv6.tar.gz
+      sha256: sha256:b2acdf9dd2b49eb908fe0ec2bc9d8f1b7bbe4ad22fc557ce1b1fe2a6ef9cbd17
+      size: 5978979
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.linux-armv6.tar.gz
+    - name: snmp_exporter-0.14.0.linux-armv7.tar.gz
+      sha256: sha256:0ddc72fa91375816ad5d431aa83a5f463a0c3c8f014b761f4cacdb1b228326a5
+      size: 5972350
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.linux-armv7.tar.gz
+    - name: snmp_exporter-0.14.0.linux-ppc64.tar.gz
+      sha256: sha256:4a3a662b38aa5a44af58bd6df6afe52b5e1510550d8cb94cdb74261af2c7bb30
+      size: 6155818
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.14.0.linux-ppc64le.tar.gz
+      sha256: sha256:39f51b1cfed8bb07628e757650272bbaea84e8287da54755ade6ade5a847401e
+      size: 5996597
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.14.0.netbsd-386.tar.gz
+      sha256: sha256:6dec7bc9cdfbd3893fe59ee16c892bdb832d83c85e8b775690c1f95d55fe4021
+      size: 6238668
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.netbsd-386.tar.gz
+    - name: snmp_exporter-0.14.0.netbsd-amd64.tar.gz
+      sha256: sha256:0985888d8f2980c0b26207e6b738cd1d8150a3b1f2a5e021416b00cba399554a
+      size: 6440202
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.14.0.netbsd-armv6.tar.gz
+      sha256: sha256:00c5b9b5c05b75efa45216110b845bc6cace1ad1710344b9e4e04c00692cf492
+      size: 5960698
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.14.0.netbsd-armv7.tar.gz
+      sha256: sha256:b0113697d718d54e4fcacf4b17c75a0051f2058067ce71ddb51e84e9cce84858
+      size: 5956336
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.14.0.openbsd-386.tar.gz
+      sha256: sha256:f274deb0d60ea4cd5816f1b2d51beaccc2f3fe69ed16393c535ca130baa008f8
+      size: 6240394
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.openbsd-386.tar.gz
+    - name: snmp_exporter-0.14.0.openbsd-amd64.tar.gz
+      sha256: sha256:e8c83bd37a63ce5aa7db6ca639371a77d9762c78e89fc502a58abb0ccc478f99
+      size: 6442892
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.14.0.windows-386.tar.gz
+      sha256: sha256:ec5032e6b4af5c799aca0ab7de9711e88bb5efd552e4aa0b7621a07d749e2aec
+      size: 6128341
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.windows-386.tar.gz
+    - name: snmp_exporter-0.14.0.windows-amd64.tar.gz
+      sha256: sha256:94fe5a045a7149b93c5bb8a5066c7388314ce91e37ebb3df8a00347a8dec1809
+      size: 6341138
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.14.0/snmp_exporter-0.14.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: da73490e051012714ee36cbf69d74dd41e21d4fb
+  v0.15.0:
+    files:
+    - name: sha256sums.txt
+      sha256: sha256:45c875f24c85bb6200977e2686c7ddbea6af34967b6451c7e725ce90753ebc13
+      size: 2238
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/sha256sums.txt
+    - name: snmp_exporter-0.15.0.darwin-386.tar.gz
+      sha256: sha256:9a76277d52c111da0be4c288f902df73a6612a76bf9f0d26e863f7b16a9e486c
+      size: 6339822
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.darwin-386.tar.gz
+    - name: snmp_exporter-0.15.0.darwin-amd64.tar.gz
+      sha256: sha256:84416340f1472e5a96a8cb3fa0bbfbe93d9d30c554df748fd9f191b12cc7c840
+      size: 6495628
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.15.0.dragonfly-amd64.tar.gz
+      sha256: sha256:26d100c81760637edb8da68c89edad3ef5f86ea224189dffd6f4434161040344
+      size: 6472201
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.15.0.freebsd-386.tar.gz
+      sha256: sha256:6e05da86bd3f91264ae2a864ea575baacb4d59515ba0a06391bdc2319b0a76c7
+      size: 6288414
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.freebsd-386.tar.gz
+    - name: snmp_exporter-0.15.0.freebsd-amd64.tar.gz
+      sha256: sha256:8c92c4305a7e5c13cc0d298d303abfcc581c415607df7a6d8f7f1b189177fd33
+      size: 6490531
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.15.0.linux-386.tar.gz
+      sha256: sha256:08bd7ddc23ca86caa2e1b4a7edf957b9ed3340420b1ca2be8f64ff6708ce2e30
+      size: 6299425
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.linux-386.tar.gz
+    - name: snmp_exporter-0.15.0.linux-amd64.tar.gz
+      sha256: sha256:c5e8e58a8187e9d0bd41dbeb7e09a15f5a59626821fa801dd99828d9cdd7efe9
+      size: 6492208
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.linux-amd64.tar.gz
+    - name: snmp_exporter-0.15.0.linux-arm64.tar.gz
+      sha256: sha256:6328e06811165d3ae54dd159ee67f8e3249626103f7e837e9a11461e6ad407e3
+      size: 6018712
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.linux-arm64.tar.gz
+    - name: snmp_exporter-0.15.0.linux-armv5.tar.gz
+      sha256: sha256:27dfd5f019fba56e06b3875f13e0328b3db1d52490fc239919b47109386c1834
+      size: 6020651
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.linux-armv5.tar.gz
+    - name: snmp_exporter-0.15.0.linux-armv6.tar.gz
+      sha256: sha256:9eea9314ffcb4e2403bbc242542ad7a91466e49e96e802424a5f757b2375e269
+      size: 6011332
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.linux-armv6.tar.gz
+    - name: snmp_exporter-0.15.0.linux-armv7.tar.gz
+      sha256: sha256:81d934e413518583d179d989a74e68b66522b76bc54ef2b7d919dc721ad9bb70
+      size: 6008324
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.linux-armv7.tar.gz
+    - name: snmp_exporter-0.15.0.linux-ppc64.tar.gz
+      sha256: sha256:98717b39d4f86c82e346a125f1721be00610806f69cef6dc47f53b27240f7ad8
+      size: 6194108
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.15.0.linux-ppc64le.tar.gz
+      sha256: sha256:efa763eb576c0b1cfb6fe82aa5b85557966adf3de0d36335f66b78f7bd807bf1
+      size: 6026310
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.15.0.netbsd-386.tar.gz
+      sha256: sha256:e710220c241f6811907781741fc1d87313008f77db0d7e9913d284b0bb54f0c8
+      size: 6273522
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.netbsd-386.tar.gz
+    - name: snmp_exporter-0.15.0.netbsd-amd64.tar.gz
+      sha256: sha256:12aaa69e24eb420920a0d0f42fa36b4f55b008942df3eba550f0d6b4556a3aca
+      size: 6476311
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.15.0.netbsd-armv6.tar.gz
+      sha256: sha256:71b6c2d913ae6548bb88026aab780e046897be4436be4838e0224c22805bafc6
+      size: 5995388
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.15.0.netbsd-armv7.tar.gz
+      sha256: sha256:2c74783f26161aa5280722ff0994ef12837c0e037b481436b571cc4b1955d868
+      size: 5990472
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.15.0.openbsd-386.tar.gz
+      sha256: sha256:560ee4356407f5c6d4b9b76dec9821f446f5da42346e444585359a79470819cc
+      size: 6274036
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.openbsd-386.tar.gz
+    - name: snmp_exporter-0.15.0.openbsd-amd64.tar.gz
+      sha256: sha256:ebf31aa368b18b88fcfa6e9049531599aa45e70d49ec3deea071c10107e59005
+      size: 6475662
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.15.0.windows-386.tar.gz
+      sha256: sha256:6f60df500a8508b06fe73c9469971f910353ce1a76cec30e2caca3e2346196a2
+      size: 6163188
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.windows-386.tar.gz
+    - name: snmp_exporter-0.15.0.windows-amd64.tar.gz
+      sha256: sha256:204feef3c7d3f5e1b20e1d7e2c52d421b251f55b54136043a20de4b42399ef17
+      size: 6381258
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.15.0/snmp_exporter-0.15.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: 92a3da4467f8bc6759cf197e7442b8c43e890b13
+  v0.16.1:
+    files:
+    - name: sha256sums.txt
+      sha256: sha256:2b48302f424e498f5f490359714cd880ac44c92bc52b6b836751b26c098800e0
+      size: 2238
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/sha256sums.txt
+    - name: snmp_exporter-0.16.1.darwin-386.tar.gz
+      sha256: sha256:b7d14d98624da05fd6c27d88f89335effa034cce245d6ea2dd37fc83cb8d7656
+      size: 7204904
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.darwin-386.tar.gz
+    - name: snmp_exporter-0.16.1.darwin-amd64.tar.gz
+      sha256: sha256:7e6a1fb8d9fbd25a7e91e07d3201759b33f791ff4f105e51233f90d36bd4a3d4
+      size: 7332903
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.16.1.dragonfly-amd64.tar.gz
+      sha256: sha256:a3eec2f482edb03a323adb472db129efd8197ef533c562e6e1605fa8fa6834a0
+      size: 7338640
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.16.1.freebsd-386.tar.gz
+      sha256: sha256:46a6e385afa96ea9019d6541fcf4e77884f109060ccf2a32f7e2179495b3f455
+      size: 7162213
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.freebsd-386.tar.gz
+    - name: snmp_exporter-0.16.1.freebsd-amd64.tar.gz
+      sha256: sha256:193ec924a640aa5fc9eeaae9967afb2410f848e070cfcda121488f145cd94855
+      size: 7356995
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.16.1.linux-386.tar.gz
+      sha256: sha256:0fc398802ad7bf28a7ab877b607bbd654dd13cd5f4f0acef649781547b21a077
+      size: 7153739
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.linux-386.tar.gz
+    - name: snmp_exporter-0.16.1.linux-amd64.tar.gz
+      sha256: sha256:7de711be5f73f2fe11b450bd8caade9e20aa802a0c64a73651035065bf049ef5
+      size: 7344425
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.linux-amd64.tar.gz
+    - name: snmp_exporter-0.16.1.linux-arm64.tar.gz
+      sha256: sha256:ed5f83c91f13002989b58eafffdf8aaa5ab9d40ce28bc18e0e8908e7d291bd4c
+      size: 6838988
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.linux-arm64.tar.gz
+    - name: snmp_exporter-0.16.1.linux-armv5.tar.gz
+      sha256: sha256:213eaedfd429db2674be4027a3c871b7ca4e0c753656c9b8ca4f2e9ce2c97154
+      size: 6829142
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.linux-armv5.tar.gz
+    - name: snmp_exporter-0.16.1.linux-armv6.tar.gz
+      sha256: sha256:73ba955870b27f681591d84c3b0778a9e8ea27e0703dec88a1b206787dd86657
+      size: 6817508
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.linux-armv6.tar.gz
+    - name: snmp_exporter-0.16.1.linux-armv7.tar.gz
+      sha256: sha256:c4f4096dfb90a21d4ea2e0bd2de7c3afefb7e5c5ff1ccea36c09ec4da49847a6
+      size: 6814180
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.linux-armv7.tar.gz
+    - name: snmp_exporter-0.16.1.linux-ppc64.tar.gz
+      sha256: sha256:32b1ba871972eabe6309acc2a9e60b2d452861cd6a7ffec9652450d15ccd2dbc
+      size: 6996490
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.16.1.linux-ppc64le.tar.gz
+      sha256: sha256:e5431c925b3ffbde644750541d0d79b822a00ca853dcbb5f5e6f9923eee8ba00
+      size: 6813979
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.16.1.netbsd-386.tar.gz
+      sha256: sha256:2184ba45b9637f98e101c3442d1105a5776045ebf2a5381d6439845ecd36029f
+      size: 7140802
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.netbsd-386.tar.gz
+    - name: snmp_exporter-0.16.1.netbsd-amd64.tar.gz
+      sha256: sha256:2b3c93eb1d48e32c6685fd07ffe0741b44df9d933314863a60236e3bfd26b32c
+      size: 7335807
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.16.1.netbsd-armv6.tar.gz
+      sha256: sha256:8b002b2c5c7e8ba9beff0b4016c3e3be64f50b60359962f054ee8510aaf960bc
+      size: 6811846
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.16.1.netbsd-armv7.tar.gz
+      sha256: sha256:23d27d9a0ac0953ea093791ca95e074f3c8e9c0743bfb3a01c67d8baf8e9af84
+      size: 6807720
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.16.1.openbsd-386.tar.gz
+      sha256: sha256:7d50f89aa61be7a0fb7a35b61c172ea67311128396e5055e5c50efe5f5f9c969
+      size: 7139477
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.openbsd-386.tar.gz
+    - name: snmp_exporter-0.16.1.openbsd-amd64.tar.gz
+      sha256: sha256:414b7c45384f2266bca4c6a9c05f04d1e68aeec8862a60e12872eb50438ef1bb
+      size: 7337092
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.16.1.windows-386.tar.gz
+      sha256: sha256:b5460b3759a45e2fa170808adf1559394ae892812396789e3c8d1faaea38dcd2
+      size: 6962632
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.windows-386.tar.gz
+    - name: snmp_exporter-0.16.1.windows-amd64.tar.gz
+      sha256: sha256:317051ba15d4cd12f6fb9b2b4c9c8ed7de7770f82bccd5ef2c4d591ef5de26ab
+      size: 7171943
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.16.1/snmp_exporter-0.16.1.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: 4b2bb401378cf40c409aba91ab25189be5670183
+  v0.2.0:
+    files:
+    - name: snmp_exporter-0.2.0.darwin-386.tar.gz
+      sha256: sha256:23db257ffaa7e97011cebb76389cc398bfe0215b2b5d36bb9753ebf3946c224c
+      size: 3147999
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.darwin-386.tar.gz
+    - name: snmp_exporter-0.2.0.darwin-amd64.tar.gz
+      sha256: sha256:8629200736239f4e65226054173d0e8932624834e22e6a9a5c7c4136608c1f0d
+      size: 3353268
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.2.0.dragonfly-amd64.tar.gz
+      sha256: sha256:506bce27a38be6aa6dba2b807d9e511f5ecc7b57fd2f95f1946e09cf8255b408
+      size: 3329930
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.2.0.freebsd-386.tar.gz
+      sha256: sha256:1765abbd570bf347a971dea721601acf33eb48cc82b29d495208b10e6ba2ab80
+      size: 3131094
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.freebsd-386.tar.gz
+    - name: snmp_exporter-0.2.0.freebsd-amd64.tar.gz
+      sha256: sha256:cacb217a8aa6e22492b4bd17214b6b4e426a4e4c38d82ba3bf5a03b904fac73d
+      size: 3336005
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.2.0.freebsd-armv5.tar.gz
+      sha256: sha256:4931c32245ea3618877045e641e10ca8eeb17044642e5cca70b1564751714db2
+      size: 3023514
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.freebsd-armv5.tar.gz
+    - name: snmp_exporter-0.2.0.freebsd-armv6.tar.gz
+      sha256: sha256:526001ad1475e175c6a9552015e96a8358a279298c15aeecd354ac58c5c681ba
+      size: 3005194
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.freebsd-armv6.tar.gz
+    - name: snmp_exporter-0.2.0.freebsd-armv7.tar.gz
+      sha256: sha256:666fbff45b0937538885627b11be41861e6634efa6dfd47d0ebf12923e6158c8
+      size: 3003278
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.freebsd-armv7.tar.gz
+    - name: snmp_exporter-0.2.0.linux-386.tar.gz
+      sha256: sha256:9b7e065bae5bd2f4c07bcce9e701ca695f6c99618d9697539f83e35ff06b4004
+      size: 3122147
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.linux-386.tar.gz
+    - name: snmp_exporter-0.2.0.linux-amd64.tar.gz
+      sha256: sha256:888d1d9fcb4fd39c25aa080df6ce71742c9de33a52a7138d6ec8394461a8e43f
+      size: 3327698
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.linux-amd64.tar.gz
+    - name: snmp_exporter-0.2.0.linux-arm64.tar.gz
+      sha256: sha256:34fcfa60cfb48f88c87dc0d65d4c246e2a900350059b8dc6119bef946e3bee4d
+      size: 3051505
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.linux-arm64.tar.gz
+    - name: snmp_exporter-0.2.0.linux-armv5.tar.gz
+      sha256: sha256:c2ca1a2f7eafdf428db8324ecad4e0e6c61a4630ac7840e9c71cc26f596b06c7
+      size: 3013258
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.linux-armv5.tar.gz
+    - name: snmp_exporter-0.2.0.linux-armv6.tar.gz
+      sha256: sha256:eac06d45c334682b7e4fdda08f7a8d360fccf1e314762428d688d2cb367a38bc
+      size: 2994038
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.linux-armv6.tar.gz
+    - name: snmp_exporter-0.2.0.linux-armv7.tar.gz
+      sha256: sha256:347e9d8f1c8693a214f8d507b261b49f43897a214c82b0f2913f2812c4eb213b
+      size: 2992951
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.linux-armv7.tar.gz
+    - name: snmp_exporter-0.2.0.linux-mips64.tar.gz
+      sha256: sha256:0e9d5d461d829e737c1ccacb5f0f3855757b461b4e4fee21b553247769d909e1
+      size: 3037829
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.linux-mips64.tar.gz
+    - name: snmp_exporter-0.2.0.linux-mips64le.tar.gz
+      sha256: sha256:82229fed52b9d67ecef8c3f3fd62228b3b3bf5eb858097c6ef7a42dc8f9ad7c3
+      size: 2936667
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.linux-mips64le.tar.gz
+    - name: snmp_exporter-0.2.0.linux-ppc64.tar.gz
+      sha256: sha256:bf7b2430b006a60bf9b484f2d1cad55e29770ce755167468edda953cc0f4cccf
+      size: 3128840
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.2.0.linux-ppc64le.tar.gz
+      sha256: sha256:4c5ef2d19ff68140e50ce6ae41e2016289987fc39535b2604fc09226ae341103
+      size: 3053756
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.2.0.netbsd-386.tar.gz
+      sha256: sha256:51f08929e030a981e69ecf2219841540c8729ed0a558d9bbb478e5e0b08cc55e
+      size: 3125379
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.netbsd-386.tar.gz
+    - name: snmp_exporter-0.2.0.netbsd-amd64.tar.gz
+      sha256: sha256:a283230a27f4dc3f1c999c7f9e70f7db30d8c8da0a719dfbdea8aa8920ad6076
+      size: 3329603
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.2.0.netbsd-armv5.tar.gz
+      sha256: sha256:a45aef905d78324b58d600450a227b3c3f15c9c0df3628bc32eff6eb166f26ef
+      size: 3018858
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.netbsd-armv5.tar.gz
+    - name: snmp_exporter-0.2.0.netbsd-armv6.tar.gz
+      sha256: sha256:aa5043ffd2c9491afbe4f23e42646de9aa22010f8bf0702af559b0871fd575da
+      size: 2998927
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.2.0.netbsd-armv7.tar.gz
+      sha256: sha256:80c2d0be2c72f282bf7057dff53790875fb7c8c7757f443855addb1b0647b6dc
+      size: 2998371
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.2.0.openbsd-386.tar.gz
+      sha256: sha256:a9a044edf16d1f9b751205d790ea49328e77c47f6de079ba7ca95692cca37926
+      size: 3128601
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.openbsd-386.tar.gz
+    - name: snmp_exporter-0.2.0.openbsd-amd64.tar.gz
+      sha256: sha256:f73cb828d2d0d7c6efb8b71ec464452e3337355520d1bbfbe8c2c25d002ff57e
+      size: 3332104
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.2.0.openbsd-armv5.tar.gz
+      sha256: sha256:95b6103912fe1f44d1135340ed958ffa9f613eee85c141096447aaa01275ddd7
+      size: 3021517
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.openbsd-armv5.tar.gz
+    - name: snmp_exporter-0.2.0.openbsd-armv6.tar.gz
+      sha256: sha256:7ef712c158a5a31eb961639c95258e475e27920757cd93b73d9ced6a9f4a52b2
+      size: 3001521
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.openbsd-armv6.tar.gz
+    - name: snmp_exporter-0.2.0.openbsd-armv7.tar.gz
+      sha256: sha256:1b5ffe3429ec6fb16a015b4e71a4e50d46ce9c2437c0be40d8529bcae5589d88
+      size: 3000669
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.openbsd-armv7.tar.gz
+    - name: snmp_exporter-0.2.0.windows-386.tar.gz
+      sha256: sha256:90bae02c8e6e08227c8851bff3f7154806bd8abb69f3611cb73c31248f73404b
+      size: 3094803
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.windows-386.tar.gz
+    - name: snmp_exporter-0.2.0.windows-amd64.tar.gz
+      sha256: sha256:24945445ebf9601fdf3d06caf5255fc92b186f670030b43ee253b4e3b560e718
+      size: 3303054
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.2.0/snmp_exporter-0.2.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: 559afefcdd8643c06db1363a361fe0d34cdd66ef
+  v0.3.0:
+    files:
+    - name: snmp_exporter-0.3.0.darwin-386.tar.gz
+      sha256: sha256:5aebf831043d3120e234606983aca291a328ec1284ce3706429dd9c87fa30576
+      size: 3156733
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.darwin-386.tar.gz
+    - name: snmp_exporter-0.3.0.darwin-amd64.tar.gz
+      sha256: sha256:f1824382b96eb1185cce41b857e0bb8638709222ce8e754ca30282a3d56a4c04
+      size: 3362979
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.3.0.dragonfly-amd64.tar.gz
+      sha256: sha256:ba6a5ccc5a3332465bf35922e7fd5c50ca0ad6418a2b55c0aafbb7622a8f82e7
+      size: 3335680
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.3.0.freebsd-386.tar.gz
+      sha256: sha256:061abe7c874c0e73f84447d711df23639a7d261dbd0abe52f6dd3a84330bb102
+      size: 3135378
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.freebsd-386.tar.gz
+    - name: snmp_exporter-0.3.0.freebsd-amd64.tar.gz
+      sha256: sha256:770ee711c887bfabc6a4dff6554bdd3fb1115ed9445f0a7a61a5b8a6d30fe5bb
+      size: 3338668
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.3.0.freebsd-armv5.tar.gz
+      sha256: sha256:971f17cedf97516ea3c97c950166d39b193b28434606004e45a0a8cd682dca31
+      size: 3030129
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.freebsd-armv5.tar.gz
+    - name: snmp_exporter-0.3.0.freebsd-armv6.tar.gz
+      sha256: sha256:6e33e833613f729d1fee7c657693d782d616420cead11a46183b92e014c07d33
+      size: 3009970
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.freebsd-armv6.tar.gz
+    - name: snmp_exporter-0.3.0.freebsd-armv7.tar.gz
+      sha256: sha256:5f7b13853f3844b3fbf4a3b813f0c4106e64fb4bd52a87b20cc205d27c49709c
+      size: 3008621
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.freebsd-armv7.tar.gz
+    - name: snmp_exporter-0.3.0.linux-386.tar.gz
+      sha256: sha256:2d485fa473cdfe81e8af77130b0d9346b77a96373df5c6ae09b06a7e0f240664
+      size: 3126745
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.linux-386.tar.gz
+    - name: snmp_exporter-0.3.0.linux-amd64.tar.gz
+      sha256: sha256:be29d7b0d012552ceaa728efb5155a9a064fa06af47fb1ff9e38d1fe33cce364
+      size: 3333530
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.linux-amd64.tar.gz
+    - name: snmp_exporter-0.3.0.linux-arm64.tar.gz
+      sha256: sha256:7fc3042e08b7418e5709269d8ae6f2e074cf79c1704e701dd7e4c2c866f99f2f
+      size: 3056731
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.linux-arm64.tar.gz
+    - name: snmp_exporter-0.3.0.linux-armv5.tar.gz
+      sha256: sha256:e7976e82a37ef847c394323b64c49ad2a18b1f85ded88452bc27374b4682134d
+      size: 3018541
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.linux-armv5.tar.gz
+    - name: snmp_exporter-0.3.0.linux-armv6.tar.gz
+      sha256: sha256:2251bf6b86c33a38c913def936b0645d356436e6a32abf85707aaf170f823e60
+      size: 2998440
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.linux-armv6.tar.gz
+    - name: snmp_exporter-0.3.0.linux-armv7.tar.gz
+      sha256: sha256:515c18c456e607ad2e9455585994be694c7d09fc14c2cfdc0ff322189fe48451
+      size: 2995990
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.linux-armv7.tar.gz
+    - name: snmp_exporter-0.3.0.linux-mips64.tar.gz
+      sha256: sha256:124b4a0d4951789fd952d2582d702909fb0b7d11ee01d634b014e620a2c259f5
+      size: 3042724
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.linux-mips64.tar.gz
+    - name: snmp_exporter-0.3.0.linux-mips64le.tar.gz
+      sha256: sha256:c2133ce3b287246745f1854a6fd790f67c51e366328c31fa59cc36c24e152f2c
+      size: 2940088
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.linux-mips64le.tar.gz
+    - name: snmp_exporter-0.3.0.linux-ppc64.tar.gz
+      sha256: sha256:886bdc307f71d525a95b7169d77f31ae77b50a5aeb94d43264cc73d27c7e53d1
+      size: 3132882
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.3.0.linux-ppc64le.tar.gz
+      sha256: sha256:eee2584b2f45f77c80bd8b73d5fc35a61566beaf01fc7e28b6649c612a0c19e6
+      size: 3057999
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.3.0.netbsd-386.tar.gz
+      sha256: sha256:2885918ca300d55799e9133ff011c2519470afb933fa5e68ffeb6dbab7058f76
+      size: 3129699
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.netbsd-386.tar.gz
+    - name: snmp_exporter-0.3.0.netbsd-amd64.tar.gz
+      sha256: sha256:3f34d6eeb04faeb5f8ddb9aea89f7df9911159b9667626bd63077b95cc0ed0b2
+      size: 3335255
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.3.0.netbsd-armv5.tar.gz
+      sha256: sha256:9e576a86a31ec9b375b807c566f9dea805232e1eaace30b5752b0260f358171e
+      size: 3023264
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.netbsd-armv5.tar.gz
+    - name: snmp_exporter-0.3.0.netbsd-armv6.tar.gz
+      sha256: sha256:0d53b6d1395bfd30640e12df3254281838ca704b79e33d38ff2f846a78616422
+      size: 3004161
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.3.0.netbsd-armv7.tar.gz
+      sha256: sha256:ebde56d9a77c1c77e66805b66d43bcdeba019e84d2f45378d22b47af431231be
+      size: 3003034
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.3.0.openbsd-386.tar.gz
+      sha256: sha256:dd144f7251cc2a52d7afc8a6d55b4f16c82653090247739f101e506f8294a1b6
+      size: 3131916
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.openbsd-386.tar.gz
+    - name: snmp_exporter-0.3.0.openbsd-amd64.tar.gz
+      sha256: sha256:96cb37744c490c85b6e53d447e973920b9d0ffabac22896c3bf31ec2483f2340
+      size: 3336067
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.3.0.openbsd-armv5.tar.gz
+      sha256: sha256:f8285d6b1f229bdeb607edb2aa5a48da2e5581f2a37f55ec1f2ac9b987df50a0
+      size: 3027107
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.openbsd-armv5.tar.gz
+    - name: snmp_exporter-0.3.0.openbsd-armv6.tar.gz
+      sha256: sha256:64d1c83c7db9e24da9b0777f643f97b09c7162013f387e0198f4e6d5c2210db8
+      size: 3007209
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.openbsd-armv6.tar.gz
+    - name: snmp_exporter-0.3.0.openbsd-armv7.tar.gz
+      sha256: sha256:0801a1aedfac62810049fc5af80542501355f700076dbcdacce834bd9fe72a9a
+      size: 3005760
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.openbsd-armv7.tar.gz
+    - name: snmp_exporter-0.3.0.windows-386.tar.gz
+      sha256: sha256:a4e0d0b5a3ec9099b1fbfdb34088565c8ce72c63a9b2016d70668ae87432d166
+      size: 3100158
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.windows-386.tar.gz
+    - name: snmp_exporter-0.3.0.windows-amd64.tar.gz
+      sha256: sha256:d5059d61c04f52cfff8194da4129fc532948312a1c26eb42dc262ce675e3a348
+      size: 3309546
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.3.0/snmp_exporter-0.3.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: 6f8aa8a24d720b36991f29ffb179b2896e92090b
+  v0.4.0:
+    files:
+    - name: snmp_exporter-0.4.0.darwin-386.tar.gz
+      sha256: sha256:5f4248bb2db77a2ebb2e9fa355325c6072db80876590cce9c16fd98c21417cde
+      size: 3376989
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.darwin-386.tar.gz
+    - name: snmp_exporter-0.4.0.darwin-amd64.tar.gz
+      sha256: sha256:8f46a1cc520ec28326ed2f2fb38e462be31f13c85e27d51dc03006042681bd30
+      size: 3586787
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.4.0.dragonfly-amd64.tar.gz
+      sha256: sha256:54209c3085673dc853f9a8d448cd7578b05b80a96ec6f564f125d807c8bfd8e8
+      size: 3555782
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.4.0.freebsd-386.tar.gz
+      sha256: sha256:0576b7ab4d4b8908ab52a167a1aaf54e3dc3ecfb6c30475c4b242e57bd8f7480
+      size: 3348366
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.freebsd-386.tar.gz
+    - name: snmp_exporter-0.4.0.freebsd-amd64.tar.gz
+      sha256: sha256:89573262d2ed428e8f52587303e10d5cee521a5dd36dc2e3121a2124c5d88da0
+      size: 3557375
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.4.0.freebsd-armv5.tar.gz
+      sha256: sha256:eb61c183a01a6bd6c82add1f9ead94ca5e35686de736456341418f93c0ab4f45
+      size: 3342153
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.freebsd-armv5.tar.gz
+    - name: snmp_exporter-0.4.0.freebsd-armv6.tar.gz
+      sha256: sha256:25cbe51c65802c9a1dfda667ee480aba2fb43cf5cef1c190633cb33a698499dd
+      size: 3319101
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.freebsd-armv6.tar.gz
+    - name: snmp_exporter-0.4.0.freebsd-armv7.tar.gz
+      sha256: sha256:a64fe6c322fcc37ec3406f7c87014fa043b2bcfa58abdb11155c1ec68e79a2fa
+      size: 3318566
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.freebsd-armv7.tar.gz
+    - name: snmp_exporter-0.4.0.linux-386.tar.gz
+      sha256: sha256:f689bfe8c897ad0e5746835118abf59039eb5acbe4533fd1a0336a1d7f75e408
+      size: 3343126
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.linux-386.tar.gz
+    - name: snmp_exporter-0.4.0.linux-amd64.tar.gz
+      sha256: sha256:49c93ffb0385894aed2e1d7a20758191f3ba76bfc1c46bc46adab3637303053e
+      size: 3553445
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.linux-amd64.tar.gz
+    - name: snmp_exporter-0.4.0.linux-arm64.tar.gz
+      sha256: sha256:1ed32ae07a2ecacfcad87d7bd5fd159f84392e8eba720854691e9df71b93083a
+      size: 3316031
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.linux-arm64.tar.gz
+    - name: snmp_exporter-0.4.0.linux-armv5.tar.gz
+      sha256: sha256:e95fb12bc154c80be2fd9514d2384fc9a038a9aa5da0b2ef4a1eead78aa1bb51
+      size: 3332345
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.linux-armv5.tar.gz
+    - name: snmp_exporter-0.4.0.linux-armv6.tar.gz
+      sha256: sha256:8e3db76a69dbe84faa30352957f40c5e8a267a9c1030878b797ce2460294ab4c
+      size: 3308029
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.linux-armv6.tar.gz
+    - name: snmp_exporter-0.4.0.linux-armv7.tar.gz
+      sha256: sha256:6eebb348491dc0307aab356da0f871bc4bccfcc6f9b5f40f370163614efd1c2c
+      size: 3307069
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.linux-armv7.tar.gz
+    - name: snmp_exporter-0.4.0.linux-mips64.tar.gz
+      sha256: sha256:aaae41b804c0ff11b642aa235824b773e59bb0b2f6c756d05ad4684f1862aa74
+      size: 3303410
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.linux-mips64.tar.gz
+    - name: snmp_exporter-0.4.0.linux-mips64le.tar.gz
+      sha256: sha256:9d2b821a0b8c9cb0952a2838503ea1c8a6568c0607293a76231065a88ee3f626
+      size: 3203426
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.linux-mips64le.tar.gz
+    - name: snmp_exporter-0.4.0.linux-ppc64.tar.gz
+      sha256: sha256:de4523de698e6fefe08fdbc4da9ef83f60db00d7aec127eb9d62249adce2ecc4
+      size: 3388340
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.4.0.linux-ppc64le.tar.gz
+      sha256: sha256:2d17379af8ef5128df24c44c157187568811c1abff6efb74451c61ebedb840f5
+      size: 3304993
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.4.0.netbsd-386.tar.gz
+      sha256: sha256:034f0de45693503aa22f3dfddf7ac99e4f45b16feeda87f8cd4c7750566e9cd8
+      size: 3343931
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.netbsd-386.tar.gz
+    - name: snmp_exporter-0.4.0.netbsd-amd64.tar.gz
+      sha256: sha256:1685d5973a62af2e9e32382a2f35c1abdb55ab41ce84ccb839cc593fe8f4e978
+      size: 3554177
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.4.0.netbsd-armv5.tar.gz
+      sha256: sha256:cd3871257ec5b395da896b3bd5ffa9f7f6f70b79daf35d42b74562d7085f69c8
+      size: 3338721
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.netbsd-armv5.tar.gz
+    - name: snmp_exporter-0.4.0.netbsd-armv6.tar.gz
+      sha256: sha256:a97989ad9fd5e4ebf925ba3c58fffd7069cb77b764e74315fe898971b7f53946
+      size: 3314650
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.4.0.netbsd-armv7.tar.gz
+      sha256: sha256:8d8f01703c2ccb73264cfebe7711684282b44a78704f3e1d28b2d463b9a4b7ef
+      size: 3313877
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.4.0.openbsd-386.tar.gz
+      sha256: sha256:fa3077fd1b4b6bf0a60e26db898bce227d90e2a78ee5d464571281a1c88b1fe0
+      size: 3347249
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.openbsd-386.tar.gz
+    - name: snmp_exporter-0.4.0.openbsd-amd64.tar.gz
+      sha256: sha256:77ff00a98c6e49ca5d2ab38506ab1cbc429735c85d8d569d74d92bd4212e9522
+      size: 3556110
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.4.0.openbsd-armv5.tar.gz
+      sha256: sha256:0799995fcc6c85560cf8c9a1a5244fb1db0338cc6794cfaf19b2effe1af72a4a
+      size: 3339894
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.openbsd-armv5.tar.gz
+    - name: snmp_exporter-0.4.0.openbsd-armv6.tar.gz
+      sha256: sha256:230b5cf36d7508a8ca72d77c45062e4ef74f4a4ee6e47a1356192ae95a0e22a0
+      size: 3317802
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.openbsd-armv6.tar.gz
+    - name: snmp_exporter-0.4.0.openbsd-armv7.tar.gz
+      sha256: sha256:283435ea7ba92c5ab500d744177bea949246b179ce6b934ba2b4f2646d348037
+      size: 3316808
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.openbsd-armv7.tar.gz
+    - name: snmp_exporter-0.4.0.windows-386.tar.gz
+      sha256: sha256:6131836c258985ec5f30a8bd5d01447332010257003fd178770c93779ba37032
+      size: 3342147
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.windows-386.tar.gz
+    - name: snmp_exporter-0.4.0.windows-amd64.tar.gz
+      sha256: sha256:e7bc0365a1ec741d3318eb502f0ea5755c7369cbaf26e07135650c132d4538c8
+      size: 3553722
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.4.0/snmp_exporter-0.4.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: 0a00acbf61971015b6475441d741ce59ad2ba26d
+  v0.5.0:
+    files:
+    - name: snmp_exporter-0.5.0.darwin-386.tar.gz
+      sha256: sha256:61a676f629179740e5e82dfb318d9b16abc7cc37dbd779130a388e27eed36dd1
+      size: 3759265
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.darwin-386.tar.gz
+    - name: snmp_exporter-0.5.0.darwin-amd64.tar.gz
+      sha256: sha256:dc8b18d83d53d89160ad6fb971fb91c2ee3767e3f59fce4858809bea08a5f4de
+      size: 3990038
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.5.0.dragonfly-amd64.tar.gz
+      sha256: sha256:6fd481c43a99bd6dace1b9d4acb22bdf8f5fa5439e24ab0e9acf9f69bf72404c
+      size: 3961007
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.5.0.freebsd-386.tar.gz
+      sha256: sha256:5772c3075d686ae408520e4a8827f7ca937e6ad08920205a59a2e19b030b1392
+      size: 3732714
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.freebsd-386.tar.gz
+    - name: snmp_exporter-0.5.0.freebsd-amd64.tar.gz
+      sha256: sha256:5496be4a569cd546b682c1e7a5efc52218a04b2e715938c59bc18257de4757f8
+      size: 3966026
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.5.0.linux-386.tar.gz
+      sha256: sha256:1bb87576a273135cb3e5dc747ef4cb7af741d4efdb7bbe81c4d05a37745a2189
+      size: 3728900
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.linux-386.tar.gz
+    - name: snmp_exporter-0.5.0.linux-amd64.tar.gz
+      sha256: sha256:cbb27e9cce1e36be1f6a8af4a76fb03de61202861fe64b962c10b5e7f8862182
+      size: 3960986
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.linux-amd64.tar.gz
+    - name: snmp_exporter-0.5.0.linux-arm64.tar.gz
+      sha256: sha256:2fa72455750711dedc7ffe8f8608e8bf2a0459a97caaeb75d2ae82319599705f
+      size: 3706875
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.linux-arm64.tar.gz
+    - name: snmp_exporter-0.5.0.linux-armv5.tar.gz
+      sha256: sha256:db033fd198f9073cfe8c159fdc9aa21f3490dd59e7777311768674a9c184b0a3
+      size: 3713579
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.linux-armv5.tar.gz
+    - name: snmp_exporter-0.5.0.linux-armv6.tar.gz
+      sha256: sha256:96906d07263d0e40ed1c19839d849daca563cc50289812aee2aec2432f730538
+      size: 3691260
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.linux-armv6.tar.gz
+    - name: snmp_exporter-0.5.0.linux-armv7.tar.gz
+      sha256: sha256:d2f8302f549b4cdc1455522e03ea53bada0e8578dabe42399fab3558bf4e9280
+      size: 3690318
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.linux-armv7.tar.gz
+    - name: snmp_exporter-0.5.0.linux-ppc64.tar.gz
+      sha256: sha256:535e2485f8bf840de6c4a06325323562355869a231614f9b23341324229c22b2
+      size: 3783727
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.5.0.linux-ppc64le.tar.gz
+      sha256: sha256:567fdac88e2fe5ebd42420ff06c454b288025380db521e98df27d5bdcd2729fc
+      size: 3684443
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.5.0.netbsd-386.tar.gz
+      sha256: sha256:3b68f455fc286e36b9e3fa4c992f6cff92eaf59497d0262faf12f99e5b4ee47b
+      size: 3730216
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.netbsd-386.tar.gz
+    - name: snmp_exporter-0.5.0.netbsd-amd64.tar.gz
+      sha256: sha256:742340aa36ab8ede1234b5e4cca8f878b73354a84701999f2ddb299e532479dd
+      size: 3958947
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.5.0.netbsd-armv6.tar.gz
+      sha256: sha256:c44514fe3e7f4657a1e8d82feada0fae86ed98bc43aae0b2ed3fd8d67c9c7f72
+      size: 3698249
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.5.0.netbsd-armv7.tar.gz
+      sha256: sha256:a5710ef31287d16191c7d2f5fb03272d2c34841719f7fcb57495a1b370772171
+      size: 3698448
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.5.0.openbsd-386.tar.gz
+      sha256: sha256:ef30d03b660c792d5c8a6c7efa4d10f96c18049d3ca32bbb7413982802bba8df
+      size: 3733045
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.openbsd-386.tar.gz
+    - name: snmp_exporter-0.5.0.openbsd-amd64.tar.gz
+      sha256: sha256:fcfa562608ded4d71ee2679522069893581e82c0d23b58079f692a18e1bd9067
+      size: 3961516
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.5.0.windows-386.tar.gz
+      sha256: sha256:678f3c2bbb207a49f0d56d49804384d55eedd550067db9c16e08cbf4e3b314ab
+      size: 3718491
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.windows-386.tar.gz
+    - name: snmp_exporter-0.5.0.windows-amd64.tar.gz
+      sha256: sha256:7c07ed45bda0b8bba8d23afa3262e75a9ce391cec1cb58e660cc7714adee7db4
+      size: 3957215
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.5.0/snmp_exporter-0.5.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: 4a6cefde688765abba45f8110c219e8e512da3f1
+  v0.6.0:
+    files:
+    - name: snmp_exporter-0.6.0.darwin-386.tar.gz
+      sha256: sha256:18f261acb9f293eb5b0f225e736225c29e0f9b1a1c80ebc9c00b482e704fc0a3
+      size: 3759608
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.darwin-386.tar.gz
+    - name: snmp_exporter-0.6.0.darwin-amd64.tar.gz
+      sha256: sha256:5a9dacc34b89f7079595d41902a09ee05ad0a520f5d3cf2eaf15c3b16153d0e9
+      size: 3990834
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.6.0.dragonfly-amd64.tar.gz
+      sha256: sha256:a2db23ea3859e4e50bd7945ef1a76f5f9ad54e1d9b6788eb77986da909ec7de1
+      size: 3962488
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.6.0.freebsd-386.tar.gz
+      sha256: sha256:6da27e9509b4e15975773154e78366451b52587df0e8592a515680417156faf8
+      size: 3735086
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.freebsd-386.tar.gz
+    - name: snmp_exporter-0.6.0.freebsd-amd64.tar.gz
+      sha256: sha256:fa1e16fc935656a7ab59086b5faae6d801d141cd4aca453a7ceabb8fd2d6d804
+      size: 3966951
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.6.0.linux-386.tar.gz
+      sha256: sha256:ae652c169e12062938371ed20256ab051bbd1c010d7d69a76ee353ab08545ea4
+      size: 3729369
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.linux-386.tar.gz
+    - name: snmp_exporter-0.6.0.linux-amd64.tar.gz
+      sha256: sha256:fee4019d98b6906b22a2d8903461bb64e81413690cbae77e78640ab1543955b8
+      size: 3960973
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.linux-amd64.tar.gz
+    - name: snmp_exporter-0.6.0.linux-arm64.tar.gz
+      sha256: sha256:9393ebf7eb60a08f2dea21ec70322653fcd7a9377b96e8e74b07a1a7af165493
+      size: 3706430
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.linux-arm64.tar.gz
+    - name: snmp_exporter-0.6.0.linux-armv5.tar.gz
+      sha256: sha256:9f21853a6ec539b9650a24ccae7c3ef50c5422c61fee59dc15e0217cf6dc8a7c
+      size: 3714101
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.linux-armv5.tar.gz
+    - name: snmp_exporter-0.6.0.linux-armv6.tar.gz
+      sha256: sha256:e1f955b69943caaa9624f46bb39b386823d3ad26a1f1b928ad5359e239798123
+      size: 3691802
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.linux-armv6.tar.gz
+    - name: snmp_exporter-0.6.0.linux-armv7.tar.gz
+      sha256: sha256:d6a95380dc1ba397afbf509bf50669e78192b0318b02c7d9fd77e28a7fe27713
+      size: 3691321
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.linux-armv7.tar.gz
+    - name: snmp_exporter-0.6.0.linux-ppc64.tar.gz
+      sha256: sha256:894feef7163f70bd6f66ef8ac09fb722f72d698b898842bcefef4649c23adfd0
+      size: 3784550
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.6.0.linux-ppc64le.tar.gz
+      sha256: sha256:f5010ef66c839ef658dfb7de2ac9a5f2e9db6b033d49bc3f69c98eff3f3ac1e8
+      size: 3685504
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.6.0.netbsd-386.tar.gz
+      sha256: sha256:218c1ebe6edc5c6589e3e3a269c17c26c5a3b8e46a25e6125d561afc9c343109
+      size: 3730231
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.netbsd-386.tar.gz
+    - name: snmp_exporter-0.6.0.netbsd-amd64.tar.gz
+      sha256: sha256:63bca9298a45d55607e11ad1f8beece142cd014b959ba480f3e588a876ea7c70
+      size: 3959781
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.6.0.netbsd-armv6.tar.gz
+      sha256: sha256:2de38c833076f03870f1378159ffa53e418bd4d0072833451a846cc4e69c954e
+      size: 3699013
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.6.0.netbsd-armv7.tar.gz
+      sha256: sha256:745a93d181fa33476f7f9335555c5a04a5a86d3509ec7ff58857fbe2f95ff07e
+      size: 3698323
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.6.0.openbsd-386.tar.gz
+      sha256: sha256:34af675e5a4e95a077f8ccc61d14327743b2b97da091367eb6bc8cebf9ce3246
+      size: 3734195
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.openbsd-386.tar.gz
+    - name: snmp_exporter-0.6.0.openbsd-amd64.tar.gz
+      sha256: sha256:c99ac4dad5605f159a33be66dd2a1387d86b09a9eba5e7fbb7e530dcac2ac2f1
+      size: 3962614
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.6.0.windows-386.tar.gz
+      sha256: sha256:d1038157b55409549286f657ac3fd05357d64ec7e65f9d7ae8f9864edddf950e
+      size: 3720675
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.windows-386.tar.gz
+    - name: snmp_exporter-0.6.0.windows-amd64.tar.gz
+      sha256: sha256:2a1e0f357e49d6d2a49ebe8c69b539ea2cf64f7bb70ee14e02c600c39741c610
+      size: 3958151
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.6.0/snmp_exporter-0.6.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: 4388d6815791d6d616098f899110c9dca354028c
+  v0.7.0:
+    files:
+    - name: snmp_exporter-0.7.0.darwin-386.tar.gz
+      sha256: sha256:b5611f9e35c60ee3879573f4bd1a7b20092f047c7921829eb04d0be6a2c342c4
+      size: 3848496
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.darwin-386.tar.gz
+    - name: snmp_exporter-0.7.0.darwin-amd64.tar.gz
+      sha256: sha256:8c8adbb4067e14bca33f55f37964b1812fd3e5c503fd50e432616ea67a866f16
+      size: 4083443
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.7.0.dragonfly-amd64.tar.gz
+      sha256: sha256:a41403fbf9ee44338d92c00bf1ea6e2b0fdce241f5a391c0a76ece784b47a014
+      size: 4051324
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.7.0.freebsd-386.tar.gz
+      sha256: sha256:ce167e818dc3ac76aa4b26e09040bfb3bec4fa9a2f82ced8c1ca5853282d4937
+      size: 3821329
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.freebsd-386.tar.gz
+    - name: snmp_exporter-0.7.0.freebsd-amd64.tar.gz
+      sha256: sha256:a85af8444a6db07d9df82345cd5cc11c7619ed20f96a9b4f27cc6e52cf371d0e
+      size: 4056081
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.7.0.linux-386.tar.gz
+      sha256: sha256:d41fc0c75922585f13508dbc549d4cd03fe2d4b3ef0da00e02546ae45d51e794
+      size: 3813377
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.linux-386.tar.gz
+    - name: snmp_exporter-0.7.0.linux-amd64.tar.gz
+      sha256: sha256:6aaa2ec8f9f32b05fd7fbb231b82ca31465404c8c473660e4da3c3fe2f7df089
+      size: 4046556
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.linux-amd64.tar.gz
+    - name: snmp_exporter-0.7.0.linux-arm64.tar.gz
+      sha256: sha256:a806ca37dd0fca673ac6d7e36c1d5ee3b969c6021c0752934a1b248ec858b7a7
+      size: 3694624
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.linux-arm64.tar.gz
+    - name: snmp_exporter-0.7.0.linux-armv5.tar.gz
+      sha256: sha256:22b369ad81c794e2496ccc83a8877d6cf86a6a249eefc73bf3d08960aba273d9
+      size: 3734438
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.linux-armv5.tar.gz
+    - name: snmp_exporter-0.7.0.linux-armv6.tar.gz
+      sha256: sha256:53ea660610b9a12711caba0f702a9c667b62f4414b22667aebfee7b56aaff48b
+      size: 3714894
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.linux-armv6.tar.gz
+    - name: snmp_exporter-0.7.0.linux-armv7.tar.gz
+      sha256: sha256:8cc51908d7f9ded4429bc7fa4eb66d5c6af7fe5c69ab5572863a83093ce2980a
+      size: 3712586
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.linux-armv7.tar.gz
+    - name: snmp_exporter-0.7.0.linux-ppc64.tar.gz
+      sha256: sha256:3b80bb6ad8137619dd7e2b1b061ddc2716d2b70e35073806a03e9906f8795d55
+      size: 3769025
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.7.0.linux-ppc64le.tar.gz
+      sha256: sha256:189cf31d7bb4cd849c4d0ccc63280a93ac024034c25fc88fca0cd7aa6365747c
+      size: 3677971
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.7.0.netbsd-386.tar.gz
+      sha256: sha256:0a8c4fa7785098e6f4756815a5c93f4e4b3c5443bc382e3deb86b091d078dafc
+      size: 3816620
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.netbsd-386.tar.gz
+    - name: snmp_exporter-0.7.0.netbsd-amd64.tar.gz
+      sha256: sha256:ce5a15a04db925c3ddd1301d9624564013d0135f6c48d6882ec74d104719400c
+      size: 4049221
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.7.0.netbsd-armv6.tar.gz
+      sha256: sha256:1f40a1558e74af167a7acdf487131707c978dd796d5778d7322b15552acd54ba
+      size: 3726111
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.7.0.netbsd-armv7.tar.gz
+      sha256: sha256:03e3b4e4810d3e107f9f05bac7cb20f921271429616f33933303463043b98be6
+      size: 3723581
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.7.0.openbsd-386.tar.gz
+      sha256: sha256:1e3c902e12f9877a8d0ce418ea1ac76f398ad5e7d02783044d772c0d778abc35
+      size: 3822239
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.openbsd-386.tar.gz
+    - name: snmp_exporter-0.7.0.openbsd-amd64.tar.gz
+      sha256: sha256:01c03dca296175a63c16aba649ce1e2e4db1596600b70f81070f9d0c4bbddecf
+      size: 4056236
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.7.0.windows-386.tar.gz
+      sha256: sha256:0b62af3df83c7108923322ba858758cbddf54741915db573967fbbaeaed68a1a
+      size: 3801603
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.windows-386.tar.gz
+    - name: snmp_exporter-0.7.0.windows-amd64.tar.gz
+      sha256: sha256:9f58acf3a49f1b3129fd9c5da65dc612d2c6921c23e6b9287f3428d7ad7bc7ac
+      size: 4039431
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.7.0/snmp_exporter-0.7.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: 91479202362d118e7c3270840a193e702e4c0a67
+  v0.8.0:
+    files:
+    - name: snmp_exporter-0.8.0.darwin-386.tar.gz
+      sha256: sha256:e9bb9c863b61e8fad9383ca652a30504df4d7a382f40760ac3706a6cc6141475
+      size: 3857217
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.darwin-386.tar.gz
+    - name: snmp_exporter-0.8.0.darwin-amd64.tar.gz
+      sha256: sha256:7e7027c0beb14e3b2c32edeb4ab629bde97da55a3d6497902f19e3b91fb220f9
+      size: 4091503
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.8.0.dragonfly-amd64.tar.gz
+      sha256: sha256:0ca64b712fc30b9b0cef0cc3b882b4126a30abb7a162a471f1fa334b949bf6e2
+      size: 4058878
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.8.0.freebsd-386.tar.gz
+      sha256: sha256:a5417e4d9d6b597c4d2e6ba8c9c5ccaff88e26ae9d4f7f975fe9f66a3454d55e
+      size: 3829921
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.freebsd-386.tar.gz
+    - name: snmp_exporter-0.8.0.freebsd-amd64.tar.gz
+      sha256: sha256:f24b1eba4804c09c86a21c2a2efe07b4f409bc309630492b2c2367a1e3d4fcfc
+      size: 4059550
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.8.0.linux-386.tar.gz
+      sha256: sha256:67637986253a7083c9ff446fa1bcbf5a5705ed36f5491dc3f478f2e337908ba9
+      size: 3819982
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.linux-386.tar.gz
+    - name: snmp_exporter-0.8.0.linux-amd64.tar.gz
+      sha256: sha256:62871482b90f6ee91a28a68e469e2acb5c56b98dda5673d39331a2e38fa1b9a9
+      size: 4053285
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.linux-amd64.tar.gz
+    - name: snmp_exporter-0.8.0.linux-arm64.tar.gz
+      sha256: sha256:661afcbc52c5a6f4e595cc419b18b4ece8a9cd1cc518d6a19b05d0f28c60b035
+      size: 3701154
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.linux-arm64.tar.gz
+    - name: snmp_exporter-0.8.0.linux-armv5.tar.gz
+      sha256: sha256:96a199fa25c952b6152976ed23cb2a243d1c9483874b9006d3796350684ecbdc
+      size: 3740494
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.linux-armv5.tar.gz
+    - name: snmp_exporter-0.8.0.linux-armv6.tar.gz
+      sha256: sha256:44930514f5c07593e15b966dfabf78797139855d6c5838a6e04590b68e463428
+      size: 3720956
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.linux-armv6.tar.gz
+    - name: snmp_exporter-0.8.0.linux-armv7.tar.gz
+      sha256: sha256:cc73613decb1298881a8591e6a5ebefcba231527f0ea6cc9b47893d00f6ad775
+      size: 3720147
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.linux-armv7.tar.gz
+    - name: snmp_exporter-0.8.0.linux-ppc64.tar.gz
+      sha256: sha256:70c0226a76c1634be7191caec5a3e367a166a448a60381e776cc9c6d3aa7f272
+      size: 3776799
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.8.0.linux-ppc64le.tar.gz
+      sha256: sha256:67c64ec617212ccadab50230e09da171b0c77ce7f48ca81e7c60f2bbe8628e01
+      size: 3684978
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.8.0.netbsd-386.tar.gz
+      sha256: sha256:adaba9769be509d02d7803a02bc08da37f4ae607402d516161f06450b240ba68
+      size: 3823241
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.netbsd-386.tar.gz
+    - name: snmp_exporter-0.8.0.netbsd-amd64.tar.gz
+      sha256: sha256:8919d0399a82e1ac68f595e3de20bcc408d57679f0994bea16d4c048fe2381ec
+      size: 4055748
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.8.0.netbsd-armv6.tar.gz
+      sha256: sha256:568f6e96f19519f9c3bf0b45563d4d356ec660a852f8e38fcf5c246929783cde
+      size: 3733043
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.8.0.netbsd-armv7.tar.gz
+      sha256: sha256:e360e4d4a325a247b4fd909083bd2f7dea2fe254204167a63bc182fd1fac3654
+      size: 3729092
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.8.0.openbsd-386.tar.gz
+      sha256: sha256:bf99edafbaa761a573c0db188ec260a28d55017f4d152705a34e964b4acecaca
+      size: 3829536
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.openbsd-386.tar.gz
+    - name: snmp_exporter-0.8.0.openbsd-amd64.tar.gz
+      sha256: sha256:2d219f9606e48a4fee3ea655bd04d2f876d1b8e282ebe0c69bab574d0e24e42b
+      size: 4061669
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.8.0.windows-386.tar.gz
+      sha256: sha256:1b2e2be2bf4fc360bb0fad3fca16577f45d3dc79aff4646e507c6316c3b73c2f
+      size: 3810037
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.windows-386.tar.gz
+    - name: snmp_exporter-0.8.0.windows-amd64.tar.gz
+      sha256: sha256:690891a61233d4c1d5a7fd649120e0c067e1cf07bd6cfde4199fd3158980bcce
+      size: 4047219
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.8.0/snmp_exporter-0.8.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: 17cefcaf7010106861ce0faa2a9ec9e39b7c2b4b
+  v0.9.0:
+    files:
+    - name: sha256sums.txt
+      sha256: sha256:e30361eb6c52c5dc2d81232a8c63b6345f9b05941992b14eeccd3f7c0bbf660f
+      size: 2217
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/sha256sums.txt
+    - name: snmp_exporter-0.9.0.darwin-386.tar.gz
+      sha256: sha256:19e1dc56a158d59dab89ecb716ac11c0fd891a6f4fe1661690a2db2d4d768085
+      size: 3861195
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.darwin-386.tar.gz
+    - name: snmp_exporter-0.9.0.darwin-amd64.tar.gz
+      sha256: sha256:09c9f9590d137111f0df91a79ca540d0b076d451cf3f455f5ba810366326d913
+      size: 4095256
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.darwin-amd64.tar.gz
+    - name: snmp_exporter-0.9.0.dragonfly-amd64.tar.gz
+      sha256: sha256:2154652a5ff685f4192b015619dfe05b6a079b4dae63fd4951e8140304fb05f1
+      size: 4065092
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.dragonfly-amd64.tar.gz
+    - name: snmp_exporter-0.9.0.freebsd-386.tar.gz
+      sha256: sha256:f8906e45a08234e433aeaa191506c3b4c1e85dfcce0965e61aca445a06a6e98e
+      size: 3833635
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.freebsd-386.tar.gz
+    - name: snmp_exporter-0.9.0.freebsd-amd64.tar.gz
+      sha256: sha256:9dbd9e23cbcb56b8a48d0ea9b79cd18b186da82ab05ca64d56e9b2dc760a1741
+      size: 4066952
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.freebsd-amd64.tar.gz
+    - name: snmp_exporter-0.9.0.linux-386.tar.gz
+      sha256: sha256:9e9cddee33d58640c9833dc1759923c1271a75b03d4241812b89907ce422ab1f
+      size: 3826061
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.linux-386.tar.gz
+    - name: snmp_exporter-0.9.0.linux-amd64.tar.gz
+      sha256: sha256:25188f2ea9c062c05d91bf140b6df7183d0d05b523d8fc2ee8e6558baed485f1
+      size: 4058838
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.linux-amd64.tar.gz
+    - name: snmp_exporter-0.9.0.linux-arm64.tar.gz
+      sha256: sha256:f63a362c9a25f4b0ad5568e468cac3bb6fd529244327b44fef7d3155292654a1
+      size: 3706512
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.linux-arm64.tar.gz
+    - name: snmp_exporter-0.9.0.linux-armv5.tar.gz
+      sha256: sha256:8449e901356919cec9f84ad03977cd858b6552938ed21a1a00f97f9296df9197
+      size: 3744613
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.linux-armv5.tar.gz
+    - name: snmp_exporter-0.9.0.linux-armv6.tar.gz
+      sha256: sha256:ae3f92f0bf8a21fdb3553429bdfdded0d1a70a4458dfff984590b04561437cc2
+      size: 3725619
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.linux-armv6.tar.gz
+    - name: snmp_exporter-0.9.0.linux-armv7.tar.gz
+      sha256: sha256:d3b000bcf15ad8cb2e9dbaec591c1a23322625d80c0e81d9be0e3ad28faccbe9
+      size: 3723050
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.linux-armv7.tar.gz
+    - name: snmp_exporter-0.9.0.linux-ppc64.tar.gz
+      sha256: sha256:3580635c88be694755dd6a3105fb593a5c8abc7bed13a4d0a8a113077c82c5b5
+      size: 3782556
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.linux-ppc64.tar.gz
+    - name: snmp_exporter-0.9.0.linux-ppc64le.tar.gz
+      sha256: sha256:5d50c629e0ffd962f9277aea1b8a3c7d6680a70634531d5c7c9877ab1d3cf0d0
+      size: 3690073
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.linux-ppc64le.tar.gz
+    - name: snmp_exporter-0.9.0.netbsd-386.tar.gz
+      sha256: sha256:0d70d943a135e453a38192bdfb0bf38fe24e49bbaa74946d9cbce58498a86253
+      size: 3828923
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.netbsd-386.tar.gz
+    - name: snmp_exporter-0.9.0.netbsd-amd64.tar.gz
+      sha256: sha256:854228f46bb823b5ab17319f75f5e5997517659fe1cd351ad1f1fcce06332717
+      size: 4059234
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.netbsd-amd64.tar.gz
+    - name: snmp_exporter-0.9.0.netbsd-armv6.tar.gz
+      sha256: sha256:051126c6e2a0e422ad5378a8f17810cf13f85eccc43885f8a7b93ec2a43c7936
+      size: 3736515
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.netbsd-armv6.tar.gz
+    - name: snmp_exporter-0.9.0.netbsd-armv7.tar.gz
+      sha256: sha256:98101253c28b30270907c5cf6ee14ea29eeab225c8a1fe74cbd42adeb9672867
+      size: 3734366
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.netbsd-armv7.tar.gz
+    - name: snmp_exporter-0.9.0.openbsd-386.tar.gz
+      sha256: sha256:da25bc3938d8a6a16c9b9c00e376f0fdcb429765244a9082a061e2625374d7c2
+      size: 3833129
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.openbsd-386.tar.gz
+    - name: snmp_exporter-0.9.0.openbsd-amd64.tar.gz
+      sha256: sha256:2ade235ec8e2ecadc4cbbae17e42fc3c1cbc22b586c2bccdda021e262130898c
+      size: 4066057
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.openbsd-amd64.tar.gz
+    - name: snmp_exporter-0.9.0.windows-386.tar.gz
+      sha256: sha256:51313783983701262af13ca81ae3ef9764b19dc7ffbe910d6b0fc897c448a0dc
+      size: 3815943
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.windows-386.tar.gz
+    - name: snmp_exporter-0.9.0.windows-amd64.tar.gz
+      sha256: sha256:1b6bbabd0118ef823e31f538dbfd6e2c40aae6266c72dc0e81ca8532f6bcc6d0
+      size: 4053238
+      url: https://github.com/prometheus/snmp_exporter/releases/download/v0.9.0/snmp_exporter-0.9.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: abb143a2b798ebb82167f407030056a00ead00ac
+software_metadata:
+  prerelease: v0.16.1
+  release: v0.16.1
+  updated: 2020-02-13 08:12:21.588135

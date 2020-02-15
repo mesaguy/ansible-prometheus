@@ -17,11 +17,11 @@
     prometheus_software_name: 'bigip_exporter_expressenab'
     prometheus_software_version: '{{ prometheus_bigip_exporter_expressenab_version | default("1.0.0") }}'
     prometheus_software_src_version: '{{ prometheus_bigip_exporter_expressenab_src_version | default("1.0.0") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_bigip_exporter_expressenab_jobname | default(prometheus_bigip_exporter_expressenab_default_tgroup_jobname) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_bigip_exporter_expressenab_jobname | default("bigip") }}'
     prometheus_software_description: 'Prometheus bigip_exporter (ExpressenAB), exporter for BIG-IP metrics'
     prometheus_software_documentation: 'https://github.com/ExpressenAB/bigip_exporter'
     prometheus_software_host: '{{ prometheus_bigip_exporter_expressenab_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_bigip_exporter_expressenab_port | default(prometheus_bigip_exporter_expressenab_default_port) }}'
+    prometheus_software_port: '{{ prometheus_bigip_exporter_expressenab_port | default(9142) }}'
     prometheus_software_runas: '{{ prometheus_bigip_exporter_expressenab_runas | default(prometheus_user) }}'
     prometheus_software_shortname: 'bigip_exporter'
 

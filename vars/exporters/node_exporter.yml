@@ -1,1285 +1,1282 @@
 ---
-defaults:
-  port: 9100
-  tgroup_jobname: node
-metadata:
-  updated: 2020-02-10 05:38:27.654200
-  release: v0.18.1
-  prerelease: v0.18.1
 software:
-  v0.18.1:
-    prerelease: false
-    sha: 3db77732e925c08f675d7404a8c46466b2ece83e
-    files:
-    - name: node_exporter-0.18.1.darwin-386.tar.gz
-      size: 3960738
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.darwin-386.tar.gz
-      sha256: sha256:61a13b13f5a98bafd6e0dec17c6579acbc13f8a1e24a8e9206a8017edb248460
-    - name: node_exporter-0.18.1.darwin-amd64.tar.gz
-      size: 4185287
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.darwin-amd64.tar.gz
-      sha256: sha256:20fadb3108de0a9cc70a1333394e5be90416b4f91025f9fc66f5736335e94398
-    - name: node_exporter-0.18.1.linux-386.tar.gz
-      size: 7836930
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-386.tar.gz
-      sha256: sha256:a6c7eb64bb5f27a5567d545a1b93780f3aa72d0627751fd9f054626bb542a4b5
-    - name: node_exporter-0.18.1.linux-amd64.tar.gz
-      size: 8083296
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
-      sha256: sha256:b2503fd932f85f4e5baf161268854bf5d22001869b84f00fd2d1f57b51b72424
-    - name: node_exporter-0.18.1.linux-arm64.tar.gz
-      size: 7544466
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-arm64.tar.gz
-      sha256: sha256:d5a28c46e74f45b9f2158f793a6064fd9fe8fd8da6e0d1e548835ceb7beb1982
-    - name: node_exporter-0.18.1.linux-armv5.tar.gz
-      size: 7531847
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-armv5.tar.gz
-      sha256: sha256:1eecbaa2a7e58dc2a5b18e960c48842e5e158c9e2eea4d8a4ba32b98ca2f638a
-    - name: node_exporter-0.18.1.linux-armv6.tar.gz
-      size: 7527033
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-armv6.tar.gz
-      sha256: sha256:6f3cb593c15c12cdfaef20d7e1c61d28ef822af6fc8c85d670cb3f0a1212778a
-    - name: node_exporter-0.18.1.linux-armv7.tar.gz
-      size: 7523071
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-armv7.tar.gz
-      sha256: sha256:5de85067f44b42b22d62b2789cb1a379ff5559649b99795cd1ba0c144b512ad0
-    - name: node_exporter-0.18.1.linux-mips.tar.gz
-      size: 7467872
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-mips.tar.gz
-      sha256: sha256:9ef7c932970bc823a63347c3cdd8a34a4ef9d327cd5513600435dfd74d046755
-    - name: node_exporter-0.18.1.linux-mips64.tar.gz
-      size: 7640454
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-mips64.tar.gz
-      sha256: sha256:c2721c1b85e3024e61f37fb2dc44a57f6d4eed8cc0576185a1dedea20e36fb31
-    - name: node_exporter-0.18.1.linux-mips64le.tar.gz
-      size: 7400932
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-mips64le.tar.gz
-      sha256: sha256:ae262af96dd7409aeefe28f8ea6cb1b00377444837057ed67694d8fa1b75b848
-    - name: node_exporter-0.18.1.linux-mipsle.tar.gz
-      size: 7310549
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-mipsle.tar.gz
-      sha256: sha256:40860be242f563e3e10972685f1d1654c9b5ca9686b26bde4a422f57a1ebdd18
-    - name: node_exporter-0.18.1.linux-ppc64.tar.gz
-      size: 7732608
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-ppc64.tar.gz
-      sha256: sha256:b41f860dbe23b72cf2ae939dd6bb43ea3ddde268f5a964cf6f8d490fed1ed034
-    - name: node_exporter-0.18.1.linux-ppc64le.tar.gz
-      size: 7519226
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-ppc64le.tar.gz
-      sha256: sha256:27996a62327e07041b5dd2f09d6054c7c21244e39358da5d9b44b96daf6a2bc0
-    - name: node_exporter-0.18.1.linux-s390x.tar.gz
-      size: 8203806
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-s390x.tar.gz
-      sha256: sha256:0bc212b9db6c2201b2b38d46de2d4cc75b7f4648d7616a87d7616e85f0d6cba4
-    - name: node_exporter-0.18.1.netbsd-386.tar.gz
-      size: 6411483
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.netbsd-386.tar.gz
-      sha256: sha256:c831801b5730750177893a9866416ebb68977a8fd5a7b5305e39ef1162e146a9
-    - name: node_exporter-0.18.1.netbsd-amd64.tar.gz
-      size: 6637344
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.netbsd-amd64.tar.gz
-      sha256: sha256:4772c8e2d13935d2bcfa8ad1fd64b8ca5d2cc5d71bbee6dd4ef04306017c6368
-    - name: sha256sums.txt
-      size: 1806
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/sha256sums.txt
-      sha256: sha256:4327dfd02e120c441abd2cd0f62cd0da324be8217cbefe812e34f79227c9b099
-  v0.18.0:
-    prerelease: false
-    sha: f97f01c46cfde2ff97b5539b7964f3044c04947b
-    files:
-    - name: node_exporter-0.18.0.darwin-386.tar.gz
-      size: 3951251
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.darwin-386.tar.gz
-      sha256: sha256:40dade397d0b7026986f96a43015b3179de185310caa73b881ac5313ddd256f0
-    - name: node_exporter-0.18.0.darwin-amd64.tar.gz
-      size: 4172250
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.darwin-amd64.tar.gz
-      sha256: sha256:0b0347aa54894b4306b769244d42a783d635a90b050f20008f26fb3d5a66145f
-    - name: node_exporter-0.18.0.linux-386.tar.gz
-      size: 7819179
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-386.tar.gz
-      sha256: sha256:9c962fba082dcd8a38542bacdac4421bf643c1d55c71c8b35397a7f20eb88c0f
-    - name: node_exporter-0.18.0.linux-amd64.tar.gz
-      size: 8064926
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-amd64.tar.gz
-      sha256: sha256:1ebbc2b062b6c80a4802bc56ba04cb93b3486e8074bd25cc6887e44111f352c4
-    - name: node_exporter-0.18.0.linux-arm64.tar.gz
-      size: 7528023
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-arm64.tar.gz
-      sha256: sha256:0ebc9afae07cf941fe50cceb821daca6115ab827cfd5394faad4f168925e93c2
-    - name: node_exporter-0.18.0.linux-armv5.tar.gz
-      size: 7515326
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-armv5.tar.gz
-      sha256: sha256:cd4036a6af70f9c8f6254c12e3713585c6040c4a70c1211a9331f56cb2e839e7
-    - name: node_exporter-0.18.0.linux-armv6.tar.gz
-      size: 7507763
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-armv6.tar.gz
-      sha256: sha256:44cd3612a0e52a6e440eb29b0a708d50f9bdf424422b7d54ac6984a9c767072e
-    - name: node_exporter-0.18.0.linux-armv7.tar.gz
-      size: 7507361
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-armv7.tar.gz
-      sha256: sha256:f685fdb98f73cdd7c1c933cd547fa2cc13e64ec0cf1603b92f6ba0807a844f8f
-    - name: node_exporter-0.18.0.linux-mips.tar.gz
-      size: 7450166
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-mips.tar.gz
-      sha256: sha256:18e49155135675b18276fd3838deb0ee8616b5f27aaa8ab5531adc574d116cde
-    - name: node_exporter-0.18.0.linux-mips64.tar.gz
-      size: 7615995
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-mips64.tar.gz
-      sha256: sha256:785bd924a45f1514db1879bbf2febc643f7c5f2019642b9f3eb081e2570ef730
-    - name: node_exporter-0.18.0.linux-mips64le.tar.gz
-      size: 7385615
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-mips64le.tar.gz
-      sha256: sha256:b34c0fc00f19cc37b6307482b8b0706e2e11af091fd7fa0644118910e9f6d651
-    - name: node_exporter-0.18.0.linux-mipsle.tar.gz
-      size: 7294617
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-mipsle.tar.gz
-      sha256: sha256:cb0127711fd25f52bdb8ddb94fb5a636887b3e754672e089c1f3e4d50d1a7ee8
-    - name: node_exporter-0.18.0.linux-ppc64.tar.gz
-      size: 7711150
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-ppc64.tar.gz
-      sha256: sha256:8a90f08ac9a33c42ed6879abfbd5ba0731b69d00442184a53d2676fa28516539
-    - name: node_exporter-0.18.0.linux-ppc64le.tar.gz
-      size: 7505661
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-ppc64le.tar.gz
-      sha256: sha256:16ab80e03610d8d043e516f8e2dd9a3e32d74410ad776fe474d5eb3d1f3d8f8f
-    - name: node_exporter-0.18.0.linux-s390x.tar.gz
-      size: 8173986
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-s390x.tar.gz
-      sha256: sha256:53bac101f650da2aa6899e67bef6cabeec5c080c22aa54e5a56f36b673eeab38
-    - name: node_exporter-0.18.0.netbsd-386.tar.gz
-      size: 6396814
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.netbsd-386.tar.gz
-      sha256: sha256:136382659e88a3040207b4f8322b4d46952aedfa38692fb68c3f227917e0e2d6
-    - name: node_exporter-0.18.0.netbsd-amd64.tar.gz
-      size: 6625512
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.netbsd-amd64.tar.gz
-      sha256: sha256:e09ee73ea8135e896cd16a0c85048b9e9cc3c65ac6a3ccaa1a1b8a549dbeb129
-    - name: sha256sums.txt
-      size: 1806
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/sha256sums.txt
-      sha256: sha256:2e7b1a31e6927bc1f2d5b9d36f8d30b119f83feb9c90c175e95910cede1e1b76
-  v0.17.0:
-    prerelease: false
-    sha: f6f6194a436b9a63d0439abc585c76b19a206b21
-    files:
-    - name: node_exporter-0.17.0.darwin-386.tar.gz
-      size: 3960348
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.darwin-386.tar.gz
-      sha256: sha256:8af35b05e3302968a139f16cb1bc734613a98d9150e6d1491f8279bbdf44e17e
-    - name: node_exporter-0.17.0.darwin-amd64.tar.gz
-      size: 4179115
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.darwin-amd64.tar.gz
-      sha256: sha256:247f8fc619613eddd60d8041abd7cee2ddf552e7d664a0f1472b87d82ea41fa8
-    - name: node_exporter-0.17.0.linux-386.tar.gz
-      size: 6782785
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-386.tar.gz
-      sha256: sha256:99ed86f55be91f305c9a1e00ca01970ceaf15baf245977a935b54bc1a98cb060
-    - name: node_exporter-0.17.0.linux-amd64.tar.gz
-      size: 7018111
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-amd64.tar.gz
-      sha256: sha256:d2e00d805dbfdc67e7291ce2d2ff151f758dd7401dd993411ff3818d0e231489
-    - name: node_exporter-0.17.0.linux-arm64.tar.gz
-      size: 6498124
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-arm64.tar.gz
-      sha256: sha256:f0d9a8bfed735e93f49a4e8113e96af2dfc90db759164a785b862c704f633569
-    - name: node_exporter-0.17.0.linux-armv5.tar.gz
-      size: 6495987
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-armv5.tar.gz
-      sha256: sha256:358f71e5fc08b82a40b7b05d9e19a8e0b4340a3edb700c9b298809ff77588cb5
-    - name: node_exporter-0.17.0.linux-armv6.tar.gz
-      size: 6488288
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-armv6.tar.gz
-      sha256: sha256:5aa657827611010520c19f911da345c50f0242425891eb5a58ffe6fd75fcd7a8
-    - name: node_exporter-0.17.0.linux-armv7.tar.gz
-      size: 6486033
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-armv7.tar.gz
-      sha256: sha256:052292878a664b02f464c85c2936decce600f73cf0ae8138dd026da532bcc352
-    - name: node_exporter-0.17.0.linux-mips.tar.gz
-      size: 6464969
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-mips.tar.gz
-      sha256: sha256:eb0582631c8939e250391cfe6f1d203daf06c371f969c0728dc27fadefd4334e
-    - name: node_exporter-0.17.0.linux-mips64.tar.gz
-      size: 6592799
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-mips64.tar.gz
-      sha256: sha256:078a135de5252a943c98b1de9122e2554e7dd3f477b5df34fed2dc628496a44e
-    - name: node_exporter-0.17.0.linux-mips64le.tar.gz
-      size: 6395744
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-mips64le.tar.gz
-      sha256: sha256:5d534c019b424f7f2fe43c1913e7fa521c5f610f553f0ec4bc5f345f7896e70f
-    - name: node_exporter-0.17.0.linux-mipsle.tar.gz
-      size: 6314095
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-mipsle.tar.gz
-      sha256: sha256:74ffb22c7041adbf94fb4b2c6d9f1370aa4f0c19a275c606e773ad5660ffcd3f
-    - name: node_exporter-0.17.0.linux-ppc64.tar.gz
-      size: 6690198
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-ppc64.tar.gz
-      sha256: sha256:79f342d6e0bbb07609274ec9c913bc4ca69aac7414999dfa75d503afb37b9668
-    - name: node_exporter-0.17.0.linux-ppc64le.tar.gz
-      size: 6510293
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-ppc64le.tar.gz
-      sha256: sha256:1f5020d5361bcfcf2f0e7355004271f3953747d827f271418841221b60b52d81
-    - name: node_exporter-0.17.0.linux-s390x.tar.gz
-      size: 7082014
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-s390x.tar.gz
-      sha256: sha256:21ea9ee3a7a2cfdccfa97e7c00da1069732512929f0bce43a74dc9cdfafbd4cb
-    - name: node_exporter-0.17.0.netbsd-386.tar.gz
-      size: 6400764
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.netbsd-386.tar.gz
-      sha256: sha256:763e94e4717424f72ea175fe6e467c5a0dc34592eecf926e071c21b2a77929b8
-    - name: node_exporter-0.17.0.netbsd-amd64.tar.gz
-      size: 6628144
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.netbsd-amd64.tar.gz
-      sha256: sha256:9dee472eb99fbd146e6e6895f695f3135a7b690bde25760303df3d1a61596276
-    - name: sha256sums.txt
-      size: 1806
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/sha256sums.txt
-      sha256: sha256:2dd71a67ba07fae9117d9359859d47623800deee0934de109145387048f90133
-  v0.17.0-rc.0:
-    prerelease: true
-    sha: 751996761903af4cffe18cf2d980b8ae9a202204
-    files:
-    - name: node_exporter-0.17.0-rc.0.darwin-386.tar.gz
-      size: 3969474
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.darwin-386.tar.gz
-      sha256: sha256:8f7a2a7600d652fae4c28c943450b5e0aa20d3ff5d6e22f23666abed77229e22
-    - name: node_exporter-0.17.0-rc.0.darwin-amd64.tar.gz
-      size: 4189361
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.darwin-amd64.tar.gz
-      sha256: sha256:3b9e5a8dd124f270094601f8d4a17b382533362033b7221eeeced0fb05b9ab26
-    - name: node_exporter-0.17.0-rc.0.linux-386.tar.gz
-      size: 6803676
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-386.tar.gz
-      sha256: sha256:b652cc9b69e48d7798ee2ce5843a533d9fbcbba6a858fbe62b9ace26f0273432
-    - name: node_exporter-0.17.0-rc.0.linux-amd64.tar.gz
-      size: 7038374
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-amd64.tar.gz
-      sha256: sha256:699d7bc42d6bd8007f6cd32f655af1baa556f83596a034926f6f77c434d31cad
-    - name: node_exporter-0.17.0-rc.0.linux-arm64.tar.gz
-      size: 6517253
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-arm64.tar.gz
-      sha256: sha256:e57abb8bafd31044d8b93b6e443eace0b07158a17f1feb725f8b1ac91b36ed3a
-    - name: node_exporter-0.17.0-rc.0.linux-armv5.tar.gz
-      size: 6519569
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-armv5.tar.gz
-      sha256: sha256:4077787b29c9137393bd90f3e162822f409c0d56b44ca1b28e3a7ddc8c7f3199
-    - name: node_exporter-0.17.0-rc.0.linux-armv6.tar.gz
-      size: 6510997
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-armv6.tar.gz
-      sha256: sha256:a30ebdaca11014673e9edcadafbd306db17b85262ae9455a330e84d480405b76
-    - name: node_exporter-0.17.0-rc.0.linux-armv7.tar.gz
-      size: 6506473
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-armv7.tar.gz
-      sha256: sha256:1b557575545be4af369c409c1653f38ce815938ed1d7322f8815f9bb1b80cca2
-    - name: node_exporter-0.17.0-rc.0.linux-mips.tar.gz
-      size: 6482733
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-mips.tar.gz
-      sha256: sha256:8ab11af54e94b9fcf0a701581bff40931938d859a3c0451b81aec87f79f13a07
-    - name: node_exporter-0.17.0-rc.0.linux-mips64.tar.gz
-      size: 6613259
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-mips64.tar.gz
-      sha256: sha256:9f0ed4e342283211c4788d77ec16e72670cd1bea0eae4c0a96491a02b4d464c4
-    - name: node_exporter-0.17.0-rc.0.linux-mips64le.tar.gz
-      size: 6417482
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-mips64le.tar.gz
-      sha256: sha256:b2cb535747f434b9e8955f17ec9b115a9e8737b01b47425972c4edeb6ee3e4fa
-    - name: node_exporter-0.17.0-rc.0.linux-mipsle.tar.gz
-      size: 6335579
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-mipsle.tar.gz
-      sha256: sha256:72c74ea833960cefa3caaa8b3ce906e2668614bca166ca4def6211d08a2cf427
-    - name: node_exporter-0.17.0-rc.0.linux-ppc64.tar.gz
-      size: 6706860
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-ppc64.tar.gz
-      sha256: sha256:13624424362f6120275545c2e53da63717e96504f5c4ead72deafbd15af04f02
-    - name: node_exporter-0.17.0-rc.0.linux-ppc64le.tar.gz
-      size: 6522864
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-ppc64le.tar.gz
-      sha256: sha256:3c10c77fc874b0758c2536a56303022bf4726826858236d01f9da40ced5edda7
-    - name: node_exporter-0.17.0-rc.0.linux-s390x.tar.gz
-      size: 7098810
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-s390x.tar.gz
-      sha256: sha256:343eab3a461c53430b6bfcfe9b3aec1861ec8d8665bc441e6c1d60f8a876b3fd
-    - name: node_exporter-0.17.0-rc.0.netbsd-386.tar.gz
-      size: 6412835
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.netbsd-386.tar.gz
-      sha256: sha256:055443cf035efdba75b632d9421e9630801dff254ee5e2ecaa4093886ceb97fa
-    - name: node_exporter-0.17.0-rc.0.netbsd-amd64.tar.gz
-      size: 6639448
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.netbsd-amd64.tar.gz
-      sha256: sha256:d96702c0e539a4ec4dc1251b24024a19b4ff6b5201c2702d6d818750ec61cb9b
-    - name: sha256sums.txt
-      size: 1891
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/sha256sums.txt
-      sha256: sha256:b60f2503ae6039fe36dc1834d0809d973c5f0cd8eeac144343e2c28675a3fd0d
-  v0.16.0:
-    prerelease: false
-    sha: d42bd70f4363dced6b77d8fc311ea57b63387e4f
-    files:
-    - name: node_exporter-0.16.0.darwin-386.tar.gz
-      size: 3252616
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.darwin-386.tar.gz
-      sha256: sha256:747ee549c1010947a8b162b1434976fe6cb8445540521d2fcc283765e4be1a79
-    - name: node_exporter-0.16.0.darwin-amd64.tar.gz
-      size: 3480556
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.darwin-amd64.tar.gz
-      sha256: sha256:73a8c451bd14dea587ebf2fd1258471fe97bddbae6f44b6a9d3ce7e2327bc91d
-    - name: node_exporter-0.16.0.linux-386.tar.gz
-      size: 4989677
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.linux-386.tar.gz
-      sha256: sha256:2f18a32a7bb1c91307ed776cce50559bbcd66af90a61ea0a22a661ebe79e4fda
-    - name: node_exporter-0.16.0.linux-amd64.tar.gz
-      size: 5276312
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.linux-amd64.tar.gz
-      sha256: sha256:e92a601a5ef4f77cce967266b488a978711dabc527a720bea26505cba426c029
-    - name: node_exporter-0.16.0.linux-arm64.tar.gz
-      size: 4794389
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.linux-arm64.tar.gz
-      sha256: sha256:c793e8278ec6a167a49518d72dd928361a045bd4c8b155a22d5b158dd3aea2ac
-    - name: node_exporter-0.16.0.linux-armv5.tar.gz
-      size: 4844102
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.linux-armv5.tar.gz
-      sha256: sha256:18c91a0247f4bc97fb7cdd96502cd8a804a96f42a16357b39f43e28b3d2ac864
-    - name: node_exporter-0.16.0.linux-armv6.tar.gz
-      size: 4823671
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.linux-armv6.tar.gz
-      sha256: sha256:f9518aea4fa7127122a6bf384ba8f70120deaaef75532749f1765cf6e25fd820
-    - name: node_exporter-0.16.0.linux-armv7.tar.gz
-      size: 4776954
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.linux-armv7.tar.gz
-      sha256: sha256:b8bf44c025ec2c5210bdda185f8e72b29ccd3eb9be339b8dbf96835d4fc1965d
-    - name: node_exporter-0.16.0.netbsd-386.tar.gz
-      size: 4534143
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.netbsd-386.tar.gz
-      sha256: sha256:e0561e421deb02f343e2dd5a75ad322bf6960de56c0fa965d9708f6b237f02b0
-    - name: node_exporter-0.16.0.netbsd-amd64.tar.gz
-      size: 4781146
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.netbsd-amd64.tar.gz
-      sha256: sha256:293451f83ace3f25e36466fe34024827ac03dee6bf3c3694efdbc0c732959033
-    - name: sha256sums.txt
-      size: 1058
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/sha256sums.txt
-      sha256: sha256:b6dc03dba1a5274038285c774aabe3e34184e8b78b46b9d4890053c4a49bd776
-  v0.16.0-rc.3:
-    prerelease: true
-    sha: 575d8950d367987ab8792e90fb2cf00c3fee1c10
-    files:
-    - name: node_exporter-0.16.0-rc.3.darwin-386.tar.gz
-      size: 3252070
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.darwin-386.tar.gz
-      sha256: sha256:2a98733ff2d4bcaf61f860b3636b79457be61db210707417057311e45cb7e1be
-    - name: node_exporter-0.16.0-rc.3.darwin-amd64.tar.gz
-      size: 3480326
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.darwin-amd64.tar.gz
-      sha256: sha256:b6eb1015077a507c27f4cec93f9f439a7bb6b5ddbe0947b1a43fda77cbd550e6
-    - name: node_exporter-0.16.0-rc.3.linux-386.tar.gz
-      size: 4989590
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.linux-386.tar.gz
-      sha256: sha256:36bcee19f0417bc2dadfcf7b3a3ccfefe7b8fac06c629c685f86f5d3b9d37d4e
-    - name: node_exporter-0.16.0-rc.3.linux-amd64.tar.gz
-      size: 5277671
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.linux-amd64.tar.gz
-      sha256: sha256:0164728145dea40696701dd98e2e12f523e99bc90a5abf0228e7d39538f535dd
-    - name: node_exporter-0.16.0-rc.3.linux-arm64.tar.gz
-      size: 4794348
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.linux-arm64.tar.gz
-      sha256: sha256:3aacc09bba89adb3d0a5f6fb49cf751b975a90f2bd12022c3b08aa93ef90a7c2
-    - name: node_exporter-0.16.0-rc.3.linux-armv5.tar.gz
-      size: 4844286
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.linux-armv5.tar.gz
-      sha256: sha256:d472dd936c0ed5e5a8cbea17aa7d0953f677b5890568bf529e76983a34a1d83f
-    - name: node_exporter-0.16.0-rc.3.linux-armv6.tar.gz
-      size: 4823855
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.linux-armv6.tar.gz
-      sha256: sha256:790703b7de56ded26792ff64b0eaaed1a94cf283fc51da9bc039e7daf031a07f
-    - name: node_exporter-0.16.0-rc.3.linux-armv7.tar.gz
-      size: 4776814
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.linux-armv7.tar.gz
-      sha256: sha256:44cf3c1c835dfb4ca3eef2338ccb109189c31c0c47259d70c02eeb60920841b2
-    - name: node_exporter-0.16.0-rc.3.netbsd-386.tar.gz
-      size: 4534855
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.netbsd-386.tar.gz
-      sha256: sha256:13a6273f6235af8258cc00600bc4726bbcb1e614eaf1b04376dc300ea3703371
-    - name: node_exporter-0.16.0-rc.3.netbsd-amd64.tar.gz
-      size: 4780958
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.netbsd-amd64.tar.gz
-      sha256: sha256:cc5265a3e573052379a2b9bb7b48fa4112bcc60c48dd995f3a0f4dc6539867e5
-    - name: sha256sums.txt
-      size: 1108
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/sha256sums.txt
-      sha256: sha256:7ef1586d6e44c865030e0da316fb398a045456e0949faf8f416ca74cceb0c9b2
-  v0.16.0-rc.2:
-    prerelease: true
-    sha: 7cbfa884a7e69de9ee3dbbe4ed820197f363dbfd
-    files:
-    - name: node_exporter-0.16.0-rc.2.darwin-386.tar.gz
-      size: 3333288
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.darwin-386.tar.gz
-      sha256: sha256:168ced766854c382305d0f902ea3ef1d7554bfa83820694376faad8e99225a15
-    - name: node_exporter-0.16.0-rc.2.darwin-amd64.tar.gz
-      size: 3495903
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.darwin-amd64.tar.gz
-      sha256: sha256:dfa16b3915d30aed9316df494ab28395b628d259a663569fc1255c833e4f170f
-    - name: node_exporter-0.16.0-rc.2.linux-386.tar.gz
-      size: 5441920
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.linux-386.tar.gz
-      sha256: sha256:95e56990355ac6cf52bdb6867dc34dba755d8910211c21c7eab04d9a05fad70f
-    - name: node_exporter-0.16.0-rc.2.linux-amd64.tar.gz
-      size: 5618081
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.linux-amd64.tar.gz
-      sha256: sha256:3f59750277ba214c7d8bc5786b126be325ef07aeffffe0af69babfbead0c5a60
-    - name: node_exporter-0.16.0-rc.2.linux-arm64.tar.gz
-      size: 5209178
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.linux-arm64.tar.gz
-      sha256: sha256:388e2873d4ac2be05feb47ff9ad6cdcef13949829144546cf3c51d4451ef47fe
-    - name: node_exporter-0.16.0-rc.2.linux-armv5.tar.gz
-      size: 5242798
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.linux-armv5.tar.gz
-      sha256: sha256:7fda4d8e908e456dfd19e91af72cb1480faa0be4fcd17d3c98a82df67e0efccb
-    - name: node_exporter-0.16.0-rc.2.linux-armv6.tar.gz
-      size: 5217082
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.linux-armv6.tar.gz
-      sha256: sha256:2b497db92ff7f2663407f94b3b043456fa451db2991ade2e4ecfc84404db5e6e
-    - name: node_exporter-0.16.0-rc.2.linux-armv7.tar.gz
-      size: 5176008
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.linux-armv7.tar.gz
-      sha256: sha256:db013f5c64432e792f00e83ebfd542927614e682ee64e956fb4f5ceac145523b
-    - name: node_exporter-0.16.0-rc.2.netbsd-386.tar.gz
-      size: 4959611
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.netbsd-386.tar.gz
-      sha256: sha256:48a33f97236b492e4402911bc477e9e7585000a25d80ba38972acee85f776086
-    - name: node_exporter-0.16.0-rc.2.netbsd-amd64.tar.gz
-      size: 5109072
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.netbsd-amd64.tar.gz
-      sha256: sha256:3467d941700eba6689c8b77a9998d7713cce7109da8b51230542de432e094578
-    - name: sha256sums.txt
-      size: 1108
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/sha256sums.txt
-      sha256: sha256:2dfb0d1eb3dfc096b925084edc0e23cc8919b67dac875c5cb7d1939f39428900
-  v0.16.0-rc.1:
-    prerelease: true
-    sha: f3ff44fcca5bb20a181cd7b99734afeae553c78e
-    files:
-    - name: node_exporter-0.16.0-rc.1.darwin-386.tar.gz
-      size: 3329814
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.darwin-386.tar.gz
-      sha256: sha256:555bb5a79a285294d51e79912b08e8f20821a34c7ac851f2bfc1591a046d5dd9
-    - name: node_exporter-0.16.0-rc.1.darwin-amd64.tar.gz
-      size: 3496107
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.darwin-amd64.tar.gz
-      sha256: sha256:648f570da4630e935976884176d72864d4a9b2990058235e3dee2dab920da5df
-    - name: node_exporter-0.16.0-rc.1.linux-386.tar.gz
-      size: 5442679
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.linux-386.tar.gz
-      sha256: sha256:6ec8824992268299d636578507bea8859b585733b4819454ed4c9413b412b91b
-    - name: node_exporter-0.16.0-rc.1.linux-amd64.tar.gz
-      size: 5617869
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.linux-amd64.tar.gz
-      sha256: sha256:97da6da6fcc511baefbb59e8b8d4f47d85d65df590ccd73fadca7f2b0ebfb821
-    - name: node_exporter-0.16.0-rc.1.linux-arm64.tar.gz
-      size: 5209377
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.linux-arm64.tar.gz
-      sha256: sha256:cac956ab6d180b08fb4f8d00eff48ef2a0b997453803a39d86ba33bd2e48b45e
-    - name: node_exporter-0.16.0-rc.1.linux-armv5.tar.gz
-      size: 5241487
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.linux-armv5.tar.gz
-      sha256: sha256:c599a0c55725f556b197efc8a1f721e966d50baef402b22d896f2e0fcb7ec5dc
-    - name: node_exporter-0.16.0-rc.1.linux-armv6.tar.gz
-      size: 5217161
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.linux-armv6.tar.gz
-      sha256: sha256:df165af00be220801d34b2c20e03c882b32f3d98cb05feb5bf6dd0197ab12f36
-    - name: node_exporter-0.16.0-rc.1.linux-armv7.tar.gz
-      size: 5175455
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.linux-armv7.tar.gz
-      sha256: sha256:10fe34a2be7f7863f4a22f6487f6dab993326cbd5cb22a67e1882519ff620432
-    - name: node_exporter-0.16.0-rc.1.netbsd-386.tar.gz
-      size: 4953410
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.netbsd-386.tar.gz
-      sha256: sha256:33a8ca9267f4cdcbd29df0690fff8f5a8bb84f549de8bfced309d929f21d286c
-    - name: node_exporter-0.16.0-rc.1.netbsd-amd64.tar.gz
-      size: 5101653
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.netbsd-amd64.tar.gz
-      sha256: sha256:b4a61784eeef222b00c484e8b6807f4d1fb6976fc6aaa81dafad72568ecda675
-    - name: sha256sums.txt
-      size: 1108
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/sha256sums.txt
-      sha256: sha256:d8406e7e7bd554456b7be316de77ffddbcdab3284657f99745e5d7e5666d79f0
-  v0.16.0-rc.0:
-    prerelease: true
-    sha: 002c1ca02917406cbecc457162e2bdb1f29c2f49
-    files:
-    - name: node_exporter-0.16.0-rc.0.darwin-386.tar.gz
-      size: 3330871
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.darwin-386.tar.gz
-      sha256: sha256:3a4c9ebe0da03aed18235860333b4d0719578a5c1a5dcf4eeca049c8afbd2431
-    - name: node_exporter-0.16.0-rc.0.darwin-amd64.tar.gz
-      size: 3495611
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.darwin-amd64.tar.gz
-      sha256: sha256:4ebc3e64c397df8e26cba05e855a3cfe975003a3af684f2ba49fc9da7fed5f13
-    - name: node_exporter-0.16.0-rc.0.linux-386.tar.gz
-      size: 5404318
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.linux-386.tar.gz
-      sha256: sha256:8d934cc7fbcc8b11d49ebfad49f5afa43bca4c6e060f306a41ca66336dd0dd02
-    - name: node_exporter-0.16.0-rc.0.linux-amd64.tar.gz
-      size: 5596905
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.linux-amd64.tar.gz
-      sha256: sha256:06c3cf1d8d912e873fe7153046e575057f876cf136c27a37a995a7d0595a810c
-    - name: node_exporter-0.16.0-rc.0.linux-arm64.tar.gz
-      size: 5202481
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.linux-arm64.tar.gz
-      sha256: sha256:8789605e04c27bbd4bbf9a19a3e055ffb144e87f6bdce30d4a5fce06b6fe3adc
-    - name: node_exporter-0.16.0-rc.0.linux-armv5.tar.gz
-      size: 5234756
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.linux-armv5.tar.gz
-      sha256: sha256:0bd4408ea914d322a898a0df95a980ffff8ff2cf442893b2d1df35a991a5dfb6
-    - name: node_exporter-0.16.0-rc.0.linux-armv6.tar.gz
-      size: 5213507
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.linux-armv6.tar.gz
-      sha256: sha256:89eaf4b64a5e7a47d59770b0c79536dcc2c5e70d679d08102764cd6924e4f987
-    - name: node_exporter-0.16.0-rc.0.linux-armv7.tar.gz
-      size: 5170879
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.linux-armv7.tar.gz
-      sha256: sha256:8eeb6304f2a1b0b4d7d2c3caf99a4e72a033287999487e816112eae7d108b91a
-    - name: node_exporter-0.16.0-rc.0.netbsd-386.tar.gz
-      size: 4921140
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.netbsd-386.tar.gz
-      sha256: sha256:2590409d4830fe2ba0f212abf404c6702c23c4e2f1834240e40a177383460172
-    - name: node_exporter-0.16.0-rc.0.netbsd-amd64.tar.gz
-      size: 5089246
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.netbsd-amd64.tar.gz
-      sha256: sha256:5050aa8e0620b329ef12f5d5324273cd5d3a23ebf1b95e676ccccc2123b10264
-    - name: sha256sums.txt
-      size: 1108
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/sha256sums.txt
-      sha256: sha256:0ba7d521ea1865831763001cda40b496e8eed19ddf2be1c88abf938d6f647a11
-  v0.15.2:
-    prerelease: false
-    sha: 98bc64930d34878b84a0f87dfe6e1a6da61e532d
-    files:
-    - name: node_exporter-0.15.2.darwin-386.tar.gz
-      size: 3272822
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.darwin-386.tar.gz
-      sha256: sha256:64b5333f96306a55e006193e048815d954b573b49646d5b3841e4d06013a3ce4
-    - name: node_exporter-0.15.2.darwin-amd64.tar.gz
-      size: 3506791
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.darwin-amd64.tar.gz
-      sha256: sha256:63fd66c15e2f50ef944ca164125aed1be3b2c596ecb780819d98d849c14e5a6c
-    - name: node_exporter-0.15.2.linux-386.tar.gz
-      size: 4992844
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.linux-386.tar.gz
-      sha256: sha256:79a587717223235e67b355c41d15772b6bb0c221c80aaef9e4b2b51ca21fd96c
-    - name: node_exporter-0.15.2.linux-amd64.tar.gz
-      size: 5278094
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.linux-amd64.tar.gz
-      sha256: sha256:1ce667467e442d1f7fbfa7de29a8ffc3a7a0c84d24d7c695cc88b29e0752df37
-    - name: node_exporter-0.15.2.linux-arm64.tar.gz
-      size: 4795827
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.linux-arm64.tar.gz
-      sha256: sha256:6468205467960190d36297e6c83e73730e415432b9892fbae3343536ee11a2ee
-    - name: node_exporter-0.15.2.linux-armv5.tar.gz
-      size: 4849208
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.linux-armv5.tar.gz
-      sha256: sha256:ade093669cae4ec80a1a12920fa66f943b2d1b69d9798baa71ca659e9086d50b
-    - name: node_exporter-0.15.2.linux-armv6.tar.gz
-      size: 4827036
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.linux-armv6.tar.gz
-      sha256: sha256:067fb802baba29d3459771fc2f6b993e6510ae85cb175b761ffac76910360e34
-    - name: node_exporter-0.15.2.linux-armv7.tar.gz
-      size: 4780430
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.linux-armv7.tar.gz
-      sha256: sha256:cbb14364b341d7b60e7c26c51250a3f2027fd2e8db2d1f46d655e7bdd15465f0
-    - name: node_exporter-0.15.2.netbsd-386.tar.gz
-      size: 4559580
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.netbsd-386.tar.gz
-      sha256: sha256:85b47ece70ac7b539b84994314bb08ff1f15fb1b4179ecfba1670078c4d61431
-    - name: node_exporter-0.15.2.netbsd-amd64.tar.gz
-      size: 4802395
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.netbsd-amd64.tar.gz
-      sha256: sha256:94a384c75e356d95789af485784e6b6fbece49aec94b9207ef4128410dee1603
-    - name: sha256sums.txt
-      size: 1058
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/sha256sums.txt
-      sha256: sha256:ebe8d2eb0cb6d74bb9b2c5dfd2f4e53afd9c4cb835785c8132128e83b0e546ea
-  v0.15.1:
-    prerelease: false
-    sha: ba5da2c29ae7f6209a88cb58676ba5ba029ad785
-    files:
-    - name: node_exporter-0.15.1.darwin-386.tar.gz
-      size: 3272814
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.darwin-386.tar.gz
-      sha256: sha256:f9509a4dd00bf134bbce027cf208a166313a6568443e4e75fc5d64083ca2598e
-    - name: node_exporter-0.15.1.darwin-amd64.tar.gz
-      size: 3506848
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.darwin-amd64.tar.gz
-      sha256: sha256:c8fd8d5e7247530281eb2053fe092e2e8cdb8ecdab42891be14ad3dcd2bbe0f4
-    - name: node_exporter-0.15.1.linux-386.tar.gz
-      size: 4991678
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.linux-386.tar.gz
-      sha256: sha256:3b43d8ecb5d6ac0f29836808ddfb744aa8e2a53e47ac374b686a2a962f7182ef
-    - name: node_exporter-0.15.1.linux-amd64.tar.gz
-      size: 5278742
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.linux-amd64.tar.gz
-      sha256: sha256:7ffb3773abb71dd2b2119c5f6a7a0dbca0cff34b24b2ced9e01d9897df61a127
-    - name: node_exporter-0.15.1.linux-arm64.tar.gz
-      size: 4795716
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.linux-arm64.tar.gz
-      sha256: sha256:9806380df58ce4d3cfff1091c77286a46ac7ef045fb4b02f662ee7a291eb9815
-    - name: node_exporter-0.15.1.linux-armv5.tar.gz
-      size: 4849192
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.linux-armv5.tar.gz
-      sha256: sha256:d30f38a78b37825caf2a04be4d4d9104ed51e901fb44d969c28fb7da9eed0e8a
-    - name: node_exporter-0.15.1.linux-armv6.tar.gz
-      size: 4826827
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.linux-armv6.tar.gz
-      sha256: sha256:d1e46a3050dc9f87117c714dc9bad59d21f50d888c5fbe14db218573accc30fd
-    - name: node_exporter-0.15.1.linux-armv7.tar.gz
-      size: 4779917
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.linux-armv7.tar.gz
-      sha256: sha256:875412b56ade76ba303734a252e75d00e757ca22b0881b76d67fbb2c2fc1ca21
-    - name: node_exporter-0.15.1.netbsd-386.tar.gz
-      size: 4559932
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.netbsd-386.tar.gz
-      sha256: sha256:1883060cef103d5aa44c304fdfd061828c572960bcf7064fa90eea65404b49f7
-    - name: node_exporter-0.15.1.netbsd-amd64.tar.gz
-      size: 4802347
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.netbsd-amd64.tar.gz
-      sha256: sha256:8462925d606ad59d3d5e02eb163a0113ba9f310191e09a2adf817ea0b987ff01
-    - name: sha256sums.txt
-      size: 1058
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/sha256sums.txt
-      sha256: sha256:8c08a3ca6e90e8f3e838c8b9b7978b847b469a43388ce7116f1a93f1c0c998f8
-  v0.15.0:
-    prerelease: false
-    sha: 6e2053c557f96efb63aef3691f15335a70baaffd
-    files:
-    - name: node_exporter-0.15.0.darwin-386.tar.gz
-      size: 3272170
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.darwin-386.tar.gz
-      sha256: sha256:190894a5c84ce4fe306802691d972da8cd5556579881179b9189694b04f59e3d
-    - name: node_exporter-0.15.0.darwin-amd64.tar.gz
-      size: 3500953
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.darwin-amd64.tar.gz
-      sha256: sha256:c29b58a6bba3cfa3cb511d9fcdde5ba8661c96b2e5a1f42ab0d324b5ad1e2a83
-    - name: node_exporter-0.15.0.linux-386.tar.gz
-      size: 4990279
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.linux-386.tar.gz
-      sha256: sha256:f3434aee7595b0e7e199b18b53a46a6675c8bf3bab7a9bdfeb475ff58fb0e746
-    - name: node_exporter-0.15.0.linux-amd64.tar.gz
-      size: 5276195
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.linux-amd64.tar.gz
-      sha256: sha256:9413b3c94dbe9d4341ce85ea7e3f0e20abb8804135b8c236c4440c2c841551d7
-    - name: node_exporter-0.15.0.linux-arm64.tar.gz
-      size: 4795039
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.linux-arm64.tar.gz
-      sha256: sha256:7092f9ae9dfa014f75554dbd95dcee472147370db422ce80a923fe375c63152f
-    - name: node_exporter-0.15.0.linux-armv5.tar.gz
-      size: 4845600
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.linux-armv5.tar.gz
-      sha256: sha256:5515d7f147ff84e257118a866980f5bf96035155819ab31cadb5c4b825202db9
-    - name: node_exporter-0.15.0.linux-armv6.tar.gz
-      size: 4826127
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.linux-armv6.tar.gz
-      sha256: sha256:0bf5ca4c2f4db68d37903e8c7e8148df78335ad7d1dd0d67483f9b8de447ecae
-    - name: node_exporter-0.15.0.linux-armv7.tar.gz
-      size: 4776774
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.linux-armv7.tar.gz
-      sha256: sha256:de7d7f44ff2a8d62682888b8099fca94541122a454232a60852258a76cede44e
-    - name: node_exporter-0.15.0.netbsd-386.tar.gz
-      size: 4556014
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.netbsd-386.tar.gz
-      sha256: sha256:376187c414ac5ed3f0879c9e2c58f24fb654bba1009de9ec9aee1ef8b3005675
-    - name: node_exporter-0.15.0.netbsd-amd64.tar.gz
-      size: 4802771
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.netbsd-amd64.tar.gz
-      sha256: sha256:13672d856d49908a046571b2debcfc80c82d3c84580ad6c3bb11c8ba68a4e655
-    - name: sha256sums.txt
-      size: 1058
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/sha256sums.txt
-      sha256: sha256:c0380f5fcd42cc7f0c2465b9255f846f21845bb839ba58461a0e613a2140d04e
-  v0.14.0:
-    prerelease: false
-    sha: 840ba5dcc71a084a3bc63cb6063003c1f94435a6
-    files:
-    - name: node_exporter-0.14.0.darwin-386.tar.gz
-      size: 2465164
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.darwin-386.tar.gz
-      sha256: sha256:e2078eebbfb4dcbd391f4ac456f89409ffdda5e7c6643b3bd36c876f3fe77db5
-    - name: node_exporter-0.14.0.darwin-amd64.tar.gz
-      size: 2591597
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.darwin-amd64.tar.gz
-      sha256: sha256:a2841d4cd2ab262d2e50192a2a32a9262afa8fc34680edb7531de042bab35328
-    - name: node_exporter-0.14.0.linux-386.tar.gz
-      size: 3787571
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.linux-386.tar.gz
-      sha256: sha256:9efc58043057edf1d305cacf008ce687575ddafd40f6baaf4d9b472eb72879d4
-    - name: node_exporter-0.14.0.linux-amd64.tar.gz
-      size: 4019675
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.linux-amd64.tar.gz
-      sha256: sha256:d5980bf5d0dc7214741b65d3771f08e6f8311c86531ae21c6ffec1d643549b2e
-    - name: node_exporter-0.14.0.linux-arm64.tar.gz
-      size: 4202708
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.linux-arm64.tar.gz
-      sha256: sha256:2cedec4db23ec10cf62c8bd8d8bfebe296e74f95dfbf07ddccd4edfa589f0a82
-    - name: node_exporter-0.14.0.linux-armv5.tar.gz
-      size: 3650005
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.linux-armv5.tar.gz
-      sha256: sha256:e9fbf792a378e4a533a89ecf6f7ae37aa61df459f79a426d7d232d3337c0522b
-    - name: node_exporter-0.14.0.linux-armv6.tar.gz
-      size: 3629373
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.linux-armv6.tar.gz
-      sha256: sha256:723895bd4d2f340c7d7bd475f0f97c21fd96185e9f458a5c9ce18966e6002aa1
-    - name: node_exporter-0.14.0.linux-armv7.tar.gz
-      size: 3625193
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.linux-armv7.tar.gz
-      sha256: sha256:89ab768e4bde9939ded3c5c85b1cdbfead97df1e380f8df6826c43f7be25df84
-    - name: node_exporter-0.14.0.netbsd-386.tar.gz
-      size: 3942963
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.netbsd-386.tar.gz
-      sha256: sha256:59c6a05c94a8ed72066860c93c9e33ef2706cec4e9e36a2c91a6a4cd3857f322
-    - name: node_exporter-0.14.0.netbsd-amd64.tar.gz
-      size: 4155126
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.netbsd-amd64.tar.gz
-      sha256: sha256:e2fb31365e4a397483b5bdae7a9c5d816b3b723b1fa50135d94937221337fc7a
-    - name: node_exporter-0.14.0.netbsd-armv5.tar.gz
-      size: 3272364
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.netbsd-armv5.tar.gz
-      sha256: sha256:cafd4595b6f8cd6b86044026c73d4c4a43ddf30029966501fb640a5088a54a94
-    - name: node_exporter-0.14.0.netbsd-armv6.tar.gz
-      size: 3253392
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.netbsd-armv6.tar.gz
-      sha256: sha256:4aacf6af961f171251f4550c68fdcf7ebeac697765d35d991f78fdd567ca845b
-    - name: node_exporter-0.14.0.netbsd-armv7.tar.gz
-      size: 3250219
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.netbsd-armv7.tar.gz
-      sha256: sha256:a936dfb12c5160f3374a927503dd59a9b9456e1e7b3c7f94399a85615c8bdb9e
-    - name: sha256sums.txt
-      size: 1379
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/sha256sums.txt
-      sha256: sha256:7cbd233b40fda7ad2d1950bac38812f6a4b0ee1b31071f56caf1d6c61469cbe0
-  v0.14.0-rc.2:
-    prerelease: true
-    sha: 0e60bb8e005c638605e59ac3f307e3d47e891a9f
-    files:
-    - name: node_exporter-0.14.0-rc.2.darwin-386.tar.gz
-      size: 2466072
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.darwin-386.tar.gz
-      sha256: sha256:02c68c6a8537f9a132a06c58c60b65c79f19453cd7525ec742fa965458fbfb4e
-    - name: node_exporter-0.14.0-rc.2.darwin-amd64.tar.gz
-      size: 2592259
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.darwin-amd64.tar.gz
-      sha256: sha256:d580b53a44f5d92db98098e2dd5d647457d2442c3c496bece590caf99d59b872
-    - name: node_exporter-0.14.0-rc.2.linux-386.tar.gz
-      size: 3787636
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.linux-386.tar.gz
-      sha256: sha256:710aaceea74006e8bb553c61ee11476a1859ab23434ca28aed01c2cba8a53af9
-    - name: node_exporter-0.14.0-rc.2.linux-amd64.tar.gz
-      size: 4019032
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.linux-amd64.tar.gz
-      sha256: sha256:78be37cdef5c3be5414c47b7e61804ed01bf8800c1e4aa779fba6b089f05cb6a
-    - name: node_exporter-0.14.0-rc.2.linux-arm64.tar.gz
-      size: 4201899
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.linux-arm64.tar.gz
-      sha256: sha256:c5457e2457490a8e6c02051deb412e743cd6c527b8e49b9118a0ba53fc4349bc
-    - name: node_exporter-0.14.0-rc.2.linux-armv5.tar.gz
-      size: 3649176
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.linux-armv5.tar.gz
-      sha256: sha256:cba9558ff8a8b5b5a20d4a83258bc697afce6a63b5815cf46ef4bc7a78658f61
-    - name: node_exporter-0.14.0-rc.2.linux-armv6.tar.gz
-      size: 3628134
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.linux-armv6.tar.gz
-      sha256: sha256:5357a85fec0d6aff4451e85e35a050327c2773b90f5d46c6c8f23ef3380730a1
-    - name: node_exporter-0.14.0-rc.2.linux-armv7.tar.gz
-      size: 3625113
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.linux-armv7.tar.gz
-      sha256: sha256:6333edbf38d86e548902804b334da12b713c808b83b915c6db20f53c62f12e22
-    - name: node_exporter-0.14.0-rc.2.netbsd-386.tar.gz
-      size: 3945797
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.netbsd-386.tar.gz
-      sha256: sha256:5bda8a8826caa56c67b0e9b0452d5ba87119b78b39d8d04c01958a3acb429167
-    - name: node_exporter-0.14.0-rc.2.netbsd-amd64.tar.gz
-      size: 4156508
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.netbsd-amd64.tar.gz
-      sha256: sha256:06495b921cd528d158f2c0f7e24d0210f8790f00dfe76f267f2a76e1fb9da9cd
-    - name: node_exporter-0.14.0-rc.2.netbsd-armv5.tar.gz
-      size: 3274872
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.netbsd-armv5.tar.gz
-      sha256: sha256:080574de7077f100f1d68e065deba1ce2acf686a18376f7736466eca0481a47e
-    - name: node_exporter-0.14.0-rc.2.netbsd-armv6.tar.gz
-      size: 3256169
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.netbsd-armv6.tar.gz
-      sha256: sha256:7fd04bad859febf6926b9c179557f8b67275f1842ac952479486a7ebc84c8162
-    - name: node_exporter-0.14.0-rc.2.netbsd-armv7.tar.gz
-      size: 3253692
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.netbsd-armv7.tar.gz
-      sha256: sha256:209f726993888be999a55a758b058f7b9cd487b1ff79ecba6c577852213c1878
-    - name: node_exporter-0.14.0-rc.2.windows-386.tar.gz
-      size: 3359538
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.windows-386.tar.gz
-      sha256: sha256:ac1bfff85bbfad898d9122fed065e212e7d9c6c7929037bd50712ec24190422c
-    - name: node_exporter-0.14.0-rc.2.windows-amd64.tar.gz
-      size: 3572778
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.windows-amd64.tar.gz
-      sha256: sha256:4450b8cd9f57f527d5b7ce9b5295b696290881eca955797074c1264fedd9030a
-  v0.14.0-rc.1:
-    prerelease: true
-    sha: 5a07f4173d97fa0dd307db5bd3c2e6da26a4b16e
-    files:
-    - name: node_exporter-0.14.0-rc.1.darwin-386.tar.gz
-      size: 2455362
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.darwin-386.tar.gz
-      sha256: sha256:b330d736776df9c67f5eceb84dfa5ad71625c55c37387cdaa53dd23d7586271b
-    - name: node_exporter-0.14.0-rc.1.darwin-amd64.tar.gz
-      size: 2583044
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.darwin-amd64.tar.gz
-      sha256: sha256:34d5b52a9bae964a4789c357cf8c2bdfd556e85255aea6fee84a8cea6dec93db
-    - name: node_exporter-0.14.0-rc.1.linux-386.tar.gz
-      size: 3730431
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.linux-386.tar.gz
-      sha256: sha256:ec69dcc15ceaac4478ffa6f4d5ad6c06a36da92da72c7e70594bd2ff79411e50
-    - name: node_exporter-0.14.0-rc.1.linux-amd64.tar.gz
-      size: 3961417
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.linux-amd64.tar.gz
-      sha256: sha256:7fe8ac67ff5b3151d41454c208d2708cf49875c6de84753046f34a1f85b8c64c
-    - name: node_exporter-0.14.0-rc.1.linux-arm64.tar.gz
-      size: 4146271
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.linux-arm64.tar.gz
-      sha256: sha256:221ccdfba0089d656eab1294c279e5aa3c637d1d4397ed4d9ca96d8ab8457bff
-    - name: node_exporter-0.14.0-rc.1.linux-armv5.tar.gz
-      size: 3596872
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.linux-armv5.tar.gz
-      sha256: sha256:7c90814ccb2638db988b999dc7e31071626445647b21a71c5f899bcabf537015
-    - name: node_exporter-0.14.0-rc.1.linux-armv6.tar.gz
-      size: 3575363
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.linux-armv6.tar.gz
-      sha256: sha256:2520531c4353d98491910b6ae6ec9f82cc5de10859fad2a68bef732cca76f8d4
-    - name: node_exporter-0.14.0-rc.1.linux-armv7.tar.gz
-      size: 3573303
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.linux-armv7.tar.gz
-      sha256: sha256:fc3b4c6540a4aa90f592c239d3361143260a78db75b72feb0c4f41bbb15a1f61
-    - name: node_exporter-0.14.0-rc.1.netbsd-386.tar.gz
-      size: 3928839
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.netbsd-386.tar.gz
-      sha256: sha256:1b9215c6a9214c21d32b8012ffc7cb4b0442f84586bcf01a9ee19c7dea934758
-    - name: node_exporter-0.14.0-rc.1.netbsd-amd64.tar.gz
-      size: 4141008
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.netbsd-amd64.tar.gz
-      sha256: sha256:4a9ae00d92e15e819b9a03bf46fac5dc1dae4145f1f9f5a4f544d0b60479adad
-    - name: node_exporter-0.14.0-rc.1.netbsd-armv5.tar.gz
-      size: 3260879
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.netbsd-armv5.tar.gz
-      sha256: sha256:f45fb936b4186ee5edfe9ae14fae4d8425273d95ff82ca6d0d61e4412dacbd39
-    - name: node_exporter-0.14.0-rc.1.netbsd-armv6.tar.gz
-      size: 3238942
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.netbsd-armv6.tar.gz
-      sha256: sha256:f5378d367542a52e4204ff5aed9d1873297a51a0a88e568252940562359bb870
-    - name: node_exporter-0.14.0-rc.1.netbsd-armv7.tar.gz
-      size: 3237123
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.netbsd-armv7.tar.gz
-      sha256: sha256:8379608b6035a86579c29dc22dd6dd72c5a68a1c2218d2aff583d269cf510e33
-    - name: node_exporter-0.14.0-rc.1.windows-386.tar.gz
-      size: 3345241
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.windows-386.tar.gz
-      sha256: sha256:fc9c2103c4bd659cbccc8bbc601c62cd215ba0769d6cebb809eb6c690cc71e61
-    - name: node_exporter-0.14.0-rc.1.windows-amd64.tar.gz
-      size: 3558915
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.windows-amd64.tar.gz
-      sha256: sha256:c0f332d24696308e43fe26159faf43356f698f0f8ebb4fb37d7c4f03904f05b0
-  v0.13.0:
-    prerelease: false
-    sha: 006d1c7922b765f458fe9b92ce646641bded0f52
-    files:
-    - name: node_exporter-0.13.0.darwin-386.tar.gz
-      size: 2405720
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.darwin-386.tar.gz
-      sha256: sha256:a23330911ec4ddc22dab1b95c3491f05b2abb7dbf6ce59deca75f1e7fcf501e0
-    - name: node_exporter-0.13.0.darwin-amd64.tar.gz
-      size: 2534695
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.darwin-amd64.tar.gz
-      sha256: sha256:b13049ecac9b370abef77f99e199e2d06ef3d81e739c6bfc86ce28cc9abe21f9
-    - name: node_exporter-0.13.0.linux-386.tar.gz
-      size: 3569582
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.linux-386.tar.gz
-      sha256: sha256:55df2666dc12e49bb661e339c14a1f1583ffae719b0b580b6d65885f68058965
-    - name: node_exporter-0.13.0.linux-amd64.tar.gz
-      size: 3795616
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.linux-amd64.tar.gz
-      sha256: sha256:2de5d1e51330c41588ed4c88bc531a3d2dccf6b4d7b99d5782d95cff27a3c049
-    - name: node_exporter-0.13.0.linux-arm64.tar.gz
-      size: 3992212
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.linux-arm64.tar.gz
-      sha256: sha256:a7f9db18b590e068ada68d3e1edd1bd0a9db43e3ee8f69517a49768ec8988a4c
-    - name: node_exporter-0.13.0.linux-armv5.tar.gz
-      size: 3442720
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.linux-armv5.tar.gz
-      sha256: sha256:f707463db5edd6366e2a72ef6ae6bb6023fe310343fec7022d42d9272071e73c
-    - name: node_exporter-0.13.0.linux-armv6.tar.gz
-      size: 3423317
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.linux-armv6.tar.gz
-      sha256: sha256:2bfb3ddc2f9f8925c69330c34d1b42daa2f28ab6a717b99d012a31263609ae7a
-    - name: node_exporter-0.13.0.linux-armv7.tar.gz
-      size: 3420787
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.linux-armv7.tar.gz
-      sha256: sha256:24b99d6cfa2386ae48d9a7ec28f64cf1cd153f4ce7a4b32be7983e6279e9c250
-    - name: node_exporter-0.13.0.netbsd-386.tar.gz
-      size: 3882964
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.netbsd-386.tar.gz
-      sha256: sha256:17b5d744b4a322df8c9e81a6f0aee0429bf63de39b34f47f343361f3c65f5a9f
-    - name: node_exporter-0.13.0.netbsd-amd64.tar.gz
-      size: 4093069
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.netbsd-amd64.tar.gz
-      sha256: sha256:a7ba0ccd9d4e6a7d32c9e2fc79eb2461b6d4a6c5d3009fcaef41498be8e12e12
-    - name: node_exporter-0.13.0.netbsd-armv5.tar.gz
-      size: 3217383
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.netbsd-armv5.tar.gz
-      sha256: sha256:8d0177cf60a78b590bcdf38e55e1b4c663c7b9fbb0598e0c0355f25b35d37356
-    - name: node_exporter-0.13.0.netbsd-armv6.tar.gz
-      size: 3196341
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.netbsd-armv6.tar.gz
-      sha256: sha256:623973c745a239aeb1877e00b411f7bd6fa3fa7b2b41e0d1d9f819bd9b1662e6
-    - name: node_exporter-0.13.0.netbsd-armv7.tar.gz
-      size: 3194658
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.netbsd-armv7.tar.gz
-      sha256: sha256:9e5eda9b0a4cf67653b60a1c9c7c47e09b94b56a7f1be899e7bc5ae4ee73ba40
-    - name: node_exporter-0.13.0.windows-386.tar.gz
-      size: 3267965
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.windows-386.tar.gz
-      sha256: sha256:ea730d17a97bc136f891064ca591a038acd8a11be11f021ce0ad59e068e16d6e
-    - name: node_exporter-0.13.0.windows-amd64.tar.gz
-      size: 3477434
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.windows-amd64.tar.gz
-      sha256: sha256:436f6fd2160d0c8c68c050960071d36976725e6562fe33040217dda02b3dd21b
-  v0.13.0-rc.2:
-    prerelease: true
-    sha: 42d1658d5632fe0bfb281761d5e3620cfc37990b
-    files:
-    - name: node_exporter-0.13.0-rc.2.darwin-386.tar.gz
-      size: 2405737
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.darwin-386.tar.gz
-      sha256: sha256:804dc367b313f5c47c31c8619d4c6629e1580f3e8ff5e36875d6f829ca34a2c1
-    - name: node_exporter-0.13.0-rc.2.darwin-amd64.tar.gz
-      size: 2534533
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.darwin-amd64.tar.gz
-      sha256: sha256:3ac134f878f869b6f93500d867690016bf8e1964b54063e9e861e0c069d94195
-    - name: node_exporter-0.13.0-rc.2.linux-386.tar.gz
-      size: 3569660
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.linux-386.tar.gz
-      sha256: sha256:0c12c399a59b0ca2f52ce14e99c434ab8e3b5cffd1d46572f2282ba96a618546
-    - name: node_exporter-0.13.0-rc.2.linux-amd64.tar.gz
-      size: 3795864
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.linux-amd64.tar.gz
-      sha256: sha256:c9e5fddca867fdabb891cfa7d6d3cf180b391631518783ac93fdc4ee8626bd27
-    - name: node_exporter-0.13.0-rc.2.linux-arm64.tar.gz
-      size: 3991708
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.linux-arm64.tar.gz
-      sha256: sha256:cef34f92e6ffcf32653a722bf4473e2b6603b8aa25092e666f73cc17033e508c
-    - name: node_exporter-0.13.0-rc.2.linux-armv5.tar.gz
-      size: 3442599
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.linux-armv5.tar.gz
-      sha256: sha256:7401cc5ef2e260f64a6fca4bf31aafbe38bb47c6a6591c65cf825e3df1c28cdd
-    - name: node_exporter-0.13.0-rc.2.linux-armv6.tar.gz
-      size: 3423161
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.linux-armv6.tar.gz
-      sha256: sha256:fa3345f7fd6be768adebb4bc314620383419cc9362b67b1cce83a9ad5f7751ff
-    - name: node_exporter-0.13.0-rc.2.linux-armv7.tar.gz
-      size: 3420690
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.linux-armv7.tar.gz
-      sha256: sha256:0508fe90454e9f2a192e3ed74ca5f073499fafd99e0896d77029f856d88e3e69
-    - name: node_exporter-0.13.0-rc.2.netbsd-386.tar.gz
-      size: 3883004
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.netbsd-386.tar.gz
-      sha256: sha256:22ac75d4d7af364c95429cd16551457c6b1dff3a79a015f06f6b74840b62c8f4
-    - name: node_exporter-0.13.0-rc.2.netbsd-amd64.tar.gz
-      size: 4093179
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.netbsd-amd64.tar.gz
-      sha256: sha256:d259a605fb896ebbc973a66b3b92c15fb525b6b96b3959188764a1a101266c88
-    - name: node_exporter-0.13.0-rc.2.netbsd-armv5.tar.gz
-      size: 3217377
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.netbsd-armv5.tar.gz
-      sha256: sha256:babc390919d01c2f08c01181a5fcf9b81fe16e7948a214aeb446194979b57583
-    - name: node_exporter-0.13.0-rc.2.netbsd-armv6.tar.gz
-      size: 3196330
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.netbsd-armv6.tar.gz
-      sha256: sha256:68f9bf2c0a40b26972b5883cacf04acb8cd3f9ff83fd19b351a73e3f5071ae6c
-    - name: node_exporter-0.13.0-rc.2.netbsd-armv7.tar.gz
-      size: 3194805
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.netbsd-armv7.tar.gz
-      sha256: sha256:8777768dc964b9bd100b034bc252d1bfeabc115b41a6a2e45c3dc32b619756c4
-    - name: node_exporter-0.13.0-rc.2.windows-386.tar.gz
-      size: 3267950
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.windows-386.tar.gz
-      sha256: sha256:ecdf22114c563a3fc395c1b48d0487363c7c52fcb1093bfc0bb800d4ee48f61b
-    - name: node_exporter-0.13.0-rc.2.windows-amd64.tar.gz
-      size: 3477389
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.windows-amd64.tar.gz
-      sha256: sha256:8453e7f0d30f21bc625887e7572d0868df13c605d6cd4ec714cc756494302aa6
-  v0.13.0-rc.1:
-    prerelease: true
-    sha: 2ff8e5f0e4553371161b98293d52ed98ecb8117b
-    files:
-    - name: node_exporter-0.13.0-rc.1.darwin-386.tar.gz
-      size: 2406128
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.darwin-386.tar.gz
-      sha256: sha256:a22a6711f9824712dda4dbed9a72ef425f8e8cec6a2b1276dc4088fa3dd8e3c2
-    - name: node_exporter-0.13.0-rc.1.darwin-amd64.tar.gz
-      size: 2534837
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.darwin-amd64.tar.gz
-      sha256: sha256:df0fbf4f1a492008d55d9efa26ac66d31869337475346b39d5045495d887e7c8
-    - name: node_exporter-0.13.0-rc.1.linux-386.tar.gz
-      size: 3568979
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-386.tar.gz
-      sha256: sha256:c3d596fc286d669df8dde569ba19ab5b4d2553966765d4f2b754c648ffa8f5cb
-    - name: node_exporter-0.13.0-rc.1.linux-amd64.tar.gz
-      size: 3795681
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-amd64.tar.gz
-      sha256: sha256:5eb524145532a4b14875d9dd6301e818a11543599e76e46d69d2ab7ddec6dc13
-    - name: node_exporter-0.13.0-rc.1.linux-arm64.tar.gz
-      size: 3991422
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-arm64.tar.gz
-      sha256: sha256:d9855cbd647d0e4a947e32f3b37c97ce420ec3f642a209a5015e647a1dce5024
-    - name: node_exporter-0.13.0-rc.1.linux-armv5.tar.gz
-      size: 3442798
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-armv5.tar.gz
-      sha256: sha256:21adfbed78dd1e391548f935b826dd33a74b6f9fa2601544975527c45448dfd2
-    - name: node_exporter-0.13.0-rc.1.linux-armv6.tar.gz
-      size: 3423210
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-armv6.tar.gz
-      sha256: sha256:189c223727ae29e7ec8c1dad1f7b7de2ae43db13a3c48d15554e483a62d000f4
-    - name: node_exporter-0.13.0-rc.1.linux-armv7.tar.gz
-      size: 3420753
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-armv7.tar.gz
-      sha256: sha256:a2294cc0ac61a4437bcb25fea0b45217f03c0548753bf7394d08233c6bd0182b
-    - name: node_exporter-0.13.0-rc.1.linux-ppc64.tar.gz
-      size: 4303
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-ppc64.tar.gz
-      sha256: sha256:6a81870e735053e55ed17da062173ab82b4bddd627df116e545df8e33ecd4870
-    - name: node_exporter-0.13.0-rc.1.linux-ppc64le.tar.gz
-      size: 4305
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-ppc64le.tar.gz
-      sha256: sha256:e0fc281d77a41df16253a330f5bb2d21fe5b8e07d398c378266e02522f46c863
-    - name: node_exporter-0.13.0-rc.1.netbsd-386.tar.gz
-      size: 3884227
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.netbsd-386.tar.gz
-      sha256: sha256:ab812a8aeee4d3877424ec528150efd5875e63f4166b6ebc631bbda543a5e6cf
-    - name: node_exporter-0.13.0-rc.1.netbsd-amd64.tar.gz
-      size: 4095018
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.netbsd-amd64.tar.gz
-      sha256: sha256:ef8811d78e388c1804ec718d43a34a7e5a86276c07f6d4c25501bc03397c72cc
-    - name: node_exporter-0.13.0-rc.1.netbsd-armv5.tar.gz
-      size: 3218664
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.netbsd-armv5.tar.gz
-      sha256: sha256:b8ded6c31addd7c0dfd14de1116bef1ef7a3763ae281bf54e2bb82fe5ae7dfce
-    - name: node_exporter-0.13.0-rc.1.netbsd-armv6.tar.gz
-      size: 3196379
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.netbsd-armv6.tar.gz
-      sha256: sha256:18ee04b7e61114fc311e8274dcaa3bb6285b578d1b212311868e60562b1ccabf
-    - name: node_exporter-0.13.0-rc.1.netbsd-armv7.tar.gz
-      size: 3194988
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.netbsd-armv7.tar.gz
-      sha256: sha256:b35f5936474750396072f9010d078f0760e4a2664efca2aad21babaa8141bd82
-    - name: node_exporter-0.13.0-rc.1.windows-386.tar.gz
-      size: 3268894
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.windows-386.tar.gz
-      sha256: sha256:53b3a23af892fc9a01cf28b50bd93c7f4b81a0163904bd1df3550034af9808c1
-    - name: node_exporter-0.13.0-rc.1.windows-amd64.tar.gz
-      size: 3478225
-      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.windows-amd64.tar.gz
-      sha256: sha256:d1fbcc6deebfbdb9b19a86f778d40a6ae4a312b8500621933855e743b583dc5f
-  0.12.0:
-    prerelease: false
-    sha: df8dcd27e242c9df76dac84f5502503577e84895
-    files:
-    - name: node_exporter-0.12.0.darwin-386.tar.gz
-      size: 2608432
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.darwin-386.tar.gz
-      sha256: sha256:e67e13f8768f0abbcbe785b2f36eb3fab29fc4da06d70ea359e0923cd5295b22
-    - name: node_exporter-0.12.0.darwin-amd64.tar.gz
-      size: 2825760
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.darwin-amd64.tar.gz
-      sha256: sha256:a5d2be356694abc0f294d280d4bfe841ca3ed94eef710c945f860835ebfdf924
-    - name: node_exporter-0.12.0.linux-386.tar.gz
-      size: 3761568
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-386.tar.gz
-      sha256: sha256:207a600840bc874fc9f838e4d6952945c1c814bbc7b80721f7b6866369e6c46f
-    - name: node_exporter-0.12.0.linux-amd64.tar.gz
-      size: 4021604
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-amd64.tar.gz
-      sha256: sha256:d48de5b89dac04aca751177afaa9b0919e5b3d389364d40160babc00d63aac7b
-    - name: node_exporter-0.12.0.linux-arm64.tar.gz
-      size: 3696667
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-arm64.tar.gz
-      sha256: sha256:4fd70034436f8f195e329cdc3f0165ad72b48d2435f179c8302381707e1c01a0
-    - name: node_exporter-0.12.0.linux-armv5.tar.gz
-      size: 3635224
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-armv5.tar.gz
-      sha256: sha256:3f35dc9a56674a97bc7f36512a6c1586de1eec4ae8b8246159d5a7cf2a72ba27
-    - name: node_exporter-0.12.0.linux-armv6.tar.gz
-      size: 3612991
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-armv6.tar.gz
-      sha256: sha256:3b9554f104c509b0c08f8f0d78ede1697037b1b55461d63eae86debf1840f72b
-    - name: node_exporter-0.12.0.linux-armv7.tar.gz
-      size: 3612174
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-armv7.tar.gz
-      sha256: sha256:9b109414f006d2ca0249a0dad839b34da3a63fcc94172bb2e5b58966a0295918
-    - name: node_exporter-0.12.0.linux-ppc64.tar.gz
-      size: 3809132
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-ppc64.tar.gz
-      sha256: sha256:190df60fb32ab4b3f34287d564b27ba2231baaa7ea86fdb65e995f186c6ad737
-    - name: node_exporter-0.12.0.linux-ppc64le.tar.gz
-      size: 3686533
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-ppc64le.tar.gz
-      sha256: sha256:f6831d7cb72450434bf7d3eaf2113cf18c1e65e572f267da7169f67104afafb5
-    - name: node_exporter-0.12.0.netbsd-386.tar.gz
-      size: 3959963
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.netbsd-386.tar.gz
-      sha256: sha256:13be5c8bfd6b0b7fa13ea3b9fcc216e28cff96005cd1b73170669c5db3ab30bb
-    - name: node_exporter-0.12.0.netbsd-amd64.tar.gz
-      size: 4214988
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.netbsd-amd64.tar.gz
-      sha256: sha256:695e434d83c6a2aac9c58b109b4b1ad711fee7480837575b2e35768b9cd882bb
-    - name: node_exporter-0.12.0.netbsd-armv5.tar.gz
-      size: 3400401
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.netbsd-armv5.tar.gz
-      sha256: sha256:747f1cddef2c92bf6d4deb5c479ca58edbec25b5857ed108d8186055a1c7a1e4
-    - name: node_exporter-0.12.0.netbsd-armv6.tar.gz
-      size: 3381892
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.netbsd-armv6.tar.gz
-      sha256: sha256:8c2fdbfed452181dcc199f23feef572f7ceca634e55e40c0fed3024cce7cf1df
-    - name: node_exporter-0.12.0.netbsd-armv7.tar.gz
-      size: 3379870
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.netbsd-armv7.tar.gz
-      sha256: sha256:0ad3245d992d18ffb66e65d792183f97d6bb09706ac2c6a5739c009aab524d8a
-    - name: node_exporter-0.12.0.windows-386.tar.gz
-      size: 3487955
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.windows-386.tar.gz
-      sha256: sha256:15585a37dbb62901be979f1ba2e2d1bea5abe193069dff0515258d2862ada658
-    - name: node_exporter-0.12.0.windows-amd64.tar.gz
-      size: 3743004
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.windows-amd64.tar.gz
-      sha256: sha256:156ad1e4c38f739498b751747fb4ab7a0183057db442ecfb41b4c2e8b2aa694a
-  0.12.0rc3:
-    prerelease: true
-    sha: 20ecedd0b4c983bd7b88f97cd7a21461988a6c12
-    files:
-    - name: node_exporter-0.12.0rc3.linux-amd64.tar.gz
-      size: 3694052
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc3/node_exporter-0.12.0rc3.linux-amd64.tar.gz
-      sha256: sha256:4674fd685bc33cc26f680c49423114e6ccac5a88f03f6f691ff374892809fb0f
-  0.12.0rc2:
-    prerelease: true
-    sha: a05966a3a94d066208e81ff1d2f6a31fdf4a9d71
-    files: []
-  0.12.0rc1:
-    prerelease: true
-    sha: e70cbd2045bc63df74fa652213f1ace470e8b796
-    files:
-    - name: node_exporter-0.12.0rc1.darwin-386.tar.gz
-      size: 3165746
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.darwin-386.tar.gz
-      sha256: sha256:07a0ae6df969a5601c8f56e647a81ef98262c196ebe3c8d30b666197ebd41dcf
-    - name: node_exporter-0.12.0rc1.darwin-amd64.tar.gz
-      size: 3381624
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.darwin-amd64.tar.gz
-      sha256: sha256:2c190de3806437d18b43ccd15d7f7ae6a6dd4725477cf695f7d2c9e985063c79
-    - name: node_exporter-0.12.0rc1.linux-386.tar.gz
-      size: 3246138
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.linux-386.tar.gz
-      sha256: sha256:aef87b2698161dd9c5605572c6ea6bd39ad0a627d43c30551c8320b3cb6ca6a3
-    - name: node_exporter-0.12.0rc1.linux-amd64.tar.gz
-      size: 3480413
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.linux-amd64.tar.gz
-      sha256: sha256:a68d188c994740e5a4d10fb2dfde3628f8979977cd3ce798cfc9f1e1b4968bce
-    - name: node_exporter-0.12.0rc1.linux-arm.tar.gz
-      size: 3121565
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.linux-arm.tar.gz
-      sha256: sha256:cf0eb576dbea2f163440688a8d106f091ef76f5d01d029d7ae7c47f64a1f5462
-    - name: node_exporter-0.12.0rc1.linux-ppc64.tar.gz
-      size: 3310833
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.linux-ppc64.tar.gz
-      sha256: sha256:8ba43e622d3ce80501d4b3a35a6d817d870a23bdc3e7ca9c6f5c70417b96d6fa
-    - name: node_exporter-0.12.0rc1.linux-ppc64le.tar.gz
-      size: 3197775
-      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.linux-ppc64le.tar.gz
-      sha256: sha256:57c4eeab4e735643b1db74854298e4e9ea94b8738157f5e74e0edfbc9dbd56d1
-  0.11.0:
-    prerelease: false
-    sha: f2dfeb3fd6fc18b51cd82f102a0a7634d2e98fa2
-    files:
-    - name: node_exporter-0.11.0.linux-386.tar.gz
-      size: 2674754
-      url: https://github.com/prometheus/node_exporter/releases/download/0.11.0/node_exporter-0.11.0.linux-386.tar.gz
-      sha256: sha256:f75b2305a6a568c3aa06269c9f3e9299707f28a807d7828b47156e57f9cee041
-    - name: node_exporter-0.11.0.linux-amd64.tar.gz
-      size: 2846737
-      url: https://github.com/prometheus/node_exporter/releases/download/0.11.0/node_exporter-0.11.0.linux-amd64.tar.gz
-      sha256: sha256:f38daeec08a7a5be0b04d4633dae54cf7587af5dda011604b80eba97eaf606c8
   0.10.0:
-    prerelease: false
-    sha: 484eedbf015f1848e9a5412c55a3c4bdfdf8a685
     files:
     - name: node_exporter-0.10.0.darwin-amd64.tar.gz
+      sha256: sha256:9422aff194780f49fa923bc15a8776b25adc2a8113f285c5b81af63b7957c6f6
       size: 2811717
       url: https://github.com/prometheus/node_exporter/releases/download/0.10.0/node_exporter-0.10.0.darwin-amd64.tar.gz
-      sha256: sha256:9422aff194780f49fa923bc15a8776b25adc2a8113f285c5b81af63b7957c6f6
     - name: node_exporter-0.10.0.linux-386.tar.gz
+      sha256: sha256:8aac8aa674c8d882b1c90d25b3138ce80fc15e3361e2ea7b1694a3def9dd7aec
       size: 2660210
       url: https://github.com/prometheus/node_exporter/releases/download/0.10.0/node_exporter-0.10.0.linux-386.tar.gz
-      sha256: sha256:8aac8aa674c8d882b1c90d25b3138ce80fc15e3361e2ea7b1694a3def9dd7aec
     - name: node_exporter-0.10.0.linux-amd64.tar.gz
+      sha256: sha256:7e68b839545c588f27b1c28970b1226fb9bdc6b867614e13e2278b2f5551dab4
       size: 2843704
       url: https://github.com/prometheus/node_exporter/releases/download/0.10.0/node_exporter-0.10.0.linux-amd64.tar.gz
-      sha256: sha256:7e68b839545c588f27b1c28970b1226fb9bdc6b867614e13e2278b2f5551dab4
     - name: node_exporter-0.10.0.linux-arm.tar.gz
+      sha256: sha256:df2a4aa6592349fd916bcca3e497da4d65839424f6ccd850c4a81572c426085b
       size: 2566520
       url: https://github.com/prometheus/node_exporter/releases/download/0.10.0/node_exporter-0.10.0.linux-arm.tar.gz
-      sha256: sha256:df2a4aa6592349fd916bcca3e497da4d65839424f6ccd850c4a81572c426085b
-  0.9.0:
     prerelease: false
-    sha: a7c682cf701ef464068db1bb75d54bec57b827bf
+    commit_sha: 484eedbf015f1848e9a5412c55a3c4bdfdf8a685
+  0.11.0:
     files:
-    - name: node_exporter-0.9.0.darwin-amd64.tar.gz
-      size: 2835737
-      url: https://github.com/prometheus/node_exporter/releases/download/0.9.0/node_exporter-0.9.0.darwin-amd64.tar.gz
-      sha256: sha256:fcfeb009648e97738c2b0d17a9f589dc12bc8989babba57401397bb10a04d48c
-    - name: node_exporter-0.9.0.linux-386.tar.gz
-      size: 2662173
-      url: https://github.com/prometheus/node_exporter/releases/download/0.9.0/node_exporter-0.9.0.linux-386.tar.gz
-      sha256: sha256:9bfd3fb453cc32988ccf0dc96af21811c2aac1dd91cd698e54496acfa82ead84
-    - name: node_exporter-0.9.0.linux-amd64.tar.gz
-      size: 2835644
-      url: https://github.com/prometheus/node_exporter/releases/download/0.9.0/node_exporter-0.9.0.linux-amd64.tar.gz
-      sha256: sha256:dfd638af65db7a1b40badc3fcc3a42f933eb1358a786288121fa80df5cb29f66
-    - name: node_exporter-0.9.0.linux-arm.tar.gz
-      size: 2571890
-      url: https://github.com/prometheus/node_exporter/releases/download/0.9.0/node_exporter-0.9.0.linux-arm.tar.gz
-      sha256: sha256:e9c765d21074a7072bf30b8e7e12bdc636ec0332980e98b014c0d33510e0d908
-  0.8.1:
+    - name: node_exporter-0.11.0.linux-386.tar.gz
+      sha256: sha256:f75b2305a6a568c3aa06269c9f3e9299707f28a807d7828b47156e57f9cee041
+      size: 2674754
+      url: https://github.com/prometheus/node_exporter/releases/download/0.11.0/node_exporter-0.11.0.linux-386.tar.gz
+    - name: node_exporter-0.11.0.linux-amd64.tar.gz
+      sha256: sha256:f38daeec08a7a5be0b04d4633dae54cf7587af5dda011604b80eba97eaf606c8
+      size: 2846737
+      url: https://github.com/prometheus/node_exporter/releases/download/0.11.0/node_exporter-0.11.0.linux-amd64.tar.gz
     prerelease: false
-    sha: d1822e474959c06e3b4885c34e8d200b9e83a305
+    commit_sha: f2dfeb3fd6fc18b51cd82f102a0a7634d2e98fa2
+  0.12.0:
     files:
-    - name: node_exporter-0.8.1.darwin-amd64.tar.gz
-      size: 2799462
-      url: https://github.com/prometheus/node_exporter/releases/download/0.8.1/node_exporter-0.8.1.darwin-amd64.tar.gz
-      sha256: sha256:e1abc7f9855ecddbf0dad0ae74d1dd0f73ebbbd1d54ac9e58cd59ff8bfb1bb1f
-    - name: node_exporter-0.8.1.linux-386.tar.gz
-      size: 2648107
-      url: https://github.com/prometheus/node_exporter/releases/download/0.8.1/node_exporter-0.8.1.linux-386.tar.gz
-      sha256: sha256:7bd9970a2dacf6b6ba1a39b7d6abd8b015bfa6dc2444e2867ac278d01489b3d8
-    - name: node_exporter-0.8.1.linux-amd64.tar.gz
-      size: 2851197
-      url: https://github.com/prometheus/node_exporter/releases/download/0.8.1/node_exporter-0.8.1.linux-amd64.tar.gz
-      sha256: sha256:c031fa9c8dd8526eef91b00599b5b242e455332b90421ba08a77b4bb045a0081
-    - name: node_exporter-0.8.1.linux-arm.tar.gz
-      size: 2555065
-      url: https://github.com/prometheus/node_exporter/releases/download/0.8.1/node_exporter-0.8.1.linux-arm.tar.gz
-      sha256: sha256:7bb0d98cb9d63f4bfb8017587dfab08cfbee7cc03c7b5d0e36e01e5166ca385f
+    - name: node_exporter-0.12.0.darwin-386.tar.gz
+      sha256: sha256:e67e13f8768f0abbcbe785b2f36eb3fab29fc4da06d70ea359e0923cd5295b22
+      size: 2608432
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.darwin-386.tar.gz
+    - name: node_exporter-0.12.0.darwin-amd64.tar.gz
+      sha256: sha256:a5d2be356694abc0f294d280d4bfe841ca3ed94eef710c945f860835ebfdf924
+      size: 2825760
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.darwin-amd64.tar.gz
+    - name: node_exporter-0.12.0.linux-386.tar.gz
+      sha256: sha256:207a600840bc874fc9f838e4d6952945c1c814bbc7b80721f7b6866369e6c46f
+      size: 3761568
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-386.tar.gz
+    - name: node_exporter-0.12.0.linux-amd64.tar.gz
+      sha256: sha256:d48de5b89dac04aca751177afaa9b0919e5b3d389364d40160babc00d63aac7b
+      size: 4021604
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-amd64.tar.gz
+    - name: node_exporter-0.12.0.linux-arm64.tar.gz
+      sha256: sha256:4fd70034436f8f195e329cdc3f0165ad72b48d2435f179c8302381707e1c01a0
+      size: 3696667
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-arm64.tar.gz
+    - name: node_exporter-0.12.0.linux-armv5.tar.gz
+      sha256: sha256:3f35dc9a56674a97bc7f36512a6c1586de1eec4ae8b8246159d5a7cf2a72ba27
+      size: 3635224
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-armv5.tar.gz
+    - name: node_exporter-0.12.0.linux-armv6.tar.gz
+      sha256: sha256:3b9554f104c509b0c08f8f0d78ede1697037b1b55461d63eae86debf1840f72b
+      size: 3612991
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-armv6.tar.gz
+    - name: node_exporter-0.12.0.linux-armv7.tar.gz
+      sha256: sha256:9b109414f006d2ca0249a0dad839b34da3a63fcc94172bb2e5b58966a0295918
+      size: 3612174
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-armv7.tar.gz
+    - name: node_exporter-0.12.0.linux-ppc64.tar.gz
+      sha256: sha256:190df60fb32ab4b3f34287d564b27ba2231baaa7ea86fdb65e995f186c6ad737
+      size: 3809132
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-ppc64.tar.gz
+    - name: node_exporter-0.12.0.linux-ppc64le.tar.gz
+      sha256: sha256:f6831d7cb72450434bf7d3eaf2113cf18c1e65e572f267da7169f67104afafb5
+      size: 3686533
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.linux-ppc64le.tar.gz
+    - name: node_exporter-0.12.0.netbsd-386.tar.gz
+      sha256: sha256:13be5c8bfd6b0b7fa13ea3b9fcc216e28cff96005cd1b73170669c5db3ab30bb
+      size: 3959963
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.netbsd-386.tar.gz
+    - name: node_exporter-0.12.0.netbsd-amd64.tar.gz
+      sha256: sha256:695e434d83c6a2aac9c58b109b4b1ad711fee7480837575b2e35768b9cd882bb
+      size: 4214988
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.netbsd-amd64.tar.gz
+    - name: node_exporter-0.12.0.netbsd-armv5.tar.gz
+      sha256: sha256:747f1cddef2c92bf6d4deb5c479ca58edbec25b5857ed108d8186055a1c7a1e4
+      size: 3400401
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.netbsd-armv5.tar.gz
+    - name: node_exporter-0.12.0.netbsd-armv6.tar.gz
+      sha256: sha256:8c2fdbfed452181dcc199f23feef572f7ceca634e55e40c0fed3024cce7cf1df
+      size: 3381892
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.netbsd-armv6.tar.gz
+    - name: node_exporter-0.12.0.netbsd-armv7.tar.gz
+      sha256: sha256:0ad3245d992d18ffb66e65d792183f97d6bb09706ac2c6a5739c009aab524d8a
+      size: 3379870
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.netbsd-armv7.tar.gz
+    - name: node_exporter-0.12.0.windows-386.tar.gz
+      sha256: sha256:15585a37dbb62901be979f1ba2e2d1bea5abe193069dff0515258d2862ada658
+      size: 3487955
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.windows-386.tar.gz
+    - name: node_exporter-0.12.0.windows-amd64.tar.gz
+      sha256: sha256:156ad1e4c38f739498b751747fb4ab7a0183057db442ecfb41b4c2e8b2aa694a
+      size: 3743004
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0/node_exporter-0.12.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: df8dcd27e242c9df76dac84f5502503577e84895
+  0.12.0rc1:
+    files:
+    - name: node_exporter-0.12.0rc1.darwin-386.tar.gz
+      sha256: sha256:07a0ae6df969a5601c8f56e647a81ef98262c196ebe3c8d30b666197ebd41dcf
+      size: 3165746
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.darwin-386.tar.gz
+    - name: node_exporter-0.12.0rc1.darwin-amd64.tar.gz
+      sha256: sha256:2c190de3806437d18b43ccd15d7f7ae6a6dd4725477cf695f7d2c9e985063c79
+      size: 3381624
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.darwin-amd64.tar.gz
+    - name: node_exporter-0.12.0rc1.linux-386.tar.gz
+      sha256: sha256:aef87b2698161dd9c5605572c6ea6bd39ad0a627d43c30551c8320b3cb6ca6a3
+      size: 3246138
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.linux-386.tar.gz
+    - name: node_exporter-0.12.0rc1.linux-amd64.tar.gz
+      sha256: sha256:a68d188c994740e5a4d10fb2dfde3628f8979977cd3ce798cfc9f1e1b4968bce
+      size: 3480413
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.linux-amd64.tar.gz
+    - name: node_exporter-0.12.0rc1.linux-arm.tar.gz
+      sha256: sha256:cf0eb576dbea2f163440688a8d106f091ef76f5d01d029d7ae7c47f64a1f5462
+      size: 3121565
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.linux-arm.tar.gz
+    - name: node_exporter-0.12.0rc1.linux-ppc64.tar.gz
+      sha256: sha256:8ba43e622d3ce80501d4b3a35a6d817d870a23bdc3e7ca9c6f5c70417b96d6fa
+      size: 3310833
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.linux-ppc64.tar.gz
+    - name: node_exporter-0.12.0rc1.linux-ppc64le.tar.gz
+      sha256: sha256:57c4eeab4e735643b1db74854298e4e9ea94b8738157f5e74e0edfbc9dbd56d1
+      size: 3197775
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.linux-ppc64le.tar.gz
+    prerelease: true
+    commit_sha: e70cbd2045bc63df74fa652213f1ace470e8b796
+  0.12.0rc2:
+    files: []
+    prerelease: true
+    commit_sha: a05966a3a94d066208e81ff1d2f6a31fdf4a9d71
+  0.12.0rc3:
+    files:
+    - name: node_exporter-0.12.0rc3.linux-amd64.tar.gz
+      sha256: sha256:4674fd685bc33cc26f680c49423114e6ccac5a88f03f6f691ff374892809fb0f
+      size: 3694052
+      url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc3/node_exporter-0.12.0rc3.linux-amd64.tar.gz
+    prerelease: true
+    commit_sha: 20ecedd0b4c983bd7b88f97cd7a21461988a6c12
   0.8.0:
-    prerelease: false
-    sha: b3e5a8e04641a3f4eb9aa72d15afd71959994edd
     files:
     - name: node_exporter-0.8.0.darwin-amd64.tar.gz
+      sha256: sha256:f13a3a94c594638eaac02d912721f6664b0252131f5260669a8f2caabc99ae4f
       size: 2107950
       url: https://github.com/prometheus/node_exporter/releases/download/0.8.0/node_exporter-0.8.0.darwin-amd64.tar.gz
-      sha256: sha256:f13a3a94c594638eaac02d912721f6664b0252131f5260669a8f2caabc99ae4f
     - name: node_exporter-0.8.0.linux-amd64.tar.gz
+      sha256: sha256:b972253fa8c489c4819455bd934e1c21c721e4be12cfd4e04509de0606a05b25
       size: 2916306
       url: https://github.com/prometheus/node_exporter/releases/download/0.8.0/node_exporter-0.8.0.linux-amd64.tar.gz
-      sha256: sha256:b972253fa8c489c4819455bd934e1c21c721e4be12cfd4e04509de0606a05b25
+    prerelease: false
+    commit_sha: b3e5a8e04641a3f4eb9aa72d15afd71959994edd
+  0.8.1:
+    files:
+    - name: node_exporter-0.8.1.darwin-amd64.tar.gz
+      sha256: sha256:e1abc7f9855ecddbf0dad0ae74d1dd0f73ebbbd1d54ac9e58cd59ff8bfb1bb1f
+      size: 2799462
+      url: https://github.com/prometheus/node_exporter/releases/download/0.8.1/node_exporter-0.8.1.darwin-amd64.tar.gz
+    - name: node_exporter-0.8.1.linux-386.tar.gz
+      sha256: sha256:7bd9970a2dacf6b6ba1a39b7d6abd8b015bfa6dc2444e2867ac278d01489b3d8
+      size: 2648107
+      url: https://github.com/prometheus/node_exporter/releases/download/0.8.1/node_exporter-0.8.1.linux-386.tar.gz
+    - name: node_exporter-0.8.1.linux-amd64.tar.gz
+      sha256: sha256:c031fa9c8dd8526eef91b00599b5b242e455332b90421ba08a77b4bb045a0081
+      size: 2851197
+      url: https://github.com/prometheus/node_exporter/releases/download/0.8.1/node_exporter-0.8.1.linux-amd64.tar.gz
+    - name: node_exporter-0.8.1.linux-arm.tar.gz
+      sha256: sha256:7bb0d98cb9d63f4bfb8017587dfab08cfbee7cc03c7b5d0e36e01e5166ca385f
+      size: 2555065
+      url: https://github.com/prometheus/node_exporter/releases/download/0.8.1/node_exporter-0.8.1.linux-arm.tar.gz
+    prerelease: false
+    commit_sha: d1822e474959c06e3b4885c34e8d200b9e83a305
+  0.9.0:
+    files:
+    - name: node_exporter-0.9.0.darwin-amd64.tar.gz
+      sha256: sha256:fcfeb009648e97738c2b0d17a9f589dc12bc8989babba57401397bb10a04d48c
+      size: 2835737
+      url: https://github.com/prometheus/node_exporter/releases/download/0.9.0/node_exporter-0.9.0.darwin-amd64.tar.gz
+    - name: node_exporter-0.9.0.linux-386.tar.gz
+      sha256: sha256:9bfd3fb453cc32988ccf0dc96af21811c2aac1dd91cd698e54496acfa82ead84
+      size: 2662173
+      url: https://github.com/prometheus/node_exporter/releases/download/0.9.0/node_exporter-0.9.0.linux-386.tar.gz
+    - name: node_exporter-0.9.0.linux-amd64.tar.gz
+      sha256: sha256:dfd638af65db7a1b40badc3fcc3a42f933eb1358a786288121fa80df5cb29f66
+      size: 2835644
+      url: https://github.com/prometheus/node_exporter/releases/download/0.9.0/node_exporter-0.9.0.linux-amd64.tar.gz
+    - name: node_exporter-0.9.0.linux-arm.tar.gz
+      sha256: sha256:e9c765d21074a7072bf30b8e7e12bdc636ec0332980e98b014c0d33510e0d908
+      size: 2571890
+      url: https://github.com/prometheus/node_exporter/releases/download/0.9.0/node_exporter-0.9.0.linux-arm.tar.gz
+    prerelease: false
+    commit_sha: a7c682cf701ef464068db1bb75d54bec57b827bf
+  v0.13.0:
+    files:
+    - name: node_exporter-0.13.0.darwin-386.tar.gz
+      sha256: sha256:a23330911ec4ddc22dab1b95c3491f05b2abb7dbf6ce59deca75f1e7fcf501e0
+      size: 2405720
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.darwin-386.tar.gz
+    - name: node_exporter-0.13.0.darwin-amd64.tar.gz
+      sha256: sha256:b13049ecac9b370abef77f99e199e2d06ef3d81e739c6bfc86ce28cc9abe21f9
+      size: 2534695
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.darwin-amd64.tar.gz
+    - name: node_exporter-0.13.0.linux-386.tar.gz
+      sha256: sha256:55df2666dc12e49bb661e339c14a1f1583ffae719b0b580b6d65885f68058965
+      size: 3569582
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.linux-386.tar.gz
+    - name: node_exporter-0.13.0.linux-amd64.tar.gz
+      sha256: sha256:2de5d1e51330c41588ed4c88bc531a3d2dccf6b4d7b99d5782d95cff27a3c049
+      size: 3795616
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.linux-amd64.tar.gz
+    - name: node_exporter-0.13.0.linux-arm64.tar.gz
+      sha256: sha256:a7f9db18b590e068ada68d3e1edd1bd0a9db43e3ee8f69517a49768ec8988a4c
+      size: 3992212
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.linux-arm64.tar.gz
+    - name: node_exporter-0.13.0.linux-armv5.tar.gz
+      sha256: sha256:f707463db5edd6366e2a72ef6ae6bb6023fe310343fec7022d42d9272071e73c
+      size: 3442720
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.linux-armv5.tar.gz
+    - name: node_exporter-0.13.0.linux-armv6.tar.gz
+      sha256: sha256:2bfb3ddc2f9f8925c69330c34d1b42daa2f28ab6a717b99d012a31263609ae7a
+      size: 3423317
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.linux-armv6.tar.gz
+    - name: node_exporter-0.13.0.linux-armv7.tar.gz
+      sha256: sha256:24b99d6cfa2386ae48d9a7ec28f64cf1cd153f4ce7a4b32be7983e6279e9c250
+      size: 3420787
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.linux-armv7.tar.gz
+    - name: node_exporter-0.13.0.netbsd-386.tar.gz
+      sha256: sha256:17b5d744b4a322df8c9e81a6f0aee0429bf63de39b34f47f343361f3c65f5a9f
+      size: 3882964
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.netbsd-386.tar.gz
+    - name: node_exporter-0.13.0.netbsd-amd64.tar.gz
+      sha256: sha256:a7ba0ccd9d4e6a7d32c9e2fc79eb2461b6d4a6c5d3009fcaef41498be8e12e12
+      size: 4093069
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.netbsd-amd64.tar.gz
+    - name: node_exporter-0.13.0.netbsd-armv5.tar.gz
+      sha256: sha256:8d0177cf60a78b590bcdf38e55e1b4c663c7b9fbb0598e0c0355f25b35d37356
+      size: 3217383
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.netbsd-armv5.tar.gz
+    - name: node_exporter-0.13.0.netbsd-armv6.tar.gz
+      sha256: sha256:623973c745a239aeb1877e00b411f7bd6fa3fa7b2b41e0d1d9f819bd9b1662e6
+      size: 3196341
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.netbsd-armv6.tar.gz
+    - name: node_exporter-0.13.0.netbsd-armv7.tar.gz
+      sha256: sha256:9e5eda9b0a4cf67653b60a1c9c7c47e09b94b56a7f1be899e7bc5ae4ee73ba40
+      size: 3194658
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.netbsd-armv7.tar.gz
+    - name: node_exporter-0.13.0.windows-386.tar.gz
+      sha256: sha256:ea730d17a97bc136f891064ca591a038acd8a11be11f021ce0ad59e068e16d6e
+      size: 3267965
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.windows-386.tar.gz
+    - name: node_exporter-0.13.0.windows-amd64.tar.gz
+      sha256: sha256:436f6fd2160d0c8c68c050960071d36976725e6562fe33040217dda02b3dd21b
+      size: 3477434
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0/node_exporter-0.13.0.windows-amd64.tar.gz
+    prerelease: false
+    commit_sha: 006d1c7922b765f458fe9b92ce646641bded0f52
+  v0.13.0-rc.1:
+    files:
+    - name: node_exporter-0.13.0-rc.1.darwin-386.tar.gz
+      sha256: sha256:a22a6711f9824712dda4dbed9a72ef425f8e8cec6a2b1276dc4088fa3dd8e3c2
+      size: 2406128
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.darwin-386.tar.gz
+    - name: node_exporter-0.13.0-rc.1.darwin-amd64.tar.gz
+      sha256: sha256:df0fbf4f1a492008d55d9efa26ac66d31869337475346b39d5045495d887e7c8
+      size: 2534837
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.darwin-amd64.tar.gz
+    - name: node_exporter-0.13.0-rc.1.linux-386.tar.gz
+      sha256: sha256:c3d596fc286d669df8dde569ba19ab5b4d2553966765d4f2b754c648ffa8f5cb
+      size: 3568979
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-386.tar.gz
+    - name: node_exporter-0.13.0-rc.1.linux-amd64.tar.gz
+      sha256: sha256:5eb524145532a4b14875d9dd6301e818a11543599e76e46d69d2ab7ddec6dc13
+      size: 3795681
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-amd64.tar.gz
+    - name: node_exporter-0.13.0-rc.1.linux-arm64.tar.gz
+      sha256: sha256:d9855cbd647d0e4a947e32f3b37c97ce420ec3f642a209a5015e647a1dce5024
+      size: 3991422
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-arm64.tar.gz
+    - name: node_exporter-0.13.0-rc.1.linux-armv5.tar.gz
+      sha256: sha256:21adfbed78dd1e391548f935b826dd33a74b6f9fa2601544975527c45448dfd2
+      size: 3442798
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-armv5.tar.gz
+    - name: node_exporter-0.13.0-rc.1.linux-armv6.tar.gz
+      sha256: sha256:189c223727ae29e7ec8c1dad1f7b7de2ae43db13a3c48d15554e483a62d000f4
+      size: 3423210
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-armv6.tar.gz
+    - name: node_exporter-0.13.0-rc.1.linux-armv7.tar.gz
+      sha256: sha256:a2294cc0ac61a4437bcb25fea0b45217f03c0548753bf7394d08233c6bd0182b
+      size: 3420753
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-armv7.tar.gz
+    - name: node_exporter-0.13.0-rc.1.linux-ppc64.tar.gz
+      sha256: sha256:6a81870e735053e55ed17da062173ab82b4bddd627df116e545df8e33ecd4870
+      size: 4303
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-ppc64.tar.gz
+    - name: node_exporter-0.13.0-rc.1.linux-ppc64le.tar.gz
+      sha256: sha256:e0fc281d77a41df16253a330f5bb2d21fe5b8e07d398c378266e02522f46c863
+      size: 4305
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.linux-ppc64le.tar.gz
+    - name: node_exporter-0.13.0-rc.1.netbsd-386.tar.gz
+      sha256: sha256:ab812a8aeee4d3877424ec528150efd5875e63f4166b6ebc631bbda543a5e6cf
+      size: 3884227
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.netbsd-386.tar.gz
+    - name: node_exporter-0.13.0-rc.1.netbsd-amd64.tar.gz
+      sha256: sha256:ef8811d78e388c1804ec718d43a34a7e5a86276c07f6d4c25501bc03397c72cc
+      size: 4095018
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.netbsd-amd64.tar.gz
+    - name: node_exporter-0.13.0-rc.1.netbsd-armv5.tar.gz
+      sha256: sha256:b8ded6c31addd7c0dfd14de1116bef1ef7a3763ae281bf54e2bb82fe5ae7dfce
+      size: 3218664
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.netbsd-armv5.tar.gz
+    - name: node_exporter-0.13.0-rc.1.netbsd-armv6.tar.gz
+      sha256: sha256:18ee04b7e61114fc311e8274dcaa3bb6285b578d1b212311868e60562b1ccabf
+      size: 3196379
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.netbsd-armv6.tar.gz
+    - name: node_exporter-0.13.0-rc.1.netbsd-armv7.tar.gz
+      sha256: sha256:b35f5936474750396072f9010d078f0760e4a2664efca2aad21babaa8141bd82
+      size: 3194988
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.netbsd-armv7.tar.gz
+    - name: node_exporter-0.13.0-rc.1.windows-386.tar.gz
+      sha256: sha256:53b3a23af892fc9a01cf28b50bd93c7f4b81a0163904bd1df3550034af9808c1
+      size: 3268894
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.windows-386.tar.gz
+    - name: node_exporter-0.13.0-rc.1.windows-amd64.tar.gz
+      sha256: sha256:d1fbcc6deebfbdb9b19a86f778d40a6ae4a312b8500621933855e743b583dc5f
+      size: 3478225
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.1/node_exporter-0.13.0-rc.1.windows-amd64.tar.gz
+    prerelease: true
+    commit_sha: 2ff8e5f0e4553371161b98293d52ed98ecb8117b
+  v0.13.0-rc.2:
+    files:
+    - name: node_exporter-0.13.0-rc.2.darwin-386.tar.gz
+      sha256: sha256:804dc367b313f5c47c31c8619d4c6629e1580f3e8ff5e36875d6f829ca34a2c1
+      size: 2405737
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.darwin-386.tar.gz
+    - name: node_exporter-0.13.0-rc.2.darwin-amd64.tar.gz
+      sha256: sha256:3ac134f878f869b6f93500d867690016bf8e1964b54063e9e861e0c069d94195
+      size: 2534533
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.darwin-amd64.tar.gz
+    - name: node_exporter-0.13.0-rc.2.linux-386.tar.gz
+      sha256: sha256:0c12c399a59b0ca2f52ce14e99c434ab8e3b5cffd1d46572f2282ba96a618546
+      size: 3569660
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.linux-386.tar.gz
+    - name: node_exporter-0.13.0-rc.2.linux-amd64.tar.gz
+      sha256: sha256:c9e5fddca867fdabb891cfa7d6d3cf180b391631518783ac93fdc4ee8626bd27
+      size: 3795864
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.linux-amd64.tar.gz
+    - name: node_exporter-0.13.0-rc.2.linux-arm64.tar.gz
+      sha256: sha256:cef34f92e6ffcf32653a722bf4473e2b6603b8aa25092e666f73cc17033e508c
+      size: 3991708
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.linux-arm64.tar.gz
+    - name: node_exporter-0.13.0-rc.2.linux-armv5.tar.gz
+      sha256: sha256:7401cc5ef2e260f64a6fca4bf31aafbe38bb47c6a6591c65cf825e3df1c28cdd
+      size: 3442599
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.linux-armv5.tar.gz
+    - name: node_exporter-0.13.0-rc.2.linux-armv6.tar.gz
+      sha256: sha256:fa3345f7fd6be768adebb4bc314620383419cc9362b67b1cce83a9ad5f7751ff
+      size: 3423161
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.linux-armv6.tar.gz
+    - name: node_exporter-0.13.0-rc.2.linux-armv7.tar.gz
+      sha256: sha256:0508fe90454e9f2a192e3ed74ca5f073499fafd99e0896d77029f856d88e3e69
+      size: 3420690
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.linux-armv7.tar.gz
+    - name: node_exporter-0.13.0-rc.2.netbsd-386.tar.gz
+      sha256: sha256:22ac75d4d7af364c95429cd16551457c6b1dff3a79a015f06f6b74840b62c8f4
+      size: 3883004
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.netbsd-386.tar.gz
+    - name: node_exporter-0.13.0-rc.2.netbsd-amd64.tar.gz
+      sha256: sha256:d259a605fb896ebbc973a66b3b92c15fb525b6b96b3959188764a1a101266c88
+      size: 4093179
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.netbsd-amd64.tar.gz
+    - name: node_exporter-0.13.0-rc.2.netbsd-armv5.tar.gz
+      sha256: sha256:babc390919d01c2f08c01181a5fcf9b81fe16e7948a214aeb446194979b57583
+      size: 3217377
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.netbsd-armv5.tar.gz
+    - name: node_exporter-0.13.0-rc.2.netbsd-armv6.tar.gz
+      sha256: sha256:68f9bf2c0a40b26972b5883cacf04acb8cd3f9ff83fd19b351a73e3f5071ae6c
+      size: 3196330
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.netbsd-armv6.tar.gz
+    - name: node_exporter-0.13.0-rc.2.netbsd-armv7.tar.gz
+      sha256: sha256:8777768dc964b9bd100b034bc252d1bfeabc115b41a6a2e45c3dc32b619756c4
+      size: 3194805
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.netbsd-armv7.tar.gz
+    - name: node_exporter-0.13.0-rc.2.windows-386.tar.gz
+      sha256: sha256:ecdf22114c563a3fc395c1b48d0487363c7c52fcb1093bfc0bb800d4ee48f61b
+      size: 3267950
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.windows-386.tar.gz
+    - name: node_exporter-0.13.0-rc.2.windows-amd64.tar.gz
+      sha256: sha256:8453e7f0d30f21bc625887e7572d0868df13c605d6cd4ec714cc756494302aa6
+      size: 3477389
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.13.0-rc.2/node_exporter-0.13.0-rc.2.windows-amd64.tar.gz
+    prerelease: true
+    commit_sha: 42d1658d5632fe0bfb281761d5e3620cfc37990b
+  v0.14.0:
+    files:
+    - name: node_exporter-0.14.0.darwin-386.tar.gz
+      sha256: sha256:e2078eebbfb4dcbd391f4ac456f89409ffdda5e7c6643b3bd36c876f3fe77db5
+      size: 2465164
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.darwin-386.tar.gz
+    - name: node_exporter-0.14.0.darwin-amd64.tar.gz
+      sha256: sha256:a2841d4cd2ab262d2e50192a2a32a9262afa8fc34680edb7531de042bab35328
+      size: 2591597
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.darwin-amd64.tar.gz
+    - name: node_exporter-0.14.0.linux-386.tar.gz
+      sha256: sha256:9efc58043057edf1d305cacf008ce687575ddafd40f6baaf4d9b472eb72879d4
+      size: 3787571
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.linux-386.tar.gz
+    - name: node_exporter-0.14.0.linux-amd64.tar.gz
+      sha256: sha256:d5980bf5d0dc7214741b65d3771f08e6f8311c86531ae21c6ffec1d643549b2e
+      size: 4019675
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.linux-amd64.tar.gz
+    - name: node_exporter-0.14.0.linux-arm64.tar.gz
+      sha256: sha256:2cedec4db23ec10cf62c8bd8d8bfebe296e74f95dfbf07ddccd4edfa589f0a82
+      size: 4202708
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.linux-arm64.tar.gz
+    - name: node_exporter-0.14.0.linux-armv5.tar.gz
+      sha256: sha256:e9fbf792a378e4a533a89ecf6f7ae37aa61df459f79a426d7d232d3337c0522b
+      size: 3650005
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.linux-armv5.tar.gz
+    - name: node_exporter-0.14.0.linux-armv6.tar.gz
+      sha256: sha256:723895bd4d2f340c7d7bd475f0f97c21fd96185e9f458a5c9ce18966e6002aa1
+      size: 3629373
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.linux-armv6.tar.gz
+    - name: node_exporter-0.14.0.linux-armv7.tar.gz
+      sha256: sha256:89ab768e4bde9939ded3c5c85b1cdbfead97df1e380f8df6826c43f7be25df84
+      size: 3625193
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.linux-armv7.tar.gz
+    - name: node_exporter-0.14.0.netbsd-386.tar.gz
+      sha256: sha256:59c6a05c94a8ed72066860c93c9e33ef2706cec4e9e36a2c91a6a4cd3857f322
+      size: 3942963
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.netbsd-386.tar.gz
+    - name: node_exporter-0.14.0.netbsd-amd64.tar.gz
+      sha256: sha256:e2fb31365e4a397483b5bdae7a9c5d816b3b723b1fa50135d94937221337fc7a
+      size: 4155126
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.netbsd-amd64.tar.gz
+    - name: node_exporter-0.14.0.netbsd-armv5.tar.gz
+      sha256: sha256:cafd4595b6f8cd6b86044026c73d4c4a43ddf30029966501fb640a5088a54a94
+      size: 3272364
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.netbsd-armv5.tar.gz
+    - name: node_exporter-0.14.0.netbsd-armv6.tar.gz
+      sha256: sha256:4aacf6af961f171251f4550c68fdcf7ebeac697765d35d991f78fdd567ca845b
+      size: 3253392
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.netbsd-armv6.tar.gz
+    - name: node_exporter-0.14.0.netbsd-armv7.tar.gz
+      sha256: sha256:a936dfb12c5160f3374a927503dd59a9b9456e1e7b3c7f94399a85615c8bdb9e
+      size: 3250219
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.netbsd-armv7.tar.gz
+    - name: sha256sums.txt
+      sha256: sha256:7cbd233b40fda7ad2d1950bac38812f6a4b0ee1b31071f56caf1d6c61469cbe0
+      size: 1379
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0/sha256sums.txt
+    prerelease: false
+    commit_sha: 840ba5dcc71a084a3bc63cb6063003c1f94435a6
+  v0.14.0-rc.1:
+    files:
+    - name: node_exporter-0.14.0-rc.1.darwin-386.tar.gz
+      sha256: sha256:b330d736776df9c67f5eceb84dfa5ad71625c55c37387cdaa53dd23d7586271b
+      size: 2455362
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.darwin-386.tar.gz
+    - name: node_exporter-0.14.0-rc.1.darwin-amd64.tar.gz
+      sha256: sha256:34d5b52a9bae964a4789c357cf8c2bdfd556e85255aea6fee84a8cea6dec93db
+      size: 2583044
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.darwin-amd64.tar.gz
+    - name: node_exporter-0.14.0-rc.1.linux-386.tar.gz
+      sha256: sha256:ec69dcc15ceaac4478ffa6f4d5ad6c06a36da92da72c7e70594bd2ff79411e50
+      size: 3730431
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.linux-386.tar.gz
+    - name: node_exporter-0.14.0-rc.1.linux-amd64.tar.gz
+      sha256: sha256:7fe8ac67ff5b3151d41454c208d2708cf49875c6de84753046f34a1f85b8c64c
+      size: 3961417
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.linux-amd64.tar.gz
+    - name: node_exporter-0.14.0-rc.1.linux-arm64.tar.gz
+      sha256: sha256:221ccdfba0089d656eab1294c279e5aa3c637d1d4397ed4d9ca96d8ab8457bff
+      size: 4146271
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.linux-arm64.tar.gz
+    - name: node_exporter-0.14.0-rc.1.linux-armv5.tar.gz
+      sha256: sha256:7c90814ccb2638db988b999dc7e31071626445647b21a71c5f899bcabf537015
+      size: 3596872
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.linux-armv5.tar.gz
+    - name: node_exporter-0.14.0-rc.1.linux-armv6.tar.gz
+      sha256: sha256:2520531c4353d98491910b6ae6ec9f82cc5de10859fad2a68bef732cca76f8d4
+      size: 3575363
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.linux-armv6.tar.gz
+    - name: node_exporter-0.14.0-rc.1.linux-armv7.tar.gz
+      sha256: sha256:fc3b4c6540a4aa90f592c239d3361143260a78db75b72feb0c4f41bbb15a1f61
+      size: 3573303
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.linux-armv7.tar.gz
+    - name: node_exporter-0.14.0-rc.1.netbsd-386.tar.gz
+      sha256: sha256:1b9215c6a9214c21d32b8012ffc7cb4b0442f84586bcf01a9ee19c7dea934758
+      size: 3928839
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.netbsd-386.tar.gz
+    - name: node_exporter-0.14.0-rc.1.netbsd-amd64.tar.gz
+      sha256: sha256:4a9ae00d92e15e819b9a03bf46fac5dc1dae4145f1f9f5a4f544d0b60479adad
+      size: 4141008
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.netbsd-amd64.tar.gz
+    - name: node_exporter-0.14.0-rc.1.netbsd-armv5.tar.gz
+      sha256: sha256:f45fb936b4186ee5edfe9ae14fae4d8425273d95ff82ca6d0d61e4412dacbd39
+      size: 3260879
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.netbsd-armv5.tar.gz
+    - name: node_exporter-0.14.0-rc.1.netbsd-armv6.tar.gz
+      sha256: sha256:f5378d367542a52e4204ff5aed9d1873297a51a0a88e568252940562359bb870
+      size: 3238942
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.netbsd-armv6.tar.gz
+    - name: node_exporter-0.14.0-rc.1.netbsd-armv7.tar.gz
+      sha256: sha256:8379608b6035a86579c29dc22dd6dd72c5a68a1c2218d2aff583d269cf510e33
+      size: 3237123
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.netbsd-armv7.tar.gz
+    - name: node_exporter-0.14.0-rc.1.windows-386.tar.gz
+      sha256: sha256:fc9c2103c4bd659cbccc8bbc601c62cd215ba0769d6cebb809eb6c690cc71e61
+      size: 3345241
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.windows-386.tar.gz
+    - name: node_exporter-0.14.0-rc.1.windows-amd64.tar.gz
+      sha256: sha256:c0f332d24696308e43fe26159faf43356f698f0f8ebb4fb37d7c4f03904f05b0
+      size: 3558915
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.1/node_exporter-0.14.0-rc.1.windows-amd64.tar.gz
+    prerelease: true
+    commit_sha: 5a07f4173d97fa0dd307db5bd3c2e6da26a4b16e
+  v0.14.0-rc.2:
+    files:
+    - name: node_exporter-0.14.0-rc.2.darwin-386.tar.gz
+      sha256: sha256:02c68c6a8537f9a132a06c58c60b65c79f19453cd7525ec742fa965458fbfb4e
+      size: 2466072
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.darwin-386.tar.gz
+    - name: node_exporter-0.14.0-rc.2.darwin-amd64.tar.gz
+      sha256: sha256:d580b53a44f5d92db98098e2dd5d647457d2442c3c496bece590caf99d59b872
+      size: 2592259
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.darwin-amd64.tar.gz
+    - name: node_exporter-0.14.0-rc.2.linux-386.tar.gz
+      sha256: sha256:710aaceea74006e8bb553c61ee11476a1859ab23434ca28aed01c2cba8a53af9
+      size: 3787636
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.linux-386.tar.gz
+    - name: node_exporter-0.14.0-rc.2.linux-amd64.tar.gz
+      sha256: sha256:78be37cdef5c3be5414c47b7e61804ed01bf8800c1e4aa779fba6b089f05cb6a
+      size: 4019032
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.linux-amd64.tar.gz
+    - name: node_exporter-0.14.0-rc.2.linux-arm64.tar.gz
+      sha256: sha256:c5457e2457490a8e6c02051deb412e743cd6c527b8e49b9118a0ba53fc4349bc
+      size: 4201899
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.linux-arm64.tar.gz
+    - name: node_exporter-0.14.0-rc.2.linux-armv5.tar.gz
+      sha256: sha256:cba9558ff8a8b5b5a20d4a83258bc697afce6a63b5815cf46ef4bc7a78658f61
+      size: 3649176
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.linux-armv5.tar.gz
+    - name: node_exporter-0.14.0-rc.2.linux-armv6.tar.gz
+      sha256: sha256:5357a85fec0d6aff4451e85e35a050327c2773b90f5d46c6c8f23ef3380730a1
+      size: 3628134
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.linux-armv6.tar.gz
+    - name: node_exporter-0.14.0-rc.2.linux-armv7.tar.gz
+      sha256: sha256:6333edbf38d86e548902804b334da12b713c808b83b915c6db20f53c62f12e22
+      size: 3625113
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.linux-armv7.tar.gz
+    - name: node_exporter-0.14.0-rc.2.netbsd-386.tar.gz
+      sha256: sha256:5bda8a8826caa56c67b0e9b0452d5ba87119b78b39d8d04c01958a3acb429167
+      size: 3945797
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.netbsd-386.tar.gz
+    - name: node_exporter-0.14.0-rc.2.netbsd-amd64.tar.gz
+      sha256: sha256:06495b921cd528d158f2c0f7e24d0210f8790f00dfe76f267f2a76e1fb9da9cd
+      size: 4156508
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.netbsd-amd64.tar.gz
+    - name: node_exporter-0.14.0-rc.2.netbsd-armv5.tar.gz
+      sha256: sha256:080574de7077f100f1d68e065deba1ce2acf686a18376f7736466eca0481a47e
+      size: 3274872
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.netbsd-armv5.tar.gz
+    - name: node_exporter-0.14.0-rc.2.netbsd-armv6.tar.gz
+      sha256: sha256:7fd04bad859febf6926b9c179557f8b67275f1842ac952479486a7ebc84c8162
+      size: 3256169
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.netbsd-armv6.tar.gz
+    - name: node_exporter-0.14.0-rc.2.netbsd-armv7.tar.gz
+      sha256: sha256:209f726993888be999a55a758b058f7b9cd487b1ff79ecba6c577852213c1878
+      size: 3253692
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.netbsd-armv7.tar.gz
+    - name: node_exporter-0.14.0-rc.2.windows-386.tar.gz
+      sha256: sha256:ac1bfff85bbfad898d9122fed065e212e7d9c6c7929037bd50712ec24190422c
+      size: 3359538
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.windows-386.tar.gz
+    - name: node_exporter-0.14.0-rc.2.windows-amd64.tar.gz
+      sha256: sha256:4450b8cd9f57f527d5b7ce9b5295b696290881eca955797074c1264fedd9030a
+      size: 3572778
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.14.0-rc.2/node_exporter-0.14.0-rc.2.windows-amd64.tar.gz
+    prerelease: true
+    commit_sha: 0e60bb8e005c638605e59ac3f307e3d47e891a9f
+  v0.15.0:
+    files:
+    - name: node_exporter-0.15.0.darwin-386.tar.gz
+      sha256: sha256:190894a5c84ce4fe306802691d972da8cd5556579881179b9189694b04f59e3d
+      size: 3272170
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.darwin-386.tar.gz
+    - name: node_exporter-0.15.0.darwin-amd64.tar.gz
+      sha256: sha256:c29b58a6bba3cfa3cb511d9fcdde5ba8661c96b2e5a1f42ab0d324b5ad1e2a83
+      size: 3500953
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.darwin-amd64.tar.gz
+    - name: node_exporter-0.15.0.linux-386.tar.gz
+      sha256: sha256:f3434aee7595b0e7e199b18b53a46a6675c8bf3bab7a9bdfeb475ff58fb0e746
+      size: 4990279
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.linux-386.tar.gz
+    - name: node_exporter-0.15.0.linux-amd64.tar.gz
+      sha256: sha256:9413b3c94dbe9d4341ce85ea7e3f0e20abb8804135b8c236c4440c2c841551d7
+      size: 5276195
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.linux-amd64.tar.gz
+    - name: node_exporter-0.15.0.linux-arm64.tar.gz
+      sha256: sha256:7092f9ae9dfa014f75554dbd95dcee472147370db422ce80a923fe375c63152f
+      size: 4795039
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.linux-arm64.tar.gz
+    - name: node_exporter-0.15.0.linux-armv5.tar.gz
+      sha256: sha256:5515d7f147ff84e257118a866980f5bf96035155819ab31cadb5c4b825202db9
+      size: 4845600
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.linux-armv5.tar.gz
+    - name: node_exporter-0.15.0.linux-armv6.tar.gz
+      sha256: sha256:0bf5ca4c2f4db68d37903e8c7e8148df78335ad7d1dd0d67483f9b8de447ecae
+      size: 4826127
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.linux-armv6.tar.gz
+    - name: node_exporter-0.15.0.linux-armv7.tar.gz
+      sha256: sha256:de7d7f44ff2a8d62682888b8099fca94541122a454232a60852258a76cede44e
+      size: 4776774
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.linux-armv7.tar.gz
+    - name: node_exporter-0.15.0.netbsd-386.tar.gz
+      sha256: sha256:376187c414ac5ed3f0879c9e2c58f24fb654bba1009de9ec9aee1ef8b3005675
+      size: 4556014
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.netbsd-386.tar.gz
+    - name: node_exporter-0.15.0.netbsd-amd64.tar.gz
+      sha256: sha256:13672d856d49908a046571b2debcfc80c82d3c84580ad6c3bb11c8ba68a4e655
+      size: 4802771
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/node_exporter-0.15.0.netbsd-amd64.tar.gz
+    - name: sha256sums.txt
+      sha256: sha256:c0380f5fcd42cc7f0c2465b9255f846f21845bb839ba58461a0e613a2140d04e
+      size: 1058
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.0/sha256sums.txt
+    prerelease: false
+    commit_sha: 6e2053c557f96efb63aef3691f15335a70baaffd
+  v0.15.1:
+    files:
+    - name: node_exporter-0.15.1.darwin-386.tar.gz
+      sha256: sha256:f9509a4dd00bf134bbce027cf208a166313a6568443e4e75fc5d64083ca2598e
+      size: 3272814
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.darwin-386.tar.gz
+    - name: node_exporter-0.15.1.darwin-amd64.tar.gz
+      sha256: sha256:c8fd8d5e7247530281eb2053fe092e2e8cdb8ecdab42891be14ad3dcd2bbe0f4
+      size: 3506848
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.darwin-amd64.tar.gz
+    - name: node_exporter-0.15.1.linux-386.tar.gz
+      sha256: sha256:3b43d8ecb5d6ac0f29836808ddfb744aa8e2a53e47ac374b686a2a962f7182ef
+      size: 4991678
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.linux-386.tar.gz
+    - name: node_exporter-0.15.1.linux-amd64.tar.gz
+      sha256: sha256:7ffb3773abb71dd2b2119c5f6a7a0dbca0cff34b24b2ced9e01d9897df61a127
+      size: 5278742
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.linux-amd64.tar.gz
+    - name: node_exporter-0.15.1.linux-arm64.tar.gz
+      sha256: sha256:9806380df58ce4d3cfff1091c77286a46ac7ef045fb4b02f662ee7a291eb9815
+      size: 4795716
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.linux-arm64.tar.gz
+    - name: node_exporter-0.15.1.linux-armv5.tar.gz
+      sha256: sha256:d30f38a78b37825caf2a04be4d4d9104ed51e901fb44d969c28fb7da9eed0e8a
+      size: 4849192
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.linux-armv5.tar.gz
+    - name: node_exporter-0.15.1.linux-armv6.tar.gz
+      sha256: sha256:d1e46a3050dc9f87117c714dc9bad59d21f50d888c5fbe14db218573accc30fd
+      size: 4826827
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.linux-armv6.tar.gz
+    - name: node_exporter-0.15.1.linux-armv7.tar.gz
+      sha256: sha256:875412b56ade76ba303734a252e75d00e757ca22b0881b76d67fbb2c2fc1ca21
+      size: 4779917
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.linux-armv7.tar.gz
+    - name: node_exporter-0.15.1.netbsd-386.tar.gz
+      sha256: sha256:1883060cef103d5aa44c304fdfd061828c572960bcf7064fa90eea65404b49f7
+      size: 4559932
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.netbsd-386.tar.gz
+    - name: node_exporter-0.15.1.netbsd-amd64.tar.gz
+      sha256: sha256:8462925d606ad59d3d5e02eb163a0113ba9f310191e09a2adf817ea0b987ff01
+      size: 4802347
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.netbsd-amd64.tar.gz
+    - name: sha256sums.txt
+      sha256: sha256:8c08a3ca6e90e8f3e838c8b9b7978b847b469a43388ce7116f1a93f1c0c998f8
+      size: 1058
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.1/sha256sums.txt
+    prerelease: false
+    commit_sha: ba5da2c29ae7f6209a88cb58676ba5ba029ad785
+  v0.15.2:
+    files:
+    - name: node_exporter-0.15.2.darwin-386.tar.gz
+      sha256: sha256:64b5333f96306a55e006193e048815d954b573b49646d5b3841e4d06013a3ce4
+      size: 3272822
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.darwin-386.tar.gz
+    - name: node_exporter-0.15.2.darwin-amd64.tar.gz
+      sha256: sha256:63fd66c15e2f50ef944ca164125aed1be3b2c596ecb780819d98d849c14e5a6c
+      size: 3506791
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.darwin-amd64.tar.gz
+    - name: node_exporter-0.15.2.linux-386.tar.gz
+      sha256: sha256:79a587717223235e67b355c41d15772b6bb0c221c80aaef9e4b2b51ca21fd96c
+      size: 4992844
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.linux-386.tar.gz
+    - name: node_exporter-0.15.2.linux-amd64.tar.gz
+      sha256: sha256:1ce667467e442d1f7fbfa7de29a8ffc3a7a0c84d24d7c695cc88b29e0752df37
+      size: 5278094
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.linux-amd64.tar.gz
+    - name: node_exporter-0.15.2.linux-arm64.tar.gz
+      sha256: sha256:6468205467960190d36297e6c83e73730e415432b9892fbae3343536ee11a2ee
+      size: 4795827
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.linux-arm64.tar.gz
+    - name: node_exporter-0.15.2.linux-armv5.tar.gz
+      sha256: sha256:ade093669cae4ec80a1a12920fa66f943b2d1b69d9798baa71ca659e9086d50b
+      size: 4849208
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.linux-armv5.tar.gz
+    - name: node_exporter-0.15.2.linux-armv6.tar.gz
+      sha256: sha256:067fb802baba29d3459771fc2f6b993e6510ae85cb175b761ffac76910360e34
+      size: 4827036
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.linux-armv6.tar.gz
+    - name: node_exporter-0.15.2.linux-armv7.tar.gz
+      sha256: sha256:cbb14364b341d7b60e7c26c51250a3f2027fd2e8db2d1f46d655e7bdd15465f0
+      size: 4780430
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.linux-armv7.tar.gz
+    - name: node_exporter-0.15.2.netbsd-386.tar.gz
+      sha256: sha256:85b47ece70ac7b539b84994314bb08ff1f15fb1b4179ecfba1670078c4d61431
+      size: 4559580
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.netbsd-386.tar.gz
+    - name: node_exporter-0.15.2.netbsd-amd64.tar.gz
+      sha256: sha256:94a384c75e356d95789af485784e6b6fbece49aec94b9207ef4128410dee1603
+      size: 4802395
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.netbsd-amd64.tar.gz
+    - name: sha256sums.txt
+      sha256: sha256:ebe8d2eb0cb6d74bb9b2c5dfd2f4e53afd9c4cb835785c8132128e83b0e546ea
+      size: 1058
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.15.2/sha256sums.txt
+    prerelease: false
+    commit_sha: 98bc64930d34878b84a0f87dfe6e1a6da61e532d
+  v0.16.0:
+    files:
+    - name: node_exporter-0.16.0.darwin-386.tar.gz
+      sha256: sha256:747ee549c1010947a8b162b1434976fe6cb8445540521d2fcc283765e4be1a79
+      size: 3252616
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.darwin-386.tar.gz
+    - name: node_exporter-0.16.0.darwin-amd64.tar.gz
+      sha256: sha256:73a8c451bd14dea587ebf2fd1258471fe97bddbae6f44b6a9d3ce7e2327bc91d
+      size: 3480556
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.darwin-amd64.tar.gz
+    - name: node_exporter-0.16.0.linux-386.tar.gz
+      sha256: sha256:2f18a32a7bb1c91307ed776cce50559bbcd66af90a61ea0a22a661ebe79e4fda
+      size: 4989677
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.linux-386.tar.gz
+    - name: node_exporter-0.16.0.linux-amd64.tar.gz
+      sha256: sha256:e92a601a5ef4f77cce967266b488a978711dabc527a720bea26505cba426c029
+      size: 5276312
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.linux-amd64.tar.gz
+    - name: node_exporter-0.16.0.linux-arm64.tar.gz
+      sha256: sha256:c793e8278ec6a167a49518d72dd928361a045bd4c8b155a22d5b158dd3aea2ac
+      size: 4794389
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.linux-arm64.tar.gz
+    - name: node_exporter-0.16.0.linux-armv5.tar.gz
+      sha256: sha256:18c91a0247f4bc97fb7cdd96502cd8a804a96f42a16357b39f43e28b3d2ac864
+      size: 4844102
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.linux-armv5.tar.gz
+    - name: node_exporter-0.16.0.linux-armv6.tar.gz
+      sha256: sha256:f9518aea4fa7127122a6bf384ba8f70120deaaef75532749f1765cf6e25fd820
+      size: 4823671
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.linux-armv6.tar.gz
+    - name: node_exporter-0.16.0.linux-armv7.tar.gz
+      sha256: sha256:b8bf44c025ec2c5210bdda185f8e72b29ccd3eb9be339b8dbf96835d4fc1965d
+      size: 4776954
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.linux-armv7.tar.gz
+    - name: node_exporter-0.16.0.netbsd-386.tar.gz
+      sha256: sha256:e0561e421deb02f343e2dd5a75ad322bf6960de56c0fa965d9708f6b237f02b0
+      size: 4534143
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.netbsd-386.tar.gz
+    - name: node_exporter-0.16.0.netbsd-amd64.tar.gz
+      sha256: sha256:293451f83ace3f25e36466fe34024827ac03dee6bf3c3694efdbc0c732959033
+      size: 4781146
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/node_exporter-0.16.0.netbsd-amd64.tar.gz
+    - name: sha256sums.txt
+      sha256: sha256:b6dc03dba1a5274038285c774aabe3e34184e8b78b46b9d4890053c4a49bd776
+      size: 1058
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0/sha256sums.txt
+    prerelease: false
+    commit_sha: d42bd70f4363dced6b77d8fc311ea57b63387e4f
+  v0.16.0-rc.0:
+    files:
+    - name: node_exporter-0.16.0-rc.0.darwin-386.tar.gz
+      sha256: sha256:3a4c9ebe0da03aed18235860333b4d0719578a5c1a5dcf4eeca049c8afbd2431
+      size: 3330871
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.darwin-386.tar.gz
+    - name: node_exporter-0.16.0-rc.0.darwin-amd64.tar.gz
+      sha256: sha256:4ebc3e64c397df8e26cba05e855a3cfe975003a3af684f2ba49fc9da7fed5f13
+      size: 3495611
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.darwin-amd64.tar.gz
+    - name: node_exporter-0.16.0-rc.0.linux-386.tar.gz
+      sha256: sha256:8d934cc7fbcc8b11d49ebfad49f5afa43bca4c6e060f306a41ca66336dd0dd02
+      size: 5404318
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.linux-386.tar.gz
+    - name: node_exporter-0.16.0-rc.0.linux-amd64.tar.gz
+      sha256: sha256:06c3cf1d8d912e873fe7153046e575057f876cf136c27a37a995a7d0595a810c
+      size: 5596905
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.linux-amd64.tar.gz
+    - name: node_exporter-0.16.0-rc.0.linux-arm64.tar.gz
+      sha256: sha256:8789605e04c27bbd4bbf9a19a3e055ffb144e87f6bdce30d4a5fce06b6fe3adc
+      size: 5202481
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.linux-arm64.tar.gz
+    - name: node_exporter-0.16.0-rc.0.linux-armv5.tar.gz
+      sha256: sha256:0bd4408ea914d322a898a0df95a980ffff8ff2cf442893b2d1df35a991a5dfb6
+      size: 5234756
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.linux-armv5.tar.gz
+    - name: node_exporter-0.16.0-rc.0.linux-armv6.tar.gz
+      sha256: sha256:89eaf4b64a5e7a47d59770b0c79536dcc2c5e70d679d08102764cd6924e4f987
+      size: 5213507
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.linux-armv6.tar.gz
+    - name: node_exporter-0.16.0-rc.0.linux-armv7.tar.gz
+      sha256: sha256:8eeb6304f2a1b0b4d7d2c3caf99a4e72a033287999487e816112eae7d108b91a
+      size: 5170879
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.linux-armv7.tar.gz
+    - name: node_exporter-0.16.0-rc.0.netbsd-386.tar.gz
+      sha256: sha256:2590409d4830fe2ba0f212abf404c6702c23c4e2f1834240e40a177383460172
+      size: 4921140
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.netbsd-386.tar.gz
+    - name: node_exporter-0.16.0-rc.0.netbsd-amd64.tar.gz
+      sha256: sha256:5050aa8e0620b329ef12f5d5324273cd5d3a23ebf1b95e676ccccc2123b10264
+      size: 5089246
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/node_exporter-0.16.0-rc.0.netbsd-amd64.tar.gz
+    - name: sha256sums.txt
+      sha256: sha256:0ba7d521ea1865831763001cda40b496e8eed19ddf2be1c88abf938d6f647a11
+      size: 1108
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.0/sha256sums.txt
+    prerelease: true
+    commit_sha: 002c1ca02917406cbecc457162e2bdb1f29c2f49
+  v0.16.0-rc.1:
+    files:
+    - name: node_exporter-0.16.0-rc.1.darwin-386.tar.gz
+      sha256: sha256:555bb5a79a285294d51e79912b08e8f20821a34c7ac851f2bfc1591a046d5dd9
+      size: 3329814
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.darwin-386.tar.gz
+    - name: node_exporter-0.16.0-rc.1.darwin-amd64.tar.gz
+      sha256: sha256:648f570da4630e935976884176d72864d4a9b2990058235e3dee2dab920da5df
+      size: 3496107
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.darwin-amd64.tar.gz
+    - name: node_exporter-0.16.0-rc.1.linux-386.tar.gz
+      sha256: sha256:6ec8824992268299d636578507bea8859b585733b4819454ed4c9413b412b91b
+      size: 5442679
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.linux-386.tar.gz
+    - name: node_exporter-0.16.0-rc.1.linux-amd64.tar.gz
+      sha256: sha256:97da6da6fcc511baefbb59e8b8d4f47d85d65df590ccd73fadca7f2b0ebfb821
+      size: 5617869
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.linux-amd64.tar.gz
+    - name: node_exporter-0.16.0-rc.1.linux-arm64.tar.gz
+      sha256: sha256:cac956ab6d180b08fb4f8d00eff48ef2a0b997453803a39d86ba33bd2e48b45e
+      size: 5209377
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.linux-arm64.tar.gz
+    - name: node_exporter-0.16.0-rc.1.linux-armv5.tar.gz
+      sha256: sha256:c599a0c55725f556b197efc8a1f721e966d50baef402b22d896f2e0fcb7ec5dc
+      size: 5241487
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.linux-armv5.tar.gz
+    - name: node_exporter-0.16.0-rc.1.linux-armv6.tar.gz
+      sha256: sha256:df165af00be220801d34b2c20e03c882b32f3d98cb05feb5bf6dd0197ab12f36
+      size: 5217161
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.linux-armv6.tar.gz
+    - name: node_exporter-0.16.0-rc.1.linux-armv7.tar.gz
+      sha256: sha256:10fe34a2be7f7863f4a22f6487f6dab993326cbd5cb22a67e1882519ff620432
+      size: 5175455
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.linux-armv7.tar.gz
+    - name: node_exporter-0.16.0-rc.1.netbsd-386.tar.gz
+      sha256: sha256:33a8ca9267f4cdcbd29df0690fff8f5a8bb84f549de8bfced309d929f21d286c
+      size: 4953410
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.netbsd-386.tar.gz
+    - name: node_exporter-0.16.0-rc.1.netbsd-amd64.tar.gz
+      sha256: sha256:b4a61784eeef222b00c484e8b6807f4d1fb6976fc6aaa81dafad72568ecda675
+      size: 5101653
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.netbsd-amd64.tar.gz
+    - name: sha256sums.txt
+      sha256: sha256:d8406e7e7bd554456b7be316de77ffddbcdab3284657f99745e5d7e5666d79f0
+      size: 1108
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/sha256sums.txt
+    prerelease: true
+    commit_sha: f3ff44fcca5bb20a181cd7b99734afeae553c78e
+  v0.16.0-rc.2:
+    files:
+    - name: node_exporter-0.16.0-rc.2.darwin-386.tar.gz
+      sha256: sha256:168ced766854c382305d0f902ea3ef1d7554bfa83820694376faad8e99225a15
+      size: 3333288
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.darwin-386.tar.gz
+    - name: node_exporter-0.16.0-rc.2.darwin-amd64.tar.gz
+      sha256: sha256:dfa16b3915d30aed9316df494ab28395b628d259a663569fc1255c833e4f170f
+      size: 3495903
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.darwin-amd64.tar.gz
+    - name: node_exporter-0.16.0-rc.2.linux-386.tar.gz
+      sha256: sha256:95e56990355ac6cf52bdb6867dc34dba755d8910211c21c7eab04d9a05fad70f
+      size: 5441920
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.linux-386.tar.gz
+    - name: node_exporter-0.16.0-rc.2.linux-amd64.tar.gz
+      sha256: sha256:3f59750277ba214c7d8bc5786b126be325ef07aeffffe0af69babfbead0c5a60
+      size: 5618081
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.linux-amd64.tar.gz
+    - name: node_exporter-0.16.0-rc.2.linux-arm64.tar.gz
+      sha256: sha256:388e2873d4ac2be05feb47ff9ad6cdcef13949829144546cf3c51d4451ef47fe
+      size: 5209178
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.linux-arm64.tar.gz
+    - name: node_exporter-0.16.0-rc.2.linux-armv5.tar.gz
+      sha256: sha256:7fda4d8e908e456dfd19e91af72cb1480faa0be4fcd17d3c98a82df67e0efccb
+      size: 5242798
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.linux-armv5.tar.gz
+    - name: node_exporter-0.16.0-rc.2.linux-armv6.tar.gz
+      sha256: sha256:2b497db92ff7f2663407f94b3b043456fa451db2991ade2e4ecfc84404db5e6e
+      size: 5217082
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.linux-armv6.tar.gz
+    - name: node_exporter-0.16.0-rc.2.linux-armv7.tar.gz
+      sha256: sha256:db013f5c64432e792f00e83ebfd542927614e682ee64e956fb4f5ceac145523b
+      size: 5176008
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.linux-armv7.tar.gz
+    - name: node_exporter-0.16.0-rc.2.netbsd-386.tar.gz
+      sha256: sha256:48a33f97236b492e4402911bc477e9e7585000a25d80ba38972acee85f776086
+      size: 4959611
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.netbsd-386.tar.gz
+    - name: node_exporter-0.16.0-rc.2.netbsd-amd64.tar.gz
+      sha256: sha256:3467d941700eba6689c8b77a9998d7713cce7109da8b51230542de432e094578
+      size: 5109072
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/node_exporter-0.16.0-rc.2.netbsd-amd64.tar.gz
+    - name: sha256sums.txt
+      sha256: sha256:2dfb0d1eb3dfc096b925084edc0e23cc8919b67dac875c5cb7d1939f39428900
+      size: 1108
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.2/sha256sums.txt
+    prerelease: true
+    commit_sha: 7cbfa884a7e69de9ee3dbbe4ed820197f363dbfd
+  v0.16.0-rc.3:
+    files:
+    - name: node_exporter-0.16.0-rc.3.darwin-386.tar.gz
+      sha256: sha256:2a98733ff2d4bcaf61f860b3636b79457be61db210707417057311e45cb7e1be
+      size: 3252070
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.darwin-386.tar.gz
+    - name: node_exporter-0.16.0-rc.3.darwin-amd64.tar.gz
+      sha256: sha256:b6eb1015077a507c27f4cec93f9f439a7bb6b5ddbe0947b1a43fda77cbd550e6
+      size: 3480326
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.darwin-amd64.tar.gz
+    - name: node_exporter-0.16.0-rc.3.linux-386.tar.gz
+      sha256: sha256:36bcee19f0417bc2dadfcf7b3a3ccfefe7b8fac06c629c685f86f5d3b9d37d4e
+      size: 4989590
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.linux-386.tar.gz
+    - name: node_exporter-0.16.0-rc.3.linux-amd64.tar.gz
+      sha256: sha256:0164728145dea40696701dd98e2e12f523e99bc90a5abf0228e7d39538f535dd
+      size: 5277671
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.linux-amd64.tar.gz
+    - name: node_exporter-0.16.0-rc.3.linux-arm64.tar.gz
+      sha256: sha256:3aacc09bba89adb3d0a5f6fb49cf751b975a90f2bd12022c3b08aa93ef90a7c2
+      size: 4794348
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.linux-arm64.tar.gz
+    - name: node_exporter-0.16.0-rc.3.linux-armv5.tar.gz
+      sha256: sha256:d472dd936c0ed5e5a8cbea17aa7d0953f677b5890568bf529e76983a34a1d83f
+      size: 4844286
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.linux-armv5.tar.gz
+    - name: node_exporter-0.16.0-rc.3.linux-armv6.tar.gz
+      sha256: sha256:790703b7de56ded26792ff64b0eaaed1a94cf283fc51da9bc039e7daf031a07f
+      size: 4823855
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.linux-armv6.tar.gz
+    - name: node_exporter-0.16.0-rc.3.linux-armv7.tar.gz
+      sha256: sha256:44cf3c1c835dfb4ca3eef2338ccb109189c31c0c47259d70c02eeb60920841b2
+      size: 4776814
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.linux-armv7.tar.gz
+    - name: node_exporter-0.16.0-rc.3.netbsd-386.tar.gz
+      sha256: sha256:13a6273f6235af8258cc00600bc4726bbcb1e614eaf1b04376dc300ea3703371
+      size: 4534855
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.netbsd-386.tar.gz
+    - name: node_exporter-0.16.0-rc.3.netbsd-amd64.tar.gz
+      sha256: sha256:cc5265a3e573052379a2b9bb7b48fa4112bcc60c48dd995f3a0f4dc6539867e5
+      size: 4780958
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/node_exporter-0.16.0-rc.3.netbsd-amd64.tar.gz
+    - name: sha256sums.txt
+      sha256: sha256:7ef1586d6e44c865030e0da316fb398a045456e0949faf8f416ca74cceb0c9b2
+      size: 1108
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.3/sha256sums.txt
+    prerelease: true
+    commit_sha: 575d8950d367987ab8792e90fb2cf00c3fee1c10
+  v0.17.0:
+    files:
+    - name: node_exporter-0.17.0.darwin-386.tar.gz
+      sha256: sha256:8af35b05e3302968a139f16cb1bc734613a98d9150e6d1491f8279bbdf44e17e
+      size: 3960348
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.darwin-386.tar.gz
+    - name: node_exporter-0.17.0.darwin-amd64.tar.gz
+      sha256: sha256:247f8fc619613eddd60d8041abd7cee2ddf552e7d664a0f1472b87d82ea41fa8
+      size: 4179115
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.darwin-amd64.tar.gz
+    - name: node_exporter-0.17.0.linux-386.tar.gz
+      sha256: sha256:99ed86f55be91f305c9a1e00ca01970ceaf15baf245977a935b54bc1a98cb060
+      size: 6782785
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-386.tar.gz
+    - name: node_exporter-0.17.0.linux-amd64.tar.gz
+      sha256: sha256:d2e00d805dbfdc67e7291ce2d2ff151f758dd7401dd993411ff3818d0e231489
+      size: 7018111
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-amd64.tar.gz
+    - name: node_exporter-0.17.0.linux-arm64.tar.gz
+      sha256: sha256:f0d9a8bfed735e93f49a4e8113e96af2dfc90db759164a785b862c704f633569
+      size: 6498124
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-arm64.tar.gz
+    - name: node_exporter-0.17.0.linux-armv5.tar.gz
+      sha256: sha256:358f71e5fc08b82a40b7b05d9e19a8e0b4340a3edb700c9b298809ff77588cb5
+      size: 6495987
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-armv5.tar.gz
+    - name: node_exporter-0.17.0.linux-armv6.tar.gz
+      sha256: sha256:5aa657827611010520c19f911da345c50f0242425891eb5a58ffe6fd75fcd7a8
+      size: 6488288
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-armv6.tar.gz
+    - name: node_exporter-0.17.0.linux-armv7.tar.gz
+      sha256: sha256:052292878a664b02f464c85c2936decce600f73cf0ae8138dd026da532bcc352
+      size: 6486033
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-armv7.tar.gz
+    - name: node_exporter-0.17.0.linux-mips.tar.gz
+      sha256: sha256:eb0582631c8939e250391cfe6f1d203daf06c371f969c0728dc27fadefd4334e
+      size: 6464969
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-mips.tar.gz
+    - name: node_exporter-0.17.0.linux-mips64.tar.gz
+      sha256: sha256:078a135de5252a943c98b1de9122e2554e7dd3f477b5df34fed2dc628496a44e
+      size: 6592799
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-mips64.tar.gz
+    - name: node_exporter-0.17.0.linux-mips64le.tar.gz
+      sha256: sha256:5d534c019b424f7f2fe43c1913e7fa521c5f610f553f0ec4bc5f345f7896e70f
+      size: 6395744
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-mips64le.tar.gz
+    - name: node_exporter-0.17.0.linux-mipsle.tar.gz
+      sha256: sha256:74ffb22c7041adbf94fb4b2c6d9f1370aa4f0c19a275c606e773ad5660ffcd3f
+      size: 6314095
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-mipsle.tar.gz
+    - name: node_exporter-0.17.0.linux-ppc64.tar.gz
+      sha256: sha256:79f342d6e0bbb07609274ec9c913bc4ca69aac7414999dfa75d503afb37b9668
+      size: 6690198
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-ppc64.tar.gz
+    - name: node_exporter-0.17.0.linux-ppc64le.tar.gz
+      sha256: sha256:1f5020d5361bcfcf2f0e7355004271f3953747d827f271418841221b60b52d81
+      size: 6510293
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-ppc64le.tar.gz
+    - name: node_exporter-0.17.0.linux-s390x.tar.gz
+      sha256: sha256:21ea9ee3a7a2cfdccfa97e7c00da1069732512929f0bce43a74dc9cdfafbd4cb
+      size: 7082014
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-s390x.tar.gz
+    - name: node_exporter-0.17.0.netbsd-386.tar.gz
+      sha256: sha256:763e94e4717424f72ea175fe6e467c5a0dc34592eecf926e071c21b2a77929b8
+      size: 6400764
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.netbsd-386.tar.gz
+    - name: node_exporter-0.17.0.netbsd-amd64.tar.gz
+      sha256: sha256:9dee472eb99fbd146e6e6895f695f3135a7b690bde25760303df3d1a61596276
+      size: 6628144
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.netbsd-amd64.tar.gz
+    - name: sha256sums.txt
+      sha256: sha256:2dd71a67ba07fae9117d9359859d47623800deee0934de109145387048f90133
+      size: 1806
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/sha256sums.txt
+    prerelease: false
+    commit_sha: f6f6194a436b9a63d0439abc585c76b19a206b21
+  v0.17.0-rc.0:
+    files:
+    - name: node_exporter-0.17.0-rc.0.darwin-386.tar.gz
+      sha256: sha256:8f7a2a7600d652fae4c28c943450b5e0aa20d3ff5d6e22f23666abed77229e22
+      size: 3969474
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.darwin-386.tar.gz
+    - name: node_exporter-0.17.0-rc.0.darwin-amd64.tar.gz
+      sha256: sha256:3b9e5a8dd124f270094601f8d4a17b382533362033b7221eeeced0fb05b9ab26
+      size: 4189361
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.darwin-amd64.tar.gz
+    - name: node_exporter-0.17.0-rc.0.linux-386.tar.gz
+      sha256: sha256:b652cc9b69e48d7798ee2ce5843a533d9fbcbba6a858fbe62b9ace26f0273432
+      size: 6803676
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-386.tar.gz
+    - name: node_exporter-0.17.0-rc.0.linux-amd64.tar.gz
+      sha256: sha256:699d7bc42d6bd8007f6cd32f655af1baa556f83596a034926f6f77c434d31cad
+      size: 7038374
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-amd64.tar.gz
+    - name: node_exporter-0.17.0-rc.0.linux-arm64.tar.gz
+      sha256: sha256:e57abb8bafd31044d8b93b6e443eace0b07158a17f1feb725f8b1ac91b36ed3a
+      size: 6517253
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-arm64.tar.gz
+    - name: node_exporter-0.17.0-rc.0.linux-armv5.tar.gz
+      sha256: sha256:4077787b29c9137393bd90f3e162822f409c0d56b44ca1b28e3a7ddc8c7f3199
+      size: 6519569
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-armv5.tar.gz
+    - name: node_exporter-0.17.0-rc.0.linux-armv6.tar.gz
+      sha256: sha256:a30ebdaca11014673e9edcadafbd306db17b85262ae9455a330e84d480405b76
+      size: 6510997
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-armv6.tar.gz
+    - name: node_exporter-0.17.0-rc.0.linux-armv7.tar.gz
+      sha256: sha256:1b557575545be4af369c409c1653f38ce815938ed1d7322f8815f9bb1b80cca2
+      size: 6506473
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-armv7.tar.gz
+    - name: node_exporter-0.17.0-rc.0.linux-mips.tar.gz
+      sha256: sha256:8ab11af54e94b9fcf0a701581bff40931938d859a3c0451b81aec87f79f13a07
+      size: 6482733
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-mips.tar.gz
+    - name: node_exporter-0.17.0-rc.0.linux-mips64.tar.gz
+      sha256: sha256:9f0ed4e342283211c4788d77ec16e72670cd1bea0eae4c0a96491a02b4d464c4
+      size: 6613259
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-mips64.tar.gz
+    - name: node_exporter-0.17.0-rc.0.linux-mips64le.tar.gz
+      sha256: sha256:b2cb535747f434b9e8955f17ec9b115a9e8737b01b47425972c4edeb6ee3e4fa
+      size: 6417482
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-mips64le.tar.gz
+    - name: node_exporter-0.17.0-rc.0.linux-mipsle.tar.gz
+      sha256: sha256:72c74ea833960cefa3caaa8b3ce906e2668614bca166ca4def6211d08a2cf427
+      size: 6335579
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-mipsle.tar.gz
+    - name: node_exporter-0.17.0-rc.0.linux-ppc64.tar.gz
+      sha256: sha256:13624424362f6120275545c2e53da63717e96504f5c4ead72deafbd15af04f02
+      size: 6706860
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-ppc64.tar.gz
+    - name: node_exporter-0.17.0-rc.0.linux-ppc64le.tar.gz
+      sha256: sha256:3c10c77fc874b0758c2536a56303022bf4726826858236d01f9da40ced5edda7
+      size: 6522864
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-ppc64le.tar.gz
+    - name: node_exporter-0.17.0-rc.0.linux-s390x.tar.gz
+      sha256: sha256:343eab3a461c53430b6bfcfe9b3aec1861ec8d8665bc441e6c1d60f8a876b3fd
+      size: 7098810
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.linux-s390x.tar.gz
+    - name: node_exporter-0.17.0-rc.0.netbsd-386.tar.gz
+      sha256: sha256:055443cf035efdba75b632d9421e9630801dff254ee5e2ecaa4093886ceb97fa
+      size: 6412835
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.netbsd-386.tar.gz
+    - name: node_exporter-0.17.0-rc.0.netbsd-amd64.tar.gz
+      sha256: sha256:d96702c0e539a4ec4dc1251b24024a19b4ff6b5201c2702d6d818750ec61cb9b
+      size: 6639448
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/node_exporter-0.17.0-rc.0.netbsd-amd64.tar.gz
+    - name: sha256sums.txt
+      sha256: sha256:b60f2503ae6039fe36dc1834d0809d973c5f0cd8eeac144343e2c28675a3fd0d
+      size: 1891
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0-rc.0/sha256sums.txt
+    prerelease: true
+    commit_sha: 751996761903af4cffe18cf2d980b8ae9a202204
+  v0.18.0:
+    files:
+    - name: node_exporter-0.18.0.darwin-386.tar.gz
+      sha256: sha256:40dade397d0b7026986f96a43015b3179de185310caa73b881ac5313ddd256f0
+      size: 3951251
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.darwin-386.tar.gz
+    - name: node_exporter-0.18.0.darwin-amd64.tar.gz
+      sha256: sha256:0b0347aa54894b4306b769244d42a783d635a90b050f20008f26fb3d5a66145f
+      size: 4172250
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.darwin-amd64.tar.gz
+    - name: node_exporter-0.18.0.linux-386.tar.gz
+      sha256: sha256:9c962fba082dcd8a38542bacdac4421bf643c1d55c71c8b35397a7f20eb88c0f
+      size: 7819179
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-386.tar.gz
+    - name: node_exporter-0.18.0.linux-amd64.tar.gz
+      sha256: sha256:1ebbc2b062b6c80a4802bc56ba04cb93b3486e8074bd25cc6887e44111f352c4
+      size: 8064926
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-amd64.tar.gz
+    - name: node_exporter-0.18.0.linux-arm64.tar.gz
+      sha256: sha256:0ebc9afae07cf941fe50cceb821daca6115ab827cfd5394faad4f168925e93c2
+      size: 7528023
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-arm64.tar.gz
+    - name: node_exporter-0.18.0.linux-armv5.tar.gz
+      sha256: sha256:cd4036a6af70f9c8f6254c12e3713585c6040c4a70c1211a9331f56cb2e839e7
+      size: 7515326
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-armv5.tar.gz
+    - name: node_exporter-0.18.0.linux-armv6.tar.gz
+      sha256: sha256:44cd3612a0e52a6e440eb29b0a708d50f9bdf424422b7d54ac6984a9c767072e
+      size: 7507763
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-armv6.tar.gz
+    - name: node_exporter-0.18.0.linux-armv7.tar.gz
+      sha256: sha256:f685fdb98f73cdd7c1c933cd547fa2cc13e64ec0cf1603b92f6ba0807a844f8f
+      size: 7507361
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-armv7.tar.gz
+    - name: node_exporter-0.18.0.linux-mips.tar.gz
+      sha256: sha256:18e49155135675b18276fd3838deb0ee8616b5f27aaa8ab5531adc574d116cde
+      size: 7450166
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-mips.tar.gz
+    - name: node_exporter-0.18.0.linux-mips64.tar.gz
+      sha256: sha256:785bd924a45f1514db1879bbf2febc643f7c5f2019642b9f3eb081e2570ef730
+      size: 7615995
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-mips64.tar.gz
+    - name: node_exporter-0.18.0.linux-mips64le.tar.gz
+      sha256: sha256:b34c0fc00f19cc37b6307482b8b0706e2e11af091fd7fa0644118910e9f6d651
+      size: 7385615
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-mips64le.tar.gz
+    - name: node_exporter-0.18.0.linux-mipsle.tar.gz
+      sha256: sha256:cb0127711fd25f52bdb8ddb94fb5a636887b3e754672e089c1f3e4d50d1a7ee8
+      size: 7294617
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-mipsle.tar.gz
+    - name: node_exporter-0.18.0.linux-ppc64.tar.gz
+      sha256: sha256:8a90f08ac9a33c42ed6879abfbd5ba0731b69d00442184a53d2676fa28516539
+      size: 7711150
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-ppc64.tar.gz
+    - name: node_exporter-0.18.0.linux-ppc64le.tar.gz
+      sha256: sha256:16ab80e03610d8d043e516f8e2dd9a3e32d74410ad776fe474d5eb3d1f3d8f8f
+      size: 7505661
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-ppc64le.tar.gz
+    - name: node_exporter-0.18.0.linux-s390x.tar.gz
+      sha256: sha256:53bac101f650da2aa6899e67bef6cabeec5c080c22aa54e5a56f36b673eeab38
+      size: 8173986
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.linux-s390x.tar.gz
+    - name: node_exporter-0.18.0.netbsd-386.tar.gz
+      sha256: sha256:136382659e88a3040207b4f8322b4d46952aedfa38692fb68c3f227917e0e2d6
+      size: 6396814
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.netbsd-386.tar.gz
+    - name: node_exporter-0.18.0.netbsd-amd64.tar.gz
+      sha256: sha256:e09ee73ea8135e896cd16a0c85048b9e9cc3c65ac6a3ccaa1a1b8a549dbeb129
+      size: 6625512
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/node_exporter-0.18.0.netbsd-amd64.tar.gz
+    - name: sha256sums.txt
+      sha256: sha256:2e7b1a31e6927bc1f2d5b9d36f8d30b119f83feb9c90c175e95910cede1e1b76
+      size: 1806
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.0/sha256sums.txt
+    prerelease: false
+    commit_sha: f97f01c46cfde2ff97b5539b7964f3044c04947b
+  v0.18.1:
+    files:
+    - name: node_exporter-0.18.1.darwin-386.tar.gz
+      sha256: sha256:61a13b13f5a98bafd6e0dec17c6579acbc13f8a1e24a8e9206a8017edb248460
+      size: 3960738
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.darwin-386.tar.gz
+    - name: node_exporter-0.18.1.darwin-amd64.tar.gz
+      sha256: sha256:20fadb3108de0a9cc70a1333394e5be90416b4f91025f9fc66f5736335e94398
+      size: 4185287
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.darwin-amd64.tar.gz
+    - name: node_exporter-0.18.1.linux-386.tar.gz
+      sha256: sha256:a6c7eb64bb5f27a5567d545a1b93780f3aa72d0627751fd9f054626bb542a4b5
+      size: 7836930
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-386.tar.gz
+    - name: node_exporter-0.18.1.linux-amd64.tar.gz
+      sha256: sha256:b2503fd932f85f4e5baf161268854bf5d22001869b84f00fd2d1f57b51b72424
+      size: 8083296
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
+    - name: node_exporter-0.18.1.linux-arm64.tar.gz
+      sha256: sha256:d5a28c46e74f45b9f2158f793a6064fd9fe8fd8da6e0d1e548835ceb7beb1982
+      size: 7544466
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-arm64.tar.gz
+    - name: node_exporter-0.18.1.linux-armv5.tar.gz
+      sha256: sha256:1eecbaa2a7e58dc2a5b18e960c48842e5e158c9e2eea4d8a4ba32b98ca2f638a
+      size: 7531847
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-armv5.tar.gz
+    - name: node_exporter-0.18.1.linux-armv6.tar.gz
+      sha256: sha256:6f3cb593c15c12cdfaef20d7e1c61d28ef822af6fc8c85d670cb3f0a1212778a
+      size: 7527033
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-armv6.tar.gz
+    - name: node_exporter-0.18.1.linux-armv7.tar.gz
+      sha256: sha256:5de85067f44b42b22d62b2789cb1a379ff5559649b99795cd1ba0c144b512ad0
+      size: 7523071
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-armv7.tar.gz
+    - name: node_exporter-0.18.1.linux-mips.tar.gz
+      sha256: sha256:9ef7c932970bc823a63347c3cdd8a34a4ef9d327cd5513600435dfd74d046755
+      size: 7467872
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-mips.tar.gz
+    - name: node_exporter-0.18.1.linux-mips64.tar.gz
+      sha256: sha256:c2721c1b85e3024e61f37fb2dc44a57f6d4eed8cc0576185a1dedea20e36fb31
+      size: 7640454
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-mips64.tar.gz
+    - name: node_exporter-0.18.1.linux-mips64le.tar.gz
+      sha256: sha256:ae262af96dd7409aeefe28f8ea6cb1b00377444837057ed67694d8fa1b75b848
+      size: 7400932
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-mips64le.tar.gz
+    - name: node_exporter-0.18.1.linux-mipsle.tar.gz
+      sha256: sha256:40860be242f563e3e10972685f1d1654c9b5ca9686b26bde4a422f57a1ebdd18
+      size: 7310549
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-mipsle.tar.gz
+    - name: node_exporter-0.18.1.linux-ppc64.tar.gz
+      sha256: sha256:b41f860dbe23b72cf2ae939dd6bb43ea3ddde268f5a964cf6f8d490fed1ed034
+      size: 7732608
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-ppc64.tar.gz
+    - name: node_exporter-0.18.1.linux-ppc64le.tar.gz
+      sha256: sha256:27996a62327e07041b5dd2f09d6054c7c21244e39358da5d9b44b96daf6a2bc0
+      size: 7519226
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-ppc64le.tar.gz
+    - name: node_exporter-0.18.1.linux-s390x.tar.gz
+      sha256: sha256:0bc212b9db6c2201b2b38d46de2d4cc75b7f4648d7616a87d7616e85f0d6cba4
+      size: 8203806
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-s390x.tar.gz
+    - name: node_exporter-0.18.1.netbsd-386.tar.gz
+      sha256: sha256:c831801b5730750177893a9866416ebb68977a8fd5a7b5305e39ef1162e146a9
+      size: 6411483
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.netbsd-386.tar.gz
+    - name: node_exporter-0.18.1.netbsd-amd64.tar.gz
+      sha256: sha256:4772c8e2d13935d2bcfa8ad1fd64b8ca5d2cc5d71bbee6dd4ef04306017c6368
+      size: 6637344
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.netbsd-amd64.tar.gz
+    - name: sha256sums.txt
+      sha256: sha256:4327dfd02e120c441abd2cd0f62cd0da324be8217cbefe812e34f79227c9b099
+      size: 1806
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/sha256sums.txt
+    prerelease: false
+    commit_sha: 3db77732e925c08f675d7404a8c46466b2ece83e
+software_metadata:
+  prerelease: v0.18.1
+  release: v0.18.1
+  updated: 2020-02-13 07:54:13.337999
