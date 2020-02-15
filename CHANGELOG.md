@@ -6,11 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.10.2] - 2020-02-14
+
 ### Changed
 
 - Upgrade Go from v1.13.6 to v1.13.8
 - Upgrade Prometheus from v2.15.2 to v2.16.0
 - Upgrade ntp_exporter_sapcc v1.1.0 to v1.1.1
+
+### Fixed
+
+  - Fix problem with starting services when 'prometheus_servers' is not defined
 
 ## [0.10.1] - 2020-01-28
 
