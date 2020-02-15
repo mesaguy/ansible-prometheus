@@ -247,7 +247,7 @@ If installing a Prometheus application binary fails, fall back to installing the
 
 Go version to use when building Prometheus software:
 
-    prometheus_go_version: 1.13.6
+    prometheus_go_version: 1.13.8
 
 The Prometheus etc directory, defaults to '/opt/prometheus/etc':
 
@@ -465,8 +465,8 @@ An array of additional flags to pass to the prometheus daemon:
 
 The version of Prometheus to install. The source version defines the version as specified in version control:
 
-    prometheus_version: "2.15.2"
-    prometheus_src_version: "v2.15.2"
+    prometheus_version: "2.16.0"
+    prometheus_src_version: "v2.16.0"
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -1178,7 +1178,7 @@ An array of additional flags to pass to the ntp_exporter daemon, the '-ntp.serve
 
 The version of ntp_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_ntp_exporter_sapcc_version: "v1.1.0"
+    prometheus_ntp_exporter_sapcc_version: "v1.1.1"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9559:
 
