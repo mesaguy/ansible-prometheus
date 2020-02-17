@@ -23,7 +23,7 @@
 
 - name: Enable {{ prometheus_software_service_name }} service
   become: true
-  systemd:
+  service:
     state: started
     enabled: true
     name: '{{ prometheus_software_service_name }}'
