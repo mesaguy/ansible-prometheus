@@ -20,8 +20,8 @@
 
     - name: Set Prometheus script cron files facts
       set_fact:
-        prometheus_script_cron_names: '{{ prometheus_setup_script_crons | map(attribute="name") | sort | list }}'
-        prometheus_script_crons_names_found: '{{ prometheus_script_crons_found.files | map(attribute="path") | sort | list }}'
+        prometheus_script_cron_names: '{{ prometheus_setup_script_crons | map(attribute="name") | map("regex_replace", "\ ", "_") | sort | list }}'
+        prometheus_script_crons_names_found: '{{ prometheus_script_crons_found.files | map(attribute="path") | map("regex_replace", "\ ", "_") | sort | list }}'
       when:
         - prometheus_script_crons_found.matched > 0
 
@@ -40,7 +40,7 @@
     - name: Setup PATH variable for cronjobs
       become: true
       cron:
-        cron_file: '{% if prometheus_script_use_cron_files %}prometheus_script_{{ prometheus_script_cron_job.name }}{% else %}omit{% endif %}'
+        cron_file: '{% if prometheus_script_use_cron_files %}prometheus_script_{{ prometheus_script_cron_job.name | replace(" ", "_") }}{% else %}{{ omit }}{% endif %}'
         user: '{{ prometheus_script_cron_job.user | default("root") }}'
         name: PATH
         env: true
@@ -48,21 +48,20 @@
       loop_control:
         loop_var: prometheus_script_cron_job
       with_items: '{{ prometheus_setup_script_crons }}'
-
   when: prometheus_script_use_cron_files
 
 - name: Setup script cronjobs
   become: true
   cron:
     name: 'Run Prometheus script {{ prometheus_script_cron_job.name }}'
-    cron_file: '{% if prometheus_script_use_cron_files %}prometheus_script_{{ prometheus_script_cron_job.name }}{% else %}omit{% endif %}'
+    cron_file: '{% if prometheus_script_use_cron_files %}prometheus_script_{{ prometheus_script_cron_job.name | replace(" ", "_") }}{% else %}{{ omit }}{% endif %}'
     user: '{{ prometheus_script_cron_job.user | default("root") }}'
     day: '{{ prometheus_script_cron_job.day | default("*") }}'
     hour: '{{ prometheus_script_cron_job.hour | default("*") }}'
     month: '{{ prometheus_script_cron_job.month | default("*") }}'
     weekday: '{{ prometheus_script_cron_job.weekday | default("*") }}'
     minute: '{{ prometheus_script_cron_job.minute | default("*") }}'
-    job: '{{ prometheus_script_directory }}/{{ prometheus_script_cron_job.script }} {% if prometheus_sponge_is_installed | bool %}| sponge{% else %}>{% endif %} {{ prometheus_node_exporter_textfiles_directory }}/{{ prometheus_script_cron_job.name }}.prom'
+    job: '{{ prometheus_script_directory }}/{{ prometheus_script_cron_job.script }} {% if prometheus_sponge_is_installed | bool %}| sponge{% else %}>{% endif %} {{ prometheus_node_exporter_textfiles_directory }}/{{ prometheus_script_cron_job.name | replace(" ", "_") }}.prom'
   loop_control:
     loop_var: prometheus_script_cron_job
   with_items: '{{ prometheus_setup_script_crons }}'
