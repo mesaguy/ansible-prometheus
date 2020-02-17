@@ -26,16 +26,6 @@ prometheus_manage_user: true
 prometheus_group: prometheus
 prometheus_user: prometheus
 
-# Prometheus rules
-prometheus_rules_backup_max_age: 90d
-prometheus_rules_dir_mode: '0755'
-prometheus_rules_file_mode: '0644'
-prometheus_rules_group: '{{ prometheus_group }}'
-prometheus_rules_owner: '{{ prometheus_user }}'
-prometheus_rules_purge_backups: false
-prometheus_rules_purge_orphans: false
-prometheus_rules_source_dirs: []
-
 # Prometheus logrotate
 prometheus_logrotate: false
 prometheus_logrotate_count: 31
@@ -82,7 +72,18 @@ prometheus_node_exporter_textfile_max_age: 14d
 # Local Prometheus source directory
 prometheus_software_local_src_dir: '{{ lookup("env", "HOME") }}/prometheus_src'
 
-# Application directories
+# Prometheus rules settings
+prometheus_rules_backup_max_age: 90d
+prometheus_rules_dir: '{{ prometheus_etc_dir }}/rules'
+prometheus_rules_dir_mode: '0755'
+prometheus_rules_file_mode: '0644'
+prometheus_rules_group: '{{ prometheus_group }}'
+prometheus_rules_owner: '{{ prometheus_user }}'
+prometheus_rules_purge_backups: false
+prometheus_rules_purge_orphans: false
+prometheus_rules_source_dirs: []
+
+# Prometheus tgroup settings
 prometheus_tgroup_dir: '{{ prometheus_etc_dir }}/tgroups'
 prometheus_tgroup_dir_prune_orphans: false
 prometheus_tgroup_owner: '{{ prometheus_user }}'
@@ -90,7 +91,7 @@ prometheus_tgroup_group: '{{ prometheus_group }}'
 prometheus_tgroup_mode: '0775'
 prometheus_tgroup_use_facts: false
 
-# tgroup settings to be overridden on a node-by-node basis
+# Prometheus tgroup settings to be overridden on a node-by-node basis
 prometheus_tgroup_labels: {}
 prometheus_manage_client_tgroups: false
 prometheus_manage_server_tgroups: false

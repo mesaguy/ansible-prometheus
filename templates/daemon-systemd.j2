@@ -10,6 +10,9 @@ After=network.target
 
 [Service]
 Type=simple
+{% if prometheus_configure_ulimits | bool -%}
+LimitNOFILE={{ prometheus_ulimit_hard_nofile }}
+{% endif -%}
 {% if prometheus_software_systemd_options is defined and prometheus_software_systemd_options -%}
 {% for prometheus_software_systemd_option in prometheus_software_systemd_options -%}
 {{ prometheus_software_systemd_option }}

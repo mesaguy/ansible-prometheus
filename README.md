@@ -13,9 +13,6 @@ This role can register client exporters with the Prometheus server/s automatical
 - Ansible >= 2.5.1
 - Facts must be gathered (gather_facts: true)
 
-## TOC
-[TOC]
-
 ## Supported Software and Operating Systems
 ### Supported Operating Systems, Distributions, and Architectures
 This module is intended to support as many distributions and architectures as possible. The following table specifies which combinations are currently tested. Most exporters will also work on ARM architectures:
@@ -278,6 +275,10 @@ Optionally disable symlink of tool applications (amtool, promtool, etc) to /usr/
     prometheus_symlink_tools: false
 
 ### Prometheus rule management variables
+
+Enable management of Prometheus 'rules':
+
+    prometheus_manage_rules: true
 
 Local location to find rules files, defaults to empty (disabled):
 

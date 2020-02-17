@@ -3,9 +3,11 @@
   become: true
   file:
     path: '{{ prometheus_rules_dir }}'
+    state: directory
     owner: '{{ prometheus_rules_owner }}'
     group: '{{ prometheus_rules_group }}'
     mode: '{{ prometheus_rules_dir_mode }}'
+  register: prometheus_rules_dir_creation
 
 - name: Copy rules files to {{ prometheus_rules_dir }}
   become: true
