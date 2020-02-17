@@ -17,11 +17,11 @@
     prometheus_software_name: 'couchdb_exporter_gesellix'
     prometheus_software_version: '{{ prometheus_couchdb_exporter_gesellix_version | default("18") }}'
     prometheus_software_src_version: '{{ prometheus_couchdb_exporter_gesellix_src_version | default("18") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_couchdb_exporter_gesellix_jobname | default(prometheus_couchdb_exporter_gesellix_default_tgroup_jobname) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_couchdb_exporter_gesellix_jobname | default("couchdb") }}'
     prometheus_software_description: 'Prometheus couchdb_exporter (gesellix), exporter of CouchDB statistics'
     prometheus_software_documentation: 'https://github.com/gesellix/couchdb-exporter'
     prometheus_software_host: '{{ prometheus_couchdb_exporter_gesellix_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_couchdb_exporter_gesellix_port | default(prometheus_couchdb_exporter_gesellix_default_port) }}'
+    prometheus_software_port: '{{ prometheus_couchdb_exporter_gesellix_port | default(9984) }}'
     prometheus_software_runas: '{{ prometheus_couchdb_exporter_gesellix_runas | default(prometheus_user) }}'
     prometheus_software_shortname: 'couchdb-prometheus-exporter'
 

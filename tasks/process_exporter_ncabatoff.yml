@@ -17,11 +17,11 @@
     prometheus_software_name: 'process_exporter_ncabatoff'
     prometheus_software_version: '{{ prometheus_process_exporter_ncabatoff_version | default("0.6.0") }}'
     prometheus_software_src_version: '{{ prometheus_process_exporter_ncabatoff_src_version | default("v0.6.0") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_process_exporter_ncabatoff_jobname | default(prometheus_process_exporter_ncabatoff_default_tgroup_jobname) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_process_exporter_ncabatoff_jobname | default("process") }}'
     prometheus_software_description: 'Prometheus process_exporter (ncabatoff), mines /proc to report on selected processes'
     prometheus_software_documentation: 'https://github.com/ncabatoff/process-exporter'
     prometheus_software_host: '{{ prometheus_process_exporter_ncabatoff_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_process_exporter_ncabatoff_port | default(prometheus_process_exporter_ncabatoff_default_port) }}'
+    prometheus_software_port: '{{ prometheus_process_exporter_ncabatoff_port | default(9256) }}'
     prometheus_software_shortname: process-exporter
     # Defined by prometheus_process_exporter_ncabatoff_cfgs:
     prometheus_software_opts: []

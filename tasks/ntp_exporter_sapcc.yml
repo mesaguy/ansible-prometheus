@@ -19,11 +19,11 @@
     prometheus_software_fallback_to_build: '{{ prometheus_ntp_exporter_fallback_to_build | default(prometheus_fallback_to_build) }}'
     prometheus_software_name: 'ntp_exporter_sapcc'
     prometheus_software_version: '{{ prometheus_ntp_exporter_src_version | default("v1.1.1") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_ntp_exporter_sapcc_jobname | default(prometheus_ntp_exporter_sapcc_default_tgroup_jobname) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_ntp_exporter_sapcc_jobname | default("ntp") }}'
     prometheus_software_description: "Prometheus ntp_exporter, checks the drift of that node's clock against a given NTP server"
     prometheus_software_documentation: 'https://github.com/sapcc/ntp_exporter'
     prometheus_software_host: '{{ prometheus_ntp_exporter_sapcc_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_ntp_exporter_sapcc_port | default(prometheus_ntp_exporter_sapcc_default_port) }}'
+    prometheus_software_port: '{{ prometheus_ntp_exporter_sapcc_port | default(9559) }}'
     prometheus_software_shortname: 'ntp_exporter'
 
 - name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts

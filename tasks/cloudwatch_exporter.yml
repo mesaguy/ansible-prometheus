@@ -16,11 +16,11 @@
     prometheus_software_extra_opts: []
     prometheus_software_name: 'cloudwatch_exporter'
     prometheus_software_service_test: '{{ prometheus_cloudwatch_exporter_service_test | default(true) }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_cloudwatch_exporter_jobname | default(prometheus_cloudwatch_exporter_default_tgroup_jobname) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_cloudwatch_exporter_jobname | default("cloudwatch") }}'
     prometheus_software_version: '{{ prometheus_cloudwatch_exporter_version | default("0.7.0") }}'
     prometheus_software_description: 'Prometheus cloudwatch_exporter, exporter for Amazon CloudWatch'
     prometheus_software_documentation: 'https://github.com/prometheus/cloudwatch_exporter'
-    prometheus_software_port: '{{ prometheus_cloudwatch_exporter_port | default(prometheus_cloudwatch_exporter_default_port) }}'
+    prometheus_software_port: '{{ prometheus_cloudwatch_exporter_port | default(9106) }}'
 
 - name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
   set_fact:

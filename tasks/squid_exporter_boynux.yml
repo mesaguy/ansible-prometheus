@@ -21,10 +21,10 @@
     prometheus_software_description: 'Prometheus squid_exporter (boynux), exports squid metrics in Prometheus format'
     prometheus_software_documentation: 'https://github.com/boynux/squid-exporter'
     prometheus_software_host: '{{ prometheus_squid_exporter_boynux_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_squid_exporter_boynux_port | default(prometheus_squid_exporter_boynux_default_port) }}'
+    prometheus_software_port: '{{ prometheus_squid_exporter_boynux_port | default(9301) }}'
     prometheus_software_runas: '{{ prometheus_squid_exporter_boynux_runas | default(prometheus_user) }}'
     prometheus_software_shortname: 'squid-exporter'
-    prometheus_software_tgroup_jobname: '{{ prometheus_squid_exporter_boynux_jobname | default(prometheus_squid_exporter_boynux_default_tgroup_jobname) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_squid_exporter_boynux_jobname | default("squid") }}'
 
 - name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
   set_fact:
