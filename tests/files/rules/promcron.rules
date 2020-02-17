@@ -1,0 +1,13 @@
+---
+groups:
+  - name: Cron alerting
+    rules:
+      - alert: Failing cron job
+        expr: |
+          {__name__=~'.*', promcron='value'} != 0
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          description: Cron of {{ $labels.user }} on {{ $labels.instance }} is failing.
+          summary: Cron job is failing

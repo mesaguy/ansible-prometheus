@@ -116,3 +116,8 @@ prometheus_script_enable_all: true
 prometheus_zookeeper_exporter_infonova_fallback_to_build: true
 prometheus_smokeping_exporter_superq_extra_opts:
   - 'localhost'
+prometheus_configure_ulimits: true
+prometheus_manage_rules: true
+prometheus_rules_purge_orphans: true
+prometheus_rules_source_dirs:
+  - ../files/rules

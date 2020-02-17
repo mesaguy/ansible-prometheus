@@ -13,9 +13,63 @@
 
     - name: Install Prometheus tasks
       include_role:
-        name: '../../../../ansible-prometheus'
+        name: ../../../../ansible-prometheus
         tasks_from: '{{ prometheus_component.path | regex_replace("\.yml$", "") }}'
       loop_control:
         loop_var: prometheus_component
       with_items: "{{ tasks.files | sort(attribute='path') }}"
       when: prometheus_install_only | length == 0 or prometheus_component.path | basename in prometheus_install_only
+
+    - block:
+        - name: Setup promcron test crontab jobs
+          include_role:
+            name: ../../../../ansible-prometheus
+            tasks_from: _install_script_cron.yml
+          vars:
+            prometheus_setup_script_crons:
+              - name: echo test1
+                script: echo test1
+              - name: echo test2
+                minute: 10
+                hour: 1
+                day: 1
+                weekday: 4
+                month: 8
+                script: echo test2
+                user: prometheus
+
+        - name: Setup promcron test cron file jobs
+          include_role:
+            name: ../../../../ansible-prometheus
+            tasks_from: _install_script_cron.yml
+          vars:
+            prometheus_script_use_cron_files: true
+            prometheus_setup_script_crons:
+              - name: echo test3
+                script: echo test3
+                user: prometheus
+              - name: echo test4
+                minute: 20
+                hour: 2
+                day: 3
+                weekday: 5
+                month: 9
+                script: echo test4
+      when: ansible_os_family == 'Archlinux'
+
+    - name: Create a orphaned Prometheus rules file to be purged while testing
+      become: true
+      file:
+        path: '/opt/prometheus/etc/rules/orphan.rules'
+        state: touch
+      when: prometheus_rules_dir_creation.changed
+
+    - name: Re-run rules setup
+      include_role:
+        name: ../../../../ansible-prometheus
+        tasks_from: _rules.yml
+
+    - name: Setup ulimit file
+      include_role:
+        name: ../../../../ansible-prometheus
+        tasks_from: _ulimits.yml

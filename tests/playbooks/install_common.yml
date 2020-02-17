@@ -10,8 +10,14 @@
     - '../../vars/os/{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml'
     - '../../vars/os/{{ ansible_os_family }}.yml'
 
-- name: Update 'pacman' cache
-  include_tasks: ../../tasks/_setup_pkg_mgr_Archlinux.yml
+- block:
+    - name: Update 'pacman' cache
+      include_tasks: ../../tasks/_setup_pkg_mgr_Archlinux.yml
+
+    - name: Install cron
+      become: true
+      package:
+        name: cronie
   when: ansible_os_family == 'Archlinux'
 
 - name: Skip Java service tests on Gentoo
