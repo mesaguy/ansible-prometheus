@@ -1,5 +1,5 @@
 ---
-- name: 'Create {{ prometheus_software_name_version }} textfile directory: {{ prometheus_node_exporter_textfiles_directory }}'
+- name: 'Create textfile directory: {{ prometheus_node_exporter_textfiles_directory }}'
   become: true
   file:
     path: '{{ prometheus_node_exporter_textfiles_directory }}'
