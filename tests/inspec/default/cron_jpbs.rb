@@ -1,3 +1,8 @@
+# Ensure orphaned cron file has been removed:
+describe file('/etc/cron.d/prometheus_script_orphan') do
+  it { should_not exist }
+end
+
 # Test the 2 crontabs created while testing:
 
 describe file('/var/spool/cron/root') do

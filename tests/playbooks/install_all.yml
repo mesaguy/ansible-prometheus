@@ -21,6 +21,14 @@
       when: prometheus_install_only | length == 0 or prometheus_component.path | basename in prometheus_install_only
 
     - block:
+        - name: Create orphaned Prometheus script cron job
+          become: true
+          file:
+            path: /etc/cron.d/prometheus_script_orphan
+            state: touch
+          # Ensure job is only run once for idempotency test
+          when: prometheus_rules_dir_creation.changed
+
         - name: Setup promcron test crontab jobs
           include_role:
             name: ../../../../ansible-prometheus
