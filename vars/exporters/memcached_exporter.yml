@@ -1,3 +1,616 @@
 ---
-prometheus_memcached_exporter_default_port: 9150
-prometheus_memcached_exporter_default_tgroup_jobname: memcached
+software:
+  v0.3.0:
+    commit_sha: e67d9df9d4035c825cbbc023dc32683c5fcf5744
+    files:
+      - name: memcached_exporter-0.3.0.darwin-386.tar.gz
+        sha256: sha256:8432e26c878a8d5fa8fe1af5fb2dcf363b36b55f91e3983bc621edd478e8b794
+        size: 2829537
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.darwin-386.tar.gz
+      - name: memcached_exporter-0.3.0.darwin-amd64.tar.gz
+        sha256: sha256:bc2974a8887cb73dd1999a738beaee772cb70f8da307f1aeb413098321e1ca7e
+        size: 3006317
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.darwin-amd64.tar.gz
+      - name: memcached_exporter-0.3.0.dragonfly-amd64.tar.gz
+        sha256: sha256:e6b70d755ecfd8bb6459fe7c7de5ee30a3ccf256cb6d7bf5e836122159b83b7a
+        size: 2989341
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.dragonfly-amd64.tar.gz
+      - name: memcached_exporter-0.3.0.freebsd-386.tar.gz
+        sha256: sha256:8839bc5b8fcebf198df25657a63da9ac36b17554e5c6d6afd1cdf75433339c09
+        size: 2818660
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.freebsd-386.tar.gz
+      - name: memcached_exporter-0.3.0.freebsd-amd64.tar.gz
+        sha256: sha256:630e1eea336e811baa5941c5baa58a2870abbe3a460e133c06d4ecdc6bc4c907
+        size: 2993793
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.freebsd-amd64.tar.gz
+      - name: memcached_exporter-0.3.0.freebsd-armv5.tar.gz
+        sha256: sha256:0976693f3ca9dbeaac4975da1c1ec2355f7aa865f5a189bd086697c081ecede8
+        size: 2724912
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.freebsd-armv5.tar.gz
+      - name: memcached_exporter-0.3.0.freebsd-armv6.tar.gz
+        sha256: sha256:51e6da5c82e2a43eaa561bd63bd8d0906e02e4b9ede1e29111d41c64f221c3f9
+        size: 2704461
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.freebsd-armv6.tar.gz
+      - name: memcached_exporter-0.3.0.freebsd-armv7.tar.gz
+        sha256: sha256:7b4284ab95b01eb1d1d36559af25ce49b0f18e994866837e2238cdb030b66ca9
+        size: 2702702
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.freebsd-armv7.tar.gz
+      - name: memcached_exporter-0.3.0.linux-386.tar.gz
+        sha256: sha256:e3ac831e81f5b53a6224706acb4077d165320364f9c5299fa1ad88f86d579328
+        size: 2809282
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.linux-386.tar.gz
+      - name: memcached_exporter-0.3.0.linux-amd64.tar.gz
+        sha256: sha256:9ac474ee76c41b73e1c89a3d9226545167274c64cd7c9882943028bed6fd8102
+        size: 2987032
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.linux-amd64.tar.gz
+      - name: memcached_exporter-0.3.0.linux-arm64.tar.gz
+        sha256: sha256:03b1457b347d3bed8ce418651847dda648cc2ec258a6e0cf3a6ab6f42dd6521e
+        size: 2742394
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.linux-arm64.tar.gz
+      - name: memcached_exporter-0.3.0.linux-armv5.tar.gz
+        sha256: sha256:b5e083a953f6c7d97f9d6d1a610113b9c28daf3dbb774dd3102bfb5ffeec2f35
+        size: 2713256
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.linux-armv5.tar.gz
+      - name: memcached_exporter-0.3.0.linux-armv6.tar.gz
+        sha256: sha256:6d64db40b6e458aa23696bad0640a29d32b142b707158c15fdbbad1c342a831b
+        size: 2691779
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.linux-armv6.tar.gz
+      - name: memcached_exporter-0.3.0.linux-armv7.tar.gz
+        sha256: sha256:46764695b13e5865813684522b39b765bc4226d10d61953f8dff26eb92e36907
+        size: 2690939
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.linux-armv7.tar.gz
+      - name: memcached_exporter-0.3.0.linux-mips64.tar.gz
+        sha256: sha256:a17a34244e5152e1e43c3866651fdfd62bf03f943a302c51be29f513c7bfc88a
+        size: 2732895
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.linux-mips64.tar.gz
+      - name: memcached_exporter-0.3.0.linux-mips64le.tar.gz
+        sha256: sha256:d956ccc8dd14af4d1cdbdb042274bb7f2afc017f2d8c72d82aa921eb79195da8
+        size: 2640741
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.linux-mips64le.tar.gz
+      - name: memcached_exporter-0.3.0.linux-ppc64.tar.gz
+        sha256: sha256:5a80f49ee7837bcd3e4502aaae7c1bffb94bce97b659d822367c275ae37a2628
+        size: 2813155
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.linux-ppc64.tar.gz
+      - name: memcached_exporter-0.3.0.linux-ppc64le.tar.gz
+        sha256: sha256:25793f70ee7f2697c67ad8db1ef0b2df3d2ed777639b3f74a78ff43382ef9110
+        size: 2745466
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.linux-ppc64le.tar.gz
+      - name: memcached_exporter-0.3.0.netbsd-386.tar.gz
+        sha256: sha256:560ed0f58b45654547b1290e9cb34c348e7af2f1953d0a018c7f3ad95d51208c
+        size: 2811362
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.netbsd-386.tar.gz
+      - name: memcached_exporter-0.3.0.netbsd-amd64.tar.gz
+        sha256: sha256:9e0db79a886b9e7df0f524afd77aa910fb6037bf33bfd0534138d993dee9ac78
+        size: 2988633
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.netbsd-amd64.tar.gz
+      - name: memcached_exporter-0.3.0.netbsd-armv5.tar.gz
+        sha256: sha256:9c5196c0e63ae82801b03a43e162f4fea2e09cb252dcb2ede5e80e3c7d205a7f
+        size: 2719072
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.netbsd-armv5.tar.gz
+      - name: memcached_exporter-0.3.0.netbsd-armv6.tar.gz
+        sha256: sha256:8334ee9d5b36904e63315f22279aa055bb529a249d2e37fee53121bbe649db7e
+        size: 2699534
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.netbsd-armv6.tar.gz
+      - name: memcached_exporter-0.3.0.netbsd-armv7.tar.gz
+        sha256: sha256:1940cf09d852adaa089d9c7b88e7ccd1610799da379863a06da4574d76748f57
+        size: 2698582
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.netbsd-armv7.tar.gz
+      - name: memcached_exporter-0.3.0.openbsd-386.tar.gz
+        sha256: sha256:556bdb6e6af575065a4f2edd27cec9e2e35729a9f61e79290e56b4d7230f2603
+        size: 2814756
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.openbsd-386.tar.gz
+      - name: memcached_exporter-0.3.0.openbsd-amd64.tar.gz
+        sha256: sha256:e18cde29f3d53ad678c844578264e19aa21dfd199f3d662eb54bfa926df1729f
+        size: 2991922
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.openbsd-amd64.tar.gz
+      - name: memcached_exporter-0.3.0.openbsd-armv5.tar.gz
+        sha256: sha256:47160eefd39b49db12d61d8cef010fb7f90b3643044be1ac4eb97a0c15375ef3
+        size: 2721392
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.openbsd-armv5.tar.gz
+      - name: memcached_exporter-0.3.0.openbsd-armv6.tar.gz
+        sha256: sha256:389ba43b6d51dd80b8aa77511ccb481daef7e72ae0fe388349ef7b8fd4ed717a
+        size: 2701084
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.openbsd-armv6.tar.gz
+      - name: memcached_exporter-0.3.0.openbsd-armv7.tar.gz
+        sha256: sha256:23e41cf0342dc762ac35f8c872f19599f7248b991ef2d185253c0bddb634dff7
+        size: 2698950
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.openbsd-armv7.tar.gz
+      - name: memcached_exporter-0.3.0.windows-386.tar.gz
+        sha256: sha256:ecfdc3556281edc8663037e816bdbfc9ba44a7bb33e29d3e0aa9ed169d9148e3
+        size: 2774216
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.windows-386.tar.gz
+      - name: memcached_exporter-0.3.0.windows-amd64.tar.gz
+        sha256: sha256:6c52ebc1b9e2bd1c0e79645b6865cadbd1f31b2a9e583f44daa053bd50f6c233
+        size: 2954880
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.3.0/memcached_exporter-0.3.0.windows-amd64.tar.gz
+    prerelease: false
+    published:
+      timestamp: 2016-10-15 20:25:50
+  v0.4.0:
+    commit_sha: d60f8d185aafca7edb0ae2b4aa364aad1b482674
+    files:
+      - name: memcached_exporter-0.4.0.darwin-386.tar.gz
+        sha256: sha256:34b592fefd5f47d3bc92ba07819123d5c63b4aacbcc1ac339def1f9e52e977a2
+        size: 3407803
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.darwin-386.tar.gz
+      - name: memcached_exporter-0.4.0.darwin-amd64.tar.gz
+        sha256: sha256:2665dd143e1846a8c8d7d2105ada36e065d9940fc50efa900adf97e2f46384df
+        size: 3620512
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.darwin-amd64.tar.gz
+      - name: memcached_exporter-0.4.0.dragonfly-amd64.tar.gz
+        sha256: sha256:4a1799a8cccea9a192e74a68e3969a524509ace46940ec030233299b9edf50ca
+        size: 3583679
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.dragonfly-amd64.tar.gz
+      - name: memcached_exporter-0.4.0.freebsd-386.tar.gz
+        sha256: sha256:cce4843925be28bead49e56bb672396417eb295ce74b2e4f50b6c32a38b47f2a
+        size: 3376408
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.freebsd-386.tar.gz
+      - name: memcached_exporter-0.4.0.freebsd-amd64.tar.gz
+        sha256: sha256:57d3b2b0f73473ece481e9bf89c6fbf72b25b855bca94ac3109beba86ecf9b5e
+        size: 3586188
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.freebsd-amd64.tar.gz
+      - name: memcached_exporter-0.4.0.freebsd-armv6.tar.gz
+        sha256: sha256:671ac2167c5d5bd6de388b73e4b2e5c240cbda4b239d0a73aa8c6c81a60320d9
+        size: 3293188
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.freebsd-armv6.tar.gz
+      - name: memcached_exporter-0.4.0.freebsd-armv7.tar.gz
+        sha256: sha256:986216d51d3a58903e38533afdd0ec65697029b8460d3f7369a6ca47f50d47fd
+        size: 3289144
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.freebsd-armv7.tar.gz
+      - name: memcached_exporter-0.4.0.linux-386.tar.gz
+        sha256: sha256:b072ab1a4d58157c5fb0b6ae3d71b85036b862f0562a37ea6d9bb9bedd7c4884
+        size: 3366347
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.linux-386.tar.gz
+      - name: memcached_exporter-0.4.0.linux-amd64.tar.gz
+        sha256: sha256:337e01de97bac0bfed5b18afdfd8477adcd21aee2dc80a80d7b490f533cec3bc
+        size: 3578592
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.linux-amd64.tar.gz
+      - name: memcached_exporter-0.4.0.linux-arm64.tar.gz
+        sha256: sha256:be594814abc8c027740cd97f3566c953298548ca1481eb5c258aa1741b95d566
+        size: 3254668
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.linux-arm64.tar.gz
+      - name: memcached_exporter-0.4.0.linux-armv5.tar.gz
+        sha256: sha256:c0455c53f26be19c558e16b8375309e49aa0a6042c551ec96602dc0e3a52a23c
+        size: 3298652
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.linux-armv5.tar.gz
+      - name: memcached_exporter-0.4.0.linux-armv6.tar.gz
+        sha256: sha256:f721af970dbd17983f3f3ec268c947f7fd79e3a857283f6f49710cfe9d20e24c
+        size: 3279487
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.linux-armv6.tar.gz
+      - name: memcached_exporter-0.4.0.linux-armv7.tar.gz
+        sha256: sha256:05943867d43a7f55c043dffbb5400cee207e91dddf27967c61e8051506a31cb3
+        size: 3274363
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.linux-armv7.tar.gz
+      - name: memcached_exporter-0.4.0.linux-mips64.tar.gz
+        sha256: sha256:8b3fce2fea1c5a60738a14c688497b2b9e11847af6cf39005821b232bc80ac62
+        size: 3270980
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.linux-mips64.tar.gz
+      - name: memcached_exporter-0.4.0.linux-mips64le.tar.gz
+        sha256: sha256:a8d720f1b8e8f74880f0decc6acc2cc3e75693983337dafc57942b1d5d281611
+        size: 3167176
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.linux-mips64le.tar.gz
+      - name: memcached_exporter-0.4.0.linux-ppc64.tar.gz
+        sha256: sha256:381524aa2bb503505425d6eeefcccad1560036259de0692e4194546f4514e55b
+        size: 3325046
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.linux-ppc64.tar.gz
+      - name: memcached_exporter-0.4.0.linux-ppc64le.tar.gz
+        sha256: sha256:cf446a368413af51afde1ef964c26f4cdcdfb4d8a456132dd29104b4cd35a54a
+        size: 3247517
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.linux-ppc64le.tar.gz
+      - name: memcached_exporter-0.4.0.netbsd-386.tar.gz
+        sha256: sha256:f3187cf370c50fccedf5259d4ac99aec2f37ebe8ca3c5457419061a4babb1b13
+        size: 3370444
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.netbsd-386.tar.gz
+      - name: memcached_exporter-0.4.0.netbsd-amd64.tar.gz
+        sha256: sha256:94e5e04024bb8d45b5c8f970caae1a2dd58118c7a25352db20bcb1c75c085df9
+        size: 3581143
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.netbsd-amd64.tar.gz
+      - name: memcached_exporter-0.4.0.netbsd-armv6.tar.gz
+        sha256: sha256:19fb4c48363df73d595babab30efde1d2100c8d13e5c8ee86efb00e75e35d18e
+        size: 3287817
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.netbsd-armv6.tar.gz
+      - name: memcached_exporter-0.4.0.netbsd-armv7.tar.gz
+        sha256: sha256:d38b914a18e62aa16fae7973c17b54ef60e53e3b7156391a81fd480e0d3996e9
+        size: 3285343
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.netbsd-armv7.tar.gz
+      - name: memcached_exporter-0.4.0.openbsd-386.tar.gz
+        sha256: sha256:ec3758c938d1a6a73c08ac89a9244812bf86190045f5fcc9162e578bd653c2e8
+        size: 3375173
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.openbsd-386.tar.gz
+      - name: memcached_exporter-0.4.0.openbsd-amd64.tar.gz
+        sha256: sha256:0e0bb7cc498ead79af73b1031391830fc22af17262c4788c19c79fa08b94cd8a
+        size: 3586330
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.openbsd-amd64.tar.gz
+      - name: memcached_exporter-0.4.0.openbsd-armv7.tar.gz
+        sha256: sha256:28238995d358beca43eb1acc5af3762b7dc9c5d84e009fb174ea9bd5dbdcc341
+        size: 3288285
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.openbsd-armv7.tar.gz
+      - name: memcached_exporter-0.4.0.windows-386.tar.gz
+        sha256: sha256:869794d81f42e5f8d6e090627f20c3a5debe96cf97a3a4eb2d796dd23bb7db0c
+        size: 3352641
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.windows-386.tar.gz
+      - name: memcached_exporter-0.4.0.windows-amd64.tar.gz
+        sha256: sha256:e9b16af8fed682c684ff611079ac5cd0c42955295e50c521ef33bf58bddfec5b
+        size: 3569641
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/memcached_exporter-0.4.0.windows-amd64.tar.gz
+      - name: sha256sums.txt
+        sha256: sha256:4680e0a08430a594f680ef70abf5190281d680467abeddafc51e07564ca4a548
+        size: 2882
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.0/sha256sums.txt
+    prerelease: false
+    published:
+      timestamp: 2018-01-23 23:15:09
+  v0.4.1:
+    commit_sha: a0a344923d7795a7916ebc8b6d77c83ed7fd258d
+    files:
+      - name: memcached_exporter-0.4.1.darwin-386.tar.gz
+        sha256: sha256:867095ef3306a09afdcfb3175a79cc8706a0f0d716deb06124fb3b1934976148
+        size: 3408130
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.darwin-386.tar.gz
+      - name: memcached_exporter-0.4.1.darwin-amd64.tar.gz
+        sha256: sha256:79f2f546753d5f7185c41ff82137d1f7894ea98819e8e2b80c16f5e3295af7f3
+        size: 3620877
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.darwin-amd64.tar.gz
+      - name: memcached_exporter-0.4.1.dragonfly-amd64.tar.gz
+        sha256: sha256:a35e826d43238d6b2ccf0a1026d600fce6ab61c418d62fb252a46bd1d01dfee1
+        size: 3583840
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.dragonfly-amd64.tar.gz
+      - name: memcached_exporter-0.4.1.freebsd-386.tar.gz
+        sha256: sha256:67638fc35a7cb7c225dc7b43ba551988ba9142d544388f4664807503074601cf
+        size: 3376504
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.freebsd-386.tar.gz
+      - name: memcached_exporter-0.4.1.freebsd-amd64.tar.gz
+        sha256: sha256:01a49a7030341fdb94b6da6780bb03289fc6d27858e8bcbb1461dc13988e8c33
+        size: 3586423
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.freebsd-amd64.tar.gz
+      - name: memcached_exporter-0.4.1.freebsd-armv6.tar.gz
+        sha256: sha256:d6b5567dbe6955a4654c0ff48d0bacd1b6f029e68e54db9712e80ba4c0270197
+        size: 3293518
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.freebsd-armv6.tar.gz
+      - name: memcached_exporter-0.4.1.freebsd-armv7.tar.gz
+        sha256: sha256:e8b8a5cd4fb6245b8b1092a48049e7597a1fd79207d368bbd71228237b8205c8
+        size: 3289661
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.freebsd-armv7.tar.gz
+      - name: memcached_exporter-0.4.1.linux-386.tar.gz
+        sha256: sha256:5536819600b15c238fb65a25ca12fcd5b0e62447b3655bf519ade5aa8f3c4cb2
+        size: 3366986
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.linux-386.tar.gz
+      - name: memcached_exporter-0.4.1.linux-amd64.tar.gz
+        sha256: sha256:f7f2511efab64de701e9303516ed1595e4e3ad4edea527338de64c8484aca7a6
+        size: 3578260
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.linux-amd64.tar.gz
+      - name: memcached_exporter-0.4.1.linux-arm64.tar.gz
+        sha256: sha256:0fb7b6b03894b60300a0ad2f31415232687ec2af7968ac7dee8a3fa343543c95
+        size: 3254597
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.linux-arm64.tar.gz
+      - name: memcached_exporter-0.4.1.linux-armv5.tar.gz
+        sha256: sha256:c6d5143f29748a5161c4c00805fd2ab94824e0a495a38dfb1768550570e49f22
+        size: 3299225
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.linux-armv5.tar.gz
+      - name: memcached_exporter-0.4.1.linux-armv6.tar.gz
+        sha256: sha256:359390b2f8cfff8c086eac714f5139dd15831a70f9c0c7e6f5106e2be59b8118
+        size: 3279816
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.linux-armv6.tar.gz
+      - name: memcached_exporter-0.4.1.linux-armv7.tar.gz
+        sha256: sha256:3f723df8fc438194589eea879eee545db5d7bafb0fb573be206fe85be6c0c701
+        size: 3274755
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.linux-armv7.tar.gz
+      - name: memcached_exporter-0.4.1.linux-mips64.tar.gz
+        sha256: sha256:c18c486f67dcd7a1714a459474da7960a8abd4cb52c7fac781068a6027d6fed8
+        size: 3272252
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.linux-mips64.tar.gz
+      - name: memcached_exporter-0.4.1.linux-mips64le.tar.gz
+        sha256: sha256:9adafbfe8b6a97dc113adc3edcdc7418701f6778c4a1f12f822afba2612334dc
+        size: 3167724
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.linux-mips64le.tar.gz
+      - name: memcached_exporter-0.4.1.linux-ppc64.tar.gz
+        sha256: sha256:ef60c4c244155ee7c691e66a3ec2d6b19e20ce309fe6b3b2ccb6bc11b023f971
+        size: 3326124
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.linux-ppc64.tar.gz
+      - name: memcached_exporter-0.4.1.linux-ppc64le.tar.gz
+        sha256: sha256:618b6f1f6071910ce80ff82e73df74bae7a4b53ecd53ed445cfc5df4ec6a5ea6
+        size: 3249196
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.linux-ppc64le.tar.gz
+      - name: memcached_exporter-0.4.1.netbsd-386.tar.gz
+        sha256: sha256:f3d5d905f020b5da71f8cea2c1b83dc0093d53c4c9eff918b033e90f769835d7
+        size: 3370857
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.netbsd-386.tar.gz
+      - name: memcached_exporter-0.4.1.netbsd-amd64.tar.gz
+        sha256: sha256:b7c61c22684e3f4a8497dbcee6d543fdbb45aec7498d1d51fc3bfad3f1e68f29
+        size: 3581699
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.netbsd-amd64.tar.gz
+      - name: memcached_exporter-0.4.1.netbsd-armv6.tar.gz
+        sha256: sha256:370753f1b7b24a75b3618d78d28c633010b21e551d45e8a613d780a3137e6afc
+        size: 3288307
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.netbsd-armv6.tar.gz
+      - name: memcached_exporter-0.4.1.netbsd-armv7.tar.gz
+        sha256: sha256:01744359fe3e3dda445e60eb42a8a2effa762ad46a2cdbd6b6dbf92e345927fa
+        size: 3286212
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.netbsd-armv7.tar.gz
+      - name: memcached_exporter-0.4.1.openbsd-386.tar.gz
+        sha256: sha256:98b9156788abc250b4aecbf0e1ef95222798f7de81da9186f9465f33a581c96b
+        size: 3375788
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.openbsd-386.tar.gz
+      - name: memcached_exporter-0.4.1.openbsd-amd64.tar.gz
+        sha256: sha256:8a01dfc0fc24fe0d7b4ec295b876cd8bdaa949725ea76be10ccfdd188e0a4281
+        size: 3586513
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.openbsd-amd64.tar.gz
+      - name: memcached_exporter-0.4.1.openbsd-armv7.tar.gz
+        sha256: sha256:e75855823724ec3c840f5c977ae1c4b0f3b43d0309cf388bd4511eb62807152b
+        size: 3289081
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.openbsd-armv7.tar.gz
+      - name: memcached_exporter-0.4.1.windows-386.tar.gz
+        sha256: sha256:e365d2040dab716fd07d63b11e134e48cd1e21001b23694ee8cdcf30244b2e09
+        size: 3353429
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.windows-386.tar.gz
+      - name: memcached_exporter-0.4.1.windows-amd64.tar.gz
+        sha256: sha256:68596cf36a8a8579de240a6733991092f00b44be4b65d16f9c9d0d35d2a3dd6f
+        size: 3569811
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/memcached_exporter-0.4.1.windows-amd64.tar.gz
+      - name: sha256sums.txt
+        sha256: sha256:57e425be66b711f3c7ae8b4361327a87f329481f34c3790e0df7eb27e1ecdd3d
+        size: 2882
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.4.1/sha256sums.txt
+    prerelease: false
+    published:
+      timestamp: 2018-02-01 14:14:45
+  v0.5.0:
+    commit_sha: 241c664fb58feb61d979bd9e09eb46657bce67f2
+    files:
+      - name: memcached_exporter-0.5.0.darwin-386.tar.gz
+        sha256: sha256:13620579f946ed3cf837977301e64bb660826b1cc20802070720793be6f5797c
+        size: 5647334
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.darwin-386.tar.gz
+      - name: memcached_exporter-0.5.0.darwin-amd64.tar.gz
+        sha256: sha256:e10685cca5ffd8a3a7574b3dc096dc7418f34906abd399f881be06dd38be62cb
+        size: 5801785
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.darwin-amd64.tar.gz
+      - name: memcached_exporter-0.5.0.dragonfly-amd64.tar.gz
+        sha256: sha256:c5750f6985ebad7e950194de1d049f23bdc31e5d9230a6a724e42f5c8ba9d26c
+        size: 5768257
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.dragonfly-amd64.tar.gz
+      - name: memcached_exporter-0.5.0.freebsd-386.tar.gz
+        sha256: sha256:defeecabdfaba118919e32cd0412de7fc5474c3f2bea8f9f5481006ec7a1a0a3
+        size: 5593258
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.freebsd-386.tar.gz
+      - name: memcached_exporter-0.5.0.freebsd-amd64.tar.gz
+        sha256: sha256:8fd53b9aede6b78e0530b159ccd0a437cf2f100da1ddc586681f389d804f5f19
+        size: 5786416
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.freebsd-amd64.tar.gz
+      - name: memcached_exporter-0.5.0.freebsd-armv6.tar.gz
+        sha256: sha256:7606e5a5dd6637bed51c97e1c23c72822d810107efd8d92e117a2b90c0e4fe9e
+        size: 5345047
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.freebsd-armv6.tar.gz
+      - name: memcached_exporter-0.5.0.freebsd-armv7.tar.gz
+        sha256: sha256:81aac146e94039053184794b6b2c6348372fe9b42524738fe4e727f0919832b0
+        size: 5340873
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.freebsd-armv7.tar.gz
+      - name: memcached_exporter-0.5.0.linux-386.tar.gz
+        sha256: sha256:2051bbb779d802f9d1c5712ce1c5492f7e8d8ba15541f693196ed29e3e06c0dd
+        size: 5603411
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.linux-386.tar.gz
+      - name: memcached_exporter-0.5.0.linux-amd64.tar.gz
+        sha256: sha256:bb07f496ceb63dad9793ad4295205547a4bd20b90628476d64fa96c9a25a020f
+        size: 5790075
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.linux-amd64.tar.gz
+      - name: memcached_exporter-0.5.0.linux-arm64.tar.gz
+        sha256: sha256:35e7a9d3588c06975cc9f77783d38832346e70e7842fea4f7152c633676fc43e
+        size: 5356645
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.linux-arm64.tar.gz
+      - name: memcached_exporter-0.5.0.linux-armv5.tar.gz
+        sha256: sha256:605422d464d252f3bf1045ca9c01de878c79b122da9d619beb9fcffcbef9a060
+        size: 5360421
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.linux-armv5.tar.gz
+      - name: memcached_exporter-0.5.0.linux-armv6.tar.gz
+        sha256: sha256:e74429b5f8a710771054d8dc6ee48eb14f57fb9f892836d59c6c763547909031
+        size: 5350447
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.linux-armv6.tar.gz
+      - name: memcached_exporter-0.5.0.linux-armv7.tar.gz
+        sha256: sha256:4994d1e46b2de60b2932dfeb6fb3c14131f9cd5f9e8ff45be698c59f7150ad60
+        size: 5346163
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.linux-armv7.tar.gz
+      - name: memcached_exporter-0.5.0.linux-mips.tar.gz
+        sha256: sha256:22f276d8fb634e8b5a258a32ecd82090dec87470fd3f2a539c322138ddc48876
+        size: 5334740
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.linux-mips.tar.gz
+      - name: memcached_exporter-0.5.0.linux-mips64.tar.gz
+        sha256: sha256:a62783ea544f6509d6b8371b70e169c7dcc8a404421a0f454d6f85c91f706fa1
+        size: 5442565
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.linux-mips64.tar.gz
+      - name: memcached_exporter-0.5.0.linux-mips64le.tar.gz
+        sha256: sha256:d66a5f49b5858889266390007f67f670fef5429fdedb3b20c9c019c3eac8875b
+        size: 5282520
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.linux-mips64le.tar.gz
+      - name: memcached_exporter-0.5.0.linux-mipsle.tar.gz
+        sha256: sha256:557ac498ab84f0292b4b21870e2776f4888c2087ea8592822d561ad87cd99f93
+        size: 5215101
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.linux-mipsle.tar.gz
+      - name: memcached_exporter-0.5.0.linux-ppc64.tar.gz
+        sha256: sha256:a32a3ae0b8ceb1839e43956841780a4dfb965cce1b003d40fdf857e9d47faf04
+        size: 5507957
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.linux-ppc64.tar.gz
+      - name: memcached_exporter-0.5.0.linux-ppc64le.tar.gz
+        sha256: sha256:7fd38a3ca243331f62a82e0d4a792fafce8c1d27132cac288b35a18bd5c10223
+        size: 5364065
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.linux-ppc64le.tar.gz
+      - name: memcached_exporter-0.5.0.linux-s390x.tar.gz
+        sha256: sha256:5be55820e6c2fe9a6a3d8a7fb0a18f15a6e20279f4d17d3fb9cc67e8313367ff
+        size: 5846048
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.linux-s390x.tar.gz
+      - name: memcached_exporter-0.5.0.netbsd-386.tar.gz
+        sha256: sha256:3a747f281ca50159bd48cef461bce44ff127b5cdaf71a0039e1e3e016a960ca2
+        size: 5578886
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.netbsd-386.tar.gz
+      - name: memcached_exporter-0.5.0.netbsd-amd64.tar.gz
+        sha256: sha256:6e120f95b927bba1b8948d8427788b3d746f05525cb43af8d7b48ff9c5358bdd
+        size: 5767365
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.netbsd-amd64.tar.gz
+      - name: memcached_exporter-0.5.0.netbsd-armv6.tar.gz
+        sha256: sha256:3bc9e17b33214e08e8f5e52e3e151f5d11e548962508124676aedc81796c8dab
+        size: 5332945
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.netbsd-armv6.tar.gz
+      - name: memcached_exporter-0.5.0.netbsd-armv7.tar.gz
+        sha256: sha256:caccca4900b72caa3eb1cfbd782657b7080d0603684f5960a39d270ca2603f8e
+        size: 5330044
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.netbsd-armv7.tar.gz
+      - name: memcached_exporter-0.5.0.openbsd-386.tar.gz
+        sha256: sha256:a37deb1a2ef770989721a07f64c0df26d4db3d4c6b7d8875cd324e206bc47acf
+        size: 5577275
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.openbsd-386.tar.gz
+      - name: memcached_exporter-0.5.0.openbsd-amd64.tar.gz
+        sha256: sha256:21db1bffc561d47b4490ccb2cde721244d00e95f504cdcfee618bc4bb877e731
+        size: 5766660
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.openbsd-amd64.tar.gz
+      - name: memcached_exporter-0.5.0.openbsd-armv7.tar.gz
+        sha256: sha256:b8f89a3c366333808f4c9ce9e3e05c8aa4b3eec26e2002700a080153c809181f
+        size: 5327716
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.openbsd-armv7.tar.gz
+      - name: memcached_exporter-0.5.0.windows-386.tar.gz
+        sha256: sha256:7cc10c1e7cd84266c139e5528e89e43496eab060cab38d52acb072fb247c9d33
+        size: 5465202
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.windows-386.tar.gz
+      - name: memcached_exporter-0.5.0.windows-amd64.tar.gz
+        sha256: sha256:9e83c00c9d249c942f65b6a48112e6bd6e28a3d15b8a1d35e935621657b3d837
+        size: 5662963
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.5.0.windows-amd64.tar.gz
+      - name: sha256sums.txt
+        sha256: sha256:ea8f62a2542e1370023343a69be0909d480e1101f302c2a571f5c152808a4a3e
+        size: 3212
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.5.0/sha256sums.txt
+    prerelease: false
+    published:
+      timestamp: 2018-10-17 20:41:04
+  v0.6.0:
+    commit_sha: d7eadc3523ec9731b7865a188093f70140d54a8d
+    files:
+      - name: memcached_exporter-0.6.0.aix-ppc64.tar.gz
+        sha256: sha256:728d391faf5f666529a7d24ecb6b932ae3e0219f0bfc35fef4fdbec24e46ba3c
+        size: 6391974
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.aix-ppc64.tar.gz
+      - name: memcached_exporter-0.6.0.darwin-386.tar.gz
+        sha256: sha256:a7429eeb425d91156b711ce13947f54ac055dc168b359ee20c50eac0cae96e56
+        size: 6414202
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.darwin-386.tar.gz
+      - name: memcached_exporter-0.6.0.darwin-amd64.tar.gz
+        sha256: sha256:5d011e56effd123e04fb15f45005704d00f6568f3750ec8701feb841bbf0b62f
+        size: 6556901
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.darwin-amd64.tar.gz
+      - name: memcached_exporter-0.6.0.dragonfly-amd64.tar.gz
+        sha256: sha256:0bba48c9a79dee9384d5d102c46c1fdbeb1bb603322e614e4fc0a7d04dcc5708
+        size: 6504793
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.dragonfly-amd64.tar.gz
+      - name: memcached_exporter-0.6.0.freebsd-386.tar.gz
+        sha256: sha256:92041c0c438f915cc757502f914c25ab229507c62dac8b16d4e69b318c81f35d
+        size: 6339560
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.freebsd-386.tar.gz
+      - name: memcached_exporter-0.6.0.freebsd-amd64.tar.gz
+        sha256: sha256:7606e534e058c7abf0fa68a33aab29092d616ac27ae35680becbfe5cf1c51703
+        size: 6534797
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.freebsd-amd64.tar.gz
+      - name: memcached_exporter-0.6.0.freebsd-armv6.tar.gz
+        sha256: sha256:7c95cbf0b84730642a189a076b15dcb1018a331cbf3b2698cd042e34fb0f8f38
+        size: 6077071
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.freebsd-armv6.tar.gz
+      - name: memcached_exporter-0.6.0.freebsd-armv7.tar.gz
+        sha256: sha256:6be8d5badddfddce20513e8c6c468dea2935aeca4a9c43f2aec5a201c5c5e455
+        size: 6073718
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.freebsd-armv7.tar.gz
+      - name: memcached_exporter-0.6.0.linux-386.tar.gz
+        sha256: sha256:024a5b2c497b3f228d6438a37d102842b256742bdd30f80003b9c6e67e1379af
+        size: 6346031
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-386.tar.gz
+      - name: memcached_exporter-0.6.0.linux-amd64.tar.gz
+        sha256: sha256:20382d37ca99bbde2661fdbfb43a181f95d68889b761e56b39678e31bb23b64c
+        size: 6531705
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-amd64.tar.gz
+      - name: memcached_exporter-0.6.0.linux-arm64.tar.gz
+        sha256: sha256:1cd5f5f292721b2164e82570cc674779e9c72f4d54914b068fe4e7e6276b0693
+        size: 6096168
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-arm64.tar.gz
+      - name: memcached_exporter-0.6.0.linux-armv5.tar.gz
+        sha256: sha256:ccebf236d4b94c54077ce687e76aa8bb73ef2019f5106330048215abc4526fb2
+        size: 6092288
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-armv5.tar.gz
+      - name: memcached_exporter-0.6.0.linux-armv6.tar.gz
+        sha256: sha256:acd37d964e4d7458a8e1c6b337b163c050831a66fd662c87df5f1ed626908de1
+        size: 6078858
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-armv6.tar.gz
+      - name: memcached_exporter-0.6.0.linux-armv7.tar.gz
+        sha256: sha256:d1e62caeac0fa63e8febd03d685b2ede8c56a5e9f95c8979bd97702a59c8dd6f
+        size: 6075514
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-armv7.tar.gz
+      - name: memcached_exporter-0.6.0.linux-mips.tar.gz
+        sha256: sha256:595109d1871f6f8a52b3b4d2b0bfe55ad62e4162f1d9fbc8a52583536f2beffa
+        size: 6046461
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-mips.tar.gz
+      - name: memcached_exporter-0.6.0.linux-mips64.tar.gz
+        sha256: sha256:84a73aec11752de8e304cd432636ee98453e19a74210d32fc8ca8380369c4ee6
+        size: 6174066
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-mips64.tar.gz
+      - name: memcached_exporter-0.6.0.linux-mips64le.tar.gz
+        sha256: sha256:9044367d4dbc51eb2f987027242afe5534e7e29c865dae14d5bbe72d2fffde15
+        size: 5994404
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-mips64le.tar.gz
+      - name: memcached_exporter-0.6.0.linux-mipsle.tar.gz
+        sha256: sha256:3c4292b7cc7fd053fa3954df20ee2d13c148eb860652595912d5c5e16507ba4d
+        size: 5919348
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-mipsle.tar.gz
+      - name: memcached_exporter-0.6.0.linux-ppc64.tar.gz
+        sha256: sha256:3d75f2f12125f3154aed5069a0b8165a2a5304c87fc103e8956f8de46ff88432
+        size: 6244217
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-ppc64.tar.gz
+      - name: memcached_exporter-0.6.0.linux-ppc64le.tar.gz
+        sha256: sha256:d2636d16b18feb29b1b39da073c6d116d141c6fe92dcf15979a92b27a066bea2
+        size: 6082693
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-ppc64le.tar.gz
+      - name: memcached_exporter-0.6.0.linux-s390x.tar.gz
+        sha256: sha256:3ad97ebdc6a59a57e9baa4d5ab70b314b10a659addc5e99eb4033702b8d59a4d
+        size: 6624672
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-s390x.tar.gz
+      - name: memcached_exporter-0.6.0.netbsd-386.tar.gz
+        sha256: sha256:2b6cb5f9dfe2a26b8a98590a9b6d1de94b95b293f834c9e4321d9bfadfa59c12
+        size: 6316731
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.netbsd-386.tar.gz
+      - name: memcached_exporter-0.6.0.netbsd-amd64.tar.gz
+        sha256: sha256:b2cbbbfc33703040ffcca7b0c1682f2a66765ad330c735edb7ff9030c10b6d2d
+        size: 6505818
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.netbsd-amd64.tar.gz
+      - name: memcached_exporter-0.6.0.netbsd-armv6.tar.gz
+        sha256: sha256:ce21db0d8a9cf5bc2f8d31ec41f519c70a0d07575d790c7583d8e799115aaf91
+        size: 6055502
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.netbsd-armv6.tar.gz
+      - name: memcached_exporter-0.6.0.netbsd-armv7.tar.gz
+        sha256: sha256:b66f583b86a3c9e30a839abd8e1270ef470293e2e022db60e24edaa423ef725d
+        size: 6051135
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.netbsd-armv7.tar.gz
+      - name: memcached_exporter-0.6.0.openbsd-386.tar.gz
+        sha256: sha256:d1c3422f022740477dfaac41830b5e27529f81dd024cb47ba00b53fc11c0a7f8
+        size: 6317311
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.openbsd-386.tar.gz
+      - name: memcached_exporter-0.6.0.openbsd-amd64.tar.gz
+        sha256: sha256:b7718aa7fe90b00d3d9d48a9de2b94c58185d0f7193f362fb9f2e76f3cad36a2
+        size: 6507603
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.openbsd-amd64.tar.gz
+      - name: memcached_exporter-0.6.0.openbsd-armv7.tar.gz
+        sha256: sha256:f6b059f095b6dccdbaa05c3860baa7207278eb0c368d9e09b2ab7b611b534498
+        size: 6053085
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.openbsd-armv7.tar.gz
+      - name: memcached_exporter-0.6.0.windows-386.tar.gz
+        sha256: sha256:39c8af43c41d65d914c878ead0dc91955a2389238c1c2cb0948a669f6c79694e
+        size: 6150406
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.windows-386.tar.gz
+      - name: memcached_exporter-0.6.0.windows-amd64.tar.gz
+        sha256: sha256:39839071e746f35a64f06dd149f6e4ea5e47f2a5e6f38f9b4b0ae5e82afe94f5
+        size: 6352336
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.windows-amd64.tar.gz
+      - name: sha256sums.txt
+        sha256: sha256:891a03ff325ca23dc722d8bf2502b5af49f6f1c04d1adf59b8db91eba32c408c
+        size: 3320
+        url: https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/sha256sums.txt
+    prerelease: false
+    published:
+      timestamp: 2019-08-26 17:10:04
+software_metadata:
+  prerelease: v0.6.0
+  release: v0.6.0
+  updated: 2020-02-22 04:02:43.579106
