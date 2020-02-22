@@ -10,6 +10,17 @@
   when:
     - prometheus_create_textfile_directory is undefined
 
+- name: Ensure required variables are defined and not empty
+  assert:
+    that:
+      - '"name" in prometheus_script_cron_job'
+      - '"script" in prometheus_script_cron_job'
+      - prometheus_script_cron_job.name != ""
+      - prometheus_script_cron_job.script != ""
+  loop_control:
+    loop_var: prometheus_script_cron_job
+  with_items: '{{ prometheus_setup_script_crons }}'
+
 - block:
     - name: Find existing Prometheus cron files prefixed with "prometheus_script" in {{ prometheus_script_cron_directory }}
       become: true
