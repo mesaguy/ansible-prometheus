@@ -21,11 +21,11 @@
     prometheus_software_name: 'smokeping_exporter_superq'
     prometheus_software_version: '{{ prometheus_smokeping_exporter_superq_version | default("0.3.0") }}'
     prometheus_software_src_version: '{{ prometheus_smokeping_exporter_superq_src_version | default("v0.3.0") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_smokeping_exporter_superq_jobname | default(prometheus_smokeping_exporter_superq_default_tgroup_jobname) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_smokeping_exporter_superq_jobname | default("smokeping") }}'
     prometheus_software_description: 'Prometheus smokeping_exporter (superq), exporter for Smokeping metrics'
     prometheus_software_documentation: 'https://github.com/superq/smokeping_exporter'
     prometheus_software_host: '{{ prometheus_smokeping_exporter_superq_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_smokeping_exporter_superq_port | default(prometheus_smokeping_exporter_superq_default_port) }}'
+    prometheus_software_port: '{{ prometheus_smokeping_exporter_superq_port | default(9374) }}'
     prometheus_software_runas: '{{ prometheus_smokeping_exporter_superq_runas | default(prometheus_user) }}'
     prometheus_software_shortname: 'smokeping_exporter'
 

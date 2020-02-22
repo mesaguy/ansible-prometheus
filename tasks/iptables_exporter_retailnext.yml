@@ -21,11 +21,11 @@
     prometheus_software_name: 'iptables_exporter_retailnext'
     prometheus_software_version: '{{ prometheus_iptables_exporter_retailnext_version | default("0.1.0") }}'
     prometheus_software_src_version: '{{ prometheus_iptables_exporter_retailnext_src_version | default("v0.1.0") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_iptables_exporter_retailnext_jobname | default(prometheus_iptables_exporter_retailnext_default_tgroup_jobname) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_iptables_exporter_retailnext_jobname | default("iptables") }}'
     prometheus_software_description: 'Prometheus iptables_exporter (retailnext), exporter for IPTables metrics'
     prometheus_software_documentation: 'https://github.com/retailnext/iptables_exporter'
     prometheus_software_host: '{{ prometheus_iptables_exporter_retailnext_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_iptables_exporter_retailnext_port | default(prometheus_iptables_exporter_retailnext_default_port) }}'
+    prometheus_software_port: '{{ prometheus_iptables_exporter_retailnext_port | default(9455) }}'
     prometheus_software_runas: '{{ prometheus_iptables_exporter_retailnext_runas | default(prometheus_user) }}'
     prometheus_software_shortname: 'iptables_exporter'
 

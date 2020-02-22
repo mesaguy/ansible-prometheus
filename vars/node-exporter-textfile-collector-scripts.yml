@@ -1,99 +1,101 @@
 ---
-metadata:
-  release: master
-  updated: 2020-02-10 05:38:28.554284
 software:
   master:
-    sha: fc91c8601105fc9d7ef07085795980b95a6c88d6
+    commit_sha: fc91c8601105fc9d7ef07085795980b95a6c88d6
     files:
-    - name: apt.sh
-      size: 1026
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/apt.sh
-      sha256: sha256:f74ac194c31d7a25702e9fce34aa36e1fc372e8bc54b231fb5d0bcadcaed593a
-      sha: 13e5246f7f66e48506c12ecccbe41e42724e0fcd
-    - name: btrfs_stats.py
-      size: 3736
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/btrfs_stats.py
-      sha256: sha256:1677b3c8aa99fd84fd626667b4b94fcc506e551288f8fe0316e27ef9d7a3554a
-      sha: 22f65d123378037bc583c3228fcf49d06f3655b7
-    - name: deleted_libraries.py
-      size: 2611
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/deleted_libraries.py
-      sha256: sha256:37d4466bb1e0f773aa0aa1952cae3fc97f8d8519b4657aad1b520ae624cd7a6b
-      sha: 802e06bf03dabaf8f94134553f9e445260eace97
-    - name: directory-size.sh
-      size: 648
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/directory-size.sh
-      sha256: sha256:3311d2a14294787616d1ffbe29eebdb444a651ab6df7c138fea1b8a7a76d21b9
-      sha: 51ceecd510333cd2a75b7a9116b559950a0952a0
-    - name: inotify-instances
-      size: 3502
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/inotify-instances
-      sha256: sha256:d2354d2cfe5c4812eaa6fd94e6b7433a85fd83707bfaea18f06f6c96f7d71329
-      sha: 0141c2aebffbccfb38500b1186472489e86b1a28
-    - name: ipmitool
-      size: 1766
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/ipmitool
-      sha256: sha256:b7f2374ed4d829404bdbfce61cbf7cff3c66b9217062f17b21a3b5f6a8dd76fb
-      sha: a4121880547f48c0f56a5e4b4c24be72ff633ebf
-    - name: md_info.sh
-      size: 2117
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/md_info.sh
-      sha256: sha256:0dcfb6fb5b79f2870801fd2289a7b227f79c5b2113041215ee82473890a0286f
-      sha: 14a7f4779732ad682032cec518ad6591c9879472
-    - name: md_info_detail.sh
-      size: 4294
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/md_info_detail.sh
-      sha256: sha256:ca1764367cdb7954a7741ce5657cbd5002b08a9abde4617da430afee6b46e571
-      sha: 4179450c5636896edf5a29a110115da5db7b4f83
-    - name: mellanox_hca_temp
-      size: 1777
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/mellanox_hca_temp
-      sha256: sha256:ad306bab5b1872d66be066eeeb355a38935bcbf9f3670a80697992e42eabb83f
-      sha: 802e06bf03dabaf8f94134553f9e445260eace97
-    - name: multipathd_info
-      size: 417
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/multipathd_info
-      sha256: sha256:6fd9e997b6443d451e1ee47cb9315a6371d1fe078281f5bfaeb6f91335e81424
-      sha: d2f2b0e95f9a7905a0f2c535555748aa940f6032
-    - name: ntpd_metrics.py
-      size: 3494
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/ntpd_metrics.py
-      sha256: sha256:0088efb3749727f5d68e098cbcb352a713935f128613ba18cb05c46fc0ae6d22
-      sha: 4917aa9bc23a22ec830c7082f4d882227ed5ab59
-    - name: nvme_metrics.sh
-      size: 3616
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/nvme_metrics.sh
-      sha256: sha256:d5d486bc4f326417f8b4abdbc6819c2523e825995cddfdc436a454214270eff0
-      sha: cba5463ba71358f50b676404d3dee2da18ec7810
-    - name: pacman.sh
-      size: 884
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/pacman.sh
-      sha256: sha256:8a5b3c8b0d66380e29ae0ac29ae1617be0d4d26b8809627ca54f9b6a51f15d5a
-      sha: 55c157f06d847a38492df1d08ea16ab00e916447
-    - name: smartmon.py
-      size: 10422
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/smartmon.py
-      sha256: sha256:db344ca2816fda53570b9836906bb694798a1062042ac04602968a56f503223f
-      sha: 4f0a475cc82bf932eb2d9d4bb6cf9180b058f5f0
-    - name: smartmon.sh
-      size: 7693
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/smartmon.sh
-      sha256: sha256:4798f1c4340e65cbdd95f77f123288e3a4e543834c70ef14b7e5793abe7561c8
-      sha: 14e0a74d478c4231ca68320b8878729144caa46a
-    - name: storcli.py
-      size: 10774
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/storcli.py
-      sha256: sha256:39e40c2150df501a7ea6eb945cdca6a22e77b27fb106a9a97543861ee00dc581
-      sha: 2b12f8725d13eea0f8f6f23034c2b18d7cfa7215
-    - name: tw_cli.py
-      size: 14555
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/tw_cli.py
-      sha256: sha256:d7ee66ee7b20baf90ea76aec036fb2e0866ddcd359facfe1f087639d41c1a250
-      sha: 18c3ea40b49b815cc9d8fb667c8c640ab3076e91
-    - name: yum.sh
-      size: 734
-      url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/yum.sh
-      sha256: sha256:ec15318d3beeea5f4eeb4b50e2c7c4ec349f4bf978519056c811412a39dccee4
-      sha: 354acdf76a8befc66bfba43df02e155221891e21
+      - commit_sha: 13e5246f7f66e48506c12ecccbe41e42724e0fcd
+        name: apt.sh
+        sha256: sha256:f74ac194c31d7a25702e9fce34aa36e1fc372e8bc54b231fb5d0bcadcaed593a
+        size: 1026
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/apt.sh
+      - commit_sha: 22f65d123378037bc583c3228fcf49d06f3655b7
+        name: btrfs_stats.py
+        sha256: sha256:1677b3c8aa99fd84fd626667b4b94fcc506e551288f8fe0316e27ef9d7a3554a
+        size: 3736
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/btrfs_stats.py
+      - commit_sha: 802e06bf03dabaf8f94134553f9e445260eace97
+        name: deleted_libraries.py
+        sha256: sha256:37d4466bb1e0f773aa0aa1952cae3fc97f8d8519b4657aad1b520ae624cd7a6b
+        size: 2611
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/deleted_libraries.py
+      - commit_sha: 51ceecd510333cd2a75b7a9116b559950a0952a0
+        name: directory-size.sh
+        sha256: sha256:3311d2a14294787616d1ffbe29eebdb444a651ab6df7c138fea1b8a7a76d21b9
+        size: 648
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/directory-size.sh
+      - commit_sha: 0141c2aebffbccfb38500b1186472489e86b1a28
+        name: inotify-instances
+        sha256: sha256:d2354d2cfe5c4812eaa6fd94e6b7433a85fd83707bfaea18f06f6c96f7d71329
+        size: 3502
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/inotify-instances
+      - commit_sha: a4121880547f48c0f56a5e4b4c24be72ff633ebf
+        name: ipmitool
+        sha256: sha256:b7f2374ed4d829404bdbfce61cbf7cff3c66b9217062f17b21a3b5f6a8dd76fb
+        size: 1766
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/ipmitool
+      - commit_sha: 14a7f4779732ad682032cec518ad6591c9879472
+        name: md_info.sh
+        sha256: sha256:0dcfb6fb5b79f2870801fd2289a7b227f79c5b2113041215ee82473890a0286f
+        size: 2117
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/md_info.sh
+      - commit_sha: 4179450c5636896edf5a29a110115da5db7b4f83
+        name: md_info_detail.sh
+        sha256: sha256:ca1764367cdb7954a7741ce5657cbd5002b08a9abde4617da430afee6b46e571
+        size: 4294
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/md_info_detail.sh
+      - commit_sha: 802e06bf03dabaf8f94134553f9e445260eace97
+        name: mellanox_hca_temp
+        sha256: sha256:ad306bab5b1872d66be066eeeb355a38935bcbf9f3670a80697992e42eabb83f
+        size: 1777
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/mellanox_hca_temp
+      - commit_sha: d2f2b0e95f9a7905a0f2c535555748aa940f6032
+        name: multipathd_info
+        sha256: sha256:6fd9e997b6443d451e1ee47cb9315a6371d1fe078281f5bfaeb6f91335e81424
+        size: 417
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/multipathd_info
+      - commit_sha: 4917aa9bc23a22ec830c7082f4d882227ed5ab59
+        name: ntpd_metrics.py
+        sha256: sha256:0088efb3749727f5d68e098cbcb352a713935f128613ba18cb05c46fc0ae6d22
+        size: 3494
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/ntpd_metrics.py
+      - commit_sha: cba5463ba71358f50b676404d3dee2da18ec7810
+        name: nvme_metrics.sh
+        sha256: sha256:d5d486bc4f326417f8b4abdbc6819c2523e825995cddfdc436a454214270eff0
+        size: 3616
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/nvme_metrics.sh
+      - commit_sha: 55c157f06d847a38492df1d08ea16ab00e916447
+        name: pacman.sh
+        sha256: sha256:8a5b3c8b0d66380e29ae0ac29ae1617be0d4d26b8809627ca54f9b6a51f15d5a
+        size: 884
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/pacman.sh
+      - commit_sha: 4f0a475cc82bf932eb2d9d4bb6cf9180b058f5f0
+        name: smartmon.py
+        sha256: sha256:db344ca2816fda53570b9836906bb694798a1062042ac04602968a56f503223f
+        size: 10422
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/smartmon.py
+      - commit_sha: 14e0a74d478c4231ca68320b8878729144caa46a
+        name: smartmon.sh
+        sha256: sha256:4798f1c4340e65cbdd95f77f123288e3a4e543834c70ef14b7e5793abe7561c8
+        size: 7693
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/smartmon.sh
+      - commit_sha: 2b12f8725d13eea0f8f6f23034c2b18d7cfa7215
+        name: storcli.py
+        sha256: sha256:39e40c2150df501a7ea6eb945cdca6a22e77b27fb106a9a97543861ee00dc581
+        size: 10774
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/storcli.py
+      - commit_sha: 18c3ea40b49b815cc9d8fb667c8c640ab3076e91
+        name: tw_cli.py
+        sha256: sha256:d7ee66ee7b20baf90ea76aec036fb2e0866ddcd359facfe1f087639d41c1a250
+        size: 14555
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/tw_cli.py
+      - commit_sha: 354acdf76a8befc66bfba43df02e155221891e21
+        name: yum.sh
+        sha256: sha256:ec15318d3beeea5f4eeb4b50e2c7c4ec349f4bf978519056c811412a39dccee4
+        size: 734
+        url: https://raw.githubusercontent.com/prometheus-community/node-exporter-textfile-collector-scripts/fc91c8601105fc9d7ef07085795980b95a6c88d6/yum.sh
     prerelease: true
+    published:
+      timestamp: 2020-01-10 09:16:30
+software_metadata:
+  release: master
+  updated: 2020-02-21 09:45:26.475359

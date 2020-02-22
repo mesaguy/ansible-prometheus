@@ -57,11 +57,11 @@
   delegate_to: '{{ prometheus_server_name }}'
   loop_control:
     loop_var: prometheus_server_name
-  with_items: '{{ prometheus_servers|list }}'
+  with_items: '{{ prometheus_servers | list }}'
   when:
     - prometheus_software_server_side_connect_test | bool
     - prometheus_software_instance_port | default(prometheus_software_port, true)
-    - prometheus_servers | list
+    - prometheus_servers is defined and prometheus_servers | list
 
 - block:
     - name: Set {{ prometheus_software_name_version }} tgroup facts
@@ -78,4 +78,4 @@
   when:
     - prometheus_exporter | bool
     - prometheus_manage_client_tgroups | bool
-    - prometheus_servers | list
+    - prometheus_servers is defined and prometheus_servers | list

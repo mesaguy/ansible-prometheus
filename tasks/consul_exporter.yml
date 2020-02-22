@@ -18,11 +18,11 @@
     prometheus_software_name: 'consul_exporter'
     prometheus_software_version: '{{ prometheus_consul_exporter_version | default("0.6.0") }}'
     prometheus_software_src_version: '{{ prometheus_consul_exporter_src_version | default("v0.6.0") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_consul_exporter_jobname | default(prometheus_consul_exporter_default_tgroup_jobname) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_consul_exporter_jobname | default("consul") }}'
     prometheus_software_description: 'Prometheus consul_exporter, exporter of host statistics'
     prometheus_software_documentation: 'https://github.com/prometheus/consul_exporter'
     prometheus_software_host: '{{ prometheus_consul_exporter_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_consul_exporter_port | default(prometheus_consul_exporter_default_port) }}'
+    prometheus_software_port: '{{ prometheus_consul_exporter_port | default(9107) }}'
     prometheus_software_runas: '{{ prometheus_consul_exporter_runas | default(prometheus_user) }}'
 
 - name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts

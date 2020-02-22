@@ -18,11 +18,11 @@
     prometheus_software_name: 'script_exporter_adhocteam'
     prometheus_software_version: '{{ prometheus_script_exporter_adhocteam_version | default("1.0.2") }}'
     prometheus_software_src_version: '{{ prometheus_script_exporter_adhocteam_src_version | default("v1.0.2") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_script_exporter_adhocteam_jobname | default(prometheus_script_exporter_adhocteam_default_tgroup_jobname) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_script_exporter_adhocteam_jobname | default("script") }}'
     prometheus_software_description: 'Prometheus script_exporter (adhocteam), exporter for Script metrics'
     prometheus_software_documentation: 'https://github.com/adhocteam/script_exporter'
     prometheus_software_host: '{{ prometheus_script_exporter_adhocteam_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_script_exporter_adhocteam_port | default(prometheus_script_exporter_adhocteam_default_port) }}'
+    prometheus_software_port: '{{ prometheus_script_exporter_adhocteam_port | default(9172) }}'
     prometheus_software_shortname: 'script_exporter'
     # Defined by prometheus_script_exporter_adhocteam_cfgs:
     prometheus_software_opts: []

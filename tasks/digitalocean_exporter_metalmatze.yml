@@ -19,11 +19,11 @@
     prometheus_software_name: 'digitalocean_exporter_metalmatze'
     prometheus_software_version: '{{ prometheus_digitalocean_exporter_version | default("0.5") }}'
     prometheus_software_src_version: '{{ prometheus_digitalocean_exporter_src_version | default("v0.5") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_digitalocean_exporter_metalmatze_jobname | default(prometheus_digitalocean_exporter_metalmatze_default_tgroup_jobname) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_digitalocean_exporter_metalmatze_jobname | default("digitalocean") }}'
     prometheus_software_description: 'Prometheus digitalocean_exporter, export from arbitrary unstructured log data'
     prometheus_software_documentation: 'https://github.com/metalmatze/digitalocean_exporter'
     prometheus_software_host: '{{ prometheus_digitalocean_exporter_metalmatze_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_digitalocean_exporter_metalmatze_port | default(prometheus_digitalocean_exporter_metalmatze_default_port) }}'
+    prometheus_software_port: '{{ prometheus_digitalocean_exporter_metalmatze_port | default(9212) }}'
     prometheus_software_runas: '{{ prometheus_digitalocean_exporter_metalmatze_runas | default(prometheus_user) }}'
     prometheus_software_shortname: 'digitalocean_exporter'
 

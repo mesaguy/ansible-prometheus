@@ -18,11 +18,11 @@
     prometheus_software_name: 'openldap_exporter_tomcz'
     prometheus_software_version: '{{ prometheus_openldap_exporter_version | default("1.0") }}'
     prometheus_software_src_version: '{{ prometheus_openldap_exporter_src_version | default("v1.0") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_openldap_exporter_tomcz_jobname | default(prometheus_openldap_exporter_tomcz_default_tgroup_jobname) }}'
+    prometheus_software_tgroup_jobname: '{{ prometheus_openldap_exporter_tomcz_jobname | default("openldap") }}'
     prometheus_software_description: 'Prometheus openldap_exporter, OpenLDAP Exporter'
     prometheus_software_documentation: 'https://github.com/tomcz/openldap_exporter'
     prometheus_software_host: '{{ prometheus_openldap_exporter_tomcz_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_openldap_exporter_tomcz_port | default(prometheus_openldap_exporter_tomcz_default_port) }}'
+    prometheus_software_port: '{{ prometheus_openldap_exporter_tomcz_port | default(9330) }}'
     prometheus_software_runas: '{{ prometheus_openldap_exporter_tomcz_runas | default(prometheus_user) }}'
     prometheus_software_shortname: 'openldap_exporter'
 
