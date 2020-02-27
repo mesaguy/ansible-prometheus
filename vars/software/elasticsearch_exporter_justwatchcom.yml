@@ -4,7 +4,8 @@ defaults:
   tgroup: elasticsearch
 software:
   0.3.0:
-    commit_sha: 94394629e0146617302d7616a813adfb79be445d
+    commit:
+      sha: 94394629e0146617302d7616a813adfb79be445d
     files:
       - name: elasticsearch_exporter-0.3.0.darwin-amd64.tar.gz
         sha256: sha256:c63f498b9ed478d7966cc171e790ae3eb5195874cd633a273b03da2831de6b95
@@ -17,8 +18,15 @@ software:
     prerelease: false
     published:
       timestamp: 2016-01-05 15:34:29
+  master:
+    commit:
+      sha: c4c7d2bf2ed55725515dd27df4fd41b6c0b5c33c
+    prerelease: true
+    published:
+      timestamp: 2020-01-28 15:48:29
   v0.1.0:
-    commit_sha: 47cc3b9977c8b18ed060f0fa478318e5b8e5dc41
+    commit:
+      sha: 47cc3b9977c8b18ed060f0fa478318e5b8e5dc41
     files:
       - name: elasticsearch_exporter-0.1.0.darwin-amd64.tar.gz
         sha256: sha256:cdd2e90e89a9a4a7f7f47769a672f109b87676afa2589aac153ec79b76a0d0a5
@@ -32,7 +40,8 @@ software:
     published:
       timestamp: 2015-04-05 18:29:10
   v0.1.1:
-    commit_sha: efb14c91220f2d9ed6e114bc3ad54579b7ae494d
+    commit:
+      sha: efb14c91220f2d9ed6e114bc3ad54579b7ae494d
     files:
       - name: elasticsearch_exporter-0.1.1.darwin-amd64.tar.gz
         sha256: sha256:98862498936721841a4dac89890ca7af03ab1b95d7e893fed86b5e6358025e84
@@ -46,7 +55,8 @@ software:
     published:
       timestamp: 2015-04-24 20:29:25
   v0.2.0:
-    commit_sha: 5d9b67929ea8db80e7a4a641085240bd45e60000
+    commit:
+      sha: 5d9b67929ea8db80e7a4a641085240bd45e60000
     files:
       - name: elasticsearch_exporter-0.2.0.darwin-amd64.tar.gz
         sha256: sha256:2511b106d56c0123d1a6208a9283474224afbd9d68fe5c9c682dc12507d37461
@@ -60,7 +70,8 @@ software:
     published:
       timestamp: 2015-06-17 13:55:03
   v0.2.1:
-    commit_sha: 5cf98724e2e2884155a4ce84f501b65735f2b26e
+    commit:
+      sha: 5cf98724e2e2884155a4ce84f501b65735f2b26e
     files:
       - name: elasticsearch_exporter-0.2.1.darwin-amd64.tar.gz
         sha256: sha256:dbeac70f9ed5105193d65605f0657939e209332da5ac0acf2efa808a41209347
@@ -74,13 +85,15 @@ software:
     published:
       timestamp: 2015-08-28 13:39:10
   v0.3.1:
-    commit_sha: e1f9c87dfdce836b564a1642ab0b45dfeb1618c0
+    commit:
+      sha: e1f9c87dfdce836b564a1642ab0b45dfeb1618c0
     files: []
     prerelease: false
     published:
       timestamp: 2017-05-15 13:55:37
   v0.3.2:
-    commit_sha: 9fbe08720989bf0e8fe274ab24677aaf205bfae3
+    commit:
+      sha: 9fbe08720989bf0e8fe274ab24677aaf205bfae3
     files:
       - name: elasticsearch_exporter-0.3.2.darwin-amd64.tar.gz
         sha256: sha256:17b085a7f75e35664a5dbc7336cb2547ac0992b8528933dd79fff74bc8fb6ea9
@@ -94,7 +107,8 @@ software:
     published:
       timestamp: 2017-06-15 07:29:06
   v0.3.3:
-    commit_sha: 09e4152aaaab938004d800fe66679aaa9ee7fede
+    commit:
+      sha: 09e4152aaaab938004d800fe66679aaa9ee7fede
     files:
       - name: elasticsearch_exporter-0.3.3.linux-amd64.tar.gz
         sha256: sha256:1e19066d027e5ca88bec844418f214b5c0141ae9e8833aa53fcbf83cc59c98de
@@ -104,7 +118,8 @@ software:
     published:
       timestamp: 2017-06-16 07:07:24
   v1.0.0:
-    commit_sha: 62168d19d26b5527d11517aa552cff952553fe1f
+    commit:
+      sha: 62168d19d26b5527d11517aa552cff952553fe1f
     files:
       - name: elasticsearch_exporter-1.0.0.darwin-386.tar.gz
         sha256: sha256:297d857d343bfb93ee1728247dd4209ba7847cd896798fbbaf17537bc818f425
@@ -214,7 +229,8 @@ software:
     published:
       timestamp: 2017-07-03 12:45:30
   v1.0.0-rc1:
-    commit_sha: 63177b8675b7dd2db6eb588ecebdbbcbc960f7cd
+    commit:
+      sha: 63177b8675b7dd2db6eb588ecebdbbcbc960f7cd
     files:
       - name: elasticsearch_exporter-1.0.0-rc1.darwin-386.tar.gz
         sha256: sha256:9956f9b093b47dc1c703b661763fd8aaddbcbc2657d34c6ca17548c09efc7205
@@ -324,7 +340,8 @@ software:
     published:
       timestamp: 2017-06-28 19:51:53
   v1.0.1:
-    commit_sha: 52290a5094462cb7dd34c7aa7d69ce92c843875d
+    commit:
+      sha: 52290a5094462cb7dd34c7aa7d69ce92c843875d
     files:
       - name: elasticsearch_exporter-1.0.1.darwin-386.tar.gz
         sha256: sha256:14dd60bb5337b1ce9a288390db00f699d8bc0876441074d0e3cb790cf3eeb6d8
@@ -434,7 +451,8 @@ software:
     published:
       timestamp: 2017-07-24 10:09:57
   v1.0.2:
-    commit_sha: 92dcbf391cb6250ec4b23c01de47bfe242a259e5
+    commit:
+      sha: 92dcbf391cb6250ec4b23c01de47bfe242a259e5
     files:
       - name: elasticsearch_exporter-1.0.2.darwin-386.tar.gz
         sha256: sha256:5c4fe49b9464148cf20b806012baf4832adce4a46dbcd67d84e0e3f1725713f6
@@ -544,7 +562,8 @@ software:
     published:
       timestamp: 2018-01-09 12:58:46
   v1.0.2rc1:
-    commit_sha: 247da7ffe9774ada748ade4a4a65187139356f60
+    commit:
+      sha: 247da7ffe9774ada748ade4a4a65187139356f60
     files:
       - name: elasticsearch_exporter-1.0.2rc1.darwin-386.tar.gz
         sha256: sha256:54a84f8a51159198cc39a282c180cf5cac98942846963d1cc8a16ec5c4432cad
@@ -650,7 +669,8 @@ software:
     published:
       timestamp: 2017-09-11 13:52:12
   v1.0.2rc2:
-    commit_sha: fb90a0d963207e9703765c94b0976b8e924ba68b
+    commit:
+      sha: fb90a0d963207e9703765c94b0976b8e924ba68b
     files:
       - name: elasticsearch_exporter-1.0.2rc2.darwin-386.tar.gz
         sha256: sha256:88ad4813622384835219a673e1e2ed08befed8d13a98133c80c66176f21c9b2b
@@ -760,7 +780,8 @@ software:
     published:
       timestamp: 2017-10-30 14:20:59
   v1.0.3rc1:
-    commit_sha: 8393cec9a58fcf8c3535f13fd0fac4de6f546d33
+    commit:
+      sha: 8393cec9a58fcf8c3535f13fd0fac4de6f546d33
     files:
       - name: elasticsearch_exporter-1.0.3rc1.darwin-386.tar.gz
         sha256: sha256:bdceffebfde47a6e379cb3d58b63c5eb12d49be618ba3022662479fa3c9a954c
@@ -870,7 +891,8 @@ software:
     published:
       timestamp: 2018-06-01 15:26:46
   v1.0.4rc1:
-    commit_sha: 68340fda9c523444f98c9052b81fff5398bc4338
+    commit:
+      sha: 68340fda9c523444f98c9052b81fff5398bc4338
     files:
       - name: elasticsearch_exporter-1.0.4rc1.darwin-386.tar.gz
         sha256: sha256:7a6156fefb5addeb77ca17a3b98fd34ec0cdfee466339c0e94d1f730eeae12cd
@@ -980,7 +1002,8 @@ software:
     published:
       timestamp: 2018-08-17 13:51:57
   v1.1.0:
-    commit_sha: fe20e499ffdd6053e6153bac15eae494e08931df
+    commit:
+      sha: fe20e499ffdd6053e6153bac15eae494e08931df
     files:
       - name: elasticsearch_exporter-1.1.0.darwin-386.tar.gz
         sha256: sha256:491ef0353954d7e397675c5d23857b03ed4f6dabf8730a4f53246293fa736397
@@ -1094,7 +1117,8 @@ software:
     published:
       timestamp: 2019-08-07 12:58:46
   v1.1.0rc1:
-    commit_sha: c0ec04290d212fb7dc05817433928679686af348
+    commit:
+      sha: c0ec04290d212fb7dc05817433928679686af348
     files:
       - name: elasticsearch_exporter-1.1.0rc1.darwin-386.tar.gz
         sha256: sha256:ee4a36105b6ee06c1d0fbef2ec10260e8f7e8a92515c8adc4f240405594b61c3
@@ -1204,6 +1228,6 @@ software:
     published:
       timestamp: 2019-02-27 12:38:29
 software_metadata:
-  prerelease: v1.1.0
+  prerelease: v1.1.0rc1
   release: v1.1.0
-  updated: 2020-02-22 04:01:19.130396
+  updated: 2020-02-27 06:47:23.525023

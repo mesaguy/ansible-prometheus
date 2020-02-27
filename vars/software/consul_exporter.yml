@@ -4,7 +4,8 @@ defaults:
   tgroup: consul
 software:
   0.1.0:
-    commit_sha: 8870304fb9a06e8489700f8af1796b8d5eaaad43
+    commit:
+      sha: 8870304fb9a06e8489700f8af1796b8d5eaaad43
     files:
       - name: consul_exporter-0.1.0.darwin-amd64.tar.gz
         sha256: sha256:856d8a6acd04cf13dbc2172388173ba513786019acfd9f7c24bfb515ea4f8b84
@@ -26,7 +27,8 @@ software:
     published:
       timestamp: 2015-05-01 15:22:49
   0.2.0:
-    commit_sha: 6fe32bcde519ddb8a8c5d313dd5b5dc64b651f4b
+    commit:
+      sha: 6fe32bcde519ddb8a8c5d313dd5b5dc64b651f4b
     files:
       - name: consul_exporter-0.2.0.darwin-amd64.tar.gz
         sha256: sha256:d882caa68d8153068958271031f7a6201488444e168dbf6790c358cbd610ec34
@@ -39,8 +41,15 @@ software:
     prerelease: false
     published:
       timestamp: 2015-06-17 16:42:04
+  master:
+    commit:
+      sha: dd537401a080fbcaca57a5c7ef1c15f291c98e2c
+    prerelease: true
+    published:
+      timestamp: 2020-02-25 08:50:37
   v0.3.0:
-    commit_sha: 5f439584f4c4369186fec234d18eb071ec76fdde
+    commit:
+      sha: 5f439584f4c4369186fec234d18eb071ec76fdde
     files:
       - name: consul_exporter-0.3.0.darwin-386.tar.gz
         sha256: sha256:7cd457e345fc284ad7925b1705275fb623ec75ad94381303f512dd11d496e954
@@ -166,7 +175,8 @@ software:
     published:
       timestamp: 2017-03-02 02:07:09
   v0.4.0:
-    commit_sha: 75f02d80bbe2191cd0af297bbf200a81cbe7aeb0
+    commit:
+      sha: 75f02d80bbe2191cd0af297bbf200a81cbe7aeb0
     files:
       - name: consul_exporter-0.4.0.darwin-386.tar.gz
         sha256: sha256:dc1fa7f621d9116ed7b5b9778993e9266af9fb46d2be45383ded384460d0fafd
@@ -280,7 +290,8 @@ software:
     published:
       timestamp: 2018-08-10 11:05:25
   v0.5.0:
-    commit_sha: a5d31c1c45981b73066d86e8be3bc698db03fad5
+    commit:
+      sha: a5d31c1c45981b73066d86e8be3bc698db03fad5
     files:
       - name: consul_exporter-0.5.0.aix-ppc64.tar.gz
         sha256: sha256:622f0c7cd59b97d0f9acb9bacceed5e8bd0c3aacf329de3d7195eae3799d0887
@@ -410,7 +421,8 @@ software:
     published:
       timestamp: 2019-07-18 07:31:31
   v0.6.0:
-    commit_sha: 79bc2cc7095de15a843a538a8edc3f1f254c2848
+    commit:
+      sha: 79bc2cc7095de15a843a538a8edc3f1f254c2848
     files:
       - name: consul_exporter-0.6.0.aix-ppc64.tar.gz
         sha256: sha256:b4a83ba4e68f3c811ff6c57cdcdbe0da5eeb342950308e3674916abad3c4a772
@@ -540,6 +552,6 @@ software:
     published:
       timestamp: 2019-12-16 16:26:53
 software_metadata:
-  prerelease: v0.6.0
+  prerelease: master
   release: v0.6.0
-  updated: 2020-02-22 03:59:38.937873
+  updated: 2020-02-27 06:46:02.802609

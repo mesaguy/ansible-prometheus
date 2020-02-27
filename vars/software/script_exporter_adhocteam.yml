@@ -3,8 +3,15 @@ defaults:
   port: 9172
   tgroup: script
 software:
+  master:
+    commit:
+      sha: 1feeb12699dea9a5a5dc85f3697156227345d034
+    prerelease: true
+    published:
+      timestamp: 2019-10-11 16:34:25
   v0.0.1:
-    commit_sha: f03116a5cac1904d4fb4e8a730572c45b3967ea6
+    commit:
+      sha: f03116a5cac1904d4fb4e8a730572c45b3967ea6
     files:
       - name: script_exporter-0.0.1.linux-amd64.tar.gz
         sha256: sha256:d0878b3ccadc431eedfcc5728ae1317dd788184224a3e80d8493ee42d4a08369
@@ -14,7 +21,8 @@ software:
     published:
       timestamp: 2016-11-16 19:06:31
   v1.0.1:
-    commit_sha: 9fbd7ac9f13eddfaa52b5d4075cda80dbfa812f1
+    commit:
+      sha: 9fbd7ac9f13eddfaa52b5d4075cda80dbfa812f1
     files:
       - name: script_exporter-1.0.1.linux-amd64.tar.gz
         sha256: sha256:af7b6306f058c572656d2e933ddc424ab25ae7b8f9408b2de81e101deb21f758
@@ -24,7 +32,8 @@ software:
     published:
       timestamp: 2016-12-28 19:52:11
   v1.0.2:
-    commit_sha: 3ee25c0d791e7769dc1a561f9d295bc7505fdd28
+    commit:
+      sha: 3ee25c0d791e7769dc1a561f9d295bc7505fdd28
     files:
       - name: script_exporter-1.0.2.linux-amd64.tar.gz
         sha256: sha256:6837b4f89a4da3eea7f045e03670e36872520ad8d33b37c71a2480dd690ed881
@@ -34,7 +43,8 @@ software:
     published:
       timestamp: 2017-01-09 17:05:41
   v1.1.0:
-    commit_sha: 1feeb12699dea9a5a5dc85f3697156227345d034
+    commit:
+      sha: 1feeb12699dea9a5a5dc85f3697156227345d034
     files:
       - name: script_exporter-1.1.0.linux-amd64.tar.gz
         sha256: sha256:c729629af0f442a0c91fc087a4e6cd83b95ae13803ccb47f68be4cb6c253a678
@@ -44,6 +54,6 @@ software:
     published:
       timestamp: 2019-10-11 16:43:28
 software_metadata:
-  prerelease: v1.1.0
+  prerelease: master
   release: v1.1.0
-  updated: 2020-02-21 08:32:08.162748
+  updated: 2020-02-27 06:18:28.949908

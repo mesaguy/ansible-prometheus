@@ -4,7 +4,8 @@ defaults:
   tgroup: blackbox
 software:
   0.1.0:
-    commit_sha: 1846c8f3f44770bc14dfe9272f6ab207c11c1f87
+    commit:
+      sha: 1846c8f3f44770bc14dfe9272f6ab207c11c1f87
     files:
       - name: blackbox_exporter-0.1.0.darwin-amd64.tar.gz
         sha256: sha256:c0fd4b66616f23cb2e5fa0e30eaa23547ed60c9e1b3ac2c302ecbe29f0b3a5d5
@@ -25,8 +26,15 @@ software:
     prerelease: false
     published:
       timestamp: 2016-04-08 09:12:53
+  master:
+    commit:
+      sha: 364d593315a784781e8df19b7dccd2b6c7ac1190
+    prerelease: true
+    published:
+      timestamp: 2020-02-25 09:13:01
   v0.10.0:
-    commit_sha: 75681e3c4f051e24269a132e8ec19517118e1586
+    commit:
+      sha: 75681e3c4f051e24269a132e8ec19517118e1586
     files:
       - name: blackbox_exporter-0.10.0.darwin-386.tar.gz
         sha256: sha256:57387023c4fede06c8aba63df55f1deddff0c98eae08efdf8b24f74519aaab75
@@ -132,7 +140,8 @@ software:
     published:
       timestamp: 2017-10-09 15:05:29
   v0.11.0:
-    commit_sha: 200181ba84e595570eeed8cb1848491d3d4f85f0
+    commit:
+      sha: 200181ba84e595570eeed8cb1848491d3d4f85f0
     files:
       - name: blackbox_exporter-0.11.0.darwin-386.tar.gz
         sha256: sha256:d42809ecfb1bc6802b30699aa5302b74cf77a74a23e6a081be2140b2200e06d7
@@ -238,7 +247,8 @@ software:
     published:
       timestamp: 2017-11-28 14:00:03
   v0.12.0:
-    commit_sha: 4a22506cf0cf139d9b2f9cde099f0012d9fcabde
+    commit:
+      sha: 4a22506cf0cf139d9b2f9cde099f0012d9fcabde
     files:
       - name: blackbox_exporter-0.12.0.darwin-386.tar.gz
         sha256: sha256:9579e5f42fe1430a7644c57e28605234e886d44f720504605ca462ffe1286194
@@ -344,7 +354,8 @@ software:
     published:
       timestamp: 2018-02-27 12:35:20
   v0.13.0:
-    commit_sha: 1cfb7512daa7e100abb32037996c8f805990d813
+    commit:
+      sha: 1cfb7512daa7e100abb32037996c8f805990d813
     files:
       - name: blackbox_exporter-0.13.0.darwin-386.tar.gz
         sha256: sha256:c64fa266d54c2b150e2fc167dfed3d9dfd58977f5beceb8aa43de5988ffd6cdb
@@ -450,7 +461,8 @@ software:
     published:
       timestamp: 2018-12-04 15:20:50
   v0.14.0:
-    commit_sha: bba7ef76193948a333a5868a1ab38b864f7d968a
+    commit:
+      sha: bba7ef76193948a333a5868a1ab38b864f7d968a
     files:
       - name: blackbox_exporter-0.14.0.darwin-386.tar.gz
         sha256: sha256:3a3a04f3c3c2b870e041503de9b92f8b066b0e73571878a88b74b250bf566859
@@ -556,7 +568,8 @@ software:
     published:
       timestamp: 2019-03-15 13:49:41
   v0.15.0:
-    commit_sha: 3f726a8a4489ea84a7163e37ba337f9b8332da63
+    commit:
+      sha: 3f726a8a4489ea84a7163e37ba337f9b8332da63
     files:
       - name: blackbox_exporter-0.15.0.darwin-386.tar.gz
         sha256: sha256:c36ce9ac158ffaf82c335331e83662534f90c1a27bdcacd1cd1fff1a345752a5
@@ -662,7 +675,8 @@ software:
     published:
       timestamp: 2019-09-11 13:09:12
   v0.15.1:
-    commit_sha: 7dd86a593b5a2270e738be1654d9c112509e46ce
+    commit:
+      sha: 7dd86a593b5a2270e738be1654d9c112509e46ce
     files:
       - name: blackbox_exporter-0.15.1.darwin-386.tar.gz
         sha256: sha256:b63b4d8f0bacc5ec587cd95e539992d20c647c0a609ab8bb9b48a056a76f2036
@@ -768,7 +782,8 @@ software:
     published:
       timestamp: 2019-09-17 12:52:04
   v0.16.0:
-    commit_sha: 991f89846ae10db22a3933356a7d196642fcb9a9
+    commit:
+      sha: 991f89846ae10db22a3933356a7d196642fcb9a9
     files:
       - name: blackbox_exporter-0.16.0.darwin-386.tar.gz
         sha256: sha256:fe79227a6d8e65dd4ee72a07b73db08ba3ded3b7a1d87cabb335a6c0a6c486c0
@@ -874,7 +889,8 @@ software:
     published:
       timestamp: 2019-11-11 18:16:56
   v0.2.0:
-    commit_sha: 242bf8bb3904eb7eeecedf696fad9c2058db8705
+    commit:
+      sha: 242bf8bb3904eb7eeecedf696fad9c2058db8705
     files:
       - name: blackbox_exporter-0.2.0.darwin-386.tar.gz
         sha256: sha256:5394fa9bb9089124b1c816a0962c455d31eed9a45f4f7b33d11699e00cf1aa75
@@ -1000,7 +1016,8 @@ software:
     published:
       timestamp: 2016-07-16 15:34:24
   v0.3.0:
-    commit_sha: 43cfa9854e595993b64925c8a5b5f39086b03dae
+    commit:
+      sha: 43cfa9854e595993b64925c8a5b5f39086b03dae
     files:
       - name: blackbox_exporter-0.3.0.darwin-386.tar.gz
         sha256: sha256:25bcfe9058ad2a1edbbff60e741d7afd56377d7f86f77ed6776041c64723cadc
@@ -1126,7 +1143,8 @@ software:
     published:
       timestamp: 2016-11-07 12:38:19
   v0.4.0:
-    commit_sha: be7a4226ed32a6407d7895ee5a0bd892f0f34692
+    commit:
+      sha: be7a4226ed32a6407d7895ee5a0bd892f0f34692
     files:
       - name: blackbox_exporter-0.4.0.darwin-386.tar.gz
         sha256: sha256:22fa760dda1220adde073efa7eecf33f30c1ae9681e3fa5927a52447cced26c1
@@ -1252,7 +1270,8 @@ software:
     published:
       timestamp: 2017-01-12 15:22:15
   v0.5.0:
-    commit_sha: e4fab5faaabcd1713a8af9a69ea2cc5800881e8c
+    commit:
+      sha: e4fab5faaabcd1713a8af9a69ea2cc5800881e8c
     files:
       - name: blackbox_exporter-0.5.0.darwin-386.tar.gz
         sha256: sha256:4ace67df1438314fde650a8c6555b76a62b78e7b24ce3400402f548206f0b783
@@ -1382,7 +1401,8 @@ software:
     published:
       timestamp: 2017-05-03 11:01:19
   v0.6.0:
-    commit_sha: 2ad6730bfa616b840029836c8dc16b14b4fda98e
+    commit:
+      sha: 2ad6730bfa616b840029836c8dc16b14b4fda98e
     files:
       - name: blackbox_exporter-0.6.0.darwin-386.tar.gz
         sha256: sha256:fc99ec30a307b6537ba8e9e997c9c30f379604b47bfb24418c27162842e241c4
@@ -1496,7 +1516,8 @@ software:
     published:
       timestamp: 2017-07-04 10:43:27
   v0.7.0:
-    commit_sha: 9b67dd9b488160bb656cf130718b2aa62a7f30e6
+    commit:
+      sha: 9b67dd9b488160bb656cf130718b2aa62a7f30e6
     files:
       - name: blackbox_exporter-0.7.0.darwin-386.tar.gz
         sha256: sha256:f291402098a3434bcc69a0788084a91f04b4ca86b529a8c9f236417f8cc79a6e
@@ -1610,7 +1631,8 @@ software:
     published:
       timestamp: 2017-07-17 17:23:29
   v0.8.0:
-    commit_sha: 6a3dfec5de88641dc19f199dcbeb53f62f4a3e98
+    commit:
+      sha: 6a3dfec5de88641dc19f199dcbeb53f62f4a3e98
     files:
       - name: blackbox_exporter-0.8.0.darwin-386.tar.gz
         sha256: sha256:55b88c0bc3202f57bc4f7b863dd6dc4d50443e091b4072033467f44137777aa9
@@ -1724,7 +1746,8 @@ software:
     published:
       timestamp: 2017-08-08 13:38:46
   v0.8.1:
-    commit_sha: 9741061ec748fa75990c54eb8b8bbce9c63bdc7c
+    commit:
+      sha: 9741061ec748fa75990c54eb8b8bbce9c63bdc7c
     files:
       - name: blackbox_exporter-0.8.1.darwin-386.tar.gz
         sha256: sha256:71d367c4551623951c44236eefca899733eddde94623ac4a1bc43a9cbf9d962a
@@ -1838,7 +1861,8 @@ software:
     published:
       timestamp: 2017-08-08 13:55:26
   v0.9.0:
-    commit_sha: 97d988e82930a5f034a8e3077eee7b2151462162
+    commit:
+      sha: 97d988e82930a5f034a8e3077eee7b2151462162
     files:
       - name: blackbox_exporter-0.9.0.darwin-386.tar.gz
         sha256: sha256:c90800c5a274a9cf4b7b154e90bd9a962c08af82c493f7c15d6504139ed76514
@@ -1944,7 +1968,8 @@ software:
     published:
       timestamp: 2017-09-21 13:22:41
   v0.9.1:
-    commit_sha: 2272b4e637a591168d5b24a3943e15ac15ecba80
+    commit:
+      sha: 2272b4e637a591168d5b24a3943e15ac15ecba80
     files:
       - name: blackbox_exporter-0.9.1.darwin-386.tar.gz
         sha256: sha256:14b29a1e1af2241d95c0ebb32f2c98cf66112d219695ac3c5bf5a9a60b196016
@@ -2050,6 +2075,6 @@ software:
     published:
       timestamp: 2017-09-21 13:34:18
 software_metadata:
-  prerelease: v0.16.0
+  prerelease: master
   release: v0.16.0
-  updated: 2020-02-21 07:08:23.437993
+  updated: 2020-02-27 06:12:44.550885

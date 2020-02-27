@@ -3,18 +3,15 @@ defaults:
   port: 9187
   tgroup: postgres
 software:
-  v0.0.1:
-    commit_sha: 86caf395f61c03c83057b33e4aab3c960c7c42ca
-    files:
-      - name: postgres_exporter
-        sha256: sha256:fa692a47e22b67402a0720e785955ed4d15bf68fd13131bd2d7325e51f876f9b
-        size: 10936128
-        url: https://github.com/wrouesnel/postgres_exporter/releases/download/v0.0.1/postgres_exporter
-    prerelease: false
+  master:
+    commit:
+      sha: 3ecfd46549fa19006dd2399f79349cdf5a653ec8
+    prerelease: true
     published:
-      timestamp: 2016-06-03 13:19:35
+      timestamp: 2020-02-25 13:49:30
   v0.1.0:
-    commit_sha: 76e1d112d3a8ef9e4829558484ae2c42ed33a5d5
+    commit:
+      sha: 76e1d112d3a8ef9e4829558484ae2c42ed33a5d5
     files:
       - name: postgres_exporter
         sha256: sha256:431ea9807c74470bf9e1896ba402ac8710aa6f5dcdce22acc59f63b28ec2d1d4
@@ -24,7 +21,8 @@ software:
     published:
       timestamp: 2016-11-17 17:06:34
   v0.1.1:
-    commit_sha: 3ead0f9aff77e748f30ff3941b987ce0359a2037
+    commit:
+      sha: 3ead0f9aff77e748f30ff3941b987ce0359a2037
     files:
       - name: postgres_exporter
         sha256: sha256:7e058280eb58261c2d10ce473071a82f87024796fc951cb9c4b493f93077d717
@@ -34,7 +32,8 @@ software:
     published:
       timestamp: 2016-11-28 15:39:07
   v0.1.2:
-    commit_sha: 2a29d083a2053b88070cdc6a0a2029124c3bad2d
+    commit:
+      sha: 2a29d083a2053b88070cdc6a0a2029124c3bad2d
     files:
       - name: postgres_exporter
         sha256: sha256:42a47dd3a9ca8720adf1164f4c7f5707ff057e12ceccd3cff46ed634515662c2
@@ -44,7 +43,8 @@ software:
     published:
       timestamp: 2017-02-07 10:29:11
   v0.2.0:
-    commit_sha: c4f701e817e3d6ea49bcabfd1a7effb8d0f4bea8
+    commit:
+      sha: c4f701e817e3d6ea49bcabfd1a7effb8d0f4bea8
     files:
       - name: postgres_exporter
         sha256: sha256:93a8af893bda58966e6f9e7df47e2b67500c6b83ba94a3936ebfe65f0c213db6
@@ -54,7 +54,8 @@ software:
     published:
       timestamp: 2017-04-18 13:35:34
   v0.2.1:
-    commit_sha: 3b9a68897f7b7511cf1a6ebb88deae41fa78746d
+    commit:
+      sha: 3b9a68897f7b7511cf1a6ebb88deae41fa78746d
     files:
       - name: postgres_exporter
         sha256: sha256:4bf310dd23e8291b5f652b51d3d3966454705a367c4a5105884c3f1581300439
@@ -64,7 +65,8 @@ software:
     published:
       timestamp: 2017-06-06 15:02:01
   v0.2.2:
-    commit_sha: 17592ee8e9941b17641d72d86af4a277091bfa99
+    commit:
+      sha: 17592ee8e9941b17641d72d86af4a277091bfa99
     files:
       - name: postgres_exporter
         sha256: sha256:1e2ead2dd89c1c7021a697da9426b20f3e03b956a06ddbc1f61a0d345ad8929a
@@ -74,7 +76,8 @@ software:
     published:
       timestamp: 2017-08-03 16:39:47
   v0.2.3:
-    commit_sha: 573832b600db7ece703a62746776027514babc57
+    commit:
+      sha: 573832b600db7ece703a62746776027514babc57
     files:
       - name: postgres_exporter
         sha256: sha256:5d8db8052442b92caa7b34fa76d52942e5c2ced673ff37fd2e1e1486b3ed07f6
@@ -84,7 +87,8 @@ software:
     published:
       timestamp: 2017-09-07 14:50:45
   v0.3.0:
-    commit_sha: 5c04bc04631081d94ba61c7387863840ce901a30
+    commit:
+      sha: 5c04bc04631081d94ba61c7387863840ce901a30
     files:
       - name: postgres_exporter
         sha256: sha256:44654860e3122acf183e8cad504bddc3bf9dd717910cddc99b589a3463d2ec6f
@@ -94,7 +98,8 @@ software:
     published:
       timestamp: 2017-10-23 10:54:23
   v0.4.0:
-    commit_sha: f4bf817f2583c9ff7a340e3f56d47ea4abcbaad2
+    commit:
+      sha: f4bf817f2583c9ff7a340e3f56d47ea4abcbaad2
     files:
       - name: postgres_exporter
         sha256: sha256:139362ab2fef84b7e23bec01c90e664aabd4bb8a8371a6a08178827eaadd7ba1
@@ -104,7 +109,8 @@ software:
     published:
       timestamp: 2017-11-29 12:28:01
   v0.4.1:
-    commit_sha: 5b9fea01eedf423a781fc82113ca9b42e09c50d4
+    commit:
+      sha: 5b9fea01eedf423a781fc82113ca9b42e09c50d4
     files:
       - name: postgres_exporter_v0.4.1_darwin-386.tar.gz
         sha256: sha256:2f62a185ee1a74d6a41fd16e3643bcada16b16ded8627eca435cb3dcc218e706
@@ -134,7 +140,8 @@ software:
     published:
       timestamp: 2017-11-30 03:49:34
   v0.4.2:
-    commit_sha: a52beb60cbf578601d747f27370130006ffec3bd
+    commit:
+      sha: a52beb60cbf578601d747f27370130006ffec3bd
     files:
       - name: postgres_exporter_v0.4.2_darwin-386.tar.gz
         sha256: sha256:e148fd127532446754726f17dfd2da0f07aef781fa635aa99e8750d891be4e32
@@ -164,7 +171,8 @@ software:
     published:
       timestamp: 2018-02-19 12:59:25
   v0.4.4:
-    commit_sha: 4df26a0922a554e466599ce560139fe234b9109c
+    commit:
+      sha: 4df26a0922a554e466599ce560139fe234b9109c
     files:
       - name: postgres_exporter_v0.4.4_darwin-386.tar.gz
         sha256: sha256:5d21769845d153c1b7a1ea7b9c5ab4d06f0e8fa36dc62c8ed0c87ba891425b6c
@@ -202,7 +210,8 @@ software:
     published:
       timestamp: 2018-03-20 13:40:24
   v0.4.5:
-    commit_sha: f00c4b7b87daad0196b4ea4ed28170e91d522717
+    commit:
+      sha: f00c4b7b87daad0196b4ea4ed28170e91d522717
     files:
       - name: postgres_exporter_v0.4.5_darwin-386.tar.gz
         sha256: sha256:a1e28e74c30182ef127614eb575ab6ea6f270138fdd2e952a4feb1d3e3513d8a
@@ -240,7 +249,8 @@ software:
     published:
       timestamp: 2018-03-20 13:41:17
   v0.4.6:
-    commit_sha: 2db74865b1ec8758cc798835cc109ac0f5c98dfc
+    commit:
+      sha: 2db74865b1ec8758cc798835cc109ac0f5c98dfc
     files:
       - name: postgres_exporter_v0.4.6_darwin-386.tar.gz
         sha256: sha256:f17a48e0164e95ab989ee2053e8bc6e7a6bdcf8ae0c6a89270013330557b530f
@@ -278,7 +288,8 @@ software:
     published:
       timestamp: 2018-04-16 12:49:05
   v0.4.7:
-    commit_sha: 844076cd6d47e38525f23f0035535a45cf07e318
+    commit:
+      sha: 844076cd6d47e38525f23f0035535a45cf07e318
     files:
       - name: postgres_exporter_v0.4.7_darwin-386.tar.gz
         sha256: sha256:db1bb0482c28838b1fd55cbe306bd280397e31f99a048c520075cf0a00a73be8
@@ -320,7 +331,8 @@ software:
     published:
       timestamp: 2018-11-11 03:03:09
   v0.5.0:
-    commit_sha: 0d7891de1a439f518b514237fcb7c1137c521004
+    commit:
+      sha: 0d7891de1a439f518b514237fcb7c1137c521004
     files:
       - name: postgres_exporter_v0.5.0_darwin-386.tar.gz
         sha256: sha256:8a3f9c16f8cfe06d186f8ebeaf198811e066e90a45dc543c3ac2a3a42bd2b408
@@ -362,7 +374,8 @@ software:
     published:
       timestamp: 2019-07-03 14:06:17
   v0.5.1:
-    commit_sha: 5f3a711ebda1ad44c3f776bef5d1efb26a5ac0b6
+    commit:
+      sha: 5f3a711ebda1ad44c3f776bef5d1efb26a5ac0b6
     files:
       - name: postgres_exporter_v0.5.1_darwin-386.tar.gz
         sha256: sha256:18fb14e03b2c20dc9eada817903fbcc1033bbd7e225f4cf4f5c84a1e01ba09cf
@@ -404,7 +417,8 @@ software:
     published:
       timestamp: 2019-07-12 01:33:17
   v0.6.0:
-    commit_sha: 27d5c9926d8942ce497040a46cdad4c4ded51597
+    commit:
+      sha: 27d5c9926d8942ce497040a46cdad4c4ded51597
     files:
       - name: postgres_exporter_v0.6.0_darwin-386.tar.gz
         sha256: sha256:6a22b68633d6fc94dbf495bad51c91c2bb27567c442267768e40ad19a6b5f10b
@@ -446,7 +460,8 @@ software:
     published:
       timestamp: 2019-10-30 14:55:20
   v0.7.0:
-    commit_sha: bb0870c5629bdeb1f54a061680e02d15afd01db3
+    commit:
+      sha: bb0870c5629bdeb1f54a061680e02d15afd01db3
     files:
       - name: postgres_exporter_v0.7.0_darwin-386.tar.gz
         sha256: sha256:8af2f7fe09de6b807b7e5faeea0091823fd323bcad36d16e2b80121e5bd3cfd0
@@ -488,7 +503,8 @@ software:
     published:
       timestamp: 2019-10-31 14:08:11
   v0.8.0:
-    commit_sha: aeec47ead4ad3941cf1b6588b1ac5a44ca9e9c4b
+    commit:
+      sha: aeec47ead4ad3941cf1b6588b1ac5a44ca9e9c4b
     files:
       - name: postgres_exporter_v0.8.0_darwin-386.tar.gz
         sha256: sha256:b8b247ceafa5a7102806ed25cdaf118dba9ca39716cee194725a7f860c92d4da
@@ -530,6 +546,6 @@ software:
     published:
       timestamp: 2019-11-25 13:34:34
 software_metadata:
-  prerelease: v0.8.0
+  prerelease: master
   release: v0.8.0
-  updated: 2020-02-22 03:54:42.627668
+  updated: 2020-02-27 06:21:47.665741

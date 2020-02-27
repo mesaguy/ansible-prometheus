@@ -3,8 +3,15 @@ defaults:
   port: 9308
   tgroup: kafka
 software:
+  master:
+    commit:
+      sha: d8a8460163f4fe9316044f4581503f30a739936f
+    prerelease: true
+    published:
+      timestamp: 2019-12-24 01:54:26
   v0.1.0:
-    commit_sha: 7576d6aa0abd77ae33c982936fac83ec273ce099
+    commit:
+      sha: 7576d6aa0abd77ae33c982936fac83ec273ce099
     files:
       - name: kafka_exporter-0.1.0.darwin-386.tar.gz
         sha256: sha256:78fe1963c4a53c307cb01b654b439d6c55105b31b01276e2828cc85048534bdc
@@ -114,7 +121,8 @@ software:
     published:
       timestamp: 2017-10-19 09:53:15
   v0.2.0:
-    commit_sha: 9aecc7d5965edf2230f8eb6992103396dfc11041
+    commit:
+      sha: 9aecc7d5965edf2230f8eb6992103396dfc11041
     files:
       - name: kafka_exporter-0.2.0.darwin-386.tar.gz
         sha256: sha256:c3fb22bf0647658be5f904577452088dcb817ec9a60802ebc9797e4057def698
@@ -224,7 +232,8 @@ software:
     published:
       timestamp: 2017-10-20 07:58:08
   v0.3.0:
-    commit_sha: 77161033720d842d22e52a02250934ca83a3c42c
+    commit:
+      sha: 77161033720d842d22e52a02250934ca83a3c42c
     files:
       - name: kafka_exporter-0.3.0.darwin-386.tar.gz
         sha256: sha256:d1ae9e3d502ed230d5617a7a2f6ba03a32a5be6788811cb02d7bf9391033f943
@@ -334,7 +343,8 @@ software:
     published:
       timestamp: 2017-12-06 09:02:40
   v1.0.0:
-    commit_sha: 91bcf3282f7dc4d501ab1c8540e7702d93126bc4
+    commit:
+      sha: 91bcf3282f7dc4d501ab1c8540e7702d93126bc4
     files:
       - name: kafka_exporter-1.0.0.darwin-386.tar.gz
         sha256: sha256:0b56f78d007eab92d8889f0c58c4f1ccd320e7994c31d87c5cb3fa4197c38bc3
@@ -444,7 +454,8 @@ software:
     published:
       timestamp: 2018-01-08 15:28:51
   v1.0.1:
-    commit_sha: f1639a649ebcfe11bce6782ab281a59d05b6d9e9
+    commit:
+      sha: f1639a649ebcfe11bce6782ab281a59d05b6d9e9
     files:
       - name: kafka_exporter-1.0.1.darwin-386.tar.gz
         sha256: sha256:873a1d8a8cfb47b95c078160ba27e956398511c5041ef5637cfb4c0b5829944b
@@ -554,7 +565,8 @@ software:
     published:
       timestamp: 2018-01-12 13:06:31
   v1.1.0:
-    commit_sha: 84cee7e0672f0161c05a93557cc2794a48c8a024
+    commit:
+      sha: 84cee7e0672f0161c05a93557cc2794a48c8a024
     files:
       - name: kafka_exporter-1.1.0.darwin-386.tar.gz
         sha256: sha256:dda87b61bc22ef6b265108f1e5e5607c85e711bb1f1d4d0e618e03cbc61fbcb6
@@ -664,7 +676,8 @@ software:
     published:
       timestamp: 2018-04-07 12:28:23
   v1.2.0:
-    commit_sha: 830660212e6c109e69dcb1cb58f5159fe3b38903
+    commit:
+      sha: 830660212e6c109e69dcb1cb58f5159fe3b38903
     files:
       - name: kafka_exporter-1.2.0.darwin-386.tar.gz
         sha256: sha256:aba62a183c843e763e5299cadfb0a08a43f2cc1fb2aafa18febd731a1d10d0d4
@@ -774,6 +787,6 @@ software:
     published:
       timestamp: 2018-07-07 14:39:05
 software_metadata:
-  prerelease: v1.2.0
+  prerelease: master
   release: v1.2.0
-  updated: 2020-02-22 03:55:57.584890
+  updated: 2020-02-27 06:22:49.173193

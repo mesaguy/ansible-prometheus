@@ -3,44 +3,9 @@ defaults:
   port: 9100
   tgroup: node
 software:
-  0.10.0:
-    commit_sha: 484eedbf015f1848e9a5412c55a3c4bdfdf8a685
-    files:
-      - name: node_exporter-0.10.0.darwin-amd64.tar.gz
-        sha256: sha256:9422aff194780f49fa923bc15a8776b25adc2a8113f285c5b81af63b7957c6f6
-        size: 2811717
-        url: https://github.com/prometheus/node_exporter/releases/download/0.10.0/node_exporter-0.10.0.darwin-amd64.tar.gz
-      - name: node_exporter-0.10.0.linux-386.tar.gz
-        sha256: sha256:8aac8aa674c8d882b1c90d25b3138ce80fc15e3361e2ea7b1694a3def9dd7aec
-        size: 2660210
-        url: https://github.com/prometheus/node_exporter/releases/download/0.10.0/node_exporter-0.10.0.linux-386.tar.gz
-      - name: node_exporter-0.10.0.linux-amd64.tar.gz
-        sha256: sha256:7e68b839545c588f27b1c28970b1226fb9bdc6b867614e13e2278b2f5551dab4
-        size: 2843704
-        url: https://github.com/prometheus/node_exporter/releases/download/0.10.0/node_exporter-0.10.0.linux-amd64.tar.gz
-      - name: node_exporter-0.10.0.linux-arm.tar.gz
-        sha256: sha256:df2a4aa6592349fd916bcca3e497da4d65839424f6ccd850c4a81572c426085b
-        size: 2566520
-        url: https://github.com/prometheus/node_exporter/releases/download/0.10.0/node_exporter-0.10.0.linux-arm.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2015-06-10 16:11:27
-  0.11.0:
-    commit_sha: f2dfeb3fd6fc18b51cd82f102a0a7634d2e98fa2
-    files:
-      - name: node_exporter-0.11.0.linux-386.tar.gz
-        sha256: sha256:f75b2305a6a568c3aa06269c9f3e9299707f28a807d7828b47156e57f9cee041
-        size: 2674754
-        url: https://github.com/prometheus/node_exporter/releases/download/0.11.0/node_exporter-0.11.0.linux-386.tar.gz
-      - name: node_exporter-0.11.0.linux-amd64.tar.gz
-        sha256: sha256:f38daeec08a7a5be0b04d4633dae54cf7587af5dda011604b80eba97eaf606c8
-        size: 2846737
-        url: https://github.com/prometheus/node_exporter/releases/download/0.11.0/node_exporter-0.11.0.linux-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2015-07-27 21:33:55
   0.12.0:
-    commit_sha: df8dcd27e242c9df76dac84f5502503577e84895
+    commit:
+      sha: df8dcd27e242c9df76dac84f5502503577e84895
     files:
       - name: node_exporter-0.12.0.darwin-386.tar.gz
         sha256: sha256:e67e13f8768f0abbcbe785b2f36eb3fab29fc4da06d70ea359e0923cd5295b22
@@ -113,58 +78,15 @@ software:
     prerelease: false
     published:
       timestamp: 2016-05-05 22:12:24
-  0.12.0rc1:
-    commit_sha: e70cbd2045bc63df74fa652213f1ace470e8b796
-    files:
-      - name: node_exporter-0.12.0rc1.darwin-386.tar.gz
-        sha256: sha256:07a0ae6df969a5601c8f56e647a81ef98262c196ebe3c8d30b666197ebd41dcf
-        size: 3165746
-        url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.darwin-386.tar.gz
-      - name: node_exporter-0.12.0rc1.darwin-amd64.tar.gz
-        sha256: sha256:2c190de3806437d18b43ccd15d7f7ae6a6dd4725477cf695f7d2c9e985063c79
-        size: 3381624
-        url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.darwin-amd64.tar.gz
-      - name: node_exporter-0.12.0rc1.linux-386.tar.gz
-        sha256: sha256:aef87b2698161dd9c5605572c6ea6bd39ad0a627d43c30551c8320b3cb6ca6a3
-        size: 3246138
-        url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.linux-386.tar.gz
-      - name: node_exporter-0.12.0rc1.linux-amd64.tar.gz
-        sha256: sha256:a68d188c994740e5a4d10fb2dfde3628f8979977cd3ce798cfc9f1e1b4968bce
-        size: 3480413
-        url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.linux-amd64.tar.gz
-      - name: node_exporter-0.12.0rc1.linux-arm.tar.gz
-        sha256: sha256:cf0eb576dbea2f163440688a8d106f091ef76f5d01d029d7ae7c47f64a1f5462
-        size: 3121565
-        url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.linux-arm.tar.gz
-      - name: node_exporter-0.12.0rc1.linux-ppc64.tar.gz
-        sha256: sha256:8ba43e622d3ce80501d4b3a35a6d817d870a23bdc3e7ca9c6f5c70417b96d6fa
-        size: 3310833
-        url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.linux-ppc64.tar.gz
-      - name: node_exporter-0.12.0rc1.linux-ppc64le.tar.gz
-        sha256: sha256:57c4eeab4e735643b1db74854298e4e9ea94b8738157f5e74e0edfbc9dbd56d1
-        size: 3197775
-        url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc1/node_exporter-0.12.0rc1.linux-ppc64le.tar.gz
+  master:
+    commit:
+      sha: ef7c05816adcb0e8923defe34e97f6afcce0a939
     prerelease: true
     published:
-      timestamp: 2015-10-06 17:40:35
-  0.12.0rc2:
-    commit_sha: a05966a3a94d066208e81ff1d2f6a31fdf4a9d71
-    files: []
-    prerelease: true
-    published:
-      timestamp: 2016-02-04 12:37:40
-  0.12.0rc3:
-    commit_sha: 20ecedd0b4c983bd7b88f97cd7a21461988a6c12
-    files:
-      - name: node_exporter-0.12.0rc3.linux-amd64.tar.gz
-        sha256: sha256:4674fd685bc33cc26f680c49423114e6ccac5a88f03f6f691ff374892809fb0f
-        size: 3694052
-        url: https://github.com/prometheus/node_exporter/releases/download/0.12.0rc3/node_exporter-0.12.0rc3.linux-amd64.tar.gz
-    prerelease: true
-    published:
-      timestamp: 2016-02-04 12:44:50
+      timestamp: 2020-02-20 12:42:47
   v0.13.0:
-    commit_sha: 006d1c7922b765f458fe9b92ce646641bded0f52
+    commit:
+      sha: 006d1c7922b765f458fe9b92ce646641bded0f52
     files:
       - name: node_exporter-0.13.0.darwin-386.tar.gz
         sha256: sha256:a23330911ec4ddc22dab1b95c3491f05b2abb7dbf6ce59deca75f1e7fcf501e0
@@ -230,7 +152,8 @@ software:
     published:
       timestamp: 2016-11-26 13:08:34
   v0.13.0-rc.1:
-    commit_sha: 2ff8e5f0e4553371161b98293d52ed98ecb8117b
+    commit:
+      sha: 2ff8e5f0e4553371161b98293d52ed98ecb8117b
     files:
       - name: node_exporter-0.13.0-rc.1.darwin-386.tar.gz
         sha256: sha256:a22a6711f9824712dda4dbed9a72ef425f8e8cec6a2b1276dc4088fa3dd8e3c2
@@ -304,7 +227,8 @@ software:
     published:
       timestamp: 2016-10-16 12:34:06
   v0.13.0-rc.2:
-    commit_sha: 42d1658d5632fe0bfb281761d5e3620cfc37990b
+    commit:
+      sha: 42d1658d5632fe0bfb281761d5e3620cfc37990b
     files:
       - name: node_exporter-0.13.0-rc.2.darwin-386.tar.gz
         sha256: sha256:804dc367b313f5c47c31c8619d4c6629e1580f3e8ff5e36875d6f829ca34a2c1
@@ -370,7 +294,8 @@ software:
     published:
       timestamp: 2016-11-19 07:26:46
   v0.14.0:
-    commit_sha: 840ba5dcc71a084a3bc63cb6063003c1f94435a6
+    commit:
+      sha: 840ba5dcc71a084a3bc63cb6063003c1f94435a6
     files:
       - name: node_exporter-0.14.0.darwin-386.tar.gz
         sha256: sha256:e2078eebbfb4dcbd391f4ac456f89409ffdda5e7c6643b3bd36c876f3fe77db5
@@ -432,7 +357,8 @@ software:
     published:
       timestamp: 2017-03-21 12:10:24
   v0.14.0-rc.1:
-    commit_sha: 5a07f4173d97fa0dd307db5bd3c2e6da26a4b16e
+    commit:
+      sha: 5a07f4173d97fa0dd307db5bd3c2e6da26a4b16e
     files:
       - name: node_exporter-0.14.0-rc.1.darwin-386.tar.gz
         sha256: sha256:b330d736776df9c67f5eceb84dfa5ad71625c55c37387cdaa53dd23d7586271b
@@ -498,7 +424,8 @@ software:
     published:
       timestamp: 2017-01-16 15:57:37
   v0.14.0-rc.2:
-    commit_sha: 0e60bb8e005c638605e59ac3f307e3d47e891a9f
+    commit:
+      sha: 0e60bb8e005c638605e59ac3f307e3d47e891a9f
     files:
       - name: node_exporter-0.14.0-rc.2.darwin-386.tar.gz
         sha256: sha256:02c68c6a8537f9a132a06c58c60b65c79f19453cd7525ec742fa965458fbfb4e
@@ -564,7 +491,8 @@ software:
     published:
       timestamp: 2017-03-07 14:39:00
   v0.15.0:
-    commit_sha: 6e2053c557f96efb63aef3691f15335a70baaffd
+    commit:
+      sha: 6e2053c557f96efb63aef3691f15335a70baaffd
     files:
       - name: node_exporter-0.15.0.darwin-386.tar.gz
         sha256: sha256:190894a5c84ce4fe306802691d972da8cd5556579881179b9189694b04f59e3d
@@ -614,7 +542,8 @@ software:
     published:
       timestamp: 2017-10-06 11:49:01
   v0.15.1:
-    commit_sha: ba5da2c29ae7f6209a88cb58676ba5ba029ad785
+    commit:
+      sha: ba5da2c29ae7f6209a88cb58676ba5ba029ad785
     files:
       - name: node_exporter-0.15.1.darwin-386.tar.gz
         sha256: sha256:f9509a4dd00bf134bbce027cf208a166313a6568443e4e75fc5d64083ca2598e
@@ -664,7 +593,8 @@ software:
     published:
       timestamp: 2017-11-07 18:37:18
   v0.15.2:
-    commit_sha: 98bc64930d34878b84a0f87dfe6e1a6da61e532d
+    commit:
+      sha: 98bc64930d34878b84a0f87dfe6e1a6da61e532d
     files:
       - name: node_exporter-0.15.2.darwin-386.tar.gz
         sha256: sha256:64b5333f96306a55e006193e048815d954b573b49646d5b3841e4d06013a3ce4
@@ -714,7 +644,8 @@ software:
     published:
       timestamp: 2017-12-06 11:16:19
   v0.16.0:
-    commit_sha: d42bd70f4363dced6b77d8fc311ea57b63387e4f
+    commit:
+      sha: d42bd70f4363dced6b77d8fc311ea57b63387e4f
     files:
       - name: node_exporter-0.16.0.darwin-386.tar.gz
         sha256: sha256:747ee549c1010947a8b162b1434976fe6cb8445540521d2fcc283765e4be1a79
@@ -764,7 +695,8 @@ software:
     published:
       timestamp: 2018-05-15 16:33:41
   v0.16.0-rc.0:
-    commit_sha: 002c1ca02917406cbecc457162e2bdb1f29c2f49
+    commit:
+      sha: 002c1ca02917406cbecc457162e2bdb1f29c2f49
     files:
       - name: node_exporter-0.16.0-rc.0.darwin-386.tar.gz
         sha256: sha256:3a4c9ebe0da03aed18235860333b4d0719578a5c1a5dcf4eeca049c8afbd2431
@@ -814,7 +746,8 @@ software:
     published:
       timestamp: 2018-03-09 15:25:06
   v0.16.0-rc.1:
-    commit_sha: f3ff44fcca5bb20a181cd7b99734afeae553c78e
+    commit:
+      sha: f3ff44fcca5bb20a181cd7b99734afeae553c78e
     files:
       - name: node_exporter-0.16.0-rc.1.darwin-386.tar.gz
         sha256: sha256:555bb5a79a285294d51e79912b08e8f20821a34c7ac851f2bfc1591a046d5dd9
@@ -864,7 +797,8 @@ software:
     published:
       timestamp: 2018-04-05 05:52:58
   v0.16.0-rc.2:
-    commit_sha: 7cbfa884a7e69de9ee3dbbe4ed820197f363dbfd
+    commit:
+      sha: 7cbfa884a7e69de9ee3dbbe4ed820197f363dbfd
     files:
       - name: node_exporter-0.16.0-rc.2.darwin-386.tar.gz
         sha256: sha256:168ced766854c382305d0f902ea3ef1d7554bfa83820694376faad8e99225a15
@@ -914,7 +848,8 @@ software:
     published:
       timestamp: 2018-04-17 14:59:07
   v0.16.0-rc.3:
-    commit_sha: 575d8950d367987ab8792e90fb2cf00c3fee1c10
+    commit:
+      sha: 575d8950d367987ab8792e90fb2cf00c3fee1c10
     files:
       - name: node_exporter-0.16.0-rc.3.darwin-386.tar.gz
         sha256: sha256:2a98733ff2d4bcaf61f860b3636b79457be61db210707417057311e45cb7e1be
@@ -964,7 +899,8 @@ software:
     published:
       timestamp: 2018-04-27 16:02:17
   v0.17.0:
-    commit_sha: f6f6194a436b9a63d0439abc585c76b19a206b21
+    commit:
+      sha: f6f6194a436b9a63d0439abc585c76b19a206b21
     files:
       - name: node_exporter-0.17.0.darwin-386.tar.gz
         sha256: sha256:8af35b05e3302968a139f16cb1bc734613a98d9150e6d1491f8279bbdf44e17e
@@ -1042,7 +978,8 @@ software:
     published:
       timestamp: 2018-11-30 16:01:01
   v0.17.0-rc.0:
-    commit_sha: 751996761903af4cffe18cf2d980b8ae9a202204
+    commit:
+      sha: 751996761903af4cffe18cf2d980b8ae9a202204
     files:
       - name: node_exporter-0.17.0-rc.0.darwin-386.tar.gz
         sha256: sha256:8f7a2a7600d652fae4c28c943450b5e0aa20d3ff5d6e22f23666abed77229e22
@@ -1120,7 +1057,8 @@ software:
     published:
       timestamp: 2018-10-20 06:37:31
   v0.18.0:
-    commit_sha: f97f01c46cfde2ff97b5539b7964f3044c04947b
+    commit:
+      sha: f97f01c46cfde2ff97b5539b7964f3044c04947b
     files:
       - name: node_exporter-0.18.0.darwin-386.tar.gz
         sha256: sha256:40dade397d0b7026986f96a43015b3179de185310caa73b881ac5313ddd256f0
@@ -1198,7 +1136,8 @@ software:
     published:
       timestamp: 2019-05-09 23:29:36
   v0.18.1:
-    commit_sha: 3db77732e925c08f675d7404a8c46466b2ece83e
+    commit:
+      sha: 3db77732e925c08f675d7404a8c46466b2ece83e
     files:
       - name: node_exporter-0.18.1.darwin-386.tar.gz
         sha256: sha256:61a13b13f5a98bafd6e0dec17c6579acbc13f8a1e24a8e9206a8017edb248460
@@ -1276,7 +1215,8 @@ software:
     published:
       timestamp: 2019-06-04 19:27:59
   v1.0.0-rc.0:
-    commit_sha: ef7c05816adcb0e8923defe34e97f6afcce0a939
+    commit:
+      sha: ef7c05816adcb0e8923defe34e97f6afcce0a939
     files:
       - name: node_exporter-1.0.0-rc.0.darwin-386.tar.gz
         sha256: sha256:7341ea1b8447295a6dccd9f06db8f99fb9cee6d2e9e382aec010baf209fd651a
@@ -1356,4 +1296,4 @@ software:
 software_metadata:
   prerelease: v1.0.0-rc.0
   release: v0.18.1
-  updated: 2020-02-23 06:49:14.247002
+  updated: 2020-02-27 06:17:06.128387

@@ -3,242 +3,15 @@ defaults:
   port: 9121
   tgroup: redis
 software:
-  v0.26.0:
-    commit_sha: bdb321677a309e525496ec3b786aa4c3745a546b
-    files:
-      - name: redis_exporter-v0.26.0.darwin-386.tar.gz
-        sha256: sha256:55c2db44eebb0ede40c40308250cc28ba82a79fa40231534cb67af0dc71f4c9f
-        size: 2495399
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.26.0/redis_exporter-v0.26.0.darwin-386.tar.gz
-      - name: redis_exporter-v0.26.0.darwin-amd64.tar.gz
-        sha256: sha256:c3d134dcc7825c5421f1184dbc156852b21186a7101429207b7a7106d164ab8d
-        size: 2644237
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.26.0/redis_exporter-v0.26.0.darwin-amd64.tar.gz
-      - name: redis_exporter-v0.26.0.linux-386.tar.gz
-        sha256: sha256:1e4bf95f1d2632b085bbdadf3faa324b8f9e7a7b7f88fe8cd84b184f409a3880
-        size: 2346995
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.26.0/redis_exporter-v0.26.0.linux-386.tar.gz
-      - name: redis_exporter-v0.26.0.linux-amd64.tar.gz
-        sha256: sha256:39354c57b9d02b455c584baf46a2df6ed3d1ac190c88e3ec0fa0c23b49ccc2bb
-        size: 2490731
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.26.0/redis_exporter-v0.26.0.linux-amd64.tar.gz
-      - name: redis_exporter-v0.26.0.netbsd-386.tar.gz
-        sha256: sha256:9141c9aa0477c200a2a080acbec513fd86fe49dbd373989b23f931dabae874dd
-        size: 2347374
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.26.0/redis_exporter-v0.26.0.netbsd-386.tar.gz
-      - name: redis_exporter-v0.26.0.netbsd-amd64.tar.gz
-        sha256: sha256:3950afefd5d196f23a95d2eaa3c82cd58c21f8daf3eaa224e6f2669977934c2e
-        size: 2494247
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.26.0/redis_exporter-v0.26.0.netbsd-amd64.tar.gz
-      - name: redis_exporter-v0.26.0.windows-386.zip
-        sha256: sha256:05dfa2b93b7019fd66929c3bd290416b9e485326fb7169e76a7d4f4bf16e7e5a
-        size: 2291570
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.26.0/redis_exporter-v0.26.0.windows-386.zip
-      - name: redis_exporter-v0.26.0.windows-amd64.zip
-        sha256: sha256:9f65c7433d0e1ee63e5e9340e800d7883e614a4afa2b898a11157131f336804f
-        size: 2433334
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.26.0/redis_exporter-v0.26.0.windows-amd64.zip
-    prerelease: false
+  master:
+    commit:
+      sha: 95d0b33be7f03502e1829c18429ee8c31fdbcbcc
+    prerelease: true
     published:
-      timestamp: 2019-01-09 18:12:46
-  v0.27.0:
-    commit_sha: 5722219230f32ca66eb0268890eb356e76757d12
-    files:
-      - name: redis_exporter-v0.27.0.darwin-386.tar.gz
-        sha256: sha256:78dec64e91a3884d7806374d1222cdea7391d0b558262166ae5618d2b2804940
-        size: 2496584
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.27.0/redis_exporter-v0.27.0.darwin-386.tar.gz
-      - name: redis_exporter-v0.27.0.darwin-amd64.tar.gz
-        sha256: sha256:362652b138c561af6860bbfd28a0627eda6e53c4b7f951169359a402708fbe06
-        size: 2645975
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.27.0/redis_exporter-v0.27.0.darwin-amd64.tar.gz
-      - name: redis_exporter-v0.27.0.linux-386.tar.gz
-        sha256: sha256:e619e2d51d3142ae328bc5cccfecc727eef3792e919306e7076db41209a178ff
-        size: 2348703
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.27.0/redis_exporter-v0.27.0.linux-386.tar.gz
-      - name: redis_exporter-v0.27.0.linux-amd64.tar.gz
-        sha256: sha256:9e4a9a0eb4d87b612ed6edd4bd76acb822f19eacd3689e83d0f2cdb61ebacd69
-        size: 2491631
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.27.0/redis_exporter-v0.27.0.linux-amd64.tar.gz
-      - name: redis_exporter-v0.27.0.netbsd-386.tar.gz
-        sha256: sha256:0b52d766e4c8d2454d1711f8352fadf5e9f294bc91f20cde0d9c1a731907dda1
-        size: 2348911
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.27.0/redis_exporter-v0.27.0.netbsd-386.tar.gz
-      - name: redis_exporter-v0.27.0.netbsd-amd64.tar.gz
-        sha256: sha256:fc2203a230927e8fb477c43791923ea386478cba55e57de07a0f316406ca798a
-        size: 2496534
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.27.0/redis_exporter-v0.27.0.netbsd-amd64.tar.gz
-      - name: redis_exporter-v0.27.0.windows-386.zip
-        sha256: sha256:f32eb6a341233ada3215d98d0dce4ce1575d877b6e93c0d7728e572099dbf01d
-        size: 2291750
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.27.0/redis_exporter-v0.27.0.windows-386.zip
-      - name: redis_exporter-v0.27.0.windows-amd64.zip
-        sha256: sha256:7fa89b6802e8a9e74a00895917a32a72c6c15539ba1108025827509028302c35
-        size: 2434322
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.27.0/redis_exporter-v0.27.0.windows-amd64.zip
-    prerelease: false
-    published:
-      timestamp: 2019-01-23 02:14:43
-  v0.28.0:
-    commit_sha: e4e6fe5c5d2d76a926489d047aba751834a04ca6
-    files:
-      - name: redis_exporter-v0.28.0.darwin-386.tar.gz
-        sha256: sha256:99aeec0677fbcfb58919329233d97f6498e6c00f8763ee113cee282efb96b866
-        size: 2495340
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.28.0/redis_exporter-v0.28.0.darwin-386.tar.gz
-      - name: redis_exporter-v0.28.0.darwin-amd64.tar.gz
-        sha256: sha256:cc6e58c12097832fd321a95e1ba624f5e39a6ff1510253ef03d597ee44c7bddf
-        size: 2646919
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.28.0/redis_exporter-v0.28.0.darwin-amd64.tar.gz
-      - name: redis_exporter-v0.28.0.linux-386.tar.gz
-        sha256: sha256:180f198003b616deee51c18820efac9c91e3cb5da63115dc6be9e614a7baa1f2
-        size: 2348623
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.28.0/redis_exporter-v0.28.0.linux-386.tar.gz
-      - name: redis_exporter-v0.28.0.linux-amd64.tar.gz
-        sha256: sha256:d61ef3e7dc9c014323a6d3eafe8f743eb499a1d3fce1e50248315d0382660731
-        size: 2491197
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.28.0/redis_exporter-v0.28.0.linux-amd64.tar.gz
-      - name: redis_exporter-v0.28.0.netbsd-386.tar.gz
-        sha256: sha256:16a847fd1a89ab6b9fb6e8efade7e58a800976354e91dbcc70c2d1f902bbe34c
-        size: 2349364
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.28.0/redis_exporter-v0.28.0.netbsd-386.tar.gz
-      - name: redis_exporter-v0.28.0.netbsd-amd64.tar.gz
-        sha256: sha256:47b0cde1e5158044b8b046c3816d99901d24de08324057a50a23056fccdf5bfa
-        size: 2496787
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.28.0/redis_exporter-v0.28.0.netbsd-amd64.tar.gz
-      - name: redis_exporter-v0.28.0.windows-386.zip
-        sha256: sha256:d34a783311b9c9e9333ec5f5e697330b955efe706fd83695f2f351566a5231da
-        size: 2292118
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.28.0/redis_exporter-v0.28.0.windows-386.zip
-      - name: redis_exporter-v0.28.0.windows-amd64.zip
-        sha256: sha256:4be8d902bd9f08aecb3e35b331b6b271063adab658f30630aa4fb15616362b46
-        size: 2434942
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.28.0/redis_exporter-v0.28.0.windows-amd64.zip
-    prerelease: false
-    published:
-      timestamp: 2019-01-30 15:21:48
-  v0.29.0:
-    commit_sha: ab77af439c36dfe219f72b176b41e016ea0e918b
-    files:
-      - name: redis_exporter-v0.29.0.darwin-386.tar.gz
-        sha256: sha256:65addf595bf11a25ae8c721211023958fda4cb572e4029a7df833984b84bb9f6
-        size: 2496270
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.29.0/redis_exporter-v0.29.0.darwin-386.tar.gz
-      - name: redis_exporter-v0.29.0.darwin-amd64.tar.gz
-        sha256: sha256:3e1e132d0f9d5c9454e10fabde11e08cb154c8e3d86fd3eccdbf89122413547d
-        size: 2648520
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.29.0/redis_exporter-v0.29.0.darwin-amd64.tar.gz
-      - name: redis_exporter-v0.29.0.linux-386.tar.gz
-        sha256: sha256:2b76a641a74af74577583c24825b37fc45d1354779c5b454ff94b9db219a502c
-        size: 2350126
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.29.0/redis_exporter-v0.29.0.linux-386.tar.gz
-      - name: redis_exporter-v0.29.0.linux-amd64.tar.gz
-        sha256: sha256:2e86b7ed7e455444041186fd6b208c6a2bb1c817b3be632a535cb1b086ee22a0
-        size: 2494006
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.29.0/redis_exporter-v0.29.0.linux-amd64.tar.gz
-      - name: redis_exporter-v0.29.0.netbsd-386.tar.gz
-        sha256: sha256:784ae6811dae28b6c46f876fd7fed40d44c78c294130846930e2a518df48fe3f
-        size: 2350483
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.29.0/redis_exporter-v0.29.0.netbsd-386.tar.gz
-      - name: redis_exporter-v0.29.0.netbsd-amd64.tar.gz
-        sha256: sha256:120d3a97e92d152321966562ed9c730194e7cf551028b611b0e8d206a4df2edf
-        size: 2497024
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.29.0/redis_exporter-v0.29.0.netbsd-amd64.tar.gz
-      - name: redis_exporter-v0.29.0.windows-386.zip
-        sha256: sha256:aed31f015807341f779bd4c8c99849362a689edbb3536571140dc9c179aa13a5
-        size: 2293312
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.29.0/redis_exporter-v0.29.0.windows-386.zip
-      - name: redis_exporter-v0.29.0.windows-amd64.zip
-        sha256: sha256:495f5b4100b3ea5e970d3a43066c4ef96ef6e087766007be52a63c254495420e
-        size: 2437832
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.29.0/redis_exporter-v0.29.0.windows-amd64.zip
-    prerelease: false
-    published:
-      timestamp: 2019-02-21 15:34:36
-  v0.30.0:
-    commit_sha: 9a564252edf9caeba0d3c501bc1b87b506ec701b
-    files:
-      - name: redis_exporter-v0.30.0.darwin-386.tar.gz
-        sha256: sha256:feae4892819dce52b7245d1d1ee547cbd3b61e9f52a5cf2abe57ce364ebe5e6b
-        size: 2497891
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.30.0/redis_exporter-v0.30.0.darwin-386.tar.gz
-      - name: redis_exporter-v0.30.0.darwin-amd64.tar.gz
-        sha256: sha256:7bb71d7d52180cc9b46dbc7f080bfbb2cf737a093bc0d5988b38d0c2c9635c67
-        size: 2648525
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.30.0/redis_exporter-v0.30.0.darwin-amd64.tar.gz
-      - name: redis_exporter-v0.30.0.linux-386.tar.gz
-        sha256: sha256:eaa2374e6bcfba37e9130fa5a8dd1b1c54bf9f7f9d21fb1d7d33c55d36d89f7a
-        size: 2350448
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.30.0/redis_exporter-v0.30.0.linux-386.tar.gz
-      - name: redis_exporter-v0.30.0.linux-amd64.tar.gz
-        sha256: sha256:51efb17cb73ad4661617867ba391c6430cce316d3d56485eccc58a66a96c76a8
-        size: 2494343
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.30.0/redis_exporter-v0.30.0.linux-amd64.tar.gz
-      - name: redis_exporter-v0.30.0.netbsd-386.tar.gz
-        sha256: sha256:d2cedb52b6dffce422eb3291f1b63611660817cbf4411ce40f5e6784c652a928
-        size: 2350634
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.30.0/redis_exporter-v0.30.0.netbsd-386.tar.gz
-      - name: redis_exporter-v0.30.0.netbsd-amd64.tar.gz
-        sha256: sha256:b3a32df73631085a02960423687cfe4337b590ec05b4fe438c135a61d8ccb7ae
-        size: 2497158
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.30.0/redis_exporter-v0.30.0.netbsd-amd64.tar.gz
-      - name: redis_exporter-v0.30.0.windows-386.zip
-        sha256: sha256:4ab726f2f28dcb419bceec17da0595fca1f60e5141b1e99f3c37a91d98245af5
-        size: 2293444
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.30.0/redis_exporter-v0.30.0.windows-386.zip
-      - name: redis_exporter-v0.30.0.windows-amd64.zip
-        sha256: sha256:14c8f88cacd445e24de672deac04a45b1a58c47d09263a274b7cbd79393aa609
-        size: 2437854
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.30.0/redis_exporter-v0.30.0.windows-amd64.zip
-    prerelease: false
-    published:
-      timestamp: 2019-03-02 19:48:06
-  v0.31.0:
-    commit_sha: 3c1b6025e0dff7fc056cfd4da969523c3c7bf510
-    files: []
-    prerelease: false
-    published:
-      timestamp: 2019-03-21 19:41:51
-  v0.32.0:
-    commit_sha: 56b5fb9fb700af31dc7c97873d3fdcf3b75b78df
-    files:
-      - name: redis_exporter-v0.32.0.darwin-386.tar.gz
-        sha256: sha256:937836bbfefb7fe945753b4de13b0fe540eee6c733f6fda2a5aec4aba10e8a93
-        size: 2763371
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.32.0/redis_exporter-v0.32.0.darwin-386.tar.gz
-      - name: redis_exporter-v0.32.0.darwin-amd64.tar.gz
-        sha256: sha256:8002a0dd2a965aa282c27e5c3bf5595924bdce4952ea3a63c1b3f98e440f3d05
-        size: 2923514
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.32.0/redis_exporter-v0.32.0.darwin-amd64.tar.gz
-      - name: redis_exporter-v0.32.0.linux-386.tar.gz
-        sha256: sha256:2bfd72ad1dac8aa6a5d861dc39a9066ff5acfd1da03a2394a5c598b7e284796c
-        size: 2596818
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.32.0/redis_exporter-v0.32.0.linux-386.tar.gz
-      - name: redis_exporter-v0.32.0.linux-amd64.tar.gz
-        sha256: sha256:be4160292c9820111ef5a9829a16268b236c78755ac03411faf338d1173f3310
-        size: 2749479
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.32.0/redis_exporter-v0.32.0.linux-amd64.tar.gz
-      - name: redis_exporter-v0.32.0.netbsd-386.tar.gz
-        sha256: sha256:5689a808411312121f69efb7c61da090f5245418d763c117635ce4909aa765e2
-        size: 2594554
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.32.0/redis_exporter-v0.32.0.netbsd-386.tar.gz
-      - name: redis_exporter-v0.32.0.netbsd-amd64.tar.gz
-        sha256: sha256:72a7d095cadb9dbc91611a5e98f74f3b7096b9654f753607d83e8006eee80357
-        size: 2751003
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.32.0/redis_exporter-v0.32.0.netbsd-amd64.tar.gz
-      - name: redis_exporter-v0.32.0.windows-386.zip
-        sha256: sha256:c39aa30a42e3ad35324eeff5e3f069d21dfbf538f3ff3acf53eec150c2144786
-        size: 2539832
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.32.0/redis_exporter-v0.32.0.windows-386.zip
-      - name: redis_exporter-v0.32.0.windows-amd64.zip
-        sha256: sha256:22b4d8648668102a6550bb421524360253fad4be6ab8343a3156e7cbdc816228
-        size: 2690202
-        url: https://github.com/oliver006/redis_exporter/releases/download/v0.32.0/redis_exporter-v0.32.0.windows-amd64.zip
-    prerelease: false
-    published:
-      timestamp: 2019-03-22 18:29:04
+      timestamp: 2020-02-23 04:53:16
   v0.33.0:
-    commit_sha: 97deb5b156e068edd5904fdf9e8f3d7bc2078125
+    commit:
+      sha: 97deb5b156e068edd5904fdf9e8f3d7bc2078125
     files:
       - name: redis_exporter-v0.33.0.darwin-386.tar.gz
         sha256: sha256:8ee833f691c8a7ea2c6c5fc3d8e4b79f69c2b05cc0088a52b0688b61b7fe1e3f
@@ -324,7 +97,8 @@ software:
     published:
       timestamp: 2019-04-09 18:16:27
   v0.34.0:
-    commit_sha: 48b934d8a468b5f317e73267e60849fd9972828e
+    commit:
+      sha: 48b934d8a468b5f317e73267e60849fd9972828e
     files:
       - name: redis_exporter-v0.34.0.darwin-386.tar.gz
         sha256: sha256:355932eaf6bc4af52983f56c7e0b626bf492adbd4a8bb36d8a772f1cebfdda75
@@ -382,7 +156,8 @@ software:
     published:
       timestamp: 2019-04-24 02:00:31
   v0.34.1:
-    commit_sha: 1c168d07eff09e64efb18600a35664d6666926e6
+    commit:
+      sha: 1c168d07eff09e64efb18600a35664d6666926e6
     files:
       - name: redis_exporter-v0.34.1.darwin-386.tar.gz
         sha256: sha256:ca35d02c83c8bb233ac2d55d5c09f4a53463cf346af8a2404452a3c3bedd19f8
@@ -436,7 +211,8 @@ software:
     published:
       timestamp: 2019-05-09 15:41:13
   v1.0.0:
-    commit_sha: bf5bbceb677909f93051a3f124a853fcfd7c16e8
+    commit:
+      sha: bf5bbceb677909f93051a3f124a853fcfd7c16e8
     files:
       - name: redis_exporter-v1.0.0.darwin-386.tar.gz
         sha256: sha256:9bd913fece0bfdcea30f02626ebc02116914d07f4d0d3cea2a2eda6b9cb95420
@@ -494,7 +270,8 @@ software:
     published:
       timestamp: 2019-05-22 21:18:29
   v1.0.1:
-    commit_sha: acbc52515af1bf5d6384f09438af792cb643524f
+    commit:
+      sha: acbc52515af1bf5d6384f09438af792cb643524f
     files:
       - name: redis_exporter-v1.0.1.darwin-386.tar.gz
         sha256: sha256:0391524a420eae4d4a187185e23769f9b0c734c4b6bf8b2302dcd88b79effae8
@@ -552,7 +329,8 @@ software:
     published:
       timestamp: 2019-06-07 16:05:37
   v1.0.2:
-    commit_sha: 4f808dc9c774ed56a55600630440a1993224acf8
+    commit:
+      sha: 4f808dc9c774ed56a55600630440a1993224acf8
     files:
       - name: redis_exporter-v1.0.2.darwin-386.tar.gz
         sha256: sha256:892d5b8e71f8f82b3c1b820a25110f5f267eb94b40ad4563e6d390f7519ec1d0
@@ -610,7 +388,8 @@ software:
     published:
       timestamp: 2019-06-13 01:54:30
   v1.0.3:
-    commit_sha: ec9e6402eda3ea70583a23858c9e698c4390ba36
+    commit:
+      sha: ec9e6402eda3ea70583a23858c9e698c4390ba36
     files:
       - name: redis_exporter-v1.0.3.darwin-386.tar.gz
         sha256: sha256:521072f5237407ed0ffde92298ddc35045be380e3b5005f8a9125625acf6b980
@@ -668,7 +447,8 @@ software:
     published:
       timestamp: 2019-06-21 01:12:53
   v1.0.4:
-    commit_sha: 863ddc928bac938d3da5bbe32a59b479ca53837b
+    commit:
+      sha: 863ddc928bac938d3da5bbe32a59b479ca53837b
     files:
       - name: redis_exporter-v1.0.4.darwin-386.tar.gz
         sha256: sha256:f919cdf905ae7dee01a22646e2ad9f74942fb592de171b1c79164f9cb25980b5
@@ -726,7 +506,8 @@ software:
     published:
       timestamp: 2019-08-08 00:04:30
   v1.1.0:
-    commit_sha: 61e0167fc28d03b92b29cc8b8c4803afa736682c
+    commit:
+      sha: 61e0167fc28d03b92b29cc8b8c4803afa736682c
     files:
       - name: redis_exporter-v1.1.0.darwin-386.tar.gz
         sha256: sha256:49194a57028a41005390e96bda30a7a4540250c972d5fff14375b03819f78083
@@ -820,7 +601,8 @@ software:
     published:
       timestamp: 2019-08-20 21:21:43
   v1.1.1:
-    commit_sha: 1687c56fd0b53a6b36e2140b6c246a5fabe634c2
+    commit:
+      sha: 1687c56fd0b53a6b36e2140b6c246a5fabe634c2
     files:
       - name: redis_exporter-v1.1.1.darwin-386.tar.gz
         sha256: sha256:f45374ed4dd89f995045261b78953b551aae4cf6d17adb41e202a4d9b423e1d5
@@ -914,7 +696,8 @@ software:
     published:
       timestamp: 2019-09-07 00:44:07
   v1.2.0:
-    commit_sha: 2436f66e35c2ea6876ac857e25ae13ce909e8c3a
+    commit:
+      sha: 2436f66e35c2ea6876ac857e25ae13ce909e8c3a
     files:
       - name: redis_exporter-v1.2.0.darwin-386.tar.gz
         sha256: sha256:778fc4d8bc37e1274657248a6411b0c369d89837f05ab0fcc03c2075a0cb31b4
@@ -1008,7 +791,8 @@ software:
     published:
       timestamp: 2019-09-21 18:43:08
   v1.2.1:
-    commit_sha: ada8e6930f83923b56eb4d70d51abd2158e692ae
+    commit:
+      sha: ada8e6930f83923b56eb4d70d51abd2158e692ae
     files:
       - name: redis_exporter-v1.2.1.darwin-386.tar.gz
         sha256: sha256:d6c825ac40e77232ba32ca75c3d13001c449001e57bdecf8271fd7e7aa50246f
@@ -1102,7 +886,8 @@ software:
     published:
       timestamp: 2019-09-24 19:26:28
   v1.2.2:
-    commit_sha: ca862701390695cc8bdc6a769c33950ce33daffe
+    commit:
+      sha: ca862701390695cc8bdc6a769c33950ce33daffe
     files:
       - name: redis_exporter-v1.2.2.darwin-386.tar.gz
         sha256: sha256:d7dcab6d44ba73d4b20786efd51ccce417899b74c1c1dd53536466741ec52b69
@@ -1196,7 +981,8 @@ software:
     published:
       timestamp: 2019-10-02 23:17:47
   v1.3.0:
-    commit_sha: 2aadaf75ed0a32d57b24427a401c810eb780091f
+    commit:
+      sha: 2aadaf75ed0a32d57b24427a401c810eb780091f
     files:
       - name: redis_exporter-v1.3.0.darwin-386.tar.gz
         sha256: sha256:6670d9182078d9d051082df72b1687992b975991dde12a598a72bdb12bbe00b9
@@ -1290,7 +1076,8 @@ software:
     published:
       timestamp: 2019-10-03 15:11:13
   v1.3.1:
-    commit_sha: c3213a117be9f65d93ce0c099a419e9138abaf8e
+    commit:
+      sha: c3213a117be9f65d93ce0c099a419e9138abaf8e
     files:
       - name: redis_exporter-v1.3.1.darwin-386.tar.gz
         sha256: sha256:43b5040dc8c10025ecb5834a3b642699f2a985bd117be5a058b1e230889466c9
@@ -1384,7 +1171,8 @@ software:
     published:
       timestamp: 2019-10-08 14:30:47
   v1.3.2:
-    commit_sha: 175a69f33e8267e0a0ba47caab488db5e83a592e
+    commit:
+      sha: 175a69f33e8267e0a0ba47caab488db5e83a592e
     files:
       - name: redis_exporter-v1.3.2.darwin-386.tar.gz
         sha256: sha256:1a6a356074468fb439e036f924c94ca88f4a005cad91436865c87171cf863704
@@ -1478,7 +1266,8 @@ software:
     published:
       timestamp: 2019-11-06 02:23:11
   v1.3.3:
-    commit_sha: e671c9b44eea58371c6588ffaf2d9392ee29d1c2
+    commit:
+      sha: e671c9b44eea58371c6588ffaf2d9392ee29d1c2
     files:
       - name: redis_exporter-v1.3.3.darwin-386.tar.gz
         sha256: sha256:f3c9cefd067e06aa03e1b7e7e88af9ba2cdced69f80e121ac70eac32b7e397ae
@@ -1572,7 +1361,8 @@ software:
     published:
       timestamp: 2019-11-14 02:01:07
   v1.3.4:
-    commit_sha: e15c7d22b9151c3681c60b5df5cd552584bef10d
+    commit:
+      sha: e15c7d22b9151c3681c60b5df5cd552584bef10d
     files:
       - name: redis_exporter-v1.3.4.darwin-386.tar.gz
         sha256: sha256:2b4f1ca1a2878d1091eae11dffef5bc9f0ad0923ec5cccb484c9a52f24cbe8a4
@@ -1666,7 +1456,8 @@ software:
     published:
       timestamp: 2019-11-15 19:31:51
   v1.3.5:
-    commit_sha: 14dda66e724e45935782db610aca803594107ff0
+    commit:
+      sha: 14dda66e724e45935782db610aca803594107ff0
     files:
       - name: redis_exporter-v1.3.5.darwin-386.tar.gz
         sha256: sha256:5aa111d76cb58449d6d31dbc8a70b9693628840b03f33182d6caea84ff6d0dab
@@ -1760,7 +1551,8 @@ software:
     published:
       timestamp: 2019-12-16 18:41:33
   v1.4.0:
-    commit_sha: dde61ca2367f5fdb1f4a0c49022fcb0135715d22
+    commit:
+      sha: dde61ca2367f5fdb1f4a0c49022fcb0135715d22
     files:
       - name: redis_exporter-v1.4.0.darwin-386.tar.gz
         sha256: sha256:1e426432a53191292d0b5ce9c525cc9a0a2a3fc47d62047ea9797f837348fdaa
@@ -1854,6 +1646,6 @@ software:
     published:
       timestamp: 2020-02-22 02:05:12
 software_metadata:
-  prerelease: v1.4.0
+  prerelease: master
   release: v1.4.0
-  updated: 2020-02-23 06:48:34.531286
+  updated: 2020-02-27 06:05:24.760240

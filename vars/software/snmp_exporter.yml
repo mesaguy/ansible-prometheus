@@ -4,25 +4,35 @@ defaults:
   tgroup: snmp
 software:
   0.0.4:
-    commit_sha: 7914fa6917b15679aaa1e3bbd012c4568a0a7e52
+    commit:
+      sha: 7914fa6917b15679aaa1e3bbd012c4568a0a7e52
     files: []
     prerelease: false
     published:
       timestamp: 2016-01-08 14:53:48
   0.0.5:
-    commit_sha: b671bda47bb83fc99bd979f32166978454db3421
+    commit:
+      sha: b671bda47bb83fc99bd979f32166978454db3421
     files: []
     prerelease: false
     published:
       timestamp: 2016-01-30 12:10:34
   0.0.6:
-    commit_sha: 30cb5cc264d1a3c2329ed40e740f57f3670fe1ee
+    commit:
+      sha: 30cb5cc264d1a3c2329ed40e740f57f3670fe1ee
     files: []
     prerelease: false
     published:
       timestamp: 2016-08-13 10:27:32
+  master:
+    commit:
+      sha: f0ad4551a5c2023e383bc8dde2222f47dc760b83
+    prerelease: true
+    published:
+      timestamp: 2020-02-17 09:25:06
   v0.1.0:
-    commit_sha: fc0e62d141beedb7aa826c6ab1563ceeed724228
+    commit:
+      sha: fc0e62d141beedb7aa826c6ab1563ceeed724228
     files:
       - name: snmp_exporter-0.1.0.darwin-386.tar.gz
         sha256: sha256:693366f669bb218f67ddcb0c005dd6ae46130d4ac273fd033080ff48f082afeb
@@ -148,7 +158,8 @@ software:
     published:
       timestamp: 2016-09-23 19:43:43
   v0.10.0:
-    commit_sha: 5c997da9e9ee79dc6c72641f02d204f4eafc14b3
+    commit:
+      sha: 5c997da9e9ee79dc6c72641f02d204f4eafc14b3
     files:
       - name: sha256sums.txt
         sha256: sha256:b87ca8dec0c0bcafceceac40487fda6f5069f1dd53a1f651ceb150dd89673f28
@@ -242,7 +253,8 @@ software:
     published:
       timestamp: 2018-05-09 12:02:22
   v0.11.0:
-    commit_sha: e4591716c29459cb2a12b1bed129af519ad91d23
+    commit:
+      sha: e4591716c29459cb2a12b1bed129af519ad91d23
     files:
       - name: sha256sums.txt
         sha256: sha256:7247d6e637bea97214cacd19988a22ba869fc04ff0c948f5e9a51b5083c5d342
@@ -336,7 +348,8 @@ software:
     published:
       timestamp: 2018-05-30 10:32:33
   v0.12.0:
-    commit_sha: 26b3c855fb72b64527881a5acb8597ef49b00f9f
+    commit:
+      sha: 26b3c855fb72b64527881a5acb8597ef49b00f9f
     files:
       - name: sha256sums.txt
         sha256: sha256:b01bae4f6d0ab00450622a4423fb267dfe0f3d540c410ecb070ed4aaea7bf09e
@@ -430,7 +443,8 @@ software:
     published:
       timestamp: 2018-08-15 12:18:34
   v0.13.0:
-    commit_sha: 84cab6d72f4c70e6239e1efa4f7ea9cba2b7acc8
+    commit:
+      sha: 84cab6d72f4c70e6239e1efa4f7ea9cba2b7acc8
     files:
       - name: sha256sums.txt
         sha256: sha256:145259ef3fc512fe97f71309d3bc47895dfa42033c48a64911953c544a447584
@@ -524,7 +538,8 @@ software:
     published:
       timestamp: 2018-09-12 11:11:49
   v0.14.0:
-    commit_sha: da73490e051012714ee36cbf69d74dd41e21d4fb
+    commit:
+      sha: da73490e051012714ee36cbf69d74dd41e21d4fb
     files:
       - name: sha256sums.txt
         sha256: sha256:e5c70bb7e46a54ec24e0afe0af8c9ae0d24be8ff9bcc81c4a484158c1c273518
@@ -618,7 +633,8 @@ software:
     published:
       timestamp: 2018-12-04 15:50:46
   v0.15.0:
-    commit_sha: 92a3da4467f8bc6759cf197e7442b8c43e890b13
+    commit:
+      sha: 92a3da4467f8bc6759cf197e7442b8c43e890b13
     files:
       - name: sha256sums.txt
         sha256: sha256:45c875f24c85bb6200977e2686c7ddbea6af34967b6451c7e725ce90753ebc13
@@ -712,7 +728,8 @@ software:
     published:
       timestamp: 2019-02-12 14:58:23
   v0.16.1:
-    commit_sha: 4b2bb401378cf40c409aba91ab25189be5670183
+    commit:
+      sha: 4b2bb401378cf40c409aba91ab25189be5670183
     files:
       - name: sha256sums.txt
         sha256: sha256:2b48302f424e498f5f490359714cd880ac44c92bc52b6b836751b26c098800e0
@@ -806,7 +823,8 @@ software:
     published:
       timestamp: 2019-12-10 15:56:32
   v0.17.0:
-    commit_sha: f0ad4551a5c2023e383bc8dde2222f47dc760b83
+    commit:
+      sha: f0ad4551a5c2023e383bc8dde2222f47dc760b83
     files:
       - name: sha256sums.txt
         sha256: sha256:d86dfdd797c39623d485e6a628beae8ecb169e3e4762864f8223d558393c565d
@@ -900,7 +918,8 @@ software:
     published:
       timestamp: 2020-02-17 09:39:57
   v0.2.0:
-    commit_sha: 559afefcdd8643c06db1363a361fe0d34cdd66ef
+    commit:
+      sha: 559afefcdd8643c06db1363a361fe0d34cdd66ef
     files:
       - name: snmp_exporter-0.2.0.darwin-386.tar.gz
         sha256: sha256:23db257ffaa7e97011cebb76389cc398bfe0215b2b5d36bb9753ebf3946c224c
@@ -1026,7 +1045,8 @@ software:
     published:
       timestamp: 2017-01-25 10:40:53
   v0.3.0:
-    commit_sha: 6f8aa8a24d720b36991f29ffb179b2896e92090b
+    commit:
+      sha: 6f8aa8a24d720b36991f29ffb179b2896e92090b
     files:
       - name: snmp_exporter-0.3.0.darwin-386.tar.gz
         sha256: sha256:5aebf831043d3120e234606983aca291a328ec1284ce3706429dd9c87fa30576
@@ -1152,7 +1172,8 @@ software:
     published:
       timestamp: 2017-03-15 16:14:11
   v0.4.0:
-    commit_sha: 0a00acbf61971015b6475441d741ce59ad2ba26d
+    commit:
+      sha: 0a00acbf61971015b6475441d741ce59ad2ba26d
     files:
       - name: snmp_exporter-0.4.0.darwin-386.tar.gz
         sha256: sha256:5f4248bb2db77a2ebb2e9fa355325c6072db80876590cce9c16fd98c21417cde
@@ -1278,7 +1299,8 @@ software:
     published:
       timestamp: 2017-08-15 12:06:29
   v0.5.0:
-    commit_sha: 4a6cefde688765abba45f8110c219e8e512da3f1
+    commit:
+      sha: 4a6cefde688765abba45f8110c219e8e512da3f1
     files:
       - name: snmp_exporter-0.5.0.darwin-386.tar.gz
         sha256: sha256:61a676f629179740e5e82dfb318d9b16abc7cc37dbd779130a388e27eed36dd1
@@ -1368,7 +1390,8 @@ software:
     published:
       timestamp: 2017-08-15 12:23:53
   v0.6.0:
-    commit_sha: 4388d6815791d6d616098f899110c9dca354028c
+    commit:
+      sha: 4388d6815791d6d616098f899110c9dca354028c
     files:
       - name: snmp_exporter-0.6.0.darwin-386.tar.gz
         sha256: sha256:18f261acb9f293eb5b0f225e736225c29e0f9b1a1c80ebc9c00b482e704fc0a3
@@ -1458,7 +1481,8 @@ software:
     published:
       timestamp: 2017-08-22 11:23:42
   v0.7.0:
-    commit_sha: 91479202362d118e7c3270840a193e702e4c0a67
+    commit:
+      sha: 91479202362d118e7c3270840a193e702e4c0a67
     files:
       - name: snmp_exporter-0.7.0.darwin-386.tar.gz
         sha256: sha256:b5611f9e35c60ee3879573f4bd1a7b20092f047c7921829eb04d0be6a2c342c4
@@ -1548,7 +1572,8 @@ software:
     published:
       timestamp: 2017-10-09 15:48:55
   v0.8.0:
-    commit_sha: 17cefcaf7010106861ce0faa2a9ec9e39b7c2b4b
+    commit:
+      sha: 17cefcaf7010106861ce0faa2a9ec9e39b7c2b4b
     files:
       - name: snmp_exporter-0.8.0.darwin-386.tar.gz
         sha256: sha256:e9bb9c863b61e8fad9383ca652a30504df4d7a382f40760ac3706a6cc6141475
@@ -1638,7 +1663,8 @@ software:
     published:
       timestamp: 2017-11-20 12:50:41
   v0.9.0:
-    commit_sha: abb143a2b798ebb82167f407030056a00ead00ac
+    commit:
+      sha: abb143a2b798ebb82167f407030056a00ead00ac
     files:
       - name: sha256sums.txt
         sha256: sha256:e30361eb6c52c5dc2d81232a8c63b6345f9b05941992b14eeccd3f7c0bbf660f
@@ -1732,6 +1758,6 @@ software:
     published:
       timestamp: 2018-02-26 16:25:15
 software_metadata:
-  prerelease: v0.17.0
+  prerelease: master
   release: v0.17.0
-  updated: 2020-02-22 04:10:03.972084
+  updated: 2020-02-27 06:54:38.032929

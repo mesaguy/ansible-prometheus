@@ -3,8 +3,15 @@ defaults:
   port: 8053
   tgroup: bind
 software:
+  master:
+    commit:
+      sha: c34ff3d6b4817f42e74b2b05b3797cf99683b4a9
+    prerelease: true
+    published:
+      timestamp: 2020-01-09 17:37:36
   v0.2.0-dev:
-    commit_sha: dae68f9a72da14e080aea554b7d4f1495904ba1a
+    commit:
+      sha: dae68f9a72da14e080aea554b7d4f1495904ba1a
     files:
       - name: bind_exporter
         sha256: sha256:0429c35273d52a7c6d9cbc1de5f45dc217a457d96c066370999be605eeb1d985
@@ -14,7 +21,8 @@ software:
     published:
       timestamp: 2017-08-28 23:04:45
   v0.3.0:
-    commit_sha: c34ff3d6b4817f42e74b2b05b3797cf99683b4a9
+    commit:
+      sha: c34ff3d6b4817f42e74b2b05b3797cf99683b4a9
     files:
       - name: bind_exporter-0.3.0.aix-ppc64.tar.gz
         sha256: sha256:f973ea07b6639469ae5465d1c0816ad89a6cc261db4cad8f41ecaea8000f0568
@@ -144,6 +152,6 @@ software:
     published:
       timestamp: 2020-01-09 21:21:40
 software_metadata:
-  prerelease: v0.3.0
+  prerelease: master
   release: v0.3.0
-  updated: 2020-02-22 03:58:21.319229
+  updated: 2020-02-27 06:24:43.978800

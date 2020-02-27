@@ -3,19 +3,27 @@ defaults:
   port: 9559
   tgroup: ntp
 software:
+  master:
+    commit:
+      sha: 41a90220f5a867742b10e49e3361c8f84d230005
+    prerelease: true
+    published:
+      timestamp: 2020-02-24 14:41:01
   v1.1.0:
-    commit_sha: d34f581efa2df2ba11d9190d8e360b39f4a5d714
+    commit:
+      sha: d34f581efa2df2ba11d9190d8e360b39f4a5d714
     files: []
     prerelease: false
     published:
       timestamp: 2019-11-19 13:44:26
   v1.1.1:
-    commit_sha: 6682b19f9162ad8a73361ed59f996f2e774ad1e7
+    commit:
+      sha: 6682b19f9162ad8a73361ed59f996f2e774ad1e7
     files: []
     prerelease: false
     published:
       timestamp: 2020-02-10 12:18:01
 software_metadata:
-  prerelease: v1.1.1
+  prerelease: master
   release: v1.1.1
-  updated: 2020-02-22 03:54:47.570683
+  updated: 2020-02-27 06:21:54.165807

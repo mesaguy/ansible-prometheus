@@ -3,8 +3,15 @@ defaults:
   port: 9122
   tgroup: influxdb
 software:
+  master:
+    commit:
+      sha: 5fa36bd52d70dc8577bc11d8ba5cbf122b861f07
+    prerelease: true
+    published:
+      timestamp: 2020-02-25 09:40:53
   v0.1.0:
-    commit_sha: 4d30f926a4d82f9db52604b0e4d10396a2994360
+    commit:
+      sha: 4d30f926a4d82f9db52604b0e4d10396a2994360
     files:
       - name: influxdb_exporter-0.1.0.darwin-386.tar.gz
         sha256: sha256:6244afb5d444bdb169b487f9420db49c0e788261af17408ae9b95f998188d5df
@@ -118,7 +125,8 @@ software:
     published:
       timestamp: 2017-07-26 15:08:22
   v0.2.0:
-    commit_sha: 65c07221f567b09e6150d6f9f49abf8ebb3c8a4e
+    commit:
+      sha: 65c07221f567b09e6150d6f9f49abf8ebb3c8a4e
     files:
       - name: influxdb_exporter-0.2.0.darwin-386.tar.gz
         sha256: sha256:e585731340d7ef80bb10905d2af51e26dbba40c3e4cb74143141dd57c0aa9d8f
@@ -244,7 +252,8 @@ software:
     published:
       timestamp: 2019-02-28 09:43:08
   v0.3.0:
-    commit_sha: e714b981b78260146970d5ed9cfbd0781cd2f585
+    commit:
+      sha: e714b981b78260146970d5ed9cfbd0781cd2f585
     files:
       - name: influxdb_exporter-0.3.0.aix-ppc64.tar.gz
         sha256: sha256:2cda520b30a61658f7c9b2a83d405129b8530945a2828882777e556f58268d60
@@ -374,6 +383,6 @@ software:
     published:
       timestamp: 2019-10-04 13:59:25
 software_metadata:
-  prerelease: v0.3.0
+  prerelease: master
   release: v0.3.0
-  updated: 2020-02-22 04:01:51.772165
+  updated: 2020-02-27 06:47:49.899206

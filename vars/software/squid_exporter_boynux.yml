@@ -3,8 +3,15 @@ defaults:
   port: 9301
   tgroup: squid
 software:
+  master:
+    commit:
+      sha: b9c84a8c69e8cdfc5436d9640ce0b02b28c400e7
+    prerelease: true
+    published:
+      timestamp: 2020-02-09 08:33:38
   v0.1:
-    commit_sha: 6815be88fb9e2a953326edd5028f5015ff9ad8de
+    commit:
+      sha: 6815be88fb9e2a953326edd5028f5015ff9ad8de
     files:
       - name: squid-exporter
         sha256: sha256:3393560c545b8b8887d2ed6452cac7cadbc934d2379d02eb6b46aa3b0e1d23aa
@@ -14,7 +21,8 @@ software:
     published:
       timestamp: 2017-08-10 12:02:53
   v0.2:
-    commit_sha: d0cafac702370bc8cd02bee62bda22eab78a96f5
+    commit:
+      sha: d0cafac702370bc8cd02bee62bda22eab78a96f5
     files:
       - name: squid-exporter
         sha256: sha256:7a772f1efc33a7ef111c46cef1458d8bb55e4316f393a9530dde8538bf6dc47c
@@ -24,7 +32,8 @@ software:
     published:
       timestamp: 2017-10-21 10:42:40
   v0.3:
-    commit_sha: 6dcf7c0169956b09568fbef161445b8bae5d00e4
+    commit:
+      sha: 6dcf7c0169956b09568fbef161445b8bae5d00e4
     files:
       - name: squid-exporter
         sha256: sha256:fa9a4f69d32ffe31ed270c4e8fc525295000087c88fa49ae4ad38a2732c2afe7
@@ -34,7 +43,8 @@ software:
     published:
       timestamp: 2018-01-09 10:16:13
   v0.4:
-    commit_sha: b83f1d42ba6d4143a10851a4138983882120d0cd
+    commit:
+      sha: b83f1d42ba6d4143a10851a4138983882120d0cd
     files:
       - name: squid-exporter
         sha256: sha256:144417441336b57f928e4595985098fd643cdd0f8c03f0bf286a3bb8af9d74cf
@@ -44,7 +54,8 @@ software:
     published:
       timestamp: 2018-07-30 14:16:52
   v0.5:
-    commit_sha: b83f1d42ba6d4143a10851a4138983882120d0cd
+    commit:
+      sha: b83f1d42ba6d4143a10851a4138983882120d0cd
     files:
       - name: squid-exporter
         sha256: sha256:144417441336b57f928e4595985098fd643cdd0f8c03f0bf286a3bb8af9d74cf
@@ -54,7 +65,8 @@ software:
     published:
       timestamp: 2018-08-06 14:19:43
   v1.0:
-    commit_sha: 7d8a96e5a9d171c203218095fb1c49877eee7b26
+    commit:
+      sha: 7d8a96e5a9d171c203218095fb1c49877eee7b26
     files:
       - name: squid-exporter
         sha256: sha256:fb5818a508d80afd65241611f6f7b57b2bea17fa4ecbf909fac5389615f4eb88
@@ -64,7 +76,8 @@ software:
     published:
       timestamp: 2018-08-31 10:05:07
   v1.1:
-    commit_sha: 35dfd85aae0fec6c3eb0dbd6e0daad20c43914c3
+    commit:
+      sha: 35dfd85aae0fec6c3eb0dbd6e0daad20c43914c3
     files:
       - name: squid-exporter
         sha256: sha256:d412efaa6118840b12976b807da5e3e965d6f3a0ca151e1f66de889d999deef6
@@ -74,7 +87,8 @@ software:
     published:
       timestamp: 2018-09-24 18:55:25
   v1.2:
-    commit_sha: 5b3c0f65a979e945aa04b796a72c8feb04936306
+    commit:
+      sha: 5b3c0f65a979e945aa04b796a72c8feb04936306
     files:
       - name: squid-exporter
         sha256: sha256:e135bb0de416e99392a8b07905446c8b730fb1bfc4a32fc538765b8f19e39a57
@@ -84,7 +98,8 @@ software:
     published:
       timestamp: 2018-09-26 20:44:14
   v1.3:
-    commit_sha: 129682c0c5bfd74be1fb7cf5ae7c1d9b751ecd64
+    commit:
+      sha: 129682c0c5bfd74be1fb7cf5ae7c1d9b751ecd64
     files:
       - name: squid-exporter
         sha256: sha256:553b12f52922b7bc8ef69e542e45d60ced6b273647e961419ecaab19e8dc3ddb
@@ -94,7 +109,8 @@ software:
     published:
       timestamp: 2018-10-28 11:24:08
   v1.4:
-    commit_sha: a2b8e6fd9af09d1baecdc9b581c3abc03aee7ce2
+    commit:
+      sha: a2b8e6fd9af09d1baecdc9b581c3abc03aee7ce2
     files:
       - name: squid-exporter
         sha256: sha256:8b870946877ca83fa0960e2f6c3490ad93965c39d854335fb62154066f188072
@@ -104,7 +120,8 @@ software:
     published:
       timestamp: 2018-11-02 19:26:30
   v1.5:
-    commit_sha: b3ed1d9ca99488740165830c28d843153d928740
+    commit:
+      sha: b3ed1d9ca99488740165830c28d843153d928740
     files:
       - name: squid-exporter
         sha256: sha256:2cd663e2964f94ecd99a948f259a11e3edf24d07c4b89eb55bb866c4ded0d505
@@ -114,7 +131,8 @@ software:
     published:
       timestamp: 2019-03-10 14:00:09
   v1.6:
-    commit_sha: 023ea16c225dd0ee77253020e2f808b2d76d65cc
+    commit:
+      sha: 023ea16c225dd0ee77253020e2f808b2d76d65cc
     files:
       - name: squid-exporter
         sha256: sha256:b95231c4731f01f156d475db3f1a5fa7d3cf04b41f703f498f00651515bf8e4d
@@ -124,7 +142,8 @@ software:
     published:
       timestamp: 2019-03-17 14:02:24
   v1.7:
-    commit_sha: 82e68a0fbc942c6b7d7fef19085345bce78e4656
+    commit:
+      sha: 82e68a0fbc942c6b7d7fef19085345bce78e4656
     files:
       - name: squid-exporter
         sha256: sha256:5c4ff32bd84f15aecee23197d2a9b2d0e282a0a2a71a9c8b589ac98ff617a102
@@ -134,7 +153,8 @@ software:
     published:
       timestamp: 2019-05-02 16:31:08
   v1.8:
-    commit_sha: bce73466bddb592fd798084a1043655a9cf5f26d
+    commit:
+      sha: bce73466bddb592fd798084a1043655a9cf5f26d
     files:
       - name: squid-exporter
         sha256: sha256:705cbee9983bd36712123028d62281a594d56d5f0515fed97a15169bd8525bbb
@@ -144,7 +164,8 @@ software:
     published:
       timestamp: 2019-05-16 19:23:12
   v1.8.1:
-    commit_sha: 0ce0081c78e5fbe23facf58261551e67969c956e
+    commit:
+      sha: 0ce0081c78e5fbe23facf58261551e67969c956e
     files:
       - name: squid-exporter
         sha256: sha256:344c48c2c1e8dc038d44498fb37fd17b63c666ed4d0b954990068545b7d93c2b
@@ -154,7 +175,8 @@ software:
     published:
       timestamp: 2019-09-09 13:14:01
   v1.8.2:
-    commit_sha: 900fd001ce0759a694e16f73c2725dbd1df44cbe
+    commit:
+      sha: 900fd001ce0759a694e16f73c2725dbd1df44cbe
     files:
       - name: squid-exporter
         sha256: sha256:0adb8722bfefbe1e51258bef3e28bac90dec5aac191282261c24d5074ec7fb99
@@ -164,6 +186,6 @@ software:
     published:
       timestamp: 2019-12-30 13:21:42
 software_metadata:
-  prerelease: v1.8.2
+  prerelease: master
   release: v1.8.2
-  updated: 2020-02-21 08:31:09.758101
+  updated: 2020-02-27 06:17:37.848827

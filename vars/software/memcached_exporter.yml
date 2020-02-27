@@ -3,8 +3,15 @@ defaults:
   port: 9150
   tgroup: memcached
 software:
+  master:
+    commit:
+      sha: c21600478166daf14b19d20b641c74460cf21839
+    prerelease: true
+    published:
+      timestamp: 2020-02-25 21:41:59
   v0.3.0:
-    commit_sha: e67d9df9d4035c825cbbc023dc32683c5fcf5744
+    commit:
+      sha: e67d9df9d4035c825cbbc023dc32683c5fcf5744
     files:
       - name: memcached_exporter-0.3.0.darwin-386.tar.gz
         sha256: sha256:8432e26c878a8d5fa8fe1af5fb2dcf363b36b55f91e3983bc621edd478e8b794
@@ -130,7 +137,8 @@ software:
     published:
       timestamp: 2016-10-15 20:25:50
   v0.4.0:
-    commit_sha: d60f8d185aafca7edb0ae2b4aa364aad1b482674
+    commit:
+      sha: d60f8d185aafca7edb0ae2b4aa364aad1b482674
     files:
       - name: memcached_exporter-0.4.0.darwin-386.tar.gz
         sha256: sha256:34b592fefd5f47d3bc92ba07819123d5c63b4aacbcc1ac339def1f9e52e977a2
@@ -244,7 +252,8 @@ software:
     published:
       timestamp: 2018-01-23 23:15:09
   v0.4.1:
-    commit_sha: a0a344923d7795a7916ebc8b6d77c83ed7fd258d
+    commit:
+      sha: a0a344923d7795a7916ebc8b6d77c83ed7fd258d
     files:
       - name: memcached_exporter-0.4.1.darwin-386.tar.gz
         sha256: sha256:867095ef3306a09afdcfb3175a79cc8706a0f0d716deb06124fb3b1934976148
@@ -358,7 +367,8 @@ software:
     published:
       timestamp: 2018-02-01 14:14:45
   v0.5.0:
-    commit_sha: 241c664fb58feb61d979bd9e09eb46657bce67f2
+    commit:
+      sha: 241c664fb58feb61d979bd9e09eb46657bce67f2
     files:
       - name: memcached_exporter-0.5.0.darwin-386.tar.gz
         sha256: sha256:13620579f946ed3cf837977301e64bb660826b1cc20802070720793be6f5797c
@@ -484,7 +494,8 @@ software:
     published:
       timestamp: 2018-10-17 20:41:04
   v0.6.0:
-    commit_sha: d7eadc3523ec9731b7865a188093f70140d54a8d
+    commit:
+      sha: d7eadc3523ec9731b7865a188093f70140d54a8d
     files:
       - name: memcached_exporter-0.6.0.aix-ppc64.tar.gz
         sha256: sha256:728d391faf5f666529a7d24ecb6b932ae3e0219f0bfc35fef4fdbec24e46ba3c
@@ -614,6 +625,6 @@ software:
     published:
       timestamp: 2019-08-26 17:10:04
 software_metadata:
-  prerelease: v0.6.0
+  prerelease: master
   release: v0.6.0
-  updated: 2020-02-22 04:02:43.579106
+  updated: 2020-02-27 06:48:30.637827

@@ -3,19 +3,27 @@ defaults:
   port: 9176
   tgroup: openvpn
 software:
+  master:
+    commit:
+      sha: 02ce4c31995938771b44d0d3bc02ec55fee60877
+    prerelease: true
+    published:
+      timestamp: 2019-04-01 14:52:58
   v0.1:
-    commit_sha: 5518c1e3166e2bdd5cb55eb51604df64cf154484
+    commit:
+      sha: 5518c1e3166e2bdd5cb55eb51604df64cf154484
     files: []
     prerelease: false
     published:
       timestamp: 2017-04-03 07:52:17
   v0.2.1:
-    commit_sha: 8ae1b58a57653d98c26340ed414059a0245ed2cb
+    commit:
+      sha: 8ae1b58a57653d98c26340ed414059a0245ed2cb
     files: []
     prerelease: false
     published:
       timestamp: 2018-04-06 12:37:47
 software_metadata:
-  prerelease: v0.2.1
+  prerelease: master
   release: v0.2.1
-  updated: 2020-02-22 03:54:44.154020
+  updated: 2020-02-27 06:21:49.940501

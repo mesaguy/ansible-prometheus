@@ -4,7 +4,8 @@ defaults:
   tgroup: ping
 software:
   0.4.3:
-    commit_sha: 83266915841cc09e9177132a02cb66ac5be08caa
+    commit:
+      sha: 83266915841cc09e9177132a02cb66ac5be08caa
     files:
       - name: ping_exporter-0.4.3_darwin_386
         sha256: sha256:fe1a46e8435a94a0b0557f4f7f66c287626bce608480fa4c5cfd180f5f21e8cb
@@ -90,7 +91,8 @@ software:
     published:
       timestamp: 2018-09-22 07:42:27
   '0.44':
-    commit_sha: eed8f09ace8bb067f689ea69adb2ab680b184bbf
+    commit:
+      sha: eed8f09ace8bb067f689ea69adb2ab680b184bbf
     files:
       - name: ping_exporter-0.4.4_darwin_386
         sha256: sha256:952726ea5308aaeb4e745d99169c6500c1d644cd14b2ae700d9716ff89e0887a
@@ -175,7 +177,13 @@ software:
     prerelease: false
     published:
       timestamp: 2018-11-11 18:14:46
+  master:
+    commit:
+      sha: 895a75fc557c6d70fd149ffeb28db663417513e1
+    prerelease: true
+    published:
+      timestamp: 2020-01-10 14:51:35
 software_metadata:
-  prerelease: '0.44'
+  prerelease: master
   release: '0.44'
-  updated: 2020-02-22 03:57:04.529913
+  updated: 2020-02-27 06:23:32.378871

@@ -3,68 +3,15 @@ defaults:
   port: 9419
   tgroup: rabbitmq
 software:
-  0.16.0:
-    commit_sha: 365606dbdd47f44d0c1396242ed65491fd251e2c
-    files:
-      - name: rabbitmq_exporter-0.16.0.darwin-386.tar.gz
-        sha256: sha256:361e63c0a036ce01b7850b0bcf0da87cefe7d74b2efea4699a04b10b645d55b4
-        size: 2362167
-        url: https://github.com/kbudde/rabbitmq_exporter/releases/download/0.16.0/rabbitmq_exporter-0.16.0.darwin-386.tar.gz
-      - name: rabbitmq_exporter-0.16.0.darwin-amd64.tar.gz
-        sha256: sha256:71a6ea13c4d34df060172b7b0b455748221280adb5d39aef427df523fa3739f6
-        size: 2520056
-        url: https://github.com/kbudde/rabbitmq_exporter/releases/download/0.16.0/rabbitmq_exporter-0.16.0.darwin-amd64.tar.gz
-      - name: rabbitmq_exporter-0.16.0.linux-386.tar.gz
-        sha256: sha256:faaf2767651b1b975b24565078f55c657017151e712c4cc07700cda4054fb34b
-        size: 2344730
-        url: https://github.com/kbudde/rabbitmq_exporter/releases/download/0.16.0/rabbitmq_exporter-0.16.0.linux-386.tar.gz
-      - name: rabbitmq_exporter-0.16.0.linux-amd64.tar.gz
-        sha256: sha256:e62c2f80e9a4379803d3602bee927773b33a9f880114f1dd8db61d19d331891f
-        size: 2503544
-        url: https://github.com/kbudde/rabbitmq_exporter/releases/download/0.16.0/rabbitmq_exporter-0.16.0.linux-amd64.tar.gz
-      - name: rabbitmq_exporter-0.16.0.windows-386.tar.gz
-        sha256: sha256:8166a227b30cb029ef801c70231eec5b338926df82021b18d240a4af58d77c33
-        size: 2300817
-        url: https://github.com/kbudde/rabbitmq_exporter/releases/download/0.16.0/rabbitmq_exporter-0.16.0.windows-386.tar.gz
-      - name: rabbitmq_exporter-0.16.0.windows-amd64.tar.gz
-        sha256: sha256:f12523573ae9bf4282f1bbafb8df5248c6b3f84fd15a88b100a08067dd8ff9ea
-        size: 2463128
-        url: https://github.com/kbudde/rabbitmq_exporter/releases/download/0.16.0/rabbitmq_exporter-0.16.0.windows-amd64.tar.gz
-    prerelease: false
+  master:
+    commit:
+      sha: 98c87e0cd10ffe8bd5da43c55cc8aae98c247b50
+    prerelease: true
     published:
-      timestamp: 2016-11-19 21:50:31
-  v0.17.1:
-    commit_sha: 34ffd175e9bf6c650d32bd77b3cbacb1d18ef3e7
-    files:
-      - name: rabbitmq_exporter-0.17.1.darwin-386.tar.gz
-        sha256: sha256:1792f54b6e43aff3e8bde4b5c08516c0e3d663a9d38c2254269e04408dd6a05a
-        size: 2362393
-        url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v0.17.1/rabbitmq_exporter-0.17.1.darwin-386.tar.gz
-      - name: rabbitmq_exporter-0.17.1.darwin-amd64.tar.gz
-        sha256: sha256:814345638450a5c5278d17d474b7b647f019122f1f27a13322fd437a341d726f
-        size: 2520828
-        url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v0.17.1/rabbitmq_exporter-0.17.1.darwin-amd64.tar.gz
-      - name: rabbitmq_exporter-0.17.1.linux-386.tar.gz
-        sha256: sha256:4a18cbb7bbde09e7b6854874388b7d290544a4a440cc80a85f544c74c627c75f
-        size: 2345293
-        url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v0.17.1/rabbitmq_exporter-0.17.1.linux-386.tar.gz
-      - name: rabbitmq_exporter-0.17.1.linux-amd64.tar.gz
-        sha256: sha256:8980f4498d0d2229017f0133d794c46d969104365f6d7af9af34e39834904793
-        size: 2504144
-        url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v0.17.1/rabbitmq_exporter-0.17.1.linux-amd64.tar.gz
-      - name: rabbitmq_exporter-0.17.1.windows-386.tar.gz
-        sha256: sha256:aa343d8e1ee4c92df54929054c8e71f8cb28323bf93dbf17248971f6403ac07b
-        size: 2301414
-        url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v0.17.1/rabbitmq_exporter-0.17.1.windows-386.tar.gz
-      - name: rabbitmq_exporter-0.17.1.windows-amd64.tar.gz
-        sha256: sha256:05820c0509d4a882ee7a4edcca5c548a6767b9a7057f6efbabd9655ffa1218d9
-        size: 2463082
-        url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v0.17.1/rabbitmq_exporter-0.17.1.windows-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2017-01-07 21:29:46
+      timestamp: 2020-02-04 22:00:51
   v0.18.0:
-    commit_sha: 245869333bed49aedbaa4e796c214e30f4696239
+    commit:
+      sha: 245869333bed49aedbaa4e796c214e30f4696239
     files:
       - name: rabbitmq_exporter-0.18.0.darwin-386.tar.gz
         sha256: sha256:e31ef9c184612a3f13ee27b3fd66adb7b721cdb8e5d9f071da9331b98fb3c8bf
@@ -94,7 +41,8 @@ software:
     published:
       timestamp: 2017-04-02 18:55:21
   v0.19.0:
-    commit_sha: f596181b6688d1044b3a650d88ad444bd82c4b08
+    commit:
+      sha: f596181b6688d1044b3a650d88ad444bd82c4b08
     files:
       - name: rabbitmq_exporter-0.19.0.darwin-386.tar.gz
         sha256: sha256:c96aac69d5fb0645eb2b18a46138195f7ff48d08320b7fb901c20b299563ea18
@@ -124,7 +72,8 @@ software:
     published:
       timestamp: 2017-04-19 19:38:28
   v0.20.0:
-    commit_sha: a301c6a463bb740123fb2c54b43ac6189a08c019
+    commit:
+      sha: a301c6a463bb740123fb2c54b43ac6189a08c019
     files:
       - name: rabbitmq_exporter-0.20.0.darwin-386.tar.gz
         sha256: sha256:6806455864611087c1ca20e0a74aa410f809f6a6e8e4ef28c3f7c731f877a477
@@ -154,7 +103,8 @@ software:
     published:
       timestamp: 2017-05-14 18:52:36
   v0.21.0:
-    commit_sha: ef1038166b286323d314201c3cb799ebe12063c6
+    commit:
+      sha: ef1038166b286323d314201c3cb799ebe12063c6
     files:
       - name: rabbitmq_exporter-0.21.0.darwin-386.tar.gz
         sha256: sha256:38864c4282b564af5bc8d8d679ecf62410561b4a3a406fe259465bf150d027ca
@@ -184,7 +134,8 @@ software:
     published:
       timestamp: 2017-09-29 19:36:33
   v0.22.0:
-    commit_sha: 0ce08d7f77820f6fd50cc427583219c40ecd64ea
+    commit:
+      sha: 0ce08d7f77820f6fd50cc427583219c40ecd64ea
     files:
       - name: rabbitmq_exporter-0.22.0.darwin-386.tar.gz
         sha256: sha256:66dc2884d9780eee8998fa94c3686cf6a148d510cdc2c86e4ae2fe1c2f51ccde
@@ -214,7 +165,8 @@ software:
     published:
       timestamp: 2017-10-03 20:47:50
   v0.23.0:
-    commit_sha: 9213ae9a12e215a8a4ba211ae1a7cbb3d19a5958
+    commit:
+      sha: 9213ae9a12e215a8a4ba211ae1a7cbb3d19a5958
     files:
       - name: rabbitmq_exporter-0.23.0.darwin-386.tar.gz
         sha256: sha256:db094636145b8a8b19281af5c73adc71db209666b6e8e03a3459a7e28a7b38ad
@@ -244,7 +196,8 @@ software:
     published:
       timestamp: 2017-10-09 20:07:00
   v0.24.0:
-    commit_sha: 3835beee306b0fae46f7c1579f07b968f0d039f8
+    commit:
+      sha: 3835beee306b0fae46f7c1579f07b968f0d039f8
     files:
       - name: rabbitmq_exporter-0.24.0.darwin-386.tar.gz
         sha256: sha256:f2cb5aa61e0814baec6541d22592655c618ffcd7a73666fb947b8daa8af82c55
@@ -274,7 +227,8 @@ software:
     published:
       timestamp: 2017-11-17 05:17:58
   v0.25.0:
-    commit_sha: 4abe8ecd400be0f06b29b666ddd5a49b521dd6af
+    commit:
+      sha: 4abe8ecd400be0f06b29b666ddd5a49b521dd6af
     files:
       - name: rabbitmq_exporter-0.25.0.darwin-386.tar.gz
         sha256: sha256:65ab287a5f38fe2a47b655009ab90cb6a849df71c5cc1c275b37f2680350c85d
@@ -304,7 +258,8 @@ software:
     published:
       timestamp: 2017-11-25 22:00:19
   v0.25.1:
-    commit_sha: 5224a2d0aec8fe20acbeef661e731607f5ee9975
+    commit:
+      sha: 5224a2d0aec8fe20acbeef661e731607f5ee9975
     files:
       - name: rabbitmq_exporter-0.25.1.darwin-386.tar.gz
         sha256: sha256:4b918e48650334f54e4b977b6044d2956b1f757786e4cdc531e5d1a4adcc86a3
@@ -334,7 +289,8 @@ software:
     published:
       timestamp: 2017-11-30 20:40:31
   v0.25.2:
-    commit_sha: 8238c5d9ad509dab94e631cdecf3d75155fbdee4
+    commit:
+      sha: 8238c5d9ad509dab94e631cdecf3d75155fbdee4
     files:
       - name: rabbitmq_exporter-0.25.2.darwin-386.tar.gz
         sha256: sha256:a29543da9f81f7e4651980e908c210be030724a36badf8e080c0eedbb85740d9
@@ -364,7 +320,8 @@ software:
     published:
       timestamp: 2017-12-02 21:50:49
   v0.26.0:
-    commit_sha: b3d87239f3ad9e6dbdb5fd0cbf689eef056996eb
+    commit:
+      sha: b3d87239f3ad9e6dbdb5fd0cbf689eef056996eb
     files:
       - name: rabbitmq_exporter-0.26.0.darwin-386.tar.gz
         sha256: sha256:b7bcc5a32b405e145cde32b1d5901432eafb34cd54b8dbc34769ab7cdfbda396
@@ -394,7 +351,8 @@ software:
     published:
       timestamp: 2018-02-26 21:49:48
   v0.27.0:
-    commit_sha: 5d992872558b4ad92dbb1f649be19bd09d6117af
+    commit:
+      sha: 5d992872558b4ad92dbb1f649be19bd09d6117af
     files:
       - name: rabbitmq_exporter-0.27.0.darwin-386.tar.gz
         sha256: sha256:9ec8b7a560f0ce5bc850f5ce8731a8efb0466a4810bca6cc767acb7bd1f97d44
@@ -424,7 +382,8 @@ software:
     published:
       timestamp: 2018-04-08 10:01:54
   v0.27.1:
-    commit_sha: 0b510fabb31700ccc7f0b440e3bf99488cfe111e
+    commit:
+      sha: 0b510fabb31700ccc7f0b440e3bf99488cfe111e
     files:
       - name: rabbitmq_exporter-0.27.1.darwin-386.tar.gz
         sha256: sha256:31c711851de3d1a0282665d1667c14001c96fa384f9ff1cd8ee177004f6f658e
@@ -454,7 +413,8 @@ software:
     published:
       timestamp: 2018-04-10 08:05:03
   v0.28.0:
-    commit_sha: 8cdbef10fc4c30ab1d127e85b663fa339e322071
+    commit:
+      sha: 8cdbef10fc4c30ab1d127e85b663fa339e322071
     files:
       - name: rabbitmq_exporter-0.28.0.darwin-386.tar.gz
         sha256: sha256:6724d90bb8b9db854db4ce3e5d2f6706961149404b3089a95000dbb85ea064d4
@@ -484,7 +444,8 @@ software:
     published:
       timestamp: 2018-04-25 20:05:16
   v0.29.0:
-    commit_sha: fc78ab0a47bc6557e1b8a218b0b0c307aa7946ea
+    commit:
+      sha: fc78ab0a47bc6557e1b8a218b0b0c307aa7946ea
     files:
       - name: rabbitmq_exporter-0.29.0.darwin-386.tar.gz
         sha256: sha256:f3cdac0a95c783afdcc1f9314f75fdc7ec4f3ecbf2d6613597a9f3045270b8a1
@@ -514,7 +475,8 @@ software:
     published:
       timestamp: 2018-08-29 10:57:32
   v1.0-wip1:
-    commit_sha: 7be7d19875237cc021ee8d876098d1cb0a37e44a
+    commit:
+      sha: 7be7d19875237cc021ee8d876098d1cb0a37e44a
     files:
       - name: rabbitmq_exporter-1.0.0-WIP.darwin-386.tar.gz
         sha256: sha256:cb3e8f1f1055125693bcdb33324cb329b09f96bdab139fb4f5303ec515c15f80
@@ -544,7 +506,8 @@ software:
     published:
       timestamp: 2018-11-04 09:26:08
   v1.0-wip2:
-    commit_sha: 9ec23ee1c9e198c2b6b8612a04d5753d2345e645
+    commit:
+      sha: 9ec23ee1c9e198c2b6b8612a04d5753d2345e645
     files:
       - name: rabbitmq_exporter-1.0.0-WIP.darwin-386.tar.gz
         sha256: sha256:c2a4cec0560f028b1b27323914562404212d8efbddeaf2c6997f21356acc8fb2
@@ -578,7 +541,8 @@ software:
     published:
       timestamp: 2019-02-04 22:15:58
   v1.0.0-RC4:
-    commit_sha: 5c699592825d80f544d85dec746560ca2ae9dee0
+    commit:
+      sha: 5c699592825d80f544d85dec746560ca2ae9dee0
     files:
       - name: rabbitmq_exporter-1.0.0-RC4.darwin-386.tar.gz
         sha256: sha256:26d477e08ec6ab6d59a3ac99fa7ff0c2c17a4ca145b2d564a60987122a64ea6e
@@ -612,7 +576,8 @@ software:
     published:
       timestamp: 2019-03-11 21:39:26
   v1.0.0-RC5:
-    commit_sha: 5da54c9d6a53019bb38aa3a46e55e26ceebf51db
+    commit:
+      sha: 5da54c9d6a53019bb38aa3a46e55e26ceebf51db
     files:
       - name: rabbitmq_exporter-1.0.0-RC5.darwin-386.tar.gz
         sha256: sha256:aecacc7e1c82bed59d35ef3f8024f2791b5802f1f834aa0163e1e26a2df14d2f
@@ -646,7 +611,8 @@ software:
     published:
       timestamp: 2019-04-23 23:11:20
   v1.0.0-RC6.1:
-    commit_sha: 6db8c3822c77b6577b39e6d5a1868c6c5a28dfe2
+    commit:
+      sha: 6db8c3822c77b6577b39e6d5a1868c6c5a28dfe2
     files:
       - name: rabbitmq_exporter-1.0.0-RC6.1.darwin-386.tar.gz
         sha256: sha256:0e6647f6d1e659e457564ec940139cf5586dc939bb3b0fca6d4c8e53c840f56d
@@ -680,6 +646,6 @@ software:
     published:
       timestamp: 2019-04-26 19:01:13
 software_metadata:
-  prerelease: v1.0-wip1
+  prerelease: v1.0-wip2
   release: v0.29.0
-  updated: 2020-02-23 06:49:33.955155
+  updated: 2020-02-27 06:19:16.962981

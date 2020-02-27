@@ -3,8 +3,15 @@ defaults:
   port: 9374
   tgroup: smokeping
 software:
+  master:
+    commit:
+      sha: b21694fd49cc06391fc3b22d459c2ae400057bc7
+    prerelease: true
+    published:
+      timestamp: 2019-11-18 23:35:28
   v0.1.0:
-    commit_sha: 08734ee4b8f2c946b637b4ec5f65f6c807134086
+    commit:
+      sha: 08734ee4b8f2c946b637b4ec5f65f6c807134086
     files:
       - name: sha256sums.txt
         sha256: sha256:1b11fee92e5a509311dca3c4b2bf8f1cfa3a3b65336f51137e3478f02736f556
@@ -130,7 +137,8 @@ software:
     published:
       timestamp: 2018-11-08 10:36:32
   v0.2.0:
-    commit_sha: e7fd25d0467a0f6048d13cd5bf652efd169e8d43
+    commit:
+      sha: e7fd25d0467a0f6048d13cd5bf652efd169e8d43
     files:
       - name: sha256sums.txt
         sha256: sha256:5857c3ed4a5d584f769fff492317f3ea179377a1c6c76f6ffab7abd21f19d183
@@ -256,7 +264,8 @@ software:
     published:
       timestamp: 2019-05-14 16:17:02
   v0.3.0:
-    commit_sha: 594bd985ddfac52c473dcd4d290e9a8798406a10
+    commit:
+      sha: 594bd985ddfac52c473dcd4d290e9a8798406a10
     files:
       - name: sha256sums.txt
         sha256: sha256:421e5ab7361abb74101bc5b89e6184967fa2f648677bb12bf356f6c61626fc12
@@ -374,6 +383,6 @@ software:
     published:
       timestamp: 2019-06-25 14:25:28
 software_metadata:
-  prerelease: v0.3.0
+  prerelease: master
   release: v0.3.0
-  updated: 2020-02-21 08:32:03.594749
+  updated: 2020-02-27 06:18:24.492436

@@ -4,7 +4,8 @@ defaults:
   tgroup: digitalocean
 software:
   '0.1':
-    commit_sha: 75da2dc0fa0c5e20410a2b2c63d6e1ba78e24137
+    commit:
+      sha: 75da2dc0fa0c5e20410a2b2c63d6e1ba78e24137
     files:
       - name: digitalocean_exporter-0.1.darwin-386
         sha256: sha256:3432d1d336f1dea17ab8f6f4b53723e5233ba598bc6f0d9991ef9b2a6d12a372
@@ -70,7 +71,8 @@ software:
     published:
       timestamp: 2017-03-24 01:09:54
   '0.2':
-    commit_sha: a73944f7da3fd2462d750139fc7c521d31169776
+    commit:
+      sha: a73944f7da3fd2462d750139fc7c521d31169776
     files:
       - name: digitalocean_exporter-0.2-darwin-386
         sha256: sha256:05dff94fc39e761842c8664e6ee496927d7865f504fdd809f65cbce011649eb9
@@ -136,7 +138,8 @@ software:
     published:
       timestamp: 2017-03-25 15:32:11
   '0.3':
-    commit_sha: b16aff6f27cf34a058a8df27a230000e2e2a96ce
+    commit:
+      sha: b16aff6f27cf34a058a8df27a230000e2e2a96ce
     files:
       - name: digitalocean_exporter-0.3-darwin-386
         sha256: sha256:91941e74ffbfe6539fdbd938ffda76f630bb7bec59e7f4916c345bcb05b8012d
@@ -202,7 +205,8 @@ software:
     published:
       timestamp: 2017-03-29 22:47:24
   '0.4':
-    commit_sha: 20edc46b51e7042f8a02ed4158225eaba694b70f
+    commit:
+      sha: 20edc46b51e7042f8a02ed4158225eaba694b70f
     files:
       - name: digitalocean_exporter-0.4-darwin-386
         sha256: sha256:8f227c4f1afc24ef87722b5cd54ee097c71bcecfde8656f07861ed6a1b7e508f
@@ -268,7 +272,8 @@ software:
     published:
       timestamp: 2017-04-03 10:29:14
   '0.5':
-    commit_sha: 9a56650cf8970c44f3e45f66b5d2cea56f2d6c5a
+    commit:
+      sha: 9a56650cf8970c44f3e45f66b5d2cea56f2d6c5a
     files:
       - name: digitalocean_exporter-0.5-darwin-386
         sha256: sha256:a719a336671d4946b8991dfb1b019ea533b9202e68f155420c225201a8993ebd
@@ -353,7 +358,13 @@ software:
     prerelease: false
     published:
       timestamp: 2018-04-05 09:33:49
+  master:
+    commit:
+      sha: 61b1f9ca0aaf1a31872ce356ea509d8741ad03aa
+    prerelease: true
+    published:
+      timestamp: 2019-12-21 13:28:46
 software_metadata:
-  prerelease: '0.5'
+  prerelease: master
   release: '0.5'
-  updated: 2020-02-23 08:30:32.362782
+  updated: 2020-02-27 06:00:54.901427
