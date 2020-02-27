@@ -4,37 +4,26 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
-- name: Include bind_exporter (prometheus-community) variable file
-  include_vars: exporters/bind_exporter_prometheus_community.yml
-
 - name: Starting bind_exporter (prometheus-community) install
   set_fact:
     prometheus_exporter: true
     prometheus_software_binary_name: bind_exporter
-    prometheus_software_env_vars: '{{ prometheus_bind_exporter_prometheus_community_env_vars | default({}) }}'
-    prometheus_software_extra_opts: '{{ prometheus_bind_exporter_prometheus_community_extra_opts | default () }}'
-    prometheus_software_fallback_to_build: '{{ prometheus_bind_exporter_prometheus_community_fallback_to_build | default(prometheus_fallback_to_build) }}'
-    prometheus_software_makefile_make_command: 'make build'
+    prometheus_software_makefile_make_command: make build
     prometheus_software_name: bind_exporter_prometheus_community
-    prometheus_software_version: '{{ prometheus_bind_exporter_prometheus_community_version | default("0.3.0") }}'
-    prometheus_software_src_version: '{{ prometheus_bind_exporter_prometheus_community_src_version | default("v0.3.0") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_bind_exporter_prometheus_community_jobname | default("bind") }}'
     prometheus_software_description: 'Prometheus bind_exporter (prometheus-community), exporter of BIND(named/dns) v9+ service metrics'
     prometheus_software_documentation: 'https://github.com/prometheus-community/bind_exporter'
-    prometheus_software_host: '{{ prometheus_bind_exporter_prometheus_community_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_bind_exporter_prometheus_community_port | default(8053) }}'
     prometheus_software_service_test: '{{ prometheus_bind_exporter_prometheus_community_service_test | default(true) }}'
-    prometheus_software_runas: '{{ prometheus_bind_exporter_prometheus_community_runas | default(prometheus_user) }}'
-    prometheus_software_shortname: bind_exporter
 
-- name: Set {{ prometheus_software_shortname }}-{{ prometheus_software_version }} facts
+- name: Include task to setup {{ prometheus_software_name }} facts
+  include_tasks: _setup_software_facts.yml
+
+- name: Set {{ prometheus_software_name_version }} facts
   set_fact:
     prometheus_software_opts:
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
-    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
-    prometheus_software_bin_url: 'https://github.com/prometheus-community/{{ prometheus_software_shortname }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_shortname }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
-    prometheus_software_src_dir_suffix: '/src/github.com/prometheus-community/{{ prometheus_software_shortname }}'
-    prometheus_software_src_url: 'https://github.com/prometheus-community/{{ prometheus_software_shortname }}'
+    prometheus_software_url: 'https://github.com/prometheus-community/{{ prometheus_software_binary_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_binary_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_src_dir_suffix: '/src/github.com/prometheus-community/{{ prometheus_software_binary_name }}'
+    prometheus_software_src_url: 'https://github.com/prometheus-community/{{ prometheus_software_binary_name }}'
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml

@@ -4,36 +4,24 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
-- name: Include rabbitmq_exporter (kbudde) variable file
-  include_vars: exporters/rabbitmq_exporter_kbudde.yml
-
 - name: Starting rabbitmq_exporter (kbudde) install
   set_fact:
     prometheus_exporter: true
-    prometheus_software_binary_name: 'rabbitmq_exporter'
-    prometheus_software_env_vars: '{{ prometheus_rabbitmq_exporter_kbudde_env_vars | default({}) }}'
-    prometheus_software_extra_opts: '{{ prometheus_rabbitmq_exporter_kbudde_extra_opts | default() }}'
-    prometheus_software_fallback_to_build: '{{ prometheus_rabbitmq_exporter_kbudde_fallback_to_build | default(prometheus_fallback_to_build) }}'
+    prometheus_software_binary_name: rabbitmq_exporter
     prometheus_software_makefile_make_command: 'go get -d && make build'
-    prometheus_software_name: 'rabbitmq_exporter_kbudde'
-    prometheus_software_version: '{{ prometheus_rabbitmq_exporter_kbudde_version | default("0.28.0") }}'
-    prometheus_software_src_version: '{{ prometheus_rabbitmq_exporter_kbudde_src_version | default("v0.28.0") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_rabbitmq_exporter_kbudde_jobname | default("rabbitmq") }}'
+    prometheus_software_name: rabbitmq_exporter_kbudde
     prometheus_software_description: 'Prometheus rabbitmq_exporter (kbudde), exporter for RabbitMQ metrics'
     prometheus_software_documentation: 'https://github.com/kbudde/rabbitmq_exporter'
-    prometheus_software_host: '{{ prometheus_rabbitmq_exporter_kbudde_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_rabbitmq_exporter_kbudde_port | default(9419) }}'
-    prometheus_software_runas: '{{ prometheus_rabbitmq_exporter_kbudde_runas | default(prometheus_user) }}'
-    prometheus_software_shortname: 'rabbitmq_exporter'
-    prometheus_software_opts: []
 
-- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
+- name: Include task to setup {{ prometheus_software_name }} facts
+  include_tasks: _setup_software_facts.yml
+
+- name: Set {{ prometheus_software_name_version }} facts
   set_fact:
     prometheus_software_env_vars: '{{ { "PUBLISH_ADDR": prometheus_software_host, "PUBLISH_PORT": prometheus_software_port } | combine(prometheus_software_env_vars) }}'
-    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
-    prometheus_software_bin_url: 'https://github.com/kbudde/{{ prometheus_software_shortname }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_shortname }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
-    prometheus_software_src_dir_suffix: '/src/github.com/kbudde/{{ prometheus_software_shortname }}'
-    prometheus_software_src_url: 'https://github.com/kbudde/{{ prometheus_software_shortname }}.git'
+    prometheus_software_url: 'https://github.com/kbudde/{{ prometheus_software_binary_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_binary_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_src_dir_suffix: '/src/github.com/kbudde/{{ prometheus_software_binary_name }}'
+    prometheus_software_src_url: 'https://github.com/kbudde/{{ prometheus_software_binary_name }}.git'
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml

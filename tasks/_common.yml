@@ -26,7 +26,10 @@
       package:
         name: '{{ prometheus_prerequisite_packages }}'
         state: present
-      when: prometheus_prerequisite_packages is defined
+      register: prometheus_prerequisite_packages_install
+      when:
+        - prometheus_prerequisite_packages is defined
+        - prometheus_prerequisite_packages_install is undefined
 
     - name: Include task to install and locate sponge
       include_tasks: _install_sponge.yml

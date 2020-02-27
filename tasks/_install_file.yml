@@ -10,13 +10,20 @@
 - name: Include task to setup directories for {{ prometheus_software_name_version }} installation
   include_tasks: _install_directory.yml
 
+- name: Set variables for {{ prometheus_software_name_version }} file URL from extended metadata
+  set_fact:
+    prometheus_software_url: '{{ prometheus_software_metadata.url }}'
+  when:
+    - prometheus_software_metadata is defined and prometheus_software_metadata | length > 0
+
 - name: Download {{ prometheus_software_name_version }}
   become: true
   get_url:
     owner: root
     group: '{{ prometheus_group }}'
     mode: '0755'
-    url: '{{ prometheus_software_file_url }}'
+    url: '{{ prometheus_software_url }}'
+    checksum: '{{ prometheus_software_metadata.sha256 | default(omit) }}'
     dest: '{{ prometheus_software_install_dir }}/{{ prometheus_software_binary_name }}'
   register: prometheus_download
   retries: 5

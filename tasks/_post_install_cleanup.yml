@@ -55,7 +55,6 @@
     prometheus_software_config_file: ''
     prometheus_software_config_name: ''
     prometheus_software_command_args: []
-    prometheus_software_dependencies: []
     prometheus_software_description: ''
     # Link to documentation about the software. This variable is inserted
     # in the service init/systemd file:
@@ -94,11 +93,10 @@
     prometheus_software_src_path: ''
     prometheus_software_service_name: ''
     # Metadata dictionary representing a binaries name, URL, checksum, etc
-    prometheus_software_bin_metadata: ''
-    # URL where a software's archived binary can be downloaded
-    prometheus_software_bin_url: ''
-    # URL where a software's binary can be downloaded, not an archive file
-    prometheus_software_file_url: ''
+    prometheus_software_metadata: ''
+    # URL where a software's installation binary tarball or single file
+    # can be found
+    prometheus_software_url: ''
     # Command to run the {{ prometheus_software_binary }} via. Generally
     # needed for java jars:
     prometheus_software_prefix_command: []
@@ -115,6 +113,8 @@
     prometheus_software_src_url: ''
     # Version of the software's source to checkout
     prometheus_software_src_version: ''
+    # Allow use of prerelease versions
+    prometheus_software_use_prerelease: ''
     # Version of Prometheus software to install
     prometheus_software_version: ''
     # Extra options to give 'unarchive' when decompressing binary file

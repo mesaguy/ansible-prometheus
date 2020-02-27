@@ -7,24 +7,25 @@
 - name: Starting jmx_exporter install
   set_fact:
     prometheus_exporter: true
-    prometheus_software_binary_name: 'jmx_exporter.jar'
+    prometheus_software_binary_name: jmx_exporter.jar
     prometheus_software_config: '{{ prometheus_jmx_exporter_cfgs | default({"default" : ""}) }}'
-    prometheus_software_extra_opts: []
-    prometheus_software_name: 'jmx_exporter'
-    prometheus_software_version: '{{ prometheus_jmx_exporter_version | default("0.12.0") }}'
+    prometheus_software_name: jmx_exporter
     prometheus_software_description: 'Prometheus jmx_exporter, JMX to Prometheus exporter'
     prometheus_software_documentation: 'https://github.com/prometheus/jmx_exporter'
-    prometheus_software_host: '{{ prometheus_jmx_exporter_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_jmx_exporter_port | default(1234) }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_jmx_exporter_jobname | default("jmx") }}'
 
-- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
+- name: Include task to setup {{ prometheus_software_name }} facts
+  include_tasks: _setup_software_facts.yml
+
+- name: Set {{ prometheus_software_name_version }} corrective facts
+  set_fact:
+    prometheus_software_version: '{{ prometheus_software_version | replace("parent-", "") }}'
+
+- name: Set {{ prometheus_software_name_version }} facts
   set_fact:
     prometheus_software_filename: 'jmx_prometheus_javaagent-{{ prometheus_software_version }}.jar'
     prometheus_software_opts:
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
-    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
-    prometheus_software_file_url: 'https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/{{ prometheus_software_version }}/jmx_prometheus_javaagent-{{ prometheus_software_version }}.jar'
+    prometheus_software_url: 'https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/{{ prometheus_software_version }}/jmx_prometheus_javaagent-{{ prometheus_software_version }}.jar'
     prometheus_software_src_dir_suffix: '/src/github.com/prometheus/{{ prometheus_software_name }}'
 
 - name: Install standalone file for {{ prometheus_software_name_version }}

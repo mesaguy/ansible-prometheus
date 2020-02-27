@@ -4,35 +4,25 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
-- name: Include squid_exporter (boynux) variable file
-  include_vars: exporters/squid_exporter_boynux.yml
-
 - name: Starting squid_exporter (boynux) install
   set_fact:
     prometheus_exporter: true
-    prometheus_software_binary_name: 'squid-exporter'
-    prometheus_software_env_vars: '{{ prometheus_squid_exporter_boynux_env_vars | default({}) }}'
-    prometheus_software_extra_opts: '{{ prometheus_squid_exporter_boynux_extra_opts | default() }}'
-    prometheus_software_fallback_to_build: '{{ prometheus_squid_exporter_boynux_fallback_to_build | default(prometheus_fallback_to_build) }}'
+    prometheus_software_binary_name: squid-exporter
     prometheus_software_files:
-      - 'bin/squid-exporter'
-    prometheus_software_name: 'squid_exporter_boynux'
-    prometheus_software_version: '{{ prometheus_squid_exporter_boynux_version | default("1.8.2") }}'
+      - bin/squid-exporter
+    prometheus_software_name: squid_exporter_boynux
     prometheus_software_description: 'Prometheus squid_exporter (boynux), exports squid metrics in Prometheus format'
     prometheus_software_documentation: 'https://github.com/boynux/squid-exporter'
-    prometheus_software_host: '{{ prometheus_squid_exporter_boynux_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_squid_exporter_boynux_port | default(9301) }}'
-    prometheus_software_runas: '{{ prometheus_squid_exporter_boynux_runas | default(prometheus_user) }}'
-    prometheus_software_shortname: 'squid-exporter'
-    prometheus_software_tgroup_jobname: '{{ prometheus_squid_exporter_boynux_jobname | default("squid") }}'
 
-- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
+- name: Include task to setup {{ prometheus_software_name }} facts
+  include_tasks: _setup_software_facts.yml
+
+- name: Set {{ prometheus_software_name_version }} facts
   set_fact:
     prometheus_software_opts:
       - '-listen={{ prometheus_software_host }}:{{ prometheus_software_port }}'
-    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
-    prometheus_software_src_dir_suffix: '/src/github.com/boynux/{{ prometheus_software_shortname }}'
-    prometheus_software_src_url: 'https://github.com/boynux/{{ prometheus_software_shortname }}/archive/v{{ prometheus_software_version }}.tar.gz'
+    prometheus_software_src_dir_suffix: '/src/github.com/boynux/{{ prometheus_software_binary_name }}'
+    prometheus_software_src_url: 'https://github.com/boynux/{{ prometheus_software_binary_name }}/archive/{{ prometheus_software_version }}.tar.gz'
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml

@@ -4,34 +4,24 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
-- name: Include nvidia_exporter (BugRoger) variable file
-  include_vars: exporters/nvidia_exporter_bugroger.yml
-
 - name: Starting nvidia_exporter (BugRoger) install
   set_fact:
     prometheus_exporter: true
-    prometheus_software_binary_name: 'nvidia-exporter'
-    prometheus_software_env_vars: '{{ prometheus_nvidia_exporter_bugroger_env_vars | default({}) }}'
-    prometheus_software_extra_opts: '{{ prometheus_nvidia_exporter_bugroger_extra_opts | default() }}'
-    prometheus_software_fallback_to_build: '{{ prometheus_nvidia_exporter_bugroger_fallback_to_build | default(prometheus_fallback_to_build) }}'
-    prometheus_software_officialname: 'nvidia-exporter'
+    prometheus_software_binary_name: nvidia-exporter
+    prometheus_software_officialname: nvidia-exporter
     prometheus_software_makefile_make_command: 'go get -d && go build'
-    prometheus_software_name: 'nvidia_exporter_bugroger'
-    prometheus_software_version: '{{ prometheus_nvidia_exporter_bugroger_version | default("f38931eea308b265477dc64a86594cc288bf270b") }}'
+    prometheus_software_name: nvidia_exporter_bugroger
     prometheus_software_description: 'Prometheus nvidia_exporter (BugRoger), exporter of NVIDIA GPU metrics'
     prometheus_software_documentation: 'https://github.com/BugRoger/nvidia-exporter'
-    prometheus_software_host: '{{ prometheus_nvidia_exporter_bugroger_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_nvidia_exporter_bugroger_port | default(9401) }}'
-    prometheus_software_runas: '{{ prometheus_nvidia_exporter_bugroger_runas | default(prometheus_user) }}'
     prometheus_software_service_test: '{{ prometheus_nvidia_exporter_bugroger_service_test | default(true) }}'
-    prometheus_software_shortname: 'nvidia_exporter'
-    prometheus_software_tgroup_jobname: '{{ prometheus_nvidia_exporter_bugroger_jobname | default("nvidia") }}'
 
-- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
+- name: Include task to setup {{ prometheus_software_name }} facts
+  include_tasks: _setup_software_facts.yml
+
+- name: Set {{ prometheus_software_name_version }} facts
   set_fact:
     prometheus_software_opts:
       - '-web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
-    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
     prometheus_software_src_dir_suffix: '/src/github.com/BugRoger/nvidia-exporter'
     prometheus_software_src_url: 'https://github.com/BugRoger/nvidia-exporter/archive/{{ prometheus_software_version }}.tar.gz'
 

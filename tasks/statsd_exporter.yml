@@ -4,34 +4,24 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
-- name: Include statsd_exporter variable file
-  include_vars: exporters/statsd_exporter.yml
-
 - name: Starting statsd_exporter install
   set_fact:
     prometheus_exporter: true
-    prometheus_software_binary_name: 'statsd_exporter'
-    prometheus_software_env_vars: '{{ prometheus_statsd_exporter_env_vars | default({}) }}'
-    prometheus_software_extra_opts: '{{ prometheus_statsd_exporter_extra_opts | default () }}'
-    prometheus_software_fallback_to_build: '{{ prometheus_statsd_exporter_fallback_to_build | default(prometheus_fallback_to_build) }}'
+    prometheus_software_binary_name: statsd_exporter
     prometheus_software_makefile_make_command: 'go get -d && go build'
-    prometheus_software_name: 'statsd_exporter'
-    prometheus_software_version: '{{ prometheus_statsd_exporter_version | default("0.14.1") }}'
-    prometheus_software_src_version: '{{ prometheus_statsd_exporter_src_version | default("v0.14.1") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_statsd_exporter_jobname | default("statsd") }}'
+    prometheus_software_name: statsd_exporter
     prometheus_software_description: 'Prometheus statsd_exporter, probing of endpoints'
     prometheus_software_documentation: 'https://github.com/prometheus/statsd_exporter'
-    prometheus_software_host: '{{ prometheus_statsd_exporter_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_statsd_exporter_port | default(9102) }}'
-    prometheus_software_runas: '{{ prometheus_statsd_exporter_runas | default(prometheus_user) }}'
 
-- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
+- name: Include task to setup {{ prometheus_software_name }} facts
+  include_tasks: _setup_software_facts.yml
+
+- name: Set {{ prometheus_software_name_version }} facts
   set_fact:
     prometheus_software_config_name: '{{ prometheus_software_name }}'
-    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
     prometheus_software_opts:
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
-    prometheus_software_bin_url: 'https://github.com/prometheus/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_url: 'https://github.com/prometheus/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
     prometheus_software_src_dir_suffix: '/src/github.com/prometheus/{{ prometheus_software_name }}'
     prometheus_software_src_url: 'https://github.com/prometheus/{{ prometheus_software_name }}'
 

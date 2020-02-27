@@ -34,7 +34,7 @@ describe processes(Regexp.new("^/opt/prometheus/exporters/elasticsearch_exporter
     its('users') { should include 'prometheus' }
 end
 
-describe port(9109) do
+describe port(9908) do
     it { should be_listening }
 end
 

@@ -8,33 +8,29 @@
   set_fact:
     prometheus_exporter: false
     prometheus_software_config: '{{ prometheus_alertmanager_cfg | default(lookup("file", "../files/defaults/alertmanager.yml") | from_yaml) }}'
-    prometheus_software_env_vars: '{{ prometheus_alertmanager_env_vars | default({}) }}'
-    prometheus_software_extra_opts: '{{ prometheus_alertmanager_extra_opts | default() }}'
     prometheus_software_files:
-      - 'alertmanager'
-      - 'amtool'
-    prometheus_software_fallback_to_build: '{{ prometheus_alertmanager_fallback_to_build | default(prometheus_fallback_to_build) }}'
+      - alertmanager
+      - amtool
     prometheus_software_makefile_make_command: 'make build'
-    prometheus_software_name: 'alertmanager'
-    prometheus_software_version: '{{ prometheus_alertmanager_version | default("0.20.0") }}'
-    prometheus_software_src_version: '{{ prometheus_alertmanager_src_version | default("v0.20.0") }}'
-    prometheus_software_description: 'Prometheus alertmanager'
+    prometheus_software_name: alertmanager
+    prometheus_software_description: Prometheus alertmanager
     prometheus_software_documentation: 'https://github.com/prometheus/alertmanager'
-    prometheus_software_host: '{{ prometheus_alertmanager_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_alertmanager_port | default(9093) }}'
-    prometheus_software_runas: '{{ prometheus_alertmanager_runas | default(prometheus_user) }}'
     prometheus_software_supports_reload: true
     prometheus_alertmanager_storage_directory: '{{ prometheus_alertmanager_storage_dir | default(prometheus_var_dir + "/alertmanager") }}'
+    # Software has no tgroup name:
+    prometheus_alertmanager_jobname: ""
 
-- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
+- name: Include task to setup {{ prometheus_software_name }} facts
+  include_tasks: _setup_software_facts.yml
+
+- name: Set {{ prometheus_software_name_version }} facts
   set_fact:
     prometheus_software_config_name: '{{ prometheus_software_name }}'
-    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
     prometheus_software_opts:
       - '--config.file {{ prometheus_etc_dir }}/alertmanager.yml'
       - '--storage.path={{ prometheus_alertmanager_storage_directory }}'
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
-    prometheus_software_bin_url: 'https://github.com/prometheus/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_url: 'https://github.com/prometheus/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
     prometheus_software_src_dir_suffix: '/src/github.com/prometheus/{{ prometheus_software_name }}'
     prometheus_software_src_url: 'https://github.com/prometheus/{{ prometheus_software_name }}'
 

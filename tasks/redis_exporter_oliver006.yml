@@ -4,35 +4,24 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
-- name: Include redis_exporter (oliver006) variable file
-  include_vars: exporters/redis_exporter_oliver006.yml
-
 - name: Starting redis_exporter (oliver006) install
   set_fact:
     prometheus_exporter: true
-    prometheus_software_binary_name: 'redis_exporter'
-    prometheus_software_env_vars: '{{ prometheus_redis_exporter_oliver006_env_vars | default({}) }}'
-    prometheus_software_extra_opts: '{{ prometheus_redis_exporter_oliver006_extra_opts | default() }}'
-    prometheus_software_fallback_to_build: '{{ prometheus_redis_exporter_oliver006_fallback_to_build | default(prometheus_fallback_to_build) }}'
-    prometheus_software_name: 'redis_exporter_oliver006'
-    prometheus_software_version: '{{ prometheus_redis_exporter_oliver006_version | default("1.3.5") }}'
-    prometheus_software_src_version: '{{ prometheus_redis_exporter_oliver006_src_version | default("v1.3.5") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_redis_exporter_oliver006_jobname | default("redis") }}'
+    prometheus_software_binary_name: redis_exporter
+    prometheus_software_name: redis_exporter_oliver006
     prometheus_software_description: 'Prometheus redis_exporter (oliver006), exporter for various Redis metrics'
     prometheus_software_documentation: 'https://github.com/oliver006/redis_exporter'
-    prometheus_software_host: '{{ prometheus_redis_exporter_oliver006_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_redis_exporter_oliver006_port | default(9121) }}'
-    prometheus_software_runas: '{{ prometheus_redis_exporter_oliver006_runas | default(prometheus_user) }}'
-    prometheus_software_shortname: 'redis_exporter'
 
-- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
+- name: Include task to setup {{ prometheus_software_name }} facts
+  include_tasks: _setup_software_facts.yml
+
+- name: Set {{ prometheus_software_name_version }} facts
   set_fact:
     prometheus_software_opts:
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
-    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
-    prometheus_software_bin_url: 'https://github.com/oliver006/{{ prometheus_software_shortname }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_shortname }}-v{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
-    prometheus_software_src_dir_suffix: '/src/github.com/oliver006/{{ prometheus_software_shortname }}'
-    prometheus_software_src_url: 'https://github.com/oliver006/{{ prometheus_software_shortname }}.git'
+    prometheus_software_url: 'https://github.com/oliver006/{{ prometheus_software_binary_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_binary_name }}-v{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_src_dir_suffix: '/src/github.com/oliver006/{{ prometheus_software_binary_name }}'
+    prometheus_software_src_url: 'https://github.com/oliver006/{{ prometheus_software_binary_name }}.git'
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml

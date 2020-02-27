@@ -4,35 +4,25 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
-- name: Include process_exporter (ncabatoff) variable file
-  include_vars: exporters/process_exporter_ncabatoff.yml
-
 - name: Starting process_exporter (ncabatoff) install
   set_fact:
     prometheus_exporter: true
     prometheus_software_binary_name: process-exporter
-    prometheus_software_env_vars: '{{ prometheus_process_exporter_ncabatoff_env_vars | default({}) }}'
-    prometheus_software_extra_opts: '{{ prometheus_process_exporter_ncabatoff_extra_opts | default("") }}'
-    prometheus_software_fallback_to_build: '{{ prometheus_process_exporter_ncabatoff_fallback_to_build | default(prometheus_fallback_to_build) }}'
-    prometheus_software_name: 'process_exporter_ncabatoff'
-    prometheus_software_version: '{{ prometheus_process_exporter_ncabatoff_version | default("0.6.0") }}'
-    prometheus_software_src_version: '{{ prometheus_process_exporter_ncabatoff_src_version | default("v0.6.0") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_process_exporter_ncabatoff_jobname | default("process") }}'
+    prometheus_software_name: process_exporter_ncabatoff
     prometheus_software_description: 'Prometheus process_exporter (ncabatoff), mines /proc to report on selected processes'
     prometheus_software_documentation: 'https://github.com/ncabatoff/process-exporter'
-    prometheus_software_host: '{{ prometheus_process_exporter_ncabatoff_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_process_exporter_ncabatoff_port | default(9256) }}'
-    prometheus_software_shortname: process-exporter
     # Defined by prometheus_process_exporter_ncabatoff_cfgs:
     prometheus_software_opts: []
 
-- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
+- name: Include task to setup {{ prometheus_software_name }} facts
+  include_tasks: _setup_software_facts.yml
+
+- name: Set {{ prometheus_software_name_version }} facts
   set_fact:
-    prometheus_software_filename: '{{ prometheus_software_shortname }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
-    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
-    prometheus_software_bin_url: 'https://github.com/ncabatoff/{{ prometheus_software_shortname }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_shortname }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
-    prometheus_software_src_dir_suffix: '/src/github.com/ncabatoff/{{ prometheus_software_shortname }}'
-    prometheus_software_src_url: 'https://github.com/ncabatoff/{{ prometheus_software_shortname }}'
+    prometheus_software_filename: '{{ prometheus_software_binary_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_url: 'https://github.com/ncabatoff/{{ prometheus_software_binary_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_binary_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_src_dir_suffix: '/src/github.com/ncabatoff/{{ prometheus_software_binary_name }}'
+    prometheus_software_src_url: 'https://github.com/ncabatoff/{{ prometheus_software_binary_name }}'
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml

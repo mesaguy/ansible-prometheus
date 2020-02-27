@@ -34,11 +34,11 @@ describe processes(Regexp.new("^/opt/prometheus/exporters/graphite_exporter/(v)?
     its('users') { should include 'prometheus' }
 end
 
-describe port(9108) do
+describe port(9109) do
     it { should be_listening }
 end
 
-describe http('http://127.0.0.1:9108/metrics') do
+describe http('http://127.0.0.1:9109/metrics') do
     its('status') { should cmp 200 }
     its('body') { should match /graphite_sample_expiry_seconds/ }
 end

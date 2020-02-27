@@ -10,17 +10,17 @@
 - name: Include task to setup directories for {{ prometheus_software_name_version }} installation
   include_tasks: _install_directory.yml
 
-- name: Set variables for {{ prometheus_software_name_version }} binary archive file with extended metadata
+- name: Set variables for {{ prometheus_software_name_version }} binary archive file from extended metadata
   set_fact:
-    prometheus_software_archive_file: '{{ prometheus_tmp_dir }}/{{ prometheus_software_bin_metadata.name }}'
+    prometheus_software_archive_file: '{{ prometheus_tmp_dir }}/{{ prometheus_software_metadata.name }}'
   when:
-    - prometheus_software_bin_metadata is defined and prometheus_software_bin_metadata | length > 0
+    - prometheus_software_metadata is defined and prometheus_software_metadata | length > 0
 
 - name: Set variables for {{ prometheus_software_name_version }} binary archive file
   set_fact:
-    prometheus_software_archive_file: '{{ prometheus_tmp_dir }}/{{ prometheus_software_bin_url | basename }}'
+    prometheus_software_archive_file: '{{ prometheus_tmp_dir }}/{{ prometheus_software_url | basename }}'
   when:
-    - prometheus_software_bin_metadata is undefined or prometheus_software_bin_metadata | length == 0
+    - prometheus_software_metadata is undefined or prometheus_software_metadata | length == 0
 
 - name: Check {{ prometheus_software_name_version }} existence
   become: true
@@ -33,8 +33,8 @@
 - name: Download {{ prometheus_software_name_version }} and validate checksum
   become: true
   get_url:
-    url: '{{ prometheus_software_bin_metadata.url }}'
-    checksum: '{{ prometheus_software_bin_metadata.sha256 }}'
+    url: '{{ prometheus_software_metadata.url }}'
+    checksum: '{{ prometheus_software_metadata.sha256 | default(omit) }}'
     timeout: 20
     owner: '{{ prometheus_user }}'
     group: '{{ prometheus_group }}'
@@ -47,12 +47,12 @@
   until: prometheus_software_download is succeeded
   when:
     - not prometheus_software_installed.stat.exists
-    - prometheus_software_bin_metadata is defined and prometheus_software_bin_metadata | length > 0
+    - prometheus_software_metadata is defined and prometheus_software_metadata | length > 0
 
 - name: Download {{ prometheus_software_name_version }}
   become: true
   get_url:
-    url: '{{ prometheus_software_bin_url }}'
+    url: '{{ prometheus_software_url }}'
     timeout: 20
     owner: '{{ prometheus_user }}'
     group: '{{ prometheus_group }}'
@@ -65,7 +65,7 @@
   until: prometheus_software_download is succeeded
   when:
     - not prometheus_software_installed.stat.exists
-    - prometheus_software_bin_metadata is undefined or prometheus_software_bin_metadata | length == 0
+    - prometheus_software_metadata is undefined or prometheus_software_metadata | length == 0
 
 - name: Unarchive {{ prometheus_software_name_version }}
   become: true

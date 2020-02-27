@@ -1,9 +1,11 @@
 ---
 - name: Include {{ prometheus_software_name }} variable file
-  include_vars: '{{ item }}'
+  include_vars:
+    name: prometheus_software_vars
+    file: '{{ item }}'
   with_first_found:
     - files:
-        - 'exporters/{{ prometheus_software_name }}.yml'
+        - 'software/{{ prometheus_software_name }}.yml'
       skip: true
   register: prometheus_software_variable_include
 
@@ -12,8 +14,8 @@
     # Needed for compatibility with clients in 'gather_facts' mode
     prometheus_client_inventory_hostname: '{{ prometheus_client_fqdn }}'
     prometheus_client_hostname: '{{ hostvars[prometheus_client_fqdn].inventory_hostname_short }}'
-    prometheus_software_port: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_default_port") }}'
-    prometheus_software_tgroup_jobname: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_default_tgroup_jobname") }}'
+    prometheus_software_port: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_port", default=prometheus_software_vars.defaults.port) }}'
+    prometheus_software_tgroup_jobname: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_jobname", default=prometheus_software_vars.defaults.tgroup) }}'
   when: not prometheus_software_variable_include is skipped
 
 - name: Include task to create client group files for {{ prometheus_software_name }}

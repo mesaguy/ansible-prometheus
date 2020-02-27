@@ -8,23 +8,17 @@
   set_fact:
     prometheus_exporter: false
     prometheus_software_config: '{{ prometheus_server_cfg | default(lookup("file", "../files/defaults/prometheus.yml") | from_yaml) }}'
-    prometheus_software_env_vars: '{{ prometheus_env_vars | default({}) }}'
-    prometheus_software_extra_opts: '{{ prometheus_extra_opts | default() }}'
     prometheus_software_files:
-      - 'prometheus'
-      - 'promtool'
-    prometheus_software_fallback_to_build: '{{ prometheus_fallback_to_build | default(prometheus_fallback_to_build) }}'
-    prometheus_software_makefile_make_command: 'make build'
-    prometheus_software_name: 'prometheus'
-    prometheus_software_version: '{{ prometheus_version | default("2.16.0") }}'
-    prometheus_software_src_version: '{{ prometheus_src_version | default("v2.16.0") }}'
-    prometheus_software_description: 'Prometheus'
+      - prometheus
+      - promtool
+    prometheus_software_makefile_make_command: make build
+    prometheus_software_name: prometheus
+    prometheus_software_description: Prometheus
     prometheus_software_documentation: 'https://github.com/prometheus/prometheus'
     prometheus_storage_directory: '{{ prometheus_storage_dir | default(prometheus_var_dir + "/prometheus") }}'
-    prometheus_software_host: '{{ prometheus_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_port | default(9090) }}'
-    prometheus_software_runas: '{{ prometheus_runas | default(prometheus_user) }}'
     prometheus_software_supports_reload: true
+    # Software has no tgroup name:
+    prometheus_prometheus_jobname: ""
 
 - name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} prometheus_software_install_dir
   # This is a one-off need as Prometheus uses configurations files
@@ -33,17 +27,19 @@
   set_fact:
     prometheus_software_install_dir: '{{ prometheus_root_dir }}/{{ prometheus_software_name }}/{{ prometheus_software_version }}'
 
-- name: Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts
+- name: Include task to setup {{ prometheus_software_name }} facts
+  include_tasks: _setup_software_facts.yml
+
+- name: Set {{ prometheus_software_name_version }} facts
   set_fact:
     prometheus_software_config_name: '{{ prometheus_software_name }}'
-    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
     prometheus_software_opts:
       - '--config.file={{ prometheus_etc_dir }}/prometheus.yml'
       - '--storage.tsdb.path={{ prometheus_storage_directory }}'
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
       - '--web.console.libraries={{ prometheus_web_console_libraries_dir | default(prometheus_software_install_dir + "/console_libraries") }}'
       - '--web.console.templates={{ prometheus_web_console_templates_dir | default(prometheus_software_install_dir + "/consoles") }}'
-    prometheus_software_bin_url: 'https://github.com/prometheus/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_url: 'https://github.com/prometheus/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
     prometheus_software_src_dir_suffix: '/src/github.com/prometheus/{{ prometheus_software_name }}'
     prometheus_software_src_url: 'https://github.com/prometheus/{{ prometheus_software_name }}'
     prometheus_software_validation_command: '{{ prometheus_software_install_dir }}/promtool check config {{ prometheus_etc_dir }}/prometheus.yml'

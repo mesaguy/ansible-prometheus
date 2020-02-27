@@ -4,42 +4,31 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is not defined
 
-- name: Include grok_exporter (fstab) variable file
-  include_vars: exporters/grok_exporter_fstab.yml
-
 - name: Starting grok_exporter (fstab) install
   set_fact:
     prometheus_exporter: true
     prometheus_grok_exporter_fstab_patterns_directory: '{{ prometheus_grok_exporter_fstab_patterns_dir | default(prometheus_etc_dir + "/grok_patterns") }}'
     prometheus_grok_exporter_fstab_sync_patterns_directory: true
-    prometheus_software_binary_name: 'grok_exporter'
+    prometheus_software_binary_name: grok_exporter
     prometheus_software_binary_unarchive_opts: []
-    prometheus_software_env_vars: '{{ prometheus_gork_exporter_fstab_env_vars | default({}) }}'
-    prometheus_software_extra_opts: '{{ prometheus_grok_exporter_fstab_extra_opts | default () }}'
     # Do not perform tests, tests only succeed where IPv6 is available
-    prometheus_software_fallback_to_build: '{{ prometheus_grok_exporter_fstab_fallback_to_build | default(prometheus_fallback_to_build) }}'
-    prometheus_software_name: 'grok_exporter_fstab'
-    prometheus_software_version: '{{ prometheus_grok_exporter_fstab_version | default("0.2.8") }}'
-    # prometheus_software_src_version: '{{ prometheus_grok_exporter_fstab_src_version | default("v0.2.8") }}'
-    prometheus_software_tgroup_jobname: '{{ prometheus_grok_exporter_fstab_jobname | default("grok") }}'
+    prometheus_software_name: grok_exporter_fstab
     prometheus_software_description: 'Prometheus grok_exporter, export from arbitrary unstructured log data'
     prometheus_software_documentation: 'https://github.com/fstab/grok_exporter'
-    prometheus_software_host: '{{ prometheus_grok_exporter_fstab_host | default("0.0.0.0") }}'
-    prometheus_software_port: '{{ prometheus_grok_exporter_fstab_port | default(9144) }}'
-    prometheus_software_runas: '{{ prometheus_grok_exporter_fstab_runas | default(prometheus_user) }}'
-    prometheus_software_shortname: 'grok_exporter'
 
-- name: 'Set {{ prometheus_software_name }}-{{ prometheus_software_version }} facts'
+- name: Include task to setup {{ prometheus_software_name }} facts
+  include_tasks: _setup_software_facts.yml
+
+- name: Set {{ prometheus_software_name_version }} facts
   set_fact:
     prometheus_software_config_name: '{{ prometheus_software_name }}'
-    prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
     prometheus_software_opts:
       - '-config {{ prometheus_etc_dir }}/grok_exporter_fstab.yml'
-    prometheus_software_bin_url: 'https://github.com/fstab/{{ prometheus_software_shortname }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_shortname }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.zip'
+    prometheus_software_url: 'https://github.com/fstab/{{ prometheus_software_binary_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_binary_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.zip'
     # Source builds are unrealistic unless we build Oniguruma libraries too...:
     #   https://github.com/fstab/grok_exporter/
-    # prometheus_software_src_dir_suffix: '/src/github.com/fstab/{{ prometheus_software_shortname }}'
-    # prometheus_software_src_url: 'https://github.com/fstab/{{ prometheus_software_shortname }}'
+    # prometheus_software_src_dir_suffix: '/src/github.com/fstab/{{ prometheus_software_binary_name }}'
+    # prometheus_software_src_url: 'https://github.com/fstab/{{ prometheus_software_binary_name }}'
 
 - name: 'Include task to perform installation of {{ prometheus_software_name_version }}'
   include_tasks: _install.yml
@@ -56,7 +45,7 @@
   notify:
     - Restart Prometheus service
 
-- name: Find the {{ prometheus_software_shortname }} binary
+- name: Find the {{ prometheus_software_binary_name }} binary
   find:
     paths: '{{ prometheus_software_install_dir }}'
     patterns: '{{ prometheus_software_binary_name }}'
