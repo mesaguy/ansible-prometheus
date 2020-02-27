@@ -1,7 +1,8 @@
 ---
 software:
   0.1.0:
-    commit_sha: b8a07785138127a0ab7aad3c4b25204355effee3
+    commit:
+      sha: b8a07785138127a0ab7aad3c4b25204355effee3
     files:
       - name: bigip_exporter-0.1.0-2.el7.centos.x86_64.rpm
         sha256: sha256:b75337415a0ed6d4b4ba82dbf3f7ecfec31130447f68612f0c2dd70a7de437c3
@@ -19,7 +20,8 @@ software:
     published:
       timestamp: 2016-05-09 13:29:20
   0.2.0:
-    commit_sha: 519c06c33bbc7038fac40da33e1917e897e5f2af
+    commit:
+      sha: 519c06c33bbc7038fac40da33e1917e897e5f2af
     files:
       - name: bigip_exporter-0.2.0-2.el7.centos.x86_64.rpm
         sha256: sha256:30e0577369b142a56839572432622530d57d7b24a022d8ce3db7d861488597c5
@@ -37,7 +39,8 @@ software:
     published:
       timestamp: 2016-05-13 16:57:55
   0.2.1:
-    commit_sha: 94a6a4923041242691caa8f9fb34f63b65326532
+    commit:
+      sha: 94a6a4923041242691caa8f9fb34f63b65326532
     files:
       - name: bigip_exporter-0.2.1-1.el7.centos.x86_64.rpm
         sha256: sha256:8866ddcbdc3db8470b111b1b728bfbe1b76258bc7c0fcaedc07fc799b5d76446
@@ -55,7 +58,8 @@ software:
     published:
       timestamp: 2016-05-23 10:28:44
   0.2.2:
-    commit_sha: dc38b009da7e86944964b35bdd9d27000b6067ac
+    commit:
+      sha: dc38b009da7e86944964b35bdd9d27000b6067ac
     files:
       - name: bigip_exporter-0.2.2-2.el7.centos.x86_64.rpm
         sha256: sha256:c2e90dc4bd5e3468ac954bc93f8a7d475a30c70a9e84d05875561cfb24dd8980
@@ -73,7 +77,8 @@ software:
     published:
       timestamp: 2016-10-04 20:49:49
   1.0.0:
-    commit_sha: 44f11c2c06747cf3ded915c7e2377f06c370ef2d
+    commit:
+      sha: 44f11c2c06747cf3ded915c7e2377f06c370ef2d
     files:
       - name: bigip_exporter-1.0.0.linux-amd64.tar.gz
         sha256: sha256:119ae4bab4e89b90dac74c919dc7c0a3cad114c97bd654230ac5b5962366e059
@@ -86,7 +91,13 @@ software:
     prerelease: false
     published:
       timestamp: 2017-04-18 11:22:53
+  master:
+    commit:
+      sha: e0f009c578b6264ea6c2fb82071ceb02a1a8121b
+    prerelease: true
+    published:
+      timestamp: 2018-02-22 15:32:55
 software_metadata:
-  prerelease: 1.0.0
+  prerelease: master
   release: 1.0.0
-  updated: 2020-02-22 03:58:05.463898
+  updated: 2020-02-27 06:24:30.157115

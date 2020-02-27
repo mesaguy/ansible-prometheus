@@ -1,7 +1,8 @@
 ---
 software:
   0.4.0:
-    commit_sha: 9bf81f19a5b642745732ab2d46db1c54d7a73746
+    commit:
+      sha: 9bf81f19a5b642745732ab2d46db1c54d7a73746
     files:
       - name: haproxy_exporter-0.4.0.darwin-amd64.tar.gz
         sha256: sha256:91407e538085333346afd0a54924e315acc4923e2635d59022f95ca34d66d011
@@ -23,7 +24,8 @@ software:
     published:
       timestamp: 2015-05-05 11:39:16
   0.5.0:
-    commit_sha: 36fa2f7123df5b751934b7a25e0871cf3f3fc5f1
+    commit:
+      sha: 36fa2f7123df5b751934b7a25e0871cf3f3fc5f1
     files:
       - name: haproxy_exporter-0.5.0.darwin-386.tar.gz
         sha256: sha256:811a0bde21c372d1dce33f7ed73167c596c72430501f7ce5bf94c56b42e6fc5a
@@ -53,7 +55,8 @@ software:
     published:
       timestamp: 2015-12-23 16:58:02
   0.5.1:
-    commit_sha: f3949a637daa25c047af7ce5938399918a362a1c
+    commit:
+      sha: f3949a637daa25c047af7ce5938399918a362a1c
     files:
       - name: haproxy_exporter-0.5.1.darwin-386.tar.gz
         sha256: sha256:bc3fdd6881bf9c918ab224071b31d114c5ff015093cc56d5b50768be5f8d08df
@@ -83,7 +86,8 @@ software:
     published:
       timestamp: 2016-03-31 21:44:55
   0.5.2:
-    commit_sha: cc9d1851d4a92a6b295545330f13f5a8f4a4c53c
+    commit:
+      sha: cc9d1851d4a92a6b295545330f13f5a8f4a4c53c
     files:
       - name: haproxy_exporter-0.5.2.darwin-386.tar.gz
         sha256: sha256:d3c0343c2ccd9faabc9dc26a58b552bfd0ea4dd22932559e2337c34b9f75cf86
@@ -113,7 +117,8 @@ software:
     published:
       timestamp: 2016-04-04 23:12:51
   0.6.0:
-    commit_sha: 173adf71175cda6a1cb108fd6776766f391d2609
+    commit:
+      sha: 173adf71175cda6a1cb108fd6776766f391d2609
     files:
       - name: haproxy_exporter-0.6.0.darwin-386.tar.gz
         sha256: sha256:b46de40a53ba77f5c926e12847cafba73050cb9a3e6bf9be0cf878224b329947
@@ -239,7 +244,8 @@ software:
     published:
       timestamp: 2016-05-13 01:48:24
   0.7.0:
-    commit_sha: 9dbb360f52924f0e303cd5268b97b1e9456904b3
+    commit:
+      sha: 9dbb360f52924f0e303cd5268b97b1e9456904b3
     files:
       - name: haproxy_exporter-0.7.0.darwin-386.tar.gz
         sha256: sha256:81a01b547df70c1bbaaaf56e4245506f9e510beb841e115abb8f590d3a86e3a4
@@ -364,8 +370,15 @@ software:
     prerelease: false
     published:
       timestamp: 2016-06-08 22:58:05
+  master:
+    commit:
+      sha: 0ddc4bc5cb4074ba95d57257f63ab82ab451a45b
+    prerelease: true
+    published:
+      timestamp: 2019-10-03 18:02:35
   v0.10.0:
-    commit_sha: ec68a7b1129651dff5b4268dd1e423571652ca60
+    commit:
+      sha: ec68a7b1129651dff5b4268dd1e423571652ca60
     files:
       - name: haproxy_exporter-0.10.0.darwin-386.tar.gz
         sha256: sha256:eb8c7b3dfc565efcae143cd23712e4ebc6b07a57956aab333d4617086d13e614
@@ -491,7 +504,8 @@ software:
     published:
       timestamp: 2019-01-15 11:19:29
   v0.7.1:
-    commit_sha: 735866c7ef98062d5f0a4a25680ac3b96d6767f2
+    commit:
+      sha: 735866c7ef98062d5f0a4a25680ac3b96d6767f2
     files:
       - name: haproxy_exporter-0.7.1.darwin-386.tar.gz
         sha256: sha256:58fefcd46e0c521ec63ee7a9c82470d0cfa1421eab0e8e64ed1d8432ce1e5108
@@ -617,7 +631,8 @@ software:
     published:
       timestamp: 2016-10-12 10:57:38
   v0.8.0:
-    commit_sha: 4ce06e84e1701827f2706fd58b1e1320a52e3967
+    commit:
+      sha: 4ce06e84e1701827f2706fd58b1e1320a52e3967
     files:
       - name: haproxy_exporter-0.8.0.darwin-386.tar.gz
         sha256: sha256:0b266c43656d6e8a655e2e8e0f55e7268204b582ed7cc64d4c5d1eb0c4115f0f
@@ -731,7 +746,8 @@ software:
     published:
       timestamp: 2017-08-24 21:50:47
   v0.9.0:
-    commit_sha: 865ad4922f9ab35372b8a6d02ab6ef96805560fe
+    commit:
+      sha: 865ad4922f9ab35372b8a6d02ab6ef96805560fe
     files:
       - name: haproxy_exporter-0.9.0.darwin-386.tar.gz
         sha256: sha256:a43bb8337c1de49a3412fe59f95080404aca6e4797d442bde011efa63952a77b
@@ -845,6 +861,6 @@ software:
     published:
       timestamp: 2018-01-23 18:48:20
 software_metadata:
-  prerelease: v0.10.0
+  prerelease: master
   release: v0.10.0
-  updated: 2020-02-24 05:43:43.768265
+  updated: 2020-02-27 06:02:00.447445

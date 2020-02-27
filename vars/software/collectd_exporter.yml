@@ -1,7 +1,8 @@
 ---
 software:
   0.1.0:
-    commit_sha: 16aa46f156ec2119de3487c0251747d10debebdd
+    commit:
+      sha: 16aa46f156ec2119de3487c0251747d10debebdd
     files:
       - name: collectd_exporter-0.1.0.darwin-amd64.tar.gz
         sha256: sha256:bffbe6a47e0a1b5d63cbc74d8867af4a40d9de166dfeec13c4f0156ab64d02e8
@@ -23,7 +24,8 @@ software:
     published:
       timestamp: 2015-05-05 11:46:49
   0.2.0:
-    commit_sha: a8f935b38e17deea0d421bfb5639c8d73bee299f
+    commit:
+      sha: a8f935b38e17deea0d421bfb5639c8d73bee299f
     files:
       - name: collectd_exporter-0.2.0.linux-386.tar.gz
         sha256: sha256:ee7566d9a9fdb30abe0df8baab4574360e79d6e996ae5d1d152d9b2c498e3637
@@ -37,13 +39,15 @@ software:
     published:
       timestamp: 2015-09-02 22:23:02
   0.3.0:
-    commit_sha: 178d101178d6420a72093aebdaf50427a190cdd8
+    commit:
+      sha: 178d101178d6420a72093aebdaf50427a190cdd8
     files: []
     prerelease: false
     published:
       timestamp: 2016-06-06 08:44:25
   0.3.1:
-    commit_sha: 3abb95cdd0b23dbc8abbb4412c2324f3e382e7ed
+    commit:
+      sha: 3abb95cdd0b23dbc8abbb4412c2324f3e382e7ed
     files:
       - name: collectd_exporter-0.3.1.darwin-386.tar.gz
         sha256: sha256:1f0a506970a6765ed998957c7aa975d7d8d37a95b1e6d1a89580f8413ec4e627
@@ -168,8 +172,15 @@ software:
     prerelease: false
     published:
       timestamp: 2016-06-06 09:21:44
+  master:
+    commit:
+      sha: 21b79a22749843dbbcef89a0584dc81ad7ba1d92
+    prerelease: true
+    published:
+      timestamp: 2020-02-10 13:15:52
   v0.4.0:
-    commit_sha: ad6568ba50d6dabfb03588f42b05adb35fe21019
+    commit:
+      sha: ad6568ba50d6dabfb03588f42b05adb35fe21019
     files:
       - name: collectd_exporter-0.4.0.darwin-386.tar.gz
         sha256: sha256:a3d4c57707e7ad77ff37aebc12f467801a6c666106a4da684b0a0d9604417080
@@ -279,6 +290,6 @@ software:
     published:
       timestamp: 2018-01-22 18:02:20
 software_metadata:
-  prerelease: v0.4.0
+  prerelease: 0.1.0
   release: v0.4.0
-  updated: 2020-02-22 03:58:44.358374
+  updated: 2020-02-27 06:25:05.533063

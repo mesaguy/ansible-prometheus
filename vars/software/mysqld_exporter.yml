@@ -1,7 +1,8 @@
 ---
 software:
   0.1.0:
-    commit_sha: e19c9c1cbc8edc65cae160847205cde75044a2f6
+    commit:
+      sha: e19c9c1cbc8edc65cae160847205cde75044a2f6
     files:
       - name: mysqld_exporter-0.1.0.darwin-amd64.tar.gz
         sha256: sha256:f8505c159ad28c4c0d7913f67e7b398d8b98e7fd3e46fe6edbd1f7a0f8c3146c
@@ -23,7 +24,8 @@ software:
     published:
       timestamp: 2015-05-05 10:37:53
   0.2.0:
-    commit_sha: c140e7f22e77372b24d253c276b21e8d282f0099
+    commit:
+      sha: c140e7f22e77372b24d253c276b21e8d282f0099
     files:
       - name: mysqld_exporter-0.2.0.darwin-amd64.tar.gz
         sha256: sha256:af202fa63a33a00745702deb9989accd50885bad8225ee0847eafda7746bb077
@@ -45,7 +47,8 @@ software:
     published:
       timestamp: 2015-06-24 12:33:23
   0.3.0:
-    commit_sha: b481762547552e44d850e0952c9a4dd200772e20
+    commit:
+      sha: b481762547552e44d850e0952c9a4dd200772e20
     files:
       - name: mysqld_exporter-0.3.0.darwin-amd64.tar.gz
         sha256: sha256:b8766dcf01fb11c6e8bd265e7c50ae35f8160631f395fca17f88803ce478c097
@@ -59,7 +62,8 @@ software:
     published:
       timestamp: 2015-08-31 14:04:58
   0.4.0:
-    commit_sha: 6474bd17dfa7a8457680d0dd1f5ee1feaccb2076
+    commit:
+      sha: 6474bd17dfa7a8457680d0dd1f5ee1feaccb2076
     files:
       - name: mysqld_exporter-0.4.0.darwin-amd64.tar.gz
         sha256: sha256:b5e194c33b85a59a1ef6e72709f722da2bfd4aee7507ef276408b433c775f881
@@ -77,7 +81,8 @@ software:
     published:
       timestamp: 2015-09-21 09:15:47
   0.5.0:
-    commit_sha: 4a43e938da4bb794b2156e43eb112d8b1ad77cc6
+    commit:
+      sha: 4a43e938da4bb794b2156e43eb112d8b1ad77cc6
     files:
       - name: mysqld_exporter-0.5.0.darwin-amd64.tar.gz
         sha256: sha256:773af0e1bdcfcc16395ca53b59ad8aebc64f1420598a91132f621f3c92a7d1da
@@ -95,7 +100,8 @@ software:
     published:
       timestamp: 2015-09-22 15:57:52
   0.6.0:
-    commit_sha: 63b91c88836e0120f44b554cb389b7e0c0f66767
+    commit:
+      sha: 63b91c88836e0120f44b554cb389b7e0c0f66767
     files:
       - name: mysqld_exporter-0.6.0.linux-amd64.tar.gz
         sha256: sha256:530f3610bea2c5ebedf25c04c29147e6fb189f267823aa73a2e8dd2699944f0b
@@ -105,7 +111,8 @@ software:
     published:
       timestamp: 2015-10-28 14:28:21
   0.7.0:
-    commit_sha: b53587d665c5b003ab268dd40afab093d7aa204c
+    commit:
+      sha: b53587d665c5b003ab268dd40afab093d7aa204c
     files:
       - name: mysqld_exporter-0.7.0.linux-amd64.tar.gz
         sha256: sha256:bb13c7bb799a9e297f88888dfd11efb77786d52bf24624792ad1fee88bd67b93
@@ -115,7 +122,8 @@ software:
     published:
       timestamp: 2016-02-12 16:47:43
   0.7.1:
-    commit_sha: 1119b0b2d2d93129fa0622bf9390e0f348b8e450
+    commit:
+      sha: 1119b0b2d2d93129fa0622bf9390e0f348b8e450
     files:
       - name: mysqld_exporter-0.7.1.linux-amd64.tar.gz
         sha256: sha256:c2e55ed37d55c6ee84f61b9bdd6c68cfd83afe4dbb1391da679a03915d971dfc
@@ -125,7 +133,8 @@ software:
     published:
       timestamp: 2016-02-16 13:37:35
   0.8.0:
-    commit_sha: 63f88517ea7d22e9f3e27a003a96081cca69d576
+    commit:
+      sha: 63f88517ea7d22e9f3e27a003a96081cca69d576
     files:
       - name: mysqld_exporter-0.8.0.linux-amd64.tar.gz
         sha256: sha256:e9a9af361485a8557f81a1bca53232f7a707473c1810e086986bcf2748cd81ea
@@ -135,7 +144,8 @@ software:
     published:
       timestamp: 2016-04-19 17:48:54
   0.8.1:
-    commit_sha: 4a0d95ded8887e60cf7e3f571d75b321b0bff581
+    commit:
+      sha: 4a0d95ded8887e60cf7e3f571d75b321b0bff581
     files:
       - name: mysqld_exporter-0.8.1.darwin-386.tar.gz
         sha256: sha256:2ec764315748546c6b5f740d1cba73726343e5391a15837394194c87564eb932
@@ -260,8 +270,15 @@ software:
     prerelease: false
     published:
       timestamp: 2016-05-10 07:33:12
+  master:
+    commit:
+      sha: 5673ffcc669f18059ded08224ad176e45c06e215
+    prerelease: true
+    published:
+      timestamp: 2020-01-28 15:54:49
   v0.10.0:
-    commit_sha: 80680068f15474f87847c8ee8f18a2939a26196a
+    commit:
+      sha: 80680068f15474f87847c8ee8f18a2939a26196a
     files:
       - name: mysqld_exporter-0.10.0.darwin-386.tar.gz
         sha256: sha256:9cd327b4b29a55e56fd82d32a8e3e4020d4eb40b46ec616103493428f0edc4e8
@@ -391,7 +408,8 @@ software:
     published:
       timestamp: 2017-04-25 11:22:20
   v0.11.0:
-    commit_sha: 5d7179615695a61ecc3b5bf90a2a7c76a9592cdd
+    commit:
+      sha: 5d7179615695a61ecc3b5bf90a2a7c76a9592cdd
     files:
       - name: mysqld_exporter-0.11.0.darwin-386.tar.gz
         sha256: sha256:b2a1bc065b824195be474795f16525362fc162b5710dc2ee3383f3a06a4d33cf
@@ -505,7 +523,8 @@ software:
     published:
       timestamp: 2018-06-29 15:10:25
   v0.12.0:
-    commit_sha: 90f7449fc6bc49d4633060297dc490a1b9f8d88e
+    commit:
+      sha: 90f7449fc6bc49d4633060297dc490a1b9f8d88e
     files:
       - name: mysqld_exporter-0.12.0.aix-ppc64.tar.gz
         sha256: sha256:5f36b579aecdefb0e87e7c2e96ce3228ce9b635d24b272c919c419b834dd09a8
@@ -635,7 +654,8 @@ software:
     published:
       timestamp: 2019-07-10 13:55:41
   v0.12.1:
-    commit_sha: 48667bf7c3b438b5e93b259f3d17b70a7c9aff96
+    commit:
+      sha: 48667bf7c3b438b5e93b259f3d17b70a7c9aff96
     files:
       - name: mysqld_exporter-0.12.1.aix-ppc64.tar.gz
         sha256: sha256:22359b0781b9b4d466bbc9899cdc486806bed8f29b42426a96ddd8ff420d2fc6
@@ -765,7 +785,8 @@ software:
     published:
       timestamp: 2019-07-29 13:02:35
   v0.9.0:
-    commit_sha: 8400af20ccdbf6b5e0faa2c925c56c48cd78d70b
+    commit:
+      sha: 8400af20ccdbf6b5e0faa2c925c56c48cd78d70b
     files:
       - name: mysqld_exporter-0.9.0.darwin-386.tar.gz
         sha256: sha256:1318ba9bde08898313353ae2f9304fbafc227906abba57b3ed10fc58e6eb3602
@@ -891,6 +912,6 @@ software:
     published:
       timestamp: 2016-09-26 18:26:06
 software_metadata:
-  prerelease: v0.12.1
+  prerelease: 0.6.0
   release: v0.12.1
-  updated: 2020-02-22 04:04:09.214891
+  updated: 2020-02-27 06:49:35.501903

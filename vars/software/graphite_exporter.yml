@@ -1,7 +1,8 @@
 ---
 software:
   0.1.0:
-    commit_sha: 293c9d4c8eac300f11d39df14eb4ba05cfdffde8
+    commit:
+      sha: 293c9d4c8eac300f11d39df14eb4ba05cfdffde8
     files:
       - name: graphite_exporter-0.1.0.darwin-amd64.tar.gz
         sha256: sha256:fd941c4645611eed29b0b12ca73417f69564f7501f4a37abeffe5ac4a14d5478
@@ -22,8 +23,15 @@ software:
     prerelease: true
     published:
       timestamp: 2015-05-05 11:18:52
+  master:
+    commit:
+      sha: c79a023f328ce5afb599de2c302e4f6d034b9d57
+    prerelease: true
+    published:
+      timestamp: 2020-02-25 09:40:38
   v0.2.0:
-    commit_sha: e76b500729ba944f7370d58c43f431632da339e5
+    commit:
+      sha: e76b500729ba944f7370d58c43f431632da339e5
     files:
       - name: graphite_exporter-0.2.0.darwin-386.tar.gz
         sha256: sha256:29940204b02561cfd8eff01f746547db0a34c422085b73f74b6136e03d39b208
@@ -149,7 +157,8 @@ software:
     published:
       timestamp: 2017-03-01 17:53:14
   v0.3.0:
-    commit_sha: 4b03941683bd3984b5023ea3fef8e38796cbd2ee
+    commit:
+      sha: 4b03941683bd3984b5023ea3fef8e38796cbd2ee
     files:
       - name: graphite_exporter-0.3.0.darwin-386.tar.gz
         sha256: sha256:52194ab6d4a11efcf3210896d546aeea9eed3a6bd62b25b4603411159df09cf4
@@ -271,7 +280,8 @@ software:
     published:
       timestamp: 2018-08-22 08:03:37
   v0.4.0:
-    commit_sha: eb3c92c61aaec37fcb06c9ce4cfcfa30d9be7e90
+    commit:
+      sha: eb3c92c61aaec37fcb06c9ce4cfcfa30d9be7e90
     files:
       - name: graphite_exporter-0.4.0.darwin-386.tar.gz
         sha256: sha256:c6cf0bac79466d6d9d04f8926a89ab3e85069402675a5678dfdf840131f90974
@@ -397,7 +407,8 @@ software:
     published:
       timestamp: 2018-11-23 22:23:57
   v0.4.1:
-    commit_sha: f0d0670ab0e3b0e80876d0cd6b9c16dde6646dc3
+    commit:
+      sha: f0d0670ab0e3b0e80876d0cd6b9c16dde6646dc3
     files:
       - name: graphite_exporter-0.4.1.darwin-386.tar.gz
         sha256: sha256:cf4e857f14ef36377775aefce09e82ace2e6edae724bcdae621c41283edcec63
@@ -523,7 +534,8 @@ software:
     published:
       timestamp: 2018-11-24 00:15:54
   v0.4.2:
-    commit_sha: 75f0db17d0be85c83d16855a82acffe31e605179
+    commit:
+      sha: 75f0db17d0be85c83d16855a82acffe31e605179
     files:
       - name: graphite_exporter-0.4.2.darwin-386.tar.gz
         sha256: sha256:b4603c80b1268517f56d1aab9c879a0503f5ef53456dae6076bad2eb0f9cb1d4
@@ -649,7 +661,8 @@ software:
     published:
       timestamp: 2018-11-26 22:10:01
   v0.5.0:
-    commit_sha: 320808c4e456c899e9c223879397efc48bca7364
+    commit:
+      sha: 320808c4e456c899e9c223879397efc48bca7364
     files:
       - name: graphite_exporter-0.5.0.darwin-386.tar.gz
         sha256: sha256:edbdc0181f76a01906466f424d21cf24f597ae220d3086a1aed137f304da75f3
@@ -775,7 +788,8 @@ software:
     published:
       timestamp: 2019-02-28 09:37:53
   v0.6.2:
-    commit_sha: 32fbcbc7ef1316b35401927ce34daa6001accd5e
+    commit:
+      sha: 32fbcbc7ef1316b35401927ce34daa6001accd5e
     files:
       - name: graphite_exporter-0.6.2.darwin-386.tar.gz
         sha256: sha256:08b26ded581a51bd06802d0ecabeebf6fff3c862401eb6fcaefc70bf1ffe6cc1
@@ -901,7 +915,8 @@ software:
     published:
       timestamp: 2019-06-03 08:45:43
   v0.7.0-rc1:
-    commit_sha: b11c8a66bb01034aacadff5bcc6bf073b7803340
+    commit:
+      sha: b11c8a66bb01034aacadff5bcc6bf073b7803340
     files:
       - name: graphite_exporter-0.7.0-rc1.aix-ppc64.tar.gz
         sha256: sha256:910170317c824f5911a1e9ded145eebe15f1fccb729e2a7930e4dfcb66977760
@@ -1031,6 +1046,6 @@ software:
     published:
       timestamp: 2020-01-21 11:57:51
 software_metadata:
-  prerelease: v0.7.0-rc1
+  prerelease: 0.1.0
   release: v0.6.2
-  updated: 2020-02-21 06:58:08.316723
+  updated: 2020-02-27 06:03:30.943357

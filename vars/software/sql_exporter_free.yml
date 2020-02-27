@@ -1,7 +1,8 @@
 ---
 software:
   '0.1':
-    commit_sha: aadb25ed5bfae2aaac8f90fb7d1c450bd8bbdb44
+    commit:
+      sha: aadb25ed5bfae2aaac8f90fb7d1c450bd8bbdb44
     files:
       - name: sql_exporter-0.1.linux-amd64.tar.gz
         sha256: sha256:b891ba292777aaa52e40c5e6e4571362a55e87c4aace25fe45e012a1e663603d
@@ -11,7 +12,8 @@ software:
     published:
       timestamp: 2017-11-22 17:05:27
   '0.2':
-    commit_sha: 276cba4d98ecc8ebc881595e97cbe076814fc57a
+    commit:
+      sha: 276cba4d98ecc8ebc881595e97cbe076814fc57a
     files:
       - name: sql_exporter-0.2.linux-amd64.tar.gz
         sha256: sha256:dc2a5d6661d45f26d201c827dc69318d57d02b70e66269092ba1f6046339f1c6
@@ -21,7 +23,8 @@ software:
     published:
       timestamp: 2017-11-23 16:43:08
   '0.3':
-    commit_sha: 74817e515765282fb9965e6c5cbf41de5b570db5
+    commit:
+      sha: 74817e515765282fb9965e6c5cbf41de5b570db5
     files:
       - name: sql_exporter-0.3.linux-amd64.tar.gz
         sha256: sha256:7e26e27537faea68b5b26fb69785e3b8bc1eb9318afd99746018151b50e24748
@@ -31,7 +34,8 @@ software:
     published:
       timestamp: 2017-11-27 16:35:51
   '0.4':
-    commit_sha: 6dfbe982f1e42340e2a87e0d30599383c02f0bed
+    commit:
+      sha: 6dfbe982f1e42340e2a87e0d30599383c02f0bed
     files:
       - name: sql_exporter-0.4.linux-amd64.tar.gz
         sha256: sha256:9b2662bd0fe71535f8da18e81c1b60d24a98c6ba46502fe0582be0be7a95a812
@@ -41,7 +45,8 @@ software:
     published:
       timestamp: 2017-11-28 15:30:45
   '0.5':
-    commit_sha: fc5ed07ee38c5b90bab285392c43edfe32d271c5
+    commit:
+      sha: fc5ed07ee38c5b90bab285392c43edfe32d271c5
     files:
       - name: sha256sums.txt
         sha256: sha256:75d27d694def9173f18ff938a65330a5c5c6cae96508915925bd59042a8f3faf
@@ -166,7 +171,13 @@ software:
     prerelease: false
     published:
       timestamp: 2019-01-14 10:38:01
+  master:
+    commit:
+      sha: 6f96b0d6b40340929e4d84c902378e7ead113ff1
+    prerelease: true
+    published:
+      timestamp: 2019-11-27 22:03:00
 software_metadata:
-  prerelease: '0.5'
+  prerelease: master
   release: '0.5'
-  updated: 2020-02-21 08:31:27.347495
+  updated: 2020-02-27 06:17:52.393212
