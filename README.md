@@ -931,8 +931,8 @@ An array of additional flags to pass to the influxdb_exporter daemon:
 
 The version of influxdb_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_influxdb_exporter_version: "0.3.0"
-    prometheus_influxdb_exporter_src_version: "v0.3.0"
+    prometheus_influxdb_exporter_version: "0.4.0"
+    prometheus_influxdb_exporter_src_version: "v0.4.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9122:
 

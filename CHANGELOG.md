@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Upgrade cloudwatch from v0.7.0 to v0.8.0
 - Upgrade graphite_exporter from v0.6.2 to v0.7.0
+- Upgrade influxdb_exporter from v0.3.0 to v0.4.0
 - Upgrade redis_exporter_oliver006 from v1.3.5 to v1.4.0
 - Upgrade snmp_exporter v0.16.1 to v0.17.0
 
