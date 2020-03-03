@@ -28,7 +28,6 @@
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
     prometheus_software_url: 'https://github.com/prometheus/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
     prometheus_software_src_dir_suffix: '/src/github.com/prometheus/{{ prometheus_software_name }}'
-    prometheus_software_src_url: 'https://github.com/prometheus/{{ prometheus_software_name }}.git'
     prometheus_node_exporter_scripts_vars: '{{ prometheus_node_exporter_scripts_vars["software"]["master"].files }}'
 
 - name: Include task to create textfiles directory
