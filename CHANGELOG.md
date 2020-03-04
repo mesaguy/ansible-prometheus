@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.10.3] - 2020-03-04
+
 ### Changed
 
 - Upgrade cloudwatch from v0.7.0 to v0.8.0
