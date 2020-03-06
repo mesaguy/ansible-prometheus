@@ -32,3 +32,11 @@
 
 - name: Include task to symlink latest {{ prometheus_software_name_version }} directory to an "active" directory
   include_tasks: _install_active_symlink.yml
+
+- name: Include task to setup capabilites for {{ prometheus_software_name_version }} files
+  include_tasks: _setup_capabilities.yml
+  loop_control:
+    loop_var: prometheus_software_capabilities_file
+  with_items: '{{ prometheus_software_capabilities }}'
+  when:
+    - prometheus_software_capabilities is defined and prometheus_software_capabilities | length > 0
