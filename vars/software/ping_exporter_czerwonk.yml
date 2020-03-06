@@ -3,187 +3,225 @@ defaults:
   port: 9427
   tgroup: ping
 software:
-  0.4.3:
-    commit:
-      sha: 83266915841cc09e9177132a02cb66ac5be08caa
-    files:
-      - name: ping_exporter-0.4.3_darwin_386
-        sha256: sha256:fe1a46e8435a94a0b0557f4f7f66c287626bce608480fa4c5cfd180f5f21e8cb
-        size: 11573316
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_darwin_386
-      - name: ping_exporter-0.4.3_darwin_amd64
-        sha256: sha256:12faee89c1f0cfc6a5530b0ec5b1eeb2d95a29a2c260910ddd325d2ac121019a
-        size: 13123616
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_darwin_amd64
-      - name: ping_exporter-0.4.3_freebsd_386
-        sha256: sha256:85a832729db173a9c34429b86616f67891358482521f23e41673965cde829b33
-        size: 11497560
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_freebsd_386
-      - name: ping_exporter-0.4.3_freebsd_amd64
-        sha256: sha256:ab4cd4cab52a750a3338685efd9e95d4654a1fc923b6f9e2cfe21ebe7d82fee7
-        size: 13091403
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_freebsd_amd64
-      - name: ping_exporter-0.4.3_freebsd_arm
-        sha256: sha256:67e06a6a11c9b4a7cb23e51901352cfcb49b84c0d21061e88c55451737509b98
-        size: 11736610
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_freebsd_arm
-      - name: ping_exporter-0.4.3_linux_386
-        sha256: sha256:1b857c58cd2153a428a87b83bfc3ba810d66e4adcf715b0659c1855838478978
-        size: 11674111
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_386
-      - name: ping_exporter-0.4.3_linux_amd64
-        sha256: sha256:f4614505e19d01e7d9cd0a2df5b8c254602c2ffc4b451276438829c7d94cb64c
-        size: 13261818
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_amd64
-      - name: ping_exporter-0.4.3_linux_arm
-        sha256: sha256:f109e1f45f52f326c0a3ff0fd87899304249abf9c13d5e5521e478d65e8c3eba
-        size: 11731934
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_arm
-      - name: ping_exporter-0.4.3_linux_mips
-        sha256: sha256:066f1499e8989081907e85aeb919e93663178a9558cfffb793249574ea9158aa
-        size: 12645284
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_mips
-      - name: ping_exporter-0.4.3_linux_mips64
-        sha256: sha256:0779180da8a326b642cd26aebc335778562c28041e81e8c748c734c22a1d9aba
-        size: 13752287
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_mips64
-      - name: ping_exporter-0.4.3_linux_mips64le
-        sha256: sha256:b9f880fca27a53c07263dc1d75aaca00d97180c05c7b4f2e8ddb9a9d8cc08cb5
-        size: 13752289
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_mips64le
-      - name: ping_exporter-0.4.3_linux_mipsle
-        sha256: sha256:7d77fc0f7d2e809e3f6022a01df4921a4462f5b2197adcc88b2f8a9d6da00825
-        size: 12710822
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_mipsle
-      - name: ping_exporter-0.4.3_linux_s390x
-        sha256: sha256:22bccc9656b4777da5c4272c57a433cec349cd047d3fb277d10c0a2776173d19
-        size: 13761131
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_s390x
-      - name: ping_exporter-0.4.3_netbsd_386
-        sha256: sha256:f3dc895262b305cf3298dcb5fb5669159c18e2635e4f9862950e1da71788e676
-        size: 11433730
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_netbsd_386
-      - name: ping_exporter-0.4.3_netbsd_amd64
-        sha256: sha256:f619e769526693f9bf0f82bf63f9879cd7868f1f3e4e88cb8e5f9062daa3b46f
-        size: 13015104
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_netbsd_amd64
-      - name: ping_exporter-0.4.3_netbsd_arm
-        sha256: sha256:e3fe0200fdd92d68afeb7f5f1029907e33c9cc2eccf003457d633be2ca501c21
-        size: 11603880
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_netbsd_arm
-      - name: ping_exporter-0.4.3_openbsd_386
-        sha256: sha256:cef6422432f2a7a59bd6d26bc9c05906c8b8ad4383dbe743a3251412c618d834
-        size: 11443785
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_openbsd_386
-      - name: ping_exporter-0.4.3_openbsd_amd64
-        sha256: sha256:fb9f0b751bfea8d73d7d4c77c18dbef61ae1e0d3c528b7669616cc370423e654
-        size: 13043507
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_openbsd_amd64
-      - name: ping_exporter-0.4.3_windows_386.exe
-        sha256: sha256:cdc5704fda9912157d5c4c07ee256f8aa14a4244852b5313fe6bc3604d023d13
-        size: 11459072
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_windows_386.exe
-      - name: ping_exporter-0.4.3_windows_amd64.exe
-        sha256: sha256:0dacb8d368fc5cc0d735b78462c010f160668489bd7d5ae2c0344fdaa34e40b6
-        size: 12926976
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_windows_amd64.exe
-    prerelease: false
-    published:
-      timestamp: 2018-09-22 07:42:27
-  '0.44':
-    commit:
-      sha: eed8f09ace8bb067f689ea69adb2ab680b184bbf
-    files:
-      - name: ping_exporter-0.4.4_darwin_386
-        sha256: sha256:952726ea5308aaeb4e745d99169c6500c1d644cd14b2ae700d9716ff89e0887a
-        size: 11081028
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_darwin_386
-      - name: ping_exporter-0.4.4_darwin_amd64
-        sha256: sha256:2474d852844c6437dab1e248c535b2f73c59599715ba842955d116c9fd604b65
-        size: 12490312
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_darwin_amd64
-      - name: ping_exporter-0.4.4_freebsd_386
-        sha256: sha256:27abad582e97cc09e72040864ec1b51d4e134d2b9ded891d8aa8a8bc9bdbdac4
-        size: 10985067
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_freebsd_386
-      - name: ping_exporter-0.4.4_freebsd_amd64
-        sha256: sha256:8e2d591bf114f52bd6a7cf990bdd0350b07bb8a234994de7d1a986adf422b7d9
-        size: 12472705
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_freebsd_amd64
-      - name: ping_exporter-0.4.4_freebsd_arm
-        sha256: sha256:279216e8816ba779cf19843158a3611ef2413ef307183960ed333d4975e7600c
-        size: 10975799
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_freebsd_arm
-      - name: ping_exporter-0.4.4_linux_386
-        sha256: sha256:bfba043535e62ffe5858dd2368ea1c10e6886178984b271dfea298e6bfef3cdc
-        size: 11042890
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_386
-      - name: ping_exporter-0.4.4_linux_amd64
-        sha256: sha256:eb983ae797e5f01fc66dfdb1090049c0aba6630ab7f211846fa26580c961a682
-        size: 12532339
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_amd64
-      - name: ping_exporter-0.4.4_linux_arm
-        sha256: sha256:9ecb95c4c0f7639f1f79765020c27c806997b39e968326b1a77e0354bdf454b5
-        size: 10972090
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_arm
-      - name: ping_exporter-0.4.4_linux_mips
-        sha256: sha256:6ffd6db44e34659f0771113cec0273ed3c24b0bc968375ad3a8c3b448b6cdf54
-        size: 11952933
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_mips
-      - name: ping_exporter-0.4.4_linux_mips64
-        sha256: sha256:e3117762dd33f6d85dea246748755cff9a48db36cffcc777f934eb51ca593e3f
-        size: 12801666
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_mips64
-      - name: ping_exporter-0.4.4_linux_mips64le
-        sha256: sha256:175325ebbe72dfb7e5efee4e16438d57d0b0a9dba148b63fd280168a89a582c0
-        size: 12736220
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_mips64le
-      - name: ping_exporter-0.4.4_linux_mipsle
-        sha256: sha256:489f99672de38e994a92ffccb9faaf57e1e5d82b3bc59c1f7d33ab48ced86c6a
-        size: 11887399
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_mipsle
-      - name: ping_exporter-0.4.4_linux_s390x
-        sha256: sha256:b43f0f9063cbd1cfdd9628185b9d3e0b70e9bb5223c2809232e4167d7d843b6d
-        size: 12817656
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_s390x
-      - name: ping_exporter-0.4.4_netbsd_386
-        sha256: sha256:87d8e5340e8c0983d621724698dac1f93ad9ca68ec77bf6c7bf55b457070da07
-        size: 10945243
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_netbsd_386
-      - name: ping_exporter-0.4.4_netbsd_amd64
-        sha256: sha256:1063be3155d8e7167c123b074d81aa2923aa73417e1fc2c20233a76945e131f1
-        size: 12423999
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_netbsd_amd64
-      - name: ping_exporter-0.4.4_netbsd_arm
-        sha256: sha256:a330080a35e7e2b72b5d01ef0064de102188817342dc5bf3b8fd3f6a52197b68
-        size: 10973723
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_netbsd_arm
-      - name: ping_exporter-0.4.4_openbsd_386
-        sha256: sha256:a5bc4bab06edc61d3bc7ca1b46a57de0fd7a7aa1780acd2bb115fc9329df5926
-        size: 10963789
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_openbsd_386
-      - name: ping_exporter-0.4.4_openbsd_amd64
-        sha256: sha256:e9cf85f2e537c2e683032109dfd1c43f2550949311e408d06025e02f5269b125
-        size: 12448711
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_openbsd_amd64
-      - name: ping_exporter-0.4.4_windows_386.exe
-        sha256: sha256:ad24b255a5e29d00c24446800811f04a2bcd0531d0fbd66d4c67eddc23e1d8b5
-        size: 10829824
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_windows_386.exe
-      - name: ping_exporter-0.4.4_windows_amd64.exe
-        sha256: sha256:ef8f4e76080215ff4bfb7a2083a2d748167bab723f44bcb6aef22fd7e03ad0fe
-        size: 12209152
-        url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_windows_amd64.exe
-    prerelease: false
-    published:
-      timestamp: 2018-11-11 18:14:46
+  name: czerwonk/ping_exporter
+  release: '0.44'
+  prerelease: null
+  url: https://github.com/czerwonk/ping_exporter
+  source: https://github.com/czerwonk/ping_exporter.git
+  updated: '2020-03-05T02:44:34.641563'
   master:
     commit:
       sha: 895a75fc557c6d70fd149ffeb28db663417513e1
-    prerelease: true
-    published:
-      timestamp: 2020-01-10 14:51:35
-software_metadata:
-  prerelease: master
-  release: '0.44'
-  updated: 2020-02-27 06:23:32.378871
+      timestamp: '2020-01-10T14:51:35'
+    files: []
+  releases:
+    - name: '0.44'
+      commit: null
+      timestamp: '2018-11-11T18:14:46'
+      prerelease: false
+      files:
+        - name: ping_exporter-0.4.4_darwin_386
+          commit: null
+          size: 11081028
+          sha256: sha256:952726ea5308aaeb4e745d99169c6500c1d644cd14b2ae700d9716ff89e0887a
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_darwin_386
+        - name: ping_exporter-0.4.4_darwin_amd64
+          commit: null
+          size: 12490312
+          sha256: sha256:2474d852844c6437dab1e248c535b2f73c59599715ba842955d116c9fd604b65
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_darwin_amd64
+        - name: ping_exporter-0.4.4_freebsd_386
+          commit: null
+          size: 10985067
+          sha256: sha256:27abad582e97cc09e72040864ec1b51d4e134d2b9ded891d8aa8a8bc9bdbdac4
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_freebsd_386
+        - name: ping_exporter-0.4.4_freebsd_amd64
+          commit: null
+          size: 12472705
+          sha256: sha256:8e2d591bf114f52bd6a7cf990bdd0350b07bb8a234994de7d1a986adf422b7d9
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_freebsd_amd64
+        - name: ping_exporter-0.4.4_freebsd_arm
+          commit: null
+          size: 10975799
+          sha256: sha256:279216e8816ba779cf19843158a3611ef2413ef307183960ed333d4975e7600c
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_freebsd_arm
+        - name: ping_exporter-0.4.4_linux_386
+          commit: null
+          size: 11042890
+          sha256: sha256:bfba043535e62ffe5858dd2368ea1c10e6886178984b271dfea298e6bfef3cdc
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_386
+        - name: ping_exporter-0.4.4_linux_amd64
+          commit: null
+          size: 12532339
+          sha256: sha256:eb983ae797e5f01fc66dfdb1090049c0aba6630ab7f211846fa26580c961a682
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_amd64
+        - name: ping_exporter-0.4.4_linux_arm
+          commit: null
+          size: 10972090
+          sha256: sha256:9ecb95c4c0f7639f1f79765020c27c806997b39e968326b1a77e0354bdf454b5
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_arm
+        - name: ping_exporter-0.4.4_linux_mips
+          commit: null
+          size: 11952933
+          sha256: sha256:6ffd6db44e34659f0771113cec0273ed3c24b0bc968375ad3a8c3b448b6cdf54
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_mips
+        - name: ping_exporter-0.4.4_linux_mips64
+          commit: null
+          size: 12801666
+          sha256: sha256:e3117762dd33f6d85dea246748755cff9a48db36cffcc777f934eb51ca593e3f
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_mips64
+        - name: ping_exporter-0.4.4_linux_mips64le
+          commit: null
+          size: 12736220
+          sha256: sha256:175325ebbe72dfb7e5efee4e16438d57d0b0a9dba148b63fd280168a89a582c0
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_mips64le
+        - name: ping_exporter-0.4.4_linux_mipsle
+          commit: null
+          size: 11887399
+          sha256: sha256:489f99672de38e994a92ffccb9faaf57e1e5d82b3bc59c1f7d33ab48ced86c6a
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_mipsle
+        - name: ping_exporter-0.4.4_linux_s390x
+          commit: null
+          size: 12817656
+          sha256: sha256:b43f0f9063cbd1cfdd9628185b9d3e0b70e9bb5223c2809232e4167d7d843b6d
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_linux_s390x
+        - name: ping_exporter-0.4.4_netbsd_386
+          commit: null
+          size: 10945243
+          sha256: sha256:87d8e5340e8c0983d621724698dac1f93ad9ca68ec77bf6c7bf55b457070da07
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_netbsd_386
+        - name: ping_exporter-0.4.4_netbsd_amd64
+          commit: null
+          size: 12423999
+          sha256: sha256:1063be3155d8e7167c123b074d81aa2923aa73417e1fc2c20233a76945e131f1
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_netbsd_amd64
+        - name: ping_exporter-0.4.4_netbsd_arm
+          commit: null
+          size: 10973723
+          sha256: sha256:a330080a35e7e2b72b5d01ef0064de102188817342dc5bf3b8fd3f6a52197b68
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_netbsd_arm
+        - name: ping_exporter-0.4.4_openbsd_386
+          commit: null
+          size: 10963789
+          sha256: sha256:a5bc4bab06edc61d3bc7ca1b46a57de0fd7a7aa1780acd2bb115fc9329df5926
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_openbsd_386
+        - name: ping_exporter-0.4.4_openbsd_amd64
+          commit: null
+          size: 12448711
+          sha256: sha256:e9cf85f2e537c2e683032109dfd1c43f2550949311e408d06025e02f5269b125
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_openbsd_amd64
+        - name: ping_exporter-0.4.4_windows_386.exe
+          commit: null
+          size: 10829824
+          sha256: sha256:ad24b255a5e29d00c24446800811f04a2bcd0531d0fbd66d4c67eddc23e1d8b5
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_windows_386.exe
+        - name: ping_exporter-0.4.4_windows_amd64.exe
+          commit: null
+          size: 12209152
+          sha256: sha256:ef8f4e76080215ff4bfb7a2083a2d748167bab723f44bcb6aef22fd7e03ad0fe
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.44/ping_exporter-0.4.4_windows_amd64.exe
+    - name: 0.4.3
+      commit: null
+      timestamp: '2018-09-24T09:52:08'
+      prerelease: false
+      files:
+        - name: ping_exporter-0.4.3_darwin_386
+          commit: null
+          size: 11573316
+          sha256: sha256:fe1a46e8435a94a0b0557f4f7f66c287626bce608480fa4c5cfd180f5f21e8cb
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_darwin_386
+        - name: ping_exporter-0.4.3_darwin_amd64
+          commit: null
+          size: 13123616
+          sha256: sha256:12faee89c1f0cfc6a5530b0ec5b1eeb2d95a29a2c260910ddd325d2ac121019a
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_darwin_amd64
+        - name: ping_exporter-0.4.3_freebsd_386
+          commit: null
+          size: 11497560
+          sha256: sha256:85a832729db173a9c34429b86616f67891358482521f23e41673965cde829b33
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_freebsd_386
+        - name: ping_exporter-0.4.3_freebsd_amd64
+          commit: null
+          size: 13091403
+          sha256: sha256:ab4cd4cab52a750a3338685efd9e95d4654a1fc923b6f9e2cfe21ebe7d82fee7
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_freebsd_amd64
+        - name: ping_exporter-0.4.3_freebsd_arm
+          commit: null
+          size: 11736610
+          sha256: sha256:67e06a6a11c9b4a7cb23e51901352cfcb49b84c0d21061e88c55451737509b98
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_freebsd_arm
+        - name: ping_exporter-0.4.3_linux_386
+          commit: null
+          size: 11674111
+          sha256: sha256:1b857c58cd2153a428a87b83bfc3ba810d66e4adcf715b0659c1855838478978
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_386
+        - name: ping_exporter-0.4.3_linux_amd64
+          commit: null
+          size: 13261818
+          sha256: sha256:f4614505e19d01e7d9cd0a2df5b8c254602c2ffc4b451276438829c7d94cb64c
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_amd64
+        - name: ping_exporter-0.4.3_linux_arm
+          commit: null
+          size: 11731934
+          sha256: sha256:f109e1f45f52f326c0a3ff0fd87899304249abf9c13d5e5521e478d65e8c3eba
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_arm
+        - name: ping_exporter-0.4.3_linux_mips
+          commit: null
+          size: 12645284
+          sha256: sha256:066f1499e8989081907e85aeb919e93663178a9558cfffb793249574ea9158aa
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_mips
+        - name: ping_exporter-0.4.3_linux_mips64
+          commit: null
+          size: 13752287
+          sha256: sha256:0779180da8a326b642cd26aebc335778562c28041e81e8c748c734c22a1d9aba
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_mips64
+        - name: ping_exporter-0.4.3_linux_mips64le
+          commit: null
+          size: 13752289
+          sha256: sha256:b9f880fca27a53c07263dc1d75aaca00d97180c05c7b4f2e8ddb9a9d8cc08cb5
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_mips64le
+        - name: ping_exporter-0.4.3_linux_mipsle
+          commit: null
+          size: 12710822
+          sha256: sha256:7d77fc0f7d2e809e3f6022a01df4921a4462f5b2197adcc88b2f8a9d6da00825
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_mipsle
+        - name: ping_exporter-0.4.3_linux_s390x
+          commit: null
+          size: 13761131
+          sha256: sha256:22bccc9656b4777da5c4272c57a433cec349cd047d3fb277d10c0a2776173d19
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_linux_s390x
+        - name: ping_exporter-0.4.3_netbsd_386
+          commit: null
+          size: 11433730
+          sha256: sha256:f3dc895262b305cf3298dcb5fb5669159c18e2635e4f9862950e1da71788e676
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_netbsd_386
+        - name: ping_exporter-0.4.3_netbsd_amd64
+          commit: null
+          size: 13015104
+          sha256: sha256:f619e769526693f9bf0f82bf63f9879cd7868f1f3e4e88cb8e5f9062daa3b46f
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_netbsd_amd64
+        - name: ping_exporter-0.4.3_netbsd_arm
+          commit: null
+          size: 11603880
+          sha256: sha256:e3fe0200fdd92d68afeb7f5f1029907e33c9cc2eccf003457d633be2ca501c21
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_netbsd_arm
+        - name: ping_exporter-0.4.3_openbsd_386
+          commit: null
+          size: 11443785
+          sha256: sha256:cef6422432f2a7a59bd6d26bc9c05906c8b8ad4383dbe743a3251412c618d834
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_openbsd_386
+        - name: ping_exporter-0.4.3_openbsd_amd64
+          commit: null
+          size: 13043507
+          sha256: sha256:fb9f0b751bfea8d73d7d4c77c18dbef61ae1e0d3c528b7669616cc370423e654
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_openbsd_amd64
+        - name: ping_exporter-0.4.3_windows_386.exe
+          commit: null
+          size: 11459072
+          sha256: sha256:cdc5704fda9912157d5c4c07ee256f8aa14a4244852b5313fe6bc3604d023d13
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_windows_386.exe
+        - name: ping_exporter-0.4.3_windows_amd64.exe
+          commit: null
+          size: 12926976
+          sha256: sha256:0dacb8d368fc5cc0d735b78462c010f160668489bd7d5ae2c0344fdaa34e40b6
+          url: https://github.com/czerwonk/ping_exporter/releases/download/0.4.3/ping_exporter-0.4.3_windows_amd64.exe

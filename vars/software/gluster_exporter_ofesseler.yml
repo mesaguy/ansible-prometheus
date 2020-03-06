@@ -3,112 +3,119 @@ defaults:
   port: 9189
   tgroup: gluster
 software:
+  name: ofesseler/gluster_exporter
+  release: v0.2.5
+  prerelease: v0.2.7
+  url: https://github.com/ofesseler/gluster_exporter
+  source: https://github.com/ofesseler/gluster_exporter.git
+  updated: '2020-03-05T02:47:02.654326'
   master:
     commit:
       sha: fdb453f94b8d5bd566f39554a56ccee17aaefb94
-    prerelease: true
-    published:
-      timestamp: 2018-07-28 19:21:52
-  v0.1.0:
-    commit:
-      sha: 032860e9d4056a49b0b305417a516b1137d264c9
-    files:
-      - name: gluster_exporter
-        sha256: sha256:64606c265731df71583492a22a6fd332b854cba06c75b3e1da72eb0825fbbe28
-        size: 8988088
-        url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.1.0/gluster_exporter
-    prerelease: true
-    published:
-      timestamp: 2016-11-21 15:03:23
-  v0.1.1:
-    commit:
-      sha: 57cf65f86bcffdb2307ad003875ad0df7fec3e9b
-    files:
-      - name: gluster_exporter-0.1.1.linux-amd64.tar.gz
-        sha256: sha256:b236a0cb66d6a3554d0eb5ccad5b0bb83dc63ed619f3e3d45efb3083a971c8bd
-        size: 2950683
-        url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.1.1/gluster_exporter-0.1.1.linux-amd64.tar.gz
-    prerelease: true
-    published:
-      timestamp: 2016-11-22 17:21:51
-  v0.1.2:
-    commit:
-      sha: 23cfb390ef339c54bef4c1527af9b14e63cf28f0
-    files:
-      - name: gluster_exporter-0.1.2.linux-amd64.tar.gz
-        sha256: sha256:4581bd181290f2cd01850c16d62266935a7eef4125e5967377c7c3e857124d59
-        size: 2974345
-        url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.1.2/gluster_exporter-0.1.2.linux-amd64.tar.gz
-    prerelease: true
-    published:
-      timestamp: 2016-11-28 13:17:27
-  v0.2.2:
-    commit:
-      sha: e0f75e7498fa9d65f48bd9bb626c3c2972c6a9d7
-    files:
-      - name: gluster_exporter-0.2.2.linux-amd64.tar.gz
-        sha256: sha256:d84877b30a6defbf3f16bada288acc13d453ca34931aa819fb78238546981d32
-        size: 3094349
-        url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.2.2/gluster_exporter-0.2.2.linux-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2016-11-29 16:20:04
-  v0.2.3:
-    commit:
-      sha: b66775032a9c83a532222cde19e13170ebcb786e
-    files:
-      - name: gluster_exporter-0.2.3.linux-amd64.tar.gz
-        sha256: sha256:dbf4d181621af2bc11767efea18dabc9ca0c04bf1c3ce6fbe19670e45f6de04f
-        size: 3073985
-        url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.2.3/gluster_exporter-0.2.3.linux-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2016-12-05 09:52:07
-  v0.2.4:
-    commit:
-      sha: 524b261a0b04456d543e1f32f9c07c6516e49d5d
-    files:
-      - name: gluster_exporter-0.2.4.linux-amd64.tar.gz
-        sha256: sha256:93c627436fe96c07a6da2cf926e8ef3d6ff70d9db072a4570a5f3f68c7e8501c
-        size: 3077067
-        url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.2.4/gluster_exporter-0.2.4.linux-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2016-12-12 15:34:25
-  v0.2.5:
-    commit:
-      sha: 0e16052c6a0399880d6c74ba5b94fe1ade283615
-    files:
-      - name: gluster_exporter-0.2.5.linux-amd64.tar.gz
-        sha256: sha256:ddeca562969d5e78cc4ad704774649a12d4749d7c3e9d092ea9c9187080715a6
-        size: 3081941
-        url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.2.5/gluster_exporter-0.2.5.linux-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2016-12-14 15:01:24
-  v0.2.6:
-    commit:
-      sha: a11d61e0f668027f70275b67cc4d7a19c73afd10
-    files:
-      - name: gluster_exporter-0.2.6.linux-amd64.tar.gz
-        sha256: sha256:2981452fcffd9ba36ae3432ec1b4314ddc8af3fdd1e9f8731dd3023fc10e539b
-        size: 3089855
-        url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.2.6/gluster_exporter-0.2.6.linux-amd64.tar.gz
-    prerelease: true
-    published:
-      timestamp: 2017-02-16 16:50:30
-  v0.2.7:
-    commit:
-      sha: 9beb3a0cb0997961b1bebe5536ae3eb3c334949d
-    files:
-      - name: gluster_exporter-0.2.7.linux-amd64.tar.gz
-        sha256: sha256:06978eb392de38ef227ffb86241bffd5ac2e3dd39294da1d2ebbd13140fac602
-        size: 3225504
-        url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.2.7/gluster_exporter-0.2.7.linux-amd64.tar.gz
-    prerelease: true
-    published:
-      timestamp: 2017-05-09 09:29:32
-software_metadata:
-  prerelease: v0.2.7
-  release: v0.2.5
-  updated: 2020-02-27 06:46:10.782323
+      timestamp: '2018-07-28T19:21:52'
+    files: []
+  releases:
+    - name: v0.2.7
+      commit: null
+      timestamp: '2017-05-09T09:30:05'
+      prerelease: true
+      files:
+        - name: gluster_exporter-0.2.7.linux-amd64.tar.gz
+          commit: null
+          size: 3225504
+          sha256: sha256:06978eb392de38ef227ffb86241bffd5ac2e3dd39294da1d2ebbd13140fac602
+          url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.2.7/gluster_exporter-0.2.7.linux-amd64.tar.gz
+    - name: v0.2.6
+      commit: null
+      timestamp: '2017-02-16T16:50:30'
+      prerelease: true
+      files:
+        - name: gluster_exporter-0.2.6.linux-amd64.tar.gz
+          commit: null
+          size: 3089855
+          sha256: sha256:2981452fcffd9ba36ae3432ec1b4314ddc8af3fdd1e9f8731dd3023fc10e539b
+          url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.2.6/gluster_exporter-0.2.6.linux-amd64.tar.gz
+    - name: v0.2.5
+      commit: null
+      timestamp: '2016-12-14T15:01:24'
+      prerelease: false
+      files:
+        - name: gluster_exporter-0.2.5.linux-amd64.tar.gz
+          commit: null
+          size: 3081941
+          sha256: sha256:ddeca562969d5e78cc4ad704774649a12d4749d7c3e9d092ea9c9187080715a6
+          url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.2.5/gluster_exporter-0.2.5.linux-amd64.tar.gz
+    - name: v0.2.4
+      commit: null
+      timestamp: '2016-12-12T15:34:25'
+      prerelease: false
+      files:
+        - name: gluster_exporter-0.2.4.linux-amd64.tar.gz
+          commit: null
+          size: 3077067
+          sha256: sha256:93c627436fe96c07a6da2cf926e8ef3d6ff70d9db072a4570a5f3f68c7e8501c
+          url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.2.4/gluster_exporter-0.2.4.linux-amd64.tar.gz
+    - name: v0.2.3
+      commit: null
+      timestamp: '2016-12-05T09:52:07'
+      prerelease: false
+      files:
+        - name: gluster_exporter-0.2.3.linux-amd64.tar.gz
+          commit: null
+          size: 3073985
+          sha256: sha256:dbf4d181621af2bc11767efea18dabc9ca0c04bf1c3ce6fbe19670e45f6de04f
+          url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.2.3/gluster_exporter-0.2.3.linux-amd64.tar.gz
+    - name: v0.2.2
+      commit: null
+      timestamp: '2016-11-29T16:23:54'
+      prerelease: false
+      files:
+        - name: gluster_exporter-0.2.2.linux-amd64.tar.gz
+          commit: null
+          size: 3094349
+          sha256: sha256:d84877b30a6defbf3f16bada288acc13d453ca34931aa819fb78238546981d32
+          url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.2.2/gluster_exporter-0.2.2.linux-amd64.tar.gz
+    - name: v0.2.1
+      commit:
+        sha: 0be9e31fb539dadc27a2426608c2e7ff43756834
+        timestamp: '2016-11-29T16:06:30'
+      timestamp: '2016-11-29T16:06:30'
+      prerelease: false
+      files: []
+    - name: v0.2.0
+      commit:
+        sha: 3ddca36120f372f920dec8bde031e1a8d04acfbc
+        timestamp: '2016-11-29T15:56:58'
+      timestamp: '2016-11-29T15:56:58'
+      prerelease: false
+      files: []
+    - name: v0.1.2
+      commit: null
+      timestamp: '2016-11-28T13:17:27'
+      prerelease: true
+      files:
+        - name: gluster_exporter-0.1.2.linux-amd64.tar.gz
+          commit: null
+          size: 2974345
+          sha256: sha256:4581bd181290f2cd01850c16d62266935a7eef4125e5967377c7c3e857124d59
+          url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.1.2/gluster_exporter-0.1.2.linux-amd64.tar.gz
+    - name: v0.1.1
+      commit: null
+      timestamp: '2016-11-22T17:21:51'
+      prerelease: true
+      files:
+        - name: gluster_exporter-0.1.1.linux-amd64.tar.gz
+          commit: null
+          size: 2950683
+          sha256: sha256:b236a0cb66d6a3554d0eb5ccad5b0bb83dc63ed619f3e3d45efb3083a971c8bd
+          url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.1.1/gluster_exporter-0.1.1.linux-amd64.tar.gz
+    - name: v0.1.0
+      commit: null
+      timestamp: '2016-11-21T15:03:23'
+      prerelease: true
+      files:
+        - name: gluster_exporter
+          commit: null
+          size: 8988088
+          sha256: sha256:64606c265731df71583492a22a6fd332b854cba06c75b3e1da72eb0825fbbe28
+          url: https://github.com/ofesseler/gluster_exporter/releases/download/v0.1.0/gluster_exporter

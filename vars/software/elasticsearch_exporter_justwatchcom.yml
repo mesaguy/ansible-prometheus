@@ -3,1231 +3,1470 @@ defaults:
   port: 9908
   tgroup: elasticsearch
 software:
-  0.3.0:
-    commit:
-      sha: 94394629e0146617302d7616a813adfb79be445d
-    files:
-      - name: elasticsearch_exporter-0.3.0.darwin-amd64.tar.gz
-        sha256: sha256:c63f498b9ed478d7966cc171e790ae3eb5195874cd633a273b03da2831de6b95
-        size: 2540915
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/0.3.0/elasticsearch_exporter-0.3.0.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-0.3.0.linux-amd64.tar.gz
-        sha256: sha256:0ece1f3dfb309aa598f12385ee4c276f2dbb5be0696a23f2e63363a221b048fc
-        size: 2540915
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/0.3.0/elasticsearch_exporter-0.3.0.linux-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2016-01-05 15:34:29
+  name: justwatchcom/elasticsearch_exporter
+  release: v1.1.0
+  prerelease: v1.1.0rc1
+  url: https://github.com/justwatchcom/elasticsearch_exporter
+  source: https://github.com/justwatchcom/elasticsearch_exporter.git
+  updated: '2020-03-05T02:48:22.450523'
   master:
     commit:
       sha: c4c7d2bf2ed55725515dd27df4fd41b6c0b5c33c
-    prerelease: true
-    published:
-      timestamp: 2020-01-28 15:48:29
-  v0.1.0:
-    commit:
-      sha: 47cc3b9977c8b18ed060f0fa478318e5b8e5dc41
-    files:
-      - name: elasticsearch_exporter-0.1.0.darwin-amd64.tar.gz
-        sha256: sha256:cdd2e90e89a9a4a7f7f47769a672f109b87676afa2589aac153ec79b76a0d0a5
-        size: 2531624
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.1.0/elasticsearch_exporter-0.1.0.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-0.1.0.linux-amd64.tar.gz
-        sha256: sha256:99cb71199508e4ef2a7fa3885ed7fc7896e58aa301f25628fce87ca737a75f0e
-        size: 2533094
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.1.0/elasticsearch_exporter-0.1.0.linux-amd64.tar.gz
-    prerelease: true
-    published:
-      timestamp: 2015-04-05 18:29:10
-  v0.1.1:
-    commit:
-      sha: efb14c91220f2d9ed6e114bc3ad54579b7ae494d
-    files:
-      - name: elasticsearch_exporter-0.1.1.darwin-amd64.tar.gz
-        sha256: sha256:98862498936721841a4dac89890ca7af03ab1b95d7e893fed86b5e6358025e84
-        size: 2532071
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.1.1/elasticsearch_exporter-0.1.1.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-0.1.1.linux-amd64.tar.gz
-        sha256: sha256:09b3e5d15b4157f8ceeb38b747a4cda73500cd4c77c02116ca44c179d763c398
-        size: 2533084
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.1.1/elasticsearch_exporter-0.1.1.linux-amd64.tar.gz
-    prerelease: true
-    published:
-      timestamp: 2015-04-24 20:29:25
-  v0.2.0:
-    commit:
-      sha: 5d9b67929ea8db80e7a4a641085240bd45e60000
-    files:
-      - name: elasticsearch_exporter-0.2.0.darwin-amd64.tar.gz
-        sha256: sha256:2511b106d56c0123d1a6208a9283474224afbd9d68fe5c9c682dc12507d37461
-        size: 2535587
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.2.0/elasticsearch_exporter-0.2.0.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-0.2.0.linux-amd64.tar.gz
-        sha256: sha256:042bd27fec12e9ead46d3e08c8f86856fb60574654f2bc9a456d63649f2f1b26
-        size: 2536428
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.2.0/elasticsearch_exporter-0.2.0.linux-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2015-06-17 13:55:03
-  v0.2.1:
-    commit:
-      sha: 5cf98724e2e2884155a4ce84f501b65735f2b26e
-    files:
-      - name: elasticsearch_exporter-0.2.1.darwin-amd64.tar.gz
-        sha256: sha256:dbeac70f9ed5105193d65605f0657939e209332da5ac0acf2efa808a41209347
-        size: 2536493
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.2.1/elasticsearch_exporter-0.2.1.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-0.2.1.linux-amd64.tar.gz
-        sha256: sha256:8b05ad78d709ffa3b24ae1c3241590667b7e0580857b6aad3e13f2bdf5126801
-        size: 2537673
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.2.1/elasticsearch_exporter-0.2.1.linux-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2015-08-28 13:39:10
-  v0.3.1:
-    commit:
-      sha: e1f9c87dfdce836b564a1642ab0b45dfeb1618c0
+      timestamp: '2020-01-28T14:04:04'
     files: []
-    prerelease: false
-    published:
-      timestamp: 2017-05-15 13:55:37
-  v0.3.2:
-    commit:
-      sha: 9fbe08720989bf0e8fe274ab24677aaf205bfae3
-    files:
-      - name: elasticsearch_exporter-0.3.2.darwin-amd64.tar.gz
-        sha256: sha256:17b085a7f75e35664a5dbc7336cb2547ac0992b8528933dd79fff74bc8fb6ea9
-        size: 3088785
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.3.2/elasticsearch_exporter-0.3.2.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-0.3.2.linux-amd64.tar.gz
-        sha256: sha256:445a5944de83e5a1bb37ab2a37898bf6058924a691bb987700134c49f9070653
-        size: 3098442
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.3.2/elasticsearch_exporter-0.3.2.linux-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2017-06-15 07:29:06
-  v0.3.3:
-    commit:
-      sha: 09e4152aaaab938004d800fe66679aaa9ee7fede
-    files:
-      - name: elasticsearch_exporter-0.3.3.linux-amd64.tar.gz
-        sha256: sha256:1e19066d027e5ca88bec844418f214b5c0141ae9e8833aa53fcbf83cc59c98de
-        size: 3300225
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.3.3/elasticsearch_exporter-0.3.3.linux-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2017-06-16 07:07:24
-  v1.0.0:
-    commit:
-      sha: 62168d19d26b5527d11517aa552cff952553fe1f
-    files:
-      - name: elasticsearch_exporter-1.0.0.darwin-386.tar.gz
-        sha256: sha256:297d857d343bfb93ee1728247dd4209ba7847cd896798fbbaf17537bc818f425
-        size: 2569947
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.darwin-386.tar.gz
-      - name: elasticsearch_exporter-1.0.0.darwin-amd64.tar.gz
-        sha256: sha256:863fe4f5c7eed1f3f0d3b0cbb902e3e94810f097d61013c621485665a05055c0
-        size: 2729108
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.0.dragonfly-amd64.tar.gz
-        sha256: sha256:8f9c939f2167ea63e6f9a2baf8495aab7e2cf2819b4dd7ea961c62361f1152e0
-        size: 1981347
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.dragonfly-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.0.freebsd-386.tar.gz
-        sha256: sha256:2106ead559b9d0bd2e2f46a6a59c9e1f5185438ec478616c4f334adb3deae4b1
-        size: 1839398
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.freebsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.0.freebsd-amd64.tar.gz
-        sha256: sha256:1be0b2c83ead9b9be81a00a7133f674a64fb1b42679f9126eb1e2788b04f291e
-        size: 1982250
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.freebsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.0.freebsd-armv6.tar.gz
-        sha256: sha256:35e54607b21b89fc7561f609bbe5b0fa6858347476e5c77e0828890c0e8fc3cb
-        size: 1846019
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.freebsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.0.freebsd-armv7.tar.gz
-        sha256: sha256:228dd0fed0a5f70c15873d757f9d5a99df8138cd1e508e6e24c64f2ead6bcecf
-        size: 1845905
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.freebsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.0.linux-386.tar.gz
-        sha256: sha256:32cfac5d4fcf8dfb255bea71d2f678a3dc3344a3ebd9f281fff6d07cba1d07d3
-        size: 1833073
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-386.tar.gz
-      - name: elasticsearch_exporter-1.0.0.linux-amd64.tar.gz
-        sha256: sha256:35fe71e3af7ebcf3dc690f96ea881ed2a81c9a56d5352706db932d738d6b7557
-        size: 1978295
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.0.linux-arm64.tar.gz
-        sha256: sha256:9c0563ab0a40db96423336d001ef4ae9bda4ff59c3cb2352d8050991ab975e06
-        size: 1821444
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-arm64.tar.gz
-      - name: elasticsearch_exporter-1.0.0.linux-armv5.tar.gz
-        sha256: sha256:80bacb431250fddcc5f1a74862bc87921f08d2133d630f86477a44d740744825
-        size: 1853785
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-armv5.tar.gz
-      - name: elasticsearch_exporter-1.0.0.linux-armv6.tar.gz
-        sha256: sha256:af87d2abc2ebe22cb25f76159e95edf6e8813be01514b8b053074ba957fb9f6c
-        size: 1838418
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.0.linux-armv7.tar.gz
-        sha256: sha256:f0d8f3f0ff23fbb30d38823fb81252d5c9eb5981c1c55c086bae4a629c9f18d3
-        size: 1838198
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.0.linux-mips64.tar.gz
-        sha256: sha256:6dbf07392eb84d9f2d83c7dd4b78c822221bee12b6a39762b7a05e4e58217b89
-        size: 1780964
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-mips64.tar.gz
-      - name: elasticsearch_exporter-1.0.0.linux-mips64le.tar.gz
-        sha256: sha256:1f934ba73b83f4a2fa12395474f86fb3d6339ab683c34453ea896f062df4b9ad
-        size: 1735175
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-mips64le.tar.gz
-      - name: elasticsearch_exporter-1.0.0.linux-ppc64.tar.gz
-        sha256: sha256:4ca4d1944b0d52226ce0ebc47681cdb5000536134ffd8af532b41e0959a3614a
-        size: 1842601
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-ppc64.tar.gz
-      - name: elasticsearch_exporter-1.0.0.linux-ppc64le.tar.gz
-        sha256: sha256:1b34463e24b3730d1779ba33443d071cf6a6941ed28f02400d23d12d58c29a14
-        size: 1813629
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-ppc64le.tar.gz
-      - name: elasticsearch_exporter-1.0.0.netbsd-386.tar.gz
-        sha256: sha256:78d73be9bc99d2f407e70b106c0af53a4629a5ea088242b4b242f40524baa2bc
-        size: 1836455
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.netbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.0.netbsd-amd64.tar.gz
-        sha256: sha256:1e957565a2cbc78b0141567fe79607e7ae5d9668d03aaa1a48bab718fe0bcb25
-        size: 1980409
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.netbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.0.netbsd-armv6.tar.gz
-        sha256: sha256:123fd94ca1167d9298b30f2df66372c9450a0711a6f9c7ee37d3f4912ab6e7fb
-        size: 1844951
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.netbsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.0.netbsd-armv7.tar.gz
-        sha256: sha256:0f680e6242e709532b0d6261983d756254a0019f59c096b1a3e77c771c24811e
-        size: 1844577
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.netbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.0.openbsd-386.tar.gz
-        sha256: sha256:67d0e0a97e186f2b61c4f5275a5a9fce97e45119924867634c9cf8272feb08bc
-        size: 1835824
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.openbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.0.openbsd-amd64.tar.gz
-        sha256: sha256:0fbe4f37a33ddc6e9eea9cee4e5f440e5f0b994d1e1e73249746efe337736e32
-        size: 1979672
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.openbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.0.openbsd-armv7.tar.gz
-        sha256: sha256:a0c0771e7ed85a934acd0536464e1101596caa0cf7724f0fca42f5cb204d9de1
-        size: 1843381
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.openbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.0.windows-386.tar.gz
-        sha256: sha256:fed0855491d31e8851c34b14d56cd5950627d12225f2a2ae9fe55d84a533925f
-        size: 1815592
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.windows-386.tar.gz
-      - name: elasticsearch_exporter-1.0.0.windows-amd64.tar.gz
-        sha256: sha256:c9fa6124111b556ddfdee3cd8766343a577db9bfdb0d25068242114cc38846dc
-        size: 1959258
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.windows-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2017-07-03 12:45:30
-  v1.0.0-rc1:
-    commit:
-      sha: 63177b8675b7dd2db6eb588ecebdbbcbc960f7cd
-    files:
-      - name: elasticsearch_exporter-1.0.0-rc1.darwin-386.tar.gz
-        sha256: sha256:9956f9b093b47dc1c703b661763fd8aaddbcbc2657d34c6ca17548c09efc7205
-        size: 2568326
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.darwin-386.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.darwin-amd64.tar.gz
-        sha256: sha256:22d4923a58cd5215e308ded09fd2dceb3e7188c1ee3452711b3d4c846a626174
-        size: 2734466
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.dragonfly-amd64.tar.gz
-        sha256: sha256:1ce38df723d90cb9e9e3d19e1a573f575ff338d7d2242a020954f745f3733368
-        size: 1984841
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.dragonfly-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.freebsd-386.tar.gz
-        sha256: sha256:b263dbf6f494084328706ae3868173448aa6b06482b0bf53a25cf8c1dda8d212
-        size: 1840243
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.freebsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.freebsd-amd64.tar.gz
-        sha256: sha256:dc98cc73001b5fc8652f3a43e3265dd183d317f741a98624636d7ac87f20995e
-        size: 1986899
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.freebsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.freebsd-armv6.tar.gz
-        sha256: sha256:8a4126cfe9ebb7640cb580a8642dd44ed05f05002c04596acbe9cf7ebabda925
-        size: 1848073
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.freebsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.freebsd-armv7.tar.gz
-        sha256: sha256:82b24abaabb38c8071e85775515cf46f191bf431645da53f56bcc10d50cbb045
-        size: 1847979
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.freebsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.linux-386.tar.gz
-        sha256: sha256:5f706a975aa5a28a048d61674012d86cdb6be9367762356aceeee709f57f1291
-        size: 1834187
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-386.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.linux-amd64.tar.gz
-        sha256: sha256:e67eaca389c93a9a2d38f5b38fbc8ff39e7094538706a30e522c904ac67c87fb
-        size: 1984136
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.linux-arm64.tar.gz
-        sha256: sha256:aefa93def99eb9fa8203255ebc95e9a1d1af3eee861f17d648903f9771364954
-        size: 1823520
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-arm64.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.linux-armv5.tar.gz
-        sha256: sha256:6fcafac33607c292f1c9336e3373e75409c9e973865b0a1ed053f82544e9eb65
-        size: 1857044
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-armv5.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.linux-armv6.tar.gz
-        sha256: sha256:ca779b2cfa36aa89317a094f90cd7c31e3453b77109a03eda308ff1540599846
-        size: 1838973
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.linux-armv7.tar.gz
-        sha256: sha256:b810c2d4fa8f7a8d5bc74a107e375451f14435aa52667d753380d2db7741cf38
-        size: 1838629
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.linux-mips64.tar.gz
-        sha256: sha256:1e7d0eb6755f8bb5bf5688bef84b29788e5c14af5638542766d53dfbe5d57b34
-        size: 1781392
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-mips64.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.linux-mips64le.tar.gz
-        sha256: sha256:edbfa9ba2ad6035d9e8f9e6a8c1be6bb2b43b81147e63f1346a68ddfe3c05944
-        size: 1741159
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-mips64le.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.linux-ppc64.tar.gz
-        sha256: sha256:ac72a11b17c8e1b8df6012943df88efe189e2294c4e18911090e9cf922927257
-        size: 1847171
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-ppc64.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.linux-ppc64le.tar.gz
-        sha256: sha256:7ca93bfcbad972944473164a4366af2eeef58ed9d211ab1790298668c3b6e88e
-        size: 1817463
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-ppc64le.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.netbsd-386.tar.gz
-        sha256: sha256:b8d60960fe6e400f6abdff5ffb04848b6d7950e9bc66a9e04fdd5b8e1297442d
-        size: 1838100
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.netbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.netbsd-amd64.tar.gz
-        sha256: sha256:b47be6c26ce9b1ac953f37c500d4702bb4b72f2fa2fb64d1bdc40ed71c117b80
-        size: 1982966
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.netbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.netbsd-armv6.tar.gz
-        sha256: sha256:01d723c034c35d16ed5e5269151195780d1bd30bf146c909834926e194f2f79d
-        size: 1847590
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.netbsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.netbsd-armv7.tar.gz
-        sha256: sha256:75d06470779cff607f7bdc5478f26dc5329adae21a39c344b85be4cf551bd0d2
-        size: 1847062
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.netbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.openbsd-386.tar.gz
-        sha256: sha256:90514d57dd68be4e0ade2510e84e16c4ed9af7d8ac5686084bdd48e2f987674b
-        size: 1836617
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.openbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.openbsd-amd64.tar.gz
-        sha256: sha256:e29380289f1770a7672a0294bee92cf5c806bac4a4c9ae836d8d09eab2477f6c
-        size: 1984072
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.openbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.openbsd-armv7.tar.gz
-        sha256: sha256:d6fe77b3d11eeab37d9126aa353cafa7c44ce83b8316d481c95163f84a8ab07b
-        size: 1843582
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.openbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.windows-386.tar.gz
-        sha256: sha256:2f12ffe9786371443523ee2b4b32cc3d1d49e2bf9571f5bc54c482274b3619c9
-        size: 1815464
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.windows-386.tar.gz
-      - name: elasticsearch_exporter-1.0.0-rc1.windows-amd64.tar.gz
-        sha256: sha256:6ca8b66045b811ff6967e1c9d84ced3b42f1a8fbd9cf7e6c42e5ee77e318e842
-        size: 1961679
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.windows-amd64.tar.gz
-    prerelease: true
-    published:
-      timestamp: 2017-06-28 19:51:53
-  v1.0.1:
-    commit:
-      sha: 52290a5094462cb7dd34c7aa7d69ce92c843875d
-    files:
-      - name: elasticsearch_exporter-1.0.1.darwin-386.tar.gz
-        sha256: sha256:14dd60bb5337b1ce9a288390db00f699d8bc0876441074d0e3cb790cf3eeb6d8
-        size: 2572596
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.darwin-386.tar.gz
-      - name: elasticsearch_exporter-1.0.1.darwin-amd64.tar.gz
-        sha256: sha256:7c08afc8d3fb412ae1bab6fec31321a9588da0e2d069790718d65f7f5c1ff069
-        size: 2732166
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.1.dragonfly-amd64.tar.gz
-        sha256: sha256:2e32ad706c4bf61ea84c8bae1262b2576c68d31c14d71bd4a9da32511f7dc956
-        size: 1983032
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.dragonfly-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.1.freebsd-386.tar.gz
-        sha256: sha256:5a0d7dd9099d9035b2ae080771ff1e882796f4b915bca825302f9a5451ea5a28
-        size: 1841793
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.freebsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.1.freebsd-amd64.tar.gz
-        sha256: sha256:5438df080712866a904678c6d8caa83a3f77fb65c4513ae4ba3344d3d82f8d7b
-        size: 1984950
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.freebsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.1.freebsd-armv6.tar.gz
-        sha256: sha256:6ba8b5e124e0e6343d6f012db57e931fd4db9457abadf6853aa05ca50be9da65
-        size: 1848316
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.freebsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.1.freebsd-armv7.tar.gz
-        sha256: sha256:e8eb2daa9453095de57da5559ab9b402953a18a2c321826c15bc4d01afb36376
-        size: 1848044
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.freebsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.1.linux-386.tar.gz
-        sha256: sha256:7120692f247dea51cbb24d1f83a598edac5145a997237770b99bd07561dbf00e
-        size: 1835061
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-386.tar.gz
-      - name: elasticsearch_exporter-1.0.1.linux-amd64.tar.gz
-        sha256: sha256:907e5f8680665c6da432bf4c398148743911de2f6533d609476aed0e423cb855
-        size: 1980695
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.1.linux-arm64.tar.gz
-        sha256: sha256:7264cad1c63e19db8040a10300e7ab360bdd907c9b743aa829410d814af40fb5
-        size: 1823188
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-arm64.tar.gz
-      - name: elasticsearch_exporter-1.0.1.linux-armv5.tar.gz
-        sha256: sha256:f74f5cb7532df32bd60506d78daa155fa7e9e0853053021a3535ceaa7cdd337f
-        size: 1857638
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-armv5.tar.gz
-      - name: elasticsearch_exporter-1.0.1.linux-armv6.tar.gz
-        sha256: sha256:964ecbb03d55ae8bfce8badc8f366b45acca26fd919a0aab4bc4a9bf5226ac1d
-        size: 1840422
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.1.linux-armv7.tar.gz
-        sha256: sha256:c343465725f9c4776b7997f254dcc284411a2f1bb8772c1d819269d0f280d419
-        size: 1840073
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.1.linux-mips64.tar.gz
-        sha256: sha256:937d6a23110b722a1824c44f9086368bafdf2a4a9e9cd8e8807a158e1afb66a8
-        size: 1783140
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-mips64.tar.gz
-      - name: elasticsearch_exporter-1.0.1.linux-mips64le.tar.gz
-        sha256: sha256:4f214e8f0949d0fe80f88fc2625c8303ed566ce27b06c27960d245fcd755342a
-        size: 1736780
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-mips64le.tar.gz
-      - name: elasticsearch_exporter-1.0.1.linux-ppc64.tar.gz
-        sha256: sha256:3f32a21f4fd7c9ade5e59bfcfb54bfcd18c7dcb8162635c05e346be2e4b28719
-        size: 1844736
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-ppc64.tar.gz
-      - name: elasticsearch_exporter-1.0.1.linux-ppc64le.tar.gz
-        sha256: sha256:6a443629c567cb6d0f3bb2f60781fcb0835489cfd06e50d9536c264206261267
-        size: 1815788
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-ppc64le.tar.gz
-      - name: elasticsearch_exporter-1.0.1.netbsd-386.tar.gz
-        sha256: sha256:59ded580d67bd4f9c5fdb8cfe9708e8ce0555af81de53d8295976dedc2a78eac
-        size: 1839379
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.netbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.1.netbsd-amd64.tar.gz
-        sha256: sha256:fe4b4859d80c0c9e1cd83b094dc4e00d4700e6954b5f9698fe7b4c86a108ef32
-        size: 1982097
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.netbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.1.netbsd-armv6.tar.gz
-        sha256: sha256:08cc1103569409e50c8c6a7bb8a598bb1fb25f874ced81c2a00e01d15e759539
-        size: 1846662
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.netbsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.1.netbsd-armv7.tar.gz
-        sha256: sha256:c34c558811244e467438895a20bab5da9b0c1c054e45eee6cc391ab87427961b
-        size: 1846229
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.netbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.1.openbsd-386.tar.gz
-        sha256: sha256:771c8f149941dedebce3a029a14b92c2fb3e8202d061599311d4f95502f7c3f9
-        size: 1838234
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.openbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.1.openbsd-amd64.tar.gz
-        sha256: sha256:15970858598b849e2c37fa833e0552dd90e38a64a795ef4d765e60b8d558810e
-        size: 1982406
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.openbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.1.openbsd-armv7.tar.gz
-        sha256: sha256:f37f74008ec80474fcf6667680b368eefee5486e24ecebfd9e077f2e8cc2c12b
-        size: 1845280
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.openbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.1.windows-386.tar.gz
-        sha256: sha256:05e0888fb0253e3009309ecd7a8f3ff77accefc26ccfaf613814832ed94d0996
-        size: 1818413
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.windows-386.tar.gz
-      - name: elasticsearch_exporter-1.0.1.windows-amd64.tar.gz
-        sha256: sha256:587292061c274e7090e23f56f25d11e62764e6ed139b6b04d59ef69fc1d3b1b8
-        size: 1961948
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.windows-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2017-07-24 10:09:57
-  v1.0.2:
-    commit:
-      sha: 92dcbf391cb6250ec4b23c01de47bfe242a259e5
-    files:
-      - name: elasticsearch_exporter-1.0.2.darwin-386.tar.gz
-        sha256: sha256:5c4fe49b9464148cf20b806012baf4832adce4a46dbcd67d84e0e3f1725713f6
-        size: 3131016
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.darwin-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2.darwin-amd64.tar.gz
-        sha256: sha256:ec6f8efc3d79d4b10d33f1a2e6a9a72b1b2b7d5cf035f1ce23919b977bd2f3c2
-        size: 3327972
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2.dragonfly-amd64.tar.gz
-        sha256: sha256:70c563453045709614b8a9e7bf45cc02d9663eb72a6957ab5e0b16c15e661e03
-        size: 2446977
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.dragonfly-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2.freebsd-386.tar.gz
-        sha256: sha256:17a3c2004d7a748903a0ebe9a3771ca11fcf0eebef8e0ed06341aea497d0903c
-        size: 2270288
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.freebsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2.freebsd-amd64.tar.gz
-        sha256: sha256:64f0e2ab5ff81f33413df52ca89f7fe3d2ef6a64004c06d437dc34d0ad1e5112
-        size: 2449676
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.freebsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2.freebsd-armv6.tar.gz
-        sha256: sha256:d078ee666fa6fbbf338971d39b73ea556970cf71f7d3137483892efe1d3fac77
-        size: 2247216
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.freebsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.2.freebsd-armv7.tar.gz
-        sha256: sha256:937182983a52fb6959f929b56ab9b4cd7597915cceebf76b41d39056eca409f2
-        size: 2247114
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.freebsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.2.linux-386.tar.gz
-        sha256: sha256:d5e48626a938eb694ecdef3564da2be2a17084b005bab8199402d3eabc0539db
-        size: 2261613
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2.linux-amd64.tar.gz
-        sha256: sha256:9f1a35e4acf93bc073ba0106578fa9762ed09af4e89485063ca3a93a9d0201b8
-        size: 2441938
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2.linux-arm64.tar.gz
-        sha256: sha256:3389a6e4d252628e686ea4fd0cf3b9607c4c4d37fe9c40d430bf85137a96c4c8
-        size: 2203618
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-arm64.tar.gz
-      - name: elasticsearch_exporter-1.0.2.linux-armv5.tar.gz
-        sha256: sha256:fa91a9878d4da30aab36a4c9c9b01ea3fd9d00ca2da2d59a0514f2197365d965
-        size: 2253592
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-armv5.tar.gz
-      - name: elasticsearch_exporter-1.0.2.linux-armv6.tar.gz
-        sha256: sha256:a4377081e8e23b02275039024cd120f1c9c1d416e8db0dbdae0497c06028ad1d
-        size: 2237928
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.2.linux-armv7.tar.gz
-        sha256: sha256:73191c20a0d667e07ad22ab23d89aec0fe07d5ca2b3262a2c7f819df3fea65c3
-        size: 2236371
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.2.linux-mips64.tar.gz
-        sha256: sha256:e970b895424e5ecfad581ac7f24a957a7d60233f9f45f5580d7bb2ea13cd4bfb
-        size: 2164141
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-mips64.tar.gz
-      - name: elasticsearch_exporter-1.0.2.linux-mips64le.tar.gz
-        sha256: sha256:7ebacdd54d29ad812f27d7e0710f184542a1b183c30fd4e718fbdb92203b965c
-        size: 2108468
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-mips64le.tar.gz
-      - name: elasticsearch_exporter-1.0.2.linux-ppc64.tar.gz
-        sha256: sha256:a8f0b2d8fb9f06b710931753e6bf28c7f6b5420488d6e0191ed67ebc6345d86c
-        size: 2223431
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-ppc64.tar.gz
-      - name: elasticsearch_exporter-1.0.2.linux-ppc64le.tar.gz
-        sha256: sha256:39b88ec1222be65204e95f11b5879b2f670cc08feabb983380d51e607bb4f857
-        size: 2193366
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-ppc64le.tar.gz
-      - name: elasticsearch_exporter-1.0.2.netbsd-386.tar.gz
-        sha256: sha256:e4ca868cdfddbc69414eeb2990e60b3d4638eeb7a1593de132ea07b3e39b5799
-        size: 2266939
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.netbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2.netbsd-amd64.tar.gz
-        sha256: sha256:1728d23b51ba3f57bb4da390e152aeded3f7bba4de37ac76e270ab06b5d8fe70
-        size: 2443704
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.netbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2.netbsd-armv6.tar.gz
-        sha256: sha256:74435633ddd323a77fbbf1d5e39245135de1b26ff14a23cfe206d36e1eecb946
-        size: 2246345
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.netbsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.2.netbsd-armv7.tar.gz
-        sha256: sha256:deba4b7cc8d5eaaa2b5b5d3cca8073252182f5afe421c11fe2d92c640bd84d28
-        size: 2243926
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.netbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.2.openbsd-386.tar.gz
-        sha256: sha256:76ee85a72835e7ad411d4524043255402299892e7c5c7a441b7eb2187657921e
-        size: 2267418
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.openbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2.openbsd-amd64.tar.gz
-        sha256: sha256:91050c596f2bb98eb589979f5631c2df3fb03def08fced4959f601e070dc2614
-        size: 2444781
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.openbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2.openbsd-armv7.tar.gz
-        sha256: sha256:35b8a80ff09b56b37aba470aaccdf517ed808272ac14057e7f106d2a314df734
-        size: 2243388
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.openbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.2.windows-386.tar.gz
-        sha256: sha256:7dd26bc263ccf6cb2050382ead9afdb17a2252cfcefb1a5cf6b522cff69eed57
-        size: 2249421
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.windows-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2.windows-amd64.tar.gz
-        sha256: sha256:a6107a4cc5284427909785a02dc739792ff6695c7185456548dda46e70cfaf58
-        size: 2432694
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.windows-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2018-01-09 12:58:46
-  v1.0.2rc1:
-    commit:
-      sha: 247da7ffe9774ada748ade4a4a65187139356f60
-    files:
-      - name: elasticsearch_exporter-1.0.2rc1.darwin-386.tar.gz
-        sha256: sha256:54a84f8a51159198cc39a282c180cf5cac98942846963d1cc8a16ec5c4432cad
-        size: 2583469
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.darwin-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.darwin-amd64.tar.gz
-        sha256: sha256:ee1028bfde9b9b0ba341919e16c9c4f9ed3c07ebf34494a4e3e758ee7697e3d7
-        size: 2742958
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.dragonfly-amd64.tar.gz
-        sha256: sha256:b5e541076a205d9dc2652baef3b37869f9532fcee408911cb802182efac09718
-        size: 1991072
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.dragonfly-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.freebsd-386.tar.gz
-        sha256: sha256:8920826a6d1a61e283b482e1740d139ca3592f3142b1599a7aa64f9b98a82c1f
-        size: 1850768
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.freebsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.freebsd-amd64.tar.gz
-        sha256: sha256:e4095ceff863d2de8221a78172ec9130d0681956e6225119815645bdd2540d18
-        size: 1992176
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.freebsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.freebsd-armv6.tar.gz
-        sha256: sha256:a250bd589292dc27f10bb34a0a8842c77439a3b861f697e6488f922b4b5dcc03
-        size: 1859410
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.freebsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.freebsd-armv7.tar.gz
-        sha256: sha256:e87c892de1c917d7a27dfefddc5d01f1d09d087db354da3b7745d29a6017fdfc
-        size: 1859006
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.freebsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.linux-386.tar.gz
-        sha256: sha256:128a5554fa2a037f0e16df2a34e8673ec64d2cdbf483f5f2077a6fffa3c20907
-        size: 1843222
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.linux-amd64.tar.gz
-        sha256: sha256:d962d807bb2885eeea23e9a807ece29ae66f8ff0baa8dbd6bde0cd436ee65a7d
-        size: 1987699
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.linux-arm64.tar.gz
-        sha256: sha256:32ae4535fe0b9a983cd0242d61e32cf007dc4a42af8cc6b835f95947c3a92b25
-        size: 1832038
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-arm64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.linux-armv5.tar.gz
-        sha256: sha256:849781513b05c5967e65010a64830bd610699b347fac383915cad1636852aa96
-        size: 1867428
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-armv5.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.linux-armv6.tar.gz
-        sha256: sha256:d7415d22bd2662319f51f3180b3a91764e9b82fb4d47202ad62b142360be9ccb
-        size: 1847375
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.linux-armv7.tar.gz
-        sha256: sha256:2584b48aac97a1d4c60f9e923513c802f7f6f7cdbacae94492e0f37bb4a6bf36
-        size: 1847007
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.linux-mips64.tar.gz
-        sha256: sha256:1d0ca920af4be4d97c0957c82ec360e32039891fdcf2dcfc8c4de4d4710fcb4c
-        size: 1792097
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-mips64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.linux-mips64le.tar.gz
-        sha256: sha256:7d685df90cd9693be87b24969baf982237a82207efdd58db2edf53d6455fd526
-        size: 1744562
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-mips64le.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.linux-ppc64.tar.gz
-        sha256: sha256:db5126cc0194093586a4d516dc37d07ef510fbb1bc6321acc53eecf878ab71e6
-        size: 1853025
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-ppc64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.linux-ppc64le.tar.gz
-        sha256: sha256:f31bec83c1979f6fc63ebb0a1f04a7257ddc6968a4de77e29cf217aaca599cb5
-        size: 1822745
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-ppc64le.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.netbsd-386.tar.gz
-        sha256: sha256:4894c74f8d5cc7877a1a93f061ae070e1490207363efaf5a4535feba4de5f773
-        size: 1848388
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.netbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.netbsd-amd64.tar.gz
-        sha256: sha256:a211904c7850c1291b22ac2e3e7cf90667f1ace8de4e91df0f7f6e527f0c208f
-        size: 1990293
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.netbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.netbsd-armv6.tar.gz
-        sha256: sha256:a7ed51b68e351a9268a280df670dab55cb9fed1c12a73decbe6f0b98f5af9549
-        size: 1856967
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.netbsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.openbsd-386.tar.gz
-        sha256: sha256:3b875126dce11751b4fdb616af1ed44d2d2373d388151ad40ed805e96be7a7ab
-        size: 1845993
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.openbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.openbsd-amd64.tar.gz
-        sha256: sha256:3603dee9d46bbafc256ef20a03b01012539a17b50912b5be18b9e40566ece294
-        size: 1989509
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.openbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.openbsd-armv7.tar.gz
-        sha256: sha256:eada810c0515de5638daee7590068b2271f813d0009a06fe2bbfb6528c60717b
-        size: 1853465
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.openbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.windows-386.tar.gz
-        sha256: sha256:e790218995d82de8c846645d0ded6e2b16bc2c18e66d037693d254658a5fcd5d
-        size: 1826057
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.windows-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc1.windows-amd64.tar.gz
-        sha256: sha256:293ba1947350dca6c01571d576886f95e15e4241327ee1dfb066c0030324a1ec
-        size: 1970585
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.windows-amd64.tar.gz
-    prerelease: true
-    published:
-      timestamp: 2017-09-11 13:52:12
-  v1.0.2rc2:
-    commit:
-      sha: fb90a0d963207e9703765c94b0976b8e924ba68b
-    files:
-      - name: elasticsearch_exporter-1.0.2rc2.darwin-386.tar.gz
-        sha256: sha256:88ad4813622384835219a673e1e2ed08befed8d13a98133c80c66176f21c9b2b
-        size: 3118859
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.darwin-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.darwin-amd64.tar.gz
-        sha256: sha256:ee11ebf03cda8e0b80498343786d7d28955432aeb68ea8535b29019ed9ac0edf
-        size: 3309353
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.dragonfly-amd64.tar.gz
-        sha256: sha256:b14a4d934f3ca22d44456d42c5f8798e8d0160a914b30eb5f9bf0cd5316fe6ed
-        size: 2432195
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.dragonfly-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.freebsd-386.tar.gz
-        sha256: sha256:72a165c9fb97b26c4cca6f397dfeb3b90f1da4dfd2d3faecbccf0c1cc434291f
-        size: 2257809
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.freebsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.freebsd-amd64.tar.gz
-        sha256: sha256:c1487e35d8fa152bd31366bb6884cf2bb4a8250c933e5f4a09fa7fbc5b91c95b
-        size: 2433949
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.freebsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.freebsd-armv6.tar.gz
-        sha256: sha256:b0d45439d867b40e878314564194b9dc623b1d623dffddbfd8fd71c9c4f7326a
-        size: 2236276
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.freebsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.freebsd-armv7.tar.gz
-        sha256: sha256:b76b50d79c0322a6ab05f7f03085158ef9cf77aa495c1d9740f9a91921d8b21d
-        size: 2234518
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.freebsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.linux-386.tar.gz
-        sha256: sha256:b85e433331944bddb40dc51aba38596707db0cd852264b651f99ad26b6e3e6a5
-        size: 2251076
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.linux-amd64.tar.gz
-        sha256: sha256:e1345dac1038faa7ec7d70ba20bcb9df70f11c69c1b33ad2e627d65c39d0d0cc
-        size: 2428531
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.linux-arm64.tar.gz
-        sha256: sha256:51955c406759ecec45cb6b6ff4ad7e83c5fff64ee840514e36a5cb992cf94f80
-        size: 2191519
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-arm64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.linux-armv5.tar.gz
-        sha256: sha256:662793c63670055d34a858725545eb98f85fd76bd9493002d9ba2c644ba3d2a8
-        size: 2242712
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-armv5.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.linux-armv6.tar.gz
-        sha256: sha256:80987b41e55d866ad158589f72a2be8f25b73ca67a33ecd753908adacc199ee5
-        size: 2225430
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.linux-armv7.tar.gz
-        sha256: sha256:b4f179b535f67a5dcb39cc5dc658e770efa596504bb16a02714c1a963d68fbe2
-        size: 2223380
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.linux-mips64.tar.gz
-        sha256: sha256:51df4c845b1d524a7f3b509c34c89810e1d48d7420ebb775598bde0a8b181fcd
-        size: 2152724
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-mips64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.linux-mips64le.tar.gz
-        sha256: sha256:745ba7dd6dab0071a6cadd43f7f2fb2095f7375a5f877a14cc0a66a882633ffb
-        size: 2097053
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-mips64le.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.linux-ppc64.tar.gz
-        sha256: sha256:ed15d62e9bc4cc030ec854fcf1503278e0923fda36a28e12f23728d5028bf6a1
-        size: 2209396
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-ppc64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.linux-ppc64le.tar.gz
-        sha256: sha256:d3b37558f737c8d7936c249774237907f26ae0487a1c04c2f76745f582e2efea
-        size: 2176383
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-ppc64le.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.netbsd-386.tar.gz
-        sha256: sha256:860060dbe60a846c76c9b179d22206f88f75a778cac990a7446ecd47fcf1b2a3
-        size: 2253702
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.netbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.netbsd-amd64.tar.gz
-        sha256: sha256:de68ed3c67113d7e2cec6ac87500d437a4a50ec347d7476777fff642f78e14ad
-        size: 2430840
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.netbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.netbsd-armv6.tar.gz
-        sha256: sha256:6c17ca38a29ebe9b8b99040ddb9552dbb8e72c118f3cab79de53af5e87eae298
-        size: 2234064
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.netbsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.netbsd-armv7.tar.gz
-        sha256: sha256:07444d93016dc28d6d9bd0e1c9c446c42cab2a285db195262948680713f42991
-        size: 2232304
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.netbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.openbsd-386.tar.gz
-        sha256: sha256:495e2fd35fa7ddf1155e09fdbf6bcc89ca68d509ef3b4440be0fff32276c6498
-        size: 2254991
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.openbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.openbsd-amd64.tar.gz
-        sha256: sha256:8f668054a0582cf8ea81a919467a9314101b9f34c3d581d2054a559fbbc88477
-        size: 2431730
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.openbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.openbsd-armv7.tar.gz
-        sha256: sha256:a433aae23573cb64fc695f06d49e4d131442c71084e5a05a2504f93c84fb53ff
-        size: 2231930
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.openbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.windows-386.tar.gz
-        sha256: sha256:3bbbb9dade1c25071cb8f06a3cb24771bce0e6f5ab28dcd31e7b44189884c6a0
-        size: 2236828
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.windows-386.tar.gz
-      - name: elasticsearch_exporter-1.0.2rc2.windows-amd64.tar.gz
-        sha256: sha256:b40abfb67e2a0f22f98074013927057c02b4bf15e3228583b3d8bbae515776bf
-        size: 2416946
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.windows-amd64.tar.gz
-    prerelease: true
-    published:
-      timestamp: 2017-10-30 14:20:59
-  v1.0.3rc1:
-    commit:
-      sha: 8393cec9a58fcf8c3535f13fd0fac4de6f546d33
-    files:
-      - name: elasticsearch_exporter-1.0.3rc1.darwin-386.tar.gz
-        sha256: sha256:bdceffebfde47a6e379cb3d58b63c5eb12d49be618ba3022662479fa3c9a954c
-        size: 3463515
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.darwin-386.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.darwin-amd64.tar.gz
-        sha256: sha256:a2c4d63eadf1839c1a882a90dcf357f43c2d268f536d0629bba94c20bd968eab
-        size: 3598534
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.dragonfly-amd64.tar.gz
-        sha256: sha256:8acb955bf865baeb4b7fccc7fb7d9ee6287d1228a4717dbe2806ef19cdf8c3ec
-        size: 2485311
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.dragonfly-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.freebsd-386.tar.gz
-        sha256: sha256:7e0b2f46fc0ee34d03fadc6b5694d7e1d13c56e0f5e5bdeffac74392308555a0
-        size: 2361812
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.freebsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.freebsd-amd64.tar.gz
-        sha256: sha256:1aa089699bfdce86e08c91ce06ea192e139cbc7de977e7cb9a4584e9ed9e9009
-        size: 2488572
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.freebsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.freebsd-armv6.tar.gz
-        sha256: sha256:21e35df19549c124a85557ecc4c4aed0444a950247e4730a0de408600d568428
-        size: 2342712
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.freebsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.freebsd-armv7.tar.gz
-        sha256: sha256:a7fef00d32bc63c3156a579d9aa7aef40b1f614810da3eb6d2436bd3192b2ffa
-        size: 2339974
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.freebsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.linux-386.tar.gz
-        sha256: sha256:21caa7ae2aec1a9afb41cd40b2e322c325b0f9ec461787da07c0796c1f1dd0bc
-        size: 2360930
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-386.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.linux-amd64.tar.gz
-        sha256: sha256:5ede825e84cf93804859d6181b9637a1f3c8b91825793231cd05bb8b3df42870
-        size: 2484294
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.linux-arm64.tar.gz
-        sha256: sha256:b01da9e1cd0955a54815536b5f3fd63f4fe4c7c92c9f400374d8307f8ca52a11
-        size: 2299263
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-arm64.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.linux-armv5.tar.gz
-        sha256: sha256:949b2d4af8529210f2891d1699ac21f8a5d7912f5b48dfc80da10a38604f6d64
-        size: 2348880
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-armv5.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.linux-armv6.tar.gz
-        sha256: sha256:843b8bc4661a45e482bd5d33479b176200345534e1ab08a7c14ba1abd0056789
-        size: 2332534
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.linux-armv7.tar.gz
-        sha256: sha256:2046c44098d1770a4a01b30f359374a826e64e1946d6ad38b3ad42cc4bb34c0b
-        size: 2329965
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.linux-mips64.tar.gz
-        sha256: sha256:249fe9169eece1e25c0daebaa11a835f7dec0f3e11e2fcabba6eb2c017983ae7
-        size: 2260136
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-mips64.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.linux-mips64le.tar.gz
-        sha256: sha256:615c21790b5af4f44dccde24c441f381a519a957f1d90d0d908874f41aca05e0
-        size: 2205408
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-mips64le.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.linux-ppc64.tar.gz
-        sha256: sha256:7dffa651f9ff304b0f929da375421dea6309e9e1c810918e5a5183019d815508
-        size: 2329572
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-ppc64.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.linux-ppc64le.tar.gz
-        sha256: sha256:581d4c7b32ec14df0a9995cd9196011039d06c74d730c7e9989a691c026fa04f
-        size: 2295403
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-ppc64le.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.netbsd-386.tar.gz
-        sha256: sha256:87a3dee0298ddb949ec7a7b1c816b88ad81b0973887b9550969de5bbd5e160e3
-        size: 2357314
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.netbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.netbsd-amd64.tar.gz
-        sha256: sha256:064287d09d7378aeccce666585639df8fdf9a6be40acac84b9e292508cf1355c
-        size: 2484508
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.netbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.netbsd-armv6.tar.gz
-        sha256: sha256:5c53ef19ada55535ccd172c5277c44ccde36682ea174ba3595a05d743b65a664
-        size: 2340589
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.netbsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.netbsd-armv7.tar.gz
-        sha256: sha256:9932787ef611baf55ef943ef1dbac7048d4f51853c5e6a5db9f5826e50f16562
-        size: 2337739
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.netbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.openbsd-386.tar.gz
-        sha256: sha256:3352ae0c75e475b2553a3039c588fda2a2a083bb623fccdc0ebb6f918ff29b7a
-        size: 2358481
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.openbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.openbsd-amd64.tar.gz
-        sha256: sha256:4c024945b34e43f6a8bc3b68294f5cbed3ced20197595d366d152ca9bce7a0da
-        size: 2485638
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.openbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.openbsd-armv7.tar.gz
-        sha256: sha256:1ab3a54bc5acc45fb6d959f2ebfed145831863fa942c12553a7002a95eb90eb2
-        size: 2338023
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.openbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.windows-386.tar.gz
-        sha256: sha256:4e8f788a813b62c23d48634623acdabef1a88c40b46d056c723d90b487a9906d
-        size: 2342939
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.windows-386.tar.gz
-      - name: elasticsearch_exporter-1.0.3rc1.windows-amd64.tar.gz
-        sha256: sha256:ea53c2196d0a6408a1b0b4a813b5afadfcce8e859579e0072e7a23bc8019b42b
-        size: 2473142
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.windows-amd64.tar.gz
-    prerelease: true
-    published:
-      timestamp: 2018-06-01 15:26:46
-  v1.0.4rc1:
-    commit:
-      sha: 68340fda9c523444f98c9052b81fff5398bc4338
-    files:
-      - name: elasticsearch_exporter-1.0.4rc1.darwin-386.tar.gz
-        sha256: sha256:7a6156fefb5addeb77ca17a3b98fd34ec0cdfee466339c0e94d1f730eeae12cd
-        size: 3476741
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.darwin-386.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.darwin-amd64.tar.gz
-        sha256: sha256:ae031737875ff095c839ff05304d0edd16549f412703be5bca15ec94825b911b
-        size: 3611346
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.dragonfly-amd64.tar.gz
-        sha256: sha256:07c2a6a032031ad279bc9e8bc8b45e369e08d44c46d96eb0aab83ced18ac666b
-        size: 2496809
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.dragonfly-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.freebsd-386.tar.gz
-        sha256: sha256:77f9e1e92ee73eafabc3261f622561ead49b810d0181f95a3a96ff3cd1253453
-        size: 2372736
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.freebsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.freebsd-amd64.tar.gz
-        sha256: sha256:6a6efc3cb65ec7d49a1d2384f75f21209598356e8df955f22a76a43bc0fa6e95
-        size: 2498185
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.freebsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.freebsd-armv6.tar.gz
-        sha256: sha256:b02177b4ae3b99a244b5d05426ef50bfb151e0364cf82d1029f5283b99a6a102
-        size: 2355594
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.freebsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.freebsd-armv7.tar.gz
-        sha256: sha256:9c6ccc5617f5d3e499da0986e86709ea5a428cab12b31469fa39541fb4a2a48f
-        size: 2353462
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.freebsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.linux-386.tar.gz
-        sha256: sha256:047c61d3328d0e22f3f79257b0aba884cc12b84b4e14b3a7d2ae400aeb7fec23
-        size: 2371054
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-386.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.linux-amd64.tar.gz
-        sha256: sha256:75f0c4de9db9a31c040aff6ac5628e028db3319c9b3c964f8efb6e4759baf90a
-        size: 2494523
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.linux-arm64.tar.gz
-        sha256: sha256:23f3a4ad7cf422f659122338f0695a38547640582c38b71debfe34ce221aac56
-        size: 2310688
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-arm64.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.linux-armv5.tar.gz
-        sha256: sha256:b14a6cd4ac0bdfe72058ea95ecd4aaae991be2be45b342b9f941e94974c82cce
-        size: 2361606
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-armv5.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.linux-armv6.tar.gz
-        sha256: sha256:1ed35e741ad0e1d93465be9a715c8477994399abdcfa4e66f56ef0bb94fae156
-        size: 2344867
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.linux-armv7.tar.gz
-        sha256: sha256:b3984e5366fd0d962bf652f2c208fa3fa6429b53d3419a624b9422660dd5c40e
-        size: 2342257
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.linux-mips64.tar.gz
-        sha256: sha256:ae53cb31ef884f14d25e18787834d61230367396e2b0dde6888f4d62960b61c0
-        size: 2270407
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-mips64.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.linux-mips64le.tar.gz
-        sha256: sha256:170844e70cca378c73ddee614249806749a6442517e795c0dddbf5fbf73a2752
-        size: 2214866
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-mips64le.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.linux-ppc64.tar.gz
-        sha256: sha256:363ce799d20d85a9f3c68c702e76a340cfaa8e763dc1abfc9ae58e0ee56e3e53
-        size: 2339985
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-ppc64.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.linux-ppc64le.tar.gz
-        sha256: sha256:ed429bcde1df4e15edd80c34ebafa4f0db1711a96b0ea4b8d6130bbdbfd4bd05
-        size: 2305550
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-ppc64le.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.netbsd-386.tar.gz
-        sha256: sha256:0039d9ec72f414797e65e1315fdd218282b24e129edde4f701b32e18e9869b85
-        size: 2369755
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.netbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.netbsd-amd64.tar.gz
-        sha256: sha256:99dec45a3743eb98087185888e84005e1d89be8dc0e74f25721826d63861e5e5
-        size: 2494453
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.netbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.netbsd-armv6.tar.gz
-        sha256: sha256:f633db69025a3030c40082ebab48e121d9d164f13c520cf407597f5e08fa9e16
-        size: 2352871
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.netbsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.netbsd-armv7.tar.gz
-        sha256: sha256:11932dbf26ae259241fc2b02047ee68bdd4dd92ac09203a06965f30faceebecf
-        size: 2351054
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.netbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.openbsd-386.tar.gz
-        sha256: sha256:fc0e0612e26edc658aaf4e964fc6b066c70f1783a79bcd286ef43869663c12bd
-        size: 2370309
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.openbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.openbsd-amd64.tar.gz
-        sha256: sha256:c579dfbbc2b01755b6aced6df2008b5c3070fee5d71fd2e887c0359f7801edfd
-        size: 2495986
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.openbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.openbsd-armv7.tar.gz
-        sha256: sha256:69154e2a3930bd7cf4658d1b8863f4cd2485beb38c832031731191eef9af49d2
-        size: 2350810
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.openbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.windows-386.tar.gz
-        sha256: sha256:c51a9c2d15511d6a48ce709df2378ccc42dba2144a0318709ba2896b21633c61
-        size: 2354350
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.windows-386.tar.gz
-      - name: elasticsearch_exporter-1.0.4rc1.windows-amd64.tar.gz
-        sha256: sha256:64d090928f6404fce1f3d9568187343e751f1ec8709d840f15371f8fd852f361
-        size: 2484517
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.windows-amd64.tar.gz
-    prerelease: true
-    published:
-      timestamp: 2018-08-17 13:51:57
-  v1.1.0:
-    commit:
-      sha: fe20e499ffdd6053e6153bac15eae494e08931df
-    files:
-      - name: elasticsearch_exporter-1.1.0.darwin-386.tar.gz
-        sha256: sha256:491ef0353954d7e397675c5d23857b03ed4f6dabf8730a4f53246293fa736397
-        size: 6172328
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.darwin-386.tar.gz
-      - name: elasticsearch_exporter-1.1.0.darwin-amd64.tar.gz
-        sha256: sha256:038362a3d7ad1521fc62bfbf1b6bda5d2b7a25f44fa1ca776e09b0d7b779da7d
-        size: 6326794
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-1.1.0.dragonfly-amd64.tar.gz
-        sha256: sha256:82ee5be2676b65cdc01cc541a903e5d063b7395f1cd2e8315573470d7395b68d
-        size: 3633509
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.dragonfly-amd64.tar.gz
-      - name: elasticsearch_exporter-1.1.0.freebsd-386.tar.gz
-        sha256: sha256:9db3edc41c56e96384586f10c452a2796af4bfd143fda85c45391471d02e0332
-        size: 3434622
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.freebsd-386.tar.gz
-      - name: elasticsearch_exporter-1.1.0.freebsd-amd64.tar.gz
-        sha256: sha256:fee194cbc7507d1aa3db507c4358279a4a625ce981139817839c6f3de3ddcaa1
-        size: 3644126
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.freebsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.1.0.freebsd-armv6.tar.gz
-        sha256: sha256:ddfadd677d22603e841625a1f14750271143556f7a1651f876ec2703bd33e28c
-        size: 3386399
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.freebsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.1.0.freebsd-armv7.tar.gz
-        sha256: sha256:f5783c1e647bf794d43328907b347fb6acd454b5044adc84a6c02293955b64cd
-        size: 3381707
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.freebsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.1.0.linux-386.tar.gz
-        sha256: sha256:e8cf22bb9a8414afcd5da160338c0361fc12dd06b585b7034be4b9989cb6992c
-        size: 3430067
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-386.tar.gz
-      - name: elasticsearch_exporter-1.1.0.linux-amd64.tar.gz
-        sha256: sha256:1d2444d7cbf321cb31d58d2fecc08c8bc90bbcec581f8a1ddb987f9ef425482b
-        size: 3632462
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-amd64.tar.gz
-      - name: elasticsearch_exporter-1.1.0.linux-arm64.tar.gz
-        sha256: sha256:f23a007c4dbaa2c34968faf9c73b83a2abb9ed8d1744a2e747f93d83049a6597
-        size: 3327304
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-arm64.tar.gz
-      - name: elasticsearch_exporter-1.1.0.linux-armv5.tar.gz
-        sha256: sha256:8be0ef7ce7721bcbd115af69456a6dfde9146e51053c4fed524c98aad98bcb39
-        size: 3388866
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-armv5.tar.gz
-      - name: elasticsearch_exporter-1.1.0.linux-armv6.tar.gz
-        sha256: sha256:60351d415419ba7b8956435f7228d4ff9c2f3811ee24234abcba9bc0acceaf54
-        size: 3376235
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-armv6.tar.gz
-      - name: elasticsearch_exporter-1.1.0.linux-armv7.tar.gz
-        sha256: sha256:68c5c27b8f61474bb356dd6e70a0a176a064464aaa93ada607c9d1eca8dade24
-        size: 3372108
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-armv7.tar.gz
-      - name: elasticsearch_exporter-1.1.0.linux-mips64.tar.gz
-        sha256: sha256:32a762ff43b44618adfe22ed82316491d959563d11766d403689d7c2cfd9ec8c
-        size: 3266820
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-mips64.tar.gz
-      - name: elasticsearch_exporter-1.1.0.linux-mips64le.tar.gz
-        sha256: sha256:df3f302d52a805dcda03238fb895d51c24f3932114a3d6dbf83b221bec3fd4e4
-        size: 3200404
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-mips64le.tar.gz
-      - name: elasticsearch_exporter-1.1.0.linux-ppc64.tar.gz
-        sha256: sha256:b31987ba3a512d294937e8b049c33438373d438e28c1ba07b33bf00196b47553
-        size: 3339238
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-ppc64.tar.gz
-      - name: elasticsearch_exporter-1.1.0.linux-ppc64le.tar.gz
-        sha256: sha256:f23f48c2f14100e6fec601cae652f3d7d5806898850dd2c26bbfcac50a9a7d16
-        size: 3293625
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-ppc64le.tar.gz
-      - name: elasticsearch_exporter-1.1.0.netbsd-386.tar.gz
-        sha256: sha256:7d144bc2b6ae26e57f4396abb22c2aaf6d7e08f2468d28b33d6a6c83ac405d34
-        size: 3423297
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.netbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.1.0.netbsd-amd64.tar.gz
-        sha256: sha256:ae789e4cf0e935a95ed179536841bf617cbdd247b1e18b585ba552c622d58fef
-        size: 3631450
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.netbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.1.0.netbsd-armv6.tar.gz
-        sha256: sha256:133c4c15e8bc7a3550e93dc8a592ee6732258c6b5b7a9231bea32725c8bed4c6
-        size: 3376921
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.netbsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.1.0.netbsd-armv7.tar.gz
-        sha256: sha256:8e979b162efbfa99903e40c7c46481a8919070895d1c4587d2a997c9b7f73137
-        size: 3372831
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.netbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.1.0.openbsd-386.tar.gz
-        sha256: sha256:b2e2a036564887f51636a76aeef6e3a71c02965cfadc2b173ee26c3ea7272297
-        size: 3426606
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.openbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.1.0.openbsd-amd64.tar.gz
-        sha256: sha256:c528649ea1d82bc1adc1c5bf403b962bd12472982228b2fe48e7c0a2eeb485c8
-        size: 3633769
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.openbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.1.0.openbsd-armv7.tar.gz
-        sha256: sha256:d26909e8da229d9818d48bd541db55cf7f7eb78ed024039439760562e2009ec1
-        size: 3373148
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.openbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.1.0.windows-386.tar.gz
-        sha256: sha256:601ef8ffe095d920e284d10446c98d3af6c7fba769dcb5be44913e7a3572c5ca
-        size: 3371787
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.windows-386.tar.gz
-      - name: elasticsearch_exporter-1.1.0.windows-amd64.tar.gz
-        sha256: sha256:e628a1d3ffbd79f476c2a36e3c27f29eee37101ba055da83315321abfddacb39
-        size: 3584864
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.windows-amd64.tar.gz
-      - name: sha256sums.txt
-        sha256: sha256:e96f680985322c5f2979d44034c96b98e1b4b1b4286b93c0e849bfc4a77640b4
-        size: 2986
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/sha256sums.txt
-    prerelease: false
-    published:
-      timestamp: 2019-08-07 12:58:46
-  v1.1.0rc1:
-    commit:
-      sha: c0ec04290d212fb7dc05817433928679686af348
-    files:
-      - name: elasticsearch_exporter-1.1.0rc1.darwin-386.tar.gz
-        sha256: sha256:ee4a36105b6ee06c1d0fbef2ec10260e8f7e8a92515c8adc4f240405594b61c3
-        size: 3479571
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.darwin-386.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.darwin-amd64.tar.gz
-        sha256: sha256:5dca23193441a97365355e86d091cc51db8559693f58e6b8e1570de55d002b42
-        size: 6321703
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.darwin-amd64.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.dragonfly-amd64.tar.gz
-        sha256: sha256:d4513a1108eedcdd24719b3493705c377dfec61e700d730edb5329efc167e383
-        size: 3630995
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.dragonfly-amd64.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.freebsd-386.tar.gz
-        sha256: sha256:96e7ef9bfdaa7654ffc8d8ade1f6813487ae2f7d7d679d5462b316d4e950b6a6
-        size: 3432141
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-386.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.freebsd-amd64.tar.gz
-        sha256: sha256:a170bcc442a429e625c1d6b1b6fd62349652f371d3c03611b704f8180f16c9f1
-        size: 3640886
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.freebsd-armv6.tar.gz
-        sha256: sha256:9d1dbbed53f4f542c882cf8ceb8df03e8998ab4f8fe99d70a702f1da6a181ab8
-        size: 3382951
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.freebsd-armv7.tar.gz
-        sha256: sha256:475111229391d6b6e61ee5707b63c27b5922d21c9b7a75eaffcb49da2dd9357c
-        size: 3378893
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.linux-386.tar.gz
-        sha256: sha256:d74327b8b94a4fd8483ee3094154713ef720e861c666629208c3ae9ade4af3ab
-        size: 3427986
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-386.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.linux-amd64.tar.gz
-        sha256: sha256:dc1ada86082791e3f322eff745d4fa5617971e8c819e436d869ddac0869c3351
-        size: 3630078
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-amd64.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.linux-arm64.tar.gz
-        sha256: sha256:9bed98d3781a572bd0d6a943cd876c3abecf9720c15f223f7967ea99768e772c
-        size: 3325427
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-arm64.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.linux-armv5.tar.gz
-        sha256: sha256:ce8056b94ad07e43a7ca8845ed2536dae325a2dee56bff1d5452814e930ad16c
-        size: 3385506
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-armv5.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.linux-armv6.tar.gz
-        sha256: sha256:a4917235d057a53e6b05f297fd10d98aca515ff01c68002912ca2c64b9e798c5
-        size: 3372792
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-armv6.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.linux-armv7.tar.gz
-        sha256: sha256:142eaafcb65d8b690d219e8a61757fdadf382fc4e87a3e7b4c49554a6515842d
-        size: 3368404
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-armv7.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.linux-mips64.tar.gz
-        sha256: sha256:cb2fdb2903909c7602e5ee54c20d23bc90da7a5deb32081ca489a5c7b7e16348
-        size: 3265000
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-mips64.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.linux-mips64le.tar.gz
-        sha256: sha256:932916b34a495816b06b6a2087424eb81bc8d11a46cb27bc7e38a2c051b494f8
-        size: 3197824
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-mips64le.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.linux-ppc64.tar.gz
-        sha256: sha256:d9bc93b109abbef66639b7d18552278fc941cad0c155996a53590872dc382ccf
-        size: 3338309
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-ppc64.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.linux-ppc64le.tar.gz
-        sha256: sha256:9cf7219b1ac82e053c16d3acaf6b2fc431e2ca6496aac83b7435d895792298d6
-        size: 3291954
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-ppc64le.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.netbsd-386.tar.gz
-        sha256: sha256:5291447dbf65ef334eb93a35bd269b4f9f4d36f6fc905600267c4be362ee0f62
-        size: 3420941
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.netbsd-amd64.tar.gz
-        sha256: sha256:e8354647730d99bb35d26e38e5cbfc386ce203d595fbeee24156b983ae3b6607
-        size: 3630094
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.netbsd-armv6.tar.gz
-        sha256: sha256:9aed61d43b8d8639a006d3b80682fadfa2be53857555110c1d3188e4489048d7
-        size: 3373233
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-armv6.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.netbsd-armv7.tar.gz
-        sha256: sha256:f59e10a05601f03e067195d70c21b3ff92c04dc856e4e91d2caed354b974e343
-        size: 3369931
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.openbsd-386.tar.gz
-        sha256: sha256:29b84bd6db0a13fe1c3038866e03f624595ae5315a4e3daeb0f91e9ae31ce8c1
-        size: 3422975
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.openbsd-386.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.openbsd-amd64.tar.gz
-        sha256: sha256:9cdb27fae217c22bad598f36b86280188e5c868ca96fcc8ab43fa79bf791acce
-        size: 3631784
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.openbsd-amd64.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.openbsd-armv7.tar.gz
-        sha256: sha256:47f1d10c7cc121796271810fa4740fc02596533a9c460936218356cee3d818d8
-        size: 3371642
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.openbsd-armv7.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.windows-386.tar.gz
-        sha256: sha256:56336fda3eeaf20464860f1fd3251b8999db6c83a55e3b6568da1b5fa9b77659
-        size: 3369866
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.windows-386.tar.gz
-      - name: elasticsearch_exporter-1.1.0rc1.windows-amd64.tar.gz
-        sha256: sha256:dce1bf9216d6f202c945232615566d655bcff4549e5a75212d950efa68afa0e0
-        size: 3582296
-        url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.windows-amd64.tar.gz
-    prerelease: true
-    published:
-      timestamp: 2019-02-27 12:38:29
-software_metadata:
-  prerelease: v1.1.0rc1
-  release: v1.1.0
-  updated: 2020-02-27 06:47:23.525023
+  releases:
+    - name: v1.1.0
+      commit: null
+      timestamp: '2019-08-07T12:58:46'
+      prerelease: false
+      files:
+        - name: elasticsearch_exporter-1.1.0.darwin-386.tar.gz
+          commit: null
+          size: 6172328
+          sha256: sha256:491ef0353954d7e397675c5d23857b03ed4f6dabf8730a4f53246293fa736397
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.darwin-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0.darwin-amd64.tar.gz
+          commit: null
+          size: 6326794
+          sha256: sha256:038362a3d7ad1521fc62bfbf1b6bda5d2b7a25f44fa1ca776e09b0d7b779da7d
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 3633509
+          sha256: sha256:82ee5be2676b65cdc01cc541a903e5d063b7395f1cd2e8315573470d7395b68d
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.dragonfly-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0.freebsd-386.tar.gz
+          commit: null
+          size: 3434622
+          sha256: sha256:9db3edc41c56e96384586f10c452a2796af4bfd143fda85c45391471d02e0332
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.freebsd-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 3644126
+          sha256: sha256:fee194cbc7507d1aa3db507c4358279a4a625ce981139817839c6f3de3ddcaa1
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.freebsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 3386399
+          sha256: sha256:ddfadd677d22603e841625a1f14750271143556f7a1651f876ec2703bd33e28c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.freebsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.1.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 3381707
+          sha256: sha256:f5783c1e647bf794d43328907b347fb6acd454b5044adc84a6c02293955b64cd
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.freebsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.1.0.linux-386.tar.gz
+          commit: null
+          size: 3430067
+          sha256: sha256:e8cf22bb9a8414afcd5da160338c0361fc12dd06b585b7034be4b9989cb6992c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0.linux-amd64.tar.gz
+          commit: null
+          size: 3632462
+          sha256: sha256:1d2444d7cbf321cb31d58d2fecc08c8bc90bbcec581f8a1ddb987f9ef425482b
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0.linux-arm64.tar.gz
+          commit: null
+          size: 3327304
+          sha256: sha256:f23a007c4dbaa2c34968faf9c73b83a2abb9ed8d1744a2e747f93d83049a6597
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-arm64.tar.gz
+        - name: elasticsearch_exporter-1.1.0.linux-armv5.tar.gz
+          commit: null
+          size: 3388866
+          sha256: sha256:8be0ef7ce7721bcbd115af69456a6dfde9146e51053c4fed524c98aad98bcb39
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-armv5.tar.gz
+        - name: elasticsearch_exporter-1.1.0.linux-armv6.tar.gz
+          commit: null
+          size: 3376235
+          sha256: sha256:60351d415419ba7b8956435f7228d4ff9c2f3811ee24234abcba9bc0acceaf54
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-armv6.tar.gz
+        - name: elasticsearch_exporter-1.1.0.linux-armv7.tar.gz
+          commit: null
+          size: 3372108
+          sha256: sha256:68c5c27b8f61474bb356dd6e70a0a176a064464aaa93ada607c9d1eca8dade24
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-armv7.tar.gz
+        - name: elasticsearch_exporter-1.1.0.linux-mips64.tar.gz
+          commit: null
+          size: 3266820
+          sha256: sha256:32a762ff43b44618adfe22ed82316491d959563d11766d403689d7c2cfd9ec8c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-mips64.tar.gz
+        - name: elasticsearch_exporter-1.1.0.linux-mips64le.tar.gz
+          commit: null
+          size: 3200404
+          sha256: sha256:df3f302d52a805dcda03238fb895d51c24f3932114a3d6dbf83b221bec3fd4e4
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-mips64le.tar.gz
+        - name: elasticsearch_exporter-1.1.0.linux-ppc64.tar.gz
+          commit: null
+          size: 3339238
+          sha256: sha256:b31987ba3a512d294937e8b049c33438373d438e28c1ba07b33bf00196b47553
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.1.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 3293625
+          sha256: sha256:f23f48c2f14100e6fec601cae652f3d7d5806898850dd2c26bbfcac50a9a7d16
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-ppc64le.tar.gz
+        - name: elasticsearch_exporter-1.1.0.netbsd-386.tar.gz
+          commit: null
+          size: 3423297
+          sha256: sha256:7d144bc2b6ae26e57f4396abb22c2aaf6d7e08f2468d28b33d6a6c83ac405d34
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.netbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 3631450
+          sha256: sha256:ae789e4cf0e935a95ed179536841bf617cbdd247b1e18b585ba552c622d58fef
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.netbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 3376921
+          sha256: sha256:133c4c15e8bc7a3550e93dc8a592ee6732258c6b5b7a9231bea32725c8bed4c6
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.netbsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.1.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 3372831
+          sha256: sha256:8e979b162efbfa99903e40c7c46481a8919070895d1c4587d2a997c9b7f73137
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.netbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.1.0.openbsd-386.tar.gz
+          commit: null
+          size: 3426606
+          sha256: sha256:b2e2a036564887f51636a76aeef6e3a71c02965cfadc2b173ee26c3ea7272297
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.openbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 3633769
+          sha256: sha256:c528649ea1d82bc1adc1c5bf403b962bd12472982228b2fe48e7c0a2eeb485c8
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.openbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 3373148
+          sha256: sha256:d26909e8da229d9818d48bd541db55cf7f7eb78ed024039439760562e2009ec1
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.openbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.1.0.windows-386.tar.gz
+          commit: null
+          size: 3371787
+          sha256: sha256:601ef8ffe095d920e284d10446c98d3af6c7fba769dcb5be44913e7a3572c5ca
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.windows-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0.windows-amd64.tar.gz
+          commit: null
+          size: 3584864
+          sha256: sha256:e628a1d3ffbd79f476c2a36e3c27f29eee37101ba055da83315321abfddacb39
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.windows-amd64.tar.gz
+        - name: sha256sums.txt
+          commit: null
+          size: 2986
+          sha256: sha256:e96f680985322c5f2979d44034c96b98e1b4b1b4286b93c0e849bfc4a77640b4
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/sha256sums.txt
+    - name: v1.1.0rc1
+      commit: null
+      timestamp: '2019-02-27T12:38:29'
+      prerelease: true
+      files:
+        - name: elasticsearch_exporter-1.1.0rc1.darwin-386.tar.gz
+          commit: null
+          size: 3479571
+          sha256: sha256:ee4a36105b6ee06c1d0fbef2ec10260e8f7e8a92515c8adc4f240405594b61c3
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.darwin-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.darwin-amd64.tar.gz
+          commit: null
+          size: 6321703
+          sha256: sha256:5dca23193441a97365355e86d091cc51db8559693f58e6b8e1570de55d002b42
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.dragonfly-amd64.tar.gz
+          commit: null
+          size: 3630995
+          sha256: sha256:d4513a1108eedcdd24719b3493705c377dfec61e700d730edb5329efc167e383
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.dragonfly-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.freebsd-386.tar.gz
+          commit: null
+          size: 3432141
+          sha256: sha256:96e7ef9bfdaa7654ffc8d8ade1f6813487ae2f7d7d679d5462b316d4e950b6a6
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.freebsd-amd64.tar.gz
+          commit: null
+          size: 3640886
+          sha256: sha256:a170bcc442a429e625c1d6b1b6fd62349652f371d3c03611b704f8180f16c9f1
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.freebsd-armv6.tar.gz
+          commit: null
+          size: 3382951
+          sha256: sha256:9d1dbbed53f4f542c882cf8ceb8df03e8998ab4f8fe99d70a702f1da6a181ab8
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.freebsd-armv7.tar.gz
+          commit: null
+          size: 3378893
+          sha256: sha256:475111229391d6b6e61ee5707b63c27b5922d21c9b7a75eaffcb49da2dd9357c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-386.tar.gz
+          commit: null
+          size: 3427986
+          sha256: sha256:d74327b8b94a4fd8483ee3094154713ef720e861c666629208c3ae9ade4af3ab
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-amd64.tar.gz
+          commit: null
+          size: 3630078
+          sha256: sha256:dc1ada86082791e3f322eff745d4fa5617971e8c819e436d869ddac0869c3351
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-arm64.tar.gz
+          commit: null
+          size: 3325427
+          sha256: sha256:9bed98d3781a572bd0d6a943cd876c3abecf9720c15f223f7967ea99768e772c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-arm64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-armv5.tar.gz
+          commit: null
+          size: 3385506
+          sha256: sha256:ce8056b94ad07e43a7ca8845ed2536dae325a2dee56bff1d5452814e930ad16c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-armv5.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-armv6.tar.gz
+          commit: null
+          size: 3372792
+          sha256: sha256:a4917235d057a53e6b05f297fd10d98aca515ff01c68002912ca2c64b9e798c5
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-armv6.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-armv7.tar.gz
+          commit: null
+          size: 3368404
+          sha256: sha256:142eaafcb65d8b690d219e8a61757fdadf382fc4e87a3e7b4c49554a6515842d
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-armv7.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-mips64.tar.gz
+          commit: null
+          size: 3265000
+          sha256: sha256:cb2fdb2903909c7602e5ee54c20d23bc90da7a5deb32081ca489a5c7b7e16348
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-mips64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-mips64le.tar.gz
+          commit: null
+          size: 3197824
+          sha256: sha256:932916b34a495816b06b6a2087424eb81bc8d11a46cb27bc7e38a2c051b494f8
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-mips64le.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-ppc64.tar.gz
+          commit: null
+          size: 3338309
+          sha256: sha256:d9bc93b109abbef66639b7d18552278fc941cad0c155996a53590872dc382ccf
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-ppc64le.tar.gz
+          commit: null
+          size: 3291954
+          sha256: sha256:9cf7219b1ac82e053c16d3acaf6b2fc431e2ca6496aac83b7435d895792298d6
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-ppc64le.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.netbsd-386.tar.gz
+          commit: null
+          size: 3420941
+          sha256: sha256:5291447dbf65ef334eb93a35bd269b4f9f4d36f6fc905600267c4be362ee0f62
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.netbsd-amd64.tar.gz
+          commit: null
+          size: 3630094
+          sha256: sha256:e8354647730d99bb35d26e38e5cbfc386ce203d595fbeee24156b983ae3b6607
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.netbsd-armv6.tar.gz
+          commit: null
+          size: 3373233
+          sha256: sha256:9aed61d43b8d8639a006d3b80682fadfa2be53857555110c1d3188e4489048d7
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.netbsd-armv7.tar.gz
+          commit: null
+          size: 3369931
+          sha256: sha256:f59e10a05601f03e067195d70c21b3ff92c04dc856e4e91d2caed354b974e343
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.openbsd-386.tar.gz
+          commit: null
+          size: 3422975
+          sha256: sha256:29b84bd6db0a13fe1c3038866e03f624595ae5315a4e3daeb0f91e9ae31ce8c1
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.openbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.openbsd-amd64.tar.gz
+          commit: null
+          size: 3631784
+          sha256: sha256:9cdb27fae217c22bad598f36b86280188e5c868ca96fcc8ab43fa79bf791acce
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.openbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.openbsd-armv7.tar.gz
+          commit: null
+          size: 3371642
+          sha256: sha256:47f1d10c7cc121796271810fa4740fc02596533a9c460936218356cee3d818d8
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.openbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.windows-386.tar.gz
+          commit: null
+          size: 3369866
+          sha256: sha256:56336fda3eeaf20464860f1fd3251b8999db6c83a55e3b6568da1b5fa9b77659
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.windows-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.windows-amd64.tar.gz
+          commit: null
+          size: 3582296
+          sha256: sha256:dce1bf9216d6f202c945232615566d655bcff4549e5a75212d950efa68afa0e0
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.windows-amd64.tar.gz
+    - name: v1.0.4rc1
+      commit: null
+      timestamp: '2018-08-17T13:51:57'
+      prerelease: true
+      files:
+        - name: elasticsearch_exporter-1.0.4rc1.darwin-386.tar.gz
+          commit: null
+          size: 3476741
+          sha256: sha256:7a6156fefb5addeb77ca17a3b98fd34ec0cdfee466339c0e94d1f730eeae12cd
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.darwin-386.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.darwin-amd64.tar.gz
+          commit: null
+          size: 3611346
+          sha256: sha256:ae031737875ff095c839ff05304d0edd16549f412703be5bca15ec94825b911b
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.dragonfly-amd64.tar.gz
+          commit: null
+          size: 2496809
+          sha256: sha256:07c2a6a032031ad279bc9e8bc8b45e369e08d44c46d96eb0aab83ced18ac666b
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.dragonfly-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.freebsd-386.tar.gz
+          commit: null
+          size: 2372736
+          sha256: sha256:77f9e1e92ee73eafabc3261f622561ead49b810d0181f95a3a96ff3cd1253453
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.freebsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.freebsd-amd64.tar.gz
+          commit: null
+          size: 2498185
+          sha256: sha256:6a6efc3cb65ec7d49a1d2384f75f21209598356e8df955f22a76a43bc0fa6e95
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.freebsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.freebsd-armv6.tar.gz
+          commit: null
+          size: 2355594
+          sha256: sha256:b02177b4ae3b99a244b5d05426ef50bfb151e0364cf82d1029f5283b99a6a102
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.freebsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.freebsd-armv7.tar.gz
+          commit: null
+          size: 2353462
+          sha256: sha256:9c6ccc5617f5d3e499da0986e86709ea5a428cab12b31469fa39541fb4a2a48f
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.freebsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.linux-386.tar.gz
+          commit: null
+          size: 2371054
+          sha256: sha256:047c61d3328d0e22f3f79257b0aba884cc12b84b4e14b3a7d2ae400aeb7fec23
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-386.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.linux-amd64.tar.gz
+          commit: null
+          size: 2494523
+          sha256: sha256:75f0c4de9db9a31c040aff6ac5628e028db3319c9b3c964f8efb6e4759baf90a
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.linux-arm64.tar.gz
+          commit: null
+          size: 2310688
+          sha256: sha256:23f3a4ad7cf422f659122338f0695a38547640582c38b71debfe34ce221aac56
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-arm64.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.linux-armv5.tar.gz
+          commit: null
+          size: 2361606
+          sha256: sha256:b14a6cd4ac0bdfe72058ea95ecd4aaae991be2be45b342b9f941e94974c82cce
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-armv5.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.linux-armv6.tar.gz
+          commit: null
+          size: 2344867
+          sha256: sha256:1ed35e741ad0e1d93465be9a715c8477994399abdcfa4e66f56ef0bb94fae156
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.linux-armv7.tar.gz
+          commit: null
+          size: 2342257
+          sha256: sha256:b3984e5366fd0d962bf652f2c208fa3fa6429b53d3419a624b9422660dd5c40e
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.linux-mips64.tar.gz
+          commit: null
+          size: 2270407
+          sha256: sha256:ae53cb31ef884f14d25e18787834d61230367396e2b0dde6888f4d62960b61c0
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-mips64.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.linux-mips64le.tar.gz
+          commit: null
+          size: 2214866
+          sha256: sha256:170844e70cca378c73ddee614249806749a6442517e795c0dddbf5fbf73a2752
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-mips64le.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.linux-ppc64.tar.gz
+          commit: null
+          size: 2339985
+          sha256: sha256:363ce799d20d85a9f3c68c702e76a340cfaa8e763dc1abfc9ae58e0ee56e3e53
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.linux-ppc64le.tar.gz
+          commit: null
+          size: 2305550
+          sha256: sha256:ed429bcde1df4e15edd80c34ebafa4f0db1711a96b0ea4b8d6130bbdbfd4bd05
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.linux-ppc64le.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.netbsd-386.tar.gz
+          commit: null
+          size: 2369755
+          sha256: sha256:0039d9ec72f414797e65e1315fdd218282b24e129edde4f701b32e18e9869b85
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.netbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.netbsd-amd64.tar.gz
+          commit: null
+          size: 2494453
+          sha256: sha256:99dec45a3743eb98087185888e84005e1d89be8dc0e74f25721826d63861e5e5
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.netbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.netbsd-armv6.tar.gz
+          commit: null
+          size: 2352871
+          sha256: sha256:f633db69025a3030c40082ebab48e121d9d164f13c520cf407597f5e08fa9e16
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.netbsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.netbsd-armv7.tar.gz
+          commit: null
+          size: 2351054
+          sha256: sha256:11932dbf26ae259241fc2b02047ee68bdd4dd92ac09203a06965f30faceebecf
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.netbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.openbsd-386.tar.gz
+          commit: null
+          size: 2370309
+          sha256: sha256:fc0e0612e26edc658aaf4e964fc6b066c70f1783a79bcd286ef43869663c12bd
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.openbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.openbsd-amd64.tar.gz
+          commit: null
+          size: 2495986
+          sha256: sha256:c579dfbbc2b01755b6aced6df2008b5c3070fee5d71fd2e887c0359f7801edfd
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.openbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.openbsd-armv7.tar.gz
+          commit: null
+          size: 2350810
+          sha256: sha256:69154e2a3930bd7cf4658d1b8863f4cd2485beb38c832031731191eef9af49d2
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.openbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.windows-386.tar.gz
+          commit: null
+          size: 2354350
+          sha256: sha256:c51a9c2d15511d6a48ce709df2378ccc42dba2144a0318709ba2896b21633c61
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.windows-386.tar.gz
+        - name: elasticsearch_exporter-1.0.4rc1.windows-amd64.tar.gz
+          commit: null
+          size: 2484517
+          sha256: sha256:64d090928f6404fce1f3d9568187343e751f1ec8709d840f15371f8fd852f361
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.4rc1/elasticsearch_exporter-1.0.4rc1.windows-amd64.tar.gz
+    - name: v1.0.3rc1
+      commit: null
+      timestamp: '2018-06-01T15:26:46'
+      prerelease: true
+      files:
+        - name: elasticsearch_exporter-1.0.3rc1.darwin-386.tar.gz
+          commit: null
+          size: 3463515
+          sha256: sha256:bdceffebfde47a6e379cb3d58b63c5eb12d49be618ba3022662479fa3c9a954c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.darwin-386.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.darwin-amd64.tar.gz
+          commit: null
+          size: 3598534
+          sha256: sha256:a2c4d63eadf1839c1a882a90dcf357f43c2d268f536d0629bba94c20bd968eab
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.dragonfly-amd64.tar.gz
+          commit: null
+          size: 2485311
+          sha256: sha256:8acb955bf865baeb4b7fccc7fb7d9ee6287d1228a4717dbe2806ef19cdf8c3ec
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.dragonfly-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.freebsd-386.tar.gz
+          commit: null
+          size: 2361812
+          sha256: sha256:7e0b2f46fc0ee34d03fadc6b5694d7e1d13c56e0f5e5bdeffac74392308555a0
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.freebsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.freebsd-amd64.tar.gz
+          commit: null
+          size: 2488572
+          sha256: sha256:1aa089699bfdce86e08c91ce06ea192e139cbc7de977e7cb9a4584e9ed9e9009
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.freebsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.freebsd-armv6.tar.gz
+          commit: null
+          size: 2342712
+          sha256: sha256:21e35df19549c124a85557ecc4c4aed0444a950247e4730a0de408600d568428
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.freebsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.freebsd-armv7.tar.gz
+          commit: null
+          size: 2339974
+          sha256: sha256:a7fef00d32bc63c3156a579d9aa7aef40b1f614810da3eb6d2436bd3192b2ffa
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.freebsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.linux-386.tar.gz
+          commit: null
+          size: 2360930
+          sha256: sha256:21caa7ae2aec1a9afb41cd40b2e322c325b0f9ec461787da07c0796c1f1dd0bc
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-386.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.linux-amd64.tar.gz
+          commit: null
+          size: 2484294
+          sha256: sha256:5ede825e84cf93804859d6181b9637a1f3c8b91825793231cd05bb8b3df42870
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.linux-arm64.tar.gz
+          commit: null
+          size: 2299263
+          sha256: sha256:b01da9e1cd0955a54815536b5f3fd63f4fe4c7c92c9f400374d8307f8ca52a11
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-arm64.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.linux-armv5.tar.gz
+          commit: null
+          size: 2348880
+          sha256: sha256:949b2d4af8529210f2891d1699ac21f8a5d7912f5b48dfc80da10a38604f6d64
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-armv5.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.linux-armv6.tar.gz
+          commit: null
+          size: 2332534
+          sha256: sha256:843b8bc4661a45e482bd5d33479b176200345534e1ab08a7c14ba1abd0056789
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.linux-armv7.tar.gz
+          commit: null
+          size: 2329965
+          sha256: sha256:2046c44098d1770a4a01b30f359374a826e64e1946d6ad38b3ad42cc4bb34c0b
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.linux-mips64.tar.gz
+          commit: null
+          size: 2260136
+          sha256: sha256:249fe9169eece1e25c0daebaa11a835f7dec0f3e11e2fcabba6eb2c017983ae7
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-mips64.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.linux-mips64le.tar.gz
+          commit: null
+          size: 2205408
+          sha256: sha256:615c21790b5af4f44dccde24c441f381a519a957f1d90d0d908874f41aca05e0
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-mips64le.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.linux-ppc64.tar.gz
+          commit: null
+          size: 2329572
+          sha256: sha256:7dffa651f9ff304b0f929da375421dea6309e9e1c810918e5a5183019d815508
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.linux-ppc64le.tar.gz
+          commit: null
+          size: 2295403
+          sha256: sha256:581d4c7b32ec14df0a9995cd9196011039d06c74d730c7e9989a691c026fa04f
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.linux-ppc64le.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.netbsd-386.tar.gz
+          commit: null
+          size: 2357314
+          sha256: sha256:87a3dee0298ddb949ec7a7b1c816b88ad81b0973887b9550969de5bbd5e160e3
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.netbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.netbsd-amd64.tar.gz
+          commit: null
+          size: 2484508
+          sha256: sha256:064287d09d7378aeccce666585639df8fdf9a6be40acac84b9e292508cf1355c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.netbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.netbsd-armv6.tar.gz
+          commit: null
+          size: 2340589
+          sha256: sha256:5c53ef19ada55535ccd172c5277c44ccde36682ea174ba3595a05d743b65a664
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.netbsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.netbsd-armv7.tar.gz
+          commit: null
+          size: 2337739
+          sha256: sha256:9932787ef611baf55ef943ef1dbac7048d4f51853c5e6a5db9f5826e50f16562
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.netbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.openbsd-386.tar.gz
+          commit: null
+          size: 2358481
+          sha256: sha256:3352ae0c75e475b2553a3039c588fda2a2a083bb623fccdc0ebb6f918ff29b7a
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.openbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.openbsd-amd64.tar.gz
+          commit: null
+          size: 2485638
+          sha256: sha256:4c024945b34e43f6a8bc3b68294f5cbed3ced20197595d366d152ca9bce7a0da
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.openbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.openbsd-armv7.tar.gz
+          commit: null
+          size: 2338023
+          sha256: sha256:1ab3a54bc5acc45fb6d959f2ebfed145831863fa942c12553a7002a95eb90eb2
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.openbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.windows-386.tar.gz
+          commit: null
+          size: 2342939
+          sha256: sha256:4e8f788a813b62c23d48634623acdabef1a88c40b46d056c723d90b487a9906d
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.windows-386.tar.gz
+        - name: elasticsearch_exporter-1.0.3rc1.windows-amd64.tar.gz
+          commit: null
+          size: 2473142
+          sha256: sha256:ea53c2196d0a6408a1b0b4a813b5afadfcce8e859579e0072e7a23bc8019b42b
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.3rc1/elasticsearch_exporter-1.0.3rc1.windows-amd64.tar.gz
+    - name: v1.0.2
+      commit: null
+      timestamp: '2018-01-09T12:59:02'
+      prerelease: false
+      files:
+        - name: elasticsearch_exporter-1.0.2.darwin-386.tar.gz
+          commit: null
+          size: 3131016
+          sha256: sha256:5c4fe49b9464148cf20b806012baf4832adce4a46dbcd67d84e0e3f1725713f6
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.darwin-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2.darwin-amd64.tar.gz
+          commit: null
+          size: 3327972
+          sha256: sha256:ec6f8efc3d79d4b10d33f1a2e6a9a72b1b2b7d5cf035f1ce23919b977bd2f3c2
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2.dragonfly-amd64.tar.gz
+          commit: null
+          size: 2446977
+          sha256: sha256:70c563453045709614b8a9e7bf45cc02d9663eb72a6957ab5e0b16c15e661e03
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.dragonfly-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2.freebsd-386.tar.gz
+          commit: null
+          size: 2270288
+          sha256: sha256:17a3c2004d7a748903a0ebe9a3771ca11fcf0eebef8e0ed06341aea497d0903c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.freebsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2.freebsd-amd64.tar.gz
+          commit: null
+          size: 2449676
+          sha256: sha256:64f0e2ab5ff81f33413df52ca89f7fe3d2ef6a64004c06d437dc34d0ad1e5112
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.freebsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2.freebsd-armv6.tar.gz
+          commit: null
+          size: 2247216
+          sha256: sha256:d078ee666fa6fbbf338971d39b73ea556970cf71f7d3137483892efe1d3fac77
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.freebsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.2.freebsd-armv7.tar.gz
+          commit: null
+          size: 2247114
+          sha256: sha256:937182983a52fb6959f929b56ab9b4cd7597915cceebf76b41d39056eca409f2
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.freebsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.2.linux-386.tar.gz
+          commit: null
+          size: 2261613
+          sha256: sha256:d5e48626a938eb694ecdef3564da2be2a17084b005bab8199402d3eabc0539db
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2.linux-amd64.tar.gz
+          commit: null
+          size: 2441938
+          sha256: sha256:9f1a35e4acf93bc073ba0106578fa9762ed09af4e89485063ca3a93a9d0201b8
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2.linux-arm64.tar.gz
+          commit: null
+          size: 2203618
+          sha256: sha256:3389a6e4d252628e686ea4fd0cf3b9607c4c4d37fe9c40d430bf85137a96c4c8
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-arm64.tar.gz
+        - name: elasticsearch_exporter-1.0.2.linux-armv5.tar.gz
+          commit: null
+          size: 2253592
+          sha256: sha256:fa91a9878d4da30aab36a4c9c9b01ea3fd9d00ca2da2d59a0514f2197365d965
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-armv5.tar.gz
+        - name: elasticsearch_exporter-1.0.2.linux-armv6.tar.gz
+          commit: null
+          size: 2237928
+          sha256: sha256:a4377081e8e23b02275039024cd120f1c9c1d416e8db0dbdae0497c06028ad1d
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.2.linux-armv7.tar.gz
+          commit: null
+          size: 2236371
+          sha256: sha256:73191c20a0d667e07ad22ab23d89aec0fe07d5ca2b3262a2c7f819df3fea65c3
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.2.linux-mips64.tar.gz
+          commit: null
+          size: 2164141
+          sha256: sha256:e970b895424e5ecfad581ac7f24a957a7d60233f9f45f5580d7bb2ea13cd4bfb
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-mips64.tar.gz
+        - name: elasticsearch_exporter-1.0.2.linux-mips64le.tar.gz
+          commit: null
+          size: 2108468
+          sha256: sha256:7ebacdd54d29ad812f27d7e0710f184542a1b183c30fd4e718fbdb92203b965c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-mips64le.tar.gz
+        - name: elasticsearch_exporter-1.0.2.linux-ppc64.tar.gz
+          commit: null
+          size: 2223431
+          sha256: sha256:a8f0b2d8fb9f06b710931753e6bf28c7f6b5420488d6e0191ed67ebc6345d86c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.0.2.linux-ppc64le.tar.gz
+          commit: null
+          size: 2193366
+          sha256: sha256:39b88ec1222be65204e95f11b5879b2f670cc08feabb983380d51e607bb4f857
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.linux-ppc64le.tar.gz
+        - name: elasticsearch_exporter-1.0.2.netbsd-386.tar.gz
+          commit: null
+          size: 2266939
+          sha256: sha256:e4ca868cdfddbc69414eeb2990e60b3d4638eeb7a1593de132ea07b3e39b5799
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.netbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2.netbsd-amd64.tar.gz
+          commit: null
+          size: 2443704
+          sha256: sha256:1728d23b51ba3f57bb4da390e152aeded3f7bba4de37ac76e270ab06b5d8fe70
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.netbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2.netbsd-armv6.tar.gz
+          commit: null
+          size: 2246345
+          sha256: sha256:74435633ddd323a77fbbf1d5e39245135de1b26ff14a23cfe206d36e1eecb946
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.netbsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.2.netbsd-armv7.tar.gz
+          commit: null
+          size: 2243926
+          sha256: sha256:deba4b7cc8d5eaaa2b5b5d3cca8073252182f5afe421c11fe2d92c640bd84d28
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.netbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.2.openbsd-386.tar.gz
+          commit: null
+          size: 2267418
+          sha256: sha256:76ee85a72835e7ad411d4524043255402299892e7c5c7a441b7eb2187657921e
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.openbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2.openbsd-amd64.tar.gz
+          commit: null
+          size: 2444781
+          sha256: sha256:91050c596f2bb98eb589979f5631c2df3fb03def08fced4959f601e070dc2614
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.openbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2.openbsd-armv7.tar.gz
+          commit: null
+          size: 2243388
+          sha256: sha256:35b8a80ff09b56b37aba470aaccdf517ed808272ac14057e7f106d2a314df734
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.openbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.2.windows-386.tar.gz
+          commit: null
+          size: 2249421
+          sha256: sha256:7dd26bc263ccf6cb2050382ead9afdb17a2252cfcefb1a5cf6b522cff69eed57
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.windows-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2.windows-amd64.tar.gz
+          commit: null
+          size: 2432694
+          sha256: sha256:a6107a4cc5284427909785a02dc739792ff6695c7185456548dda46e70cfaf58
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2/elasticsearch_exporter-1.0.2.windows-amd64.tar.gz
+    - name: v1.0.2rc2
+      commit: null
+      timestamp: '2017-10-30T15:27:48'
+      prerelease: true
+      files:
+        - name: elasticsearch_exporter-1.0.2rc2.darwin-386.tar.gz
+          commit: null
+          size: 3118859
+          sha256: sha256:88ad4813622384835219a673e1e2ed08befed8d13a98133c80c66176f21c9b2b
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.darwin-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.darwin-amd64.tar.gz
+          commit: null
+          size: 3309353
+          sha256: sha256:ee11ebf03cda8e0b80498343786d7d28955432aeb68ea8535b29019ed9ac0edf
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.dragonfly-amd64.tar.gz
+          commit: null
+          size: 2432195
+          sha256: sha256:b14a4d934f3ca22d44456d42c5f8798e8d0160a914b30eb5f9bf0cd5316fe6ed
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.dragonfly-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.freebsd-386.tar.gz
+          commit: null
+          size: 2257809
+          sha256: sha256:72a165c9fb97b26c4cca6f397dfeb3b90f1da4dfd2d3faecbccf0c1cc434291f
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.freebsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.freebsd-amd64.tar.gz
+          commit: null
+          size: 2433949
+          sha256: sha256:c1487e35d8fa152bd31366bb6884cf2bb4a8250c933e5f4a09fa7fbc5b91c95b
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.freebsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.freebsd-armv6.tar.gz
+          commit: null
+          size: 2236276
+          sha256: sha256:b0d45439d867b40e878314564194b9dc623b1d623dffddbfd8fd71c9c4f7326a
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.freebsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.freebsd-armv7.tar.gz
+          commit: null
+          size: 2234518
+          sha256: sha256:b76b50d79c0322a6ab05f7f03085158ef9cf77aa495c1d9740f9a91921d8b21d
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.freebsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.linux-386.tar.gz
+          commit: null
+          size: 2251076
+          sha256: sha256:b85e433331944bddb40dc51aba38596707db0cd852264b651f99ad26b6e3e6a5
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.linux-amd64.tar.gz
+          commit: null
+          size: 2428531
+          sha256: sha256:e1345dac1038faa7ec7d70ba20bcb9df70f11c69c1b33ad2e627d65c39d0d0cc
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.linux-arm64.tar.gz
+          commit: null
+          size: 2191519
+          sha256: sha256:51955c406759ecec45cb6b6ff4ad7e83c5fff64ee840514e36a5cb992cf94f80
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-arm64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.linux-armv5.tar.gz
+          commit: null
+          size: 2242712
+          sha256: sha256:662793c63670055d34a858725545eb98f85fd76bd9493002d9ba2c644ba3d2a8
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-armv5.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.linux-armv6.tar.gz
+          commit: null
+          size: 2225430
+          sha256: sha256:80987b41e55d866ad158589f72a2be8f25b73ca67a33ecd753908adacc199ee5
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.linux-armv7.tar.gz
+          commit: null
+          size: 2223380
+          sha256: sha256:b4f179b535f67a5dcb39cc5dc658e770efa596504bb16a02714c1a963d68fbe2
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.linux-mips64.tar.gz
+          commit: null
+          size: 2152724
+          sha256: sha256:51df4c845b1d524a7f3b509c34c89810e1d48d7420ebb775598bde0a8b181fcd
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-mips64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.linux-mips64le.tar.gz
+          commit: null
+          size: 2097053
+          sha256: sha256:745ba7dd6dab0071a6cadd43f7f2fb2095f7375a5f877a14cc0a66a882633ffb
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-mips64le.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.linux-ppc64.tar.gz
+          commit: null
+          size: 2209396
+          sha256: sha256:ed15d62e9bc4cc030ec854fcf1503278e0923fda36a28e12f23728d5028bf6a1
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.linux-ppc64le.tar.gz
+          commit: null
+          size: 2176383
+          sha256: sha256:d3b37558f737c8d7936c249774237907f26ae0487a1c04c2f76745f582e2efea
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.linux-ppc64le.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.netbsd-386.tar.gz
+          commit: null
+          size: 2253702
+          sha256: sha256:860060dbe60a846c76c9b179d22206f88f75a778cac990a7446ecd47fcf1b2a3
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.netbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.netbsd-amd64.tar.gz
+          commit: null
+          size: 2430840
+          sha256: sha256:de68ed3c67113d7e2cec6ac87500d437a4a50ec347d7476777fff642f78e14ad
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.netbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.netbsd-armv6.tar.gz
+          commit: null
+          size: 2234064
+          sha256: sha256:6c17ca38a29ebe9b8b99040ddb9552dbb8e72c118f3cab79de53af5e87eae298
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.netbsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.netbsd-armv7.tar.gz
+          commit: null
+          size: 2232304
+          sha256: sha256:07444d93016dc28d6d9bd0e1c9c446c42cab2a285db195262948680713f42991
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.netbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.openbsd-386.tar.gz
+          commit: null
+          size: 2254991
+          sha256: sha256:495e2fd35fa7ddf1155e09fdbf6bcc89ca68d509ef3b4440be0fff32276c6498
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.openbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.openbsd-amd64.tar.gz
+          commit: null
+          size: 2431730
+          sha256: sha256:8f668054a0582cf8ea81a919467a9314101b9f34c3d581d2054a559fbbc88477
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.openbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.openbsd-armv7.tar.gz
+          commit: null
+          size: 2231930
+          sha256: sha256:a433aae23573cb64fc695f06d49e4d131442c71084e5a05a2504f93c84fb53ff
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.openbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.windows-386.tar.gz
+          commit: null
+          size: 2236828
+          sha256: sha256:3bbbb9dade1c25071cb8f06a3cb24771bce0e6f5ab28dcd31e7b44189884c6a0
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.windows-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc2.windows-amd64.tar.gz
+          commit: null
+          size: 2416946
+          sha256: sha256:b40abfb67e2a0f22f98074013927057c02b4bf15e3228583b3d8bbae515776bf
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc2/elasticsearch_exporter-1.0.2rc2.windows-amd64.tar.gz
+    - name: v1.0.2rc1
+      commit: null
+      timestamp: '2017-09-11T13:52:12'
+      prerelease: true
+      files:
+        - name: elasticsearch_exporter-1.0.2rc1.darwin-386.tar.gz
+          commit: null
+          size: 2583469
+          sha256: sha256:54a84f8a51159198cc39a282c180cf5cac98942846963d1cc8a16ec5c4432cad
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.darwin-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.darwin-amd64.tar.gz
+          commit: null
+          size: 2742958
+          sha256: sha256:ee1028bfde9b9b0ba341919e16c9c4f9ed3c07ebf34494a4e3e758ee7697e3d7
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.dragonfly-amd64.tar.gz
+          commit: null
+          size: 1991072
+          sha256: sha256:b5e541076a205d9dc2652baef3b37869f9532fcee408911cb802182efac09718
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.dragonfly-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.freebsd-386.tar.gz
+          commit: null
+          size: 1850768
+          sha256: sha256:8920826a6d1a61e283b482e1740d139ca3592f3142b1599a7aa64f9b98a82c1f
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.freebsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.freebsd-amd64.tar.gz
+          commit: null
+          size: 1992176
+          sha256: sha256:e4095ceff863d2de8221a78172ec9130d0681956e6225119815645bdd2540d18
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.freebsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.freebsd-armv6.tar.gz
+          commit: null
+          size: 1859410
+          sha256: sha256:a250bd589292dc27f10bb34a0a8842c77439a3b861f697e6488f922b4b5dcc03
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.freebsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.freebsd-armv7.tar.gz
+          commit: null
+          size: 1859006
+          sha256: sha256:e87c892de1c917d7a27dfefddc5d01f1d09d087db354da3b7745d29a6017fdfc
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.freebsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.linux-386.tar.gz
+          commit: null
+          size: 1843222
+          sha256: sha256:128a5554fa2a037f0e16df2a34e8673ec64d2cdbf483f5f2077a6fffa3c20907
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.linux-amd64.tar.gz
+          commit: null
+          size: 1987699
+          sha256: sha256:d962d807bb2885eeea23e9a807ece29ae66f8ff0baa8dbd6bde0cd436ee65a7d
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.linux-arm64.tar.gz
+          commit: null
+          size: 1832038
+          sha256: sha256:32ae4535fe0b9a983cd0242d61e32cf007dc4a42af8cc6b835f95947c3a92b25
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-arm64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.linux-armv5.tar.gz
+          commit: null
+          size: 1867428
+          sha256: sha256:849781513b05c5967e65010a64830bd610699b347fac383915cad1636852aa96
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-armv5.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.linux-armv6.tar.gz
+          commit: null
+          size: 1847375
+          sha256: sha256:d7415d22bd2662319f51f3180b3a91764e9b82fb4d47202ad62b142360be9ccb
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.linux-armv7.tar.gz
+          commit: null
+          size: 1847007
+          sha256: sha256:2584b48aac97a1d4c60f9e923513c802f7f6f7cdbacae94492e0f37bb4a6bf36
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.linux-mips64.tar.gz
+          commit: null
+          size: 1792097
+          sha256: sha256:1d0ca920af4be4d97c0957c82ec360e32039891fdcf2dcfc8c4de4d4710fcb4c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-mips64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.linux-mips64le.tar.gz
+          commit: null
+          size: 1744562
+          sha256: sha256:7d685df90cd9693be87b24969baf982237a82207efdd58db2edf53d6455fd526
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-mips64le.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.linux-ppc64.tar.gz
+          commit: null
+          size: 1853025
+          sha256: sha256:db5126cc0194093586a4d516dc37d07ef510fbb1bc6321acc53eecf878ab71e6
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.linux-ppc64le.tar.gz
+          commit: null
+          size: 1822745
+          sha256: sha256:f31bec83c1979f6fc63ebb0a1f04a7257ddc6968a4de77e29cf217aaca599cb5
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.linux-ppc64le.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.netbsd-386.tar.gz
+          commit: null
+          size: 1848388
+          sha256: sha256:4894c74f8d5cc7877a1a93f061ae070e1490207363efaf5a4535feba4de5f773
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.netbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.netbsd-amd64.tar.gz
+          commit: null
+          size: 1990293
+          sha256: sha256:a211904c7850c1291b22ac2e3e7cf90667f1ace8de4e91df0f7f6e527f0c208f
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.netbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.netbsd-armv6.tar.gz
+          commit: null
+          size: 1856967
+          sha256: sha256:a7ed51b68e351a9268a280df670dab55cb9fed1c12a73decbe6f0b98f5af9549
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.netbsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.openbsd-386.tar.gz
+          commit: null
+          size: 1845993
+          sha256: sha256:3b875126dce11751b4fdb616af1ed44d2d2373d388151ad40ed805e96be7a7ab
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.openbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.openbsd-amd64.tar.gz
+          commit: null
+          size: 1989509
+          sha256: sha256:3603dee9d46bbafc256ef20a03b01012539a17b50912b5be18b9e40566ece294
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.openbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.openbsd-armv7.tar.gz
+          commit: null
+          size: 1853465
+          sha256: sha256:eada810c0515de5638daee7590068b2271f813d0009a06fe2bbfb6528c60717b
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.openbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.windows-386.tar.gz
+          commit: null
+          size: 1826057
+          sha256: sha256:e790218995d82de8c846645d0ded6e2b16bc2c18e66d037693d254658a5fcd5d
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.windows-386.tar.gz
+        - name: elasticsearch_exporter-1.0.2rc1.windows-amd64.tar.gz
+          commit: null
+          size: 1970585
+          sha256: sha256:293ba1947350dca6c01571d576886f95e15e4241327ee1dfb066c0030324a1ec
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.2rc1/elasticsearch_exporter-1.0.2rc1.windows-amd64.tar.gz
+    - name: v1.0.1
+      commit: null
+      timestamp: '2017-07-24T10:11:16'
+      prerelease: false
+      files:
+        - name: elasticsearch_exporter-1.0.1.darwin-386.tar.gz
+          commit: null
+          size: 2572596
+          sha256: sha256:14dd60bb5337b1ce9a288390db00f699d8bc0876441074d0e3cb790cf3eeb6d8
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.darwin-386.tar.gz
+        - name: elasticsearch_exporter-1.0.1.darwin-amd64.tar.gz
+          commit: null
+          size: 2732166
+          sha256: sha256:7c08afc8d3fb412ae1bab6fec31321a9588da0e2d069790718d65f7f5c1ff069
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.1.dragonfly-amd64.tar.gz
+          commit: null
+          size: 1983032
+          sha256: sha256:2e32ad706c4bf61ea84c8bae1262b2576c68d31c14d71bd4a9da32511f7dc956
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.dragonfly-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.1.freebsd-386.tar.gz
+          commit: null
+          size: 1841793
+          sha256: sha256:5a0d7dd9099d9035b2ae080771ff1e882796f4b915bca825302f9a5451ea5a28
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.freebsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.1.freebsd-amd64.tar.gz
+          commit: null
+          size: 1984950
+          sha256: sha256:5438df080712866a904678c6d8caa83a3f77fb65c4513ae4ba3344d3d82f8d7b
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.freebsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.1.freebsd-armv6.tar.gz
+          commit: null
+          size: 1848316
+          sha256: sha256:6ba8b5e124e0e6343d6f012db57e931fd4db9457abadf6853aa05ca50be9da65
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.freebsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.1.freebsd-armv7.tar.gz
+          commit: null
+          size: 1848044
+          sha256: sha256:e8eb2daa9453095de57da5559ab9b402953a18a2c321826c15bc4d01afb36376
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.freebsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.1.linux-386.tar.gz
+          commit: null
+          size: 1835061
+          sha256: sha256:7120692f247dea51cbb24d1f83a598edac5145a997237770b99bd07561dbf00e
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-386.tar.gz
+        - name: elasticsearch_exporter-1.0.1.linux-amd64.tar.gz
+          commit: null
+          size: 1980695
+          sha256: sha256:907e5f8680665c6da432bf4c398148743911de2f6533d609476aed0e423cb855
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.1.linux-arm64.tar.gz
+          commit: null
+          size: 1823188
+          sha256: sha256:7264cad1c63e19db8040a10300e7ab360bdd907c9b743aa829410d814af40fb5
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-arm64.tar.gz
+        - name: elasticsearch_exporter-1.0.1.linux-armv5.tar.gz
+          commit: null
+          size: 1857638
+          sha256: sha256:f74f5cb7532df32bd60506d78daa155fa7e9e0853053021a3535ceaa7cdd337f
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-armv5.tar.gz
+        - name: elasticsearch_exporter-1.0.1.linux-armv6.tar.gz
+          commit: null
+          size: 1840422
+          sha256: sha256:964ecbb03d55ae8bfce8badc8f366b45acca26fd919a0aab4bc4a9bf5226ac1d
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.1.linux-armv7.tar.gz
+          commit: null
+          size: 1840073
+          sha256: sha256:c343465725f9c4776b7997f254dcc284411a2f1bb8772c1d819269d0f280d419
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.1.linux-mips64.tar.gz
+          commit: null
+          size: 1783140
+          sha256: sha256:937d6a23110b722a1824c44f9086368bafdf2a4a9e9cd8e8807a158e1afb66a8
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-mips64.tar.gz
+        - name: elasticsearch_exporter-1.0.1.linux-mips64le.tar.gz
+          commit: null
+          size: 1736780
+          sha256: sha256:4f214e8f0949d0fe80f88fc2625c8303ed566ce27b06c27960d245fcd755342a
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-mips64le.tar.gz
+        - name: elasticsearch_exporter-1.0.1.linux-ppc64.tar.gz
+          commit: null
+          size: 1844736
+          sha256: sha256:3f32a21f4fd7c9ade5e59bfcfb54bfcd18c7dcb8162635c05e346be2e4b28719
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.0.1.linux-ppc64le.tar.gz
+          commit: null
+          size: 1815788
+          sha256: sha256:6a443629c567cb6d0f3bb2f60781fcb0835489cfd06e50d9536c264206261267
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.linux-ppc64le.tar.gz
+        - name: elasticsearch_exporter-1.0.1.netbsd-386.tar.gz
+          commit: null
+          size: 1839379
+          sha256: sha256:59ded580d67bd4f9c5fdb8cfe9708e8ce0555af81de53d8295976dedc2a78eac
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.netbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.1.netbsd-amd64.tar.gz
+          commit: null
+          size: 1982097
+          sha256: sha256:fe4b4859d80c0c9e1cd83b094dc4e00d4700e6954b5f9698fe7b4c86a108ef32
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.netbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.1.netbsd-armv6.tar.gz
+          commit: null
+          size: 1846662
+          sha256: sha256:08cc1103569409e50c8c6a7bb8a598bb1fb25f874ced81c2a00e01d15e759539
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.netbsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.1.netbsd-armv7.tar.gz
+          commit: null
+          size: 1846229
+          sha256: sha256:c34c558811244e467438895a20bab5da9b0c1c054e45eee6cc391ab87427961b
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.netbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.1.openbsd-386.tar.gz
+          commit: null
+          size: 1838234
+          sha256: sha256:771c8f149941dedebce3a029a14b92c2fb3e8202d061599311d4f95502f7c3f9
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.openbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.1.openbsd-amd64.tar.gz
+          commit: null
+          size: 1982406
+          sha256: sha256:15970858598b849e2c37fa833e0552dd90e38a64a795ef4d765e60b8d558810e
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.openbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.1.openbsd-armv7.tar.gz
+          commit: null
+          size: 1845280
+          sha256: sha256:f37f74008ec80474fcf6667680b368eefee5486e24ecebfd9e077f2e8cc2c12b
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.openbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.1.windows-386.tar.gz
+          commit: null
+          size: 1818413
+          sha256: sha256:05e0888fb0253e3009309ecd7a8f3ff77accefc26ccfaf613814832ed94d0996
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.windows-386.tar.gz
+        - name: elasticsearch_exporter-1.0.1.windows-amd64.tar.gz
+          commit: null
+          size: 1961948
+          sha256: sha256:587292061c274e7090e23f56f25d11e62764e6ed139b6b04d59ef69fc1d3b1b8
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.1/elasticsearch_exporter-1.0.1.windows-amd64.tar.gz
+    - name: v1.0.0
+      commit: null
+      timestamp: '2017-07-03T12:45:30'
+      prerelease: false
+      files:
+        - name: elasticsearch_exporter-1.0.0.darwin-386.tar.gz
+          commit: null
+          size: 2569947
+          sha256: sha256:297d857d343bfb93ee1728247dd4209ba7847cd896798fbbaf17537bc818f425
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.darwin-386.tar.gz
+        - name: elasticsearch_exporter-1.0.0.darwin-amd64.tar.gz
+          commit: null
+          size: 2729108
+          sha256: sha256:863fe4f5c7eed1f3f0d3b0cbb902e3e94810f097d61013c621485665a05055c0
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 1981347
+          sha256: sha256:8f9c939f2167ea63e6f9a2baf8495aab7e2cf2819b4dd7ea961c62361f1152e0
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.dragonfly-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.0.freebsd-386.tar.gz
+          commit: null
+          size: 1839398
+          sha256: sha256:2106ead559b9d0bd2e2f46a6a59c9e1f5185438ec478616c4f334adb3deae4b1
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.freebsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 1982250
+          sha256: sha256:1be0b2c83ead9b9be81a00a7133f674a64fb1b42679f9126eb1e2788b04f291e
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.freebsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 1846019
+          sha256: sha256:35e54607b21b89fc7561f609bbe5b0fa6858347476e5c77e0828890c0e8fc3cb
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.freebsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 1845905
+          sha256: sha256:228dd0fed0a5f70c15873d757f9d5a99df8138cd1e508e6e24c64f2ead6bcecf
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.freebsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.0.linux-386.tar.gz
+          commit: null
+          size: 1833073
+          sha256: sha256:32cfac5d4fcf8dfb255bea71d2f678a3dc3344a3ebd9f281fff6d07cba1d07d3
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-386.tar.gz
+        - name: elasticsearch_exporter-1.0.0.linux-amd64.tar.gz
+          commit: null
+          size: 1978295
+          sha256: sha256:35fe71e3af7ebcf3dc690f96ea881ed2a81c9a56d5352706db932d738d6b7557
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.0.linux-arm64.tar.gz
+          commit: null
+          size: 1821444
+          sha256: sha256:9c0563ab0a40db96423336d001ef4ae9bda4ff59c3cb2352d8050991ab975e06
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-arm64.tar.gz
+        - name: elasticsearch_exporter-1.0.0.linux-armv5.tar.gz
+          commit: null
+          size: 1853785
+          sha256: sha256:80bacb431250fddcc5f1a74862bc87921f08d2133d630f86477a44d740744825
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-armv5.tar.gz
+        - name: elasticsearch_exporter-1.0.0.linux-armv6.tar.gz
+          commit: null
+          size: 1838418
+          sha256: sha256:af87d2abc2ebe22cb25f76159e95edf6e8813be01514b8b053074ba957fb9f6c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.0.linux-armv7.tar.gz
+          commit: null
+          size: 1838198
+          sha256: sha256:f0d8f3f0ff23fbb30d38823fb81252d5c9eb5981c1c55c086bae4a629c9f18d3
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.0.linux-mips64.tar.gz
+          commit: null
+          size: 1780964
+          sha256: sha256:6dbf07392eb84d9f2d83c7dd4b78c822221bee12b6a39762b7a05e4e58217b89
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-mips64.tar.gz
+        - name: elasticsearch_exporter-1.0.0.linux-mips64le.tar.gz
+          commit: null
+          size: 1735175
+          sha256: sha256:1f934ba73b83f4a2fa12395474f86fb3d6339ab683c34453ea896f062df4b9ad
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-mips64le.tar.gz
+        - name: elasticsearch_exporter-1.0.0.linux-ppc64.tar.gz
+          commit: null
+          size: 1842601
+          sha256: sha256:4ca4d1944b0d52226ce0ebc47681cdb5000536134ffd8af532b41e0959a3614a
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.0.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 1813629
+          sha256: sha256:1b34463e24b3730d1779ba33443d071cf6a6941ed28f02400d23d12d58c29a14
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.linux-ppc64le.tar.gz
+        - name: elasticsearch_exporter-1.0.0.netbsd-386.tar.gz
+          commit: null
+          size: 1836455
+          sha256: sha256:78d73be9bc99d2f407e70b106c0af53a4629a5ea088242b4b242f40524baa2bc
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.netbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 1980409
+          sha256: sha256:1e957565a2cbc78b0141567fe79607e7ae5d9668d03aaa1a48bab718fe0bcb25
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.netbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 1844951
+          sha256: sha256:123fd94ca1167d9298b30f2df66372c9450a0711a6f9c7ee37d3f4912ab6e7fb
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.netbsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 1844577
+          sha256: sha256:0f680e6242e709532b0d6261983d756254a0019f59c096b1a3e77c771c24811e
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.netbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.0.openbsd-386.tar.gz
+          commit: null
+          size: 1835824
+          sha256: sha256:67d0e0a97e186f2b61c4f5275a5a9fce97e45119924867634c9cf8272feb08bc
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.openbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 1979672
+          sha256: sha256:0fbe4f37a33ddc6e9eea9cee4e5f440e5f0b994d1e1e73249746efe337736e32
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.openbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 1843381
+          sha256: sha256:a0c0771e7ed85a934acd0536464e1101596caa0cf7724f0fca42f5cb204d9de1
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.openbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.0.windows-386.tar.gz
+          commit: null
+          size: 1815592
+          sha256: sha256:fed0855491d31e8851c34b14d56cd5950627d12225f2a2ae9fe55d84a533925f
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.windows-386.tar.gz
+        - name: elasticsearch_exporter-1.0.0.windows-amd64.tar.gz
+          commit: null
+          size: 1959258
+          sha256: sha256:c9fa6124111b556ddfdee3cd8766343a577db9bfdb0d25068242114cc38846dc
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0/elasticsearch_exporter-1.0.0.windows-amd64.tar.gz
+    - name: v1.0.0-rc1
+      commit: null
+      timestamp: '2017-06-28T19:51:53'
+      prerelease: true
+      files:
+        - name: elasticsearch_exporter-1.0.0-rc1.darwin-386.tar.gz
+          commit: null
+          size: 2568326
+          sha256: sha256:9956f9b093b47dc1c703b661763fd8aaddbcbc2657d34c6ca17548c09efc7205
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.darwin-386.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.darwin-amd64.tar.gz
+          commit: null
+          size: 2734466
+          sha256: sha256:22d4923a58cd5215e308ded09fd2dceb3e7188c1ee3452711b3d4c846a626174
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.dragonfly-amd64.tar.gz
+          commit: null
+          size: 1984841
+          sha256: sha256:1ce38df723d90cb9e9e3d19e1a573f575ff338d7d2242a020954f745f3733368
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.dragonfly-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.freebsd-386.tar.gz
+          commit: null
+          size: 1840243
+          sha256: sha256:b263dbf6f494084328706ae3868173448aa6b06482b0bf53a25cf8c1dda8d212
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.freebsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.freebsd-amd64.tar.gz
+          commit: null
+          size: 1986899
+          sha256: sha256:dc98cc73001b5fc8652f3a43e3265dd183d317f741a98624636d7ac87f20995e
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.freebsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.freebsd-armv6.tar.gz
+          commit: null
+          size: 1848073
+          sha256: sha256:8a4126cfe9ebb7640cb580a8642dd44ed05f05002c04596acbe9cf7ebabda925
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.freebsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.freebsd-armv7.tar.gz
+          commit: null
+          size: 1847979
+          sha256: sha256:82b24abaabb38c8071e85775515cf46f191bf431645da53f56bcc10d50cbb045
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.freebsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.linux-386.tar.gz
+          commit: null
+          size: 1834187
+          sha256: sha256:5f706a975aa5a28a048d61674012d86cdb6be9367762356aceeee709f57f1291
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-386.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.linux-amd64.tar.gz
+          commit: null
+          size: 1984136
+          sha256: sha256:e67eaca389c93a9a2d38f5b38fbc8ff39e7094538706a30e522c904ac67c87fb
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.linux-arm64.tar.gz
+          commit: null
+          size: 1823520
+          sha256: sha256:aefa93def99eb9fa8203255ebc95e9a1d1af3eee861f17d648903f9771364954
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-arm64.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.linux-armv5.tar.gz
+          commit: null
+          size: 1857044
+          sha256: sha256:6fcafac33607c292f1c9336e3373e75409c9e973865b0a1ed053f82544e9eb65
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-armv5.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.linux-armv6.tar.gz
+          commit: null
+          size: 1838973
+          sha256: sha256:ca779b2cfa36aa89317a094f90cd7c31e3453b77109a03eda308ff1540599846
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.linux-armv7.tar.gz
+          commit: null
+          size: 1838629
+          sha256: sha256:b810c2d4fa8f7a8d5bc74a107e375451f14435aa52667d753380d2db7741cf38
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.linux-mips64.tar.gz
+          commit: null
+          size: 1781392
+          sha256: sha256:1e7d0eb6755f8bb5bf5688bef84b29788e5c14af5638542766d53dfbe5d57b34
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-mips64.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.linux-mips64le.tar.gz
+          commit: null
+          size: 1741159
+          sha256: sha256:edbfa9ba2ad6035d9e8f9e6a8c1be6bb2b43b81147e63f1346a68ddfe3c05944
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-mips64le.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.linux-ppc64.tar.gz
+          commit: null
+          size: 1847171
+          sha256: sha256:ac72a11b17c8e1b8df6012943df88efe189e2294c4e18911090e9cf922927257
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.linux-ppc64le.tar.gz
+          commit: null
+          size: 1817463
+          sha256: sha256:7ca93bfcbad972944473164a4366af2eeef58ed9d211ab1790298668c3b6e88e
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.linux-ppc64le.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.netbsd-386.tar.gz
+          commit: null
+          size: 1838100
+          sha256: sha256:b8d60960fe6e400f6abdff5ffb04848b6d7950e9bc66a9e04fdd5b8e1297442d
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.netbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.netbsd-amd64.tar.gz
+          commit: null
+          size: 1982966
+          sha256: sha256:b47be6c26ce9b1ac953f37c500d4702bb4b72f2fa2fb64d1bdc40ed71c117b80
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.netbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.netbsd-armv6.tar.gz
+          commit: null
+          size: 1847590
+          sha256: sha256:01d723c034c35d16ed5e5269151195780d1bd30bf146c909834926e194f2f79d
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.netbsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.netbsd-armv7.tar.gz
+          commit: null
+          size: 1847062
+          sha256: sha256:75d06470779cff607f7bdc5478f26dc5329adae21a39c344b85be4cf551bd0d2
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.netbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.openbsd-386.tar.gz
+          commit: null
+          size: 1836617
+          sha256: sha256:90514d57dd68be4e0ade2510e84e16c4ed9af7d8ac5686084bdd48e2f987674b
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.openbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.openbsd-amd64.tar.gz
+          commit: null
+          size: 1984072
+          sha256: sha256:e29380289f1770a7672a0294bee92cf5c806bac4a4c9ae836d8d09eab2477f6c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.openbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.openbsd-armv7.tar.gz
+          commit: null
+          size: 1843582
+          sha256: sha256:d6fe77b3d11eeab37d9126aa353cafa7c44ce83b8316d481c95163f84a8ab07b
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.openbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.windows-386.tar.gz
+          commit: null
+          size: 1815464
+          sha256: sha256:2f12ffe9786371443523ee2b4b32cc3d1d49e2bf9571f5bc54c482274b3619c9
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.windows-386.tar.gz
+        - name: elasticsearch_exporter-1.0.0-rc1.windows-amd64.tar.gz
+          commit: null
+          size: 1961679
+          sha256: sha256:6ca8b66045b811ff6967e1c9d84ced3b42f1a8fbd9cf7e6c42e5ee77e318e842
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.0.0-rc1/elasticsearch_exporter-1.0.0-rc1.windows-amd64.tar.gz
+    - name: v0.3.3
+      commit: null
+      timestamp: '2017-06-16T07:07:24'
+      prerelease: false
+      files:
+        - name: elasticsearch_exporter-0.3.3.linux-amd64.tar.gz
+          commit: null
+          size: 3300225
+          sha256: sha256:1e19066d027e5ca88bec844418f214b5c0141ae9e8833aa53fcbf83cc59c98de
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.3.3/elasticsearch_exporter-0.3.3.linux-amd64.tar.gz
+    - name: v0.3.2
+      commit: null
+      timestamp: '2017-06-15T07:29:06'
+      prerelease: false
+      files:
+        - name: elasticsearch_exporter-0.3.2.darwin-amd64.tar.gz
+          commit: null
+          size: 3088785
+          sha256: sha256:17b085a7f75e35664a5dbc7336cb2547ac0992b8528933dd79fff74bc8fb6ea9
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.3.2/elasticsearch_exporter-0.3.2.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-0.3.2.linux-amd64.tar.gz
+          commit: null
+          size: 3098442
+          sha256: sha256:445a5944de83e5a1bb37ab2a37898bf6058924a691bb987700134c49f9070653
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.3.2/elasticsearch_exporter-0.3.2.linux-amd64.tar.gz
+    - name: v0.3.1
+      commit: null
+      timestamp: '2017-05-15T13:55:37'
+      prerelease: false
+      files: []
+    - name: 0.3.0
+      commit: null
+      timestamp: '2016-01-05T15:34:29'
+      prerelease: false
+      files:
+        - name: elasticsearch_exporter-0.3.0.darwin-amd64.tar.gz
+          commit: null
+          size: 2540915
+          sha256: sha256:c63f498b9ed478d7966cc171e790ae3eb5195874cd633a273b03da2831de6b95
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/0.3.0/elasticsearch_exporter-0.3.0.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-0.3.0.linux-amd64.tar.gz
+          commit: null
+          size: 2540915
+          sha256: sha256:0ece1f3dfb309aa598f12385ee4c276f2dbb5be0696a23f2e63363a221b048fc
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/0.3.0/elasticsearch_exporter-0.3.0.linux-amd64.tar.gz
+    - name: v0.2.1
+      commit: null
+      timestamp: '2015-08-28T13:39:10'
+      prerelease: false
+      files:
+        - name: elasticsearch_exporter-0.2.1.darwin-amd64.tar.gz
+          commit: null
+          size: 2536493
+          sha256: sha256:dbeac70f9ed5105193d65605f0657939e209332da5ac0acf2efa808a41209347
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.2.1/elasticsearch_exporter-0.2.1.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-0.2.1.linux-amd64.tar.gz
+          commit: null
+          size: 2537673
+          sha256: sha256:8b05ad78d709ffa3b24ae1c3241590667b7e0580857b6aad3e13f2bdf5126801
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.2.1/elasticsearch_exporter-0.2.1.linux-amd64.tar.gz
+    - name: v0.2.0
+      commit: null
+      timestamp: '2015-06-17T13:55:03'
+      prerelease: false
+      files:
+        - name: elasticsearch_exporter-0.2.0.darwin-amd64.tar.gz
+          commit: null
+          size: 2535587
+          sha256: sha256:2511b106d56c0123d1a6208a9283474224afbd9d68fe5c9c682dc12507d37461
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.2.0/elasticsearch_exporter-0.2.0.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-0.2.0.linux-amd64.tar.gz
+          commit: null
+          size: 2536428
+          sha256: sha256:042bd27fec12e9ead46d3e08c8f86856fb60574654f2bc9a456d63649f2f1b26
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.2.0/elasticsearch_exporter-0.2.0.linux-amd64.tar.gz
+    - name: v0.1.1
+      commit: null
+      timestamp: '2015-04-24T20:29:25'
+      prerelease: true
+      files:
+        - name: elasticsearch_exporter-0.1.1.darwin-amd64.tar.gz
+          commit: null
+          size: 2532071
+          sha256: sha256:98862498936721841a4dac89890ca7af03ab1b95d7e893fed86b5e6358025e84
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.1.1/elasticsearch_exporter-0.1.1.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-0.1.1.linux-amd64.tar.gz
+          commit: null
+          size: 2533084
+          sha256: sha256:09b3e5d15b4157f8ceeb38b747a4cda73500cd4c77c02116ca44c179d763c398
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.1.1/elasticsearch_exporter-0.1.1.linux-amd64.tar.gz
+    - name: v0.1.0
+      commit: null
+      timestamp: '2015-04-05T18:29:10'
+      prerelease: true
+      files:
+        - name: elasticsearch_exporter-0.1.0.darwin-amd64.tar.gz
+          commit: null
+          size: 2531624
+          sha256: sha256:cdd2e90e89a9a4a7f7f47769a672f109b87676afa2589aac153ec79b76a0d0a5
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.1.0/elasticsearch_exporter-0.1.0.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-0.1.0.linux-amd64.tar.gz
+          commit: null
+          size: 2533094
+          sha256: sha256:99cb71199508e4ef2a7fa3885ed7fc7896e58aa301f25628fce87ca737a75f0e
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.1.0/elasticsearch_exporter-0.1.0.linux-amd64.tar.gz

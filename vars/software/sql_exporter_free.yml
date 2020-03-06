@@ -3,184 +3,210 @@ defaults:
   port: 9399
   tgroup: sql
 software:
-  '0.1':
-    commit:
-      sha: aadb25ed5bfae2aaac8f90fb7d1c450bd8bbdb44
-    files:
-      - name: sql_exporter-0.1.linux-amd64.tar.gz
-        sha256: sha256:b891ba292777aaa52e40c5e6e4571362a55e87c4aace25fe45e012a1e663603d
-        size: 4470127
-        url: https://github.com/free/sql_exporter/releases/download/0.1/sql_exporter-0.1.linux-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2017-11-22 17:05:27
-  '0.2':
-    commit:
-      sha: 276cba4d98ecc8ebc881595e97cbe076814fc57a
-    files:
-      - name: sql_exporter-0.2.linux-amd64.tar.gz
-        sha256: sha256:dc2a5d6661d45f26d201c827dc69318d57d02b70e66269092ba1f6046339f1c6
-        size: 4472869
-        url: https://github.com/free/sql_exporter/releases/download/0.2/sql_exporter-0.2.linux-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2017-11-23 16:43:08
-  '0.3':
-    commit:
-      sha: 74817e515765282fb9965e6c5cbf41de5b570db5
-    files:
-      - name: sql_exporter-0.3.linux-amd64.tar.gz
-        sha256: sha256:7e26e27537faea68b5b26fb69785e3b8bc1eb9318afd99746018151b50e24748
-        size: 4473471
-        url: https://github.com/free/sql_exporter/releases/download/0.3/sql_exporter-0.3.linux-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2017-11-27 16:35:51
-  '0.4':
-    commit:
-      sha: 6dfbe982f1e42340e2a87e0d30599383c02f0bed
-    files:
-      - name: sql_exporter-0.4.linux-amd64.tar.gz
-        sha256: sha256:9b2662bd0fe71535f8da18e81c1b60d24a98c6ba46502fe0582be0be7a95a812
-        size: 4477843
-        url: https://github.com/free/sql_exporter/releases/download/0.4/sql_exporter-0.4.linux-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2017-11-28 15:30:45
-  '0.5':
-    commit:
-      sha: fc5ed07ee38c5b90bab285392c43edfe32d271c5
-    files:
-      - name: sha256sums.txt
-        sha256: sha256:75d27d694def9173f18ff938a65330a5c5c6cae96508915925bd59042a8f3faf
-        size: 2980
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sha256sums.txt
-      - name: sql_exporter-0.5.darwin-386.tar.gz
-        sha256: sha256:27f3cd0099fcde7d8807373a566e9c54c5df8d036c837f2c7b8bb902457e6e66
-        size: 6737103
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.darwin-386.tar.gz
-      - name: sql_exporter-0.5.darwin-amd64.tar.gz
-        sha256: sha256:5970f88c1119955a7a59067aa8ad5ec3beafd1f3d3c99aafb6bea4d634a9733d
-        size: 6904887
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.darwin-amd64.tar.gz
-      - name: sql_exporter-0.5.dragonfly-amd64.tar.gz
-        sha256: sha256:05f1c61853c1cbf904f1238bd87bd9d8a77233ea6727c229f254888c4bbd3ef5
-        size: 6888557
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.dragonfly-amd64.tar.gz
-      - name: sql_exporter-0.5.freebsd-386.tar.gz
-        sha256: sha256:96f4d317b25cc84e746e5fee69422f977b27630f8762b634ed9bfca187c33270
-        size: 6695557
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.freebsd-386.tar.gz
-      - name: sql_exporter-0.5.freebsd-amd64.tar.gz
-        sha256: sha256:7d58ba4b326587692a6dbfb5cf486edba64b1109af452c17c8ad345528e8281e
-        size: 6904324
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.freebsd-amd64.tar.gz
-      - name: sql_exporter-0.5.freebsd-armv6.tar.gz
-        sha256: sha256:ff2044cc2827209107b448fbd67b32802675000a4f9d1edd5daef71d2343f617
-        size: 6405786
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.freebsd-armv6.tar.gz
-      - name: sql_exporter-0.5.freebsd-armv7.tar.gz
-        sha256: sha256:0484f3f9f5f7bfc1855c832af859af3b3bdc92189d8f9eac97eb819faf3d1b09
-        size: 6403395
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.freebsd-armv7.tar.gz
-      - name: sql_exporter-0.5.linux-386.tar.gz
-        sha256: sha256:ac66fd19236fb2818ba20c1f189aa90b3d9ba0f242465058063b306c6d8329bf
-        size: 6694867
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-386.tar.gz
-      - name: sql_exporter-0.5.linux-amd64.tar.gz
-        sha256: sha256:b219d7daa61b36ba76d557b0fa295109d8ce1af489e68c0ba2f477709c519b02
-        size: 6895010
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-amd64.tar.gz
-      - name: sql_exporter-0.5.linux-arm64.tar.gz
-        sha256: sha256:ce4a9f42ff5e0a71ea778053fcf12db02a98525788c075cd5d8a67b516304e23
-        size: 6398779
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-arm64.tar.gz
-      - name: sql_exporter-0.5.linux-armv5.tar.gz
-        sha256: sha256:404fa8b68149fc8bc1eee3edd53360cdebfbd82739ac37d978ca4a9ce284606a
-        size: 6398020
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-armv5.tar.gz
-      - name: sql_exporter-0.5.linux-armv6.tar.gz
-        sha256: sha256:d8a98777db51795d5f53493f93e5fcd3d1701f5371f9461522b64144edf80df3
-        size: 6397523
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-armv6.tar.gz
-      - name: sql_exporter-0.5.linux-armv7.tar.gz
-        sha256: sha256:697b5415c0de133d2b2041e29ee87a92d0ba45f78c8010fa3c40830f90c19b21
-        size: 6390631
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-armv7.tar.gz
-      - name: sql_exporter-0.5.linux-mips.tar.gz
-        sha256: sha256:ecb400d34ff80d074f791ebe86571d33e0d0333e68c2ed69b73e19874beeebc4
-        size: 6484875
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-mips.tar.gz
-      - name: sql_exporter-0.5.linux-mips64.tar.gz
-        sha256: sha256:8081dd286d34252e64fb9e5439e3116cea329a35ca489a4b51abd325044fc641
-        size: 6603649
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-mips64.tar.gz
-      - name: sql_exporter-0.5.linux-mips64le.tar.gz
-        sha256: sha256:fd0bd523189f3925df6a312e1f52aeefe1a3f3776b78e216a0537f811cf10a51
-        size: 6319537
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-mips64le.tar.gz
-      - name: sql_exporter-0.5.linux-mipsle.tar.gz
-        sha256: sha256:7254947073a1951384faa19e1807cd79b75cf613d9f2a789463f6209e8ab7fec
-        size: 6249330
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-mipsle.tar.gz
-      - name: sql_exporter-0.5.linux-ppc64.tar.gz
-        sha256: sha256:8a69c9fb3bb9a921335b52726b147f1dce47b7760c0ef59a9575fbb77b18f361
-        size: 6678681
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-ppc64.tar.gz
-      - name: sql_exporter-0.5.linux-ppc64le.tar.gz
-        sha256: sha256:816c9bcd50a970d0e9f6927d21d61d3b0558425b63c491784821356731b854ea
-        size: 6415794
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-ppc64le.tar.gz
-      - name: sql_exporter-0.5.linux-s390x.tar.gz
-        sha256: sha256:62437c103cbdf54261f611bbfb44c82069a26918ea2f05a3d2aab627322f9977
-        size: 7053197
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-s390x.tar.gz
-      - name: sql_exporter-0.5.netbsd-386.tar.gz
-        sha256: sha256:1e09e69586de07619b946b9baaa2fa493fc131f1e1e8ef06d92b5c84c6ae4198
-        size: 6682222
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.netbsd-386.tar.gz
-      - name: sql_exporter-0.5.netbsd-amd64.tar.gz
-        sha256: sha256:f3d71d9880dca160f118bdd6af4e52476ff7ff5bd28afa8740e15ee19de66fbe
-        size: 6888500
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.netbsd-amd64.tar.gz
-      - name: sql_exporter-0.5.netbsd-armv6.tar.gz
-        sha256: sha256:bb634079b3ac4ef82ea80040ddf192db5b04060d4d91e44c116956787c8e3b0b
-        size: 6397030
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.netbsd-armv6.tar.gz
-      - name: sql_exporter-0.5.netbsd-armv7.tar.gz
-        sha256: sha256:1e18cf67c5639d3188185063b7a3d854c80197fbde6d325b024e49c4a888128c
-        size: 6391069
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.netbsd-armv7.tar.gz
-      - name: sql_exporter-0.5.openbsd-386.tar.gz
-        sha256: sha256:93ac546870401fc8ab87f5ff21d9bb88630450ecaa5d69564c29356b1945d097
-        size: 6685500
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.openbsd-386.tar.gz
-      - name: sql_exporter-0.5.openbsd-amd64.tar.gz
-        sha256: sha256:749e02b86ae7d83161433bb4a8718296797f1f5a62a83782762a3fae74061b82
-        size: 6891322
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.openbsd-amd64.tar.gz
-      - name: sql_exporter-0.5.openbsd-armv7.tar.gz
-        sha256: sha256:dd0a4959bb4e20366dea34c4b374f64c241dc8a160f131c929066d855f532b06
-        size: 6390774
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.openbsd-armv7.tar.gz
-      - name: sql_exporter-0.5.windows-386.tar.gz
-        sha256: sha256:c3c294b9639029a0e56f7a009fb259ca2fdc66667cf9fbd8aa4d6d6d47d67290
-        size: 6581318
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.windows-386.tar.gz
-      - name: sql_exporter-0.5.windows-amd64.tar.gz
-        sha256: sha256:dfa06eeb3573c1c0e6ac03c54a8ce3c86f99035a3d3efc3cbdd5dad6c10f3118
-        size: 6809864
-        url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.windows-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2019-01-14 10:38:01
+  name: free/sql_exporter
+  release: '0.5'
+  prerelease: null
+  url: https://github.com/free/sql_exporter
+  source: https://github.com/free/sql_exporter.git
+  updated: '2020-03-05T02:04:04.703732'
   master:
     commit:
       sha: 6f96b0d6b40340929e4d84c902378e7ead113ff1
-    prerelease: true
-    published:
-      timestamp: 2019-11-27 22:03:00
-software_metadata:
-  prerelease: master
-  release: '0.5'
-  updated: 2020-02-27 06:17:52.393212
+      timestamp: '2019-11-27T22:03:00'
+    files: []
+  releases:
+    - name: '0.5'
+      commit: null
+      timestamp: '2019-01-14T10:38:01'
+      prerelease: false
+      files:
+        - name: sha256sums.txt
+          commit: null
+          size: 2980
+          sha256: sha256:75d27d694def9173f18ff938a65330a5c5c6cae96508915925bd59042a8f3faf
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sha256sums.txt
+        - name: sql_exporter-0.5.darwin-386.tar.gz
+          commit: null
+          size: 6737103
+          sha256: sha256:27f3cd0099fcde7d8807373a566e9c54c5df8d036c837f2c7b8bb902457e6e66
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.darwin-386.tar.gz
+        - name: sql_exporter-0.5.darwin-amd64.tar.gz
+          commit: null
+          size: 6904887
+          sha256: sha256:5970f88c1119955a7a59067aa8ad5ec3beafd1f3d3c99aafb6bea4d634a9733d
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.darwin-amd64.tar.gz
+        - name: sql_exporter-0.5.dragonfly-amd64.tar.gz
+          commit: null
+          size: 6888557
+          sha256: sha256:05f1c61853c1cbf904f1238bd87bd9d8a77233ea6727c229f254888c4bbd3ef5
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.dragonfly-amd64.tar.gz
+        - name: sql_exporter-0.5.freebsd-386.tar.gz
+          commit: null
+          size: 6695557
+          sha256: sha256:96f4d317b25cc84e746e5fee69422f977b27630f8762b634ed9bfca187c33270
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.freebsd-386.tar.gz
+        - name: sql_exporter-0.5.freebsd-amd64.tar.gz
+          commit: null
+          size: 6904324
+          sha256: sha256:7d58ba4b326587692a6dbfb5cf486edba64b1109af452c17c8ad345528e8281e
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.freebsd-amd64.tar.gz
+        - name: sql_exporter-0.5.freebsd-armv6.tar.gz
+          commit: null
+          size: 6405786
+          sha256: sha256:ff2044cc2827209107b448fbd67b32802675000a4f9d1edd5daef71d2343f617
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.freebsd-armv6.tar.gz
+        - name: sql_exporter-0.5.freebsd-armv7.tar.gz
+          commit: null
+          size: 6403395
+          sha256: sha256:0484f3f9f5f7bfc1855c832af859af3b3bdc92189d8f9eac97eb819faf3d1b09
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.freebsd-armv7.tar.gz
+        - name: sql_exporter-0.5.linux-386.tar.gz
+          commit: null
+          size: 6694867
+          sha256: sha256:ac66fd19236fb2818ba20c1f189aa90b3d9ba0f242465058063b306c6d8329bf
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-386.tar.gz
+        - name: sql_exporter-0.5.linux-amd64.tar.gz
+          commit: null
+          size: 6895010
+          sha256: sha256:b219d7daa61b36ba76d557b0fa295109d8ce1af489e68c0ba2f477709c519b02
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-amd64.tar.gz
+        - name: sql_exporter-0.5.linux-arm64.tar.gz
+          commit: null
+          size: 6398779
+          sha256: sha256:ce4a9f42ff5e0a71ea778053fcf12db02a98525788c075cd5d8a67b516304e23
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-arm64.tar.gz
+        - name: sql_exporter-0.5.linux-armv5.tar.gz
+          commit: null
+          size: 6398020
+          sha256: sha256:404fa8b68149fc8bc1eee3edd53360cdebfbd82739ac37d978ca4a9ce284606a
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-armv5.tar.gz
+        - name: sql_exporter-0.5.linux-armv6.tar.gz
+          commit: null
+          size: 6397523
+          sha256: sha256:d8a98777db51795d5f53493f93e5fcd3d1701f5371f9461522b64144edf80df3
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-armv6.tar.gz
+        - name: sql_exporter-0.5.linux-armv7.tar.gz
+          commit: null
+          size: 6390631
+          sha256: sha256:697b5415c0de133d2b2041e29ee87a92d0ba45f78c8010fa3c40830f90c19b21
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-armv7.tar.gz
+        - name: sql_exporter-0.5.linux-mips.tar.gz
+          commit: null
+          size: 6484875
+          sha256: sha256:ecb400d34ff80d074f791ebe86571d33e0d0333e68c2ed69b73e19874beeebc4
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-mips.tar.gz
+        - name: sql_exporter-0.5.linux-mips64.tar.gz
+          commit: null
+          size: 6603649
+          sha256: sha256:8081dd286d34252e64fb9e5439e3116cea329a35ca489a4b51abd325044fc641
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-mips64.tar.gz
+        - name: sql_exporter-0.5.linux-mips64le.tar.gz
+          commit: null
+          size: 6319537
+          sha256: sha256:fd0bd523189f3925df6a312e1f52aeefe1a3f3776b78e216a0537f811cf10a51
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-mips64le.tar.gz
+        - name: sql_exporter-0.5.linux-mipsle.tar.gz
+          commit: null
+          size: 6249330
+          sha256: sha256:7254947073a1951384faa19e1807cd79b75cf613d9f2a789463f6209e8ab7fec
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-mipsle.tar.gz
+        - name: sql_exporter-0.5.linux-ppc64.tar.gz
+          commit: null
+          size: 6678681
+          sha256: sha256:8a69c9fb3bb9a921335b52726b147f1dce47b7760c0ef59a9575fbb77b18f361
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-ppc64.tar.gz
+        - name: sql_exporter-0.5.linux-ppc64le.tar.gz
+          commit: null
+          size: 6415794
+          sha256: sha256:816c9bcd50a970d0e9f6927d21d61d3b0558425b63c491784821356731b854ea
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-ppc64le.tar.gz
+        - name: sql_exporter-0.5.linux-s390x.tar.gz
+          commit: null
+          size: 7053197
+          sha256: sha256:62437c103cbdf54261f611bbfb44c82069a26918ea2f05a3d2aab627322f9977
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.linux-s390x.tar.gz
+        - name: sql_exporter-0.5.netbsd-386.tar.gz
+          commit: null
+          size: 6682222
+          sha256: sha256:1e09e69586de07619b946b9baaa2fa493fc131f1e1e8ef06d92b5c84c6ae4198
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.netbsd-386.tar.gz
+        - name: sql_exporter-0.5.netbsd-amd64.tar.gz
+          commit: null
+          size: 6888500
+          sha256: sha256:f3d71d9880dca160f118bdd6af4e52476ff7ff5bd28afa8740e15ee19de66fbe
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.netbsd-amd64.tar.gz
+        - name: sql_exporter-0.5.netbsd-armv6.tar.gz
+          commit: null
+          size: 6397030
+          sha256: sha256:bb634079b3ac4ef82ea80040ddf192db5b04060d4d91e44c116956787c8e3b0b
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.netbsd-armv6.tar.gz
+        - name: sql_exporter-0.5.netbsd-armv7.tar.gz
+          commit: null
+          size: 6391069
+          sha256: sha256:1e18cf67c5639d3188185063b7a3d854c80197fbde6d325b024e49c4a888128c
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.netbsd-armv7.tar.gz
+        - name: sql_exporter-0.5.openbsd-386.tar.gz
+          commit: null
+          size: 6685500
+          sha256: sha256:93ac546870401fc8ab87f5ff21d9bb88630450ecaa5d69564c29356b1945d097
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.openbsd-386.tar.gz
+        - name: sql_exporter-0.5.openbsd-amd64.tar.gz
+          commit: null
+          size: 6891322
+          sha256: sha256:749e02b86ae7d83161433bb4a8718296797f1f5a62a83782762a3fae74061b82
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.openbsd-amd64.tar.gz
+        - name: sql_exporter-0.5.openbsd-armv7.tar.gz
+          commit: null
+          size: 6390774
+          sha256: sha256:dd0a4959bb4e20366dea34c4b374f64c241dc8a160f131c929066d855f532b06
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.openbsd-armv7.tar.gz
+        - name: sql_exporter-0.5.windows-386.tar.gz
+          commit: null
+          size: 6581318
+          sha256: sha256:c3c294b9639029a0e56f7a009fb259ca2fdc66667cf9fbd8aa4d6d6d47d67290
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.windows-386.tar.gz
+        - name: sql_exporter-0.5.windows-amd64.tar.gz
+          commit: null
+          size: 6809864
+          sha256: sha256:dfa06eeb3573c1c0e6ac03c54a8ce3c86f99035a3d3efc3cbdd5dad6c10f3118
+          url: https://github.com/free/sql_exporter/releases/download/0.5/sql_exporter-0.5.windows-amd64.tar.gz
+    - name: '0.4'
+      commit: null
+      timestamp: '2017-11-28T15:30:45'
+      prerelease: false
+      files:
+        - name: sql_exporter-0.4.linux-amd64.tar.gz
+          commit: null
+          size: 4477843
+          sha256: sha256:9b2662bd0fe71535f8da18e81c1b60d24a98c6ba46502fe0582be0be7a95a812
+          url: https://github.com/free/sql_exporter/releases/download/0.4/sql_exporter-0.4.linux-amd64.tar.gz
+    - name: '0.3'
+      commit: null
+      timestamp: '2017-11-27T16:35:51'
+      prerelease: false
+      files:
+        - name: sql_exporter-0.3.linux-amd64.tar.gz
+          commit: null
+          size: 4473471
+          sha256: sha256:7e26e27537faea68b5b26fb69785e3b8bc1eb9318afd99746018151b50e24748
+          url: https://github.com/free/sql_exporter/releases/download/0.3/sql_exporter-0.3.linux-amd64.tar.gz
+    - name: '0.2'
+      commit: null
+      timestamp: '2017-11-23T16:43:08'
+      prerelease: false
+      files:
+        - name: sql_exporter-0.2.linux-amd64.tar.gz
+          commit: null
+          size: 4472869
+          sha256: sha256:dc2a5d6661d45f26d201c827dc69318d57d02b70e66269092ba1f6046339f1c6
+          url: https://github.com/free/sql_exporter/releases/download/0.2/sql_exporter-0.2.linux-amd64.tar.gz
+    - name: '0.1'
+      commit: null
+      timestamp: '2017-11-22T17:05:27'
+      prerelease: false
+      files:
+        - name: sql_exporter-0.1.linux-amd64.tar.gz
+          commit: null
+          size: 4470127
+          sha256: sha256:b891ba292777aaa52e40c5e6e4571362a55e87c4aace25fe45e012a1e663603d
+          url: https://github.com/free/sql_exporter/releases/download/0.1/sql_exporter-0.1.linux-amd64.tar.gz
