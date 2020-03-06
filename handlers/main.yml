@@ -10,6 +10,7 @@
   become: true
   service:
     name: '{{ prometheus_software_service_name }}'
+    enabled: true
     state: restarted
   # If prometheus_restart_all, we are restarting all processes in a later step
   when: prometheus_restart_all is undefined

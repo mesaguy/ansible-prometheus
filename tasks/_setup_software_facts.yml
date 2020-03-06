@@ -6,27 +6,28 @@
 
 - name: Set {{ prometheus_software_name }} default software facts from software/{{ prometheus_software_name }}.yml
   set_fact:
-    prometheus_software_default_jobname: '{{ prometheus_software_vars.defaults.tgroup | default(omit) }}'
-    prometheus_software_default_port: '{{ prometheus_software_vars.defaults.port | default(omit) }}'
-    prometheus_software_default_prerelease: '{{ prometheus_software_vars.software_metadata.prerelease | default("") }}'
-    prometheus_software_default_release: '{{ prometheus_software_vars.software_metadata.release | default("") }}'
+    prometheus_software_default_jobname: '{{ prometheus_software_vars.defaults.tgroup }}'
+    prometheus_software_default_port: '{{ prometheus_software_vars.defaults.port }}'
+    prometheus_software_default_prerelease: '{{ prometheus_software_vars.software.prerelease | default("") }}'
+    prometheus_software_default_release: '{{ prometheus_software_vars.software.release | default("") }}'
+    prometheus_software_default_git_master: '{{ prometheus_software_vars.software.master.commit.sha | default("") }}'
 
-#- debug:
-#    msg: 'Default release: {{ prometheus_software_default_release }}'
-#
-#- debug:
-#    msg: 'Default prerelease: {{ prometheus_software_default_prerelease }}'
+# - debug:
+#     msg: 'Default release: {{ prometheus_software_default_release }}'
+
+# - debug:
+#     msg: 'Default prerelease: {{ prometheus_software_default_prerelease }}'
 
 - name: Set {{ prometheus_software_name }} version facts
   set_fact:
     prometheus_software_version: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_version", default=prometheus_software_default_release) }}'
     prometheus_software_src_version: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_src_version", default=prometheus_software_default_release) }}'
 
-#- debug:
-#    msg: 'Software version: {{ prometheus_software_version }}'
-#
-#- debug:
-#    msg: 'Software source version: {{ prometheus_software_src_version }}'
+# - debug:
+#     msg: 'Software version: {{ prometheus_software_version }}'
+
+# - debug:
+#     msg: 'Software source version: {{ prometheus_software_src_version }}'
 
 - name: Set {{ prometheus_software_name }} prerelease version facts
   set_fact:
@@ -35,13 +36,34 @@
   when:
     - prometheus_software_use_prerelease is defined and prometheus_software_use_prerelease | bool
     - prometheus_software_default_prerelease | default(false)
-    - prometheus_software_version == "" or prometheus_software_default_prerelease is version(prometheus_software_version, 'lt')
+    - prometheus_software_version == "" or prometheus_software_default_prerelease is version(prometheus_software_version, 'gt')
 
-#- debug:
-#    msg: 'Software version (prelease enabled): {{ prometheus_software_version }}'
-#
-#- debug:
-#    msg: 'Software source version (prelease enabled): {{ prometheus_software_src_version }}'
+# - debug:
+#     msg: 'Software version (prelease enabled): {{ prometheus_software_version }}'
+
+# - debug:
+#     msg: 'Software source version (prelease enabled): {{ prometheus_software_src_version }}'
+
+# - debug:
+#     msg: 'Software source master version): {{ prometheus_software_default_git_master }}'
+
+# - debug:
+#     msg: '{{ (prometheus_software_vars["software"]["releases"] | selectattr("name", "equalto", prometheus_software_version)) | list }}'
+
+- name: Set {{ prometheus_software_name }} release facts
+  set_fact:
+    prometheus_software_release: '{{ prometheus_software_vars["software"]["releases"] | selectattr("name", "equalto", prometheus_software_version) | list | first }}'
+  when: prometheus_software_vars["software"]["releases"] | length > 0
+
+- name: Set {{ prometheus_software_name }} git version facts because no src version is defined
+  set_fact:
+    prometheus_software_version: '{{ prometheus_software_default_git_master }}'
+  when:
+    - prometheus_software_src_version == ''
+
+# - debug:
+#     msg: 'Software release: {{ prometheus_software_release }}'
+#   when: prometheus_software_release is defined
 
 - name: Set {{ prometheus_software_name }} generic facts
   set_fact:
@@ -49,9 +71,11 @@
     prometheus_software_extra_opts: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_extra_opts", default="") }}'
     prometheus_software_fallback_to_build: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_fallback_to_build", default=prometheus_fallback_to_build) }}'
     prometheus_software_host: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_host", default="0.0.0.0") }}'
-    prometheus_software_metadata: '{{ prometheus_software_vars["software"][prometheus_software_version].files | default([]) | selectattr("name", "match", "^.*(" + prometheus_architecture + "|" + prometheus_architecture | replace("-", "_") + ").*$") | list | first | default({}) }}'
+    prometheus_software_metadata: '{{ prometheus_software_release.files | default([]) | selectattr("name", "match", "^.*(" + prometheus_architecture + "|" + prometheus_architecture | replace("-", "_") + ").*$") | list | first | default({}) }}'
     prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
     prometheus_software_port: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_port", default=prometheus_software_default_port) }}'
     prometheus_software_runas: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_runas", default=prometheus_user) }}'
     prometheus_software_shortname: '{% if prometheus_software_shortname is defined and prometheus_software_shortname != "" %}{{ prometheus_software_shortname }}{% else %}{{ prometheus_software_binary_name }}{% endif %}'
+    prometheus_software_src_dir_suffix: '{% if "github.com" in prometheus_software_vars.software.source %}/src/github.com/{{ prometheus_software_author }}/{{ prometheus_software_binary_name }}{% else %}{{ omit }}{% endif %}'
+    prometheus_software_src_url: '{{ prometheus_software_vars.software.source }}'
     prometheus_software_tgroup_jobname: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_jobname", default=prometheus_software_default_jobname) }}'

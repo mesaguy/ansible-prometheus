@@ -426,6 +426,10 @@ Purge undefined (orphaned) exporters. When run in client mode, this option only 
 
     prometheus_tgroup_dir_purge_orphans: true
 
+Specify a FQDN for a host when the FQDN isn't in Ansible's inventory and isn't the host's official FQDN. This option should be generally avoided, fixing DNS or Ansible's inventory is a better option:
+
+    prometheus_override_fqdn: weird-hostname.example.org
+
 ### Prometheus server configuration
 
 To enable [prometheus server](https://github.com/prometheus/prometheus) include role task: prometheus

@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - A 'promrun_name' label to the start, end, and exit metrics outputted by the 'promrun' script. This is helpful when alerting on all promrun jobs
 - A 'promcron_name' label to the end and exit metrics outputted by the 'promcron' script. This is helpful when alerting on all promcron jobs
 - Ability to simply create cronjobs for Ansible scripts
+- Option 'prometheus_override_fqdn' to specify a FQDN for a host when the FQDN isn't in Ansible's inventory and isn't the host's official FQDN
 
 ### Changed
 

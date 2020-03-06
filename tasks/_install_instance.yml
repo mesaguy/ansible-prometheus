@@ -8,7 +8,6 @@
     prometheus_software_config_file: '{{ prometheus_etc_dir }}/{{ prometheus_software_name }}.{{ installer_instance.name }}.yml'
     prometheus_software_config_name: '{{ prometheus_software_name }}.{{ installer_instance.name }}.yml'
     prometheus_software_runas: '{{ installer_instance.user }}'
-    prometheus_software_filename: '{{ prometheus_software_name }}_{{ prometheus_software_version }}_{{ prometheus_architecture | replace("-", "_") }}.tar.gz'
     prometheus_software_url: 'https://github.com/ncabatoff/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}_{{ prometheus_software_version }}_{{ prometheus_architecture | replace("-", "_") }}.tar.gz'
     prometheus_software_opts: '{{ lookup("template", "../vars/instances/" + prometheus_software_name + "-opts.yml")|from_yaml }}'
 

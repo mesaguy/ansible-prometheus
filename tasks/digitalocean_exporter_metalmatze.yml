@@ -7,6 +7,7 @@
 - name: Starting digitalocean_exporter (metalmatze) install
   set_fact:
     prometheus_exporter: true
+    prometheus_software_author: metalmatze
     prometheus_software_binary_name: digitalocean_exporter
     prometheus_software_binary_unarchive_opts: []
     # Do not perform tests, tests only succeed where IPv6 is available
@@ -23,8 +24,6 @@
     prometheus_software_opts:
       - '--webaddr={{ prometheus_software_host }}:{{ prometheus_software_port }}'
     prometheus_software_url: 'https://github.com/metalmatze/{{ prometheus_software_binary_name }}/releases/download/{{ prometheus_software_version }}/{{ prometheus_software_binary_name }}-{{ prometheus_software_version }}-{{ prometheus_architecture }}'
-    prometheus_software_src_dir_suffix: '/src/github.com/metalmatze/{{ prometheus_software_binary_name }}'
-    prometheus_software_src_url: 'https://github.com/metalmatze/{{ prometheus_software_binary_name }}'
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install_file.yml
