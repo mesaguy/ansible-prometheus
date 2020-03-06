@@ -711,7 +711,7 @@ An array of additional flags to pass to the cloudwatch_exporter daemon:
 
 The version of cloudwatch_exporter to install:
 
-    prometheus_cloudwatch_exporter_version: "0.7.0"
+    prometheus_cloudwatch_exporter_version: "0.8.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9106:
 
@@ -886,8 +886,8 @@ An array of additional flags to pass to the graphite_exporter daemon:
 
 The version of graphite_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_graphite_exporter_version: "0.6.2"
-    prometheus_graphite_exporter_src_version: "v0.6.2"
+    prometheus_graphite_exporter_version: "0.7.0"
+    prometheus_graphite_exporter_src_version: "v0.7.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9108:
 
@@ -975,8 +975,8 @@ An array of additional flags to pass to the influxdb_exporter daemon:
 
 The version of influxdb_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_influxdb_exporter_version: "0.3.0"
-    prometheus_influxdb_exporter_src_version: "v0.3.0"
+    prometheus_influxdb_exporter_version: "0.4.0"
+    prometheus_influxdb_exporter_src_version: "v0.4.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9122:
 
@@ -1420,8 +1420,8 @@ An array of additional flags to pass to the redis_exporter daemon:
 
 The version of redis_exporter to install. The source version defines the version as specified in version control:
 
-    prometheus_redis_exporter_oliver006_version: "1.3.5"
-    prometheus_redis_exporter_oliver006_src_version: "v1.3.5"
+    prometheus_redis_exporter_oliver006_version: "1.4.0"
+    prometheus_redis_exporter_oliver006_src_version: "v1.4.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 
@@ -1501,8 +1501,8 @@ An array of additional flags to pass to the snmp_exporter daemon:
     prometheus_snmp_exporter_extra_opts: []
 
 The version of snmp_exporter to install. The source version defines the version as specified in version control:
-    prometheus_snmp_exporter_version: "0.16.1"
-    prometheus_snmp_exporter_src_version: "v0.16.1"
+    prometheus_snmp_exporter_version: "0.17.0"
+    prometheus_snmp_exporter_src_version: "v0.17.0"
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9116:
 

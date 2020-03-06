@@ -23,6 +23,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ensure all references to Prometheus's 'etc' directory are to /opt/prometheus/etc instead of /etc/prometheus
 - Utilize handlers for 'reloading' and 'restarting' activities. Simplify tasks
 
+## [0.10.3] - 2020-03-04
+
+### Changed
+
+- Upgrade cloudwatch from v0.7.0 to v0.8.0
+- Upgrade graphite_exporter from v0.6.2 to v0.7.0
+- Upgrade influxdb_exporter from v0.3.0 to v0.4.0
+- Upgrade redis_exporter_oliver006 from v1.3.5 to v1.4.0
+- Upgrade snmp_exporter v0.16.1 to v0.17.0
+
 ## [0.10.2] - 2020-02-14
 
 ### Changed
