@@ -1,106 +1,112 @@
 ---
 defaults:
-  tgroup: bigip
   port: 9142
+  tgroup: bigip
 software:
-  0.1.0:
-    commit:
-      sha: b8a07785138127a0ab7aad3c4b25204355effee3
-    files:
-      - name: bigip_exporter-0.1.0-2.el7.centos.x86_64.rpm
-        sha256: sha256:b75337415a0ed6d4b4ba82dbf3f7ecfec31130447f68612f0c2dd70a7de437c3
-        size: 1700360
-        url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.1.0/bigip_exporter-0.1.0-2.el7.centos.x86_64.rpm
-      - name: bigip_exporter-0.1.0.linux-amd64.tar.gz
-        sha256: sha256:1cd1fa846182b5c9c5eb0b9fd590decf97c3aeccc97b5c10fb6bc53c0f110a6f
-        size: 2666176
-        url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.1.0/bigip_exporter-0.1.0.linux-amd64.tar.gz
-      - name: bigip_exporter-0.1.0.win-amd64.tar.gz
-        sha256: sha256:ca439a95a58db6b679be9d76dbcd07142570dc59e169d94cb17e198b70055f92
-        size: 2643529
-        url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.1.0/bigip_exporter-0.1.0.win-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2016-05-09 13:29:20
-  0.2.0:
-    commit:
-      sha: 519c06c33bbc7038fac40da33e1917e897e5f2af
-    files:
-      - name: bigip_exporter-0.2.0-2.el7.centos.x86_64.rpm
-        sha256: sha256:30e0577369b142a56839572432622530d57d7b24a022d8ce3db7d861488597c5
-        size: 1700068
-        url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.0/bigip_exporter-0.2.0-2.el7.centos.x86_64.rpm
-      - name: bigip_exporter-0.2.0.linux-amd64.tar.gz
-        sha256: sha256:e06ec7820c71c78b8ff52e3a54b4316d3df6c06b38917d12e88268c8d4fa70ae
-        size: 2665950
-        url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.0/bigip_exporter-0.2.0.linux-amd64.tar.gz
-      - name: bigip_exporter-0.2.0.win-amd64.tar.gz
-        sha256: sha256:bed1250b9d71ece53be39b7c1253a27791ba6ed874cadc1ea9bbf0cf37aa2e6f
-        size: 2643113
-        url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.0/bigip_exporter-0.2.0.win-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2016-05-13 16:57:55
-  0.2.1:
-    commit:
-      sha: 94a6a4923041242691caa8f9fb34f63b65326532
-    files:
-      - name: bigip_exporter-0.2.1-1.el7.centos.x86_64.rpm
-        sha256: sha256:8866ddcbdc3db8470b111b1b728bfbe1b76258bc7c0fcaedc07fc799b5d76446
-        size: 1705092
-        url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.1/bigip_exporter-0.2.1-1.el7.centos.x86_64.rpm
-      - name: bigip_exporter-0.2.1.linux-amd64.tar.gz
-        sha256: sha256:eb26899874414c467f2067f820bc23db2225add7bb5e98f17db471f0c02bd01e
-        size: 2676466
-        url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.1/bigip_exporter-0.2.1.linux-amd64.tar.gz
-      - name: bigip_exporter-0.2.1.win-amd64.tar.gz
-        sha256: sha256:f0b106e62fb2bde6789fab96eddb3e4c592a888e8cf8df29360c5a6c132d1def
-        size: 2658111
-        url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.1/bigip_exporter-0.2.1.win-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2016-05-23 10:28:44
-  0.2.2:
-    commit:
-      sha: dc38b009da7e86944964b35bdd9d27000b6067ac
-    files:
-      - name: bigip_exporter-0.2.2-2.el7.centos.x86_64.rpm
-        sha256: sha256:c2e90dc4bd5e3468ac954bc93f8a7d475a30c70a9e84d05875561cfb24dd8980
-        size: 1940368
-        url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.2/bigip_exporter-0.2.2-2.el7.centos.x86_64.rpm
-      - name: bigip_exporter-0.2.2.linux-amd64.tar.gz
-        sha256: sha256:075888b406bf22aad87c4c4a64dc8a4b8c2bd2b93209d22c55cc446ec11f021a
-        size: 3051971
-        url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.2/bigip_exporter-0.2.2.linux-amd64.tar.gz
-      - name: bigip_exporter-0.2.2.windows-amd64.tar.gz
-        sha256: sha256:2dac943d20769bc7d34c07c3820c2184ac300c996713e0febee531f313d68584
-        size: 3039442
-        url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.2/bigip_exporter-0.2.2.windows-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2016-10-04 20:49:49
-  1.0.0:
-    commit:
-      sha: 44f11c2c06747cf3ded915c7e2377f06c370ef2d
-    files:
-      - name: bigip_exporter-1.0.0.linux-amd64.tar.gz
-        sha256: sha256:119ae4bab4e89b90dac74c919dc7c0a3cad114c97bd654230ac5b5962366e059
-        size: 3739048
-        url: https://github.com/ExpressenAB/bigip_exporter/releases/download/1.0.0/bigip_exporter-1.0.0.linux-amd64.tar.gz
-      - name: bigip_exporter-1.0.0.windows-amd64.tar.gz
-        sha256: sha256:8c51465112545f73416bc0674449dfe4e7460aeb9e3484f7bd17f031bc5f38a0
-        size: 3714472
-        url: https://github.com/ExpressenAB/bigip_exporter/releases/download/1.0.0/bigip_exporter-1.0.0.windows-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2017-04-18 11:22:53
+  name: ExpressenAB/bigip_exporter
+  release: 1.0.0
+  prerelease: null
+  url: https://github.com/ExpressenAB/bigip_exporter
+  source: https://github.com/ExpressenAB/bigip_exporter.git
+  updated: '2020-03-05T02:45:30.097821'
   master:
     commit:
       sha: e0f009c578b6264ea6c2fb82071ceb02a1a8121b
-    prerelease: true
-    published:
-      timestamp: 2018-02-22 15:32:55
-software_metadata:
-  prerelease: master
-  release: 1.0.0
-  updated: 2020-02-27 06:24:30.157115
+      timestamp: '2018-02-22T15:32:55'
+    files: []
+  releases:
+    - name: 1.0.0
+      commit: null
+      timestamp: '2017-04-18T11:23:16'
+      prerelease: false
+      files:
+        - name: bigip_exporter-1.0.0.linux-amd64.tar.gz
+          commit: null
+          size: 3739048
+          sha256: sha256:119ae4bab4e89b90dac74c919dc7c0a3cad114c97bd654230ac5b5962366e059
+          url: https://github.com/ExpressenAB/bigip_exporter/releases/download/1.0.0/bigip_exporter-1.0.0.linux-amd64.tar.gz
+        - name: bigip_exporter-1.0.0.windows-amd64.tar.gz
+          commit: null
+          size: 3714472
+          sha256: sha256:8c51465112545f73416bc0674449dfe4e7460aeb9e3484f7bd17f031bc5f38a0
+          url: https://github.com/ExpressenAB/bigip_exporter/releases/download/1.0.0/bigip_exporter-1.0.0.windows-amd64.tar.gz
+    - name: 0.2.2
+      commit: null
+      timestamp: '2016-10-04T20:49:49'
+      prerelease: false
+      files:
+        - name: bigip_exporter-0.2.2-2.el7.centos.x86_64.rpm
+          commit: null
+          size: 1940368
+          sha256: sha256:c2e90dc4bd5e3468ac954bc93f8a7d475a30c70a9e84d05875561cfb24dd8980
+          url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.2/bigip_exporter-0.2.2-2.el7.centos.x86_64.rpm
+        - name: bigip_exporter-0.2.2.linux-amd64.tar.gz
+          commit: null
+          size: 3051971
+          sha256: sha256:075888b406bf22aad87c4c4a64dc8a4b8c2bd2b93209d22c55cc446ec11f021a
+          url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.2/bigip_exporter-0.2.2.linux-amd64.tar.gz
+        - name: bigip_exporter-0.2.2.windows-amd64.tar.gz
+          commit: null
+          size: 3039442
+          sha256: sha256:2dac943d20769bc7d34c07c3820c2184ac300c996713e0febee531f313d68584
+          url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.2/bigip_exporter-0.2.2.windows-amd64.tar.gz
+    - name: 0.2.1
+      commit: null
+      timestamp: '2016-05-23T10:28:44'
+      prerelease: false
+      files:
+        - name: bigip_exporter-0.2.1-1.el7.centos.x86_64.rpm
+          commit: null
+          size: 1705092
+          sha256: sha256:8866ddcbdc3db8470b111b1b728bfbe1b76258bc7c0fcaedc07fc799b5d76446
+          url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.1/bigip_exporter-0.2.1-1.el7.centos.x86_64.rpm
+        - name: bigip_exporter-0.2.1.linux-amd64.tar.gz
+          commit: null
+          size: 2676466
+          sha256: sha256:eb26899874414c467f2067f820bc23db2225add7bb5e98f17db471f0c02bd01e
+          url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.1/bigip_exporter-0.2.1.linux-amd64.tar.gz
+        - name: bigip_exporter-0.2.1.win-amd64.tar.gz
+          commit: null
+          size: 2658111
+          sha256: sha256:f0b106e62fb2bde6789fab96eddb3e4c592a888e8cf8df29360c5a6c132d1def
+          url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.1/bigip_exporter-0.2.1.win-amd64.tar.gz
+    - name: 0.2.0
+      commit: null
+      timestamp: '2016-05-13T16:57:55'
+      prerelease: false
+      files:
+        - name: bigip_exporter-0.2.0-2.el7.centos.x86_64.rpm
+          commit: null
+          size: 1700068
+          sha256: sha256:30e0577369b142a56839572432622530d57d7b24a022d8ce3db7d861488597c5
+          url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.0/bigip_exporter-0.2.0-2.el7.centos.x86_64.rpm
+        - name: bigip_exporter-0.2.0.linux-amd64.tar.gz
+          commit: null
+          size: 2665950
+          sha256: sha256:e06ec7820c71c78b8ff52e3a54b4316d3df6c06b38917d12e88268c8d4fa70ae
+          url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.0/bigip_exporter-0.2.0.linux-amd64.tar.gz
+        - name: bigip_exporter-0.2.0.win-amd64.tar.gz
+          commit: null
+          size: 2643113
+          sha256: sha256:bed1250b9d71ece53be39b7c1253a27791ba6ed874cadc1ea9bbf0cf37aa2e6f
+          url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.2.0/bigip_exporter-0.2.0.win-amd64.tar.gz
+    - name: 0.1.0
+      commit: null
+      timestamp: '2016-05-09T13:29:20'
+      prerelease: false
+      files:
+        - name: bigip_exporter-0.1.0-2.el7.centos.x86_64.rpm
+          commit: null
+          size: 1700360
+          sha256: sha256:b75337415a0ed6d4b4ba82dbf3f7ecfec31130447f68612f0c2dd70a7de437c3
+          url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.1.0/bigip_exporter-0.1.0-2.el7.centos.x86_64.rpm
+        - name: bigip_exporter-0.1.0.linux-amd64.tar.gz
+          commit: null
+          size: 2666176
+          sha256: sha256:1cd1fa846182b5c9c5eb0b9fd590decf97c3aeccc97b5c10fb6bc53c0f110a6f
+          url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.1.0/bigip_exporter-0.1.0.linux-amd64.tar.gz
+        - name: bigip_exporter-0.1.0.win-amd64.tar.gz
+          commit: null
+          size: 2643529
+          sha256: sha256:ca439a95a58db6b679be9d76dbcd07142570dc59e169d94cb17e198b70055f92
+          url: https://github.com/ExpressenAB/bigip_exporter/releases/download/0.1.0/bigip_exporter-0.1.0.win-amd64.tar.gz

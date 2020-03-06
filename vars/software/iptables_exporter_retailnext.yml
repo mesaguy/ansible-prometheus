@@ -3,28 +3,30 @@ defaults:
   port: 9455
   tgroup: iptables
 software:
+  name: retailnext/iptables_exporter
+  release: null
+  prerelease: v0.1.0
+  url: https://github.com/retailnext/iptables_exporter
+  source: https://github.com/retailnext/iptables_exporter.git
+  updated: '2020-03-05T02:43:52.024586'
   master:
     commit:
       sha: bfae25df93c6cc922f622761df7f1b5a2ea1b3bf
-    prerelease: true
-    published:
-      timestamp: 2018-06-28 04:34:29
-  v0.1.0:
-    commit:
-      sha: 9172cd2acb4afc4ba77d48c85a46fbef36d5cb80
-    files:
-      - name: iptables_exporter-0.1.0.linux-amd64.tar.gz
-        sha256: sha256:bcc5ec4ee2d6e818f113f52c7a198eb462064b39083520db4ebc0a64ccd88a32
-        size: 2720771
-        url: https://github.com/retailnext/iptables_exporter/releases/download/v0.1.0/iptables_exporter-0.1.0.linux-amd64.tar.gz
-      - name: sha256sums.txt
-        sha256: sha256:0c4513aa41d59fdb4dccc94b5d345ac9b0f19c65c13b79ba1801796ba58d63dd
-        size: 109
-        url: https://github.com/retailnext/iptables_exporter/releases/download/v0.1.0/sha256sums.txt
-    prerelease: true
-    published:
-      timestamp: 2018-06-28 04:30:47
-software_metadata:
-  prerelease: v0.1.0
-  release: null
-  updated: 2020-02-27 06:22:51.160108
+      timestamp: '2018-06-28T04:34:29'
+    files: []
+  releases:
+    - name: v0.1.0
+      commit: null
+      timestamp: '2018-06-28T04:30:47'
+      prerelease: true
+      files:
+        - name: iptables_exporter-0.1.0.linux-amd64.tar.gz
+          commit: null
+          size: 2720771
+          sha256: sha256:bcc5ec4ee2d6e818f113f52c7a198eb462064b39083520db4ebc0a64ccd88a32
+          url: https://github.com/retailnext/iptables_exporter/releases/download/v0.1.0/iptables_exporter-0.1.0.linux-amd64.tar.gz
+        - name: sha256sums.txt
+          commit: null
+          size: 109
+          sha256: sha256:0c4513aa41d59fdb4dccc94b5d345ac9b0f19c65c13b79ba1801796ba58d63dd
+          url: https://github.com/retailnext/iptables_exporter/releases/download/v0.1.0/sha256sums.txt

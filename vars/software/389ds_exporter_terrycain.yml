@@ -1,142 +1,183 @@
 ---
-defaults:
-  port: 9496
-  tgroup: "389ds"
 software:
+  name: terrycain/389ds_exporter
+  release: v0.1.2
+  prerelease: null
+  url: https://github.com/terrycain/389ds_exporter
+  source: https://github.com/terrycain/389ds_exporter.git
+  updated: '2020-03-05T02:44:47.983707'
   master:
     commit:
       sha: 4676c54bc0d222d30dbae30594f7a5861a88f510
-    prerelease: true
-    published:
-      timestamp: 2018-11-08 07:56:56
-  v0.1.2:
-    commit:
-      sha: 7e525c56d9bddf575cc6d7345a4ae0a49884cb4d
-    files:
-      - name: 389ds_exporter-0.1.2.darwin-386.tar.gz
-        sha256: sha256:df641893f64e0712863038fe28dc207f13554b7d1e0b9fce1ec6c2263d77390c
-        size: 5164701
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.darwin-386.tar.gz
-      - name: 389ds_exporter-0.1.2.darwin-amd64.tar.gz
-        sha256: sha256:92eb349e4cbadec0c3a7af440d7786208093c00cdf613a69c281853ba5ab01d0
-        size: 5293593
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.darwin-amd64.tar.gz
-      - name: 389ds_exporter-0.1.2.dragonfly-amd64.tar.gz
-        sha256: sha256:54e54c69c76b8e2b51ff2ed9b77cf43e3ec09e9f27f410519f3c54a21b042d1c
-        size: 5255974
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.dragonfly-amd64.tar.gz
-      - name: 389ds_exporter-0.1.2.freebsd-386.tar.gz
-        sha256: sha256:93d43014fd435c9abed5a8d9ff8b0d1f22ef0c15c2b60635b5aef16a23560ee3
-        size: 5108043
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.freebsd-386.tar.gz
-      - name: 389ds_exporter-0.1.2.freebsd-amd64.tar.gz
-        sha256: sha256:85f3523917fc931d73acf4a57948d075169f8928058dce0610b05109d4eceadd
-        size: 5276251
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.freebsd-amd64.tar.gz
-      - name: 389ds_exporter-0.1.2.freebsd-armv6.tar.gz
-        sha256: sha256:a96ef1a86a563ed943e6bfa08e63cace31dbc3298f7c3dc48bdd5be7d366b14b
-        size: 4884909
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.freebsd-armv6.tar.gz
-      - name: 389ds_exporter-0.1.2.freebsd-armv7.tar.gz
-        sha256: sha256:6e3d0eda03576bce0347dcd4b5b925db56d85d05476c403015b15748552ee5b3
-        size: 4882088
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.freebsd-armv7.tar.gz
-      - name: 389ds_exporter-0.1.2.linux-386.tar.gz
-        sha256: sha256:2a051cd4862ab72a4d244a5e0760ab91a6971066d1472f769f38d2c2cd99c72d
-        size: 5118977
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-386.tar.gz
-      - name: 389ds_exporter-0.1.2.linux-amd64.tar.gz
-        sha256: sha256:a77cef96eab6f25d68ae3bb2b790aa8663dff240aadc8f0bbc65563500db417c
-        size: 5278263
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-amd64.tar.gz
-      - name: 389ds_exporter-0.1.2.linux-arm64.tar.gz
-        sha256: sha256:127f6994284160056e17795838e5f3a0f18478d45a8485caea1a853d453d4c34
-        size: 4891976
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-arm64.tar.gz
-      - name: 389ds_exporter-0.1.2.linux-armv5.tar.gz
-        sha256: sha256:70ae75f9703c10a9c0cfb8fecf57a9f8935631171aaa74f80dc6ee2b78cfbbbb
-        size: 4897979
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-armv5.tar.gz
-      - name: 389ds_exporter-0.1.2.linux-armv6.tar.gz
-        sha256: sha256:b367bcc0283d9ec601da32cf7331026125ff97375915abc6f346c7048a865316
-        size: 4891744
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-armv6.tar.gz
-      - name: 389ds_exporter-0.1.2.linux-armv7.tar.gz
-        sha256: sha256:8825a8ebd0caa6a0c121f2f8b2ce7bfa02fbc972925ab7bd4996d93c8f8059d0
-        size: 4886339
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-armv7.tar.gz
-      - name: 389ds_exporter-0.1.2.linux-mips.tar.gz
-        sha256: sha256:bd773a53dcaeeccec47cbaee72c5b34c1bf238d6b36f49e87d8e0bb4d8636127
-        size: 4882988
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-mips.tar.gz
-      - name: 389ds_exporter-0.1.2.linux-mips64.tar.gz
-        sha256: sha256:35344769f4409241c39532d19953cfa69ebbb9d7e24776391222d1ed2acc1aef
-        size: 4977170
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-mips64.tar.gz
-      - name: 389ds_exporter-0.1.2.linux-mips64le.tar.gz
-        sha256: sha256:3ab403d59481a6438181cd407f434d6f8c1ba3e5968525b59750f27f3cd2b16b
-        size: 4825019
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-mips64le.tar.gz
-      - name: 389ds_exporter-0.1.2.linux-mipsle.tar.gz
-        sha256: sha256:d8770c2d4cd5fc99924014ceb5b43ce62efec1d62f422256c201487591ab2619
-        size: 4774489
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-mipsle.tar.gz
-      - name: 389ds_exporter-0.1.2.linux-ppc64.tar.gz
-        sha256: sha256:49aba3da25a3d2182df22ebc2d9ab5f90408b840a7421499d62c59cf689f5f50
-        size: 5030120
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-ppc64.tar.gz
-      - name: 389ds_exporter-0.1.2.linux-ppc64le.tar.gz
-        sha256: sha256:bf677cfce249d93fcd433d01ae8148e057de4e4b6b152956f61c4894aa9f0e66
-        size: 4895276
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-ppc64le.tar.gz
-      - name: 389ds_exporter-0.1.2.linux-s390x.tar.gz
-        sha256: sha256:81289ece292565c8e8739dec333d38c16a085235109e560428fd75c126b5a604
-        size: 5337780
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-s390x.tar.gz
-      - name: 389ds_exporter-0.1.2.netbsd-386.tar.gz
-        sha256: sha256:9080f4c4fa4ef715f633355443e55c4afb1a87bfae3f12a78a9dfa0f27875c64
-        size: 5091757
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.netbsd-386.tar.gz
-      - name: 389ds_exporter-0.1.2.netbsd-amd64.tar.gz
-        sha256: sha256:f99847ad7c3e3c5211c4f29ae027d2a3604c51ffc03c4d4fde208df47a60dd2f
-        size: 5257027
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.netbsd-amd64.tar.gz
-      - name: 389ds_exporter-0.1.2.netbsd-armv6.tar.gz
-        sha256: sha256:8fec994b594bfd1ba40b4f1ebaadd4c972958610eb2c216b728dce37503f557e
-        size: 4873607
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.netbsd-armv6.tar.gz
-      - name: 389ds_exporter-0.1.2.netbsd-armv7.tar.gz
-        sha256: sha256:8e574b16b2fe0e022087b7caf53e5b9bae252ffafaa1e90eca70956d0a19b2b8
-        size: 4870312
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.netbsd-armv7.tar.gz
-      - name: 389ds_exporter-0.1.2.openbsd-386.tar.gz
-        sha256: sha256:9d16fea302bb4e66f7d76742b510fa69fb31bd5df99f52c6339100dfbfb9e5ae
-        size: 5093423
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.openbsd-386.tar.gz
-      - name: 389ds_exporter-0.1.2.openbsd-amd64.tar.gz
-        sha256: sha256:b389baccececb20a7699dddc1049cd3470eb09ecf31215e746ca203c8280b0cb
-        size: 5260198
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.openbsd-amd64.tar.gz
-      - name: 389ds_exporter-0.1.2.openbsd-armv7.tar.gz
-        sha256: sha256:f1b4a25c9f99d0fd6f690581827614302d6985e8ed6a2d4aa7b394c840d94530
-        size: 4867110
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.openbsd-armv7.tar.gz
-      - name: 389ds_exporter-0.1.2.windows-386.tar.gz
-        sha256: sha256:71202b13dd8010a495c6ff2dee9c2c6888cbb038a5c4b49eace71208498b4c4c
-        size: 4944993
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.windows-386.tar.gz
-      - name: 389ds_exporter-0.1.2.windows-amd64.tar.gz
-        sha256: sha256:fa19371e9720b55788d029295f7d0e4b4eff999e72ef8310ad1fb4799465e6a0
-        size: 5120291
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.windows-amd64.tar.gz
-      - name: sha256sums.txt
-        sha256: sha256:9f035a721d0ac59be76a1e36d78e7f69ddc49d44c8b5f6a4a33614aa92c9d9d8
-        size: 3096
-        url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/sha256sums.txt
-    prerelease: false
-    published:
-      timestamp: 2018-11-08 07:36:39
-software_metadata:
-  prerelease: master
-  release: v0.1.2
-  updated: 2020-02-27 06:23:46.289624
+      timestamp: '2018-11-08T07:56:56'
+    files: []
+  releases:
+    - name: v0.1.2
+      commit: null
+      timestamp: '2018-11-08T07:36:39'
+      prerelease: false
+      files:
+        - name: 389ds_exporter-0.1.2.darwin-386.tar.gz
+          commit: null
+          size: 5164701
+          sha256: sha256:df641893f64e0712863038fe28dc207f13554b7d1e0b9fce1ec6c2263d77390c
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.darwin-386.tar.gz
+        - name: 389ds_exporter-0.1.2.darwin-amd64.tar.gz
+          commit: null
+          size: 5293593
+          sha256: sha256:92eb349e4cbadec0c3a7af440d7786208093c00cdf613a69c281853ba5ab01d0
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.darwin-amd64.tar.gz
+        - name: 389ds_exporter-0.1.2.dragonfly-amd64.tar.gz
+          commit: null
+          size: 5255974
+          sha256: sha256:54e54c69c76b8e2b51ff2ed9b77cf43e3ec09e9f27f410519f3c54a21b042d1c
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.dragonfly-amd64.tar.gz
+        - name: 389ds_exporter-0.1.2.freebsd-386.tar.gz
+          commit: null
+          size: 5108043
+          sha256: sha256:93d43014fd435c9abed5a8d9ff8b0d1f22ef0c15c2b60635b5aef16a23560ee3
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.freebsd-386.tar.gz
+        - name: 389ds_exporter-0.1.2.freebsd-amd64.tar.gz
+          commit: null
+          size: 5276251
+          sha256: sha256:85f3523917fc931d73acf4a57948d075169f8928058dce0610b05109d4eceadd
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.freebsd-amd64.tar.gz
+        - name: 389ds_exporter-0.1.2.freebsd-armv6.tar.gz
+          commit: null
+          size: 4884909
+          sha256: sha256:a96ef1a86a563ed943e6bfa08e63cace31dbc3298f7c3dc48bdd5be7d366b14b
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.freebsd-armv6.tar.gz
+        - name: 389ds_exporter-0.1.2.freebsd-armv7.tar.gz
+          commit: null
+          size: 4882088
+          sha256: sha256:6e3d0eda03576bce0347dcd4b5b925db56d85d05476c403015b15748552ee5b3
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.freebsd-armv7.tar.gz
+        - name: 389ds_exporter-0.1.2.linux-386.tar.gz
+          commit: null
+          size: 5118977
+          sha256: sha256:2a051cd4862ab72a4d244a5e0760ab91a6971066d1472f769f38d2c2cd99c72d
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-386.tar.gz
+        - name: 389ds_exporter-0.1.2.linux-amd64.tar.gz
+          commit: null
+          size: 5278263
+          sha256: sha256:a77cef96eab6f25d68ae3bb2b790aa8663dff240aadc8f0bbc65563500db417c
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-amd64.tar.gz
+        - name: 389ds_exporter-0.1.2.linux-arm64.tar.gz
+          commit: null
+          size: 4891976
+          sha256: sha256:127f6994284160056e17795838e5f3a0f18478d45a8485caea1a853d453d4c34
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-arm64.tar.gz
+        - name: 389ds_exporter-0.1.2.linux-armv5.tar.gz
+          commit: null
+          size: 4897979
+          sha256: sha256:70ae75f9703c10a9c0cfb8fecf57a9f8935631171aaa74f80dc6ee2b78cfbbbb
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-armv5.tar.gz
+        - name: 389ds_exporter-0.1.2.linux-armv6.tar.gz
+          commit: null
+          size: 4891744
+          sha256: sha256:b367bcc0283d9ec601da32cf7331026125ff97375915abc6f346c7048a865316
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-armv6.tar.gz
+        - name: 389ds_exporter-0.1.2.linux-armv7.tar.gz
+          commit: null
+          size: 4886339
+          sha256: sha256:8825a8ebd0caa6a0c121f2f8b2ce7bfa02fbc972925ab7bd4996d93c8f8059d0
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-armv7.tar.gz
+        - name: 389ds_exporter-0.1.2.linux-mips.tar.gz
+          commit: null
+          size: 4882988
+          sha256: sha256:bd773a53dcaeeccec47cbaee72c5b34c1bf238d6b36f49e87d8e0bb4d8636127
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-mips.tar.gz
+        - name: 389ds_exporter-0.1.2.linux-mips64.tar.gz
+          commit: null
+          size: 4977170
+          sha256: sha256:35344769f4409241c39532d19953cfa69ebbb9d7e24776391222d1ed2acc1aef
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-mips64.tar.gz
+        - name: 389ds_exporter-0.1.2.linux-mips64le.tar.gz
+          commit: null
+          size: 4825019
+          sha256: sha256:3ab403d59481a6438181cd407f434d6f8c1ba3e5968525b59750f27f3cd2b16b
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-mips64le.tar.gz
+        - name: 389ds_exporter-0.1.2.linux-mipsle.tar.gz
+          commit: null
+          size: 4774489
+          sha256: sha256:d8770c2d4cd5fc99924014ceb5b43ce62efec1d62f422256c201487591ab2619
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-mipsle.tar.gz
+        - name: 389ds_exporter-0.1.2.linux-ppc64.tar.gz
+          commit: null
+          size: 5030120
+          sha256: sha256:49aba3da25a3d2182df22ebc2d9ab5f90408b840a7421499d62c59cf689f5f50
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-ppc64.tar.gz
+        - name: 389ds_exporter-0.1.2.linux-ppc64le.tar.gz
+          commit: null
+          size: 4895276
+          sha256: sha256:bf677cfce249d93fcd433d01ae8148e057de4e4b6b152956f61c4894aa9f0e66
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-ppc64le.tar.gz
+        - name: 389ds_exporter-0.1.2.linux-s390x.tar.gz
+          commit: null
+          size: 5337780
+          sha256: sha256:81289ece292565c8e8739dec333d38c16a085235109e560428fd75c126b5a604
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.linux-s390x.tar.gz
+        - name: 389ds_exporter-0.1.2.netbsd-386.tar.gz
+          commit: null
+          size: 5091757
+          sha256: sha256:9080f4c4fa4ef715f633355443e55c4afb1a87bfae3f12a78a9dfa0f27875c64
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.netbsd-386.tar.gz
+        - name: 389ds_exporter-0.1.2.netbsd-amd64.tar.gz
+          commit: null
+          size: 5257027
+          sha256: sha256:f99847ad7c3e3c5211c4f29ae027d2a3604c51ffc03c4d4fde208df47a60dd2f
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.netbsd-amd64.tar.gz
+        - name: 389ds_exporter-0.1.2.netbsd-armv6.tar.gz
+          commit: null
+          size: 4873607
+          sha256: sha256:8fec994b594bfd1ba40b4f1ebaadd4c972958610eb2c216b728dce37503f557e
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.netbsd-armv6.tar.gz
+        - name: 389ds_exporter-0.1.2.netbsd-armv7.tar.gz
+          commit: null
+          size: 4870312
+          sha256: sha256:8e574b16b2fe0e022087b7caf53e5b9bae252ffafaa1e90eca70956d0a19b2b8
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.netbsd-armv7.tar.gz
+        - name: 389ds_exporter-0.1.2.openbsd-386.tar.gz
+          commit: null
+          size: 5093423
+          sha256: sha256:9d16fea302bb4e66f7d76742b510fa69fb31bd5df99f52c6339100dfbfb9e5ae
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.openbsd-386.tar.gz
+        - name: 389ds_exporter-0.1.2.openbsd-amd64.tar.gz
+          commit: null
+          size: 5260198
+          sha256: sha256:b389baccececb20a7699dddc1049cd3470eb09ecf31215e746ca203c8280b0cb
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.openbsd-amd64.tar.gz
+        - name: 389ds_exporter-0.1.2.openbsd-armv7.tar.gz
+          commit: null
+          size: 4867110
+          sha256: sha256:f1b4a25c9f99d0fd6f690581827614302d6985e8ed6a2d4aa7b394c840d94530
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.openbsd-armv7.tar.gz
+        - name: 389ds_exporter-0.1.2.windows-386.tar.gz
+          commit: null
+          size: 4944993
+          sha256: sha256:71202b13dd8010a495c6ff2dee9c2c6888cbb038a5c4b49eace71208498b4c4c
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.windows-386.tar.gz
+        - name: 389ds_exporter-0.1.2.windows-amd64.tar.gz
+          commit: null
+          size: 5120291
+          sha256: sha256:fa19371e9720b55788d029295f7d0e4b4eff999e72ef8310ad1fb4799465e6a0
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/389ds_exporter-0.1.2.windows-amd64.tar.gz
+        - name: sha256sums.txt
+          commit: null
+          size: 3096
+          sha256: sha256:9f035a721d0ac59be76a1e36d78e7f69ddc49d44c8b5f6a4a33614aa92c9d9d8
+          url: https://github.com/terrycain/389ds_exporter/releases/download/v0.1.2/sha256sums.txt
+    - name: v0.1.1
+      commit:
+        sha: 1ea42d11d158efc97de31f8a23f07bf5b344a6a6
+        timestamp: '2018-11-07T23:46:34'
+      timestamp: '2018-11-07T23:46:34'
+      prerelease: false
+      files: []
+    - name: v0.1.0
+      commit:
+        sha: 1c6ad18f185b9abd01b6bbc36ed51d05841c0264
+        timestamp: '2018-11-07T22:45:20'
+      timestamp: '2018-11-07T22:45:20'
+      prerelease: false
+      files: []

@@ -3,549 +3,587 @@ defaults:
   port: 9191
   tgroup: couchbase
 software:
-  0.1.0:
-    commit:
-      sha: d613e0798e4b94b0f5a43264981f588e222d6172
-    files:
-      - name: couchbase_exporter-0.1.0-darwin-amd64.tar.gz
-        sha256: sha256:1fce60120cdd9429e71d151cb221b957fe966c543ce6e9861b1ebb7e74659e2e
-        size: 2647059
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.1.0/couchbase_exporter-0.1.0-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.1.0-linux-amd64.tar.gz
-        sha256: sha256:cb8c5b3ec6c2bb774b3a2c222b00e7c8edb0d0cb00224399b1a1c77620f9dde4
-        size: 2497385
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.1.0/couchbase_exporter-0.1.0-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.1.0-linux-arm64.tar.gz
-        sha256: sha256:b37733d6e64de9b81491ee43e9bc29d8d3170240dc06d98917c316ca539ea076
-        size: 2306256
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.1.0/couchbase_exporter-0.1.0-linux-arm64.tar.gz
-      - name: couchbase_exporter-0.1.0-windows-amd64.tar.gz
-        sha256: sha256:8fe493e22f0c2872eca1b4b5d4273315aded172d50185d981809cb428000ef0c
-        size: 2480649
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.1.0/couchbase_exporter-0.1.0-windows-amd64.tar.gz
-      - name: couchbase_exporter_0.1.0_checksums.txt
-        sha256: sha256:432d6936341e7fc4262fa834270fe7aaea7d5bd4a19a1a611f98e29d65e10d68
-        size: 443
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.1.0/couchbase_exporter_0.1.0_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2018-08-05 19:49:05
-  0.2.0:
-    commit:
-      sha: 3566377caa4d47dd851a9d53f081ac757e165e3c
-    files:
-      - name: couchbase_exporter-0.2.0-darwin-amd64.tar.gz
-        sha256: sha256:ac1793f15511d3d6d415aa411e2708884dc12f1a9876edd4cc8562cd66887663
-        size: 2889163
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.0/couchbase_exporter-0.2.0-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.2.0-linux-amd64.tar.gz
-        sha256: sha256:6bc791da9ba0119022201ef08c13c16e4145199b8948892a1cb87533dc7951d1
-        size: 2732500
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.0/couchbase_exporter-0.2.0-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.2.0-linux-arm64.tar.gz
-        sha256: sha256:f893bfe0262337da8af10909425bcb11f88ed8c061c6a9d175ac86631fc3f0f6
-        size: 2529344
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.0/couchbase_exporter-0.2.0-linux-arm64.tar.gz
-      - name: couchbase_exporter-0.2.0-windows-amd64.tar.gz
-        sha256: sha256:3d3feab70a8fb53f71bdefeb4c59f3b470e25ffec1e7a43fd3000346a843eda6
-        size: 2715072
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.0/couchbase_exporter-0.2.0-windows-amd64.tar.gz
-      - name: couchbase_exporter_0.2.0_checksums.txt
-        sha256: sha256:478b05dc6460bcfb57445d4e8fb7f0b1a5db4022d534a9b1e0ddd38e13aa0810
-        size: 443
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.0/couchbase_exporter_0.2.0_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2018-09-13 21:32:47
-  0.2.1:
-    commit:
-      sha: 06ee94c688242cbe658514dd2388942704f759c1
-    files:
-      - name: couchbase_exporter-0.2.1-darwin-amd64.tar.gz
-        sha256: sha256:8561ecb942f1a5c9e6369ac1a56742d533931bbceaf64621448e6608792e30d9
-        size: 2725391
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.1/couchbase_exporter-0.2.1-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.2.1-linux-amd64.tar.gz
-        sha256: sha256:6d52c58427109a80ed4eb9615a964e659581fc07b3528981b5e51c25f9537c38
-        size: 2574668
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.1/couchbase_exporter-0.2.1-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.2.1-linux-arm64.tar.gz
-        sha256: sha256:64e10feb862ea147c843d8030ecebd098d84d1fbd93f6a9ca908ae78805e984e
-        size: 2385449
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.1/couchbase_exporter-0.2.1-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.2.1_checksums.txt
-        sha256: sha256:0fc0439c6d136cfe6e7d2b6d95ba6c1150da6b213935296d470d20aa39f90f01
-        size: 331
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.1/couchbase_exporter_0.2.1_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2018-10-26 20:29:55
-  0.3.0:
-    commit:
-      sha: 486839f1e3d8746d720f071e2040a11e4982a28c
-    files:
-      - name: couchbase_exporter-0.3.0-darwin-amd64.tar.gz
-        sha256: sha256:3531c9d9572a6f55b4ff8ece58a3b689c2a728a16ba7742cff467217a0742733
-        size: 2676840
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.3.0/couchbase_exporter-0.3.0-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.3.0-linux-amd64.tar.gz
-        sha256: sha256:35c832061df3c5e231551f481e4ebec624f610801cf34179db58d5bc1f872865
-        size: 2528329
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.3.0/couchbase_exporter-0.3.0-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.3.0-linux-arm64.tar.gz
-        sha256: sha256:58c7300a5cf91e05070706bb051e5b1b450e1635390a0e339d95ed50164ae4d1
-        size: 2333858
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.3.0/couchbase_exporter-0.3.0-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.3.0_checksums.txt
-        sha256: sha256:8dbd8c22bcab494629340859d04cacfdc92f5078396a508308965eba37c1dfc5
-        size: 331
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.3.0/couchbase_exporter_0.3.0_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2018-10-27 21:46:49
-  0.4.0:
-    commit:
-      sha: 25e48816e77bc3d4af57ed47e94d9f47ba2c16a0
-    files:
-      - name: couchbase_exporter-0.4.0-darwin-amd64.tar.gz
-        sha256: sha256:1172a1c6f58627c221dce0f2f87163d1306a635e3293ebfd47645bc309813779
-        size: 2771058
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.0/couchbase_exporter-0.4.0-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.4.0-linux-amd64.tar.gz
-        sha256: sha256:a96d4f591d7913135dea15e493b6000820b96fd04a5562ffdea3291ad8c74b93
-        size: 2619203
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.0/couchbase_exporter-0.4.0-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.4.0-linux-arm64.tar.gz
-        sha256: sha256:a15908f250acc1df23fc235f5a5c8f3591a57993d87b07d7a8b3a9bd97585302
-        size: 2419642
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.0/couchbase_exporter-0.4.0-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.4.0_checksums.txt
-        sha256: sha256:2ac10d5d2ffc3974bb5f8d6e56cfb589e33e568d7e2b55bf1791815647f5e31f
-        size: 331
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.0/couchbase_exporter_0.4.0_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2018-10-31 00:15:54
-  0.4.1:
-    commit:
-      sha: bccf1c0bb508d15c0b71d2e9636153277f73b10c
-    files:
-      - name: couchbase_exporter-0.4.1-darwin-amd64.tar.gz
-        sha256: sha256:79259485bd8d9aac12c1f4f8236c251d8b5e6c6479fc5091d5f54d6cbb2fa071
-        size: 2771058
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.1/couchbase_exporter-0.4.1-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.4.1-linux-amd64.tar.gz
-        sha256: sha256:df1b82b9625726e1aa40ca665c9dc4412a0fa2bfbd266de48cfe4a56f2a41dd5
-        size: 2619205
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.1/couchbase_exporter-0.4.1-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.4.1-linux-arm64.tar.gz
-        sha256: sha256:fb44b47f40149495586c832ee641468476412823895df311f6f35fd731510ff5
-        size: 2419650
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.1/couchbase_exporter-0.4.1-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.4.1_checksums.txt
-        sha256: sha256:8b05b695dacb3c67f3c828969cfac143c5b67fe46412a2109ad7418acf47aa11
-        size: 331
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.1/couchbase_exporter_0.4.1_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2018-10-31 00:27:15
-  0.4.2:
-    commit:
-      sha: 00a904febd3adff643b5c6f5d6c409a1e316b621
-    files:
-      - name: couchbase_exporter-0.4.2-darwin-amd64.tar.gz
-        sha256: sha256:2419fe818bcc4814aa65ddf811e09b9036e92f93da6b5a7aadb320b4e578c2a0
-        size: 2771171
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.2/couchbase_exporter-0.4.2-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.4.2-linux-amd64.tar.gz
-        sha256: sha256:b8487fb0ddd8aaaeb53b0fb339556d45e5fab7f0810f0b4185770d851b09a28d
-        size: 2618975
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.2/couchbase_exporter-0.4.2-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.4.2-linux-arm64.tar.gz
-        sha256: sha256:156cbcd6ef8d3eb6c3bd0e4ce911134498e465737bd4600be89a08ad4535b524
-        size: 2419555
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.2/couchbase_exporter-0.4.2-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.4.2_checksums.txt
-        sha256: sha256:2dcac4ac2c1570aad5d68461683a4612fd17573acb6e56c32115680ff6161f15
-        size: 331
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.2/couchbase_exporter_0.4.2_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2018-10-31 00:46:15
-  0.5.0:
-    commit:
-      sha: 896ac95b96bddd1065d8a23085c63969c61c8907
-    files:
-      - name: couchbase_exporter-0.5.0-darwin-amd64.tar.gz
-        sha256: sha256:4460bf66fd68c4b84b67d80804b628f78d86cf31d1f20402f9fe25ebc998dc8f
-        size: 2842065
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.0/couchbase_exporter-0.5.0-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.5.0-linux-amd64.tar.gz
-        sha256: sha256:38e6395ccb0e66f3b4c9e87b3622afa73fca8648f58602ba331fa06413c25b11
-        size: 2683365
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.0/couchbase_exporter-0.5.0-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.5.0-linux-arm64.tar.gz
-        sha256: sha256:45b6705d3a98fa6d049a0e18bee541133d0b780e9fe9a1b09d481d2486473f79
-        size: 2482414
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.0/couchbase_exporter-0.5.0-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.5.0_checksums.txt
-        sha256: sha256:423148a400addabdd82251c67e11f6ad11a56430ea8b0304519e895fc4fce628
-        size: 331
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.0/couchbase_exporter_0.5.0_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2018-11-02 10:53:47
-  0.5.1:
-    commit:
-      sha: 52a0ccfffd82b257352dda974da625994c1c2df5
-    files:
-      - name: couchbase_exporter-0.5.1-darwin-amd64.tar.gz
-        sha256: sha256:28e6f7ece837ad8127017021a611fbc6c80ab391961c3567420bb5e3a507c192
-        size: 2843903
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.1/couchbase_exporter-0.5.1-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.5.1-linux-amd64.tar.gz
-        sha256: sha256:62c9265bc3061a0d3c633f4e52e52cd7a40d8642ff19addfad3966e1df5d15ac
-        size: 2685282
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.1/couchbase_exporter-0.5.1-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.5.1-linux-arm64.tar.gz
-        sha256: sha256:4557dbf1036921c45d46c9392ecd1b91534081c9d9f996ddcafe18d09c5221b3
-        size: 2483461
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.1/couchbase_exporter-0.5.1-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.5.1_checksums.txt
-        sha256: sha256:189e8ed58efa9c8549cd0e99f8513b0423518e711a60e80fdd4955d057d7363c
-        size: 331
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.1/couchbase_exporter_0.5.1_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2018-11-22 23:14:15
-  0.5.2:
-    commit:
-      sha: 989c988ecd559cef0cd7fb42d46279065af05850
-    files:
-      - name: couchbase_exporter-0.5.2-darwin-amd64.tar.gz
-        sha256: sha256:295ccaade1b80a645d4f48dd4f76124f2af224475179f886f88eeab2ae915d1e
-        size: 2843839
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.2/couchbase_exporter-0.5.2-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.5.2-linux-amd64.tar.gz
-        sha256: sha256:693315e87fb6e9372affc0cc2f86f7df2aaca666fb935fd985b1f5f9f45df275
-        size: 2685197
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.2/couchbase_exporter-0.5.2-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.5.2-linux-arm64.tar.gz
-        sha256: sha256:b3cffacd3882a41cd2512da6ff570bbe746f016c2849486e578a6495e63e02df
-        size: 2483378
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.2/couchbase_exporter-0.5.2-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.5.2_checksums.txt
-        sha256: sha256:0136c9e0ebeaa544b1ad7d4cfddf9ad914e67dbd1a6cb9624517406c5fc282af
-        size: 331
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.2/couchbase_exporter_0.5.2_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2018-11-23 15:53:50
-  0.6.0:
-    commit:
-      sha: 8aed2025cc7136f2d0b606b9aa551f1e8f12b5a0
-    files:
-      - name: couchbase_exporter-0.6.0-darwin-amd64.tar.gz
-        sha256: sha256:10588e3703cdf90587a7d257b2d454902e712f4ee05354cd0553e0554256b619
-        size: 2842609
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.6.0/couchbase_exporter-0.6.0-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.6.0-linux-amd64.tar.gz
-        sha256: sha256:0698532ed75b846d887d15d2a023b82fe5146173f22ca7b6302bd887c0a616f2
-        size: 2683599
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.6.0/couchbase_exporter-0.6.0-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.6.0-linux-arm64.tar.gz
-        sha256: sha256:e6d2acc49537f376609945eaaf2e7a74cca657c64ef362e1a95865ecc7b8284a
-        size: 2481929
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.6.0/couchbase_exporter-0.6.0-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.6.0_checksums.txt
-        sha256: sha256:19c9458007af5b07815f0484ef3f424f779249a6ca2ebf9a21d5bb498707f272
-        size: 331
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.6.0/couchbase_exporter_0.6.0_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2018-12-09 22:55:14
-  0.7.0:
-    commit:
-      sha: 1eddb0d3a1e0b659427ffbccc6d80bce5780cdf9
-    files:
-      - name: couchbase_exporter-0.7.0-darwin-amd64.tar.gz
-        sha256: sha256:57dbe757b8d2b52aec2fea93cea50c5aceb2868d5efbe205dd6d4354faca9065
-        size: 2845935
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.7.0/couchbase_exporter-0.7.0-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.7.0-linux-amd64.tar.gz
-        sha256: sha256:b13ac02cdad97f5448f04aaad541b3076e0519ab39b43ec294762960979841f6
-        size: 2687871
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.7.0/couchbase_exporter-0.7.0-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.7.0-linux-arm64.tar.gz
-        sha256: sha256:5bd35852777b9c46557ccec84f4554061502c02d09a50865899872d13e7162e2
-        size: 2485297
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.7.0/couchbase_exporter-0.7.0-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.7.0_checksums.txt
-        sha256: sha256:371ec6fdea9975cfe052c714b2571981cdbc2213e1aedf604fffe44ec5395f5f
-        size: 331
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.7.0/couchbase_exporter_0.7.0_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2019-01-02 23:28:32
-  0.8.1:
-    commit:
-      sha: 7860afde272f0b097bcd4dceaae5785c3ce08ca7
-    files:
-      - name: couchbase_exporter-0.8.1-darwin-386.tar.gz
-        sha256: sha256:0c611ae4346505e3ad8c642a8a353a308aa9257ed54e6aa3a1ed305a8317a191
-        size: 3249964
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.8.1/couchbase_exporter-0.8.1-darwin-386.tar.gz
-      - name: couchbase_exporter-0.8.1-darwin-amd64.tar.gz
-        sha256: sha256:0fd2175f0f553e738a2e324f3aa3bb316195cc245da1667677d2e2d746f38cbd
-        size: 3387761
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.8.1/couchbase_exporter-0.8.1-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.8.1-linux-386.tar.gz
-        sha256: sha256:8d722aaf60c02f1299c73e0b4cfc2060a793bc31eb58d154a4495cc659d365a0
-        size: 3065837
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.8.1/couchbase_exporter-0.8.1-linux-386.tar.gz
-      - name: couchbase_exporter-0.8.1-linux-amd64.tar.gz
-        sha256: sha256:94330b84fd64c4ebb588e33b2b4fb423e834582a2ddd5c0c3b372a7003c5e9b5
-        size: 3218945
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.8.1/couchbase_exporter-0.8.1-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.8.1-linux-arm.tar.gz
-        sha256: sha256:6e5ef212c8310a05394f62296a4944f3926a8cbf9604b0bfdc0c3452becdecc4
-        size: 2998450
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.8.1/couchbase_exporter-0.8.1-linux-arm.tar.gz
-      - name: couchbase_exporter-0.8.1-linux-arm64.tar.gz
-        sha256: sha256:12e24306a36a41d4b92a1fe4384a8ad44aeb20d38d92ec55a21284c4d17b2cbe
-        size: 2922830
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.8.1/couchbase_exporter-0.8.1-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.8.1_checksums.txt
-        sha256: sha256:e355e7d6a5009683a7932dd06c77ed07f1649bd5049707ed093d6b0bf7cf5682
-        size: 656
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.8.1/couchbase_exporter_0.8.1_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2019-06-19 13:34:05
-  0.9.0:
-    commit:
-      sha: 0ce90e11670984b9125b28432ace3bf1d035403d
-    files:
-      - name: couchbase_exporter-0.9.0-darwin-386.tar.gz
-        sha256: sha256:db2c569de1dc7b3ad311860daa5186125d3a9c9566db82c6771344a6461fb725
-        size: 3601571
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.0/couchbase_exporter-0.9.0-darwin-386.tar.gz
-      - name: couchbase_exporter-0.9.0-darwin-amd64.tar.gz
-        sha256: sha256:14dfbd08d7cda4f23d9b007de5f499082eab50f5c562bbe1cd43e4459a56ef55
-        size: 3754165
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.0/couchbase_exporter-0.9.0-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.9.0-linux-386.tar.gz
-        sha256: sha256:5e0140c7b18630702e314765593e0479375184a196665122a7139e5f62a48195
-        size: 3395651
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.0/couchbase_exporter-0.9.0-linux-386.tar.gz
-      - name: couchbase_exporter-0.9.0-linux-amd64.tar.gz
-        sha256: sha256:1f03c40f0c750e0cd327edb336671f0f036e668179337e38da112ba9c91551bf
-        size: 3563102
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.0/couchbase_exporter-0.9.0-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.9.0-linux-arm.tar.gz
-        sha256: sha256:39fd0dd3fc971fe535f5335dfe712f46a69bede2fd788cfc4e3ef422521b35ea
-        size: 3338983
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.0/couchbase_exporter-0.9.0-linux-arm.tar.gz
-      - name: couchbase_exporter-0.9.0-linux-arm64.tar.gz
-        sha256: sha256:e9e6a9d6ee8a900376bf6c473c0dc24378512f54e0f5dd10f3328840209d81b9
-        size: 3264572
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.0/couchbase_exporter-0.9.0-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.9.0_checksums.txt
-        sha256: sha256:224c7b2380c42f122de9ddae9c54b063aa5cf98732d8dfb3696aef7493fb5d81
-        size: 656
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.0/couchbase_exporter_0.9.0_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2019-08-16 07:47:55
-  0.9.1:
-    commit:
-      sha: 6f8590d3e2cb3d3c0a07fbf26af6ff6f1aa62417
-    files:
-      - name: couchbase_exporter-0.9.1-darwin-386.tar.gz
-        sha256: sha256:f21c28a88f7eb15fd814e56c2428aac4b095ae6bbd6721fc3abd78a370166631
-        size: 3609924
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.1/couchbase_exporter-0.9.1-darwin-386.tar.gz
-      - name: couchbase_exporter-0.9.1-darwin-amd64.tar.gz
-        sha256: sha256:1a051cf9ce2a21c6c3a750b28833bc39ab766849f0eedff5cd7cb38b4cb91c50
-        size: 3763633
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.1/couchbase_exporter-0.9.1-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.9.1-linux-386.tar.gz
-        sha256: sha256:937dea59f83f8e2c714947fe288a3b9cf936b1ced6d6f80c6e7690ce3333e30b
-        size: 3403828
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.1/couchbase_exporter-0.9.1-linux-386.tar.gz
-      - name: couchbase_exporter-0.9.1-linux-amd64.tar.gz
-        sha256: sha256:c104a498c777132f66b48ffcf947e2798a9785b5e01e0014bbd2b8200cad8a46
-        size: 3571005
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.1/couchbase_exporter-0.9.1-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.9.1-linux-arm.tar.gz
-        sha256: sha256:6f39df0842ccf60bfa86f56be0329518559cd1ca3655305ea6eb3ab96416be66
-        size: 3345329
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.1/couchbase_exporter-0.9.1-linux-arm.tar.gz
-      - name: couchbase_exporter-0.9.1-linux-arm64.tar.gz
-        sha256: sha256:99f373a2af942a6e794aa188535679e81a8f29f60382d6b78d2a7fcf6419ca20
-        size: 3271360
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.1/couchbase_exporter-0.9.1-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.9.1_checksums.txt
-        sha256: sha256:773f0e2d9057853b0a78ef956e83c09c211f6adcef11a9af28dc164c390ddf7e
-        size: 656
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.1/couchbase_exporter_0.9.1_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2019-09-26 19:41:03
-  0.9.2:
-    commit:
-      sha: 6c415fa2d792155f708ebf3ca45ab56072c040a4
-    files: []
-    prerelease: false
-    published:
-      timestamp: 2019-09-26 20:02:54
-  0.9.3:
-    commit:
-      sha: 9ce1e206bc1d6e2f12461f5bf4b40822451765d6
-    files:
-      - name: couchbase_exporter-0.9.3-darwin-386.tar.gz
-        sha256: sha256:dc415550da6578f8a60079395685042d7366e1dfd959132ff3f4f85d1a3b10d1
-        size: 3628231
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.3/couchbase_exporter-0.9.3-darwin-386.tar.gz
-      - name: couchbase_exporter-0.9.3-darwin-amd64.tar.gz
-        sha256: sha256:04857dc5812859fe127238429051dcf167d0c9baaf20ea922b82788a50ec7c2e
-        size: 3776919
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.3/couchbase_exporter-0.9.3-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.9.3-linux-386.tar.gz
-        sha256: sha256:d9312a99ac4e043e3f21c8c76ac4cb327102f8c8debb433935c857fda5e778ca
-        size: 3418615
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.3/couchbase_exporter-0.9.3-linux-386.tar.gz
-      - name: couchbase_exporter-0.9.3-linux-amd64.tar.gz
-        sha256: sha256:52d15955650bf91dd4fcad416ee7ad6eda43828153fdf5ec8ed0f44503e27458
-        size: 3561401
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.3/couchbase_exporter-0.9.3-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.9.3-linux-arm.tar.gz
-        sha256: sha256:d3e5da1446d114455d5af62d90f51a4de23c0d3acd82f208e50b52c1d496fca4
-        size: 3358706
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.3/couchbase_exporter-0.9.3-linux-arm.tar.gz
-      - name: couchbase_exporter-0.9.3-linux-arm64.tar.gz
-        sha256: sha256:bb90a020bf77ef5d7a01cb6b34be7327f602fb9bcdc343615d131ea98fb98062
-        size: 3283878
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.3/couchbase_exporter-0.9.3-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.9.3_checksums.txt
-        sha256: sha256:0ad627b7eab39b61929be0b126ebef0fc84b4402cb20b137bb6dc3618b285cc0
-        size: 656
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.3/couchbase_exporter_0.9.3_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2019-11-21 16:50:57
-  0.9.4:
-    commit:
-      sha: e1f16108b32c3da0492d8283b5fa63de3ec103af
-    files:
-      - name: couchbase_exporter-0.9.4-darwin-386.tar.gz
-        sha256: sha256:04c1793a304d758dcf0e2d1413ed3ef94ae42b4367259a850317c30ad0d37187
-        size: 3627866
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.4/couchbase_exporter-0.9.4-darwin-386.tar.gz
-      - name: couchbase_exporter-0.9.4-darwin-amd64.tar.gz
-        sha256: sha256:9c6190ac9152eebb791bc5379f5d519622dff51b59e92b480af42bf35d6bcbc2
-        size: 3777123
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.4/couchbase_exporter-0.9.4-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.9.4-linux-386.tar.gz
-        sha256: sha256:6a18c154d9726d378000ac5ec66e56e646331c4daabe20b4212012f4e16f0f6a
-        size: 3419080
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.4/couchbase_exporter-0.9.4-linux-386.tar.gz
-      - name: couchbase_exporter-0.9.4-linux-amd64.tar.gz
-        sha256: sha256:16565ebd0e1df41d30dc62fd76c7936ab86e70e3e64b2fc9115fb870d3e5f33b
-        size: 3561408
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.4/couchbase_exporter-0.9.4-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.9.4-linux-arm.tar.gz
-        sha256: sha256:81cba66b9b2a664714a69cdca3ea37a902dfe59b4e525cc9f9bbfaba181619dd
-        size: 3358925
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.4/couchbase_exporter-0.9.4-linux-arm.tar.gz
-      - name: couchbase_exporter-0.9.4-linux-arm64.tar.gz
-        sha256: sha256:43c6436a9537961d21cd12896a5623c47a8c0d4a668e40989c4df0dc101d3284
-        size: 3283712
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.4/couchbase_exporter-0.9.4-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.9.4_checksums.txt
-        sha256: sha256:1fc64fc143a0f8a0250abb133ccfaf343607861115c3a3e20766ed6ce24c59cc
-        size: 656
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.4/couchbase_exporter_0.9.4_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2019-11-21 19:50:56
-  0.9.5:
-    commit:
-      sha: f97af4580a6da9386f967982005bfd6d518d152e
-    files:
-      - name: couchbase_exporter-0.9.5-darwin-386.tar.gz
-        sha256: sha256:d961c675b46ce4c6cb410e43daf5a7a8c4836654e6c0c0dad13bd5ec3aa7ffc8
-        size: 3627881
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.5/couchbase_exporter-0.9.5-darwin-386.tar.gz
-      - name: couchbase_exporter-0.9.5-darwin-amd64.tar.gz
-        sha256: sha256:03ed98f2ff927d894594ac223053ac6d7b796e0cd740e46db96e415311e7c310
-        size: 3777146
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.5/couchbase_exporter-0.9.5-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.9.5-linux-386.tar.gz
-        sha256: sha256:7a92f63d4e663c8972ae12d0f8a3db4be1d4fd766d2b78166b229135c7c0f321
-        size: 3419075
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.5/couchbase_exporter-0.9.5-linux-386.tar.gz
-      - name: couchbase_exporter-0.9.5-linux-amd64.tar.gz
-        sha256: sha256:64ffb9913f98380f1c4d2025d63ddb6081a6bccc1371c36d48dd9c06e41adb86
-        size: 3561452
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.5/couchbase_exporter-0.9.5-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.9.5-linux-arm.tar.gz
-        sha256: sha256:34f0c55627f68d87e5733d87592266bf463f03bdbb66a9e04fe319f7d6e5d59b
-        size: 3358902
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.5/couchbase_exporter-0.9.5-linux-arm.tar.gz
-      - name: couchbase_exporter-0.9.5-linux-arm64.tar.gz
-        sha256: sha256:af968c06e60124b3ecab31a80f9f3c22c8ab06a3f45ef4be89709401d9d33334
-        size: 3283711
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.5/couchbase_exporter-0.9.5-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.9.5_checksums.txt
-        sha256: sha256:f026da5c53f3877a6705c9675986deb8c42d57ccbc6941e7957b46f6e0b107bc
-        size: 656
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.5/couchbase_exporter_0.9.5_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2019-11-21 22:04:24
-  0.9.6:
-    commit:
-      sha: 3e8eee86211d0a46249fe259cfed03faa811ae75
-    files:
-      - name: couchbase_exporter-0.9.6-darwin-386.tar.gz
-        sha256: sha256:1beceb03be2f30809eedebbea86b5e205aa6c11ceab3defd007cf990b1cd3b2a
-        size: 3637012
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.6/couchbase_exporter-0.9.6-darwin-386.tar.gz
-      - name: couchbase_exporter-0.9.6-darwin-amd64.tar.gz
-        sha256: sha256:92ffce7cdb5c13239ac640fce7f8157a16e6330ea6cac319230e4bf98e66d9ae
-        size: 3785607
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.6/couchbase_exporter-0.9.6-darwin-amd64.tar.gz
-      - name: couchbase_exporter-0.9.6-linux-386.tar.gz
-        sha256: sha256:5f5408f38e8549b2636d38951e214799977c3d9047e778a976423b27221cc95d
-        size: 3429195
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.6/couchbase_exporter-0.9.6-linux-386.tar.gz
-      - name: couchbase_exporter-0.9.6-linux-amd64.tar.gz
-        sha256: sha256:cd1a34fe49d5841e6f2eea2ac3d2d68c8684c16ab979a0448d36e9c70e0c8d2c
-        size: 3575807
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.6/couchbase_exporter-0.9.6-linux-amd64.tar.gz
-      - name: couchbase_exporter-0.9.6-linux-arm.tar.gz
-        sha256: sha256:21745786ac84906877116e728ae5a2ba01f896f915c059681481a0405acaa22e
-        size: 3372733
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.6/couchbase_exporter-0.9.6-linux-arm.tar.gz
-      - name: couchbase_exporter-0.9.6-linux-arm64.tar.gz
-        sha256: sha256:9a74cb756dfeeeda39fc7e458ed22156773d545435a2c132ee741500fe0eb1ca
-        size: 3296243
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.6/couchbase_exporter-0.9.6-linux-arm64.tar.gz
-      - name: couchbase_exporter_0.9.6_checksums.txt
-        sha256: sha256:cdc3c67e7aaf0a70bd5b5308d6c352414f8e50b60932ccd38b8fb2b1c500146e
-        size: 656
-        url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.6/couchbase_exporter_0.9.6_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2019-12-18 13:06:17
+  name: blakelead/couchbase_exporter
+  release: 0.9.6
+  prerelease: null
+  url: https://github.com/blakelead/couchbase_exporter
+  source: https://github.com/blakelead/couchbase_exporter.git
+  updated: '2020-03-06T05:52:43.062964'
   master:
     commit:
       sha: b4454dcab9c2125fb593eb05a266d0a8d897d76f
-    prerelease: true
-    published:
-      timestamp: 2020-02-24 11:39:46
-software_metadata:
-  prerelease: master
-  release: 0.9.6
-  updated: 2020-02-27 05:50:12.184469
+      timestamp: '2020-02-24T11:39:46'
+    files: []
+  releases:
+    - name: 0.9.6
+      commit: null
+      timestamp: '2019-12-18T13:47:22'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.9.6-darwin-386.tar.gz
+          commit: null
+          size: 3637012
+          sha256: sha256:1beceb03be2f30809eedebbea86b5e205aa6c11ceab3defd007cf990b1cd3b2a
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.6/couchbase_exporter-0.9.6-darwin-386.tar.gz
+        - name: couchbase_exporter-0.9.6-darwin-amd64.tar.gz
+          commit: null
+          size: 3785607
+          sha256: sha256:92ffce7cdb5c13239ac640fce7f8157a16e6330ea6cac319230e4bf98e66d9ae
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.6/couchbase_exporter-0.9.6-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.9.6-linux-386.tar.gz
+          commit: null
+          size: 3429195
+          sha256: sha256:5f5408f38e8549b2636d38951e214799977c3d9047e778a976423b27221cc95d
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.6/couchbase_exporter-0.9.6-linux-386.tar.gz
+        - name: couchbase_exporter-0.9.6-linux-amd64.tar.gz
+          commit: null
+          size: 3575807
+          sha256: sha256:cd1a34fe49d5841e6f2eea2ac3d2d68c8684c16ab979a0448d36e9c70e0c8d2c
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.6/couchbase_exporter-0.9.6-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.9.6-linux-arm.tar.gz
+          commit: null
+          size: 3372733
+          sha256: sha256:21745786ac84906877116e728ae5a2ba01f896f915c059681481a0405acaa22e
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.6/couchbase_exporter-0.9.6-linux-arm.tar.gz
+        - name: couchbase_exporter-0.9.6-linux-arm64.tar.gz
+          commit: null
+          size: 3296243
+          sha256: sha256:9a74cb756dfeeeda39fc7e458ed22156773d545435a2c132ee741500fe0eb1ca
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.6/couchbase_exporter-0.9.6-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.9.6_checksums.txt
+          commit: null
+          size: 656
+          sha256: sha256:cdc3c67e7aaf0a70bd5b5308d6c352414f8e50b60932ccd38b8fb2b1c500146e
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.6/couchbase_exporter_0.9.6_checksums.txt
+    - name: 0.9.5
+      commit: null
+      timestamp: '2019-11-21T22:08:01'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.9.5-darwin-386.tar.gz
+          commit: null
+          size: 3627881
+          sha256: sha256:d961c675b46ce4c6cb410e43daf5a7a8c4836654e6c0c0dad13bd5ec3aa7ffc8
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.5/couchbase_exporter-0.9.5-darwin-386.tar.gz
+        - name: couchbase_exporter-0.9.5-darwin-amd64.tar.gz
+          commit: null
+          size: 3777146
+          sha256: sha256:03ed98f2ff927d894594ac223053ac6d7b796e0cd740e46db96e415311e7c310
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.5/couchbase_exporter-0.9.5-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.9.5-linux-386.tar.gz
+          commit: null
+          size: 3419075
+          sha256: sha256:7a92f63d4e663c8972ae12d0f8a3db4be1d4fd766d2b78166b229135c7c0f321
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.5/couchbase_exporter-0.9.5-linux-386.tar.gz
+        - name: couchbase_exporter-0.9.5-linux-amd64.tar.gz
+          commit: null
+          size: 3561452
+          sha256: sha256:64ffb9913f98380f1c4d2025d63ddb6081a6bccc1371c36d48dd9c06e41adb86
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.5/couchbase_exporter-0.9.5-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.9.5-linux-arm.tar.gz
+          commit: null
+          size: 3358902
+          sha256: sha256:34f0c55627f68d87e5733d87592266bf463f03bdbb66a9e04fe319f7d6e5d59b
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.5/couchbase_exporter-0.9.5-linux-arm.tar.gz
+        - name: couchbase_exporter-0.9.5-linux-arm64.tar.gz
+          commit: null
+          size: 3283711
+          sha256: sha256:af968c06e60124b3ecab31a80f9f3c22c8ab06a3f45ef4be89709401d9d33334
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.5/couchbase_exporter-0.9.5-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.9.5_checksums.txt
+          commit: null
+          size: 656
+          sha256: sha256:f026da5c53f3877a6705c9675986deb8c42d57ccbc6941e7957b46f6e0b107bc
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.5/couchbase_exporter_0.9.5_checksums.txt
+    - name: 0.9.4
+      commit: null
+      timestamp: '2019-11-21T22:03:23'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.9.4-darwin-386.tar.gz
+          commit: null
+          size: 3627866
+          sha256: sha256:04c1793a304d758dcf0e2d1413ed3ef94ae42b4367259a850317c30ad0d37187
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.4/couchbase_exporter-0.9.4-darwin-386.tar.gz
+        - name: couchbase_exporter-0.9.4-darwin-amd64.tar.gz
+          commit: null
+          size: 3777123
+          sha256: sha256:9c6190ac9152eebb791bc5379f5d519622dff51b59e92b480af42bf35d6bcbc2
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.4/couchbase_exporter-0.9.4-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.9.4-linux-386.tar.gz
+          commit: null
+          size: 3419080
+          sha256: sha256:6a18c154d9726d378000ac5ec66e56e646331c4daabe20b4212012f4e16f0f6a
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.4/couchbase_exporter-0.9.4-linux-386.tar.gz
+        - name: couchbase_exporter-0.9.4-linux-amd64.tar.gz
+          commit: null
+          size: 3561408
+          sha256: sha256:16565ebd0e1df41d30dc62fd76c7936ab86e70e3e64b2fc9115fb870d3e5f33b
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.4/couchbase_exporter-0.9.4-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.9.4-linux-arm.tar.gz
+          commit: null
+          size: 3358925
+          sha256: sha256:81cba66b9b2a664714a69cdca3ea37a902dfe59b4e525cc9f9bbfaba181619dd
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.4/couchbase_exporter-0.9.4-linux-arm.tar.gz
+        - name: couchbase_exporter-0.9.4-linux-arm64.tar.gz
+          commit: null
+          size: 3283712
+          sha256: sha256:43c6436a9537961d21cd12896a5623c47a8c0d4a668e40989c4df0dc101d3284
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.4/couchbase_exporter-0.9.4-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.9.4_checksums.txt
+          commit: null
+          size: 656
+          sha256: sha256:1fc64fc143a0f8a0250abb133ccfaf343607861115c3a3e20766ed6ce24c59cc
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.4/couchbase_exporter_0.9.4_checksums.txt
+    - name: 0.9.3
+      commit: null
+      timestamp: '2019-11-21T16:52:17'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.9.3-darwin-386.tar.gz
+          commit: null
+          size: 3628231
+          sha256: sha256:dc415550da6578f8a60079395685042d7366e1dfd959132ff3f4f85d1a3b10d1
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.3/couchbase_exporter-0.9.3-darwin-386.tar.gz
+        - name: couchbase_exporter-0.9.3-darwin-amd64.tar.gz
+          commit: null
+          size: 3776919
+          sha256: sha256:04857dc5812859fe127238429051dcf167d0c9baaf20ea922b82788a50ec7c2e
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.3/couchbase_exporter-0.9.3-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.9.3-linux-386.tar.gz
+          commit: null
+          size: 3418615
+          sha256: sha256:d9312a99ac4e043e3f21c8c76ac4cb327102f8c8debb433935c857fda5e778ca
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.3/couchbase_exporter-0.9.3-linux-386.tar.gz
+        - name: couchbase_exporter-0.9.3-linux-amd64.tar.gz
+          commit: null
+          size: 3561401
+          sha256: sha256:52d15955650bf91dd4fcad416ee7ad6eda43828153fdf5ec8ed0f44503e27458
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.3/couchbase_exporter-0.9.3-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.9.3-linux-arm.tar.gz
+          commit: null
+          size: 3358706
+          sha256: sha256:d3e5da1446d114455d5af62d90f51a4de23c0d3acd82f208e50b52c1d496fca4
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.3/couchbase_exporter-0.9.3-linux-arm.tar.gz
+        - name: couchbase_exporter-0.9.3-linux-arm64.tar.gz
+          commit: null
+          size: 3283878
+          sha256: sha256:bb90a020bf77ef5d7a01cb6b34be7327f602fb9bcdc343615d131ea98fb98062
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.3/couchbase_exporter-0.9.3-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.9.3_checksums.txt
+          commit: null
+          size: 656
+          sha256: sha256:0ad627b7eab39b61929be0b126ebef0fc84b4402cb20b137bb6dc3618b285cc0
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.3/couchbase_exporter_0.9.3_checksums.txt
+    - name: 0.9.2
+      commit: null
+      timestamp: '2019-09-26T20:02:54'
+      prerelease: false
+      files: []
+    - name: 0.9.1
+      commit: null
+      timestamp: '2019-09-26T19:50:53'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.9.1-darwin-386.tar.gz
+          commit: null
+          size: 3609924
+          sha256: sha256:f21c28a88f7eb15fd814e56c2428aac4b095ae6bbd6721fc3abd78a370166631
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.1/couchbase_exporter-0.9.1-darwin-386.tar.gz
+        - name: couchbase_exporter-0.9.1-darwin-amd64.tar.gz
+          commit: null
+          size: 3763633
+          sha256: sha256:1a051cf9ce2a21c6c3a750b28833bc39ab766849f0eedff5cd7cb38b4cb91c50
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.1/couchbase_exporter-0.9.1-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.9.1-linux-386.tar.gz
+          commit: null
+          size: 3403828
+          sha256: sha256:937dea59f83f8e2c714947fe288a3b9cf936b1ced6d6f80c6e7690ce3333e30b
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.1/couchbase_exporter-0.9.1-linux-386.tar.gz
+        - name: couchbase_exporter-0.9.1-linux-amd64.tar.gz
+          commit: null
+          size: 3571005
+          sha256: sha256:c104a498c777132f66b48ffcf947e2798a9785b5e01e0014bbd2b8200cad8a46
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.1/couchbase_exporter-0.9.1-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.9.1-linux-arm.tar.gz
+          commit: null
+          size: 3345329
+          sha256: sha256:6f39df0842ccf60bfa86f56be0329518559cd1ca3655305ea6eb3ab96416be66
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.1/couchbase_exporter-0.9.1-linux-arm.tar.gz
+        - name: couchbase_exporter-0.9.1-linux-arm64.tar.gz
+          commit: null
+          size: 3271360
+          sha256: sha256:99f373a2af942a6e794aa188535679e81a8f29f60382d6b78d2a7fcf6419ca20
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.1/couchbase_exporter-0.9.1-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.9.1_checksums.txt
+          commit: null
+          size: 656
+          sha256: sha256:773f0e2d9057853b0a78ef956e83c09c211f6adcef11a9af28dc164c390ddf7e
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.1/couchbase_exporter_0.9.1_checksums.txt
+    - name: 0.9.0
+      commit: null
+      timestamp: '2019-08-16T07:54:42'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.9.0-darwin-386.tar.gz
+          commit: null
+          size: 3601571
+          sha256: sha256:db2c569de1dc7b3ad311860daa5186125d3a9c9566db82c6771344a6461fb725
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.0/couchbase_exporter-0.9.0-darwin-386.tar.gz
+        - name: couchbase_exporter-0.9.0-darwin-amd64.tar.gz
+          commit: null
+          size: 3754165
+          sha256: sha256:14dfbd08d7cda4f23d9b007de5f499082eab50f5c562bbe1cd43e4459a56ef55
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.0/couchbase_exporter-0.9.0-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.9.0-linux-386.tar.gz
+          commit: null
+          size: 3395651
+          sha256: sha256:5e0140c7b18630702e314765593e0479375184a196665122a7139e5f62a48195
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.0/couchbase_exporter-0.9.0-linux-386.tar.gz
+        - name: couchbase_exporter-0.9.0-linux-amd64.tar.gz
+          commit: null
+          size: 3563102
+          sha256: sha256:1f03c40f0c750e0cd327edb336671f0f036e668179337e38da112ba9c91551bf
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.0/couchbase_exporter-0.9.0-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.9.0-linux-arm.tar.gz
+          commit: null
+          size: 3338983
+          sha256: sha256:39fd0dd3fc971fe535f5335dfe712f46a69bede2fd788cfc4e3ef422521b35ea
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.0/couchbase_exporter-0.9.0-linux-arm.tar.gz
+        - name: couchbase_exporter-0.9.0-linux-arm64.tar.gz
+          commit: null
+          size: 3264572
+          sha256: sha256:e9e6a9d6ee8a900376bf6c473c0dc24378512f54e0f5dd10f3328840209d81b9
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.0/couchbase_exporter-0.9.0-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.9.0_checksums.txt
+          commit: null
+          size: 656
+          sha256: sha256:224c7b2380c42f122de9ddae9c54b063aa5cf98732d8dfb3696aef7493fb5d81
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.9.0/couchbase_exporter_0.9.0_checksums.txt
+    - name: 0.8.1
+      commit: null
+      timestamp: '2019-06-19T14:09:28'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.8.1-darwin-386.tar.gz
+          commit: null
+          size: 3249964
+          sha256: sha256:0c611ae4346505e3ad8c642a8a353a308aa9257ed54e6aa3a1ed305a8317a191
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.8.1/couchbase_exporter-0.8.1-darwin-386.tar.gz
+        - name: couchbase_exporter-0.8.1-darwin-amd64.tar.gz
+          commit: null
+          size: 3387761
+          sha256: sha256:0fd2175f0f553e738a2e324f3aa3bb316195cc245da1667677d2e2d746f38cbd
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.8.1/couchbase_exporter-0.8.1-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.8.1-linux-386.tar.gz
+          commit: null
+          size: 3065837
+          sha256: sha256:8d722aaf60c02f1299c73e0b4cfc2060a793bc31eb58d154a4495cc659d365a0
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.8.1/couchbase_exporter-0.8.1-linux-386.tar.gz
+        - name: couchbase_exporter-0.8.1-linux-amd64.tar.gz
+          commit: null
+          size: 3218945
+          sha256: sha256:94330b84fd64c4ebb588e33b2b4fb423e834582a2ddd5c0c3b372a7003c5e9b5
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.8.1/couchbase_exporter-0.8.1-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.8.1-linux-arm.tar.gz
+          commit: null
+          size: 2998450
+          sha256: sha256:6e5ef212c8310a05394f62296a4944f3926a8cbf9604b0bfdc0c3452becdecc4
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.8.1/couchbase_exporter-0.8.1-linux-arm.tar.gz
+        - name: couchbase_exporter-0.8.1-linux-arm64.tar.gz
+          commit: null
+          size: 2922830
+          sha256: sha256:12e24306a36a41d4b92a1fe4384a8ad44aeb20d38d92ec55a21284c4d17b2cbe
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.8.1/couchbase_exporter-0.8.1-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.8.1_checksums.txt
+          commit: null
+          size: 656
+          sha256: sha256:e355e7d6a5009683a7932dd06c77ed07f1649bd5049707ed093d6b0bf7cf5682
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.8.1/couchbase_exporter_0.8.1_checksums.txt
+    - name: 0.8.0
+      commit:
+        sha: dc65a5f9eb189cd85ce13a4ffe178e78b8fd1d5e
+        timestamp: '2019-06-19T13:05:39'
+      timestamp: '2019-06-19T13:05:39'
+      prerelease: false
+      files: []
+    - name: 0.7.0
+      commit: null
+      timestamp: '2019-01-02T23:42:48'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.7.0-darwin-amd64.tar.gz
+          commit: null
+          size: 2845935
+          sha256: sha256:57dbe757b8d2b52aec2fea93cea50c5aceb2868d5efbe205dd6d4354faca9065
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.7.0/couchbase_exporter-0.7.0-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.7.0-linux-amd64.tar.gz
+          commit: null
+          size: 2687871
+          sha256: sha256:b13ac02cdad97f5448f04aaad541b3076e0519ab39b43ec294762960979841f6
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.7.0/couchbase_exporter-0.7.0-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.7.0-linux-arm64.tar.gz
+          commit: null
+          size: 2485297
+          sha256: sha256:5bd35852777b9c46557ccec84f4554061502c02d09a50865899872d13e7162e2
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.7.0/couchbase_exporter-0.7.0-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.7.0_checksums.txt
+          commit: null
+          size: 331
+          sha256: sha256:371ec6fdea9975cfe052c714b2571981cdbc2213e1aedf604fffe44ec5395f5f
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.7.0/couchbase_exporter_0.7.0_checksums.txt
+    - name: 0.6.0
+      commit: null
+      timestamp: '2018-12-09T22:55:14'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.6.0-darwin-amd64.tar.gz
+          commit: null
+          size: 2842609
+          sha256: sha256:10588e3703cdf90587a7d257b2d454902e712f4ee05354cd0553e0554256b619
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.6.0/couchbase_exporter-0.6.0-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.6.0-linux-amd64.tar.gz
+          commit: null
+          size: 2683599
+          sha256: sha256:0698532ed75b846d887d15d2a023b82fe5146173f22ca7b6302bd887c0a616f2
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.6.0/couchbase_exporter-0.6.0-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.6.0-linux-arm64.tar.gz
+          commit: null
+          size: 2481929
+          sha256: sha256:e6d2acc49537f376609945eaaf2e7a74cca657c64ef362e1a95865ecc7b8284a
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.6.0/couchbase_exporter-0.6.0-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.6.0_checksums.txt
+          commit: null
+          size: 331
+          sha256: sha256:19c9458007af5b07815f0484ef3f424f779249a6ca2ebf9a21d5bb498707f272
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.6.0/couchbase_exporter_0.6.0_checksums.txt
+    - name: 0.5.2
+      commit: null
+      timestamp: '2018-11-23T15:53:50'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.5.2-darwin-amd64.tar.gz
+          commit: null
+          size: 2843839
+          sha256: sha256:295ccaade1b80a645d4f48dd4f76124f2af224475179f886f88eeab2ae915d1e
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.2/couchbase_exporter-0.5.2-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.5.2-linux-amd64.tar.gz
+          commit: null
+          size: 2685197
+          sha256: sha256:693315e87fb6e9372affc0cc2f86f7df2aaca666fb935fd985b1f5f9f45df275
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.2/couchbase_exporter-0.5.2-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.5.2-linux-arm64.tar.gz
+          commit: null
+          size: 2483378
+          sha256: sha256:b3cffacd3882a41cd2512da6ff570bbe746f016c2849486e578a6495e63e02df
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.2/couchbase_exporter-0.5.2-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.5.2_checksums.txt
+          commit: null
+          size: 331
+          sha256: sha256:0136c9e0ebeaa544b1ad7d4cfddf9ad914e67dbd1a6cb9624517406c5fc282af
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.2/couchbase_exporter_0.5.2_checksums.txt
+    - name: 0.5.1
+      commit: null
+      timestamp: '2018-11-22T23:14:15'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.5.1-darwin-amd64.tar.gz
+          commit: null
+          size: 2843903
+          sha256: sha256:28e6f7ece837ad8127017021a611fbc6c80ab391961c3567420bb5e3a507c192
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.1/couchbase_exporter-0.5.1-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.5.1-linux-amd64.tar.gz
+          commit: null
+          size: 2685282
+          sha256: sha256:62c9265bc3061a0d3c633f4e52e52cd7a40d8642ff19addfad3966e1df5d15ac
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.1/couchbase_exporter-0.5.1-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.5.1-linux-arm64.tar.gz
+          commit: null
+          size: 2483461
+          sha256: sha256:4557dbf1036921c45d46c9392ecd1b91534081c9d9f996ddcafe18d09c5221b3
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.1/couchbase_exporter-0.5.1-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.5.1_checksums.txt
+          commit: null
+          size: 331
+          sha256: sha256:189e8ed58efa9c8549cd0e99f8513b0423518e711a60e80fdd4955d057d7363c
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.1/couchbase_exporter_0.5.1_checksums.txt
+    - name: 0.5.0
+      commit: null
+      timestamp: '2018-11-02T10:53:47'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.5.0-darwin-amd64.tar.gz
+          commit: null
+          size: 2842065
+          sha256: sha256:4460bf66fd68c4b84b67d80804b628f78d86cf31d1f20402f9fe25ebc998dc8f
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.0/couchbase_exporter-0.5.0-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.5.0-linux-amd64.tar.gz
+          commit: null
+          size: 2683365
+          sha256: sha256:38e6395ccb0e66f3b4c9e87b3622afa73fca8648f58602ba331fa06413c25b11
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.0/couchbase_exporter-0.5.0-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.5.0-linux-arm64.tar.gz
+          commit: null
+          size: 2482414
+          sha256: sha256:45b6705d3a98fa6d049a0e18bee541133d0b780e9fe9a1b09d481d2486473f79
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.0/couchbase_exporter-0.5.0-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.5.0_checksums.txt
+          commit: null
+          size: 331
+          sha256: sha256:423148a400addabdd82251c67e11f6ad11a56430ea8b0304519e895fc4fce628
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.5.0/couchbase_exporter_0.5.0_checksums.txt
+    - name: 0.4.2
+      commit: null
+      timestamp: '2018-10-31T00:46:15'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.4.2-darwin-amd64.tar.gz
+          commit: null
+          size: 2771171
+          sha256: sha256:2419fe818bcc4814aa65ddf811e09b9036e92f93da6b5a7aadb320b4e578c2a0
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.2/couchbase_exporter-0.4.2-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.4.2-linux-amd64.tar.gz
+          commit: null
+          size: 2618975
+          sha256: sha256:b8487fb0ddd8aaaeb53b0fb339556d45e5fab7f0810f0b4185770d851b09a28d
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.2/couchbase_exporter-0.4.2-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.4.2-linux-arm64.tar.gz
+          commit: null
+          size: 2419555
+          sha256: sha256:156cbcd6ef8d3eb6c3bd0e4ce911134498e465737bd4600be89a08ad4535b524
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.2/couchbase_exporter-0.4.2-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.4.2_checksums.txt
+          commit: null
+          size: 331
+          sha256: sha256:2dcac4ac2c1570aad5d68461683a4612fd17573acb6e56c32115680ff6161f15
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.2/couchbase_exporter_0.4.2_checksums.txt
+    - name: 0.4.1
+      commit: null
+      timestamp: '2018-10-31T00:27:15'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.4.1-darwin-amd64.tar.gz
+          commit: null
+          size: 2771058
+          sha256: sha256:79259485bd8d9aac12c1f4f8236c251d8b5e6c6479fc5091d5f54d6cbb2fa071
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.1/couchbase_exporter-0.4.1-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.4.1-linux-amd64.tar.gz
+          commit: null
+          size: 2619205
+          sha256: sha256:df1b82b9625726e1aa40ca665c9dc4412a0fa2bfbd266de48cfe4a56f2a41dd5
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.1/couchbase_exporter-0.4.1-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.4.1-linux-arm64.tar.gz
+          commit: null
+          size: 2419650
+          sha256: sha256:fb44b47f40149495586c832ee641468476412823895df311f6f35fd731510ff5
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.1/couchbase_exporter-0.4.1-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.4.1_checksums.txt
+          commit: null
+          size: 331
+          sha256: sha256:8b05b695dacb3c67f3c828969cfac143c5b67fe46412a2109ad7418acf47aa11
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.1/couchbase_exporter_0.4.1_checksums.txt
+    - name: 0.4.0
+      commit: null
+      timestamp: '2018-10-31T00:15:54'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.4.0-darwin-amd64.tar.gz
+          commit: null
+          size: 2771058
+          sha256: sha256:1172a1c6f58627c221dce0f2f87163d1306a635e3293ebfd47645bc309813779
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.0/couchbase_exporter-0.4.0-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.4.0-linux-amd64.tar.gz
+          commit: null
+          size: 2619203
+          sha256: sha256:a96d4f591d7913135dea15e493b6000820b96fd04a5562ffdea3291ad8c74b93
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.0/couchbase_exporter-0.4.0-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.4.0-linux-arm64.tar.gz
+          commit: null
+          size: 2419642
+          sha256: sha256:a15908f250acc1df23fc235f5a5c8f3591a57993d87b07d7a8b3a9bd97585302
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.0/couchbase_exporter-0.4.0-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.4.0_checksums.txt
+          commit: null
+          size: 331
+          sha256: sha256:2ac10d5d2ffc3974bb5f8d6e56cfb589e33e568d7e2b55bf1791815647f5e31f
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.4.0/couchbase_exporter_0.4.0_checksums.txt
+    - name: 0.3.0
+      commit: null
+      timestamp: '2018-10-27T21:46:49'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.3.0-darwin-amd64.tar.gz
+          commit: null
+          size: 2676840
+          sha256: sha256:3531c9d9572a6f55b4ff8ece58a3b689c2a728a16ba7742cff467217a0742733
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.3.0/couchbase_exporter-0.3.0-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.3.0-linux-amd64.tar.gz
+          commit: null
+          size: 2528329
+          sha256: sha256:35c832061df3c5e231551f481e4ebec624f610801cf34179db58d5bc1f872865
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.3.0/couchbase_exporter-0.3.0-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.3.0-linux-arm64.tar.gz
+          commit: null
+          size: 2333858
+          sha256: sha256:58c7300a5cf91e05070706bb051e5b1b450e1635390a0e339d95ed50164ae4d1
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.3.0/couchbase_exporter-0.3.0-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.3.0_checksums.txt
+          commit: null
+          size: 331
+          sha256: sha256:8dbd8c22bcab494629340859d04cacfdc92f5078396a508308965eba37c1dfc5
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.3.0/couchbase_exporter_0.3.0_checksums.txt
+    - name: 0.2.1
+      commit: null
+      timestamp: '2018-10-26T20:29:55'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.2.1-darwin-amd64.tar.gz
+          commit: null
+          size: 2725391
+          sha256: sha256:8561ecb942f1a5c9e6369ac1a56742d533931bbceaf64621448e6608792e30d9
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.1/couchbase_exporter-0.2.1-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.2.1-linux-amd64.tar.gz
+          commit: null
+          size: 2574668
+          sha256: sha256:6d52c58427109a80ed4eb9615a964e659581fc07b3528981b5e51c25f9537c38
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.1/couchbase_exporter-0.2.1-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.2.1-linux-arm64.tar.gz
+          commit: null
+          size: 2385449
+          sha256: sha256:64e10feb862ea147c843d8030ecebd098d84d1fbd93f6a9ca908ae78805e984e
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.1/couchbase_exporter-0.2.1-linux-arm64.tar.gz
+        - name: couchbase_exporter_0.2.1_checksums.txt
+          commit: null
+          size: 331
+          sha256: sha256:0fc0439c6d136cfe6e7d2b6d95ba6c1150da6b213935296d470d20aa39f90f01
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.1/couchbase_exporter_0.2.1_checksums.txt
+    - name: 0.2.0
+      commit: null
+      timestamp: '2018-09-13T21:32:47'
+      prerelease: false
+      files:
+        - name: couchbase_exporter-0.2.0-darwin-amd64.tar.gz
+          commit: null
+          size: 2889163
+          sha256: sha256:ac1793f15511d3d6d415aa411e2708884dc12f1a9876edd4cc8562cd66887663
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.0/couchbase_exporter-0.2.0-darwin-amd64.tar.gz
+        - name: couchbase_exporter-0.2.0-linux-amd64.tar.gz
+          commit: null
+          size: 2732500
+          sha256: sha256:6bc791da9ba0119022201ef08c13c16e4145199b8948892a1cb87533dc7951d1
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.0/couchbase_exporter-0.2.0-linux-amd64.tar.gz
+        - name: couchbase_exporter-0.2.0-linux-arm64.tar.gz
+          commit: null
+          size: 2529344
+          sha256: sha256:f893bfe0262337da8af10909425bcb11f88ed8c061c6a9d175ac86631fc3f0f6
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.0/couchbase_exporter-0.2.0-linux-arm64.tar.gz
+        - name: couchbase_exporter-0.2.0-windows-amd64.tar.gz
+          commit: null
+          size: 2715072
+          sha256: sha256:3d3feab70a8fb53f71bdefeb4c59f3b470e25ffec1e7a43fd3000346a843eda6
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.0/couchbase_exporter-0.2.0-windows-amd64.tar.gz
+        - name: couchbase_exporter_0.2.0_checksums.txt
+          commit: null
+          size: 443
+          sha256: sha256:478b05dc6460bcfb57445d4e8fb7f0b1a5db4022d534a9b1e0ddd38e13aa0810
+          url: https://github.com/blakelead/couchbase_exporter/releases/download/0.2.0/couchbase_exporter_0.2.0_checksums.txt

@@ -3,790 +3,960 @@ defaults:
   port: 9308
   tgroup: kafka
 software:
+  name: danielqsj/kafka_exporter
+  release: v1.2.0
+  prerelease: null
+  url: https://github.com/danielqsj/kafka_exporter
+  source: https://github.com/danielqsj/kafka_exporter.git
+  updated: '2020-03-05T02:43:49.760384'
   master:
     commit:
       sha: d8a8460163f4fe9316044f4581503f30a739936f
-    prerelease: true
-    published:
-      timestamp: 2019-12-24 01:54:26
-  v0.1.0:
-    commit:
-      sha: 7576d6aa0abd77ae33c982936fac83ec273ce099
-    files:
-      - name: kafka_exporter-0.1.0.darwin-386.tar.gz
-        sha256: sha256:78fe1963c4a53c307cb01b654b439d6c55105b31b01276e2828cc85048534bdc
-        size: 3619766
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.darwin-386.tar.gz
-      - name: kafka_exporter-0.1.0.darwin-amd64.tar.gz
-        sha256: sha256:135105b809912a3702948bd69f7f9525189520642c71891fbc7a037cd96c7df6
-        size: 3844327
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.darwin-amd64.tar.gz
-      - name: kafka_exporter-0.1.0.dragonfly-amd64.tar.gz
-        sha256: sha256:d2fbd339685c9639e3bc7b2543ebd1348ce8bf90dc84e183ed858d391206c57b
-        size: 3810032
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.dragonfly-amd64.tar.gz
-      - name: kafka_exporter-0.1.0.freebsd-386.tar.gz
-        sha256: sha256:359b2366004a3e864b4707cc2845d6403b243d72c0040f7c56acc6d625afe870
-        size: 3589802
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.freebsd-386.tar.gz
-      - name: kafka_exporter-0.1.0.freebsd-amd64.tar.gz
-        sha256: sha256:e570ae367bb0d0c65097fd16802abec3c544b39a560d7523f5ab3fd4ecf2067e
-        size: 3812869
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.freebsd-amd64.tar.gz
-      - name: kafka_exporter-0.1.0.freebsd-armv6.tar.gz
-        sha256: sha256:08019bb221085c11a597619babf85457a915005eceba5eb240b5b4c9923035e8
-        size: 3500625
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.freebsd-armv6.tar.gz
-      - name: kafka_exporter-0.1.0.freebsd-armv7.tar.gz
-        sha256: sha256:6015367647aa1fa28774a866f621579dfda36982d29f4572253f3b7a3011fe07
-        size: 3498487
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.freebsd-armv7.tar.gz
-      - name: kafka_exporter-0.1.0.linux-386.tar.gz
-        sha256: sha256:b6f6362f2bc5718b72c1296f4d5ecd2463d24ef04bd85c29e8c75dd731a84247
-        size: 3580542
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-386.tar.gz
-      - name: kafka_exporter-0.1.0.linux-amd64.tar.gz
-        sha256: sha256:16f4f03fa2ad3153d941d64e93a212e6c92d8012b1702809510a2870d96aa5f2
-        size: 3802961
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-amd64.tar.gz
-      - name: kafka_exporter-0.1.0.linux-arm64.tar.gz
-        sha256: sha256:63ff412da357baab92f044a29246de2ad4099b7d0de5eacfbb5c44080b63a94e
-        size: 3467825
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-arm64.tar.gz
-      - name: kafka_exporter-0.1.0.linux-armv5.tar.gz
-        sha256: sha256:bafc6c94225bb50b0e4682bf5d78629ef3ad8f33340870a71cba0537d546a65b
-        size: 3506268
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-armv5.tar.gz
-      - name: kafka_exporter-0.1.0.linux-armv6.tar.gz
-        sha256: sha256:175fdbc59a42e70831e84c4b7ce03aec027ace27bbac32c3d8dd36765bbdf9d4
-        size: 3485749
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-armv6.tar.gz
-      - name: kafka_exporter-0.1.0.linux-armv7.tar.gz
-        sha256: sha256:d170ae081c567dfca04a9e72819067b37b43dd17e4c58ff5ecb91759d0984438
-        size: 3482735
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-armv7.tar.gz
-      - name: kafka_exporter-0.1.0.linux-mips64.tar.gz
-        sha256: sha256:3514a537d1939605b4e656f6bd18bcbc27203168a3d887df40acd24017f91c91
-        size: 3483423
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-mips64.tar.gz
-      - name: kafka_exporter-0.1.0.linux-mips64le.tar.gz
-        sha256: sha256:72e9955948108a87568eb848e882884a73abfb702306e371e41446f01d83c71a
-        size: 3373187
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-mips64le.tar.gz
-      - name: kafka_exporter-0.1.0.linux-ppc64.tar.gz
-        sha256: sha256:2d064aec855ca0ae10a78e8dc286767c197087429bdd3203898e859a32d1c238
-        size: 3536784
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-ppc64.tar.gz
-      - name: kafka_exporter-0.1.0.linux-ppc64le.tar.gz
-        sha256: sha256:a9354743602d40d283e06946cc5576f1fcd2986507b03ac3f06dc265764b3ec8
-        size: 3453367
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-ppc64le.tar.gz
-      - name: kafka_exporter-0.1.0.netbsd-386.tar.gz
-        sha256: sha256:f145c271b39a4b294f890d42b1b0a1270cde870a536d454e8816cfde6f6cc8aa
-        size: 3585393
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.netbsd-386.tar.gz
-      - name: kafka_exporter-0.1.0.netbsd-amd64.tar.gz
-        sha256: sha256:2399df8d7df094c55f4f37ea8410fd1389ea0cee983c1a1bcf2612e40f81276c
-        size: 3807292
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.netbsd-amd64.tar.gz
-      - name: kafka_exporter-0.1.0.netbsd-armv6.tar.gz
-        sha256: sha256:b78b1a727a2dfeb984ad9e37583ff3a75cf1e1aeac6d6c49b3951cfbebdde01e
-        size: 3496324
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.netbsd-armv6.tar.gz
-      - name: kafka_exporter-0.1.0.netbsd-armv7.tar.gz
-        sha256: sha256:a478c6d7c6b7288d90e36743f148f0ddb0970d43010f8f9700589eb8424eabd9
-        size: 3492929
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.netbsd-armv7.tar.gz
-      - name: kafka_exporter-0.1.0.openbsd-386.tar.gz
-        sha256: sha256:feb91e458afd0890b7b37f2a16f815ca8a226d616f3afacb0a0463bd1b38b5ee
-        size: 3590322
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.openbsd-386.tar.gz
-      - name: kafka_exporter-0.1.0.openbsd-amd64.tar.gz
-        sha256: sha256:44a5c34f9366168be1bcc412772026f041716450e260814937f07d8f4ab5a450
-        size: 3811813
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.openbsd-amd64.tar.gz
-      - name: kafka_exporter-0.1.0.openbsd-armv7.tar.gz
-        sha256: sha256:aac265db831f78d22d55c0e835534b1b91155fe24cb2ae873ec6c516a285a8dc
-        size: 3497378
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.openbsd-armv7.tar.gz
-      - name: kafka_exporter-0.1.0.windows-386.tar.gz
-        sha256: sha256:1a494ade78ce64f4ba4b0dc6f49f774d9af2f25b257bf0b924adbe7508235838
-        size: 3565098
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.windows-386.tar.gz
-      - name: kafka_exporter-0.1.0.windows-amd64.tar.gz
-        sha256: sha256:afcd4ec583708b53227ee644ab48eac5dcf437ce94a701d29eb15b9a3f4bcc12
-        size: 3792217
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.windows-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2017-10-19 09:53:15
-  v0.2.0:
-    commit:
-      sha: 9aecc7d5965edf2230f8eb6992103396dfc11041
-    files:
-      - name: kafka_exporter-0.2.0.darwin-386.tar.gz
-        sha256: sha256:c3fb22bf0647658be5f904577452088dcb817ec9a60802ebc9797e4057def698
-        size: 3619684
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.darwin-386.tar.gz
-      - name: kafka_exporter-0.2.0.darwin-amd64.tar.gz
-        sha256: sha256:f493e63cdb777354063843e5317bd5e3fdbbbcd60a51805c91bb8d7a3ff12fad
-        size: 3844317
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.darwin-amd64.tar.gz
-      - name: kafka_exporter-0.2.0.dragonfly-amd64.tar.gz
-        sha256: sha256:bc06d6f8d6ae5fdf17f517ec8d616a198c0a67534de332027f7e6d3d5d1c8a28
-        size: 3809935
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.dragonfly-amd64.tar.gz
-      - name: kafka_exporter-0.2.0.freebsd-386.tar.gz
-        sha256: sha256:9ca62dd0cec6a4c67ad591791f130e98c9c895b95c827fb6022fdc608cc38111
-        size: 3589897
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.freebsd-386.tar.gz
-      - name: kafka_exporter-0.2.0.freebsd-amd64.tar.gz
-        sha256: sha256:809bf7f63f9022e808f749d069b86ff4bd2b590572a8ca6549611515a1f1fab3
-        size: 3813046
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.freebsd-amd64.tar.gz
-      - name: kafka_exporter-0.2.0.freebsd-armv6.tar.gz
-        sha256: sha256:1512e06a7871f17c3ae72858e6ee4082d2e6ceceb063fb23e1a06b998e94855f
-        size: 3500341
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.freebsd-armv6.tar.gz
-      - name: kafka_exporter-0.2.0.freebsd-armv7.tar.gz
-        sha256: sha256:e12166707d2d324f2d0285a82275f6232126633b40e9888000a92a833b966d89
-        size: 3497934
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.freebsd-armv7.tar.gz
-      - name: kafka_exporter-0.2.0.linux-386.tar.gz
-        sha256: sha256:8dab716e387897de7e5017b240eae57d31d1bdf593eec3fa0f9935293321f0e5
-        size: 3580722
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-386.tar.gz
-      - name: kafka_exporter-0.2.0.linux-amd64.tar.gz
-        sha256: sha256:d5031a436d4227180d38e77f58ce4146469429aba3992a6d0acd3a74ed6d8a6d
-        size: 3801727
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-amd64.tar.gz
-      - name: kafka_exporter-0.2.0.linux-arm64.tar.gz
-        sha256: sha256:ebd98e8ee1085404ed52507535ef4de31da7975d512cfcd45d5b926421af91f2
-        size: 3467785
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-arm64.tar.gz
-      - name: kafka_exporter-0.2.0.linux-armv5.tar.gz
-        sha256: sha256:c41a2f1fd54df6d1b084e8c15f59323113fa1c971e3d7d54e4d2f0e084e6b7f6
-        size: 3505834
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-armv5.tar.gz
-      - name: kafka_exporter-0.2.0.linux-armv6.tar.gz
-        sha256: sha256:0aa27fdb6bbb8528ed3bbd51e0d5d912100e9737dc998c5ae481c087deab29df
-        size: 3485857
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-armv6.tar.gz
-      - name: kafka_exporter-0.2.0.linux-armv7.tar.gz
-        sha256: sha256:cab5250a41d4ae22b6070ce1b844380ac07f112101b0d299ce626657bd72d4fc
-        size: 3482616
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-armv7.tar.gz
-      - name: kafka_exporter-0.2.0.linux-mips64.tar.gz
-        sha256: sha256:d96738f4b50a55bdd307d2b1186696ae98eb37fc859bbb969a7bae7205940650
-        size: 3482951
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-mips64.tar.gz
-      - name: kafka_exporter-0.2.0.linux-mips64le.tar.gz
-        sha256: sha256:431604b96ae1a530effecd34b939448921bcd3c719b540268d4c373e92fc2739
-        size: 3372933
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-mips64le.tar.gz
-      - name: kafka_exporter-0.2.0.linux-ppc64.tar.gz
-        sha256: sha256:050ca6d43053e69945e534756ac100fad467dac2831c3d8f2f5af719a0e6f01c
-        size: 3536768
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-ppc64.tar.gz
-      - name: kafka_exporter-0.2.0.linux-ppc64le.tar.gz
-        sha256: sha256:e0093eac0f801cd1e3122a854fc2a0e35bb9e135c1606e1434406b25f387a32f
-        size: 3453236
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-ppc64le.tar.gz
-      - name: kafka_exporter-0.2.0.netbsd-386.tar.gz
-        sha256: sha256:72f6de39394049f13fbdb3bb742f1e7fb7ed6fd9ce3726361f28073b655e001c
-        size: 3585500
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.netbsd-386.tar.gz
-      - name: kafka_exporter-0.2.0.netbsd-amd64.tar.gz
-        sha256: sha256:dcf5e18efc3902852975130657c602d4660ed2c729fb7db3f0610e77233e9a5d
-        size: 3806966
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.netbsd-amd64.tar.gz
-      - name: kafka_exporter-0.2.0.netbsd-armv6.tar.gz
-        sha256: sha256:2a03d9fb983109cd77113b6c350a1a726ee57bc9d2ce9bf92a39dc85eadecf1f
-        size: 3496052
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.netbsd-armv6.tar.gz
-      - name: kafka_exporter-0.2.0.netbsd-armv7.tar.gz
-        sha256: sha256:8a45887d7f616ead1fb5a065bb7932bf0ca286e886068fb7d2fd089d76feccaa
-        size: 3493301
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.netbsd-armv7.tar.gz
-      - name: kafka_exporter-0.2.0.openbsd-386.tar.gz
-        sha256: sha256:3a63be6be5255d067c72ce93f3652e8d25006feeb7b70032cc3f8fa93a4d6091
-        size: 3590134
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.openbsd-386.tar.gz
-      - name: kafka_exporter-0.2.0.openbsd-amd64.tar.gz
-        sha256: sha256:67233d85699caad570ccb77c4bf0a1d45fd13b436b9307823f84392421a00e7c
-        size: 3812133
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.openbsd-amd64.tar.gz
-      - name: kafka_exporter-0.2.0.openbsd-armv7.tar.gz
-        sha256: sha256:c5857d922784e378c691d5a99b08e1881536d849e5a20551c3fc886dc698c44b
-        size: 3497491
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.openbsd-armv7.tar.gz
-      - name: kafka_exporter-0.2.0.windows-386.tar.gz
-        sha256: sha256:f5c8107658a9162b0453ea05cf7463fe935c98c2f8a8d9904dca3306939f4660
-        size: 3564722
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.windows-386.tar.gz
-      - name: kafka_exporter-0.2.0.windows-amd64.tar.gz
-        sha256: sha256:eb20166f2b40d632f9277fdc53d045c65f6f013259bf76bc550ec120e53f1d1e
-        size: 3792939
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.windows-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2017-10-20 07:58:08
-  v0.3.0:
-    commit:
-      sha: 77161033720d842d22e52a02250934ca83a3c42c
-    files:
-      - name: kafka_exporter-0.3.0.darwin-386.tar.gz
-        sha256: sha256:d1ae9e3d502ed230d5617a7a2f6ba03a32a5be6788811cb02d7bf9391033f943
-        size: 3651672
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.darwin-386.tar.gz
-      - name: kafka_exporter-0.3.0.darwin-amd64.tar.gz
-        sha256: sha256:5026a47b69654f7725746e1380f19b5ae726a8636df616d7f94cbed3fd76a0b0
-        size: 3876073
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.darwin-amd64.tar.gz
-      - name: kafka_exporter-0.3.0.dragonfly-amd64.tar.gz
-        sha256: sha256:87d358b6e2ee8328e5f99c1497f59f07064bbdd10ed5247dcb39b17988f27737
-        size: 3842761
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.dragonfly-amd64.tar.gz
-      - name: kafka_exporter-0.3.0.freebsd-386.tar.gz
-        sha256: sha256:e48c9c66b27d0f640ba377403a023d823f061c6422425b8265f94248b0d95f2c
-        size: 3622750
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.freebsd-386.tar.gz
-      - name: kafka_exporter-0.3.0.freebsd-amd64.tar.gz
-        sha256: sha256:e7fa07e1c98d71bb580a311d595837881584a0c91d45a91ab4c261ee6a53f5df
-        size: 3844894
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.freebsd-amd64.tar.gz
-      - name: kafka_exporter-0.3.0.freebsd-armv6.tar.gz
-        sha256: sha256:5545f277060e7a38fb236912286acb10805973c973e20fc2aa5c564bf51844a1
-        size: 3534002
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.freebsd-armv6.tar.gz
-      - name: kafka_exporter-0.3.0.freebsd-armv7.tar.gz
-        sha256: sha256:0e017cabf10cfaa62bc4a0304d1925e5feb3e2df7c879f05daada812e70fb692
-        size: 3530158
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.freebsd-armv7.tar.gz
-      - name: kafka_exporter-0.3.0.linux-386.tar.gz
-        sha256: sha256:18b3ab33017bc887576b3a0ab8d780e62c6f2a371cafeb13c767f6500c84731c
-        size: 3614408
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-386.tar.gz
-      - name: kafka_exporter-0.3.0.linux-amd64.tar.gz
-        sha256: sha256:1904cf136d6f2aa010b5394f2f02760fa2476c8cf623bb1a2785255b4f7282de
-        size: 3837781
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-amd64.tar.gz
-      - name: kafka_exporter-0.3.0.linux-arm64.tar.gz
-        sha256: sha256:7af0becee91714bfd8846a1f6944b2945647a22092e33bb077c6f4c937215a77
-        size: 3496310
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-arm64.tar.gz
-      - name: kafka_exporter-0.3.0.linux-armv5.tar.gz
-        sha256: sha256:f55942779b1b308e90ac91aa67fae1094c10420baee7fb3a465efde4fd18ee3d
-        size: 3537538
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-armv5.tar.gz
-      - name: kafka_exporter-0.3.0.linux-armv6.tar.gz
-        sha256: sha256:7875823d7dfca2be532b4dd514e792e55c9beefcf99ec46984106becc43a6d0d
-        size: 3516812
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-armv6.tar.gz
-      - name: kafka_exporter-0.3.0.linux-armv7.tar.gz
-        sha256: sha256:88d8560c682ffad7375506fc96876493e682ba5545c45787196d924741dbd9a8
-        size: 3516039
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-armv7.tar.gz
-      - name: kafka_exporter-0.3.0.linux-mips64.tar.gz
-        sha256: sha256:6c2cc890c30d70e7fa5affde006f34011e9f64ae01b10a8d458bef7439e1ae0f
-        size: 3513391
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-mips64.tar.gz
-      - name: kafka_exporter-0.3.0.linux-mips64le.tar.gz
-        sha256: sha256:ade5bfaebb57ecc853f3c9cc6f294b96e9993ebec3643a800d46e1a524bae17b
-        size: 3400837
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-mips64le.tar.gz
-      - name: kafka_exporter-0.3.0.linux-ppc64.tar.gz
-        sha256: sha256:6daf1d362859488ccd59ac1ef47ea9f83f0dd3bd97c4be9df85aa5dfdab69b18
-        size: 3568686
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-ppc64.tar.gz
-      - name: kafka_exporter-0.3.0.linux-ppc64le.tar.gz
-        sha256: sha256:c57b2c66ed0d5794521dad37c451213497d232c8c0c70fd2b93beeb027169be8
-        size: 3484203
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-ppc64le.tar.gz
-      - name: kafka_exporter-0.3.0.netbsd-386.tar.gz
-        sha256: sha256:426d89f140af189cf617963d06041cdbf5ab0483349bbeb6379eff3365a38e86
-        size: 3618167
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.netbsd-386.tar.gz
-      - name: kafka_exporter-0.3.0.netbsd-amd64.tar.gz
-        sha256: sha256:77ee8f875bb54bede6b42f3102c379093a63b30d3e08d94aed3009a82175b8d7
-        size: 3839776
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.netbsd-amd64.tar.gz
-      - name: kafka_exporter-0.3.0.netbsd-armv6.tar.gz
-        sha256: sha256:3ef88693b49c238a40b7a0c5d8909d094e0829a008d668f3d56e1c2a70034766
-        size: 3530057
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.netbsd-armv6.tar.gz
-      - name: kafka_exporter-0.3.0.netbsd-armv7.tar.gz
-        sha256: sha256:07d16d879cd57ecd13c2b939d35b6641b2e00274fbbef726230470cee3023acd
-        size: 3527128
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.netbsd-armv7.tar.gz
-      - name: kafka_exporter-0.3.0.openbsd-386.tar.gz
-        sha256: sha256:25c97f393a9419501ee4af3671358a851dace1755163ff92389a4717be71d0d7
-        size: 3624125
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.openbsd-386.tar.gz
-      - name: kafka_exporter-0.3.0.openbsd-amd64.tar.gz
-        sha256: sha256:9f808137a9b70531b59f15947d0f066b2da15d9bb06cd002bafc1ebf3a2d2d0c
-        size: 3845865
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.openbsd-amd64.tar.gz
-      - name: kafka_exporter-0.3.0.openbsd-armv7.tar.gz
-        sha256: sha256:76f95d5093e6262fafda2497a11f58dcf582d0c7d9db05a5072043c97b68f964
-        size: 3530475
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.openbsd-armv7.tar.gz
-      - name: kafka_exporter-0.3.0.windows-386.tar.gz
-        sha256: sha256:a5215a389f2460e10d876f676189e92a821a4c503f79f9d7c3deeb1334170133
-        size: 3597898
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.windows-386.tar.gz
-      - name: kafka_exporter-0.3.0.windows-amd64.tar.gz
-        sha256: sha256:db0f7cbe8e278501eefc752d27bacf4a25b44e95d39961eabcfb3d8562555b7c
-        size: 3823944
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.windows-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2017-12-06 09:02:40
-  v1.0.0:
-    commit:
-      sha: 91bcf3282f7dc4d501ab1c8540e7702d93126bc4
-    files:
-      - name: kafka_exporter-1.0.0.darwin-386.tar.gz
-        sha256: sha256:0b56f78d007eab92d8889f0c58c4f1ccd320e7994c31d87c5cb3fa4197c38bc3
-        size: 3664333
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.darwin-386.tar.gz
-      - name: kafka_exporter-1.0.0.darwin-amd64.tar.gz
-        sha256: sha256:3b3cec000c880476f19f2b9c04ba4b8856639ff1a444872a504716eb3f277f99
-        size: 3886076
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.darwin-amd64.tar.gz
-      - name: kafka_exporter-1.0.0.dragonfly-amd64.tar.gz
-        sha256: sha256:27420742a6b983e84600db81b595526209ede673b54415e3b9e1b5e2ff024399
-        size: 3854652
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.dragonfly-amd64.tar.gz
-      - name: kafka_exporter-1.0.0.freebsd-386.tar.gz
-        sha256: sha256:f5d418744f8525712b24775421a4bc241135672db3b8bb8fa67bfd7dd96baf6d
-        size: 3634335
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.freebsd-386.tar.gz
-      - name: kafka_exporter-1.0.0.freebsd-amd64.tar.gz
-        sha256: sha256:36852f599942e37586bc97255342698a2d05f8cd5db0c501532733a1aa3c0452
-        size: 3857392
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.freebsd-amd64.tar.gz
-      - name: kafka_exporter-1.0.0.freebsd-armv6.tar.gz
-        sha256: sha256:1d1e252e35680ad7269e65fb073509593f6013040a2ffa2c721f22814e0dd54c
-        size: 3543438
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.freebsd-armv6.tar.gz
-      - name: kafka_exporter-1.0.0.freebsd-armv7.tar.gz
-        sha256: sha256:acf6bc239ad68ba939f11277ceaef7292d605ccd52767b8e51d93a0b3f0f5c2f
-        size: 3541743
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.freebsd-armv7.tar.gz
-      - name: kafka_exporter-1.0.0.linux-386.tar.gz
-        sha256: sha256:bcd85dfbac990c5c3c7d9220be64b6bc4e719ceb510b6a6540d47b3c9370f055
-        size: 3625860
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-386.tar.gz
-      - name: kafka_exporter-1.0.0.linux-amd64.tar.gz
-        sha256: sha256:829fc6ecdd67b62016a78cb3019bdbf4ff3b84f455e3aa6a81b7b5a350df9902
-        size: 3847039
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-amd64.tar.gz
-      - name: kafka_exporter-1.0.0.linux-arm64.tar.gz
-        sha256: sha256:90c4b776e613ff63e70efbdbf2eb0ec12e4da7d915f5e07e4ea4ca2079ce4e7f
-        size: 3507757
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-arm64.tar.gz
-      - name: kafka_exporter-1.0.0.linux-armv5.tar.gz
-        sha256: sha256:5859a15e8732511da2ebc2a9b1823dfc93de7d8ae64488aa1bfeb293793e6729
-        size: 3549642
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-armv5.tar.gz
-      - name: kafka_exporter-1.0.0.linux-armv6.tar.gz
-        sha256: sha256:ed4c4e5ef4993d41a8d617917544a561ed4250ff24d976b2b6f46149a5fda002
-        size: 3528994
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-armv6.tar.gz
-      - name: kafka_exporter-1.0.0.linux-armv7.tar.gz
-        sha256: sha256:de41d447bd02f8058af0f438f5a0446185fc9a51918be721febbe7c77bf417ae
-        size: 3528025
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-armv7.tar.gz
-      - name: kafka_exporter-1.0.0.linux-mips64.tar.gz
-        sha256: sha256:1391df43fa12e15641a76ebfff49bae9b5758e43af69d34f512aae6d0548ba94
-        size: 3524080
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-mips64.tar.gz
-      - name: kafka_exporter-1.0.0.linux-mips64le.tar.gz
-        sha256: sha256:a1774cecb63f9588e75cd79218e26e4eb66104c46a6d00359ba77f53aa475161
-        size: 3410716
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-mips64le.tar.gz
-      - name: kafka_exporter-1.0.0.linux-ppc64.tar.gz
-        sha256: sha256:9f7eec8ea958e6ad6936c75414c94ae8204495b1f5a10dafd3c60a18df762d87
-        size: 3579364
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-ppc64.tar.gz
-      - name: kafka_exporter-1.0.0.linux-ppc64le.tar.gz
-        sha256: sha256:db87e04ef6724c68f9ad0e7d5f711b982443a8831eb8ab9952abd54b169bb39f
-        size: 3493034
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-ppc64le.tar.gz
-      - name: kafka_exporter-1.0.0.netbsd-386.tar.gz
-        sha256: sha256:c3e296007ee743efd824b45e036fe51a211846dfc272f643fae3525f00863f2b
-        size: 3629471
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.netbsd-386.tar.gz
-      - name: kafka_exporter-1.0.0.netbsd-amd64.tar.gz
-        sha256: sha256:098fc08b209cf894c74b5d4f30c7ea281318fd0ed92bf079fb2bc62ad11857b1
-        size: 3851776
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.netbsd-amd64.tar.gz
-      - name: kafka_exporter-1.0.0.netbsd-armv6.tar.gz
-        sha256: sha256:b83ea9e2fbe51026e828f47a099a34941d34c2108a0a858ed23466f8d503affc
-        size: 3541378
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.netbsd-armv6.tar.gz
-      - name: kafka_exporter-1.0.0.netbsd-armv7.tar.gz
-        sha256: sha256:607ba3e5652ce401361c8759c96d898b421359dbd44ce6fa00f449d76eca4923
-        size: 3538115
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.netbsd-armv7.tar.gz
-      - name: kafka_exporter-1.0.0.openbsd-386.tar.gz
-        sha256: sha256:c1bb98d30af7eaa87349584d820355d6d1763439d6d2d5e95db5ba0cba6bc9e7
-        size: 3635086
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.openbsd-386.tar.gz
-      - name: kafka_exporter-1.0.0.openbsd-amd64.tar.gz
-        sha256: sha256:f46a1cbaf92dc6e5fe36ea509b3ac3c23ca8cd02fd6296c21f69e5c0919d383d
-        size: 3855565
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.openbsd-amd64.tar.gz
-      - name: kafka_exporter-1.0.0.openbsd-armv7.tar.gz
-        sha256: sha256:7c27b374ea0c72962799b916c535b4513780fd682091f0e70dd5b0e9bda5c850
-        size: 3541401
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.openbsd-armv7.tar.gz
-      - name: kafka_exporter-1.0.0.windows-386.tar.gz
-        sha256: sha256:adb623fe8b01739813888c93187ae0c8f925d3c2b265fda8de834902066c65b1
-        size: 3609144
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.windows-386.tar.gz
-      - name: kafka_exporter-1.0.0.windows-amd64.tar.gz
-        sha256: sha256:ef4f72f8a40a2b6c718179f8f012221c909628668c667c89625e91faf8d6de2e
-        size: 3837224
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.windows-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2018-01-08 15:28:51
-  v1.0.1:
-    commit:
-      sha: f1639a649ebcfe11bce6782ab281a59d05b6d9e9
-    files:
-      - name: kafka_exporter-1.0.1.darwin-386.tar.gz
-        sha256: sha256:873a1d8a8cfb47b95c078160ba27e956398511c5041ef5637cfb4c0b5829944b
-        size: 3663525
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.darwin-386.tar.gz
-      - name: kafka_exporter-1.0.1.darwin-amd64.tar.gz
-        sha256: sha256:f4d4745d562459c97bf56bf6af06127f3d59069d259f0164ee39ed3bef9d3dfc
-        size: 3886131
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.darwin-amd64.tar.gz
-      - name: kafka_exporter-1.0.1.dragonfly-amd64.tar.gz
-        sha256: sha256:e8b65404fdba92fa414c7e2e1606adf6e76cdf0294d34ee6d4411d1ec15499f5
-        size: 3855020
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.dragonfly-amd64.tar.gz
-      - name: kafka_exporter-1.0.1.freebsd-386.tar.gz
-        sha256: sha256:9b5b512a7eb914c5302271682be6a829b64a1ac7ff8e781545dac6d6b639b9fd
-        size: 3634078
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.freebsd-386.tar.gz
-      - name: kafka_exporter-1.0.1.freebsd-amd64.tar.gz
-        sha256: sha256:64ee1ed152185368a6ada2174c06e06b68a9ff5d571f0e47757d253a0356c122
-        size: 3856916
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.freebsd-amd64.tar.gz
-      - name: kafka_exporter-1.0.1.freebsd-armv6.tar.gz
-        sha256: sha256:5db666a07bf62af50eb062d50fd517fa01f6c6fe0e41a55841132abba9c6744e
-        size: 3543705
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.freebsd-armv6.tar.gz
-      - name: kafka_exporter-1.0.1.freebsd-armv7.tar.gz
-        sha256: sha256:c6b3eed2292cbaa1483121cfa2b7ad5c926ba69355543940f788de66b7416e1e
-        size: 3541828
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.freebsd-armv7.tar.gz
-      - name: kafka_exporter-1.0.1.linux-386.tar.gz
-        sha256: sha256:10eae0ef4310b30fe02bbc28f9570e144103fac3ce4b42c3238a8fc259b0ccd3
-        size: 3626679
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-386.tar.gz
-      - name: kafka_exporter-1.0.1.linux-amd64.tar.gz
-        sha256: sha256:a0b4d1ceed75d92c40698b465cb666d1c1a73f920a1975c24d39f65dd185fb9d
-        size: 3846277
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-amd64.tar.gz
-      - name: kafka_exporter-1.0.1.linux-arm64.tar.gz
-        sha256: sha256:567e4a8bae149be1a02cb495408e369f5bcaccc292d39d16687006a9668b43e4
-        size: 3507730
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-arm64.tar.gz
-      - name: kafka_exporter-1.0.1.linux-armv5.tar.gz
-        sha256: sha256:8efcb114eefe40d3cb1c1375ee311b2311d6be2fdc3d7d32cbd9e8398e97f772
-        size: 3549835
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-armv5.tar.gz
-      - name: kafka_exporter-1.0.1.linux-armv6.tar.gz
-        sha256: sha256:d40099c4c7d671efaa987bd977b3e002e3f62777fbceca2b43744808ca98cc10
-        size: 3529011
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-armv6.tar.gz
-      - name: kafka_exporter-1.0.1.linux-armv7.tar.gz
-        sha256: sha256:1349d15beadc6e34741562976b148d92ae8f95c33b996086f71747758e7d4994
-        size: 3528092
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-armv7.tar.gz
-      - name: kafka_exporter-1.0.1.linux-mips64.tar.gz
-        sha256: sha256:7c3805ef3819d022e134d358de313acfced37add6ac3ae830f55404e2c9de9db
-        size: 3524199
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-mips64.tar.gz
-      - name: kafka_exporter-1.0.1.linux-mips64le.tar.gz
-        sha256: sha256:6d09cbfc38afff2fbe9db14e6830adf56390986341574a74478f7193004ebdbb
-        size: 3410450
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-mips64le.tar.gz
-      - name: kafka_exporter-1.0.1.linux-ppc64.tar.gz
-        sha256: sha256:6a4b037da970c76add4c260b439baa306b514a13c96423477b4b8cea4d662788
-        size: 3579267
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-ppc64.tar.gz
-      - name: kafka_exporter-1.0.1.linux-ppc64le.tar.gz
-        sha256: sha256:f383d9055ed13e0a4062ae400e251f5efde225f05843a19ec518995c945268f7
-        size: 3493509
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-ppc64le.tar.gz
-      - name: kafka_exporter-1.0.1.netbsd-386.tar.gz
-        sha256: sha256:069ebb5d6dae9f5c2acec65385d425957caf636e62954ae31dfdbf3c4537ed0b
-        size: 3628893
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.netbsd-386.tar.gz
-      - name: kafka_exporter-1.0.1.netbsd-amd64.tar.gz
-        sha256: sha256:7aef7396a2cf82d4c285f514b091ff799ff2e9ffd558571999302ee409ab0426
-        size: 3851713
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.netbsd-amd64.tar.gz
-      - name: kafka_exporter-1.0.1.netbsd-armv6.tar.gz
-        sha256: sha256:455a7b1c2cca41f0e999515eab209474a31d932e03dd1d8eede6d496d478de57
-        size: 3541302
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.netbsd-armv6.tar.gz
-      - name: kafka_exporter-1.0.1.netbsd-armv7.tar.gz
-        sha256: sha256:d338ceba37550bb746ec11976d5bca3506aeea9115016fa141169a8f07f2bf6c
-        size: 3537689
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.netbsd-armv7.tar.gz
-      - name: kafka_exporter-1.0.1.openbsd-386.tar.gz
-        sha256: sha256:c7de6d97789541916d2a40b94590b7e251742fb5faaf6640cc9303513880d0c4
-        size: 3635039
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.openbsd-386.tar.gz
-      - name: kafka_exporter-1.0.1.openbsd-amd64.tar.gz
-        sha256: sha256:3f217a41af8a7fb6db8b038fb4faf65f08b8b719aca5c22c7dbf00a46c2ccdd9
-        size: 3855663
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.openbsd-amd64.tar.gz
-      - name: kafka_exporter-1.0.1.openbsd-armv7.tar.gz
-        sha256: sha256:5de1c2de37f60292f2707569aac3d421a52e60bb17d7ce7d39bd325943decc65
-        size: 3540984
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.openbsd-armv7.tar.gz
-      - name: kafka_exporter-1.0.1.windows-386.tar.gz
-        sha256: sha256:26cd7eec72d043e9d8ea1cb897224e864d4cd6b1db9b0ab09f3086bb2b43a88d
-        size: 3609069
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.windows-386.tar.gz
-      - name: kafka_exporter-1.0.1.windows-amd64.tar.gz
-        sha256: sha256:19ff8835c8f0537d1f9be4e60166898e48fbbbc9e1246575a4a2c9ab4e40e843
-        size: 3837849
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.windows-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2018-01-12 13:06:31
-  v1.1.0:
-    commit:
-      sha: 84cee7e0672f0161c05a93557cc2794a48c8a024
-    files:
-      - name: kafka_exporter-1.1.0.darwin-386.tar.gz
-        sha256: sha256:dda87b61bc22ef6b265108f1e5e5607c85e711bb1f1d4d0e618e03cbc61fbcb6
-        size: 4084897
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.darwin-386.tar.gz
-      - name: kafka_exporter-1.1.0.darwin-amd64.tar.gz
-        sha256: sha256:bb6bf29c3b838aa63eb335b3e0822506fe97530a17cffa57ad75103dbba605a2
-        size: 4243726
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.darwin-amd64.tar.gz
-      - name: kafka_exporter-1.1.0.dragonfly-amd64.tar.gz
-        sha256: sha256:e13aabb29161666a66cda4f9c355b24e2a4a48de565e3c15a17b97619fa7d7d5
-        size: 4206236
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.dragonfly-amd64.tar.gz
-      - name: kafka_exporter-1.1.0.freebsd-386.tar.gz
-        sha256: sha256:4b3313de56b869c781b713935deb4ec83d4874f41d8aee54669a6719d47e0844
-        size: 4057352
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.freebsd-386.tar.gz
-      - name: kafka_exporter-1.1.0.freebsd-amd64.tar.gz
-        sha256: sha256:8baac3a356e42d0f989c788db3dc225f42fd4b4f87c592e4a8f1ef35d159f961
-        size: 4214304
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.freebsd-amd64.tar.gz
-      - name: kafka_exporter-1.1.0.freebsd-armv6.tar.gz
-        sha256: sha256:e83c8da3765f351cd7ea3d55b958d5184deeae9fa6071b0991658d8e322f31d9
-        size: 3965055
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.freebsd-armv6.tar.gz
-      - name: kafka_exporter-1.1.0.freebsd-armv7.tar.gz
-        sha256: sha256:8b248534301471522d388c9379567990052fa3a4c167279d07d42cb59e0076ba
-        size: 3961410
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.freebsd-armv7.tar.gz
-      - name: kafka_exporter-1.1.0.linux-386.tar.gz
-        sha256: sha256:392f02366eaa715003d3c6820f848b8fa79694e110b57e6bb4f5f09be703f6b9
-        size: 4060461
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-386.tar.gz
-      - name: kafka_exporter-1.1.0.linux-amd64.tar.gz
-        sha256: sha256:bde4534a470234fd008de411ce5deda0073dedd43c0ffbd330018e80988246d6
-        size: 4211671
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-amd64.tar.gz
-      - name: kafka_exporter-1.1.0.linux-arm64.tar.gz
-        sha256: sha256:68a130c00dbd13a530b1ea6b7661427b6af32716ee12c02bab52fdd9e280aec0
-        size: 3943048
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-arm64.tar.gz
-      - name: kafka_exporter-1.1.0.linux-armv5.tar.gz
-        sha256: sha256:4b90b393fcf28215b8bd01cb4fa23e21fcca062fc462f219a0ace6bad4f5cecc
-        size: 3976149
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-armv5.tar.gz
-      - name: kafka_exporter-1.1.0.linux-armv6.tar.gz
-        sha256: sha256:b4a751eb1f60231916ea1f34929ad1711fcaacac9b388d57735fadaf99220498
-        size: 3955357
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-armv6.tar.gz
-      - name: kafka_exporter-1.1.0.linux-armv7.tar.gz
-        sha256: sha256:9a68820c745582ca07a762d0a09da37c7e5a19b52312238e4defbe6e7b6c086b
-        size: 3951383
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-armv7.tar.gz
-      - name: kafka_exporter-1.1.0.linux-mips64.tar.gz
-        sha256: sha256:e8eb4329d1a435d8e1a2f7b4933627e925236c9814bd9351e2ceac82aa3f98f7
-        size: 3969340
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-mips64.tar.gz
-      - name: kafka_exporter-1.1.0.linux-mips64le.tar.gz
-        sha256: sha256:acce98dd4eda87bcf069d0466b86b14c72ac6ed6ef26255c810ca3bf6110ebd0
-        size: 3843590
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-mips64le.tar.gz
-      - name: kafka_exporter-1.1.0.linux-ppc64.tar.gz
-        sha256: sha256:c27caa4cf19027714263ccba33f9e24b7ec5bc195fcb602f5165312c7a828d2e
-        size: 4040092
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-ppc64.tar.gz
-      - name: kafka_exporter-1.1.0.linux-ppc64le.tar.gz
-        sha256: sha256:29558638a3f8f049ca29b191c5e916e1a894718e53279cfd1679101a615591e0
-        size: 3939884
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-ppc64le.tar.gz
-      - name: kafka_exporter-1.1.0.netbsd-386.tar.gz
-        sha256: sha256:31aa4f8cdc51e9166d70dec31d2cd1b69d9fe788e3eb22386431282ec20e3eeb
-        size: 4049029
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.netbsd-386.tar.gz
-      - name: kafka_exporter-1.1.0.netbsd-amd64.tar.gz
-        sha256: sha256:0c5c5c1bce73c4652e2567aacefc0dace6f3543d329d6d860b88858c796221ce
-        size: 4206520
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.netbsd-amd64.tar.gz
-      - name: kafka_exporter-1.1.0.netbsd-armv6.tar.gz
-        sha256: sha256:810ab1ae7c11e37aa5ace1e2b87be8103afffaf23e650e0a45be58b525ea63e0
-        size: 3957952
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.netbsd-armv6.tar.gz
-      - name: kafka_exporter-1.1.0.netbsd-armv7.tar.gz
-        sha256: sha256:66f915eef5c427465310813b013241da211913f08c6e4a2a364a09eda617c5f2
-        size: 3956399
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.netbsd-armv7.tar.gz
-      - name: kafka_exporter-1.1.0.openbsd-386.tar.gz
-        sha256: sha256:f7000badf975600548eeeaa782f0c050411e7e93a1b2fbd6a37b816d2a7f89cc
-        size: 4051029
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.openbsd-386.tar.gz
-      - name: kafka_exporter-1.1.0.openbsd-amd64.tar.gz
-        sha256: sha256:62b9494b9fc522166628b5a8a63a3da1eba4de96c0100848254bf1539dd5b035
-        size: 4208887
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.openbsd-amd64.tar.gz
-      - name: kafka_exporter-1.1.0.openbsd-armv7.tar.gz
-        sha256: sha256:8f574194d7e1ff0eab336369243c6235ad6f25b0d2849f6c620012106a032c68
-        size: 3955091
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.openbsd-armv7.tar.gz
-      - name: kafka_exporter-1.1.0.windows-386.tar.gz
-        sha256: sha256:83c239cb39b4870b64148a6cb9461293b6a29669a3b59ff95f44502cc5bf8eee
-        size: 4016942
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.windows-386.tar.gz
-      - name: kafka_exporter-1.1.0.windows-amd64.tar.gz
-        sha256: sha256:1cdbd8e213a3506439e2d61215aa533a8d4b42d3daa935bd3920848720fde630
-        size: 4181453
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.windows-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2018-04-07 12:28:23
-  v1.2.0:
-    commit:
-      sha: 830660212e6c109e69dcb1cb58f5159fe3b38903
-    files:
-      - name: kafka_exporter-1.2.0.darwin-386.tar.gz
-        sha256: sha256:aba62a183c843e763e5299cadfb0a08a43f2cc1fb2aafa18febd731a1d10d0d4
-        size: 4103731
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.darwin-386.tar.gz
-      - name: kafka_exporter-1.2.0.darwin-amd64.tar.gz
-        sha256: sha256:2f2428971dfc01e3098ae8ee137a071186616b780f0039673a7cb4cf3b943d57
-        size: 4262155
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.darwin-amd64.tar.gz
-      - name: kafka_exporter-1.2.0.dragonfly-amd64.tar.gz
-        sha256: sha256:a7d6c5751e9a20e3391b4482272e2d1fe44653084e1ac4b7078a9755a857a551
-        size: 4223883
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.dragonfly-amd64.tar.gz
-      - name: kafka_exporter-1.2.0.freebsd-386.tar.gz
-        sha256: sha256:075069838d526bbbbaba5020186780796496e3fbcffac73dcacfd95bf3c1159d
-        size: 4073443
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.freebsd-386.tar.gz
-      - name: kafka_exporter-1.2.0.freebsd-amd64.tar.gz
-        sha256: sha256:5854bde0674acd11af97147699f4f9753c8a861ca9938de8fc27d34c5f70c6d2
-        size: 4231777
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.freebsd-amd64.tar.gz
-      - name: kafka_exporter-1.2.0.freebsd-armv6.tar.gz
-        sha256: sha256:de5e30d2049126de322bd24728e07cc1a8dd8f9180758a238a6ba2283e418377
-        size: 3983233
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.freebsd-armv6.tar.gz
-      - name: kafka_exporter-1.2.0.freebsd-armv7.tar.gz
-        sha256: sha256:d1b3a093336540310f3b9e2fc04c5010ba43d30ce080afffd1cf7931d490f63b
-        size: 3977629
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.freebsd-armv7.tar.gz
-      - name: kafka_exporter-1.2.0.linux-386.tar.gz
-        sha256: sha256:9516caf93559ee15ea228806f720758ccf3e6d43261234a3afb2ae92c0a26b28
-        size: 4078431
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-386.tar.gz
-      - name: kafka_exporter-1.2.0.linux-amd64.tar.gz
-        sha256: sha256:478e50e08a3104caaa2e60c7997936705b77ce8d187b83ab060de1c69d32fe13
-        size: 4228589
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-amd64.tar.gz
-      - name: kafka_exporter-1.2.0.linux-arm64.tar.gz
-        sha256: sha256:743c4b29a1ae37e3a86b9537d09fa96e1652e4f407c299b8969b024a65f170e7
-        size: 3961044
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-arm64.tar.gz
-      - name: kafka_exporter-1.2.0.linux-armv5.tar.gz
-        sha256: sha256:ed85be163de773dacd59c3e5482bd6ef8f3eea91c4619f68d3bc2e0250635c6c
-        size: 3993913
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-armv5.tar.gz
-      - name: kafka_exporter-1.2.0.linux-armv6.tar.gz
-        sha256: sha256:d7381fb9e56a2a92159e1307dc9fa91943166612e4f6f38d6e3dfa3bcc304cd8
-        size: 3973373
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-armv6.tar.gz
-      - name: kafka_exporter-1.2.0.linux-armv7.tar.gz
-        sha256: sha256:31179693ff860e8c302ef4fa64b703c44abf26fc2b8eeba6fa2ff00dc8fdeed1
-        size: 3969227
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-armv7.tar.gz
-      - name: kafka_exporter-1.2.0.linux-mips64.tar.gz
-        sha256: sha256:4f6b30f28945a122a6705bead9670acda541e52c062f79299a5b70a86e9037bc
-        size: 3985307
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-mips64.tar.gz
-      - name: kafka_exporter-1.2.0.linux-mips64le.tar.gz
-        sha256: sha256:b26da802527e9bb94d5849ac1306e58480827c423e40165dab653c5116ddf0d8
-        size: 3861683
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-mips64le.tar.gz
-      - name: kafka_exporter-1.2.0.linux-ppc64.tar.gz
-        sha256: sha256:a0faa0f27829fd7b781a8dc34a310b559467cdbdefa5fd207d8939ae221903ed
-        size: 4056864
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-ppc64.tar.gz
-      - name: kafka_exporter-1.2.0.linux-ppc64le.tar.gz
-        sha256: sha256:2e9b707af224fdbc49314e0de3f6804ea72e4c76a52bcc01cdba44db4dac6256
-        size: 3957134
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-ppc64le.tar.gz
-      - name: kafka_exporter-1.2.0.netbsd-386.tar.gz
-        sha256: sha256:ef3aa1c726ad528fef3512fd38d1729ff9a4ce7f92a18d0d22ceb767c638f585
-        size: 4068753
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.netbsd-386.tar.gz
-      - name: kafka_exporter-1.2.0.netbsd-amd64.tar.gz
-        sha256: sha256:55a033350b99b6545867252149e105c43e0264b7634b7559f285ff9c8aaa2979
-        size: 4224369
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.netbsd-amd64.tar.gz
-      - name: kafka_exporter-1.2.0.netbsd-armv6.tar.gz
-        sha256: sha256:f3c26fbcc2daa0d2f5e5f4e6b0146a49d7f4cb1e7c4ac531eaf21dad97aee7af
-        size: 3974958
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.netbsd-armv6.tar.gz
-      - name: kafka_exporter-1.2.0.netbsd-armv7.tar.gz
-        sha256: sha256:5bfab25d56277f42bf0fdc8ba2e8978622aca82349b658d3dc0a339609997820
-        size: 3971468
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.netbsd-armv7.tar.gz
-      - name: kafka_exporter-1.2.0.openbsd-386.tar.gz
-        sha256: sha256:67046fe1d6e0d689d2ee9291c6c93098c5fca4031826a7b84e94cf8059b6c947
-        size: 4069794
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.openbsd-386.tar.gz
-      - name: kafka_exporter-1.2.0.openbsd-amd64.tar.gz
-        sha256: sha256:857188cc57adaa550514be48c5a6c74c115364c1957539a83ea78f740f32e153
-        size: 4226954
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.openbsd-amd64.tar.gz
-      - name: kafka_exporter-1.2.0.openbsd-armv7.tar.gz
-        sha256: sha256:69d4663a63c9437642444aa9c7b2d7d6c26930f31c00d3454d7628898f6917b4
-        size: 3973576
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.openbsd-armv7.tar.gz
-      - name: kafka_exporter-1.2.0.windows-386.tar.gz
-        sha256: sha256:2a7ec7303a9530015756ef0ab4ac596ea196249db4183913f8cd859c3164cfb0
-        size: 4035315
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.windows-386.tar.gz
-      - name: kafka_exporter-1.2.0.windows-amd64.tar.gz
-        sha256: sha256:c994cb8009d3fdf78589c507eaccf750a69664f304192e094be2762bc999db76
-        size: 4198543
-        url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.windows-amd64.tar.gz
-    prerelease: false
-    published:
-      timestamp: 2018-07-07 14:39:05
-software_metadata:
-  prerelease: master
-  release: v1.2.0
-  updated: 2020-02-27 06:22:49.173193
+      timestamp: '2019-12-24T01:54:26'
+    files: []
+  releases:
+    - name: v1.2.0
+      commit: null
+      timestamp: '2018-07-07T14:39:05'
+      prerelease: false
+      files:
+        - name: kafka_exporter-1.2.0.darwin-386.tar.gz
+          commit: null
+          size: 4103731
+          sha256: sha256:aba62a183c843e763e5299cadfb0a08a43f2cc1fb2aafa18febd731a1d10d0d4
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.darwin-386.tar.gz
+        - name: kafka_exporter-1.2.0.darwin-amd64.tar.gz
+          commit: null
+          size: 4262155
+          sha256: sha256:2f2428971dfc01e3098ae8ee137a071186616b780f0039673a7cb4cf3b943d57
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.darwin-amd64.tar.gz
+        - name: kafka_exporter-1.2.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 4223883
+          sha256: sha256:a7d6c5751e9a20e3391b4482272e2d1fe44653084e1ac4b7078a9755a857a551
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.dragonfly-amd64.tar.gz
+        - name: kafka_exporter-1.2.0.freebsd-386.tar.gz
+          commit: null
+          size: 4073443
+          sha256: sha256:075069838d526bbbbaba5020186780796496e3fbcffac73dcacfd95bf3c1159d
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.freebsd-386.tar.gz
+        - name: kafka_exporter-1.2.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 4231777
+          sha256: sha256:5854bde0674acd11af97147699f4f9753c8a861ca9938de8fc27d34c5f70c6d2
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.freebsd-amd64.tar.gz
+        - name: kafka_exporter-1.2.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 3983233
+          sha256: sha256:de5e30d2049126de322bd24728e07cc1a8dd8f9180758a238a6ba2283e418377
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.freebsd-armv6.tar.gz
+        - name: kafka_exporter-1.2.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 3977629
+          sha256: sha256:d1b3a093336540310f3b9e2fc04c5010ba43d30ce080afffd1cf7931d490f63b
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.freebsd-armv7.tar.gz
+        - name: kafka_exporter-1.2.0.linux-386.tar.gz
+          commit: null
+          size: 4078431
+          sha256: sha256:9516caf93559ee15ea228806f720758ccf3e6d43261234a3afb2ae92c0a26b28
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-386.tar.gz
+        - name: kafka_exporter-1.2.0.linux-amd64.tar.gz
+          commit: null
+          size: 4228589
+          sha256: sha256:478e50e08a3104caaa2e60c7997936705b77ce8d187b83ab060de1c69d32fe13
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-amd64.tar.gz
+        - name: kafka_exporter-1.2.0.linux-arm64.tar.gz
+          commit: null
+          size: 3961044
+          sha256: sha256:743c4b29a1ae37e3a86b9537d09fa96e1652e4f407c299b8969b024a65f170e7
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-arm64.tar.gz
+        - name: kafka_exporter-1.2.0.linux-armv5.tar.gz
+          commit: null
+          size: 3993913
+          sha256: sha256:ed85be163de773dacd59c3e5482bd6ef8f3eea91c4619f68d3bc2e0250635c6c
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-armv5.tar.gz
+        - name: kafka_exporter-1.2.0.linux-armv6.tar.gz
+          commit: null
+          size: 3973373
+          sha256: sha256:d7381fb9e56a2a92159e1307dc9fa91943166612e4f6f38d6e3dfa3bcc304cd8
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-armv6.tar.gz
+        - name: kafka_exporter-1.2.0.linux-armv7.tar.gz
+          commit: null
+          size: 3969227
+          sha256: sha256:31179693ff860e8c302ef4fa64b703c44abf26fc2b8eeba6fa2ff00dc8fdeed1
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-armv7.tar.gz
+        - name: kafka_exporter-1.2.0.linux-mips64.tar.gz
+          commit: null
+          size: 3985307
+          sha256: sha256:4f6b30f28945a122a6705bead9670acda541e52c062f79299a5b70a86e9037bc
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-mips64.tar.gz
+        - name: kafka_exporter-1.2.0.linux-mips64le.tar.gz
+          commit: null
+          size: 3861683
+          sha256: sha256:b26da802527e9bb94d5849ac1306e58480827c423e40165dab653c5116ddf0d8
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-mips64le.tar.gz
+        - name: kafka_exporter-1.2.0.linux-ppc64.tar.gz
+          commit: null
+          size: 4056864
+          sha256: sha256:a0faa0f27829fd7b781a8dc34a310b559467cdbdefa5fd207d8939ae221903ed
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-ppc64.tar.gz
+        - name: kafka_exporter-1.2.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 3957134
+          sha256: sha256:2e9b707af224fdbc49314e0de3f6804ea72e4c76a52bcc01cdba44db4dac6256
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-ppc64le.tar.gz
+        - name: kafka_exporter-1.2.0.netbsd-386.tar.gz
+          commit: null
+          size: 4068753
+          sha256: sha256:ef3aa1c726ad528fef3512fd38d1729ff9a4ce7f92a18d0d22ceb767c638f585
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.netbsd-386.tar.gz
+        - name: kafka_exporter-1.2.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 4224369
+          sha256: sha256:55a033350b99b6545867252149e105c43e0264b7634b7559f285ff9c8aaa2979
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.netbsd-amd64.tar.gz
+        - name: kafka_exporter-1.2.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 3974958
+          sha256: sha256:f3c26fbcc2daa0d2f5e5f4e6b0146a49d7f4cb1e7c4ac531eaf21dad97aee7af
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.netbsd-armv6.tar.gz
+        - name: kafka_exporter-1.2.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 3971468
+          sha256: sha256:5bfab25d56277f42bf0fdc8ba2e8978622aca82349b658d3dc0a339609997820
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.netbsd-armv7.tar.gz
+        - name: kafka_exporter-1.2.0.openbsd-386.tar.gz
+          commit: null
+          size: 4069794
+          sha256: sha256:67046fe1d6e0d689d2ee9291c6c93098c5fca4031826a7b84e94cf8059b6c947
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.openbsd-386.tar.gz
+        - name: kafka_exporter-1.2.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 4226954
+          sha256: sha256:857188cc57adaa550514be48c5a6c74c115364c1957539a83ea78f740f32e153
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.openbsd-amd64.tar.gz
+        - name: kafka_exporter-1.2.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 3973576
+          sha256: sha256:69d4663a63c9437642444aa9c7b2d7d6c26930f31c00d3454d7628898f6917b4
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.openbsd-armv7.tar.gz
+        - name: kafka_exporter-1.2.0.windows-386.tar.gz
+          commit: null
+          size: 4035315
+          sha256: sha256:2a7ec7303a9530015756ef0ab4ac596ea196249db4183913f8cd859c3164cfb0
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.windows-386.tar.gz
+        - name: kafka_exporter-1.2.0.windows-amd64.tar.gz
+          commit: null
+          size: 4198543
+          sha256: sha256:c994cb8009d3fdf78589c507eaccf750a69664f304192e094be2762bc999db76
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.windows-amd64.tar.gz
+    - name: v1.1.0
+      commit: null
+      timestamp: '2018-04-07T12:54:43'
+      prerelease: false
+      files:
+        - name: kafka_exporter-1.1.0.darwin-386.tar.gz
+          commit: null
+          size: 4084897
+          sha256: sha256:dda87b61bc22ef6b265108f1e5e5607c85e711bb1f1d4d0e618e03cbc61fbcb6
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.darwin-386.tar.gz
+        - name: kafka_exporter-1.1.0.darwin-amd64.tar.gz
+          commit: null
+          size: 4243726
+          sha256: sha256:bb6bf29c3b838aa63eb335b3e0822506fe97530a17cffa57ad75103dbba605a2
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.darwin-amd64.tar.gz
+        - name: kafka_exporter-1.1.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 4206236
+          sha256: sha256:e13aabb29161666a66cda4f9c355b24e2a4a48de565e3c15a17b97619fa7d7d5
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.dragonfly-amd64.tar.gz
+        - name: kafka_exporter-1.1.0.freebsd-386.tar.gz
+          commit: null
+          size: 4057352
+          sha256: sha256:4b3313de56b869c781b713935deb4ec83d4874f41d8aee54669a6719d47e0844
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.freebsd-386.tar.gz
+        - name: kafka_exporter-1.1.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 4214304
+          sha256: sha256:8baac3a356e42d0f989c788db3dc225f42fd4b4f87c592e4a8f1ef35d159f961
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.freebsd-amd64.tar.gz
+        - name: kafka_exporter-1.1.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 3965055
+          sha256: sha256:e83c8da3765f351cd7ea3d55b958d5184deeae9fa6071b0991658d8e322f31d9
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.freebsd-armv6.tar.gz
+        - name: kafka_exporter-1.1.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 3961410
+          sha256: sha256:8b248534301471522d388c9379567990052fa3a4c167279d07d42cb59e0076ba
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.freebsd-armv7.tar.gz
+        - name: kafka_exporter-1.1.0.linux-386.tar.gz
+          commit: null
+          size: 4060461
+          sha256: sha256:392f02366eaa715003d3c6820f848b8fa79694e110b57e6bb4f5f09be703f6b9
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-386.tar.gz
+        - name: kafka_exporter-1.1.0.linux-amd64.tar.gz
+          commit: null
+          size: 4211671
+          sha256: sha256:bde4534a470234fd008de411ce5deda0073dedd43c0ffbd330018e80988246d6
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-amd64.tar.gz
+        - name: kafka_exporter-1.1.0.linux-arm64.tar.gz
+          commit: null
+          size: 3943048
+          sha256: sha256:68a130c00dbd13a530b1ea6b7661427b6af32716ee12c02bab52fdd9e280aec0
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-arm64.tar.gz
+        - name: kafka_exporter-1.1.0.linux-armv5.tar.gz
+          commit: null
+          size: 3976149
+          sha256: sha256:4b90b393fcf28215b8bd01cb4fa23e21fcca062fc462f219a0ace6bad4f5cecc
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-armv5.tar.gz
+        - name: kafka_exporter-1.1.0.linux-armv6.tar.gz
+          commit: null
+          size: 3955357
+          sha256: sha256:b4a751eb1f60231916ea1f34929ad1711fcaacac9b388d57735fadaf99220498
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-armv6.tar.gz
+        - name: kafka_exporter-1.1.0.linux-armv7.tar.gz
+          commit: null
+          size: 3951383
+          sha256: sha256:9a68820c745582ca07a762d0a09da37c7e5a19b52312238e4defbe6e7b6c086b
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-armv7.tar.gz
+        - name: kafka_exporter-1.1.0.linux-mips64.tar.gz
+          commit: null
+          size: 3969340
+          sha256: sha256:e8eb4329d1a435d8e1a2f7b4933627e925236c9814bd9351e2ceac82aa3f98f7
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-mips64.tar.gz
+        - name: kafka_exporter-1.1.0.linux-mips64le.tar.gz
+          commit: null
+          size: 3843590
+          sha256: sha256:acce98dd4eda87bcf069d0466b86b14c72ac6ed6ef26255c810ca3bf6110ebd0
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-mips64le.tar.gz
+        - name: kafka_exporter-1.1.0.linux-ppc64.tar.gz
+          commit: null
+          size: 4040092
+          sha256: sha256:c27caa4cf19027714263ccba33f9e24b7ec5bc195fcb602f5165312c7a828d2e
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-ppc64.tar.gz
+        - name: kafka_exporter-1.1.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 3939884
+          sha256: sha256:29558638a3f8f049ca29b191c5e916e1a894718e53279cfd1679101a615591e0
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.linux-ppc64le.tar.gz
+        - name: kafka_exporter-1.1.0.netbsd-386.tar.gz
+          commit: null
+          size: 4049029
+          sha256: sha256:31aa4f8cdc51e9166d70dec31d2cd1b69d9fe788e3eb22386431282ec20e3eeb
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.netbsd-386.tar.gz
+        - name: kafka_exporter-1.1.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 4206520
+          sha256: sha256:0c5c5c1bce73c4652e2567aacefc0dace6f3543d329d6d860b88858c796221ce
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.netbsd-amd64.tar.gz
+        - name: kafka_exporter-1.1.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 3957952
+          sha256: sha256:810ab1ae7c11e37aa5ace1e2b87be8103afffaf23e650e0a45be58b525ea63e0
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.netbsd-armv6.tar.gz
+        - name: kafka_exporter-1.1.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 3956399
+          sha256: sha256:66f915eef5c427465310813b013241da211913f08c6e4a2a364a09eda617c5f2
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.netbsd-armv7.tar.gz
+        - name: kafka_exporter-1.1.0.openbsd-386.tar.gz
+          commit: null
+          size: 4051029
+          sha256: sha256:f7000badf975600548eeeaa782f0c050411e7e93a1b2fbd6a37b816d2a7f89cc
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.openbsd-386.tar.gz
+        - name: kafka_exporter-1.1.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 4208887
+          sha256: sha256:62b9494b9fc522166628b5a8a63a3da1eba4de96c0100848254bf1539dd5b035
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.openbsd-amd64.tar.gz
+        - name: kafka_exporter-1.1.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 3955091
+          sha256: sha256:8f574194d7e1ff0eab336369243c6235ad6f25b0d2849f6c620012106a032c68
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.openbsd-armv7.tar.gz
+        - name: kafka_exporter-1.1.0.windows-386.tar.gz
+          commit: null
+          size: 4016942
+          sha256: sha256:83c239cb39b4870b64148a6cb9461293b6a29669a3b59ff95f44502cc5bf8eee
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.windows-386.tar.gz
+        - name: kafka_exporter-1.1.0.windows-amd64.tar.gz
+          commit: null
+          size: 4181453
+          sha256: sha256:1cdbd8e213a3506439e2d61215aa533a8d4b42d3daa935bd3920848720fde630
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.1.0/kafka_exporter-1.1.0.windows-amd64.tar.gz
+    - name: v1.0.1
+      commit: null
+      timestamp: '2018-01-12T13:06:31'
+      prerelease: false
+      files:
+        - name: kafka_exporter-1.0.1.darwin-386.tar.gz
+          commit: null
+          size: 3663525
+          sha256: sha256:873a1d8a8cfb47b95c078160ba27e956398511c5041ef5637cfb4c0b5829944b
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.darwin-386.tar.gz
+        - name: kafka_exporter-1.0.1.darwin-amd64.tar.gz
+          commit: null
+          size: 3886131
+          sha256: sha256:f4d4745d562459c97bf56bf6af06127f3d59069d259f0164ee39ed3bef9d3dfc
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.darwin-amd64.tar.gz
+        - name: kafka_exporter-1.0.1.dragonfly-amd64.tar.gz
+          commit: null
+          size: 3855020
+          sha256: sha256:e8b65404fdba92fa414c7e2e1606adf6e76cdf0294d34ee6d4411d1ec15499f5
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.dragonfly-amd64.tar.gz
+        - name: kafka_exporter-1.0.1.freebsd-386.tar.gz
+          commit: null
+          size: 3634078
+          sha256: sha256:9b5b512a7eb914c5302271682be6a829b64a1ac7ff8e781545dac6d6b639b9fd
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.freebsd-386.tar.gz
+        - name: kafka_exporter-1.0.1.freebsd-amd64.tar.gz
+          commit: null
+          size: 3856916
+          sha256: sha256:64ee1ed152185368a6ada2174c06e06b68a9ff5d571f0e47757d253a0356c122
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.freebsd-amd64.tar.gz
+        - name: kafka_exporter-1.0.1.freebsd-armv6.tar.gz
+          commit: null
+          size: 3543705
+          sha256: sha256:5db666a07bf62af50eb062d50fd517fa01f6c6fe0e41a55841132abba9c6744e
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.freebsd-armv6.tar.gz
+        - name: kafka_exporter-1.0.1.freebsd-armv7.tar.gz
+          commit: null
+          size: 3541828
+          sha256: sha256:c6b3eed2292cbaa1483121cfa2b7ad5c926ba69355543940f788de66b7416e1e
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.freebsd-armv7.tar.gz
+        - name: kafka_exporter-1.0.1.linux-386.tar.gz
+          commit: null
+          size: 3626679
+          sha256: sha256:10eae0ef4310b30fe02bbc28f9570e144103fac3ce4b42c3238a8fc259b0ccd3
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-386.tar.gz
+        - name: kafka_exporter-1.0.1.linux-amd64.tar.gz
+          commit: null
+          size: 3846277
+          sha256: sha256:a0b4d1ceed75d92c40698b465cb666d1c1a73f920a1975c24d39f65dd185fb9d
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-amd64.tar.gz
+        - name: kafka_exporter-1.0.1.linux-arm64.tar.gz
+          commit: null
+          size: 3507730
+          sha256: sha256:567e4a8bae149be1a02cb495408e369f5bcaccc292d39d16687006a9668b43e4
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-arm64.tar.gz
+        - name: kafka_exporter-1.0.1.linux-armv5.tar.gz
+          commit: null
+          size: 3549835
+          sha256: sha256:8efcb114eefe40d3cb1c1375ee311b2311d6be2fdc3d7d32cbd9e8398e97f772
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-armv5.tar.gz
+        - name: kafka_exporter-1.0.1.linux-armv6.tar.gz
+          commit: null
+          size: 3529011
+          sha256: sha256:d40099c4c7d671efaa987bd977b3e002e3f62777fbceca2b43744808ca98cc10
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-armv6.tar.gz
+        - name: kafka_exporter-1.0.1.linux-armv7.tar.gz
+          commit: null
+          size: 3528092
+          sha256: sha256:1349d15beadc6e34741562976b148d92ae8f95c33b996086f71747758e7d4994
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-armv7.tar.gz
+        - name: kafka_exporter-1.0.1.linux-mips64.tar.gz
+          commit: null
+          size: 3524199
+          sha256: sha256:7c3805ef3819d022e134d358de313acfced37add6ac3ae830f55404e2c9de9db
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-mips64.tar.gz
+        - name: kafka_exporter-1.0.1.linux-mips64le.tar.gz
+          commit: null
+          size: 3410450
+          sha256: sha256:6d09cbfc38afff2fbe9db14e6830adf56390986341574a74478f7193004ebdbb
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-mips64le.tar.gz
+        - name: kafka_exporter-1.0.1.linux-ppc64.tar.gz
+          commit: null
+          size: 3579267
+          sha256: sha256:6a4b037da970c76add4c260b439baa306b514a13c96423477b4b8cea4d662788
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-ppc64.tar.gz
+        - name: kafka_exporter-1.0.1.linux-ppc64le.tar.gz
+          commit: null
+          size: 3493509
+          sha256: sha256:f383d9055ed13e0a4062ae400e251f5efde225f05843a19ec518995c945268f7
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.linux-ppc64le.tar.gz
+        - name: kafka_exporter-1.0.1.netbsd-386.tar.gz
+          commit: null
+          size: 3628893
+          sha256: sha256:069ebb5d6dae9f5c2acec65385d425957caf636e62954ae31dfdbf3c4537ed0b
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.netbsd-386.tar.gz
+        - name: kafka_exporter-1.0.1.netbsd-amd64.tar.gz
+          commit: null
+          size: 3851713
+          sha256: sha256:7aef7396a2cf82d4c285f514b091ff799ff2e9ffd558571999302ee409ab0426
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.netbsd-amd64.tar.gz
+        - name: kafka_exporter-1.0.1.netbsd-armv6.tar.gz
+          commit: null
+          size: 3541302
+          sha256: sha256:455a7b1c2cca41f0e999515eab209474a31d932e03dd1d8eede6d496d478de57
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.netbsd-armv6.tar.gz
+        - name: kafka_exporter-1.0.1.netbsd-armv7.tar.gz
+          commit: null
+          size: 3537689
+          sha256: sha256:d338ceba37550bb746ec11976d5bca3506aeea9115016fa141169a8f07f2bf6c
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.netbsd-armv7.tar.gz
+        - name: kafka_exporter-1.0.1.openbsd-386.tar.gz
+          commit: null
+          size: 3635039
+          sha256: sha256:c7de6d97789541916d2a40b94590b7e251742fb5faaf6640cc9303513880d0c4
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.openbsd-386.tar.gz
+        - name: kafka_exporter-1.0.1.openbsd-amd64.tar.gz
+          commit: null
+          size: 3855663
+          sha256: sha256:3f217a41af8a7fb6db8b038fb4faf65f08b8b719aca5c22c7dbf00a46c2ccdd9
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.openbsd-amd64.tar.gz
+        - name: kafka_exporter-1.0.1.openbsd-armv7.tar.gz
+          commit: null
+          size: 3540984
+          sha256: sha256:5de1c2de37f60292f2707569aac3d421a52e60bb17d7ce7d39bd325943decc65
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.openbsd-armv7.tar.gz
+        - name: kafka_exporter-1.0.1.windows-386.tar.gz
+          commit: null
+          size: 3609069
+          sha256: sha256:26cd7eec72d043e9d8ea1cb897224e864d4cd6b1db9b0ab09f3086bb2b43a88d
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.windows-386.tar.gz
+        - name: kafka_exporter-1.0.1.windows-amd64.tar.gz
+          commit: null
+          size: 3837849
+          sha256: sha256:19ff8835c8f0537d1f9be4e60166898e48fbbbc9e1246575a4a2c9ab4e40e843
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.1/kafka_exporter-1.0.1.windows-amd64.tar.gz
+    - name: v1.0.0
+      commit: null
+      timestamp: '2018-01-08T15:28:51'
+      prerelease: false
+      files:
+        - name: kafka_exporter-1.0.0.darwin-386.tar.gz
+          commit: null
+          size: 3664333
+          sha256: sha256:0b56f78d007eab92d8889f0c58c4f1ccd320e7994c31d87c5cb3fa4197c38bc3
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.darwin-386.tar.gz
+        - name: kafka_exporter-1.0.0.darwin-amd64.tar.gz
+          commit: null
+          size: 3886076
+          sha256: sha256:3b3cec000c880476f19f2b9c04ba4b8856639ff1a444872a504716eb3f277f99
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.darwin-amd64.tar.gz
+        - name: kafka_exporter-1.0.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 3854652
+          sha256: sha256:27420742a6b983e84600db81b595526209ede673b54415e3b9e1b5e2ff024399
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.dragonfly-amd64.tar.gz
+        - name: kafka_exporter-1.0.0.freebsd-386.tar.gz
+          commit: null
+          size: 3634335
+          sha256: sha256:f5d418744f8525712b24775421a4bc241135672db3b8bb8fa67bfd7dd96baf6d
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.freebsd-386.tar.gz
+        - name: kafka_exporter-1.0.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 3857392
+          sha256: sha256:36852f599942e37586bc97255342698a2d05f8cd5db0c501532733a1aa3c0452
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.freebsd-amd64.tar.gz
+        - name: kafka_exporter-1.0.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 3543438
+          sha256: sha256:1d1e252e35680ad7269e65fb073509593f6013040a2ffa2c721f22814e0dd54c
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.freebsd-armv6.tar.gz
+        - name: kafka_exporter-1.0.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 3541743
+          sha256: sha256:acf6bc239ad68ba939f11277ceaef7292d605ccd52767b8e51d93a0b3f0f5c2f
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.freebsd-armv7.tar.gz
+        - name: kafka_exporter-1.0.0.linux-386.tar.gz
+          commit: null
+          size: 3625860
+          sha256: sha256:bcd85dfbac990c5c3c7d9220be64b6bc4e719ceb510b6a6540d47b3c9370f055
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-386.tar.gz
+        - name: kafka_exporter-1.0.0.linux-amd64.tar.gz
+          commit: null
+          size: 3847039
+          sha256: sha256:829fc6ecdd67b62016a78cb3019bdbf4ff3b84f455e3aa6a81b7b5a350df9902
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-amd64.tar.gz
+        - name: kafka_exporter-1.0.0.linux-arm64.tar.gz
+          commit: null
+          size: 3507757
+          sha256: sha256:90c4b776e613ff63e70efbdbf2eb0ec12e4da7d915f5e07e4ea4ca2079ce4e7f
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-arm64.tar.gz
+        - name: kafka_exporter-1.0.0.linux-armv5.tar.gz
+          commit: null
+          size: 3549642
+          sha256: sha256:5859a15e8732511da2ebc2a9b1823dfc93de7d8ae64488aa1bfeb293793e6729
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-armv5.tar.gz
+        - name: kafka_exporter-1.0.0.linux-armv6.tar.gz
+          commit: null
+          size: 3528994
+          sha256: sha256:ed4c4e5ef4993d41a8d617917544a561ed4250ff24d976b2b6f46149a5fda002
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-armv6.tar.gz
+        - name: kafka_exporter-1.0.0.linux-armv7.tar.gz
+          commit: null
+          size: 3528025
+          sha256: sha256:de41d447bd02f8058af0f438f5a0446185fc9a51918be721febbe7c77bf417ae
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-armv7.tar.gz
+        - name: kafka_exporter-1.0.0.linux-mips64.tar.gz
+          commit: null
+          size: 3524080
+          sha256: sha256:1391df43fa12e15641a76ebfff49bae9b5758e43af69d34f512aae6d0548ba94
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-mips64.tar.gz
+        - name: kafka_exporter-1.0.0.linux-mips64le.tar.gz
+          commit: null
+          size: 3410716
+          sha256: sha256:a1774cecb63f9588e75cd79218e26e4eb66104c46a6d00359ba77f53aa475161
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-mips64le.tar.gz
+        - name: kafka_exporter-1.0.0.linux-ppc64.tar.gz
+          commit: null
+          size: 3579364
+          sha256: sha256:9f7eec8ea958e6ad6936c75414c94ae8204495b1f5a10dafd3c60a18df762d87
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-ppc64.tar.gz
+        - name: kafka_exporter-1.0.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 3493034
+          sha256: sha256:db87e04ef6724c68f9ad0e7d5f711b982443a8831eb8ab9952abd54b169bb39f
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.linux-ppc64le.tar.gz
+        - name: kafka_exporter-1.0.0.netbsd-386.tar.gz
+          commit: null
+          size: 3629471
+          sha256: sha256:c3e296007ee743efd824b45e036fe51a211846dfc272f643fae3525f00863f2b
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.netbsd-386.tar.gz
+        - name: kafka_exporter-1.0.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 3851776
+          sha256: sha256:098fc08b209cf894c74b5d4f30c7ea281318fd0ed92bf079fb2bc62ad11857b1
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.netbsd-amd64.tar.gz
+        - name: kafka_exporter-1.0.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 3541378
+          sha256: sha256:b83ea9e2fbe51026e828f47a099a34941d34c2108a0a858ed23466f8d503affc
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.netbsd-armv6.tar.gz
+        - name: kafka_exporter-1.0.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 3538115
+          sha256: sha256:607ba3e5652ce401361c8759c96d898b421359dbd44ce6fa00f449d76eca4923
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.netbsd-armv7.tar.gz
+        - name: kafka_exporter-1.0.0.openbsd-386.tar.gz
+          commit: null
+          size: 3635086
+          sha256: sha256:c1bb98d30af7eaa87349584d820355d6d1763439d6d2d5e95db5ba0cba6bc9e7
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.openbsd-386.tar.gz
+        - name: kafka_exporter-1.0.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 3855565
+          sha256: sha256:f46a1cbaf92dc6e5fe36ea509b3ac3c23ca8cd02fd6296c21f69e5c0919d383d
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.openbsd-amd64.tar.gz
+        - name: kafka_exporter-1.0.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 3541401
+          sha256: sha256:7c27b374ea0c72962799b916c535b4513780fd682091f0e70dd5b0e9bda5c850
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.openbsd-armv7.tar.gz
+        - name: kafka_exporter-1.0.0.windows-386.tar.gz
+          commit: null
+          size: 3609144
+          sha256: sha256:adb623fe8b01739813888c93187ae0c8f925d3c2b265fda8de834902066c65b1
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.windows-386.tar.gz
+        - name: kafka_exporter-1.0.0.windows-amd64.tar.gz
+          commit: null
+          size: 3837224
+          sha256: sha256:ef4f72f8a40a2b6c718179f8f012221c909628668c667c89625e91faf8d6de2e
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v1.0.0/kafka_exporter-1.0.0.windows-amd64.tar.gz
+    - name: v0.3.0
+      commit: null
+      timestamp: '2017-12-06T09:02:40'
+      prerelease: false
+      files:
+        - name: kafka_exporter-0.3.0.darwin-386.tar.gz
+          commit: null
+          size: 3651672
+          sha256: sha256:d1ae9e3d502ed230d5617a7a2f6ba03a32a5be6788811cb02d7bf9391033f943
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.darwin-386.tar.gz
+        - name: kafka_exporter-0.3.0.darwin-amd64.tar.gz
+          commit: null
+          size: 3876073
+          sha256: sha256:5026a47b69654f7725746e1380f19b5ae726a8636df616d7f94cbed3fd76a0b0
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.darwin-amd64.tar.gz
+        - name: kafka_exporter-0.3.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 3842761
+          sha256: sha256:87d358b6e2ee8328e5f99c1497f59f07064bbdd10ed5247dcb39b17988f27737
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.dragonfly-amd64.tar.gz
+        - name: kafka_exporter-0.3.0.freebsd-386.tar.gz
+          commit: null
+          size: 3622750
+          sha256: sha256:e48c9c66b27d0f640ba377403a023d823f061c6422425b8265f94248b0d95f2c
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.freebsd-386.tar.gz
+        - name: kafka_exporter-0.3.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 3844894
+          sha256: sha256:e7fa07e1c98d71bb580a311d595837881584a0c91d45a91ab4c261ee6a53f5df
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.freebsd-amd64.tar.gz
+        - name: kafka_exporter-0.3.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 3534002
+          sha256: sha256:5545f277060e7a38fb236912286acb10805973c973e20fc2aa5c564bf51844a1
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.freebsd-armv6.tar.gz
+        - name: kafka_exporter-0.3.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 3530158
+          sha256: sha256:0e017cabf10cfaa62bc4a0304d1925e5feb3e2df7c879f05daada812e70fb692
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.freebsd-armv7.tar.gz
+        - name: kafka_exporter-0.3.0.linux-386.tar.gz
+          commit: null
+          size: 3614408
+          sha256: sha256:18b3ab33017bc887576b3a0ab8d780e62c6f2a371cafeb13c767f6500c84731c
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-386.tar.gz
+        - name: kafka_exporter-0.3.0.linux-amd64.tar.gz
+          commit: null
+          size: 3837781
+          sha256: sha256:1904cf136d6f2aa010b5394f2f02760fa2476c8cf623bb1a2785255b4f7282de
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-amd64.tar.gz
+        - name: kafka_exporter-0.3.0.linux-arm64.tar.gz
+          commit: null
+          size: 3496310
+          sha256: sha256:7af0becee91714bfd8846a1f6944b2945647a22092e33bb077c6f4c937215a77
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-arm64.tar.gz
+        - name: kafka_exporter-0.3.0.linux-armv5.tar.gz
+          commit: null
+          size: 3537538
+          sha256: sha256:f55942779b1b308e90ac91aa67fae1094c10420baee7fb3a465efde4fd18ee3d
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-armv5.tar.gz
+        - name: kafka_exporter-0.3.0.linux-armv6.tar.gz
+          commit: null
+          size: 3516812
+          sha256: sha256:7875823d7dfca2be532b4dd514e792e55c9beefcf99ec46984106becc43a6d0d
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-armv6.tar.gz
+        - name: kafka_exporter-0.3.0.linux-armv7.tar.gz
+          commit: null
+          size: 3516039
+          sha256: sha256:88d8560c682ffad7375506fc96876493e682ba5545c45787196d924741dbd9a8
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-armv7.tar.gz
+        - name: kafka_exporter-0.3.0.linux-mips64.tar.gz
+          commit: null
+          size: 3513391
+          sha256: sha256:6c2cc890c30d70e7fa5affde006f34011e9f64ae01b10a8d458bef7439e1ae0f
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-mips64.tar.gz
+        - name: kafka_exporter-0.3.0.linux-mips64le.tar.gz
+          commit: null
+          size: 3400837
+          sha256: sha256:ade5bfaebb57ecc853f3c9cc6f294b96e9993ebec3643a800d46e1a524bae17b
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-mips64le.tar.gz
+        - name: kafka_exporter-0.3.0.linux-ppc64.tar.gz
+          commit: null
+          size: 3568686
+          sha256: sha256:6daf1d362859488ccd59ac1ef47ea9f83f0dd3bd97c4be9df85aa5dfdab69b18
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-ppc64.tar.gz
+        - name: kafka_exporter-0.3.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 3484203
+          sha256: sha256:c57b2c66ed0d5794521dad37c451213497d232c8c0c70fd2b93beeb027169be8
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.linux-ppc64le.tar.gz
+        - name: kafka_exporter-0.3.0.netbsd-386.tar.gz
+          commit: null
+          size: 3618167
+          sha256: sha256:426d89f140af189cf617963d06041cdbf5ab0483349bbeb6379eff3365a38e86
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.netbsd-386.tar.gz
+        - name: kafka_exporter-0.3.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 3839776
+          sha256: sha256:77ee8f875bb54bede6b42f3102c379093a63b30d3e08d94aed3009a82175b8d7
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.netbsd-amd64.tar.gz
+        - name: kafka_exporter-0.3.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 3530057
+          sha256: sha256:3ef88693b49c238a40b7a0c5d8909d094e0829a008d668f3d56e1c2a70034766
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.netbsd-armv6.tar.gz
+        - name: kafka_exporter-0.3.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 3527128
+          sha256: sha256:07d16d879cd57ecd13c2b939d35b6641b2e00274fbbef726230470cee3023acd
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.netbsd-armv7.tar.gz
+        - name: kafka_exporter-0.3.0.openbsd-386.tar.gz
+          commit: null
+          size: 3624125
+          sha256: sha256:25c97f393a9419501ee4af3671358a851dace1755163ff92389a4717be71d0d7
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.openbsd-386.tar.gz
+        - name: kafka_exporter-0.3.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 3845865
+          sha256: sha256:9f808137a9b70531b59f15947d0f066b2da15d9bb06cd002bafc1ebf3a2d2d0c
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.openbsd-amd64.tar.gz
+        - name: kafka_exporter-0.3.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 3530475
+          sha256: sha256:76f95d5093e6262fafda2497a11f58dcf582d0c7d9db05a5072043c97b68f964
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.openbsd-armv7.tar.gz
+        - name: kafka_exporter-0.3.0.windows-386.tar.gz
+          commit: null
+          size: 3597898
+          sha256: sha256:a5215a389f2460e10d876f676189e92a821a4c503f79f9d7c3deeb1334170133
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.windows-386.tar.gz
+        - name: kafka_exporter-0.3.0.windows-amd64.tar.gz
+          commit: null
+          size: 3823944
+          sha256: sha256:db0f7cbe8e278501eefc752d27bacf4a25b44e95d39961eabcfb3d8562555b7c
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.3.0/kafka_exporter-0.3.0.windows-amd64.tar.gz
+    - name: v0.2.0
+      commit: null
+      timestamp: '2017-10-20T07:58:08'
+      prerelease: false
+      files:
+        - name: kafka_exporter-0.2.0.darwin-386.tar.gz
+          commit: null
+          size: 3619684
+          sha256: sha256:c3fb22bf0647658be5f904577452088dcb817ec9a60802ebc9797e4057def698
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.darwin-386.tar.gz
+        - name: kafka_exporter-0.2.0.darwin-amd64.tar.gz
+          commit: null
+          size: 3844317
+          sha256: sha256:f493e63cdb777354063843e5317bd5e3fdbbbcd60a51805c91bb8d7a3ff12fad
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.darwin-amd64.tar.gz
+        - name: kafka_exporter-0.2.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 3809935
+          sha256: sha256:bc06d6f8d6ae5fdf17f517ec8d616a198c0a67534de332027f7e6d3d5d1c8a28
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.dragonfly-amd64.tar.gz
+        - name: kafka_exporter-0.2.0.freebsd-386.tar.gz
+          commit: null
+          size: 3589897
+          sha256: sha256:9ca62dd0cec6a4c67ad591791f130e98c9c895b95c827fb6022fdc608cc38111
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.freebsd-386.tar.gz
+        - name: kafka_exporter-0.2.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 3813046
+          sha256: sha256:809bf7f63f9022e808f749d069b86ff4bd2b590572a8ca6549611515a1f1fab3
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.freebsd-amd64.tar.gz
+        - name: kafka_exporter-0.2.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 3500341
+          sha256: sha256:1512e06a7871f17c3ae72858e6ee4082d2e6ceceb063fb23e1a06b998e94855f
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.freebsd-armv6.tar.gz
+        - name: kafka_exporter-0.2.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 3497934
+          sha256: sha256:e12166707d2d324f2d0285a82275f6232126633b40e9888000a92a833b966d89
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.freebsd-armv7.tar.gz
+        - name: kafka_exporter-0.2.0.linux-386.tar.gz
+          commit: null
+          size: 3580722
+          sha256: sha256:8dab716e387897de7e5017b240eae57d31d1bdf593eec3fa0f9935293321f0e5
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-386.tar.gz
+        - name: kafka_exporter-0.2.0.linux-amd64.tar.gz
+          commit: null
+          size: 3801727
+          sha256: sha256:d5031a436d4227180d38e77f58ce4146469429aba3992a6d0acd3a74ed6d8a6d
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-amd64.tar.gz
+        - name: kafka_exporter-0.2.0.linux-arm64.tar.gz
+          commit: null
+          size: 3467785
+          sha256: sha256:ebd98e8ee1085404ed52507535ef4de31da7975d512cfcd45d5b926421af91f2
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-arm64.tar.gz
+        - name: kafka_exporter-0.2.0.linux-armv5.tar.gz
+          commit: null
+          size: 3505834
+          sha256: sha256:c41a2f1fd54df6d1b084e8c15f59323113fa1c971e3d7d54e4d2f0e084e6b7f6
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-armv5.tar.gz
+        - name: kafka_exporter-0.2.0.linux-armv6.tar.gz
+          commit: null
+          size: 3485857
+          sha256: sha256:0aa27fdb6bbb8528ed3bbd51e0d5d912100e9737dc998c5ae481c087deab29df
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-armv6.tar.gz
+        - name: kafka_exporter-0.2.0.linux-armv7.tar.gz
+          commit: null
+          size: 3482616
+          sha256: sha256:cab5250a41d4ae22b6070ce1b844380ac07f112101b0d299ce626657bd72d4fc
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-armv7.tar.gz
+        - name: kafka_exporter-0.2.0.linux-mips64.tar.gz
+          commit: null
+          size: 3482951
+          sha256: sha256:d96738f4b50a55bdd307d2b1186696ae98eb37fc859bbb969a7bae7205940650
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-mips64.tar.gz
+        - name: kafka_exporter-0.2.0.linux-mips64le.tar.gz
+          commit: null
+          size: 3372933
+          sha256: sha256:431604b96ae1a530effecd34b939448921bcd3c719b540268d4c373e92fc2739
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-mips64le.tar.gz
+        - name: kafka_exporter-0.2.0.linux-ppc64.tar.gz
+          commit: null
+          size: 3536768
+          sha256: sha256:050ca6d43053e69945e534756ac100fad467dac2831c3d8f2f5af719a0e6f01c
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-ppc64.tar.gz
+        - name: kafka_exporter-0.2.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 3453236
+          sha256: sha256:e0093eac0f801cd1e3122a854fc2a0e35bb9e135c1606e1434406b25f387a32f
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.linux-ppc64le.tar.gz
+        - name: kafka_exporter-0.2.0.netbsd-386.tar.gz
+          commit: null
+          size: 3585500
+          sha256: sha256:72f6de39394049f13fbdb3bb742f1e7fb7ed6fd9ce3726361f28073b655e001c
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.netbsd-386.tar.gz
+        - name: kafka_exporter-0.2.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 3806966
+          sha256: sha256:dcf5e18efc3902852975130657c602d4660ed2c729fb7db3f0610e77233e9a5d
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.netbsd-amd64.tar.gz
+        - name: kafka_exporter-0.2.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 3496052
+          sha256: sha256:2a03d9fb983109cd77113b6c350a1a726ee57bc9d2ce9bf92a39dc85eadecf1f
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.netbsd-armv6.tar.gz
+        - name: kafka_exporter-0.2.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 3493301
+          sha256: sha256:8a45887d7f616ead1fb5a065bb7932bf0ca286e886068fb7d2fd089d76feccaa
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.netbsd-armv7.tar.gz
+        - name: kafka_exporter-0.2.0.openbsd-386.tar.gz
+          commit: null
+          size: 3590134
+          sha256: sha256:3a63be6be5255d067c72ce93f3652e8d25006feeb7b70032cc3f8fa93a4d6091
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.openbsd-386.tar.gz
+        - name: kafka_exporter-0.2.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 3812133
+          sha256: sha256:67233d85699caad570ccb77c4bf0a1d45fd13b436b9307823f84392421a00e7c
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.openbsd-amd64.tar.gz
+        - name: kafka_exporter-0.2.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 3497491
+          sha256: sha256:c5857d922784e378c691d5a99b08e1881536d849e5a20551c3fc886dc698c44b
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.openbsd-armv7.tar.gz
+        - name: kafka_exporter-0.2.0.windows-386.tar.gz
+          commit: null
+          size: 3564722
+          sha256: sha256:f5c8107658a9162b0453ea05cf7463fe935c98c2f8a8d9904dca3306939f4660
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.windows-386.tar.gz
+        - name: kafka_exporter-0.2.0.windows-amd64.tar.gz
+          commit: null
+          size: 3792939
+          sha256: sha256:eb20166f2b40d632f9277fdc53d045c65f6f013259bf76bc550ec120e53f1d1e
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.2.0/kafka_exporter-0.2.0.windows-amd64.tar.gz
+    - name: v0.1.0
+      commit: null
+      timestamp: '2017-10-19T09:53:15'
+      prerelease: false
+      files:
+        - name: kafka_exporter-0.1.0.darwin-386.tar.gz
+          commit: null
+          size: 3619766
+          sha256: sha256:78fe1963c4a53c307cb01b654b439d6c55105b31b01276e2828cc85048534bdc
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.darwin-386.tar.gz
+        - name: kafka_exporter-0.1.0.darwin-amd64.tar.gz
+          commit: null
+          size: 3844327
+          sha256: sha256:135105b809912a3702948bd69f7f9525189520642c71891fbc7a037cd96c7df6
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.darwin-amd64.tar.gz
+        - name: kafka_exporter-0.1.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 3810032
+          sha256: sha256:d2fbd339685c9639e3bc7b2543ebd1348ce8bf90dc84e183ed858d391206c57b
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.dragonfly-amd64.tar.gz
+        - name: kafka_exporter-0.1.0.freebsd-386.tar.gz
+          commit: null
+          size: 3589802
+          sha256: sha256:359b2366004a3e864b4707cc2845d6403b243d72c0040f7c56acc6d625afe870
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.freebsd-386.tar.gz
+        - name: kafka_exporter-0.1.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 3812869
+          sha256: sha256:e570ae367bb0d0c65097fd16802abec3c544b39a560d7523f5ab3fd4ecf2067e
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.freebsd-amd64.tar.gz
+        - name: kafka_exporter-0.1.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 3500625
+          sha256: sha256:08019bb221085c11a597619babf85457a915005eceba5eb240b5b4c9923035e8
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.freebsd-armv6.tar.gz
+        - name: kafka_exporter-0.1.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 3498487
+          sha256: sha256:6015367647aa1fa28774a866f621579dfda36982d29f4572253f3b7a3011fe07
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.freebsd-armv7.tar.gz
+        - name: kafka_exporter-0.1.0.linux-386.tar.gz
+          commit: null
+          size: 3580542
+          sha256: sha256:b6f6362f2bc5718b72c1296f4d5ecd2463d24ef04bd85c29e8c75dd731a84247
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-386.tar.gz
+        - name: kafka_exporter-0.1.0.linux-amd64.tar.gz
+          commit: null
+          size: 3802961
+          sha256: sha256:16f4f03fa2ad3153d941d64e93a212e6c92d8012b1702809510a2870d96aa5f2
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-amd64.tar.gz
+        - name: kafka_exporter-0.1.0.linux-arm64.tar.gz
+          commit: null
+          size: 3467825
+          sha256: sha256:63ff412da357baab92f044a29246de2ad4099b7d0de5eacfbb5c44080b63a94e
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-arm64.tar.gz
+        - name: kafka_exporter-0.1.0.linux-armv5.tar.gz
+          commit: null
+          size: 3506268
+          sha256: sha256:bafc6c94225bb50b0e4682bf5d78629ef3ad8f33340870a71cba0537d546a65b
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-armv5.tar.gz
+        - name: kafka_exporter-0.1.0.linux-armv6.tar.gz
+          commit: null
+          size: 3485749
+          sha256: sha256:175fdbc59a42e70831e84c4b7ce03aec027ace27bbac32c3d8dd36765bbdf9d4
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-armv6.tar.gz
+        - name: kafka_exporter-0.1.0.linux-armv7.tar.gz
+          commit: null
+          size: 3482735
+          sha256: sha256:d170ae081c567dfca04a9e72819067b37b43dd17e4c58ff5ecb91759d0984438
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-armv7.tar.gz
+        - name: kafka_exporter-0.1.0.linux-mips64.tar.gz
+          commit: null
+          size: 3483423
+          sha256: sha256:3514a537d1939605b4e656f6bd18bcbc27203168a3d887df40acd24017f91c91
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-mips64.tar.gz
+        - name: kafka_exporter-0.1.0.linux-mips64le.tar.gz
+          commit: null
+          size: 3373187
+          sha256: sha256:72e9955948108a87568eb848e882884a73abfb702306e371e41446f01d83c71a
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-mips64le.tar.gz
+        - name: kafka_exporter-0.1.0.linux-ppc64.tar.gz
+          commit: null
+          size: 3536784
+          sha256: sha256:2d064aec855ca0ae10a78e8dc286767c197087429bdd3203898e859a32d1c238
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-ppc64.tar.gz
+        - name: kafka_exporter-0.1.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 3453367
+          sha256: sha256:a9354743602d40d283e06946cc5576f1fcd2986507b03ac3f06dc265764b3ec8
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.linux-ppc64le.tar.gz
+        - name: kafka_exporter-0.1.0.netbsd-386.tar.gz
+          commit: null
+          size: 3585393
+          sha256: sha256:f145c271b39a4b294f890d42b1b0a1270cde870a536d454e8816cfde6f6cc8aa
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.netbsd-386.tar.gz
+        - name: kafka_exporter-0.1.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 3807292
+          sha256: sha256:2399df8d7df094c55f4f37ea8410fd1389ea0cee983c1a1bcf2612e40f81276c
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.netbsd-amd64.tar.gz
+        - name: kafka_exporter-0.1.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 3496324
+          sha256: sha256:b78b1a727a2dfeb984ad9e37583ff3a75cf1e1aeac6d6c49b3951cfbebdde01e
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.netbsd-armv6.tar.gz
+        - name: kafka_exporter-0.1.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 3492929
+          sha256: sha256:a478c6d7c6b7288d90e36743f148f0ddb0970d43010f8f9700589eb8424eabd9
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.netbsd-armv7.tar.gz
+        - name: kafka_exporter-0.1.0.openbsd-386.tar.gz
+          commit: null
+          size: 3590322
+          sha256: sha256:feb91e458afd0890b7b37f2a16f815ca8a226d616f3afacb0a0463bd1b38b5ee
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.openbsd-386.tar.gz
+        - name: kafka_exporter-0.1.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 3811813
+          sha256: sha256:44a5c34f9366168be1bcc412772026f041716450e260814937f07d8f4ab5a450
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.openbsd-amd64.tar.gz
+        - name: kafka_exporter-0.1.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 3497378
+          sha256: sha256:aac265db831f78d22d55c0e835534b1b91155fe24cb2ae873ec6c516a285a8dc
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.openbsd-armv7.tar.gz
+        - name: kafka_exporter-0.1.0.windows-386.tar.gz
+          commit: null
+          size: 3565098
+          sha256: sha256:1a494ade78ce64f4ba4b0dc6f49f774d9af2f25b257bf0b924adbe7508235838
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.windows-386.tar.gz
+        - name: kafka_exporter-0.1.0.windows-amd64.tar.gz
+          commit: null
+          size: 3792217
+          sha256: sha256:afcd4ec583708b53227ee644ab48eac5dcf437ce94a701d29eb15b9a3f4bcc12
+          url: https://github.com/danielqsj/kafka_exporter/releases/download/v0.1.0/kafka_exporter-0.1.0.windows-amd64.tar.gz

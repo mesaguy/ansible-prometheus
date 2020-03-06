@@ -3,522 +3,625 @@ defaults:
   port: 9117
   tgroup: apache
 software:
-  '0.1':
-    commit:
-      sha: 631a01fc8e2241cf17be03075047a3edee357ba5
-    files: []
-    prerelease: false
-    published:
-      timestamp: 2015-10-23 21:32:25
+  name: Lusitaniae/apache_exporter
+  release: v0.7.0
+  prerelease: null
+  url: https://github.com/Lusitaniae/apache_exporter
+  source: https://github.com/Lusitaniae/apache_exporter.git
+  updated: '2020-03-05T02:45:23.446041'
   master:
     commit:
       sha: 0b18cb3aac212a91dd84c3cf7b6f2dcedde39e03
-    prerelease: true
-    published:
-      timestamp: 2019-12-10 08:09:53
-  v0.2:
-    commit:
-      sha: a588dcd2a3d51e04bb797ff98245f8372eed08a3
+      timestamp: '2019-12-10T08:09:53'
     files: []
-    prerelease: false
-    published:
-      timestamp: 2016-09-13 21:57:34
-  v0.3:
-    commit:
-      sha: c1cfe73d8552c8fa18b7280cae5c44da58c5c62e
-    files:
-      - name: apache_exporter_linux_amd64
-        sha256: sha256:68219cc2124be703d4a9f072329f5f2824c1298079caa05ca7a9b19b9d839d49
-        size: 8282936
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.3/apache_exporter_linux_amd64
-    prerelease: false
-    published:
-      timestamp: 2016-11-29 21:04:19
-  v0.4.0:
-    commit:
-      sha: 8cbd306095ef07b6f1a63a9e6f1a48f68c18290f
-    files:
-      - name: apache_exporter-0.4.0.darwin-386.tar.gz
-        sha256: sha256:fa68b6df14632d204e26d022143a19aee15ed7362b764cfa5f43ffee4aa6cdb6
-        size: 3379494
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.darwin-386.tar.gz
-      - name: apache_exporter-0.4.0.darwin-amd64.tar.gz
-        sha256: sha256:d30c2e663d4f9bb28b31316a15aad5207f4e77c923005f9cc406e8c6d781421f
-        size: 3588001
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.darwin-amd64.tar.gz
-      - name: apache_exporter-0.4.0.dragonfly-amd64.tar.gz
-        sha256: sha256:47256cb8c85017860ee9e1ddc7700ef3c8d11b1f11237247b475cfad5a73a744
-        size: 3553535
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.dragonfly-amd64.tar.gz
-      - name: apache_exporter-0.4.0.freebsd-386.tar.gz
-        sha256: sha256:0706d9d20a341e406fc2c5651c3409643f5151d63df5a391beb36f4744f01f52
-        size: 3345336
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.freebsd-386.tar.gz
-      - name: apache_exporter-0.4.0.freebsd-amd64.tar.gz
-        sha256: sha256:f2930df0fe0598da0e2d17b178b79e778993a10c8c7bc27b19c0bcd8078a7208
-        size: 3557255
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.freebsd-amd64.tar.gz
-      - name: apache_exporter-0.4.0.freebsd-armv6.tar.gz
-        sha256: sha256:c5208c01ca7afff68f2b8af952c4a1a829663b299e27235a159cf11267413b4b
-        size: 3264407
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.freebsd-armv6.tar.gz
-      - name: apache_exporter-0.4.0.freebsd-armv7.tar.gz
-        sha256: sha256:3b5a0cecf027705f10b31d41cd3259bcdfab35fc77f6592467cc2ba1f714fe91
-        size: 3262088
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.freebsd-armv7.tar.gz
-      - name: apache_exporter-0.4.0.linux-386.tar.gz
-        sha256: sha256:4408511d7b1185b0632d2f9e4c18038e6e6edb26e873a5e939a5f12ba61f2e56
-        size: 3337861
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-386.tar.gz
-      - name: apache_exporter-0.4.0.linux-amd64.tar.gz
-        sha256: sha256:cd196286502f1fe3192cbfde9c28d581a99b076c80441d4517341c2fbf8e4038
-        size: 3549263
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-amd64.tar.gz
-      - name: apache_exporter-0.4.0.linux-arm64.tar.gz
-        sha256: sha256:25221f860e106fc4e81cd890887f89c93792cbd9fbd82cf949bd1dee8df22d22
-        size: 3231949
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-arm64.tar.gz
-      - name: apache_exporter-0.4.0.linux-armv5.tar.gz
-        sha256: sha256:526d30c5203639b0890cf92febf9f18164cc9b1c6ce7d96ecbe84b393482e32b
-        size: 3269422
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-armv5.tar.gz
-      - name: apache_exporter-0.4.0.linux-armv6.tar.gz
-        sha256: sha256:1061003a776bb258915c022c9e6f14b83ed02906705d6b407fb84a9a9b8640a0
-        size: 3248549
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-armv6.tar.gz
-      - name: apache_exporter-0.4.0.linux-armv7.tar.gz
-        sha256: sha256:11a06bf8f2359b32f75ee5626bf650c468a16c731677e07394e9439d1027c609
-        size: 3247022
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-armv7.tar.gz
-      - name: apache_exporter-0.4.0.linux-mips64.tar.gz
-        sha256: sha256:2e305eb18a5a51254df1f0b66dcf3f115c62e7b915c9e52575a38314e1d8c085
-        size: 3248627
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-mips64.tar.gz
-      - name: apache_exporter-0.4.0.linux-mips64le.tar.gz
-        sha256: sha256:b02777efa67155126faf328af8042a13feed8ee0ca94ab51b427b699992687c3
-        size: 3145677
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-mips64le.tar.gz
-      - name: apache_exporter-0.4.0.linux-ppc64.tar.gz
-        sha256: sha256:1dfd831eb5cf75d802a74fb36d6280710a26f74355a23a3763d092ee9b47017d
-        size: 3298491
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-ppc64.tar.gz
-      - name: apache_exporter-0.4.0.linux-ppc64le.tar.gz
-        sha256: sha256:da1d8e74041cb7b41b790540977be608c271e8e8a9d94c64b4639ceceb1cac8d
-        size: 3222142
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-ppc64le.tar.gz
-      - name: apache_exporter-0.4.0.netbsd-386.tar.gz
-        sha256: sha256:11b6895f547237d0180ccc9eea4c12fada0de515171f36bee740a082ad247e86
-        size: 3341485
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.netbsd-386.tar.gz
-      - name: apache_exporter-0.4.0.netbsd-amd64.tar.gz
-        sha256: sha256:cd2e16660264f92ae34c328f59ce3668a0ed7bda4a909cdc4609627f02ad4e8d
-        size: 3551958
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.netbsd-amd64.tar.gz
-      - name: apache_exporter-0.4.0.netbsd-armv6.tar.gz
-        sha256: sha256:4daaee6b5d054309bf0e406df826cfc42763bd675a4501f65aa6c31fa7696de2
-        size: 3261053
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.netbsd-armv6.tar.gz
-      - name: apache_exporter-0.4.0.netbsd-armv7.tar.gz
-        sha256: sha256:06e69c1966f51593c6e18d7d5b4f259055a4be9832fd40d10c5d3195b72ca3b3
-        size: 3258545
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.netbsd-armv7.tar.gz
-      - name: apache_exporter-0.4.0.openbsd-386.tar.gz
-        sha256: sha256:52e0deae1ff1fcde1dff0797d0a2eac179f4311066f5a190158923e42bb6ee56
-        size: 3345747
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.openbsd-386.tar.gz
-      - name: apache_exporter-0.4.0.openbsd-amd64.tar.gz
-        sha256: sha256:996deae6f7cf7096bda1bd9f608ad64b8680d7cb2fc67b91d49dc30e24c75a3c
-        size: 3556249
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.openbsd-amd64.tar.gz
-      - name: apache_exporter-0.4.0.openbsd-armv7.tar.gz
-        sha256: sha256:bccfc4311ef4034096ea5ed3dee0d004abb32683271a0df47e249aaef8e77221
-        size: 3262587
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.openbsd-armv7.tar.gz
-      - name: apache_exporter-0.4.0.windows-386.tar.gz
-        sha256: sha256:457c38176fcd354a92248727ba5cc2f9bc1af6b1cb2ac1868905135de82f8806
-        size: 3324029
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.windows-386.tar.gz
-      - name: apache_exporter-0.4.0.windows-amd64.tar.gz
-        sha256: sha256:cd83d49531c31cd05db1d885dd7213e819ba5d5e749c2ffc2d647528cb0d685d
-        size: 3540110
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.windows-amd64.tar.gz
-      - name: sha256sums.txt
-        sha256: sha256:52bc6e2898bfd6b05310d6f02ec4bcfd3d68706a5a35df053bd042ee66c55b41
-        size: 2804
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/sha256sums.txt
-    prerelease: false
-    published:
-      timestamp: 2017-10-05 22:10:24
-  v0.5.0:
-    commit:
-      sha: f6a5b4814ea795ee9eac745c55649cce9e5117a9
-    files:
-      - name: apache_exporter-0.5.0.darwin-386.tar.gz
-        sha256: sha256:cedba0e62fea89a354c0e2a650626005510d7dfdb86da6b488aa820e06a0ffed
-        size: 3381189
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.darwin-386.tar.gz
-      - name: apache_exporter-0.5.0.darwin-amd64.tar.gz
-        sha256: sha256:8ae47ccf3899443bf23044e6e01966a1af0301dc9c4d2bc38ec716614603897a
-        size: 3590728
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.darwin-amd64.tar.gz
-      - name: apache_exporter-0.5.0.dragonfly-amd64.tar.gz
-        sha256: sha256:7f97e455e627eb0a5bcf4a02a4e2a742f81a41225ee0d0fee1d5e981344ece53
-        size: 3555961
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.dragonfly-amd64.tar.gz
-      - name: apache_exporter-0.5.0.freebsd-386.tar.gz
-        sha256: sha256:7d2d4ec77917c3b82bf133ca5b31f40cc769819b5fb88390fb0d44005bcc9583
-        size: 3350209
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.freebsd-386.tar.gz
-      - name: apache_exporter-0.5.0.freebsd-amd64.tar.gz
-        sha256: sha256:d99b8b55a994804ee0b2be33c53ad196f5fe1448cb5cd8fa010754749983d162
-        size: 3559450
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.freebsd-amd64.tar.gz
-      - name: apache_exporter-0.5.0.freebsd-armv6.tar.gz
-        sha256: sha256:e47f1efda7108f5305a2c3104e624d57853becb6b1c2a5ae78a868373b86e916
-        size: 3267084
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.freebsd-armv6.tar.gz
-      - name: apache_exporter-0.5.0.freebsd-armv7.tar.gz
-        sha256: sha256:4c6b8f1a45812ea93ede941114c80299f95c26cc14415d740640010bd012e55c
-        size: 3263176
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.freebsd-armv7.tar.gz
-      - name: apache_exporter-0.5.0.linux-386.tar.gz
-        sha256: sha256:466d3b883417c68e8dde93a12195603ab3c2869451ffc7811dac4ea73019543a
-        size: 3339876
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-386.tar.gz
-      - name: apache_exporter-0.5.0.linux-amd64.tar.gz
-        sha256: sha256:60dc120e0c5d9325beaec4289d719e3b05179531f470f87d610dc2870c118144
-        size: 3550651
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-amd64.tar.gz
-      - name: apache_exporter-0.5.0.linux-arm64.tar.gz
-        sha256: sha256:5b94ac5497ddc410da2438b801d9f30c66bb2bf209625a7a2da1472b6ea017c6
-        size: 3232390
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-arm64.tar.gz
-      - name: apache_exporter-0.5.0.linux-armv5.tar.gz
-        sha256: sha256:d33c62581a2e62f5a87d636470b0cbd89420084d76b8a0d3297dff05e296fcb1
-        size: 3271631
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-armv5.tar.gz
-      - name: apache_exporter-0.5.0.linux-armv6.tar.gz
-        sha256: sha256:043b071b375964dbf42e25e69bd0845b393a21ce21215517e67f15da1841ad48
-        size: 3253295
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-armv6.tar.gz
-      - name: apache_exporter-0.5.0.linux-armv7.tar.gz
-        sha256: sha256:feeef2439fe6032ac80a18d2b251a68b74af0e36ec44c6bd797d0463f7341f70
-        size: 3247093
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-armv7.tar.gz
-      - name: apache_exporter-0.5.0.linux-mips64.tar.gz
-        sha256: sha256:53e9aa7e6abba7934a8e04e1c2e1c716fff92796520e216b2beb88209cad2080
-        size: 3251083
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-mips64.tar.gz
-      - name: apache_exporter-0.5.0.linux-mips64le.tar.gz
-        sha256: sha256:58479a230fa23e781f74b13a0b5075f80af0593a020a7fdc5f85b3ef5d485d48
-        size: 3147318
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-mips64le.tar.gz
-      - name: apache_exporter-0.5.0.linux-ppc64.tar.gz
-        sha256: sha256:4fb3d952e8fe87190b9d0fc8b2a79e4ed854c07b7f9368e82f16662fc9aed7ef
-        size: 3301328
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-ppc64.tar.gz
-      - name: apache_exporter-0.5.0.linux-ppc64le.tar.gz
-        sha256: sha256:7cecd597bfab40d5a1026f79f7cba0c0448d04a0f97ed4f0d0f0d46700268aaf
-        size: 3224920
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-ppc64le.tar.gz
-      - name: apache_exporter-0.5.0.netbsd-386.tar.gz
-        sha256: sha256:8223a9f0506b4457d4d044fefdb3e5e039e4f76180e982d97a416f4e963f4df0
-        size: 3342973
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.netbsd-386.tar.gz
-      - name: apache_exporter-0.5.0.netbsd-amd64.tar.gz
-        sha256: sha256:d6c1419d0031d7c23f6337855881f2c174220a9d187b4f35ddae32862131fb85
-        size: 3553742
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.netbsd-amd64.tar.gz
-      - name: apache_exporter-0.5.0.netbsd-armv6.tar.gz
-        sha256: sha256:626a6ebcd22cb4206042b2b89e7369589ef2e1f0476e38114caf86559e6b9262
-        size: 3262573
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.netbsd-armv6.tar.gz
-      - name: apache_exporter-0.5.0.netbsd-armv7.tar.gz
-        sha256: sha256:19a5b8e097a70931faec943fedb2b16259aa1c399ab5163c3715463875e7913b
-        size: 3260231
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.netbsd-armv7.tar.gz
-      - name: apache_exporter-0.5.0.openbsd-386.tar.gz
-        sha256: sha256:4d287eae21e0f05c8fd7fb54f8cec1f685e7cc375927ee4ca1507d30d656c4db
-        size: 3347639
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.openbsd-386.tar.gz
-      - name: apache_exporter-0.5.0.openbsd-amd64.tar.gz
-        sha256: sha256:f3ec65c1bac4759726d4f642abaadc620a39d09d8541cee06e2297602798c44d
-        size: 3559063
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.openbsd-amd64.tar.gz
-      - name: apache_exporter-0.5.0.openbsd-armv7.tar.gz
-        sha256: sha256:3af85a85e0e07e0cc01ceaa1e72c8f314efef367974fd298daffb8fe71015f0b
-        size: 3263999
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.openbsd-armv7.tar.gz
-      - name: apache_exporter-0.5.0.windows-386.tar.gz
-        sha256: sha256:f01dada5e514238ad80598246120c57f41a1558400244b699a56167ed1699cbc
-        size: 3325171
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.windows-386.tar.gz
-      - name: apache_exporter-0.5.0.windows-amd64.tar.gz
-        sha256: sha256:d32e6d9ef3aa3ae23658051d1de6b2c4851c6d2176c8a5f79164dd908bb44317
-        size: 3541725
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.windows-amd64.tar.gz
-      - name: sha256sums.txt
-        sha256: sha256:005852824e1490740502d47f7b9068a04d0446243f1c965cfcc1f8ebb00ed738
-        size: 2804
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/sha256sums.txt
-    prerelease: false
-    published:
-      timestamp: 2017-11-13 21:17:18
-  v0.6.0:
-    commit:
-      sha: e2f99c4410a1d6430f936615ec44afc0f841c294
-    files:
-      - name: apache_exporter-0.6.0.darwin-386.tar.gz
-        sha256: sha256:1adb6fcb1ed500ffb26dc345141cf2f31b8118e9ed9c6e04e447cbbe294364f5
-        size: 6084108
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.darwin-386.tar.gz
-      - name: apache_exporter-0.6.0.darwin-amd64.tar.gz
-        sha256: sha256:ff98dc4041ba0025696b4b4b1551a8805ad1394b32c80b2c96fe72c472ebcf8d
-        size: 6230118
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.darwin-amd64.tar.gz
-      - name: apache_exporter-0.6.0.dragonfly-amd64.tar.gz
-        sha256: sha256:9f15f4a3fb5fe4df577a5f8a8427db73191b6750a85b30ca4e53490648d7187d
-        size: 6180123
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.dragonfly-amd64.tar.gz
-      - name: apache_exporter-0.6.0.freebsd-386.tar.gz
-        sha256: sha256:e45705563e8925092ab8bd64fbf5d8e08d1ddefec94dfeae28cb920660744c5c
-        size: 6009581
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.freebsd-386.tar.gz
-      - name: apache_exporter-0.6.0.freebsd-amd64.tar.gz
-        sha256: sha256:beb4e2c7c5f67363e6a50e57bdf8dac4fe2ac73beb15f4942142e8123e4eb294
-        size: 6206210
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.freebsd-amd64.tar.gz
-      - name: apache_exporter-0.6.0.freebsd-armv6.tar.gz
-        sha256: sha256:0d1cc9f44f839b0b1d5ac5e08da828feb323194b0319d5bd01e543bb7f81cc9b
-        size: 5765148
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.freebsd-armv6.tar.gz
-      - name: apache_exporter-0.6.0.freebsd-armv7.tar.gz
-        sha256: sha256:62d45704206830b0c2dca6324d43ffb9413f8baa8c114fa0371dad898cb11c06
-        size: 5760670
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.freebsd-armv7.tar.gz
-      - name: apache_exporter-0.6.0.linux-386.tar.gz
-        sha256: sha256:2ea464be57045311565906f8ae4c100853ec1ace42a69652d1ab67dfe50cec36
-        size: 6002941
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-386.tar.gz
-      - name: apache_exporter-0.6.0.linux-amd64.tar.gz
-        sha256: sha256:661147b70636d4ab4e6142a29b6fc3b202c33f76b2e5663261d8858e1ae6ee3b
-        size: 6191204
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-amd64.tar.gz
-      - name: apache_exporter-0.6.0.linux-arm64.tar.gz
-        sha256: sha256:22d7c0dfab90536ba2c1a3362e523715ac810b3deb7423ac902d5e66671ee5f3
-        size: 5783011
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-arm64.tar.gz
-      - name: apache_exporter-0.6.0.linux-armv5.tar.gz
-        sha256: sha256:309d45ef427b849053885c7e8f00e4ac94da0a9ccc2e1ff453f93ec96d3b9f07
-        size: 5769414
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-armv5.tar.gz
-      - name: apache_exporter-0.6.0.linux-armv6.tar.gz
-        sha256: sha256:46c6fdb0bcd25c0cdd147a284b6fad8d9f4c3bf1b8133c56ecdd9ccb0f40a610
-        size: 5753802
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-armv6.tar.gz
-      - name: apache_exporter-0.6.0.linux-armv7.tar.gz
-        sha256: sha256:ea56af1ca338f699fbdfc4042d7829858ebb05bd15d1575d65af0b6ca2ee8b90
-        size: 5750662
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-armv7.tar.gz
-      - name: apache_exporter-0.6.0.linux-mips.tar.gz
-        sha256: sha256:66f34d60839e88204cadecb79b3b0bf9a9f5a78711549bb68511653c1e327c83
-        size: 5730499
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-mips.tar.gz
-      - name: apache_exporter-0.6.0.linux-mips64.tar.gz
-        sha256: sha256:524e45fe0ad503d7ce89d12952ffda6ba026e64af6875cd23346d459a16f2e1e
-        size: 5862126
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-mips64.tar.gz
-      - name: apache_exporter-0.6.0.linux-mips64le.tar.gz
-        sha256: sha256:172d3cb267843329c1ab2630596c599bb7776e7f2999e61c41a87df2b5e3da87
-        size: 5685779
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-mips64le.tar.gz
-      - name: apache_exporter-0.6.0.linux-mipsle.tar.gz
-        sha256: sha256:785097fb43356040fd27a89f367e44afe39c431923cce6c33ccf36b83985acc0
-        size: 5607512
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-mipsle.tar.gz
-      - name: apache_exporter-0.6.0.linux-ppc64.tar.gz
-        sha256: sha256:516a608679d559e8368d9ff2d002cf0779d29ce69f1ba75a30b5437594d29d29
-        size: 5909827
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-ppc64.tar.gz
-      - name: apache_exporter-0.6.0.linux-ppc64le.tar.gz
-        sha256: sha256:5d702a1c2209673c27df0d59d42bf6fcbe326cb65ad4e4f1e7dce082edc5c879
-        size: 5764119
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-ppc64le.tar.gz
-      - name: apache_exporter-0.6.0.linux-s390x.tar.gz
-        sha256: sha256:afdbededcdbd503186dbc69880668d5e3de0fce744dc7ce4aaec97365ee74283
-        size: 6290896
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-s390x.tar.gz
-      - name: apache_exporter-0.6.0.netbsd-386.tar.gz
-        sha256: sha256:7add8f4e6caeb80253209dfd56a0e94e7a178f234d1e79409d9ab0190075ee49
-        size: 5986855
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.netbsd-386.tar.gz
-      - name: apache_exporter-0.6.0.netbsd-amd64.tar.gz
-        sha256: sha256:346cfc104db7e00fd9c5eadd8777f427a452b5d1c21f8d7a286e6fc93f01d5c7
-        size: 6178349
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.netbsd-amd64.tar.gz
-      - name: apache_exporter-0.6.0.netbsd-armv6.tar.gz
-        sha256: sha256:12178ca6f4881e1bdbe6b4a0a9f4b9ab461ed34aca1384393eb91d52c4c278d7
-        size: 5743806
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.netbsd-armv6.tar.gz
-      - name: apache_exporter-0.6.0.netbsd-armv7.tar.gz
-        sha256: sha256:5ed628bd3b111191c824cc121ec481b8cbb487330118d6de717c4f01dff317f5
-        size: 5739405
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.netbsd-armv7.tar.gz
-      - name: apache_exporter-0.6.0.openbsd-386.tar.gz
-        sha256: sha256:5153a8dafc94189cd170a56537c3b9e3fb02b9dd86f2668cb14f3642eb70989a
-        size: 5989480
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.openbsd-386.tar.gz
-      - name: apache_exporter-0.6.0.openbsd-amd64.tar.gz
-        sha256: sha256:6f64c9367d1134bdfc42315a4373aedfe0d682c2038f852c0655d98604ba677e
-        size: 6184895
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.openbsd-amd64.tar.gz
-      - name: apache_exporter-0.6.0.openbsd-armv7.tar.gz
-        sha256: sha256:3c9ba7b8da56e2a66eecb91209da5516055b5b210561fdf703bd7984aa51d52d
-        size: 5740671
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.openbsd-armv7.tar.gz
-      - name: apache_exporter-0.6.0.windows-386.tar.gz
-        sha256: sha256:c9bf25a91c52c198c0f12bab1c95107c0b007fa812d335404cc7a4cd64ca98cf
-        size: 5867083
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.windows-386.tar.gz
-      - name: apache_exporter-0.6.0.windows-amd64.tar.gz
-        sha256: sha256:63ef0e022f7106e728d03a8be5538ea95398252c0c44fc31a902e2a456873cd6
-        size: 6074409
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.windows-amd64.tar.gz
-      - name: sha256sums.txt
-        sha256: sha256:3f12ce859c55d26457934a87582e8976cffee09666c85203d9f81c4665afd067
-        size: 3125
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/sha256sums.txt
-    prerelease: false
-    published:
-      timestamp: 2019-05-23 10:38:12
-  v0.7.0:
-    commit:
-      sha: 6195241a96c02af175ba2842dfd883682133b066
-    files:
-      - name: apache_exporter-0.7.0.darwin-386.tar.gz
-        sha256: sha256:e597db3f95eaeaee8fa40ba3d321d7555bc004925392384f9cff90889d92cba6
-        size: 6124595
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.darwin-386.tar.gz
-      - name: apache_exporter-0.7.0.darwin-amd64.tar.gz
-        sha256: sha256:b3a7db86c3873ca06ef3876e054456547122c8fe02b8a020df3fdadf4b24db0d
-        size: 6277656
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.darwin-amd64.tar.gz
-      - name: apache_exporter-0.7.0.dragonfly-amd64.tar.gz
-        sha256: sha256:b99a4e4393a41b6445f4d7f1bc0fd2a74df466be08e9e84b673baf966d48ca10
-        size: 6227125
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.dragonfly-amd64.tar.gz
-      - name: apache_exporter-0.7.0.freebsd-386.tar.gz
-        sha256: sha256:0b2b59c8b51497f3846def23f518e043e5c18c7d87a4a55e9828da2f70e4f5b5
-        size: 6053742
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.freebsd-386.tar.gz
-      - name: apache_exporter-0.7.0.freebsd-amd64.tar.gz
-        sha256: sha256:5de989e09851710e715fdfadc19a6edf3543519067630d3e6d9f465f92ec7ec6
-        size: 6253011
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.freebsd-amd64.tar.gz
-      - name: apache_exporter-0.7.0.freebsd-armv6.tar.gz
-        sha256: sha256:f5c7059e8e0705b5906afe593d2fd0e4fe152bf9b2a5165d172cf1e794ff6763
-        size: 5807813
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.freebsd-armv6.tar.gz
-      - name: apache_exporter-0.7.0.freebsd-armv7.tar.gz
-        sha256: sha256:578da8cfedc9d7f07c73030df5e09f6da751b00698c804beaf8edeb07b1ddf2e
-        size: 5804961
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.freebsd-armv7.tar.gz
-      - name: apache_exporter-0.7.0.linux-386.tar.gz
-        sha256: sha256:7874ae75795c32c085f5d3e64245cb878409c1c15ecf3659f7475982a7d3cc48
-        size: 6050299
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-386.tar.gz
-      - name: apache_exporter-0.7.0.linux-amd64.tar.gz
-        sha256: sha256:0258660d53fb745283ef8d50eef3e50a20c4899997df787b085d52d879bd0561
-        size: 6239016
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-amd64.tar.gz
-      - name: apache_exporter-0.7.0.linux-arm64.tar.gz
-        sha256: sha256:ccfd586906197c7d6f6b227739b55ff9185b7afb3fd84d2591f19d65b1a0935d
-        size: 5827221
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-arm64.tar.gz
-      - name: apache_exporter-0.7.0.linux-armv5.tar.gz
-        sha256: sha256:a1f49c4026abac015ce343cb210c4df81418081b02243de826b77f8c09b68601
-        size: 5812272
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-armv5.tar.gz
-      - name: apache_exporter-0.7.0.linux-armv6.tar.gz
-        sha256: sha256:55948073e6e0b4da6ed1ca7911da9bbadc2eb9ed498f0a5adc3a73ca9063c483
-        size: 5797616
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-armv6.tar.gz
-      - name: apache_exporter-0.7.0.linux-armv7.tar.gz
-        sha256: sha256:f87de192ecf75509db73ca3cd845f46c84a329606593924bf393294e8e1c3ba0
-        size: 5794088
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-armv7.tar.gz
-      - name: apache_exporter-0.7.0.linux-mips.tar.gz
-        sha256: sha256:4a9b0c4371d857504edb7ac5fc1b163c871b010c90d06540d44b0f84b966d334
-        size: 5771038
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-mips.tar.gz
-      - name: apache_exporter-0.7.0.linux-mips64.tar.gz
-        sha256: sha256:8140fd5672562e32fdef1fe78996191704dad797ee1484e0dccf9c5824b1a7a9
-        size: 5902221
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-mips64.tar.gz
-      - name: apache_exporter-0.7.0.linux-mips64le.tar.gz
-        sha256: sha256:46faf606d1e89ac2fe02b334e42308c03751b590f7d4b1fcaac81c97f8e2be2f
-        size: 5730023
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-mips64le.tar.gz
-      - name: apache_exporter-0.7.0.linux-mipsle.tar.gz
-        sha256: sha256:ad4b7923360e49ce03eb4d2c2f3b3451d1389b02c42ff911b7419ec9aa5a33ed
-        size: 5647508
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-mipsle.tar.gz
-      - name: apache_exporter-0.7.0.linux-ppc64.tar.gz
-        sha256: sha256:f143ac19eb5df26f8380cd6c9bb02751f4353854e12497ebef8ba9fef2908170
-        size: 5965331
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-ppc64.tar.gz
-      - name: apache_exporter-0.7.0.linux-ppc64le.tar.gz
-        sha256: sha256:ffe41fc3ce22c31dfcd70dc69075f8066ecc128327cba22a9b8d39f55476c371
-        size: 5812154
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-ppc64le.tar.gz
-      - name: apache_exporter-0.7.0.linux-s390x.tar.gz
-        sha256: sha256:9970124a10ed05a933f24a4f637abe7eaeb660992242a48ba3043bbdbf179d70
-        size: 6345847
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-s390x.tar.gz
-      - name: apache_exporter-0.7.0.netbsd-386.tar.gz
-        sha256: sha256:bf83608a731be39d608a7fed5fcd99d7376b8cecb065d6580fe3eb8125f92dc3
-        size: 6030340
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.netbsd-386.tar.gz
-      - name: apache_exporter-0.7.0.netbsd-amd64.tar.gz
-        sha256: sha256:4f225f6168ec5d42d24ddee584075739dc39cfa78d2ba6123f3f1019bfaed130
-        size: 6227748
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.netbsd-amd64.tar.gz
-      - name: apache_exporter-0.7.0.netbsd-armv6.tar.gz
-        sha256: sha256:a0eccec9584dc8d236ae2dff4a84688633603c984104960c6373bbe012256682
-        size: 5786690
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.netbsd-armv6.tar.gz
-      - name: apache_exporter-0.7.0.netbsd-armv7.tar.gz
-        sha256: sha256:4039fe1b59334ea7ca2eb024ba3a364ea62288dd51074f43aa83dfecd7ad1f65
-        size: 5783401
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.netbsd-armv7.tar.gz
-      - name: apache_exporter-0.7.0.openbsd-386.tar.gz
-        sha256: sha256:80de7b4f4b93356bc94318f5f0931d7d731b0a7212da33b27e9ab912476a92b1
-        size: 6032656
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.openbsd-386.tar.gz
-      - name: apache_exporter-0.7.0.openbsd-amd64.tar.gz
-        sha256: sha256:c14204226b3954b28efda5943a3b7a8f06e78e458dc48773473fed4b068d51ae
-        size: 6230266
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.openbsd-amd64.tar.gz
-      - name: apache_exporter-0.7.0.openbsd-armv7.tar.gz
-        sha256: sha256:e9d516823d9675467ee362dc405d3b903945e4cfc31bb5765142b88e42132e1c
-        size: 5783091
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.openbsd-armv7.tar.gz
-      - name: apache_exporter-0.7.0.windows-386.tar.gz
-        sha256: sha256:9593f64f95d13a47f5f18046345260352603c04b53e3b9031ae0b0afe060d3b4
-        size: 5905453
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.windows-386.tar.gz
-      - name: apache_exporter-0.7.0.windows-amd64.tar.gz
-        sha256: sha256:09d6dc2d7bea45154d34df8fb596dbdb5cb84731b0c77b70dde0f76639607cd6
-        size: 6115448
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.windows-amd64.tar.gz
-      - name: sha256sums.txt
-        sha256: sha256:1204c0ec4cba78d1d147a596671dfcb917466e75c62c989e71ecaee62d9a72d1
-        size: 3125
-        url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/sha256sums.txt
-    prerelease: false
-    published:
-      timestamp: 2019-06-21 12:05:23
-software_metadata:
-  prerelease: master
-  release: v0.7.0
-  updated: 2020-02-27 06:24:22.789617
+  releases:
+    - name: v0.7.0
+      commit: null
+      timestamp: '2019-06-21T12:05:48'
+      prerelease: false
+      files:
+        - name: apache_exporter-0.7.0.darwin-386.tar.gz
+          commit: null
+          size: 6124595
+          sha256: sha256:e597db3f95eaeaee8fa40ba3d321d7555bc004925392384f9cff90889d92cba6
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.darwin-386.tar.gz
+        - name: apache_exporter-0.7.0.darwin-amd64.tar.gz
+          commit: null
+          size: 6277656
+          sha256: sha256:b3a7db86c3873ca06ef3876e054456547122c8fe02b8a020df3fdadf4b24db0d
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.darwin-amd64.tar.gz
+        - name: apache_exporter-0.7.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 6227125
+          sha256: sha256:b99a4e4393a41b6445f4d7f1bc0fd2a74df466be08e9e84b673baf966d48ca10
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.dragonfly-amd64.tar.gz
+        - name: apache_exporter-0.7.0.freebsd-386.tar.gz
+          commit: null
+          size: 6053742
+          sha256: sha256:0b2b59c8b51497f3846def23f518e043e5c18c7d87a4a55e9828da2f70e4f5b5
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.freebsd-386.tar.gz
+        - name: apache_exporter-0.7.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 6253011
+          sha256: sha256:5de989e09851710e715fdfadc19a6edf3543519067630d3e6d9f465f92ec7ec6
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.freebsd-amd64.tar.gz
+        - name: apache_exporter-0.7.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 5807813
+          sha256: sha256:f5c7059e8e0705b5906afe593d2fd0e4fe152bf9b2a5165d172cf1e794ff6763
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.freebsd-armv6.tar.gz
+        - name: apache_exporter-0.7.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 5804961
+          sha256: sha256:578da8cfedc9d7f07c73030df5e09f6da751b00698c804beaf8edeb07b1ddf2e
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.freebsd-armv7.tar.gz
+        - name: apache_exporter-0.7.0.linux-386.tar.gz
+          commit: null
+          size: 6050299
+          sha256: sha256:7874ae75795c32c085f5d3e64245cb878409c1c15ecf3659f7475982a7d3cc48
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-386.tar.gz
+        - name: apache_exporter-0.7.0.linux-amd64.tar.gz
+          commit: null
+          size: 6239016
+          sha256: sha256:0258660d53fb745283ef8d50eef3e50a20c4899997df787b085d52d879bd0561
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-amd64.tar.gz
+        - name: apache_exporter-0.7.0.linux-arm64.tar.gz
+          commit: null
+          size: 5827221
+          sha256: sha256:ccfd586906197c7d6f6b227739b55ff9185b7afb3fd84d2591f19d65b1a0935d
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-arm64.tar.gz
+        - name: apache_exporter-0.7.0.linux-armv5.tar.gz
+          commit: null
+          size: 5812272
+          sha256: sha256:a1f49c4026abac015ce343cb210c4df81418081b02243de826b77f8c09b68601
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-armv5.tar.gz
+        - name: apache_exporter-0.7.0.linux-armv6.tar.gz
+          commit: null
+          size: 5797616
+          sha256: sha256:55948073e6e0b4da6ed1ca7911da9bbadc2eb9ed498f0a5adc3a73ca9063c483
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-armv6.tar.gz
+        - name: apache_exporter-0.7.0.linux-armv7.tar.gz
+          commit: null
+          size: 5794088
+          sha256: sha256:f87de192ecf75509db73ca3cd845f46c84a329606593924bf393294e8e1c3ba0
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-armv7.tar.gz
+        - name: apache_exporter-0.7.0.linux-mips.tar.gz
+          commit: null
+          size: 5771038
+          sha256: sha256:4a9b0c4371d857504edb7ac5fc1b163c871b010c90d06540d44b0f84b966d334
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-mips.tar.gz
+        - name: apache_exporter-0.7.0.linux-mips64.tar.gz
+          commit: null
+          size: 5902221
+          sha256: sha256:8140fd5672562e32fdef1fe78996191704dad797ee1484e0dccf9c5824b1a7a9
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-mips64.tar.gz
+        - name: apache_exporter-0.7.0.linux-mips64le.tar.gz
+          commit: null
+          size: 5730023
+          sha256: sha256:46faf606d1e89ac2fe02b334e42308c03751b590f7d4b1fcaac81c97f8e2be2f
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-mips64le.tar.gz
+        - name: apache_exporter-0.7.0.linux-mipsle.tar.gz
+          commit: null
+          size: 5647508
+          sha256: sha256:ad4b7923360e49ce03eb4d2c2f3b3451d1389b02c42ff911b7419ec9aa5a33ed
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-mipsle.tar.gz
+        - name: apache_exporter-0.7.0.linux-ppc64.tar.gz
+          commit: null
+          size: 5965331
+          sha256: sha256:f143ac19eb5df26f8380cd6c9bb02751f4353854e12497ebef8ba9fef2908170
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-ppc64.tar.gz
+        - name: apache_exporter-0.7.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 5812154
+          sha256: sha256:ffe41fc3ce22c31dfcd70dc69075f8066ecc128327cba22a9b8d39f55476c371
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-ppc64le.tar.gz
+        - name: apache_exporter-0.7.0.linux-s390x.tar.gz
+          commit: null
+          size: 6345847
+          sha256: sha256:9970124a10ed05a933f24a4f637abe7eaeb660992242a48ba3043bbdbf179d70
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.linux-s390x.tar.gz
+        - name: apache_exporter-0.7.0.netbsd-386.tar.gz
+          commit: null
+          size: 6030340
+          sha256: sha256:bf83608a731be39d608a7fed5fcd99d7376b8cecb065d6580fe3eb8125f92dc3
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.netbsd-386.tar.gz
+        - name: apache_exporter-0.7.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 6227748
+          sha256: sha256:4f225f6168ec5d42d24ddee584075739dc39cfa78d2ba6123f3f1019bfaed130
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.netbsd-amd64.tar.gz
+        - name: apache_exporter-0.7.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 5786690
+          sha256: sha256:a0eccec9584dc8d236ae2dff4a84688633603c984104960c6373bbe012256682
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.netbsd-armv6.tar.gz
+        - name: apache_exporter-0.7.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 5783401
+          sha256: sha256:4039fe1b59334ea7ca2eb024ba3a364ea62288dd51074f43aa83dfecd7ad1f65
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.netbsd-armv7.tar.gz
+        - name: apache_exporter-0.7.0.openbsd-386.tar.gz
+          commit: null
+          size: 6032656
+          sha256: sha256:80de7b4f4b93356bc94318f5f0931d7d731b0a7212da33b27e9ab912476a92b1
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.openbsd-386.tar.gz
+        - name: apache_exporter-0.7.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 6230266
+          sha256: sha256:c14204226b3954b28efda5943a3b7a8f06e78e458dc48773473fed4b068d51ae
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.openbsd-amd64.tar.gz
+        - name: apache_exporter-0.7.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 5783091
+          sha256: sha256:e9d516823d9675467ee362dc405d3b903945e4cfc31bb5765142b88e42132e1c
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.openbsd-armv7.tar.gz
+        - name: apache_exporter-0.7.0.windows-386.tar.gz
+          commit: null
+          size: 5905453
+          sha256: sha256:9593f64f95d13a47f5f18046345260352603c04b53e3b9031ae0b0afe060d3b4
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.windows-386.tar.gz
+        - name: apache_exporter-0.7.0.windows-amd64.tar.gz
+          commit: null
+          size: 6115448
+          sha256: sha256:09d6dc2d7bea45154d34df8fb596dbdb5cb84731b0c77b70dde0f76639607cd6
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/apache_exporter-0.7.0.windows-amd64.tar.gz
+        - name: sha256sums.txt
+          commit: null
+          size: 3125
+          sha256: sha256:1204c0ec4cba78d1d147a596671dfcb917466e75c62c989e71ecaee62d9a72d1
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.7.0/sha256sums.txt
+    - name: v0.6.0
+      commit: null
+      timestamp: '2019-05-23T10:38:12'
+      prerelease: false
+      files:
+        - name: apache_exporter-0.6.0.darwin-386.tar.gz
+          commit: null
+          size: 6084108
+          sha256: sha256:1adb6fcb1ed500ffb26dc345141cf2f31b8118e9ed9c6e04e447cbbe294364f5
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.darwin-386.tar.gz
+        - name: apache_exporter-0.6.0.darwin-amd64.tar.gz
+          commit: null
+          size: 6230118
+          sha256: sha256:ff98dc4041ba0025696b4b4b1551a8805ad1394b32c80b2c96fe72c472ebcf8d
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.darwin-amd64.tar.gz
+        - name: apache_exporter-0.6.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 6180123
+          sha256: sha256:9f15f4a3fb5fe4df577a5f8a8427db73191b6750a85b30ca4e53490648d7187d
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.dragonfly-amd64.tar.gz
+        - name: apache_exporter-0.6.0.freebsd-386.tar.gz
+          commit: null
+          size: 6009581
+          sha256: sha256:e45705563e8925092ab8bd64fbf5d8e08d1ddefec94dfeae28cb920660744c5c
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.freebsd-386.tar.gz
+        - name: apache_exporter-0.6.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 6206210
+          sha256: sha256:beb4e2c7c5f67363e6a50e57bdf8dac4fe2ac73beb15f4942142e8123e4eb294
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.freebsd-amd64.tar.gz
+        - name: apache_exporter-0.6.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 5765148
+          sha256: sha256:0d1cc9f44f839b0b1d5ac5e08da828feb323194b0319d5bd01e543bb7f81cc9b
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.freebsd-armv6.tar.gz
+        - name: apache_exporter-0.6.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 5760670
+          sha256: sha256:62d45704206830b0c2dca6324d43ffb9413f8baa8c114fa0371dad898cb11c06
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.freebsd-armv7.tar.gz
+        - name: apache_exporter-0.6.0.linux-386.tar.gz
+          commit: null
+          size: 6002941
+          sha256: sha256:2ea464be57045311565906f8ae4c100853ec1ace42a69652d1ab67dfe50cec36
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-386.tar.gz
+        - name: apache_exporter-0.6.0.linux-amd64.tar.gz
+          commit: null
+          size: 6191204
+          sha256: sha256:661147b70636d4ab4e6142a29b6fc3b202c33f76b2e5663261d8858e1ae6ee3b
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-amd64.tar.gz
+        - name: apache_exporter-0.6.0.linux-arm64.tar.gz
+          commit: null
+          size: 5783011
+          sha256: sha256:22d7c0dfab90536ba2c1a3362e523715ac810b3deb7423ac902d5e66671ee5f3
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-arm64.tar.gz
+        - name: apache_exporter-0.6.0.linux-armv5.tar.gz
+          commit: null
+          size: 5769414
+          sha256: sha256:309d45ef427b849053885c7e8f00e4ac94da0a9ccc2e1ff453f93ec96d3b9f07
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-armv5.tar.gz
+        - name: apache_exporter-0.6.0.linux-armv6.tar.gz
+          commit: null
+          size: 5753802
+          sha256: sha256:46c6fdb0bcd25c0cdd147a284b6fad8d9f4c3bf1b8133c56ecdd9ccb0f40a610
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-armv6.tar.gz
+        - name: apache_exporter-0.6.0.linux-armv7.tar.gz
+          commit: null
+          size: 5750662
+          sha256: sha256:ea56af1ca338f699fbdfc4042d7829858ebb05bd15d1575d65af0b6ca2ee8b90
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-armv7.tar.gz
+        - name: apache_exporter-0.6.0.linux-mips.tar.gz
+          commit: null
+          size: 5730499
+          sha256: sha256:66f34d60839e88204cadecb79b3b0bf9a9f5a78711549bb68511653c1e327c83
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-mips.tar.gz
+        - name: apache_exporter-0.6.0.linux-mips64.tar.gz
+          commit: null
+          size: 5862126
+          sha256: sha256:524e45fe0ad503d7ce89d12952ffda6ba026e64af6875cd23346d459a16f2e1e
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-mips64.tar.gz
+        - name: apache_exporter-0.6.0.linux-mips64le.tar.gz
+          commit: null
+          size: 5685779
+          sha256: sha256:172d3cb267843329c1ab2630596c599bb7776e7f2999e61c41a87df2b5e3da87
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-mips64le.tar.gz
+        - name: apache_exporter-0.6.0.linux-mipsle.tar.gz
+          commit: null
+          size: 5607512
+          sha256: sha256:785097fb43356040fd27a89f367e44afe39c431923cce6c33ccf36b83985acc0
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-mipsle.tar.gz
+        - name: apache_exporter-0.6.0.linux-ppc64.tar.gz
+          commit: null
+          size: 5909827
+          sha256: sha256:516a608679d559e8368d9ff2d002cf0779d29ce69f1ba75a30b5437594d29d29
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-ppc64.tar.gz
+        - name: apache_exporter-0.6.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 5764119
+          sha256: sha256:5d702a1c2209673c27df0d59d42bf6fcbe326cb65ad4e4f1e7dce082edc5c879
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-ppc64le.tar.gz
+        - name: apache_exporter-0.6.0.linux-s390x.tar.gz
+          commit: null
+          size: 6290896
+          sha256: sha256:afdbededcdbd503186dbc69880668d5e3de0fce744dc7ce4aaec97365ee74283
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.linux-s390x.tar.gz
+        - name: apache_exporter-0.6.0.netbsd-386.tar.gz
+          commit: null
+          size: 5986855
+          sha256: sha256:7add8f4e6caeb80253209dfd56a0e94e7a178f234d1e79409d9ab0190075ee49
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.netbsd-386.tar.gz
+        - name: apache_exporter-0.6.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 6178349
+          sha256: sha256:346cfc104db7e00fd9c5eadd8777f427a452b5d1c21f8d7a286e6fc93f01d5c7
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.netbsd-amd64.tar.gz
+        - name: apache_exporter-0.6.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 5743806
+          sha256: sha256:12178ca6f4881e1bdbe6b4a0a9f4b9ab461ed34aca1384393eb91d52c4c278d7
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.netbsd-armv6.tar.gz
+        - name: apache_exporter-0.6.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 5739405
+          sha256: sha256:5ed628bd3b111191c824cc121ec481b8cbb487330118d6de717c4f01dff317f5
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.netbsd-armv7.tar.gz
+        - name: apache_exporter-0.6.0.openbsd-386.tar.gz
+          commit: null
+          size: 5989480
+          sha256: sha256:5153a8dafc94189cd170a56537c3b9e3fb02b9dd86f2668cb14f3642eb70989a
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.openbsd-386.tar.gz
+        - name: apache_exporter-0.6.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 6184895
+          sha256: sha256:6f64c9367d1134bdfc42315a4373aedfe0d682c2038f852c0655d98604ba677e
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.openbsd-amd64.tar.gz
+        - name: apache_exporter-0.6.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 5740671
+          sha256: sha256:3c9ba7b8da56e2a66eecb91209da5516055b5b210561fdf703bd7984aa51d52d
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.openbsd-armv7.tar.gz
+        - name: apache_exporter-0.6.0.windows-386.tar.gz
+          commit: null
+          size: 5867083
+          sha256: sha256:c9bf25a91c52c198c0f12bab1c95107c0b007fa812d335404cc7a4cd64ca98cf
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.windows-386.tar.gz
+        - name: apache_exporter-0.6.0.windows-amd64.tar.gz
+          commit: null
+          size: 6074409
+          sha256: sha256:63ef0e022f7106e728d03a8be5538ea95398252c0c44fc31a902e2a456873cd6
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/apache_exporter-0.6.0.windows-amd64.tar.gz
+        - name: sha256sums.txt
+          commit: null
+          size: 3125
+          sha256: sha256:3f12ce859c55d26457934a87582e8976cffee09666c85203d9f81c4665afd067
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.6.0/sha256sums.txt
+    - name: v0.5.0
+      commit: null
+      timestamp: '2017-11-15T13:14:39'
+      prerelease: false
+      files:
+        - name: apache_exporter-0.5.0.darwin-386.tar.gz
+          commit: null
+          size: 3381189
+          sha256: sha256:cedba0e62fea89a354c0e2a650626005510d7dfdb86da6b488aa820e06a0ffed
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.darwin-386.tar.gz
+        - name: apache_exporter-0.5.0.darwin-amd64.tar.gz
+          commit: null
+          size: 3590728
+          sha256: sha256:8ae47ccf3899443bf23044e6e01966a1af0301dc9c4d2bc38ec716614603897a
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.darwin-amd64.tar.gz
+        - name: apache_exporter-0.5.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 3555961
+          sha256: sha256:7f97e455e627eb0a5bcf4a02a4e2a742f81a41225ee0d0fee1d5e981344ece53
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.dragonfly-amd64.tar.gz
+        - name: apache_exporter-0.5.0.freebsd-386.tar.gz
+          commit: null
+          size: 3350209
+          sha256: sha256:7d2d4ec77917c3b82bf133ca5b31f40cc769819b5fb88390fb0d44005bcc9583
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.freebsd-386.tar.gz
+        - name: apache_exporter-0.5.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 3559450
+          sha256: sha256:d99b8b55a994804ee0b2be33c53ad196f5fe1448cb5cd8fa010754749983d162
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.freebsd-amd64.tar.gz
+        - name: apache_exporter-0.5.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 3267084
+          sha256: sha256:e47f1efda7108f5305a2c3104e624d57853becb6b1c2a5ae78a868373b86e916
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.freebsd-armv6.tar.gz
+        - name: apache_exporter-0.5.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 3263176
+          sha256: sha256:4c6b8f1a45812ea93ede941114c80299f95c26cc14415d740640010bd012e55c
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.freebsd-armv7.tar.gz
+        - name: apache_exporter-0.5.0.linux-386.tar.gz
+          commit: null
+          size: 3339876
+          sha256: sha256:466d3b883417c68e8dde93a12195603ab3c2869451ffc7811dac4ea73019543a
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-386.tar.gz
+        - name: apache_exporter-0.5.0.linux-amd64.tar.gz
+          commit: null
+          size: 3550651
+          sha256: sha256:60dc120e0c5d9325beaec4289d719e3b05179531f470f87d610dc2870c118144
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-amd64.tar.gz
+        - name: apache_exporter-0.5.0.linux-arm64.tar.gz
+          commit: null
+          size: 3232390
+          sha256: sha256:5b94ac5497ddc410da2438b801d9f30c66bb2bf209625a7a2da1472b6ea017c6
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-arm64.tar.gz
+        - name: apache_exporter-0.5.0.linux-armv5.tar.gz
+          commit: null
+          size: 3271631
+          sha256: sha256:d33c62581a2e62f5a87d636470b0cbd89420084d76b8a0d3297dff05e296fcb1
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-armv5.tar.gz
+        - name: apache_exporter-0.5.0.linux-armv6.tar.gz
+          commit: null
+          size: 3253295
+          sha256: sha256:043b071b375964dbf42e25e69bd0845b393a21ce21215517e67f15da1841ad48
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-armv6.tar.gz
+        - name: apache_exporter-0.5.0.linux-armv7.tar.gz
+          commit: null
+          size: 3247093
+          sha256: sha256:feeef2439fe6032ac80a18d2b251a68b74af0e36ec44c6bd797d0463f7341f70
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-armv7.tar.gz
+        - name: apache_exporter-0.5.0.linux-mips64.tar.gz
+          commit: null
+          size: 3251083
+          sha256: sha256:53e9aa7e6abba7934a8e04e1c2e1c716fff92796520e216b2beb88209cad2080
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-mips64.tar.gz
+        - name: apache_exporter-0.5.0.linux-mips64le.tar.gz
+          commit: null
+          size: 3147318
+          sha256: sha256:58479a230fa23e781f74b13a0b5075f80af0593a020a7fdc5f85b3ef5d485d48
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-mips64le.tar.gz
+        - name: apache_exporter-0.5.0.linux-ppc64.tar.gz
+          commit: null
+          size: 3301328
+          sha256: sha256:4fb3d952e8fe87190b9d0fc8b2a79e4ed854c07b7f9368e82f16662fc9aed7ef
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-ppc64.tar.gz
+        - name: apache_exporter-0.5.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 3224920
+          sha256: sha256:7cecd597bfab40d5a1026f79f7cba0c0448d04a0f97ed4f0d0f0d46700268aaf
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.linux-ppc64le.tar.gz
+        - name: apache_exporter-0.5.0.netbsd-386.tar.gz
+          commit: null
+          size: 3342973
+          sha256: sha256:8223a9f0506b4457d4d044fefdb3e5e039e4f76180e982d97a416f4e963f4df0
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.netbsd-386.tar.gz
+        - name: apache_exporter-0.5.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 3553742
+          sha256: sha256:d6c1419d0031d7c23f6337855881f2c174220a9d187b4f35ddae32862131fb85
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.netbsd-amd64.tar.gz
+        - name: apache_exporter-0.5.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 3262573
+          sha256: sha256:626a6ebcd22cb4206042b2b89e7369589ef2e1f0476e38114caf86559e6b9262
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.netbsd-armv6.tar.gz
+        - name: apache_exporter-0.5.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 3260231
+          sha256: sha256:19a5b8e097a70931faec943fedb2b16259aa1c399ab5163c3715463875e7913b
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.netbsd-armv7.tar.gz
+        - name: apache_exporter-0.5.0.openbsd-386.tar.gz
+          commit: null
+          size: 3347639
+          sha256: sha256:4d287eae21e0f05c8fd7fb54f8cec1f685e7cc375927ee4ca1507d30d656c4db
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.openbsd-386.tar.gz
+        - name: apache_exporter-0.5.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 3559063
+          sha256: sha256:f3ec65c1bac4759726d4f642abaadc620a39d09d8541cee06e2297602798c44d
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.openbsd-amd64.tar.gz
+        - name: apache_exporter-0.5.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 3263999
+          sha256: sha256:3af85a85e0e07e0cc01ceaa1e72c8f314efef367974fd298daffb8fe71015f0b
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.openbsd-armv7.tar.gz
+        - name: apache_exporter-0.5.0.windows-386.tar.gz
+          commit: null
+          size: 3325171
+          sha256: sha256:f01dada5e514238ad80598246120c57f41a1558400244b699a56167ed1699cbc
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.windows-386.tar.gz
+        - name: apache_exporter-0.5.0.windows-amd64.tar.gz
+          commit: null
+          size: 3541725
+          sha256: sha256:d32e6d9ef3aa3ae23658051d1de6b2c4851c6d2176c8a5f79164dd908bb44317
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/apache_exporter-0.5.0.windows-amd64.tar.gz
+        - name: sha256sums.txt
+          commit: null
+          size: 2804
+          sha256: sha256:005852824e1490740502d47f7b9068a04d0446243f1c965cfcc1f8ebb00ed738
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.5.0/sha256sums.txt
+    - name: v0.4.0
+      commit: null
+      timestamp: '2017-10-05T22:10:24'
+      prerelease: false
+      files:
+        - name: apache_exporter-0.4.0.darwin-386.tar.gz
+          commit: null
+          size: 3379494
+          sha256: sha256:fa68b6df14632d204e26d022143a19aee15ed7362b764cfa5f43ffee4aa6cdb6
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.darwin-386.tar.gz
+        - name: apache_exporter-0.4.0.darwin-amd64.tar.gz
+          commit: null
+          size: 3588001
+          sha256: sha256:d30c2e663d4f9bb28b31316a15aad5207f4e77c923005f9cc406e8c6d781421f
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.darwin-amd64.tar.gz
+        - name: apache_exporter-0.4.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 3553535
+          sha256: sha256:47256cb8c85017860ee9e1ddc7700ef3c8d11b1f11237247b475cfad5a73a744
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.dragonfly-amd64.tar.gz
+        - name: apache_exporter-0.4.0.freebsd-386.tar.gz
+          commit: null
+          size: 3345336
+          sha256: sha256:0706d9d20a341e406fc2c5651c3409643f5151d63df5a391beb36f4744f01f52
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.freebsd-386.tar.gz
+        - name: apache_exporter-0.4.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 3557255
+          sha256: sha256:f2930df0fe0598da0e2d17b178b79e778993a10c8c7bc27b19c0bcd8078a7208
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.freebsd-amd64.tar.gz
+        - name: apache_exporter-0.4.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 3264407
+          sha256: sha256:c5208c01ca7afff68f2b8af952c4a1a829663b299e27235a159cf11267413b4b
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.freebsd-armv6.tar.gz
+        - name: apache_exporter-0.4.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 3262088
+          sha256: sha256:3b5a0cecf027705f10b31d41cd3259bcdfab35fc77f6592467cc2ba1f714fe91
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.freebsd-armv7.tar.gz
+        - name: apache_exporter-0.4.0.linux-386.tar.gz
+          commit: null
+          size: 3337861
+          sha256: sha256:4408511d7b1185b0632d2f9e4c18038e6e6edb26e873a5e939a5f12ba61f2e56
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-386.tar.gz
+        - name: apache_exporter-0.4.0.linux-amd64.tar.gz
+          commit: null
+          size: 3549263
+          sha256: sha256:cd196286502f1fe3192cbfde9c28d581a99b076c80441d4517341c2fbf8e4038
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-amd64.tar.gz
+        - name: apache_exporter-0.4.0.linux-arm64.tar.gz
+          commit: null
+          size: 3231949
+          sha256: sha256:25221f860e106fc4e81cd890887f89c93792cbd9fbd82cf949bd1dee8df22d22
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-arm64.tar.gz
+        - name: apache_exporter-0.4.0.linux-armv5.tar.gz
+          commit: null
+          size: 3269422
+          sha256: sha256:526d30c5203639b0890cf92febf9f18164cc9b1c6ce7d96ecbe84b393482e32b
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-armv5.tar.gz
+        - name: apache_exporter-0.4.0.linux-armv6.tar.gz
+          commit: null
+          size: 3248549
+          sha256: sha256:1061003a776bb258915c022c9e6f14b83ed02906705d6b407fb84a9a9b8640a0
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-armv6.tar.gz
+        - name: apache_exporter-0.4.0.linux-armv7.tar.gz
+          commit: null
+          size: 3247022
+          sha256: sha256:11a06bf8f2359b32f75ee5626bf650c468a16c731677e07394e9439d1027c609
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-armv7.tar.gz
+        - name: apache_exporter-0.4.0.linux-mips64.tar.gz
+          commit: null
+          size: 3248627
+          sha256: sha256:2e305eb18a5a51254df1f0b66dcf3f115c62e7b915c9e52575a38314e1d8c085
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-mips64.tar.gz
+        - name: apache_exporter-0.4.0.linux-mips64le.tar.gz
+          commit: null
+          size: 3145677
+          sha256: sha256:b02777efa67155126faf328af8042a13feed8ee0ca94ab51b427b699992687c3
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-mips64le.tar.gz
+        - name: apache_exporter-0.4.0.linux-ppc64.tar.gz
+          commit: null
+          size: 3298491
+          sha256: sha256:1dfd831eb5cf75d802a74fb36d6280710a26f74355a23a3763d092ee9b47017d
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-ppc64.tar.gz
+        - name: apache_exporter-0.4.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 3222142
+          sha256: sha256:da1d8e74041cb7b41b790540977be608c271e8e8a9d94c64b4639ceceb1cac8d
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.linux-ppc64le.tar.gz
+        - name: apache_exporter-0.4.0.netbsd-386.tar.gz
+          commit: null
+          size: 3341485
+          sha256: sha256:11b6895f547237d0180ccc9eea4c12fada0de515171f36bee740a082ad247e86
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.netbsd-386.tar.gz
+        - name: apache_exporter-0.4.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 3551958
+          sha256: sha256:cd2e16660264f92ae34c328f59ce3668a0ed7bda4a909cdc4609627f02ad4e8d
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.netbsd-amd64.tar.gz
+        - name: apache_exporter-0.4.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 3261053
+          sha256: sha256:4daaee6b5d054309bf0e406df826cfc42763bd675a4501f65aa6c31fa7696de2
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.netbsd-armv6.tar.gz
+        - name: apache_exporter-0.4.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 3258545
+          sha256: sha256:06e69c1966f51593c6e18d7d5b4f259055a4be9832fd40d10c5d3195b72ca3b3
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.netbsd-armv7.tar.gz
+        - name: apache_exporter-0.4.0.openbsd-386.tar.gz
+          commit: null
+          size: 3345747
+          sha256: sha256:52e0deae1ff1fcde1dff0797d0a2eac179f4311066f5a190158923e42bb6ee56
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.openbsd-386.tar.gz
+        - name: apache_exporter-0.4.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 3556249
+          sha256: sha256:996deae6f7cf7096bda1bd9f608ad64b8680d7cb2fc67b91d49dc30e24c75a3c
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.openbsd-amd64.tar.gz
+        - name: apache_exporter-0.4.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 3262587
+          sha256: sha256:bccfc4311ef4034096ea5ed3dee0d004abb32683271a0df47e249aaef8e77221
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.openbsd-armv7.tar.gz
+        - name: apache_exporter-0.4.0.windows-386.tar.gz
+          commit: null
+          size: 3324029
+          sha256: sha256:457c38176fcd354a92248727ba5cc2f9bc1af6b1cb2ac1868905135de82f8806
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.windows-386.tar.gz
+        - name: apache_exporter-0.4.0.windows-amd64.tar.gz
+          commit: null
+          size: 3540110
+          sha256: sha256:cd83d49531c31cd05db1d885dd7213e819ba5d5e749c2ffc2d647528cb0d685d
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/apache_exporter-0.4.0.windows-amd64.tar.gz
+        - name: sha256sums.txt
+          commit: null
+          size: 2804
+          sha256: sha256:52bc6e2898bfd6b05310d6f02ec4bcfd3d68706a5a35df053bd042ee66c55b41
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.4.0/sha256sums.txt
+    - name: v0.3
+      commit: null
+      timestamp: '2016-11-29T21:04:19'
+      prerelease: false
+      files:
+        - name: apache_exporter_linux_amd64
+          commit: null
+          size: 8282936
+          sha256: sha256:68219cc2124be703d4a9f072329f5f2824c1298079caa05ca7a9b19b9d839d49
+          url: https://github.com/Lusitaniae/apache_exporter/releases/download/v0.3/apache_exporter_linux_amd64
+    - name: v0.2
+      commit: null
+      timestamp: '2016-09-13T21:57:34'
+      prerelease: false
+      files: []
+    - name: '0.1'
+      commit: null
+      timestamp: '2015-10-23T21:32:25'
+      prerelease: false
+      files: []

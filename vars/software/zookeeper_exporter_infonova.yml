@@ -3,13 +3,36 @@ defaults:
   port: 9114
   tgroup: zookeeper
 software:
+  name: infonova/zookeeper_exporter
+  release: '1.1'
+  prerelease: 1.0.0-rc1
+  url: https://github.com/infonova/zookeeper_exporter
+  source: https://github.com/infonova/zookeeper_exporter.git
+  updated: '2020-03-05T01:43:04.279148'
   master:
     commit:
       sha: 591ef4914fc1197581646ee6dc759c9353976e26
-    prerelease: true
-    published:
-      timestamp: 2017-03-17 08:08:51
-software_metadata:
-  prerelease: master
-  release: null
-  updated: 2020-02-27 05:50:20.869788
+      timestamp: '2017-03-17T08:08:51'
+    files: []
+  releases:
+    - name: '1.1'
+      commit:
+        sha: 591ef4914fc1197581646ee6dc759c9353976e26
+        timestamp: '2017-03-17T08:08:51'
+      timestamp: '2017-03-17T08:08:51'
+      prerelease: false
+      files: []
+    - name: 1.0.0-rc1
+      commit:
+        sha: 8859b37223f41191fb71c4b261cca8b80cc56cda
+        timestamp: '2017-03-16T15:48:21'
+      timestamp: '2017-03-16T15:48:21'
+      prerelease: true
+      files: []
+    - name: '1.0'
+      commit:
+        sha: 9f583d146a11dcf33070b326f04f4349ac9f8190
+        timestamp: '2017-03-16T16:16:15'
+      timestamp: '2017-03-16T16:16:15'
+      prerelease: false
+      files: []

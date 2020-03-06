@@ -3,58 +3,60 @@ defaults:
   port: 9650
   tgroup: keepalived
 software:
-  0.1.0:
-    commit:
-      sha: 39d34d5e6529b5f28afbd8ebc6691a79f08c31de
-    files:
-      - name: keepalived_exporter-0.1.0-amd64.tar.gz
-        sha256: sha256:511fb1607327791ef3db77d937d93cc5bc127452b9d76145fa01d4143b5451e5
-        size: 2990537
-        url: https://github.com/gen2brain/keepalived_exporter/releases/download/0.1.0/keepalived_exporter-0.1.0-amd64.tar.gz
-      - name: keepalived_exporter_0.1.0_checksums.txt
-        sha256: sha256:ec077faa8ecea25f02157191f52364424aba4042cd427750eb5ae38285b1dfc6
-        size: 105
-        url: https://github.com/gen2brain/keepalived_exporter/releases/download/0.1.0/keepalived_exporter_0.1.0_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2019-09-15 02:45:45
-  0.2.0:
-    commit:
-      sha: a8b3e1304623dbc2b52baf7d63d1fef0faab680f
-    files:
-      - name: keepalived_exporter-0.2.0-amd64.tar.gz
-        sha256: sha256:dc325e0d82554cc6599e889f3a27fa8f4688a7e119a7c64a236db8f4983690e6
-        size: 3050201
-        url: https://github.com/gen2brain/keepalived_exporter/releases/download/0.2.0/keepalived_exporter-0.2.0-amd64.tar.gz
-      - name: keepalived_exporter_0.2.0_checksums.txt
-        sha256: sha256:0d423cccaf75ceb4ebd862794f328011deeef393523f4c174738e4dd53e4d738
-        size: 105
-        url: https://github.com/gen2brain/keepalived_exporter/releases/download/0.2.0/keepalived_exporter_0.2.0_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2019-10-01 01:51:28
-  0.3.0:
-    commit:
-      sha: 385bba60e83214f3e2f4c925c9d1caff5b120149
-    files:
-      - name: keepalived_exporter-0.3.0-amd64.tar.gz
-        sha256: sha256:df04a46c038ce4cc994ef5d1b77dc722b04589c8648a0d3382cacc57ef63824f
-        size: 3037071
-        url: https://github.com/gen2brain/keepalived_exporter/releases/download/0.3.0/keepalived_exporter-0.3.0-amd64.tar.gz
-      - name: keepalived_exporter_0.3.0_checksums.txt
-        sha256: sha256:bd3fa6fcfa56d9ba713d09109dd4a0472c84f81569a97485ff53283dfe21c940
-        size: 105
-        url: https://github.com/gen2brain/keepalived_exporter/releases/download/0.3.0/keepalived_exporter_0.3.0_checksums.txt
-    prerelease: false
-    published:
-      timestamp: 2019-11-01 23:22:01
+  name: gen2brain/keepalived_exporter
+  release: 0.3.0
+  prerelease: null
+  url: https://github.com/gen2brain/keepalived_exporter
+  source: https://github.com/gen2brain/keepalived_exporter.git
+  updated: '2020-03-05T02:44:38.162767'
   master:
     commit:
-      sha: 385bba60e83214f3e2f4c925c9d1caff5b120149
-    prerelease: true
-    published:
-      timestamp: 2019-11-01 23:21:30
-software_metadata:
-  prerelease: master
-  release: 0.3.0
-  updated: 2020-02-27 06:23:36.249828
+      sha: 3c61c04a0a6660b9d8bf83332e124f6492464bc2
+      timestamp: '2020-02-27T14:28:21'
+    files: []
+  releases:
+    - name: 0.3.0
+      commit: null
+      timestamp: '2019-11-01T23:22:01'
+      prerelease: false
+      files:
+        - name: keepalived_exporter-0.3.0-amd64.tar.gz
+          commit: null
+          size: 3037071
+          sha256: sha256:df04a46c038ce4cc994ef5d1b77dc722b04589c8648a0d3382cacc57ef63824f
+          url: https://github.com/gen2brain/keepalived_exporter/releases/download/0.3.0/keepalived_exporter-0.3.0-amd64.tar.gz
+        - name: keepalived_exporter_0.3.0_checksums.txt
+          commit: null
+          size: 105
+          sha256: sha256:bd3fa6fcfa56d9ba713d09109dd4a0472c84f81569a97485ff53283dfe21c940
+          url: https://github.com/gen2brain/keepalived_exporter/releases/download/0.3.0/keepalived_exporter_0.3.0_checksums.txt
+    - name: 0.2.0
+      commit: null
+      timestamp: '2019-10-01T01:51:28'
+      prerelease: false
+      files:
+        - name: keepalived_exporter-0.2.0-amd64.tar.gz
+          commit: null
+          size: 3050201
+          sha256: sha256:dc325e0d82554cc6599e889f3a27fa8f4688a7e119a7c64a236db8f4983690e6
+          url: https://github.com/gen2brain/keepalived_exporter/releases/download/0.2.0/keepalived_exporter-0.2.0-amd64.tar.gz
+        - name: keepalived_exporter_0.2.0_checksums.txt
+          commit: null
+          size: 105
+          sha256: sha256:0d423cccaf75ceb4ebd862794f328011deeef393523f4c174738e4dd53e4d738
+          url: https://github.com/gen2brain/keepalived_exporter/releases/download/0.2.0/keepalived_exporter_0.2.0_checksums.txt
+    - name: 0.1.0
+      commit: null
+      timestamp: '2019-09-15T02:45:45'
+      prerelease: false
+      files:
+        - name: keepalived_exporter-0.1.0-amd64.tar.gz
+          commit: null
+          size: 2990537
+          sha256: sha256:511fb1607327791ef3db77d937d93cc5bc127452b9d76145fa01d4143b5451e5
+          url: https://github.com/gen2brain/keepalived_exporter/releases/download/0.1.0/keepalived_exporter-0.1.0-amd64.tar.gz
+        - name: keepalived_exporter_0.1.0_checksums.txt
+          commit: null
+          size: 105
+          sha256: sha256:ec077faa8ecea25f02157191f52364424aba4042cd427750eb5ae38285b1dfc6
+          url: https://github.com/gen2brain/keepalived_exporter/releases/download/0.1.0/keepalived_exporter_0.1.0_checksums.txt
