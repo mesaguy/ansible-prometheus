@@ -39,4 +39,4 @@
     loop_var: prometheus_software_capabilities_file
   with_items: '{{ prometheus_software_capabilities }}'
   when:
-    - prometheus_software_capabilities is defined and prometheus_software_capabilities | length > 0
+    - prometheus_software_capabilities is defined and prometheus_software_capabilities
