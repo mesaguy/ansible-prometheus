@@ -31,7 +31,7 @@ end
 describe processes(Regexp.new("^/opt/prometheus/exporters/ping_exporter_czerwonk/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/ping_exporter")) do
     it { should exist }
     its('entries.length') { should eq 1 }
-    its('users') { should include 'root' }
+    its('users') { should include 'prometheus' }
 end
 
 describe port(9427) do
