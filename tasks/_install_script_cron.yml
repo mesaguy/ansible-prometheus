@@ -59,7 +59,10 @@
       loop_control:
         loop_var: prometheus_script_cron_job
       with_items: '{{ prometheus_setup_script_crons }}'
-  when: prometheus_script_use_cron_files
+  when:
+    - prometheus_script_use_cron_files
+    # The following don't support cron directories
+    - ansible_os_family not in ['Alpine']
 
 - name: Setup script cronjobs
   become: true

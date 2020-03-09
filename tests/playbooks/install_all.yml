@@ -63,7 +63,8 @@
                 weekday: 5
                 month: 9
                 script: echo test4
-      when: ansible_os_family == 'Archlinux'
+      when:
+        - ansible_os_family not in ['Alpine']
 
     - name: Create a orphaned Prometheus rules file to be purged while testing
       become: true

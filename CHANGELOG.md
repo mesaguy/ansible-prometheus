@@ -24,6 +24,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Utilize handlers for 'reloading' and 'restarting' activities. Simplify tasks
 - Migrate all exporter documentation to exporter specific files
 
+###  Removed
+
+- The 'prometheus_software_src_version' variables have been removed and instead each software has a single prometheus software version
+
 ## [0.10.3] - 2020-03-04
 
 ### Changed

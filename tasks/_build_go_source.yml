@@ -38,7 +38,11 @@
   git:
     repo: '{{ prometheus_software_src_url }}'
     dest: '{{ prometheus_software_src_dir }}'
-    version: '{{ prometheus_software_src_version | default(prometheus_software_version, true) }}'
+    version: '{{ prometheus_software_version | default(prometheus_software_default_git_master, true) }}'
+  register: prometheus_git_clone
+  retries: 5
+  delay: 10
+  until: prometheus_git_clone is succeeded
   when: prometheus_software_src_url is not match('.*(tar.gz|zip)$')
 
 - name: 'Gather statistics on the file {{ prometheus_software_src_dir }}/Makefile'

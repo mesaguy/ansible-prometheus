@@ -21,18 +21,13 @@
 - name: Set {{ prometheus_software_name }} version facts
   set_fact:
     prometheus_software_version: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_version", default=prometheus_software_default_release) }}'
-    prometheus_software_src_version: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_src_version", default=prometheus_software_default_release) }}'
 
 # - debug:
 #     msg: 'Software version: {{ prometheus_software_version }}'
 
-# - debug:
-#     msg: 'Software source version: {{ prometheus_software_src_version }}'
-
 - name: Set {{ prometheus_software_name }} prerelease version facts
   set_fact:
     prometheus_software_version: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_version", default=prometheus_software_default_prerelease) }}'
-    prometheus_software_src_version: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_src_version", default=prometheus_software_default_prerelease) }}'
   when:
     - prometheus_software_use_prerelease is defined and prometheus_software_use_prerelease | bool
     - prometheus_software_default_prerelease | default(false)
@@ -40,9 +35,6 @@
 
 # - debug:
 #     msg: 'Software version (prelease enabled): {{ prometheus_software_version }}'
-
-# - debug:
-#     msg: 'Software source version (prelease enabled): {{ prometheus_software_src_version }}'
 
 # - debug:
 #     msg: 'Software source master version): {{ prometheus_software_default_git_master }}'
@@ -54,12 +46,6 @@
   set_fact:
     prometheus_software_release: '{{ prometheus_software_vars["software"]["releases"] | selectattr("name", "equalto", prometheus_software_version) | list | first }}'
   when: prometheus_software_vars["software"]["releases"] | length > 0
-
-- name: Set {{ prometheus_software_name }} git version facts because no src version is defined
-  set_fact:
-    prometheus_software_version: '{{ prometheus_software_default_git_master }}'
-  when:
-    - prometheus_software_src_version == ''
 
 # - debug:
 #     msg: 'Software release: {{ prometheus_software_release }}'
