@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Prometheus and AlertManager are reloaded instead of restarted when configuration files change
 - Ensure all references to Prometheus's 'etc' directory are to /opt/prometheus/etc instead of /etc/prometheus
 - Utilize handlers for 'reloading' and 'restarting' activities. Simplify tasks
+- Migrate all exporter documentation to exporter specific files
 
 ## [0.10.3] - 2020-03-04
 
