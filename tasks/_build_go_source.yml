@@ -38,7 +38,7 @@
   git:
     repo: '{{ prometheus_software_src_url }}'
     dest: '{{ prometheus_software_src_dir }}'
-    version: '{{ prometheus_software_version | default(prometheus_software_default_git_master, true) }}'
+    version: '{{ prometheus_software_version }}'
   register: prometheus_git_clone
   retries: 5
   delay: 10
@@ -91,7 +91,7 @@
     mode: '0755'
     owner: root
     group: '{{ prometheus_group }}'
-  with_items: '{{ prometheus_software_files | default([prometheus_software_binary_name], true) | default([prometheus_software_shortname], true) }}'
+  with_items: '{{ prometheus_software_files | default([prometheus_software_binary_name], true) }}'
   loop_control:
     loop_var: prometheus_built_file
   notify:

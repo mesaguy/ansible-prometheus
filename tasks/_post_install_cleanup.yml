@@ -111,13 +111,12 @@
     # cannot be fully tested and thus the Ansible tests can be selectively
     # disabled
     prometheus_software_service_test: true
-    prometheus_software_shortname: ''
     prometheus_software_src_dir: ''
     prometheus_software_src_dir_suffix: ''
     # URL where a software's source code can be downloaded from a VCS
     prometheus_software_src_url: ''
     # Allow use of prerelease versions
-    prometheus_software_use_prerelease: ''
+    prometheus_software_use_prerelease: false
     # Version of Prometheus software to install
     prometheus_software_version: ''
     # Extra options to give 'unarchive' when decompressing binary file
