@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/collectd_exporter/active/collectd_expor
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'collectd_exporter' service is running
-control '01' do
-  impact 1.0
-  title 'Verify collectd_exporter service'
-  desc 'Ensures collectd_exporter service is up and running'
-  describe service('collectd_exporter') do
+describe service('collectd_exporter') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/collectd_exporter/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/collectd_exporter")) do

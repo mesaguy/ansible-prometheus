@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/openvpn_exporter_kumina/active/openvpn_
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'openvpn_exporter_kumina' service is running
-control '01' do
-  impact 1.0
-  title 'Verify openvpn_exporter_kumina service'
-  desc 'Ensures openvpn_exporter_kumina service is up and running'
-  describe service('openvpn_exporter_kumina') do
+describe service('openvpn_exporter_kumina') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/openvpn_exporter_kumina/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/openvpn_exporter")) do

@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/proxysql_exporter_percona/active/proxys
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'proxysql_exporter_percona' service is running
-control '01' do
-  impact 1.0
-  title 'Verify proxysql_exporter_percona service'
-  desc 'Ensures proxysql_exporter_percona service is up and running'
-  describe service('proxysql_exporter_percona') do
+describe service('proxysql_exporter_percona') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/proxysql_exporter_percona/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/proxysql_exporter")) do

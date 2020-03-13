@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/influxdb_exporter/active/influxdb_expor
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'influxdb_exporter' service is running
-control '01' do
-  impact 1.0
-  title 'Verify influxdb_exporter service'
-  desc 'Ensures influxdb_exporter service is up and running'
-  describe service('influxdb_exporter') do
+describe service('influxdb_exporter') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/influxdb_exporter/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/influxdb_exporter")) do

@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/rabbitmq_exporter_kbudde/active/rabbitm
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'rabbitmq_exporter_kbudde' service is running
-control '01' do
-  impact 1.0
-  title 'Verify rabbitmq_exporter_kbudde service'
-  desc 'Ensures rabbitmq_exporter_kbudde service is up and running'
-  describe service('rabbitmq_exporter_kbudde') do
+describe service('rabbitmq_exporter_kbudde') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/rabbitmq_exporter_kbudde/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/rabbitmq_exporter")) do

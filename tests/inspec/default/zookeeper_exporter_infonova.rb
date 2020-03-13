@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/zookeeper_exporter_infonova/active/zook
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'zookeeper_exporter_infonova' service is running
-control '01' do
-  impact 1.0
-  title 'Verify zookeeper_exporter_infonova service'
-  desc 'Ensures zookeeper_exporter_infonova service is up and running'
-  describe service('zookeeper_exporter_infonova') do
+describe service('zookeeper_exporter_infonova') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/zookeeper_exporter_infonova/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/zookeeper_exporter")) do

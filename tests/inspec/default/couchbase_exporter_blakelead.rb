@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/couchbase_exporter_blakelead/active/cou
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'couchbase_exporter_blakelead' service is running
-control '01' do
-  impact 1.0
-  title 'Verify couchbase_exporter_blakelead service'
-  desc 'Ensures couchbase_exporter_blakelead service is up and running'
-  describe service('couchbase_exporter_blakelead') do
+describe service('couchbase_exporter_blakelead') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/couchbase_exporter_blakelead/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/couchbase_exporter")) do

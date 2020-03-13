@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/snmp_exporter/active/snmp_exporter') do
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'snmp_exporter' service is running
-control '01' do
-  impact 1.0
-  title 'Verify snmp_exporter service'
-  desc 'Ensures snmp_exporter service is up and running'
-  describe service('snmp_exporter') do
+describe service('snmp_exporter') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/snmp_exporter/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/snmp_exporter")) do

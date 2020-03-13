@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/ping_exporter_czerwonk/active/ping_expo
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'ping_exporter_czerwonk' service is running
-control '01' do
-  impact 1.0
-  title 'Verify ping_exporter_czerwonk service'
-  desc 'Ensures ping_exporter_czerwonk service is up and running'
-  describe service('ping_exporter_czerwonk') do
+describe service('ping_exporter_czerwonk') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/ping_exporter_czerwonk/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/ping_exporter")) do

@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/couchdb_exporter_gesellix/active/couchd
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'couchdb_exporter_gesellix' service is running
-control '01' do
-  impact 1.0
-  title 'Verify couchdb_exporter_gesellix service'
-  desc 'Ensures couchdb_exporter_gesellix service is up and running'
-  describe service('couchdb_exporter_gesellix') do
+describe service('couchdb_exporter_gesellix') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/couchdb_exporter_gesellix/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/couchdb-prometheus-exporter")) do

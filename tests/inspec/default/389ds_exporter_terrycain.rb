@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/389ds_exporter_terrycain/active/389ds_e
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the '389ds_exporter_terrycain' service is running
-control '01' do
-  impact 1.0
-  title 'Verify 389ds_exporter_terrycain service'
-  desc 'Ensures 389ds_exporter_terrycain service is up and running'
-  describe service('389ds_exporter_terrycain') do
+describe service('389ds_exporter_terrycain') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/389ds_exporter_terrycain/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/389ds_exporter")) do

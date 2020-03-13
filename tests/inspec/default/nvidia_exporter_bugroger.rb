@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/nvidia_exporter_bugroger/active/nvidia-
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'nvidia_exporter_bugroger' service is running
-control '01' do
-  impact 1.0
-  title 'Verify nvidia_exporter_bugroger service'
-  desc 'Ensures nvidia_exporter_bugroger service is up and running'
-  describe service('nvidia_exporter_bugroger') do
+describe service('nvidia_exporter_bugroger') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/nvidia_exporter_bugroger/(v)?([0-9a-z]+__go-[0-9.]+)/nvidia-exporter")) do

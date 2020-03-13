@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/iptables_exporter_retailnext/active/ipt
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'iptables_exporter_retailnext' service is running
-control '01' do
-  impact 1.0
-  title 'Verify iptables_exporter_retailnext service'
-  desc 'Ensures iptables_exporter_retailnext service is up and running'
-  describe service('iptables_exporter_retailnext') do
+describe service('iptables_exporter_retailnext') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/iptables_exporter_retailnext/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/iptables_exporter")) do

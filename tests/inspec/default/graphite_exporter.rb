@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/graphite_exporter/active/graphite_expor
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'graphite_exporter' service is running
-control '01' do
-  impact 1.0
-  title 'Verify graphite_exporter service'
-  desc 'Ensures graphite_exporter service is up and running'
-  describe service('graphite_exporter') do
+describe service('graphite_exporter') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/graphite_exporter/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/graphite_exporter")) do

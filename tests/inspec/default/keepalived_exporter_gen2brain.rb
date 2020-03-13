@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/keepalived_exporter_gen2brain/active/ke
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'keepalived_exporter_gen2brain' service is running
-control '01' do
-  impact 1.0
-  title 'Verify keepalived_exporter_gen2brain service'
-  desc 'Ensures keepalived_exporter_gen2brain service is up and running'
-  describe service('keepalived_exporter_gen2brain') do
+describe service('keepalived_exporter_gen2brain') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/keepalived_exporter_gen2brain/(v)?([0-9.]+|[0-9.a-z\-]+__go-[0-9.]+)/keepalived_exporter")) do

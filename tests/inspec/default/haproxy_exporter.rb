@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/haproxy_exporter/active/haproxy_exporte
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'haproxy_exporter' service is running
-control '01' do
-  impact 1.0
-  title 'Verify haproxy_exporter service'
-  desc 'Ensures haproxy_exporter service is up and running'
-  describe service('haproxy_exporter') do
+describe service('haproxy_exporter') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/haproxy_exporter/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/haproxy_exporter")) do
