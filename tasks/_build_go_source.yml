@@ -1,5 +1,5 @@
 ---
-- name: 'Make directories for {{ prometheus_software_name_version }} build'
+- name: Make directories for {{ prometheus_software_name_version }} build
   become: true
   file:
     owner: '{{ prometheus_user }}'
@@ -13,7 +13,7 @@
   loop_control:
     loop_var: prometheus_build_directory
 
-- name: 'Download and extract the {{ prometheus_software_name_version }} project source to {{ prometheus_software_build_dir }}'
+- name: Download and extract the {{ prometheus_software_name_version }} project source to {{ prometheus_software_build_dir }}
   become: true
   # Certain versions of ansible break 'become_user' for 'archive' and 'get_url', supposedly fixed in 2.6.3:
   # become_user: '{% if ansible_version.full is version_compare("2.6.0", ">=") and ansible_version.full is version_compare("2.6.2", "<")  %}root{% else %}{{ prometheus_user }}{% endif %}'
@@ -32,7 +32,7 @@
   until: prometheus_download is succeeded
   when: prometheus_software_src_url is match('.*(tar.gz|zip)$')
 
-- name: 'Clone the {{ prometheus_software_name_version }} project source from {{ prometheus_software_src_url }} to {{ prometheus_software_src_dir }}'
+- name: Clone the {{ prometheus_software_name_version }} project source from {{ prometheus_software_src_url }} to {{ prometheus_software_src_dir }}
   become: true
   # become_user: '{{ prometheus_user }}'
   git:
@@ -48,9 +48,8 @@
     path: '{{ prometheus_software_src_dir }}/Makefile'
   register: makefile
 
-- name: 'Build {{ prometheus_software_name_version }} source code with Makefile'
+- name: Build {{ prometheus_software_name_version }} source code with Makefile
   become: true
-  # become_user: '{{ prometheus_user }}'
   shell: '{{ prometheus_software_makefile_make_command }}'
   register: prometheus_software_build
   retries: 5
@@ -65,7 +64,7 @@
     PATH: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}/bin:{{ prometheus_software_build_dir }}/bin:{{ ansible_env.PATH }}'
   when: makefile.stat.exists
 
-- name: 'Build {{ prometheus_software_name_version }} source code without Makefile'
+- name: Build {{ prometheus_software_name_version }} source code without Makefile
   become: true
   # become_user: '{{ prometheus_user }}'
   shell: '{{ prometheus_software_make_command }}'
@@ -78,7 +77,7 @@
     PATH: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}/bin:{{ prometheus_software_build_dir }}/bin:{{ ansible_env.PATH }}'
   when: not makefile.stat.exists
 
-- name: 'Copy {{ prometheus_software_name_version }} to {{ prometheus_software_install_dir }}'
+- name: Copy {{ prometheus_software_name_version }} to {{ prometheus_software_install_dir }}
   become: true
   copy:
     remote_src: true
@@ -106,13 +105,13 @@
     loop_var: prometheus_software_copy_dir
   when: prometheus_software_build_copy_dirs is defined and prometheus_software_build_copy_dirs | length >= 1
 
-- name: 'Delete {{ prometheus_tmp_dir }} directory following {{ prometheus_software_name_version }} build'
+- name: Delete {{ prometheus_tmp_dir }} directory following {{ prometheus_software_name_version }} build
   become: true
   file:
     path: '{{ prometheus_tmp_dir }}'
     state: absent
 
-- name: 'Create {{ prometheus_tmp_dir }} directory'
+- name: Create {{ prometheus_tmp_dir }} directory
   become: true
   file:
     path: '{{ prometheus_tmp_dir }}'
