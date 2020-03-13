@@ -8,9 +8,13 @@ An array of additional flags to pass to the squid_exporter daemon:
       - '-squid-hostname="localhost"'
       - '-squid-port=3128'
 
-The version of squid_exporter to install:
+The version of squid_exporter_boynux to install. The default version can be found in the [squid_exporter_boynux variables file](../vars/software/squid_exporter_boynux.yml) and can be used to override the default version:
 
-    prometheus_squid_exporter_boynux_version: "1.8.2"
+    prometheus_squid_exporter_boynux_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_squid_exporter_boynux_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9301:
 

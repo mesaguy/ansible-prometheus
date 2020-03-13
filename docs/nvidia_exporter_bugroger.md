@@ -4,9 +4,13 @@ An array of additional flags to pass to the nvidia_exporter daemon:
 
     prometheus_nvidia_exporter_bugroger_extra_opts: []
 
-The version of nvidia_exporter to install. As there is no release, the version is a git commit hash:
+The version of nvidia_exporter_bugroger to install. The default version can be found in the [nvidia_exporter_bugroger variables file](../vars/software/nvidia_exporter_bugroger.yml) and can be used to override the default version:
 
-    prometheus_nvidia_exporter_bugroger_version: "f38931eea308b265477dc64a86594cc288bf270b"
+    prometheus_nvidia_exporter_bugroger_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_nvidia_exporter_bugroger_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9401:
 

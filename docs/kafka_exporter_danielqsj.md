@@ -7,10 +7,13 @@ An array of additional flags to pass to the kafka_exporter daemon (ie):
     prometheus_kafka_exporter_danielqsj_extra_opts:
       - '--kafka.server=127.0.0.1:9092'
 
-The version of kafka_exporter to install. The source version defines the version as specified in version control:
+The version of kafka_exporter_danielqsj to install. The default version can be found in the [kafka_exporter_danielqsj variables file](../vars/software/kafka_exporter_danielqsj.yml) and can be used to override the default version:
 
-    prometheus_kafka_exporter_danielqsj_version: "1.2.0"
-    prometheus_kafka_exporter_danielqsj_src_version: "v1.2.0"
+    prometheus_kafka_exporter_danielqsj_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_kafka_exporter_danielqsj_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9308:
 

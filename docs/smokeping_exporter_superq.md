@@ -8,10 +8,13 @@ An array of additional flags to pass to the smokeping_exporter daemon. You must 
     - 'localhost'
     - '8.8.4.4'
 
-The version of smokeping_exporter to install. The source version defines the version as specified in version control:
+The version of smokeping_exporter_superq to install. The default version can be found in the [smokeping_exporter_superq variables file](../vars/software/smokeping_exporter_superq.yml) and can be used to override the default version:
 
-    prometheus_smokeping_exporter_superq_version: "0.3.0"
-    prometheus_smokeping_exporter_superq_src_version: "v0.3.0"
+    prometheus_smokeping_exporter_superq_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_smokeping_exporter_superq_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9374:
 

@@ -31,10 +31,13 @@ An array of additional flags to pass to the grok_exporter daemon:
 
     prometheus_grok_exporter_fstab_extra_opts: []
 
-The version of grok_exporter to install. The source version defines the version as specified in version control:
+The version of grok_exporter_fstab to install. The default version can be found in the [grok_exporter_fstab variables file](../vars/software/grok_exporter_fstab.yml) and can be used to override the default version:
 
-    prometheus_grok_exporter_fstab_version: "0.2.8"
-    prometheus_grok_exporter_fstab_src_version: "v0.2.8"
+    prometheus_grok_exporter_fstab_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_grok_exporter_fstab_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9144:
 

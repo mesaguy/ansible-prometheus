@@ -22,9 +22,13 @@ An array of additional flags to pass to the cloudwatch_exporter daemon:
 
     prometheus_cloudwatch_exporter_extra_opts: []
 
-The version of cloudwatch_exporter to install:
+The version of cloudwatch_exporter to install. The default version can be found in the [cloudwatch_exporter variables file](../vars/software/cloudwatch_exporter.yml) and can be used to override the default version:
 
-    prometheus_cloudwatch_exporter_version: "0.8.0"
+    prometheus_cloudwatch_exporter_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_cloudwatch_exporter_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9106:
 

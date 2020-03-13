@@ -28,10 +28,13 @@ An array of additional flags to pass to the script_exporter daemon (ie):
 
     prometheus_script_exporter_adhocteam_extra_opts: []
 
-The version of script_exporter to install. The source version defines the version as specified in version control:
+The version of script_exporter_adhocteam to install. The default version can be found in the [script_exporter_adhocteam variables file](../vars/software/script_exporter_adhocteam.yml) and can be used to override the default version:
 
-    prometheus_script_exporter_adhocteam_version: "1.0.2"
-    prometheus_script_exporter_adhocteam_src_version: "v1.0.2"
+    prometheus_script_exporter_adhocteam_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_script_exporter_adhocteam_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9172:
 

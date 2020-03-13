@@ -6,10 +6,13 @@ An array of additional flags to pass to the keepalived_exporter daemon (ie):
 
     prometheus_keepalived_exporter_gen2brain_extra_opts: []
 
-The version of keepalived_exporter to install. The source version defines the version as specified in version control:
+The version of keepalived_exporter_gen2brain to install. The default version can be found in the [keepalived_exporter_gen2brain variables file](../vars/software/keepalived_exporter_gen2brain.yml) and can be used to override the default version:
 
-    prometheus_keepalived_exporter_gen2brain_version: "0.3.0"
-    prometheus_keepalived_exporter_gen2brain_src_version: "0.3.0"
+    prometheus_keepalived_exporter_gen2brain_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_keepalived_exporter_gen2brain_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9650:
 

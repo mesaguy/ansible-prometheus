@@ -6,10 +6,13 @@ An array of additional flags to pass to the memcached_exporter daemon:
 
     prometheus_memcached_exporter_extra_opts: []
 
-The version of memcached_exporter to install. The source version defines the version as specified in version control:
+The version of memcached_exporter to install. The default version can be found in the [memcached_exporter variables file](../vars/software/memcached_exporter.yml) and can be used to override the default version:
 
-    prometheus_memcached_exporter_version: "0.6.0"
-    prometheus_memcached_exporter_src_version: "v0.6.0"
+    prometheus_memcached_exporter_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_memcached_exporter_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9150:
 

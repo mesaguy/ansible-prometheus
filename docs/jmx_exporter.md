@@ -12,6 +12,10 @@ prometheus_jmx_cfgs:
   puppet: "{{ lookup('file', '../../files/prometheus/jmx.puppet.yml') | from_yaml }}"
 ```
 
-The version of jmx_exporter to install:
+The version of jmx_exporter to install. The default version can be found in the [jmx_exporter variables file](../vars/software/jmx_exporter.yml) and can be used to override the default version:
 
-    prometheus_jmx_exporter_version: "0.12.0"
+    prometheus_jmx_exporter_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_jmx_exporter_use_prerelease: true

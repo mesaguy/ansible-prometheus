@@ -31,10 +31,13 @@ An array of additional flags to pass to the sql_exporter daemon:
 
     prometheus_sql_exporter_free_extra_opts: []
 
-The version of sql_exporter to install. The source version defines the version as specified in version control:
+The version of sql_exporter_free to install. The default version can be found in the [sql_exporter_free variables file](../vars/software/sql_exporter_free.yml) and can be used to override the default version:
 
-    prometheus_sql_exporter_free_version: "0.5"
-    prometheus_sql_exporter_free_src_version: "0.5"
+    prometheus_sql_exporter_free_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_sql_exporter_free_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9399:
 

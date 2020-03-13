@@ -14,10 +14,13 @@ An array of additional flags to pass to the ping_exporter daemon (ie):
 
     prometheus_ping_exporter_czerwonk_extra_opts: []
 
-The version of ping_exporter to install. The source version defines the version as specified in version control:
+The version of ping_exporter_czerwonk to install. The default version can be found in the [ping_exporter_czerwonk variables file](../vars/software/ping_exporter_czerwonk.yml) and can be used to override the default version:
 
-    prometheus_ping_exporter_czerwonk_version: "0.4.4"
-    prometheus_ping_exporter_czerwonk_src_version: "0.44"
+    prometheus_ping_exporter_czerwonk_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_ping_exporter_czerwonk_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9427:
 

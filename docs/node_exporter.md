@@ -19,10 +19,13 @@ Common node_exporter variables can be defined as follows:
       - '--collector.systemd'
       - '--no-collector.zfs'
 
-The version of node_exporter to install. The source version defines the version as specified in version control:
+The version of node_exporter to install. The default version can be found in the [node_exporter variables file](../vars/software/node_exporter.yml) and can be used to override the default version:
 
-    prometheus_node_exporter_version: "0.18.1"
-    prometheus_node_exporter_src_version: "v0.18.1"
+    prometheus_node_exporter_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_node_exporter_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9100:
 

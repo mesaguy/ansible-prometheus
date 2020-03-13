@@ -10,9 +10,13 @@ An array of additional flags to pass to the ceph_exporter daemon (ie):
       - '--ceph.config=/etc/ceph/ceph.conf'
       - '--exporter.config=/etc/ceph/exporter.yml'
 
-The version of ceph_exporter to install. The source version defines the version as specified in version control:
+The version of ceph_exporter_digitalocean to install. The default version can be found in the [ceph_exporter_digitalocean variables file](../vars/software/ceph_exporter_digitalocean.yml) and can be used to override the default version:
 
-    prometheus_ceph_exporter_digitalocean_src_version: "2.0.6-luminous"
+    prometheus_ceph_exporter_digitalocean_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_ceph_exporter_digitalocean_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9128:
 

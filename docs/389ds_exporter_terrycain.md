@@ -10,10 +10,13 @@ An array of additional flags to pass to the 389ds_exporter daemon (ie):
      - '-ldap.pass=test'
      - '-ipa-domain=test'
 
-The version of 389ds_exporter to install. The source version defines the version as specified in version control:
+The version of 389ds_exporter_terrycain to install. The default version can be found in the [389ds_exporter_terrycain variables file](../vars/software/389ds_exporter_terrycain.yml) and can be used to override the default version:
 
-    prometheus_389ds_exporter_terrycain_version: "0.1.2"
-    prometheus_389ds_exporter_terrycain_src_version: "v0.1.2"
+    prometheus_389ds_exporter_terrycain_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_389ds_exporter_terrycain_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9496:
 

@@ -12,10 +12,13 @@ An array of additional flags to pass to the couchbase_exporter daemon:
 
     prometheus_couchbase_exporter_blakelead_extra_opts: []
 
-The version of couchbase_exporter to install. The source version defines the version as specified in version control:
+The version of couchbase_exporter_blakelead to install. The default version can be found in the [couchbase_exporter_blakelead variables file](../vars/software/couchbase_exporter_blakelead.yml) and can be used to override the default version:
 
-    prometheus_couchbase_exporter_blakelead_version: "0.9.6"
-    prometheus_couchbase_exporter_blakelead_src_version: "0.9.6"
+    prometheus_couchbase_exporter_blakelead_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_couchbase_exporter_blakelead_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9191:
 
