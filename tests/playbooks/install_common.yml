@@ -13,11 +13,6 @@
 - block:
     - name: Update 'pacman' cache
       include_tasks: ../../tasks/_setup_pkg_mgr_Archlinux.yml
-
-    - name: Install cron
-      become: true
-      package:
-        name: cronie
   when: ansible_os_family == 'Archlinux'
 
 - name: Skip Java service tests on Gentoo
@@ -53,6 +48,14 @@
     warn: false
   when: ansible_distribution == 'Fedora' and ansible_distribution_major_version in ['20', '21']
 
+- name: Ensure dbus is running
+  become: true
+  service:
+    name: dbus
+    state: started
+  changed_when: false
+  when: ansible_service_mgr == 'systemd'
+
 - name: Workaround for java version on Fedora 22
   become: true
   dnf:
@@ -66,9 +69,13 @@
   # otherwise this would be determined via variables like other distros
   become: true
   package:
-    name: 'openjdk8-jre'
+    name: openjdk8-jre
     state: present
   changed_when: false
+  register: prometheus_openjdk8_install
+  retries: 5
+  delay: 10
+  until: prometheus_openjdk8_install is succeeded
   register: prometheus_java_install_alpine_override
   when: prometheus_java_packages is defined and ansible_os_family == 'Alpine' and ansible_distribution_version is version('3.3', '>=') and ansible_distribution_version is version('3.6', '<')
 
@@ -78,6 +85,10 @@
     name: '{{ prometheus_java_packages }}'
     state: present
   changed_when: false
+  register: prometheus_java_install
+  retries: 5
+  delay: 10
+  until: prometheus_java_install is succeeded
   when: prometheus_java_packages is defined and prometheus_java_install_alpine_override is skipped
 
 - name: Find all prometheus software
@@ -91,6 +102,10 @@
     name: '{{ prometheus_testing_packages }}'
     state: present
   changed_when: false
+  register: prometheus_testing_packages_install
+  retries: 5
+  delay: 10
+  until: prometheus_testing_packages_install is succeeded
   when: prometheus_testing_packages is defined
 
 - name: Create test log file

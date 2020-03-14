@@ -41,7 +41,7 @@
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
       - '--web.console.libraries={{ prometheus_web_console_libraries_dir | default(prometheus_software_install_dir + "/console_libraries") }}'
       - '--web.console.templates={{ prometheus_web_console_templates_dir | default(prometheus_software_install_dir + "/consoles") }}'
-    prometheus_software_url: 'https://github.com/prometheus/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_url: 'https://github.com/prometheus/{{ prometheus_software_name }}/releases/download/{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
     prometheus_software_validation_command: '{{ prometheus_software_install_dir }}/promtool check config {{ prometheus_etc_dir }}/prometheus.yml'
 
 - name: 'Create {{ prometheus_software_name_version }} storage directory: {{ prometheus_storage_directory }}'

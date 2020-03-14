@@ -11,6 +11,10 @@
   loop_control:
     loop_var: prometheus_testing_package
   with_items: '{{ prometheus_testing_packages }}'
+  register: prometheus_testing_prerequisite_packages_install
+  retries: 5
+  delay: 10
+  until: prometheus_testing_prerequisite_packages_install is succeeded
   when: prometheus_testing_packages is defined
 
 - block:
@@ -25,6 +29,10 @@
       package:
         name: coreutils
         state: present
+      register: prometheus_coreutils_packages_install
+      retries: 5
+      delay: 10
+      until: prometheus_coreutils_packages_install is succeeded
   when:
     - ansible_os_family == 'Alpine'
     - ansible_distribution_version is version('3.9', '<')
