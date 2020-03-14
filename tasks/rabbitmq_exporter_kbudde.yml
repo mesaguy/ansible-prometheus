@@ -13,6 +13,7 @@
     prometheus_software_name: rabbitmq_exporter_kbudde
     prometheus_software_description: 'Prometheus rabbitmq_exporter (kbudde), exporter for RabbitMQ metrics'
     prometheus_software_documentation: 'https://github.com/kbudde/rabbitmq_exporter'
+    prometheus_software_use_prerelease: true
 
 - name: Include task to setup {{ prometheus_software_name }} facts
   include_tasks: _setup_software_facts.yml
