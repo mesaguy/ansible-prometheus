@@ -1,0 +1,66 @@
+---
+- block:
+    - name: Create orphaned Prometheus script cron job
+      become: true
+      file:
+        path: /etc/cron.d/prometheus_script_orphan
+        state: touch
+      # Ensure job is only run once for idempotency test
+      when: prometheus_rules_dir_creation is defined and prometheus_rules_dir_creation.changed
+
+    - name: Setup promcron test crontab jobs
+      include_role:
+        name: ../../../../ansible-prometheus
+        tasks_from: _install_script_cron.yml
+      vars:
+        prometheus_setup_script_crons:
+          - name: echo test1
+            script: echo test1
+          - name: echo test2
+            minute: 10
+            hour: 1
+            day: 1
+            weekday: 4
+            month: 8
+            script: echo test2
+            user: prometheus
+
+    - name: Setup promcron test cron file jobs
+      include_role:
+        name: ../../../../ansible-prometheus
+        tasks_from: _install_script_cron.yml
+      vars:
+        prometheus_script_use_cron_files: true
+        prometheus_setup_script_crons:
+          - name: echo test3
+            script: echo test3
+            user: prometheus
+          - name: echo test4
+            minute: 20
+            hour: 2
+            day: 3
+            weekday: 5
+            month: 9
+            script: echo test4
+  when:
+    - ansible_os_family not in ['Alpine']
+
+- name: Create a orphaned Prometheus rules file to be purged while testing
+  become: true
+  file:
+    path: '/opt/prometheus/etc/rules/orphan.rules'
+    state: touch
+  when:
+    - prometheus_rules_dir_creation is defined and prometheus_rules_dir_creation.changed
+    - prometheus_components is defined and "prometheus" in prometheus_components
+
+- name: Re-run rules setup
+  include_role:
+    name: ../../../../ansible-prometheus
+    tasks_from: _rules.yml
+  when: prometheus_components is defined and "prometheus" in prometheus_components
+
+- name: Setup ulimit file
+  include_role:
+    name: ../../../../ansible-prometheus
+    tasks_from: _ulimits.yml

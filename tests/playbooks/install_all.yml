@@ -4,8 +4,8 @@
     - name: Include test installation variables
       include_vars: ../vars/install.yml
 
-    - name: Include install tasks
-      include_tasks: ../playbooks/install_common.yml
+    - name: Include pre-install tasks
+      include_tasks: ../playbooks/install_common_pre.yml
 
     - name: Set install filters from environment
       set_fact:
@@ -19,3 +19,6 @@
         loop_var: prometheus_component
       with_items: "{{ tasks.files | sort(attribute='path') }}"
       when: prometheus_install_only | length == 0 or prometheus_component.path | basename in prometheus_install_only
+
+    - name: Include post-install tasks
+      include_tasks: ../playbooks/install_common_post.yml
