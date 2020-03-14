@@ -7,10 +7,26 @@
 - name: Set {{ prometheus_software_name }} default software facts from software/{{ prometheus_software_name }}.yml
   set_fact:
     prometheus_software_default_jobname: '{{ prometheus_software_vars.defaults.tgroup }}'
+    prometheus_software_default_os_options: '{{ prometheus_software_vars.os_options | default({}) }}'
     prometheus_software_default_port: '{{ prometheus_software_vars.defaults.port }}'
     prometheus_software_default_prerelease: '{{ prometheus_software_vars.software.prerelease | default("") }}'
     prometheus_software_default_release: '{{ prometheus_software_vars.software.release | default("") }}'
     prometheus_software_default_git_master: '{{ prometheus_software_vars.software.master.commit.sha | default("") }}'
+
+- name: Set {{ prometheus_software_name }} os_options facts (part 1 of 2)
+  set_fact:
+    prometheus_software_os_options_list:
+      - '{{ prometheus_software_default_os_options[ansible_distribution + "-" + ansible_distribution_major_version] | default("") }}'
+      - '{{ prometheus_software_default_os_options[ansible_distribution + "-" + ansible_distribution_version] | default("") }}'
+      - '{{ prometheus_software_default_os_options[ansible_distribution] | default("") }}'
+      - '{{ prometheus_software_default_os_options[ansible_os_family + "-" + ansible_distribution_major_version] | default("") }}'
+      - '{{ prometheus_software_default_os_options[ansible_os_family] | default("") }}'
+  when: prometheus_software_default_os_options | length > 0
+
+- name: Set {{ prometheus_software_name }} os_option facts (part 2 of 2)
+  set_fact:
+    prometheus_software_os_options: '{{ prometheus_software_os_options_list | reject("equalto", "") | list | first }}'
+  when: prometheus_software_default_os_options | length > 0
 
 # - debug:
 #     msg: 'Default release: {{ prometheus_software_default_release }}'
@@ -67,6 +83,7 @@
 
 - name: Set {{ prometheus_software_name }} generic facts
   set_fact:
+    prometheus_software_build_prerequisites: '{{ prometheus_software_os_options.build_prerequisites | default([]) }}'
     prometheus_software_env_vars: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_env_vars", default={}) }}'
     prometheus_software_extra_opts: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_extra_opts", default="") }}'
     prometheus_software_fallback_to_build: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_fallback_to_build", default=prometheus_fallback_to_build) }}'

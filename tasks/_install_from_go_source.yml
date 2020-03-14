@@ -11,6 +11,14 @@
 - name: Include task to setup directories for {{ prometheus_software_name_version }} installation
   include_tasks: _install_directory.yml
 
+- name: Install {{ prometheus_software_name_version }} build prerequisites
+  become: true
+  package:
+    name: '{{ prometheus_software_build_prerequisites }}'
+    state: present
+  when:
+    - prometheus_software_build_prerequisites | length > 0
+
 - name: Include task to setup environment for compiling go source code
   include_tasks: _install_go_compiler.yml
   when: prometheus_install_go_compiler_executed is not defined
