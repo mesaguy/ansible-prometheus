@@ -10,10 +10,13 @@ An array of additional flags to pass to the iptables_exporter daemon (ie):
 
     prometheus_iptables_exporter_retailnext_extra_opts: []
 
-The version of iptables_exporter to install. The source version defines the version as specified in version control:
+The version of iptables_exporter_retailnext to install. The default version can be found in the [iptables_exporter_retailnext variables file](../vars/software/iptables_exporter_retailnext.yml) and can be used to override the default version:
 
-    prometheus_iptables_exporter_retailnext_version: "0.1.0"
-    prometheus_iptables_exporter_retailnext_src_version: "v0.1.0"
+    prometheus_iptables_exporter_retailnext_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_iptables_exporter_retailnext_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9455:
 

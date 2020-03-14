@@ -17,16 +17,10 @@ describe file('/opt/prometheus/exporters/cloudwatch_exporter/active/cloudwatch_e
 end
 
 if command('java').exist?
-  # Verify the 'cloudwatch_exporter' service is running
-  control '01' do
-    impact 1.0
-    title 'Verify cloudwatch_exporter service'
-    desc 'Ensures cloudwatch_exporter service is up and running'
-    describe service('cloudwatch_exporter') do
+  describe service('cloudwatch_exporter') do
       it { should be_enabled }
       it { should be_installed }
       it { should be_running }
-    end
   end
 
   describe processes(Regexp.new("java .*cloudwatch_exporter.jar.*/opt/prometheus/etc/cloudwatch_exporter.yml$")) do

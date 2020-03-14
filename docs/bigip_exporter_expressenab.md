@@ -15,10 +15,13 @@ Environmental variables can also be used to configure the bigip_exporter daemon:
       BE_BIGIP_HOST: 1.1.1.1
       BE_BIGIP_PORT: 443
 
-The version of bigip_exporter to install. The source version defines the version as specified in version control:
+The version of bigip_exporter_expressenab to install. The default version can be found in the [bigip_exporter_expressenab variables file](../vars/software/bigip_exporter_expressenab.yml) and can be used to override the default version:
 
     prometheus_bigip_exporter_expressenab_version: "1.0.0"
-    prometheus_bigip_exporter_expressenab_src_version: "v1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_bigip_exporter_expressenab_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9142:
 

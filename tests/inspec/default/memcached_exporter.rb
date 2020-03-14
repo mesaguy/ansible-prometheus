@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/memcached_exporter/active/memcached_exp
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'memcached_exporter' service is running
-control '01' do
-  impact 1.0
-  title 'Verify memcached_exporter service'
-  desc 'Ensures memcached_exporter service is up and running'
-  describe service('memcached_exporter') do
+describe service('memcached_exporter') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/memcached_exporter/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/memcached_exporter")) do

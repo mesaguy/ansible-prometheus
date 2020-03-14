@@ -6,10 +6,13 @@ An array of additional flags to pass to the openvpn_exporter daemon (ie):
 
     prometheus_openvpn_exporter_kumina_extra_opts: []
 
-The version of openvpn_exporter to install. The source version defines the version as specified in version control:
+The version of openvpn_exporter_kumina to install. The default version can be found in the [openvpn_exporter_kumina variables file](../vars/software/openvpn_exporter_kumina.yml) and can be used to override the default version:
 
-    prometheus_openvpn_exporter_kumina_version: "0.2.1"
-    prometheus_openvpn_exporter_kumina_src_version: "v0.2.1"
+    prometheus_openvpn_exporter_kumina_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_openvpn_exporter_kumina_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9176:
 

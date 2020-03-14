@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/postgres_exporter_wrouesnel/active/post
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'postgres_exporter_wrouesnel' service is running
-control '01' do
-  impact 1.0
-  title 'Verify postgres_exporter_wrouesnel service'
-  desc 'Ensures postgres_exporter_wrouesnel service is up and running'
-  describe service('postgres_exporter_wrouesnel') do
+describe service('postgres_exporter_wrouesnel') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/postgres_exporter_wrouesnel/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/postgres_exporter")) do

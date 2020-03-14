@@ -3,10 +3,13 @@
   become: true
   # Can fail in cases like EL without EPEL enabled
   ignore_errors: true
-  register: prometheus_sponge_installation
   package:
     name: '{{ prometheus_sponge_packages }}'
     state: present
+  register: prometheus_sponge_installation
+  retries: 2
+  delay: 10
+  until: prometheus_sponge_installation is succeeded
   when:
     - prometheus_sponge_packages is defined
     - prometheus_install_sponge | bool

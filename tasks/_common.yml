@@ -27,6 +27,9 @@
         name: '{{ prometheus_prerequisite_packages }}'
         state: present
       register: prometheus_prerequisite_packages_install
+      retries: 5
+      delay: 10
+      until: prometheus_prerequisite_packages_install is succeeded
       when:
         - prometheus_prerequisite_packages is defined
         - prometheus_prerequisite_packages_install is undefined

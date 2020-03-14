@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/bind_exporter_prometheus_community/acti
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'bind_exporter_prometheus_community' service is running
-control '01' do
-  impact 1.0
-  title 'Verify bind_exporter_prometheus_community service'
-  desc 'Ensures bind_exporter_prometheus_community service is up and running'
-  describe service('bind_exporter_prometheus_community') do
+describe service('bind_exporter_prometheus_community') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/bind_exporter_prometheus_community/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/bind_exporter")) do

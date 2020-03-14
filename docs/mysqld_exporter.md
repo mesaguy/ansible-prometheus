@@ -8,10 +8,13 @@ An array of additional flags to pass to the mysqld_exporter daemon:
 
     prometheus_mysqld_exporter_extra_opts: []
 
-The version of mysqld_exporter to install. The source version defines the version as specified in version control:
+The version of mysqld_exporter to install. The default version can be found in the [mysqld_exporter variables file](../vars/software/mysqld_exporter.yml) and can be used to override the default version:
 
-    prometheus_mysqld_exporter_version: "0.12.1"
-    prometheus_mysqld_exporter_src_version: "v0.12.1"
+    prometheus_mysqld_exporter_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_mysqld_exporter_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9104:
 

@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/elasticsearch_exporter_justwatchcom/act
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'elasticsearch_exporter_justwatchcom' service is running
-control '01' do
-  impact 1.0
-  title 'Verify elasticsearch_exporter_justwatchcom service'
-  desc 'Ensures elasticsearch_exporter_justwatchcom service is up and running'
-  describe service('elasticsearch_exporter_justwatchcom') do
+describe service('elasticsearch_exporter_justwatchcom') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/elasticsearch_exporter_justwatchcom/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/elasticsearch_exporter")) do

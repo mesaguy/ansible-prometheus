@@ -78,16 +78,10 @@ describe command('/opt/prometheus/prometheus/active/promtool check config /opt/p
   its('exit_status') { should eq 0 }
 end
 
-# Verify the 'prometheus' service is running
-control '01' do
-  impact 1.0
-  title 'Verify prometheus service'
-  desc 'Ensures prometheus service is up and running'
-  describe service('prometheus') do
+describe service('prometheus') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/prometheus/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/prometheus")) do

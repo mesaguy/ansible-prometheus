@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/smokeping_exporter_superq/active/smokep
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'smokeping_exporter_superq' service is running
-control '01' do
-  impact 1.0
-  title 'Verify smokeping_exporter_superq service'
-  desc 'Ensures smokeping_exporter_superq service is up and running'
-  describe service('smokeping_exporter_superq') do
+describe service('smokeping_exporter_superq') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/smokeping_exporter_superq/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/smokeping_prober")) do

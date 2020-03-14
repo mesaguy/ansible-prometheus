@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/gluster_exporter_ofesseler/active/glust
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'gluster_exporter_ofesseler' service is running
-control '01' do
-  impact 1.0
-  title 'Verify gluster_exporter_ofesseler service'
-  desc 'Ensures gluster_exporter_ofesseler service is up and running'
-  describe service('gluster_exporter_ofesseler') do
+describe service('gluster_exporter_ofesseler') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/gluster_exporter_ofesseler/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/gluster_exporter")) do

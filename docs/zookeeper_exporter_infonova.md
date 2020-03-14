@@ -14,8 +14,13 @@ An array of additional flags to pass to the zookeeper_exporter daemon:
 
     prometheus_zookeeper_exporter_infonova_extra_opts: []
 
-The version of zookeeper_exporter to install:
-    prometheus_zookeeper_exporter_infonova_version: "1.1"
+The version of zookeeper_exporter_infonova to install. The default version can be found in the [zookeeper_exporter_infonova variables file](../vars/software/zookeeper_exporter_infonova.yml) and can be used to override the default version:
+
+    prometheus_zookeeper_exporter_infonova_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_zookeeper_exporter_infonova_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9114:
 

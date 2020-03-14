@@ -22,9 +22,13 @@ An array of additional flags to pass to the statsd_exporter daemon:
     prometheus_statsd_exporter_extra_opts:
         --statsd.listen-udp=":9125"
 
-The version of statsd_exporter to install. The source version defines the version as specified in version control:
-    prometheus_statsd_exporter_version: "0.14.1"
-    prometheus_statsd_exporter_src_version: "v0.14.1"
+The version of statsd_exporter to install. The default version can be found in the [statsd_exporter variables file](../vars/software/statsd_exporter.yml) and can be used to override the default version:
+
+    prometheus_statsd_exporter_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_statsd_exporter_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9102:
 

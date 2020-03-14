@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/squid_exporter_boynux/active/squid-expo
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'squid_exporter_boynux' service is running
-control '01' do
-  impact 1.0
-  title 'Verify squid_exporter_boynux service'
-  desc 'Ensures squid_exporter_boynux service is up and running'
-  describe service('squid_exporter_boynux') do
+describe service('squid_exporter_boynux') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/squid_exporter_boynux/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/squid-exporter")) do

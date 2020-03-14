@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/statsd_exporter/active/statsd_exporter'
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'statsd_exporter' service is running
-control '01' do
-  impact 1.0
-  title 'Verify statsd_exporter service'
-  desc 'Ensures statsd_exporter service is up and running'
-  describe service('statsd_exporter') do
+describe service('statsd_exporter') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/statsd_exporter/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/statsd_exporter")) do

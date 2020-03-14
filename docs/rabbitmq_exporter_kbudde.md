@@ -11,10 +11,13 @@ An array of additional flags to pass to the rabbitmq_exporter daemon:
 
     prometheus_rabbitmq_exporter_kbudde_extra_opts: []
 
-The version of rabbitmq_exporter to install. The source version defines the version as specified in version control:
+The version of rabbitmq_exporter_kbudde to install. The default version can be found in the [rabbitmq_exporter_kbudde variables file](../vars/software/rabbitmq_exporter_kbudde.yml) and can be used to override the default version:
 
-    prometheus_rabbitmq_exporter_kbudde_version: "0.28.0"
-    prometheus_rabbitmq_exporter_kbudde_src_version: "v0.28.0"
+    prometheus_rabbitmq_exporter_kbudde_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_rabbitmq_exporter_kbudde_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9419:
 

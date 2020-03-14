@@ -16,16 +16,10 @@ describe file('/opt/prometheus/pushgateway/active/pushgateway') do
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'pushgateway' service is running
-control '01' do
-  impact 1.0
-  title 'Verify pushgateway service'
-  desc 'Ensures pushgateway service is up and running'
-  describe service('pushgateway') do
+describe service('pushgateway') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/pushgateway/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/pushgateway")) do

@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/openldap_exporter_tomcz/active/openldap
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'openldap_exporter_tomcz' service is running
-control '01' do
-  impact 1.0
-  title 'Verify openldap_exporter_tomcz service'
-  desc 'Ensures openldap_exporter_tomcz service is up and running'
-  describe service('openldap_exporter_tomcz') do
+describe service('openldap_exporter_tomcz') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/openldap_exporter_tomcz/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/openldap_exporter")) do

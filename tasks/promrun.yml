@@ -7,6 +7,9 @@
     name: '{{ prometheus_gnu_time_packages }}'
     state: present
   register: prometheus_gnu_time_package_install
+  retries: 2
+  delay: 10
+  until: prometheus_gnu_time_package_install is succeeded
   ignore_errors: true
   when:
     - prometheus_gnu_time_packages is defined and prometheus_gnu_time_packages | length > 0

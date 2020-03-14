@@ -16,6 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - A 'promcron_name' label to the end and exit metrics outputted by the 'promcron' script. This is helpful when alerting on all promcron jobs
 - Ability to simply create cronjobs for Ansible scripts
 - Option 'prometheus_override_fqdn' to specify a FQDN for a host when the FQDN isn't in Ansible's inventory and isn't the host's official FQDN
+- Retry Git clones up to 5 times
+- Retry all downloads up to 5 times
 
 ### Changed
 
@@ -23,6 +25,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ensure all references to Prometheus's 'etc' directory are to /opt/prometheus/etc instead of /etc/prometheus
 - Utilize handlers for 'reloading' and 'restarting' activities. Simplify tasks
 - Migrate all exporter documentation to exporter specific files
+- All GitHub source code downloads are now tarballs instead of git clones, this will ease caching in the next major release
+
+###  Removed
+
+- The 'prometheus_software_src_version' variables have been removed and instead each software has a single prometheus software version
+- Removed prometheus_software_shortname variables
+- The internal 'prometheus_software_binary_unarchive_opts' variable has been replaced with a task that checks if software archives (tar) contain the software binary in the base or in a subdirectory
 
 ## [0.10.3] - 2020-03-04
 

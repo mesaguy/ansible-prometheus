@@ -6,10 +6,13 @@ An array of additional flags to pass to the redis_exporter daemon:
 
     prometheus_redis_exporter_oliver006_extra_opts: []
 
-The version of redis_exporter to install. The source version defines the version as specified in version control:
+The version of redis_exporter_oliver006 to install. The default version can be found in the [redis_exporter_oliver006 variables file](../vars/software/redis_exporter_oliver006.yml) and can be used to override the default version:
 
-    prometheus_redis_exporter_oliver006_version: "1.4.0"
-    prometheus_redis_exporter_oliver006_src_version: "v1.4.0"
+    prometheus_redis_exporter_oliver006_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_redis_exporter_oliver006_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
 

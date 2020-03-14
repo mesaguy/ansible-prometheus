@@ -7,10 +7,13 @@ An array of additional flags to pass to the apache_exporter daemon (ie):
     prometheus_apache_exporter_lusitaniae_extra_opts:
       - '-scrape_uri=http://localhost/server-status/?auto'
 
-The version of apache_exporter to install. The source version defines the version as specified in version control:
+The version of apache_exporter_lusitaniae to install. The default version can be found in the [apache_exporter_lusitaniae variables file](../vars/software/apache_exporter_lusitaniae.yml) and can be used to override the default version:
 
-    prometheus_apache_exporter_lusitaniae_version: "0.7.0"
-    prometheus_apache_exporter_lusitaniae_src_version: "v0.7.0"
+    prometheus_apache_exporter_lusitaniae_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_apache_exporter_lusitaniae_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9117:
 

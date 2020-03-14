@@ -6,10 +6,13 @@ An array of additional flags to pass to the ssl_exporter daemon:
 
     prometheus_ssl_exporter_ribbybibby_extra_opts: []
 
-The version of ssl_exporter to install:
+The version of ssl_exporter_ribbybibby to install. The default version can be found in the [ssl_exporter_ribbybibby variables file](../vars/software/ssl_exporter_ribbybibby.yml) and can be used to override the default version:
 
-    prometheus_ssl_exporter_ribbybibby_version: "0.6.0"
-    prometheus_ssl_exporter_ribbybibby_src_version: "0.6.0"
+    prometheus_ssl_exporter_ribbybibby_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_ssl_exporter_ribbybibby_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9219:
 

@@ -4,9 +4,13 @@ An array of additional flags to pass to the nvidia_gpu_exporter daemon:
 
     prometheus_nvidia_gpu_exporter_mindprince_extra_opts: []
 
-The version of nvidia_gpu_exporter to install. As there is no release, the version is a git commit hash:
+The version of nvidia_gpu_exporter_mindprince to install. The default version can be found in the [nvidia_gpu_exporter_mindprince variables file](../vars/software/nvidia_gpu_exporter_mindprince.yml) and can be used to override the default version:
 
-    prometheus_nvidia_gpu_exporter_mindprince_version: "3897bdad246f3bc0e7105805d4442b9c9c7b06d2"
+    prometheus_nvidia_gpu_exporter_mindprince_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_nvidia_gpu_exporter_mindprince_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9445:
 

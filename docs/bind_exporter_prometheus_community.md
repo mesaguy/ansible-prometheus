@@ -7,10 +7,13 @@ An array of additional flags to pass to the bind_exporter daemon (ie):
     prometheus_bind_exporter_prometheus_community_extra_opts:
       - '-bind.stats-url string=http://localhost:8053/'
 
-The version of bind_exporter to install. The source version defines the version as specified in version control:
+The version of bind_exporter_prometheus_community to install. The default version can be found in the [bind_exporter_prometheus_community variables file](../vars/software/bind_exporter_prometheus_community.yml) and can be used to override the default version:
 
-    prometheus_bind_exporter_prometheus_community_version: "0.3.0"
-    prometheus_bind_exporter_prometheus_community_src_version: "v0.3.0"
+    prometheus_bind_exporter_prometheus_community_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_bind_exporter_prometheus_community_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 8053:
 

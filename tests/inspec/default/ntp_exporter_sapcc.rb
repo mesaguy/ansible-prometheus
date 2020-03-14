@@ -16,16 +16,10 @@ describe file('/opt/prometheus/exporters/ntp_exporter_sapcc/active/ntp_exporter'
     its('group') { should eq 'prometheus' }
 end
 
-# Verify the 'ntp_exporter_sapcc' service is running
-control '01' do
-  impact 1.0
-  title 'Verify ntp_exporter_sapcc service'
-  desc 'Ensures ntp_exporter_sapcc service is up and running'
-  describe service('ntp_exporter_sapcc') do
+describe service('ntp_exporter_sapcc') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/exporters/ntp_exporter_sapcc/(v)?([0-9.]+|[0-9.a-z\-]+__go-[0-9.]+)/ntp_exporter")) do

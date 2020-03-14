@@ -14,6 +14,10 @@
   package:
     name: '{{ prometheus_go_tool }}'
     state: present
+  register: prometheus_go_build_packages_install
+  retries: 5
+  delay: 10
+  until: prometheus_go_build_packages_install is succeeded
   with_items: '{{ prometheus_go_compile_tools }}'
   loop_control:
     loop_var: prometheus_go_tool

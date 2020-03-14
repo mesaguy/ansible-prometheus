@@ -20,7 +20,7 @@
 - name: Set {{ prometheus_software_name_version }} facts
   set_fact:
     prometheus_software_opts: '[{% if prometheus_haproxy_exporter_socket is defined and prometheus_haproxy_exporter_socket %}"--haproxy.scrape-uri=unix:{{ prometheus_haproxy_exporter_socket }}"{% else %}"--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}"{% endif %}]'
-    prometheus_software_url: 'https://github.com/prometheus/{{ prometheus_software_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_url: 'https://github.com/prometheus/{{ prometheus_software_name }}/releases/download/{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml

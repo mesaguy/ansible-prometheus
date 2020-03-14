@@ -11,7 +11,6 @@
     prometheus_grok_exporter_fstab_sync_patterns_directory: true
     prometheus_software_author: fstab
     prometheus_software_binary_name: grok_exporter
-    prometheus_software_binary_unarchive_opts: []
     # Do not perform tests, tests only succeed where IPv6 is available
     prometheus_software_name: grok_exporter_fstab
     prometheus_software_description: 'Prometheus grok_exporter, export from arbitrary unstructured log data'
@@ -26,10 +25,8 @@
     prometheus_software_config_name: '{{ prometheus_software_name }}'
     prometheus_software_opts:
       - '-config {{ prometheus_etc_dir }}/grok_exporter_fstab.yml'
-    prometheus_software_url: 'https://github.com/fstab/{{ prometheus_software_binary_name }}/releases/download/v{{ prometheus_software_version }}/{{ prometheus_software_binary_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.zip'
+    prometheus_software_url: 'https://github.com/fstab/{{ prometheus_software_binary_name }}/releases/download/{{ prometheus_software_version }}/{{ prometheus_software_binary_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.zip'
     # Source builds are unrealistic unless we build Oniguruma libraries too...:
-    #   https://github.com/fstab/grok_exporter/
-    # prometheus_software_src_url: 'https://github.com/fstab/{{ prometheus_software_binary_name }}'
 
 - name: 'Include task to perform installation of {{ prometheus_software_name_version }}'
   include_tasks: _install.yml

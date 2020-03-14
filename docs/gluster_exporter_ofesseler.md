@@ -10,10 +10,13 @@ The gluster exporter needs to run as root if gluster is running as root:
 
     prometheus_gluster_exporter_ofesseler_runas: root
 
-The version of gluster_exporter to install. The source version defines the version as specified in version control:
+The version of gluster_exporter_ofesseler to install. The default version can be found in the [gluster_exporter_ofesseler variables file](../vars/software/gluster_exporter_ofesseler.yml) and can be used to override the default version:
 
-    prometheus_gluster_exporter_ofesseler_version: "0.2.7"
-    prometheus_gluster_exporter_ofesseler_src_version: "v0.2.7"
+    prometheus_gluster_exporter_ofesseler_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_gluster_exporter_ofesseler_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9189:
 

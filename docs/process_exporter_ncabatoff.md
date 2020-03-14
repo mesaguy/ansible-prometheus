@@ -32,10 +32,13 @@ An array of additional flags to pass to the process_exporter daemon:
 
     prometheus_process_exporter_ncabatoff_extra_opts: []
 
-The version of process_exporter to install. The source version defines the version as specified in version control:
+The version of process_exporter_ncabatoff to install. The default version can be found in the [process_exporter_ncabatoff variables file](../vars/software/process_exporter_ncabatoff.yml) and can be used to override the default version:
 
-    prometheus_process_exporter_ncabatoff_version: "0.6.0"
-    prometheus_process_exporter_ncabatoff_src_version: "v0.6.0"
+    prometheus_process_exporter_ncabatoff_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_process_exporter_ncabatoff_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9256. This is the default port and can/should be overridden using the configuration as exampled above in this section:
 

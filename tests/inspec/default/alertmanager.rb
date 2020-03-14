@@ -32,16 +32,10 @@ describe command('/opt/prometheus/alertmanager/active/amtool check-config /opt/p
   its('exit_status') { should eq 0 }
 end
 
-# Verify the 'alertmanager' service is running
-control '01' do
-  impact 1.0
-  title 'Verify alertmanager service'
-  desc 'Ensures alertmanager service is up and running'
-  describe service('alertmanager') do
+describe service('alertmanager') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
 describe processes(Regexp.new("^/opt/prometheus/alertmanager/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/alertmanager")) do

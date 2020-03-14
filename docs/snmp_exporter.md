@@ -10,9 +10,13 @@ An array of additional flags to pass to the snmp_exporter daemon:
 
     prometheus_snmp_exporter_extra_opts: []
 
-The version of snmp_exporter to install. The source version defines the version as specified in version control:
-    prometheus_snmp_exporter_version: "0.17.0"
-    prometheus_snmp_exporter_src_version: "v0.17.0"
+The version of snmp_exporter to install. The default version can be found in the [snmp_exporter variables file](../vars/software/snmp_exporter.yml) and can be used to override the default version:
+
+    prometheus_snmp_exporter_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_snmp_exporter_use_prerelease: true
 
 Port and IP to listen on. Defaults to listening on all available IPs on port 9116:
 

@@ -30,7 +30,7 @@
 
 # Download and unarchive seperately as 'get_url' can follow redirects
 # and github uses redirects for some downloads
-- name: Download {{ prometheus_software_name_version }} and validate checksum
+- name: 'Download {{ prometheus_software_name_version }} and validate checksum ({{ prometheus_software_metadata.url }})'
   become: true
   get_url:
     url: '{{ prometheus_software_metadata.url }}'
@@ -49,7 +49,7 @@
     - not prometheus_software_installed.stat.exists
     - prometheus_software_metadata is defined and prometheus_software_metadata | length > 0
 
-- name: Download {{ prometheus_software_name_version }}
+- name: 'Download {{ prometheus_software_name_version }} ({{ prometheus_software_url }})'
   become: true
   get_url:
     url: '{{ prometheus_software_url }}'
@@ -67,10 +67,21 @@
     - not prometheus_software_installed.stat.exists
     - prometheus_software_metadata is undefined or prometheus_software_metadata | length == 0
 
-- name: Unarchive {{ prometheus_software_name_version }}
+- name: Find {{ prometheus_software_name_version }} archive contents
+  command: 'tar -tf {{ prometheus_software_archive_file }}'
+  args:
+    warn: false # Do not warn that we are running the tar command directly
+  register: prometheus_software_archive_contents
+  changed_when: false
+  when:
+    - not prometheus_software_installed.stat.exists
+    - prometheus_software_download is succeeded
+    - prometheus_software_archive_file | regex_search('.*(tar.gz)$', ignorecase=True)
+
+- name: 'Unarchive {{ prometheus_software_name_version }} ({{ prometheus_software_archive_file }})'
   become: true
   unarchive:
-    extra_opts: '{{ prometheus_software_binary_unarchive_opts | default(prometheus_default_binary_unarchive_opts) }}'
+    extra_opts: '{% if prometheus_software_archive_contents is defined and prometheus_software_archive_contents.stdout_lines | default([]) | select("match", ".*\/" + prometheus_software_binary_name + "$", ignorecase=True) | list | length > 0 %}["--strip-components=1"]{% else %}[]{% endif %}'
     creates: '{{ prometheus_software_binary }}'
     owner: root
     group: '{{ prometheus_group }}'
@@ -91,3 +102,4 @@
   file:
     path: '{{ prometheus_software_archive_file }}'
     state: absent
+  when: prometheus_software_installation is succeeded
