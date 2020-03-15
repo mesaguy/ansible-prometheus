@@ -22,7 +22,7 @@ describe service('rabbitmq_exporter_kbudde') do
     it { should be_running }
 end
 
-describe processes(Regexp.new("^/opt/prometheus/exporters/rabbitmq_exporter_kbudde/(v)?([0-9.]+|[\-0-9.A-Z]+__go-[0-9.]+)/rabbitmq_exporter")) do
+describe processes(Regexp.new("^/opt/prometheus/exporters/rabbitmq_exporter_kbudde/(v)?([.0-9A-Z\-]+|[.0-9.A-Z\-]+__go-[0-9.]+)/rabbitmq_exporter")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }
