@@ -16,15 +16,17 @@ env:
   - ANSIBLE_VERSION=2.6.0  KITCHEN_PLATFORM=default-ubuntu-1804
   - ANSIBLE_VERSION=2.6.20 KITCHEN_PLATFORM=default-ubuntu-1804
   - ANSIBLE_VERSION=2.7.0  KITCHEN_PLATFORM=default-ubuntu-1804
-  - ANSIBLE_VERSION=2.7.15 KITCHEN_PLATFORM=default-ubuntu-1804
+  - ANSIBLE_VERSION=2.7.16 KITCHEN_PLATFORM=default-ubuntu-1804
   - ANSIBLE_VERSION=2.8.0 KITCHEN_PLATFORM=default-ubuntu-1804
-  - ANSIBLE_VERSION=2.8.7 KITCHEN_PLATFORM=default-ubuntu-1804
+  - ANSIBLE_VERSION=2.8.10 KITCHEN_PLATFORM=default-ubuntu-1804
+  - ANSIBLE_VERSION=2.9.0 KITCHEN_PLATFORM=default-ubuntu-1804
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-archlinux
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-centos-77
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-centos-81
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-oraclelinux-77
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-ubuntu-1604
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-ubuntu-1804
+  - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-ubuntu-2004
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-archlinux KITCHEN_PLAYBOOK=tgroups KITCHEN_INSPEC_SUITE=tgroups
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-archlinux KITCHEN_PLAYBOOK=tgroups_purge KITCHEN_INSPEC_SUITE=tgroups KITCHEN_IDEMPOTENY_TEST=false
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-archlinux KITCHEN_PLAYBOOK=promcron KITCHEN_INSPEC_SUITE=promcron
@@ -84,4 +86,4 @@ script:
   - if ! [ -f ".kitchen/docker_id_rsa" ] ; then ssh-keygen -f .kitchen/docker_id_rsa -t rsa -N ''; fi
 
   # Perform installations, inspec tests, and idempotent tests
-  - bundle exec kitchen test $KITCHEN_PLATFORM
+  - PROMETHEUS_DEBUG=true bundle exec kitchen test $KITCHEN_PLATFORM
