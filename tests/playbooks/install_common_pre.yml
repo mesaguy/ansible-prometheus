@@ -1,4 +1,8 @@
 ---
+- name: Set fact indicating that tests are being run
+  set_fact:
+    prometheus_software_testing: true
+
 - name: Gather Operating System specific variables
   include_vars: '{{ os_var_file }}'
   loop_control:
@@ -9,6 +13,11 @@
     - '../../vars/distribution/{{ ansible_distribution }}.yml'
     - '../../vars/os/{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml'
     - '../../vars/os/{{ ansible_os_family }}.yml'
+
+- name: Set install filters from environment
+  set_fact:
+    prometheus_install_only: '{{ lookup("env", "PROMETHEUS_INSTALL_ONLY").split(",") | reject("equalto", "") | list }}'
+    prometheus_install_skip: '{{ lookup("env", "PROMETHEUS_INSTALL_SKIP").split(",") | reject("equalto", "") | list }}'
 
 - block:
     - name: Update 'pacman' cache

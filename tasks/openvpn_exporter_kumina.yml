@@ -7,6 +7,7 @@
 - name: Starting openvpn_exporter (kumina) install
   set_fact:
     prometheus_exporter: true
+    prometheus_software_allow_build_test: true
     prometheus_software_author: tomcz
     prometheus_software_binary_name: openvpn_exporter
     prometheus_software_officialname: openvpn_exporter_kumina

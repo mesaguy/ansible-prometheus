@@ -1,9 +1,22 @@
 # Prometheus testing
+
+## Perform testing
+
+Run standard tests for Archlinux:
+
+- Normal testing: ```PROMETHEUS_DEBUG=true kitchen test archlinux```
+- Test installations without using metadata (except for version information: ```PROMETHEUS_DISABLE_METADATA=true PROMETHEUS_DEBUG=true kitchen test archlinux```
+- Force all installs to build source: ```KITCHEN_PLAYBOOK=build_all PROMETHEUS_DEBUG=true kitchen test archlinux```
+
 ## Useful when debugging:
 
 Test only specified software:
 
-    KITCHEN_INSPEC_VERIFIER=dummy PROMETHEUS_INSTALL_ONLY=node_exporter.yml kitchen test archlinux
+    KITCHEN_INSPEC_VERIFIER=dummy PROMETHEUS_INSTALL_ONLY=node_exporter.yml,prometheus.yml kitchen test archlinux
+
+Skip specified software:
+
+    KITCHEN_INSPEC_VERIFIER=dummy PROMETHEUS_INSTALL_SKIP=node_exporter.yml kitchen test archlinux
 
 SSH to a kitchen docker container. Replace port in 'ssh' command with port found when running 'docker ps':
 
@@ -42,16 +55,6 @@ Run ADHOC commands inside a kitchen built docker image
 2) Change port 32835 in the example below:
 
     ANSIBLE_REMOTE_PORT=32835 ANSIBLE_HOST_KEY_CHECKING=False ansible -m setup -c ssh -u kitchen all -i localhost, --extra-vars="ansible_ssh_private_key_file=.kitchen/docker_id_rsa"
-
-## Perform testing
-
-Run standard tests for Archlinux:
-
-    kitchen test archlinux
-
-Run all tests for Archlinux, but force all software to build from source:
-
-    KITCHEN_PLAYBOOK=build_all kitchen test archlinux
 
 ## Run tgroup tests
 

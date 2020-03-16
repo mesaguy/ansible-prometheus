@@ -3,6 +3,10 @@ defaults:
   port: 9090
   tgroup: prometheus
 os_options:
+  Alpine:
+    build_prerequisites:
+      - nodejs
+      - yarn
   Archlinux:
     build_prerequisites:
       - nodejs

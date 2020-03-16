@@ -9,10 +9,6 @@
     - name: Include pre-install tasks
       include_tasks: ../playbooks/install_common_pre.yml
 
-    - name: Set install filters from environment
-      set_fact:
-        prometheus_install_only: '{{ lookup("env", "PROMETHEUS_INSTALL_ONLY").split(",") | reject("equalto", "") | list }}'
-
     - name: Install Prometheus tasks
       include_role:
         name: '../../../../ansible-prometheus'
@@ -24,6 +20,7 @@
       when:
         - prometheus_component.path | regex_replace("\.yml$", "") | basename not in ['grok_exporter_fstab']
         - prometheus_install_only | length == 0 or prometheus_component.path | basename in prometheus_install_only
+        - prometheus_install_skip | length == 0 or prometheus_component.path | basename not in prometheus_install_skip
 
     - name: Include post-install tasks
       include_tasks: ../playbooks/install_common_post.yml

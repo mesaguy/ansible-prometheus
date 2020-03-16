@@ -1,14 +1,34 @@
 ---
+- name: Metadata facts being used by installation
+  debug:
+    msg:
+      - 'Metadata: {{ prometheus_software_metadata | default({}) }}'
+      - 'Release: {{ prometheus_software_release | default("") }}'
+      - 'Software URL: {{ prometheus_software_url | default("") }}'
+  tags:
+    # Only run if tagged debug
+    - never
+    - debug
+
 - name: Include task to perform installation of {{ prometheus_software_name_version }} from binary
   include_tasks: _install_from_binary.yml
   when:
     - (prometheus_software_metadata is defined and prometheus_software_metadata | length > 0) or (prometheus_software_release is undefined and prometheus_software_url is defined and prometheus_software_url)
     - not prometheus_always_build_from_source | bool
 
+- name: Disallow building {{ prometheus_software_name_version }} from source
+  fail:
+    msg: 'Failed to install {{ prometheus_software_name_version }} and building from source is disallowed (testing)'
+  when:
+    - prometheus_software_testing
+    - not prometheus_always_build_from_source
+    - not prometheus_software_installation or prometheus_software_installation is failed
+    - not prometheus_software_allow_build_test
+
 - name: Include task to perform installation of {{ prometheus_software_name_version }} by compiling go source
   include_tasks: _install_from_go_source.yml
   when:
-    - prometheus_software_installation is not defined or not prometheus_software_installation or ('failed' in prometheus_software_installation and prometheus_software_installation.failed) or (prometheus_fallback_to_build | bool or prometheus_software_fallback_to_build | bool)
+    - prometheus_software_installation is not defined or not prometheus_software_installation or (not prometheus_software_installation or prometheus_software_installation is failed) or (prometheus_fallback_to_build | bool or prometheus_software_fallback_to_build | bool)
     - prometheus_software_src_url is defined and prometheus_software_src_url
 
 - name: Include task to symlink latest {{ prometheus_software_name_version }} directory to an "active" directory

@@ -14,6 +14,7 @@
   set_fact:
     prometheus_software_url: '{{ prometheus_software_metadata.url }}'
   when:
+    - not prometheus_disable_metadata
     - prometheus_software_metadata is defined and prometheus_software_metadata | length > 0
 
 - name: Download {{ prometheus_software_name_version }}

@@ -7,6 +7,7 @@
 - name: Starting nvidia_gpu_exporter (mindprince) install
   set_fact:
     prometheus_exporter: true
+    prometheus_software_allow_build_test: true
     prometheus_software_author: mindprince
     prometheus_software_binary_name: nvidia_gpu_prometheus_exporter
     prometheus_software_officialname: nvidia_gpu_prometheus_exporter

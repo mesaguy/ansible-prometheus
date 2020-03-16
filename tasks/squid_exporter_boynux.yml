@@ -7,6 +7,7 @@
 - name: Starting squid_exporter (boynux) install
   set_fact:
     prometheus_exporter: true
+    prometheus_software_allow_build_test: true
     prometheus_software_author: boynux
     prometheus_software_binary_name: squid-exporter
     prometheus_software_files:

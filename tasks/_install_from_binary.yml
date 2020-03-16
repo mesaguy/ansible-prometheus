@@ -47,6 +47,7 @@
   until: prometheus_software_download is succeeded
   when:
     - not prometheus_software_installed.stat.exists
+    - not prometheus_disable_metadata
     - prometheus_software_metadata is defined and prometheus_software_metadata | length > 0
 
 - name: 'Download {{ prometheus_software_name_version }} ({{ prometheus_software_url }})'
@@ -65,7 +66,7 @@
   until: prometheus_software_download is succeeded
   when:
     - not prometheus_software_installed.stat.exists
-    - prometheus_software_metadata is undefined or prometheus_software_metadata | length == 0
+    - (prometheus_disable_metadata or prometheus_software_metadata is undefined or prometheus_software_metadata | length == 0)
 
 - name: Find {{ prometheus_software_name_version }} archive contents
   command: 'tar -tf {{ prometheus_software_archive_file }}'

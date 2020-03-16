@@ -27,22 +27,35 @@
 
 - name: Set {{ prometheus_software_name }} os_option facts (part 2 of 2)
   set_fact:
-    prometheus_software_os_options: '{{ prometheus_software_os_options_list | reject("equalto", "") | list | first }}'
-  when: prometheus_software_default_os_options | length > 0
+    prometheus_software_os_options: '{{ prometheus_software_os_options_list | reject("equalto", "") | list | first | default("") }}'
+  when:
+    - prometheus_software_default_os_options | length > 0
+    - prometheus_software_os_options_list | length > 0
 
-# - debug:
-#     msg: 'Default release: {{ prometheus_software_default_release }}'
-
-# - debug:
-#     msg: 'Default prerelease: {{ prometheus_software_default_prerelease }}'
+- name: Default release version facts
+  debug:
+    msg:
+      - 'Default release: {{ prometheus_software_default_release }}'
+      - 'Default prerelease: {{ prometheus_software_default_prerelease }}'
+  tags:
+    # Only run if tagged debug
+    - never
+    - debug
 
 - name: Set {{ prometheus_software_name }} version facts
   set_fact:
     prometheus_software_version: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_version", default=prometheus_software_default_release) }}'
     prometheus_software_use_prerelease: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_use_prerelease", default=prometheus_software_use_prerelease) }}'
 
-# - debug:
-#     msg: 'Software version: {{ prometheus_software_version }}'
+- name: Software versions to use
+  debug:
+    msg:
+      - 'Software version: {{ prometheus_software_version }}'
+      - 'Use prerelease: {{ prometheus_software_use_prerelease }}'
+  tags:
+    # Only run if tagged debug
+    - never
+    - debug
 
 - name: Set {{ prometheus_software_name }} prerelease version facts
   set_fact:
@@ -58,23 +71,37 @@
   when:
     - prometheus_software_version == ""
 
-# - debug:
-#     msg: 'Software version (prelease enabled): {{ prometheus_software_version }}'
+- name: Set {{ prometheus_software_name }} architecture facts
+  set_fact:
+    prometheus_software_architecture: '{{ prometheus_architecture }}'
+  when: prometheus_software_architecture is undefined or prometheus_software_architecture == ""
 
-# - debug:
-#     msg: 'Software source master version): {{ prometheus_software_default_git_master }}'
-
-# - debug:
-#     msg: '{{ (prometheus_software_vars["software"]["releases"] | selectattr("name", "equalto", prometheus_software_version)) | list }}'
+- name: Software version and release facts
+  debug:
+    msg:
+      - 'Architecture: {{ prometheus_software_architecture }}'
+      - 'Software version (prelease enabled): {{ prometheus_software_version }}'
+      - 'Software source master version): {{ prometheus_software_default_git_master }}'
+      - '{{ (prometheus_software_vars["software"]["releases"] | selectattr("name", "equalto", prometheus_software_version)) | list }}'
+  tags:
+    # Only run if tagged debug
+    - never
+    - debug
 
 - name: Set {{ prometheus_software_name }} release facts
   set_fact:
     prometheus_software_release: '{{ prometheus_software_vars["software"]["releases"] | selectattr("name", "equalto", prometheus_software_version) | list | first }}'
   when: prometheus_software_vars["software"]["releases"] | length > 0
 
-# - debug:
-#    msg: 'Software release: {{ prometheus_software_release }}'
-#  when: prometheus_software_release is defined
+- name: Software release being used
+  debug:
+    msg: 'Software release: {{ prometheus_software_release }}'
+  when:
+    - prometheus_software_release is defined
+  tags:
+    # Only run if tagged debug
+    - never
+    - debug
 
 - name: Set {{ prometheus_software_name }} generic facts
   set_fact:
@@ -83,7 +110,7 @@
     prometheus_software_extra_opts: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_extra_opts", default="") }}'
     prometheus_software_fallback_to_build: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_fallback_to_build", default=prometheus_fallback_to_build) }}'
     prometheus_software_host: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_host", default="0.0.0.0") }}'
-    prometheus_software_metadata: '{{ prometheus_software_release.files | default([]) | selectattr("name", "match", "^.*(" + prometheus_architecture + "|" + prometheus_architecture | replace("-", "_") + ").*$") | list | first | default({}) }}'
+    prometheus_software_metadata: '{{ prometheus_software_release.files | default([]) | selectattr("name", "match", "^.*" + prometheus_software_architecture + ".*$") | list | first | default({}) }}'
     prometheus_software_name_version: '{{ prometheus_software_name }}-{{ prometheus_software_version }}'
     prometheus_software_port: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_port", default=prometheus_software_default_port) }}'
     prometheus_software_runas: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_runas", default=prometheus_user) }}'

@@ -7,6 +7,7 @@
 - name: Starting nvidia_exporter (BugRoger) install
   set_fact:
     prometheus_exporter: true
+    prometheus_software_allow_build_test: true
     prometheus_software_author: BugRoger
     prometheus_software_binary_name: nvidia-exporter
     prometheus_software_officialname: nvidia-exporter

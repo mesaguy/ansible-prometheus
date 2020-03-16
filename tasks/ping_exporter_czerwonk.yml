@@ -16,6 +16,10 @@
     prometheus_software_description: 'Prometheus ping_exporter for ICMP echo requests'
     prometheus_software_documentation: 'https://github.com/czerwonk/ping_exporter'
 
+- name: Set {{ prometheus_software_name }} architecture facts
+  set_fact:
+    prometheus_software_architecture: '{{ prometheus_architecture | replace("-", "_") }}'
+
 - name: Include task to setup {{ prometheus_software_name }} facts
   include_tasks: _setup_software_facts.yml
 
@@ -25,7 +29,7 @@
     prometheus_software_opts:
       - '-config.path={{ prometheus_etc_dir }}/{{ prometheus_software_name }}.yml'
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
-    prometheus_software_url: 'https://github.com/czerwonk/{{ prometheus_software_binary_name }}/releases/download/{{ prometheus_software_version }}/{{ prometheus_software_binary_name }}-{{ prometheus_software_version }}_{{ prometheus_architecture | replace("-", "_") }}'
+    prometheus_software_url: 'https://github.com/{{ prometheus_software_author }}/{{ prometheus_software_binary_name }}/releases/download/{{ prometheus_software_version }}/{{ prometheus_software_binary_name }}-{{ prometheus_software_version | regex_replace("^(v)?") }}_{{ prometheus_software_architecture | replace("-", "_") }}'
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install_file.yml

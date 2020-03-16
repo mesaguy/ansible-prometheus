@@ -33,6 +33,8 @@
     # Additional tgroup labels, usually defined for an exporter that
     # isn't managed by this role
     prometheus_additional_tgroup_labels: {}
+    # Used when testing, specifies if source code builds are permitted while testing
+    prometheus_software_allow_build_test: false
     # Boolean that specifies if software is a Prometheus exporter
     prometheus_exporter: false
     # User to install scripts for (defaults to root unless overridden for each
@@ -42,6 +44,9 @@
     prometheus_script_cron_minute: '*'
     # Name of cron file to use for script installation
     prometheus_script_cron_file: ''
+    # Software's architecture formatted correctly for project
+    # (AMD vs amd, dashes vs underscores, etc)
+    prometheus_software_architecture: ''
     # Author's name. In the case of github projects, the author of fstab/grok_exporter is "fstab"
     prometheus_software_author: ''
     prometheus_software_binary: ''

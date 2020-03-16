@@ -148,9 +148,13 @@ prometheus_script_promrun: false
 prometheus_script_promrun_link_dir: /usr/bin
 
 # For use when testing
+prometheus_software_testing: false
+prometheus_always_build_from_source: false
+prometheus_disable_metadata: false
 prometheus_script_enable_all: false
 prometheus_software_service_test: true
-prometheus_always_build_from_source: false
 
 # Reset by each software install:
+prometheus_software_allow_build_test: false
+prometheus_software_installation: ''
 prometheus_software_use_prerelease: false

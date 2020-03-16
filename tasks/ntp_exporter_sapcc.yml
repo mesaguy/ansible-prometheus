@@ -7,6 +7,7 @@
 - name: Starting ntp_exporter (sapcc) install
   set_fact:
     prometheus_exporter: true
+    prometheus_software_allow_build_test: true
     prometheus_software_files:
       - build/ntp_exporter
     prometheus_software_author: sapcc

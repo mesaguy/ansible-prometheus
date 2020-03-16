@@ -7,9 +7,9 @@
     - name: Include pre-install tasks
       include_tasks: ../playbooks/install_common_pre.yml
 
-    - name: Set install filters from environment
+    - name: Check if metadata usage has been disabled
       set_fact:
-        prometheus_install_only: '{{ lookup("env", "PROMETHEUS_INSTALL_ONLY").split(",") | reject("equalto", "") | list }}'
+        prometheus_disable_metadata: '{{ lookup("env", "PROMETHEUS_DISABLE_METADATA") | bool }}'
 
     - name: Install Prometheus tasks
       include_role:
@@ -18,7 +18,9 @@
       loop_control:
         loop_var: prometheus_component
       with_items: "{{ tasks.files | sort(attribute='path') }}"
-      when: prometheus_install_only | length == 0 or prometheus_component.path | basename in prometheus_install_only
+      when:
+        - prometheus_install_only | length == 0 or prometheus_component.path | basename in prometheus_install_only
+        - prometheus_install_skip | length == 0 or prometheus_component.path | basename not in prometheus_install_skip
 
     - name: Include post-install tasks
       include_tasks: ../playbooks/install_common_post.yml

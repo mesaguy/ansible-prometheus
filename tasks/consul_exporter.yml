@@ -21,7 +21,7 @@
   set_fact:
     prometheus_software_opts:
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
-    prometheus_software_url: 'https://github.com/prometheus/{{ prometheus_software_name }}/releases/download/{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version }}.{{ prometheus_architecture }}.tar.gz'
+    prometheus_software_url: 'https://github.com/{{ prometheus_software_author }}/{{ prometheus_software_name }}/releases/download/{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version | regex_replace("^(v)?") }}.{{ prometheus_software_architecture }}.tar.gz'
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml
