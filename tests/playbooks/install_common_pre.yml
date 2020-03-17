@@ -63,7 +63,9 @@
     name: dbus
     state: started
   changed_when: false
-  when: ansible_service_mgr == 'systemd'
+  when:
+    - ansible_service_mgr == 'systemd'
+    - ansible_os_family not in ['Debian']
 
 - name: Workaround for java version on Fedora 22
   become: true
