@@ -470,10 +470,13 @@ An array of additional flags to pass to the prometheus daemon:
 
     prometheus_extra_opts: []
 
-The version of Prometheus to install. The source version defines the version as specified in version control:
+The version of Prometheus to install. The default version can be found in the [prometheus variables file](../vars/software/prometheus.yml) and the default version can be overridden using the following variable:
 
-    prometheus_version: "2.16.0"
-    prometheus_src_version: "v2.16.0"
+    prometheus_prometheus_version: "1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_prometheus_use_prerelease: true
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -491,53 +494,11 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 909
 
 ### Alertmanager configuration
 
-To enable [alertmanager](https://github.com/prometheus/alertmanager) include role task: alertmanager
-
-Alertmanager configuration files are validated using 'amtool' before Alertmanager is restarted.
-
-The configuration content. The example below utilizes a file named 'alertmanager.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
-
-    prometheus_alertmanager_cfg: '{{ lookup("file", "../files/alertmanager.yml") | from_yaml }}'
-
-An array of additional flags to pass to the alertmanager daemon:
-
-    prometheus_alertmanager_extra_opts: []
-
-The version of Alertmanager to install. The source version defines the version as specified in version control:
-
-    prometheus_alertmanager_version: "0.20.0"
-    prometheus_alertmanager_version_src_version: "v0.20.0"
-
-Where to store Alertmanager's data, defaults to /opt/prometheus/var/alertmanager
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9093:
-
-    prometheus_alertmanager_host: "0.0.0.0"
-    prometheus_alertmanager_port: 9093
+[usage](docs/alertmanager.md)
 
 ### Pushgateway configuration
 
-To enable [alertmanager](https://github.com/prometheus/pushgateway) include role task: pushgateway
-
-An array of additional flags to pass to the pushgateway daemon:
-
-    prometheus_pushgateway_extra_opts: []
-
-To configure persistence storage configure the following variables with a path for the persistence file location:
-
-    prometheus_pushgateway_extra_opts:
-     - '--persistence.file=/opt/prometheus/var/pushgateway/pushgateway.persistence'
-    prometheus_pushgateway_persistence_dir: /opt/prometheus/var/pushgateway
-
-The version of Pushgateway to install. The source version defines the version as specified in version control:
-
-    prometheus_pushgateway_version: "1.1.0"
-    prometheus_pushgateway_src_version: "v1.1.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9091:
-
-    prometheus_pushgateway_host: "0.0.0.0"
-    prometheus_pushgateway_port: 9091
+[usage](docs/pushgateway.md)
 
 ## Example Playbook
 
