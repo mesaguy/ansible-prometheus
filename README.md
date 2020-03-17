@@ -36,8 +36,8 @@ The following core Prometheus software is supported in addition to the list of e
 | Prometheus software                                       | Usage                                     | Author     | CI tested |
 |-----------------------------------------------------------|:-----------------------------------------:|:----------:|:---------:|
 |[prometheus](https://github.com/prometheus/prometheus)     | [usage](#prometheus-server-configuration) | prometheus | Yes       |
-|[alertmanager](https://github.com/prometheus/alertmanager) | [usage](#alertmanager-configuration)      | prometheus | Yes       |
-|[push_gateway](https://github.com/prometheus/pushgateway)  | [usage](#pushgateway-configuration)       | prometheus | Yes       |
+|[alertmanager](https://github.com/prometheus/alertmanager) | [usage](docs/alertmanager.md)             | prometheus | Yes       |
+|[push_gateway](https://github.com/prometheus/pushgateway)  | [usage](docs/pushgateway.md)              | prometheus | Yes       |
 
 ### Supported exporters
 All exporters are verified to install. Currently select modules receive testing via CI (Continuous Integration) and [Inspec](https://www.inspec.io)
@@ -492,14 +492,6 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 909
 
     prometheus_host: "0.0.0.0"
     prometheus_port: 9090
-
-### Alertmanager configuration
-
-[usage](docs/alertmanager.md)
-
-### Pushgateway configuration
-
-[usage](docs/pushgateway.md)
 
 ## Example Playbook
 
