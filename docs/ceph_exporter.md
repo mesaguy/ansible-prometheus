@@ -10,7 +10,7 @@ An array of additional flags to pass to the ceph_exporter daemon (ie):
       - '--ceph.config=/etc/ceph/ceph.conf'
       - '--exporter.config=/etc/ceph/exporter.yml'
 
-The version of ceph_exporter_digitalocean to install. The default version can be found in the [ceph_exporter_digitalocean variables file](../vars/software/ceph_exporter_digitalocean.yml) and can be used to override the default version:
+The version of ceph_exporter_digitalocean to install. The default version can be found in the [ceph_exporter_digitalocean variables file](../vars/software/ceph_exporter_digitalocean.yml) and the default version can be overridden using the following variable:
 
     prometheus_ceph_exporter_digitalocean_version: "1.0.0"
 

@@ -10,7 +10,7 @@ The gluster exporter needs to run as root if gluster is running as root:
 
     prometheus_gluster_exporter_ofesseler_runas: root
 
-The version of gluster_exporter_ofesseler to install. The default version can be found in the [gluster_exporter_ofesseler variables file](../vars/software/gluster_exporter_ofesseler.yml) and can be used to override the default version:
+The version of gluster_exporter_ofesseler to install. The default version can be found in the [gluster_exporter_ofesseler variables file](../vars/software/gluster_exporter_ofesseler.yml) and the default version can be overridden using the following variable:
 
     prometheus_gluster_exporter_ofesseler_version: "1.0.0"
 

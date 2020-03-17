@@ -6,7 +6,7 @@ An array of additional flags to pass to the openvpn_exporter daemon (ie):
 
     prometheus_openvpn_exporter_kumina_extra_opts: []
 
-The version of openvpn_exporter_kumina to install. The default version can be found in the [openvpn_exporter_kumina variables file](../vars/software/openvpn_exporter_kumina.yml) and can be used to override the default version:
+The version of openvpn_exporter_kumina to install. The default version can be found in the [openvpn_exporter_kumina variables file](../vars/software/openvpn_exporter_kumina.yml) and the default version can be overridden using the following variable:
 
     prometheus_openvpn_exporter_kumina_version: "1.0.0"
 

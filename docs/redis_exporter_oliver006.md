@@ -6,7 +6,7 @@ An array of additional flags to pass to the redis_exporter daemon:
 
     prometheus_redis_exporter_oliver006_extra_opts: []
 
-The version of redis_exporter_oliver006 to install. The default version can be found in the [redis_exporter_oliver006 variables file](../vars/software/redis_exporter_oliver006.yml) and can be used to override the default version:
+The version of redis_exporter_oliver006 to install. The default version can be found in the [redis_exporter_oliver006 variables file](../vars/software/redis_exporter_oliver006.yml) and the default version can be overridden using the following variable:
 
     prometheus_redis_exporter_oliver006_version: "1.0.0"
 

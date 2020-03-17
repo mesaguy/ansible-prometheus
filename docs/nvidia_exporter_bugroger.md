@@ -4,7 +4,7 @@ An array of additional flags to pass to the nvidia_exporter daemon:
 
     prometheus_nvidia_exporter_bugroger_extra_opts: []
 
-The version of nvidia_exporter_bugroger to install. The default version can be found in the [nvidia_exporter_bugroger variables file](../vars/software/nvidia_exporter_bugroger.yml) and can be used to override the default version:
+The version of nvidia_exporter_bugroger to install. The default version can be found in the [nvidia_exporter_bugroger variables file](../vars/software/nvidia_exporter_bugroger.yml) and the default version can be overridden using the following variable:
 
     prometheus_nvidia_exporter_bugroger_version: "1.0.0"
 

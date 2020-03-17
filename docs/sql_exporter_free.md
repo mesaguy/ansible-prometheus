@@ -31,7 +31,7 @@ An array of additional flags to pass to the sql_exporter daemon:
 
     prometheus_sql_exporter_free_extra_opts: []
 
-The version of sql_exporter_free to install. The default version can be found in the [sql_exporter_free variables file](../vars/software/sql_exporter_free.yml) and can be used to override the default version:
+The version of sql_exporter_free to install. The default version can be found in the [sql_exporter_free variables file](../vars/software/sql_exporter_free.yml) and the default version can be overridden using the following variable:
 
     prometheus_sql_exporter_free_version: "1.0.0"
 

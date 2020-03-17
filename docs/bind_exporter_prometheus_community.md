@@ -7,7 +7,7 @@ An array of additional flags to pass to the bind_exporter daemon (ie):
     prometheus_bind_exporter_prometheus_community_extra_opts:
       - '-bind.stats-url string=http://localhost:8053/'
 
-The version of bind_exporter_prometheus_community to install. The default version can be found in the [bind_exporter_prometheus_community variables file](../vars/software/bind_exporter_prometheus_community.yml) and can be used to override the default version:
+The version of bind_exporter_prometheus_community to install. The default version can be found in the [bind_exporter_prometheus_community variables file](../vars/software/bind_exporter_prometheus_community.yml) and the default version can be overridden using the following variable:
 
     prometheus_bind_exporter_prometheus_community_version: "1.0.0"
 

@@ -6,7 +6,7 @@ An array of additional flags to pass to the haproxy_exporter daemon:
 
     prometheus_haproxy_exporter_extra_opts: []
 
-The version of haproxy_exporter to install. The default version can be found in the [haproxy_exporter variables file](../vars/software/haproxy_exporter.yml) and can be used to override the default version:
+The version of haproxy_exporter to install. The default version can be found in the [haproxy_exporter variables file](../vars/software/haproxy_exporter.yml) and the default version can be overridden using the following variable:
 
     prometheus_haproxy_exporter_version: "1.0.0"
 

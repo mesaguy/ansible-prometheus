@@ -4,7 +4,7 @@ An array of additional flags to pass to the influxdb_exporter daemon:
 
     prometheus_influxdb_exporter_extra_opts: []
 
-The version of influxdb_exporter to install. The default version can be found in the [influxdb_exporter variables file](../vars/software/influxdb_exporter.yml) and can be used to override the default version:
+The version of influxdb_exporter to install. The default version can be found in the [influxdb_exporter variables file](../vars/software/influxdb_exporter.yml) and the default version can be overridden using the following variable:
 
     prometheus_influxdb_exporter_version: "1.0.0"
 

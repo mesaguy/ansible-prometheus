@@ -6,7 +6,7 @@ An array of additional flags to pass to the collectd_exporter daemon:
 
     prometheus_collectd_exporter_extra_opts: []
 
-The version of collectd_exporter to install. The default version can be found in the [collectd_exporter variables file](../vars/software/collectd_exporter.yml) and can be used to override the default version:
+The version of collectd_exporter to install. The default version can be found in the [collectd_exporter variables file](../vars/software/collectd_exporter.yml) and the default version can be overridden using the following variable:
 
     prometheus_collectd_exporter_version: "1.0.0"
 
