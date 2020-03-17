@@ -69,6 +69,7 @@ See each exporter's usage page for more details:
 |[kafka_exporter_danielqsj](https://github.com/danielqsj/kafka_exporter)                        | [usage](docs/kafka_exporter_danielqsj.md)                   | danielqsj            | Yes       |
 |[keepalived_exporter_gen2brain](https://github.com/gen2brain/keepalived_exporter)              | [usage](docs/keepalived_exporter_gen2brain.md)              | gen2brain            | Yes       |
 |[memcached_exporter](https://github.com/prometheus/memcached_exporter)                         | [usage](docs/memcached_exporter.md)                         | prometheus           | Yes       |
+|[mongodb_exporter_percona](https://github.com/percona/mongodb_exporter)                        | [usage](docs/mongodb_exporter_percona.md)                   | percona              | Yes       |
 |[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)                               | [usage](docs/mysqld_exporter.md)                            | prometheus           | Yes       |
 |[node_exporter](https://github.com/prometheus/node_exporter)                                   | [usage](docs/node_exporter.md)                              | prometheus           | Yes       |
 |[ntp_exporter_sapcc](https://github.com/sapcc/ntp_exporter)                                    | [usage](docs/ntp_exporter_sapcc.md)                         | sapcc                | Yes       |
