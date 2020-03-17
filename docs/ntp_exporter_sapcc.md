@@ -7,7 +7,7 @@ An array of additional flags to pass to the ntp_exporter daemon, the '-ntp.serve
     prometheus_ntp_exporter_sapcc_extra_opts:
       - '-ntp.server=time-a-g.nist.gov'
 
-The version of ntp_exporter_sapcc to install. The default version can be found in the [ntp_exporter_sapcc variables file](../vars/software/ntp_exporter_sapcc.yml) and can be used to override the default version:
+The version of ntp_exporter_sapcc to install. The default version can be found in the [ntp_exporter_sapcc variables file](../vars/software/ntp_exporter_sapcc.yml) and the default version can be overridden using the following variable:
 
     prometheus_ntp_exporter_sapcc_version: "1.0.0"
 

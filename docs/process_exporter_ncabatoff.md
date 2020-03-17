@@ -32,7 +32,7 @@ An array of additional flags to pass to the process_exporter daemon:
 
     prometheus_process_exporter_ncabatoff_extra_opts: []
 
-The version of process_exporter_ncabatoff to install. The default version can be found in the [process_exporter_ncabatoff variables file](../vars/software/process_exporter_ncabatoff.yml) and can be used to override the default version:
+The version of process_exporter_ncabatoff to install. The default version can be found in the [process_exporter_ncabatoff variables file](../vars/software/process_exporter_ncabatoff.yml) and the default version can be overridden using the following variable:
 
     prometheus_process_exporter_ncabatoff_version: "1.0.0"
 

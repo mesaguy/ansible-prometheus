@@ -22,7 +22,7 @@ An array of additional flags to pass to the statsd_exporter daemon:
     prometheus_statsd_exporter_extra_opts:
         --statsd.listen-udp=":9125"
 
-The version of statsd_exporter to install. The default version can be found in the [statsd_exporter variables file](../vars/software/statsd_exporter.yml) and can be used to override the default version:
+The version of statsd_exporter to install. The default version can be found in the [statsd_exporter variables file](../vars/software/statsd_exporter.yml) and the default version can be overridden using the following variable:
 
     prometheus_statsd_exporter_version: "1.0.0"
 

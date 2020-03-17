@@ -28,7 +28,7 @@ An array of additional flags to pass to the script_exporter daemon (ie):
 
     prometheus_script_exporter_adhocteam_extra_opts: []
 
-The version of script_exporter_adhocteam to install. The default version can be found in the [script_exporter_adhocteam variables file](../vars/software/script_exporter_adhocteam.yml) and can be used to override the default version:
+The version of script_exporter_adhocteam to install. The default version can be found in the [script_exporter_adhocteam variables file](../vars/software/script_exporter_adhocteam.yml) and the default version can be overridden using the following variable:
 
     prometheus_script_exporter_adhocteam_version: "1.0.0"
 

@@ -56,6 +56,8 @@
     # to the installation directory. Only applicable to builds, not binary
     # installs
     prometheus_software_build_copy_dirs: {}
+    # Software repositories and packages needed to build a specific software
+    prometheus_software_build_prerequisites: ''
     # Hash of files with a list of capabilities to apply
     prometheus_software_capabilities: {}
     prometheus_software_files: []
@@ -101,6 +103,11 @@
     prometheus_software_service_name: ''
     # Metadata dictionary representing a binaries name, URL, checksum, etc
     prometheus_software_metadata: ''
+    # Software specific options for a specific OS/distro
+    prometheus_software_os_options: ''
+    # Software specific options for a specific OS/distro, prioritized list of
+    # all options that have been found
+    prometheus_software_os_options_list: []
     # URL where a software's installation binary tarball or single file
     # can be found
     prometheus_software_url: ''

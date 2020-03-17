@@ -6,7 +6,7 @@ An array of additional flags to pass to the proxysql_exporter daemon:
 
     prometheus_proxysql_exporter_percona_extra_opts: []
 
-The version of proxysql_exporter_percona to install. The default version can be found in the [proxysql_exporter_percona variables file](../vars/software/proxysql_exporter_percona.yml) and can be used to override the default version:
+The version of proxysql_exporter_percona to install. The default version can be found in the [proxysql_exporter_percona variables file](../vars/software/proxysql_exporter_percona.yml) and the default version can be overridden using the following variable:
 
     prometheus_proxysql_exporter_percona_version: "1.0.0"
 

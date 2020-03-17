@@ -28,7 +28,7 @@ An array of additional flags to pass to the blackbox_exporter daemon:
 
     prometheus_blackbox_exporter_extra_opts: []
 
-The version of blackbox_exporter to install. The default version can be found in the [blackbox_exporter variables file](../vars/software/blackbox_exporter.yml) and can be used to override the default version:
+The version of blackbox_exporter to install. The default version can be found in the [blackbox_exporter variables file](../vars/software/blackbox_exporter.yml) and the default version can be overridden using the following variable:
 
     prometheus_blackbox_exporter_version: "1.0.0"
 

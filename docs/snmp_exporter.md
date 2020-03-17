@@ -10,7 +10,7 @@ An array of additional flags to pass to the snmp_exporter daemon:
 
     prometheus_snmp_exporter_extra_opts: []
 
-The version of snmp_exporter to install. The default version can be found in the [snmp_exporter variables file](../vars/software/snmp_exporter.yml) and can be used to override the default version:
+The version of snmp_exporter to install. The default version can be found in the [snmp_exporter variables file](../vars/software/snmp_exporter.yml) and the default version can be overridden using the following variable:
 
     prometheus_snmp_exporter_version: "1.0.0"
 

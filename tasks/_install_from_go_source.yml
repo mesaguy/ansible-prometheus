@@ -11,13 +11,23 @@
 - name: Include task to setup directories for {{ prometheus_software_name_version }} installation
   include_tasks: _install_directory.yml
 
-- name: Install {{ prometheus_software_name_version }} build prerequisites
+- name: Install {{ prometheus_software_name_version }} build prerequisite packages
   become: true
   package:
-    name: '{{ prometheus_software_build_prerequisites }}'
+    name: '{{ prometheus_software_build_prerequisites.packages }}'
     state: present
+  ignore_errors: true
+  register: prometheus_build_prerequisite_packages_install
   when:
     - prometheus_software_build_prerequisites | length > 0
+    - '"packages" in prometheus_software_build_prerequisites'
+    - prometheus_software_build_prerequisites.packages | length > 0
+
+- name: Failed to install {{ prometheus_software_name_version }} build prerequisite packages
+  fail:
+    msg: 'Failed to install: {{ prometheus_software_build_prerequisites.packages | join(" ") }}'
+  when:
+    - prometheus_build_prerequisite_packages_install is defined and prometheus_build_prerequisite_packages_install is failed
 
 - name: Include task to setup environment for compiling go source code
   include_tasks: _install_go_compiler.yml

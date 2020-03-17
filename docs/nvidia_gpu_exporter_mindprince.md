@@ -4,7 +4,7 @@ An array of additional flags to pass to the nvidia_gpu_exporter daemon:
 
     prometheus_nvidia_gpu_exporter_mindprince_extra_opts: []
 
-The version of nvidia_gpu_exporter_mindprince to install. The default version can be found in the [nvidia_gpu_exporter_mindprince variables file](../vars/software/nvidia_gpu_exporter_mindprince.yml) and can be used to override the default version:
+The version of nvidia_gpu_exporter_mindprince to install. The default version can be found in the [nvidia_gpu_exporter_mindprince variables file](../vars/software/nvidia_gpu_exporter_mindprince.yml) and the default version can be overridden using the following variable:
 
     prometheus_nvidia_gpu_exporter_mindprince_version: "1.0.0"
 

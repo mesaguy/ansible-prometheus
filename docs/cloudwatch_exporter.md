@@ -22,7 +22,7 @@ An array of additional flags to pass to the cloudwatch_exporter daemon:
 
     prometheus_cloudwatch_exporter_extra_opts: []
 
-The version of cloudwatch_exporter to install. The default version can be found in the [cloudwatch_exporter variables file](../vars/software/cloudwatch_exporter.yml) and can be used to override the default version:
+The version of cloudwatch_exporter to install. The default version can be found in the [cloudwatch_exporter variables file](../vars/software/cloudwatch_exporter.yml) and the default version can be overridden using the following variable:
 
     prometheus_cloudwatch_exporter_version: "1.0.0"
 

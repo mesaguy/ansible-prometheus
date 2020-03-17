@@ -8,7 +8,7 @@ An array of additional flags to pass to the smokeping_exporter daemon. You must 
     - 'localhost'
     - '8.8.4.4'
 
-The version of smokeping_exporter_superq to install. The default version can be found in the [smokeping_exporter_superq variables file](../vars/software/smokeping_exporter_superq.yml) and can be used to override the default version:
+The version of smokeping_exporter_superq to install. The default version can be found in the [smokeping_exporter_superq variables file](../vars/software/smokeping_exporter_superq.yml) and the default version can be overridden using the following variable:
 
     prometheus_smokeping_exporter_superq_version: "1.0.0"
 

@@ -10,7 +10,7 @@ An array of additional flags to pass to the 389ds_exporter daemon (ie):
      - '-ldap.pass=test'
      - '-ipa-domain=test'
 
-The version of 389ds_exporter_terrycain to install. The default version can be found in the [389ds_exporter_terrycain variables file](../vars/software/389ds_exporter_terrycain.yml) and can be used to override the default version:
+The version of 389ds_exporter_terrycain to install. The default version can be found in the [389ds_exporter_terrycain variables file](../vars/software/389ds_exporter_terrycain.yml) and the default version can be overridden using the following variable:
 
     prometheus_389ds_exporter_terrycain_version: "1.0.0"
 
