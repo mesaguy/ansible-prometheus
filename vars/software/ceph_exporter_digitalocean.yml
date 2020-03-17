@@ -2,6 +2,11 @@
 defaults:
   port: 9128
   tgroup: ceph
+os_options:
+  Archlinux:
+    build_prerequisites:
+      packages:
+        - ceph
 software:
   name: digitalocean/ceph_exporter
   release: 2.0.0
