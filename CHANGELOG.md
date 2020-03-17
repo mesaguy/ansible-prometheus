@@ -8,30 +8,54 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Validate the checksums of all exporter binaries
 - Ability to purge old 'etc' directory backups and node_exporter's textfile directory .prom files
 - Ability to configure ulimits for the Prometheus user, all services are restarted if the ulimits change
 - A 'socket' and/or 'host' can be defined for mysql_exporter's ~prometheus/.my.cnf file
+- Support for installing software prereleases
 - Add support for managing Prometheus 'rules' files
 - A 'promrun_name' label to the start, end, and exit metrics outputted by the 'promrun' script. This is helpful when alerting on all promrun jobs
 - A 'promcron_name' label to the end and exit metrics outputted by the 'promcron' script. This is helpful when alerting on all promcron jobs
 - Ability to simply create cronjobs for Ansible scripts
 - Option 'prometheus_override_fqdn' to specify a FQDN for a host when the FQDN isn't in Ansible's inventory and isn't the host's official FQDN
+- Ability to specify packages needed to perform builds on a per-software basis
 - Retry Git clones up to 5 times
 - Retry all downloads up to 5 times
 
 ### Changed
 
+- The 'prometheus_version' variable used to manually set the Prometheus software version has been renamed to 'prometheus_prometheus_version'
+- Upgrade:
+  - couchdb_exporter_gesellix from v18 to v27.0.0
+  - grok_exporter_fstab from v0.2.8 to v1.0.0.RC3 (prerelease)
+  - nvidia_gpu_exporter_mindprince from commit 3897bdad246f3bc0e7105805d4442b9c9c7b06da to 0d52cd2f711ea00601b711d8127b8634b2844150
+  - openldap_exporter_tomcz from v1.0 to v2.0
+  - openvpn_exporter_kumina from v0.2.1 to v0.2.2
+  - rabbitmq_exporter_kbudde from 0.28.0 to v1.0.0-RC6.1
+*  - redis_exporter_oliver006 from v1.4.0 to v1.5.2
+  - script_exporter_adhocteam from v1.0.2 to v1.1.0
+  - squid_exporter_boynux from v1.8.2 to v1.8.3
+  - ssl_exporter_ribbybibby from v0.6.0 to v1.0.0
+  - statsd_exporter from v0.14.1 to v0.15.0
 - Prometheus and AlertManager are reloaded instead of restarted when configuration files change
 - Ensure all references to Prometheus's 'etc' directory are to /opt/prometheus/etc instead of /etc/prometheus
-- Utilize handlers for 'reloading' and 'restarting' activities. Simplify tasks
+- Utilize handlers for 'reloading' and 'restarting' activities. Simplifies tasks
 - Migrate all exporter documentation to exporter specific files
 - All GitHub source code downloads are now tarballs instead of git clones, this will ease caching in the next major release
+- Internal (non-visible) changes:
+  - Cleanup and improve enabling debug logging
+  - Rework internal architecture string customization system and allow customization per project
+  - Allow disabling the use of metadata for determining software binary URLs when testing
+  - Add ability to exclude select software installations when testing
+  - Specify which software requires being built
+  - Add ability to require use of binaries for most software when testing
 
 ###  Removed
 
-- The 'prometheus_software_src_version' variables have been removed and instead each software has a single prometheus software version
-- Removed prometheus_software_shortname variables
-- The internal 'prometheus_software_binary_unarchive_opts' variable has been replaced with a task that checks if software archives (tar) contain the software binary in the base or in a subdirectory
+- Greatly simplified software definitions:
+  - The 'prometheus_software_src_version' variables have been removed and instead each software has a single prometheus software version
+  - Removed prometheus_software_shortname variables
+  - The internal 'prometheus_software_binary_unarchive_opts' variable has been replaced with a task that checks if software archives (tar) contain the software binary in the base or in a subdirectory
 
 ## [0.10.3] - 2020-03-04
 
