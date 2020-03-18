@@ -24,9 +24,12 @@
       include_tasks: ../../tasks/_setup_pkg_mgr_Archlinux.yml
   when: ansible_os_family == 'Archlinux'
 
-- name: Skip Java service tests on Gentoo
-  set_fact:
-    prometheus_cloudwatch_exporter_service_test: false
+- name: Disable needless USE parameters on Gentoo
+  become: true
+  lineinfile:
+    path: /etc/portage/make.conf
+    regexp: '^USE=.*'
+    line: 'USE="headless-awt -X -alsa -cups -gtk"'
   when: ansible_os_family == 'Gentoo'
 
 - name: Update 'apk' cache
@@ -57,15 +60,23 @@
     warn: false
   when: ansible_distribution == 'Fedora' and ansible_distribution_major_version in ['20', '21']
 
-- name: Ensure dbus is running
-  become: true
-  service:
-    name: dbus
-    state: started
-  changed_when: false
+- block:
+    - name: Ensure dbus is installed
+      become: true
+      package:
+        name: dbus
+        state: present
+
+    - name: Ensure dbus is running
+      become: true
+      service:
+        name: dbus
+        state: started
+      changed_when: false
   when:
     - ansible_service_mgr == 'systemd'
-    - ansible_os_family not in ['Debian']
+    - not ansible_os_family in ['Suse']
+    - not ansible_distribution in ['Ubuntu']
 
 - name: Workaround for java version on Fedora 22
   become: true
