@@ -11,10 +11,6 @@ rvm:
   - 2.2
 
 env:
-  - ANSIBLE_VERSION=2.5.1  KITCHEN_PLATFORM=default-ubuntu-1804
-  - ANSIBLE_VERSION=2.5.15 KITCHEN_PLATFORM=default-ubuntu-1804
-  - ANSIBLE_VERSION=2.6.0  KITCHEN_PLATFORM=default-ubuntu-1804
-  - ANSIBLE_VERSION=2.6.20 KITCHEN_PLATFORM=default-ubuntu-1804
   - ANSIBLE_VERSION=2.7.0  KITCHEN_PLATFORM=default-ubuntu-1804
   - ANSIBLE_VERSION=2.7.16 KITCHEN_PLATFORM=default-ubuntu-1804
   - ANSIBLE_VERSION=2.8.0 KITCHEN_PLATFORM=default-ubuntu-1804
@@ -85,4 +81,4 @@ script:
   - if ! [ -f ".kitchen/docker_id_rsa" ] ; then ssh-keygen -f .kitchen/docker_id_rsa -t rsa -N ''; fi
 
   # Perform installations, inspec tests, and idempotent tests
-  - PROMETHEUS_DEBUG=true bundle exec kitchen test $KITCHEN_PLATFORM
+  - bundle exec kitchen test $KITCHEN_PLATFORM
