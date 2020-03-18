@@ -42,7 +42,7 @@
     port: '{{ prometheus_software_instance_port | default(prometheus_software_port, true) }}'
     connect_timeout: 10
     state: started
-    timeout: 30
+    timeout: 45
   when:
     - prometheus_software_service_test | bool
     - prometheus_software_instance_port | default(prometheus_software_port, true)
@@ -53,7 +53,7 @@
     port: '{{ prometheus_software_instance_port | default(prometheus_software_port, true) }}'
     connect_timeout: 10
     state: started
-    timeout: 30
+    timeout: 45
   delegate_to: '{{ prometheus_server_name }}'
   loop_control:
     loop_var: prometheus_server_name
