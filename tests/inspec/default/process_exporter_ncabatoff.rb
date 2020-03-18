@@ -47,10 +47,10 @@ end
 
 describe http('http://127.0.0.1:9256/metrics') do
     its('status') { should cmp 200 }
-    its('body') { should match /namedprocess_namegroup_major_page_faults_total/ }
+    its('body') { should match /process_start_time_seconds/ }
 end
 
 describe http('http://127.0.0.1:9257/metrics') do
     its('status') { should cmp 200 }
-    its('body') { should match /namedprocess_namegroup_major_page_faults_total/ }
+    its('body') { should match /process_start_time_seconds/ }
 end
