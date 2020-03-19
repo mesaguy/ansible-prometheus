@@ -6,7 +6,7 @@
 
 - name: Include node_exporter textfile scripts variable file
   include_vars:
-    name: prometheus_node_exporter_scripts_vars
+    name: prometheus_node_exporter_scripts_root_vars
     file: node-exporter-textfile-collector-scripts.yml
 
 - name: Starting node_exporter install
@@ -28,7 +28,7 @@
       - '--collector.textfile.directory={{ prometheus_node_exporter_textfiles_directory }}'
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
     prometheus_software_url: 'https://github.com/{{ prometheus_software_author }}/{{ prometheus_software_name }}/releases/download/{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version | regex_replace("^(v)?") }}.{{ prometheus_software_architecture }}.tar.gz'
-    prometheus_node_exporter_scripts_vars: '{{ prometheus_node_exporter_scripts_vars["software"]["master"].files }}'
+    prometheus_node_exporter_scripts_vars: '{{ prometheus_node_exporter_scripts_root_vars["software"]["master"].files }}'
 
 - name: Include task to create textfiles directory
   include_tasks: _create_textfiles_directory.yml
