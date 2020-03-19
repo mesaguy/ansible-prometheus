@@ -5,17 +5,20 @@ language: python
 python:
   - '2.7'
   - '3.6'
+
 services:
   - docker
+
 rvm:
   - 2.2
 
 env:
+  - METADATA_TESTS=true
   - ANSIBLE_VERSION=2.7.0  KITCHEN_PLATFORM=default-ubuntu-1804
   - ANSIBLE_VERSION=2.7.16 KITCHEN_PLATFORM=default-ubuntu-1804
-  - ANSIBLE_VERSION=2.8.0 KITCHEN_PLATFORM=default-ubuntu-1804
+  - ANSIBLE_VERSION=2.8.0  KITCHEN_PLATFORM=default-ubuntu-1804
   - ANSIBLE_VERSION=2.8.10 KITCHEN_PLATFORM=default-ubuntu-1804
-  - ANSIBLE_VERSION=2.9.0 KITCHEN_PLATFORM=default-ubuntu-1804
+  - ANSIBLE_VERSION=2.9.0  KITCHEN_PLATFORM=default-ubuntu-1804
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-archlinux
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-centos-77
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-centos-81
@@ -57,28 +60,28 @@ notifications:
 
 script:
   # Validate README.md URLs
-  - awesome_bot --skip-save-results --allow-dupe --white-list=localhost --files $(ls *.md docs/*.md tests/*.md | paste -sd "," -)
+  - if [ "$METADATA_TESTS" == "true" ]; then awesome_bot --request-delay 1 --skip-save-results --allow-dupe --white-list=localhost --files $(ls *.md docs/*.md tests/*.md | paste -sd "," -) ; fi
 
   # Perform yaml lint checks
-  - yamllint --config-file=tests/yamllint.yml .
+  - if [ "$METADATA_TESTS" == "true" ]; then yamllint --config-file=tests/yamllint.yml . ; fi
 
   # Ensure an inspec test exists for each software installation
-  - chmod +x tests/all_software_inspec_tested && ./tests/all_software_inspec_tested
+  - if [ "$METADATA_TESTS" == "true" ]; then chmod +x tests/all_software_inspec_tested && ./tests/all_software_inspec_tested ; fi
 
   # Perform ansible-lint checks
-  - ansible-lint tasks/*
+  - if [ "$METADATA_TESTS" == "true" ]; then ansible-lint tasks/* ; fi
 
   # Check playbook's syntax
-  - ansible-playbook -i tests/inventory tests/playbooks/install_all.yml --syntax-check
+  - if [ "$METADATA_TESTS" == "true" ]; then ansible-playbook -i tests/inventory tests/playbooks/install_all.yml --syntax-check ; fi
 
   # Check Ansible Galaxy lint
-  - git clone https://github.com/ansible/galaxy-lint-rules.git
-  - ansible-lint -r galaxy-lint-rules/rules .
+  - if [ "$METADATA_TESTS" == "true" ]; then git clone https://github.com/ansible/galaxy-lint-rules.git ; fi
+  - if [ "$METADATA_TESTS" == "true" ]; then ansible-lint -r galaxy-lint-rules/rules . ; fi
 
   # Create kitchen SSH keys to be used by kitchen-docker when
   # building Dockerfiles
-  - mkdir -p .kitchen
-  - if ! [ -f ".kitchen/docker_id_rsa" ] ; then ssh-keygen -f .kitchen/docker_id_rsa -t rsa -N ''; fi
+  - if [ "$METADATA_TESTS" != "true" ]; then mkdir -p .kitchen ; fi
+  - if [ "$METADATA_TESTS" != "true" ]; then if ! [ -f ".kitchen/docker_id_rsa" ] ; then ssh-keygen -f .kitchen/docker_id_rsa -t rsa -N ''; fi ; fi
 
   # Perform installations, inspec tests, and idempotent tests
-  - bundle exec kitchen test $KITCHEN_PLATFORM
+  - if [ "$METADATA_TESTS" != "true" ]; then bundle exec kitchen test $KITCHEN_PLATFORM ; fi
