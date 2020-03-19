@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - The 'prometheus_version' variable used to manually set the Prometheus software version has been renamed to 'prometheus_prometheus_version'
+- The minimum supported version of Ansible is changed from v2.5.1 to v2.7.0 (oldest actively maintained major version)
 - Upgrade:
   - couchdb_exporter_gesellix from v18 to v27.0.0
   - grok_exporter_fstab from v0.2.8 to v1.0.0.RC3 (prerelease)
