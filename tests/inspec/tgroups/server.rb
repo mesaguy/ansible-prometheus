@@ -9,7 +9,7 @@ describe file('/opt/prometheus/etc/tgroups-server') do
 end
 
 describe command('find /opt/prometheus/etc/tgroups-server -type f').stdout.split().length do |count|
-  its(count) { is_expected.to eq 4 }
+  its(count) { is_expected.to eq 5 }
 end
 
 describe file('/opt/prometheus/etc/tgroups-server/archlinux-node_exporter.yml') do
