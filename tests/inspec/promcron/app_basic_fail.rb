@@ -22,10 +22,10 @@ describe file('/opt/prometheus/etc/node_exporter_textfiles/cron_app_fail.prom') 
   it { should be_file }
   its('content') { should match /# HELP cron_app_fail_endtime Unix time in microseconds./ }
   its('content') { should match /# TYPE cron_app_fail_endtime gauge/ }
-  its('content') { should match /cron_app_fail_endtime{user="app",promcron="endtime"} [0-9]{10}\.[0-9]{3}$/ }
+  its('content') { should match /cron_app_fail_endtime{user="app",promcron_name="app_fail",promcron="endtime"} [0-9]{10}\.[0-9]{3}$/ }
   its('content') { should match /# HELP cron_app_fail Process return code./ }
   its('content') { should match /# TYPE cron_app_fail gauge/ }
-  its('content') { should match /cron_app_fail{user="app",promcron="value"} [1-2]/ }
+  its('content') { should match /cron_app_fail{user="app",promcron_name="app_fail",promcron="value"} [1-2]/ }
   its('size') { should > 200 }
   it { should_not be_more_permissive_than('0664') }
   its('owner') { should eq 'app' }

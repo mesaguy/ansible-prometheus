@@ -6,7 +6,7 @@
 # Documentation: https://github.com/mesaguy/ansible-prometheus/blob/master/docs/promcron.md
 # Source: https://github.com/mesaguy/ansible-prometheus/tree/master/scripts/promcron.sh
 # License: MIT
-# Version: 1.1 (2020-01-29)
+# Version: 1.1 (2020-03-18)
 
 {% if prometheus_promcron_ansible_managed | default(false) %}
 TEXTFILE_DIRECTORY="{{ prometheus_node_exporter_textfiles_directory }}"
@@ -108,7 +108,7 @@ if [ -n "$LABELS" ] ; then
 else
     LABELS="user=\"${USER}\""
 fi
-TEXTFILE_PATH="${TEXTFILE_DIRECTORY}/${NAME}.prom"
+TEXTFILE_PATH="${TEXTFILE_DIRECTORY}/cron_${NAME}.prom"
 
 if [ -n "$DESCRIPTION" ] ; then
     LABELS="${LABELS},description=\"$DESCRIPTION\""
@@ -167,7 +167,7 @@ fi
 
 END_DATE=$(date +%s.%3N)
 DATA="# HELP ${METRIC_NAME}_endtime Unix time in microseconds.
-# TYPE ${NAME}_endtime gauge
+# TYPE ${METRIC_NAME}_endtime gauge
 ${METRIC_NAME}_endtime{$LABELS,promcron_name=\"${NAME}\",promcron=\"endtime\"} ${END_DATE}
 # HELP ${METRIC_NAME} Process return code.
 # TYPE ${METRIC_NAME} gauge

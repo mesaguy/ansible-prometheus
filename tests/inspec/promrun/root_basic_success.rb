@@ -15,7 +15,7 @@ describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_root_basic.pr
   it { should be_file }
   its('content') { should match /# HELP promrun_root_basic_starttime Start time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_root_basic_starttime gauge/ }
-  its('content') { should match /promrun_root_basic_starttime\{user="root",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
+  its('content') { should match /promrun_root_basic_starttime\{user="root",promrun_name="root_basic",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('content') { should match /# HELP promrun_root_basic_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode./ }
   its('content') { should match /# TYPE promrun_root_basic_cpu_kernel_mode_seconds gauge/ }
   its('content') { should match /promrun_root_basic_cpu_kernel_mode_seconds\{user="root"\} 0.00/ }
@@ -57,7 +57,7 @@ describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_root_basic.pr
   its('content') { should match /promrun_root_basic_socket_messages_sent_count\{user="root"\} 0/ }
   its('content') { should match /# HELP promrun_root_basic_exit_status Exit status of the command./ }
   its('content') { should match /# TYPE promrun_root_basic_exit_status gauge/ }
-  its('content') { should match /promrun_root_basic_exit_status\{user="root",promrun="exit"\} 0/ }
+  its('content') { should match /promrun_root_basic_exit_status\{user="root",promrun_name="root_basic",promrun="exit"\} 0/ }
   its('content') { should match /# HELP promrun_root_basic_process_avg_size_resident_set_kb Average resident set size of the process, in Kbytes./ }
   its('content') { should match /# TYPE promrun_root_basic_process_avg_size_resident_set_kb gauge/ }
   its('content') { should match /promrun_root_basic_process_avg_size_resident_set_kb\{user="root"\} 0/ }
@@ -81,7 +81,7 @@ describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_root_basic.pr
   its('content') { should match /promrun_root_basic_command\{user="root",command="echo -n 1"\} 1/ }
   its('content') { should match /# HELP promrun_root_basic_endtime End time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_root_basic_endtime gauge/ }
-  its('content') { should match /promrun_root_basic_endtime\{user="root",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
+  its('content') { should match /promrun_root_basic_endtime\{user="root",promrun_name="root_basic",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('size') { should > 5000 }
   it { should_not be_more_permissive_than('0664') }
   its('owner') { should eq 'root' }
@@ -99,7 +99,7 @@ describe command('sudo promrun -v -n root_basic echo -n 1') do
   its('stderr') { should eq '' }
   its('stdout') { should match /# HELP promrun_root_basic_starttime Start time in Unix time with microseconds./ }
   its('stdout') { should match /# TYPE promrun_root_basic_starttime gauge/ }
-  its('stdout') { should match /promrun_root_basic_starttime\{user="root",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
+  its('stdout') { should match /promrun_root_basic_starttime\{user="root",promrun_name="root_basic",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('stdout') { should match /# HELP promrun_root_basic_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode./ }
   its('stdout') { should match /# TYPE promrun_root_basic_cpu_kernel_mode_seconds gauge/ }
   its('stdout') { should match /promrun_root_basic_cpu_kernel_mode_seconds\{user="root"\} 0.00/ }
@@ -141,7 +141,7 @@ describe command('sudo promrun -v -n root_basic echo -n 1') do
   its('stdout') { should match /promrun_root_basic_socket_messages_sent_count\{user="root"\} 0/ }
   its('stdout') { should match /# HELP promrun_root_basic_exit_status Exit status of the command./ }
   its('stdout') { should match /# TYPE promrun_root_basic_exit_status gauge/ }
-  its('stdout') { should match /promrun_root_basic_exit_status\{user="root",promrun="exit"\} 0/ }
+  its('stdout') { should match /promrun_root_basic_exit_status\{user="root",promrun_name="root_basic",promrun="exit"\} 0/ }
   its('stdout') { should match /# HELP promrun_root_basic_process_avg_size_resident_set_kb Average resident set size of the process, in Kbytes./ }
   its('stdout') { should match /# TYPE promrun_root_basic_process_avg_size_resident_set_kb gauge/ }
   its('stdout') { should match /promrun_root_basic_process_avg_size_resident_set_kb\{user="root"\} 0/ }
@@ -165,7 +165,7 @@ describe command('sudo promrun -v -n root_basic echo -n 1') do
   its('stdout') { should match /promrun_root_basic_command\{user="root",command="echo -n 1"\} 1/ }
   its('stdout') { should match /# HELP promrun_root_basic_endtime End time in Unix time with microseconds./ }
   its('stdout') { should match /# TYPE promrun_root_basic_endtime gauge/ }
-  its('stdout') { should match /promrun_root_basic_endtime\{user="root",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
+  its('stdout') { should match /promrun_root_basic_endtime\{user="root",promrun_name="root_basic",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
 end
 
 # Resulting prom file is as expected
@@ -173,7 +173,7 @@ describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_root_basic.pr
   it { should be_file }
   its('content') { should match /# HELP promrun_root_basic_starttime Start time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_root_basic_starttime gauge/ }
-  its('content') { should match /promrun_root_basic_starttime\{user="root",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
+  its('content') { should match /promrun_root_basic_starttime\{user="root",promrun_name="root_basic",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('content') { should match /# HELP promrun_root_basic_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode./ }
   its('content') { should match /# TYPE promrun_root_basic_cpu_kernel_mode_seconds gauge/ }
   its('content') { should match /promrun_root_basic_cpu_kernel_mode_seconds\{user="root"\} 0.00/ }
@@ -215,7 +215,7 @@ describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_root_basic.pr
   its('content') { should match /promrun_root_basic_socket_messages_sent_count\{user="root"\} 0/ }
   its('content') { should match /# HELP promrun_root_basic_exit_status Exit status of the command./ }
   its('content') { should match /# TYPE promrun_root_basic_exit_status gauge/ }
-  its('content') { should match /promrun_root_basic_exit_status\{user="root",promrun="exit"\} 0/ }
+  its('content') { should match /promrun_root_basic_exit_status\{user="root",promrun_name="root_basic",promrun="exit"\} 0/ }
   its('content') { should match /# HELP promrun_root_basic_process_avg_size_resident_set_kb Average resident set size of the process, in Kbytes./ }
   its('content') { should match /# TYPE promrun_root_basic_process_avg_size_resident_set_kb gauge/ }
   its('content') { should match /promrun_root_basic_process_avg_size_resident_set_kb\{user="root"\} 0/ }
@@ -239,7 +239,7 @@ describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_root_basic.pr
   its('content') { should match /promrun_root_basic_command\{user="root",command="echo -n 1"\} 1/ }
   its('content') { should match /# HELP promrun_root_basic_endtime End time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_root_basic_endtime gauge/ }
-  its('content') { should match /promrun_root_basic_endtime\{user="root",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
+  its('content') { should match /promrun_root_basic_endtime\{user="root",promrun_name="root_basic",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('size') { should > 5000 }
   it { should_not be_more_permissive_than('0664') }
   its('owner') { should eq 'root' }

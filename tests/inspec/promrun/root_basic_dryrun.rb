@@ -9,7 +9,7 @@ describe command('sudo promrun -D -n root_dryrun ls /tmp > /dev/null') do
   its('stdout') { should eq '' }
   its('stderr') { should match /\[DRYRUN\] # HELP promrun_root_dryrun_starttime Start time in Unix time with microseconds./ }
   its('stderr') { should match /\[DRYRUN\] # TYPE promrun_root_dryrun_starttime gauge/ }
-  its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_starttime\{user="root",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
+  its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_starttime\{user="root",promrun_name="root_dryrun",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('stderr') { should match /\[DRYRUN\] # HELP promrun_root_dryrun_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode./ }
   its('stderr') { should match /\[DRYRUN\] # TYPE promrun_root_dryrun_cpu_kernel_mode_seconds gauge/ }
   its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_cpu_kernel_mode_seconds\{user="root"\} 0.00/ }
@@ -51,7 +51,7 @@ describe command('sudo promrun -D -n root_dryrun ls /tmp > /dev/null') do
   its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_socket_messages_sent_count\{user="root"\} 0/ }
   its('stderr') { should match /\[DRYRUN\] # HELP promrun_root_dryrun_exit_status Exit status of the command./ }
   its('stderr') { should match /\[DRYRUN\] # TYPE promrun_root_dryrun_exit_status gauge/ }
-  its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_exit_status\{user="root",promrun="exit"\} 0/ }
+  its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_exit_status\{user="root",promrun_name="root_dryrun",promrun="exit"\} 0/ }
   its('stderr') { should match /\[DRYRUN\] # HELP promrun_root_dryrun_process_avg_size_resident_set_kb Average resident set size of the process, in Kbytes./ }
   its('stderr') { should match /\[DRYRUN\] # TYPE promrun_root_dryrun_process_avg_size_resident_set_kb gauge/ }
   its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_process_avg_size_resident_set_kb\{user="root"\} 0/ }
@@ -75,7 +75,7 @@ describe command('sudo promrun -D -n root_dryrun ls /tmp > /dev/null') do
   its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_command\{user="root",command="ls \/tmp"\} 1/ }
   its('stderr') { should match /\[DRYRUN\] # HELP promrun_root_dryrun_endtime End time in Unix time with microseconds./ }
   its('stderr') { should match /\[DRYRUN\] # TYPE promrun_root_dryrun_endtime gauge/ }
-  its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_endtime\{user="root",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
+  its('stderr') { should match /\[DRYRUN\] promrun_root_dryrun_endtime\{user="root",promrun_name="root_dryrun",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('stderr') { should match /\[DRYRUN\] cp -fp "\/opt\/prometheus\/etc\/node_exporter_textfiles\/promrun_root_dryrun.prom.tmp" "\/opt\/prometheus\/etc\/node_exporter_textfiles\/promrun_root_dryrun.prom"/ }
 end
 

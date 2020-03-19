@@ -22,7 +22,7 @@ describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_app_fail.prom
   it { should be_file }
   its('content') { should match /# HELP promrun_app_fail_starttime Start time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_app_fail_starttime gauge/ }
-  its('content') { should match /promrun_app_fail_starttime\{user="app",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
+  its('content') { should match /promrun_app_fail_starttime\{user="app",promrun_name="app_fail",promrun="starttime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('content') { should match /# HELP promrun_app_fail_cpu_kernel_mode_seconds Total number of CPU-seconds that the process spent in kernel mode./ }
   its('content') { should match /# TYPE promrun_app_fail_cpu_kernel_mode_seconds gauge/ }
   its('content') { should match /promrun_app_fail_cpu_kernel_mode_seconds\{user="app"\} 0.00/ }
@@ -64,7 +64,7 @@ describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_app_fail.prom
   its('content') { should match /promrun_app_fail_socket_messages_sent_count\{user="app"\} 0/ }
   its('content') { should match /# HELP promrun_app_fail_exit_status Exit status of the command./ }
   its('content') { should match /# TYPE promrun_app_fail_exit_status gauge/ }
-  its('content') { should match /promrun_app_fail_exit_status\{user="app",promrun="exit"\} [1-2]/ }
+  its('content') { should match /promrun_app_fail_exit_status\{user="app",promrun_name="app_fail",promrun="exit"\} [1-2]/ }
   its('content') { should match /# HELP promrun_app_fail_process_avg_size_resident_set_kb Average resident set size of the process, in Kbytes./ }
   its('content') { should match /# TYPE promrun_app_fail_process_avg_size_resident_set_kb gauge/ }
   its('content') { should match /promrun_app_fail_process_avg_size_resident_set_kb\{user="app"\} 0/ }
@@ -88,7 +88,7 @@ describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_app_fail.prom
   its('content') { should match /promrun_app_fail_command\{user="app",command="ls \/no_such_file"\} 1/ }
   its('content') { should match /# HELP promrun_app_fail_endtime End time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_app_fail_endtime gauge/ }
-  its('content') { should match /promrun_app_fail_endtime\{user="app",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
+  its('content') { should match /promrun_app_fail_endtime\{user="app",promrun_name="app_fail",promrun="endtime"\} [0-9]{10}\.[0-9]{3}$/ }
   its('size') { should > 200 }
   it { should_not be_more_permissive_than('0664') }
   its('owner') { should eq 'app' }

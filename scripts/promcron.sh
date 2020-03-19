@@ -6,7 +6,7 @@
 # Documentation: https://github.com/mesaguy/ansible-prometheus/blob/master/docs/promcron.md
 # Source: https://github.com/mesaguy/ansible-prometheus/tree/master/scripts/promcron.sh
 # License: MIT
-# Version: 1.0 (2020-01-23)
+# Version: 1.1 (2020-03-18)
 
 TEXTFILE_DIRECTORY="/etc/prometheus/node_exporter_textfiles"
 if which sponge > /dev/null 2>&1 ; then
@@ -87,20 +87,23 @@ while getopts "d:Dhl:s:t:v" option; do
     esac
 done
 
+# Must gather NAME and VALUE after other options
+NAME="${@:$OPTIND:1}"
+VALUE="${@:$OPTIND+1:1}"
+
 # Set USER variable if undefined
 if [ -z "$USER" ] ; then
     USER=$(whoami)
 fi
 
-NAME="cron_${@:$OPTIND:1}"
+METRIC_NAME="cron_${@:$OPTIND:1}"
 # Remove any prefixed ',' characters from $LABELS, add 'user' label
 if [ -n "$LABELS" ] ; then
     LABELS="${LABELS#,},user=\"${USER}\""
 else
     LABELS="user=\"${USER}\""
 fi
-VALUE="${@:$OPTIND+1:1}"
-TEXTFILE_PATH="${TEXTFILE_DIRECTORY}/${NAME}.prom"
+TEXTFILE_PATH="${TEXTFILE_DIRECTORY}/cron_${NAME}.prom"
 
 if [ -n "$DESCRIPTION" ] ; then
     LABELS="${LABELS},description=\"$DESCRIPTION\""
@@ -152,18 +155,18 @@ if ! [[ "$VALUE" =~ ^[0-9]+$ ]] || [ "$VALUE" -gt "255" ] ; then
     exit 2
 fi
 
-if [[ ! $NAME =~ $RE_METRIC_NAME ]] ; then
-    echo "Metric name \"$NAME\" must match regex: $RE_METRIC_NAME" >&2
+if [[ ! $METRIC_NAME =~ $RE_METRIC_NAME ]] ; then
+    echo "Metric name \"$METRIC_NAME\" must match regex: $RE_METRIC_NAME" >&2
     exit 2
 fi
 
 END_DATE=$(date +%s.%3N)
-DATA="# HELP ${NAME}_endtime Unix time in microseconds.
-# TYPE ${NAME}_endtime gauge
-${NAME}_endtime{$LABELS,promcron=\"endtime\"} ${END_DATE}
-# HELP ${NAME} Process return code.
-# TYPE ${NAME} gauge
-$NAME{$LABELS,promcron=\"value\"} $VALUE
+DATA="# HELP ${METRIC_NAME}_endtime Unix time in microseconds.
+# TYPE ${METRIC_NAME}_endtime gauge
+${METRIC_NAME}_endtime{$LABELS,promcron_name=\"${NAME}\",promcron=\"endtime\"} ${END_DATE}
+# HELP ${METRIC_NAME} Process return code.
+# TYPE ${METRIC_NAME} gauge
+$METRIC_NAME{$LABELS,promcron_name=\"${NAME}\",promcron=\"value\"} $VALUE
 "
 
 if [ -n "$DRYRUN" ] ; then

@@ -10,7 +10,7 @@ end
 # Run promcron with insufficient arguments
 describe command('promcron') do
   its('exit_status') { should eq 2 }
-  its('stderr') { should match /NAME and VALUE must be defined/ }
+  its('stderr') { should match /NAME must be defined/ }
   its('stdout') { should eq '' }
 end
 describe command('promcron NAME_BUT_NO_VALUE') do
