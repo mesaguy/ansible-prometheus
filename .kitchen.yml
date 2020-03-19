@@ -30,7 +30,7 @@ provisioner:
   chef_bootstrap_url: nil
   require_chef_omnibus: false
   ansible_version: latest
-  raw_arguments: "-i tests/inventory <% if ENV.has_key? 'PROMETHEUS_DEBUG' %>--tags debug,all<% end %>"
+  raw_arguments: "--timeout 30 --inventory tests/inventory <% if ENV.has_key? 'PROMETHEUS_DEBUG' %>--tags debug,all<% end %>"
   idempotency_test: <%= ENV['KITCHEN_IDEMPOTENY_TEST'] || true %>
   environment_vars:
     ANSIBLE_PIPELINING: "true"
@@ -536,14 +536,6 @@ platforms:
       build_options:
         build-arg:
           - DOCKER_IMAGE_NAME=mesaguy/ubuntu-18.04-kitchen-ansible-x86_64:latest
-          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-      run_command: /lib/systemd/systemd
-
-  - name: ubuntu-18.10
-    driver_config:
-      build_options:
-        build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/ubuntu-18.10-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /lib/systemd/systemd
 
