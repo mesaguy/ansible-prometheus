@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade Go from v1.13.8 to v1.13.9
+
+### Fixed
+
+  - Specify 'mode' when downloading software to work around tight umasks
+
 ## [0.11.0] - 2020-03-19
 
 ### Added
