@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Upgrade Prometheus from v2.16.0 to v2.17.0
+- Upgrade keepalived_exporter_gen2brain from v0.3.0 to v0.4.0
+- Update metadata to include latest master commits
+
+## [0.11.1] - 2020-03-20
+
+### Changed
+
 - Upgrade Go from v1.13.8 to v1.13.9
 
 ### Fixed
