@@ -2,10 +2,15 @@
 #
 # Do not edit manually, this file is managed using automation tools
 #
-mappings:
 {% if prometheus_statsd_exporter_cfg is defined %}
-  {{ prometheus_statsd_exporter_cfg | to_nice_yaml(width=80, indent=2) | indent(2) }}
+{% if prometheus_statsd_exporter_cfg is mapping %}
+{{ prometheus_statsd_exporter_cfg | to_nice_yaml(width=80, indent=2) }}
 {% else %}
+mappings:
+  {{ prometheus_statsd_exporter_cfg | to_nice_yaml(width=80, indent=2) | indent(2) }}
+{% endif %}
+{% else %}
+mappings:
   - match: test.dispatcher.*.*.*
     name: "dispatcher_events_total"
     labels:
