@@ -2,6 +2,6 @@
 #
 # Do not edit manually, this file is managed using automation tools
 #
-{% if jmx_instance.value | bool %}
+{% if jmx_instance.value is defined %}
 {{ jmx_instance.value | to_nice_yaml(width=80, indent=2) }}
 {% endif %}
