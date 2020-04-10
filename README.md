@@ -247,7 +247,7 @@ If installing a Prometheus application binary fails, fall back to installing the
 
 Go version to use when building Prometheus software:
 
-    prometheus_go_version: 1.13.9
+    prometheus_go_version: 1.13.10
 
 The Prometheus etc directory, defaults to '/opt/prometheus/etc':
 

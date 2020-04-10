@@ -6,7 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.11.4] - 2020-04-09
+
+### Changed
+
+- Upgrade Go from v1.13.9 to v1.13.10
+- Upgrade apache_exporter_lusitaniae from v0.7.0 to v0.8.0
+- Upgrade ntp_exporter_sapcc v1.1.1 to v1.1.2
+- Upgrade script_exporter_adhocteam from v1.1.0 to v1.2.0
+- Update metadata to include latest master commits
+
 ## [0.11.3] - 2020-03-27
+
+### Changed
 
 - Upgrade Prometheus from v2.17.0 to v2.17.1
 
