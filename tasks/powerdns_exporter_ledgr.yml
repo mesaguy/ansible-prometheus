@@ -1,5 +1,5 @@
-# powerdns will have a native built-in exporter as of v4.3.0 apparently, so this is for earlier versions!
 ---
+# powerdns will have a native built-in exporter as of v4.3.0 apparently, so this is for earlier versions!
 - block:
   - name: Include role mesaguy.prometheus setup task
     include_tasks: _setup.yml
@@ -12,7 +12,7 @@
     prometheus_software_author: ledgr
     prometheus_software_binary_name: powerdns_exporter
     prometheus_software_name: powerdns_exporter_ledgr
-    prometheus_software_description: 'Prometheus powerdns_exporter (ledgr), exporter of host statistics'
+    prometheus_software_description: 'Prometheus powerdns_exporter (ledgr), exporter of DNS statistics'
     prometheus_software_documentation: 'https://github.com/ledgr/powerdns_exporter'
     prometheus_software_service_test: '{{ prometheus_powerdns_exporter_ledgr_service_test | default(true) }}'
     prometheus_powerdns_exporter_ledgr_api_url: '{{ prometheus_powerdns_exporter_ledgr_api_url | default("http://localhost:8081/api/v1/") }}'
