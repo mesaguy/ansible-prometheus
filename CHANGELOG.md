@@ -6,7 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.11.4] - 2020-04-09
+### Added
+- New exporters:
+  - dockerhub_exporter_promhippie
+  - fping_exporter_schweikert
+  - iperf3_exporter_edgard
+  - ipmi_exporter_soundcloud
+  - nginx_exporter_nginxinc
+  - wireguard_exporter_mdlayher
+
+## [0.11.4] - 2020-04-11
 
 ### Changed
 
