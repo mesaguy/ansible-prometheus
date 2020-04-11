@@ -106,10 +106,13 @@ prometheus_script_exporter_adhocteam_cfgs:
 prometheus_grok_exporter_fstab_cfg: '{{ lookup("file", "../tests/files/grok_exporter_fstab.yml") }}'
 prometheus_kafka_exporter_danielqsj_service_test: false
 prometheus_mysqld_exporter_service_test: false
+prometheus_nginx-prometheus-exporter_nginxinc_service_test: false
 prometheus_node_exporter_extra_opts:
   - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|run|var/lib/docker/.*)($|/)"'
   - '--collector.systemd'
   - '--no-collector.zfs'
+prometheus_dockerhub_exporter_promhippie_extra_opts:
+  - '-dockerhub.repo alpine'
 prometheus_nvidia_gpu_exporter_mindprince_service_test: false
 prometheus_script_enable_all: true
 # There are no binaries:
