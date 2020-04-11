@@ -3,6 +3,13 @@ defaults:
   port: 9090
   tgroup: prometheus
 os_options:
+  Archlinux:
+    build_prerequisites:
+      packages:
+        - nodejs
+        - yarn
+    system_package_name: prometheus
+    system_service_name: prometheus
   default:
     build_prerequisites:
       packages:
@@ -14,7 +21,7 @@ software:
   prerelease: v2.17.0-rc.4
   url: https://github.com/prometheus/prometheus
   source: https://github.com/prometheus/prometheus.git
-  updated: '2020-04-10T04:48:18.360202'
+  updated: '2020-04-10T04:43:45.127151'
   master:
     commit:
       sha: 002b391dfcdcd44092442f7cd93c6cab15a779a6
