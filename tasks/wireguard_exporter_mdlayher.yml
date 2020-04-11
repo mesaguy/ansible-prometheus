@@ -1,0 +1,34 @@
+---
+- block:
+  - name: Include role mesaguy.prometheus setup task
+    include_tasks: _setup.yml
+  when: prometheus_setup_task_executed is not defined
+
+- name: Starting wireguard_exporter (mdlayher) install
+  set_fact:
+    prometheus_exporter: true
+    prometheus_software_allow_build_test: true
+    prometheus_software_author: mdlayher
+    prometheus_software_binary_name: wireguard_exporter
+    prometheus_software_name: wireguard_exporter_mdlayher
+    prometheus_software_make_command: 'go get -d && go build -o wireguard_exporter cmd/wireguard_exporter/main.go'
+    prometheus_software_description: 'Prometheus wireguard_exporter (mdlayher), exporter of WireGuard statistics'
+    prometheus_software_documentation: 'https://github.com/mdlayher/wireguard_exporter'
+    prometheus_software_service_test: '{{ prometheus_wireguard_exporter_mdlayher_service_test | default(true) }}'
+
+- name: Include task to setup {{ prometheus_software_name }} facts
+  include_tasks: _setup_software_facts.yml
+
+- name: Set {{ prometheus_software_name_version }} facts
+  set_fact:
+    prometheus_software_opts:
+      - '--metrics.addr={{ prometheus_software_host }}:{{ prometheus_software_port }}'
+
+- name: Include task to perform installation of {{ prometheus_software_name_version }}
+  include_tasks: _install.yml
+
+- name: Include task to setup {{ prometheus_software_name_version }} service
+  include_tasks: _service.yml
+
+- name: Include task to perform post install cleanup of {{ prometheus_software_name_version }}
+  include_tasks: _post_install_cleanup.yml
