@@ -1,0 +1,33 @@
+---
+- block:
+  - name: Include role mesaguy.prometheus setup task
+    include_tasks: _setup.yml
+  when: prometheus_setup_task_executed is not defined
+
+- name: Starting clickhouse_exporter (Percona-Lab) install
+  set_fact:
+    prometheus_exporter: true
+    prometheus_software_author: Percona-Lab
+    prometheus_software_binary_name: clickhouse_exporter
+    prometheus_software_makefile_make_command: 'make init && make'
+    prometheus_software_name: clickhouse_exporter_perconalab
+    prometheus_software_description: 'Prometheus clickhouse_exporter (Percona-Lab), exporter for various Clickhouse metrics'
+    prometheus_software_documentation: 'https://github.com/Percona-Lab/clickhouse_exporter'
+
+- name: Include task to setup {{ prometheus_software_name }} facts
+  include_tasks: _setup_software_facts.yml
+
+- name: Set {{ prometheus_software_name_version }} facts
+  set_fact:
+    prometheus_software_opts:
+      - '-telemetry.address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
+#    prometheus_software_url: 'https://github.com/{{ prometheus_software_author }}/{{ prometheus_software_binary_name }}/releases/download/{{ prometheus_software_version }}/{{ prometheus_software_binary_name }}-v{{ prometheus_software_version | regex_replace("^(v)?") }}.{{ prometheus_software_architecture }}.tar.gz'
+
+- name: Include task to perform installation of {{ prometheus_software_name_version }}
+  include_tasks: _install.yml
+
+- name: Include task to setup {{ prometheus_software_name_version }} service
+  include_tasks: _service.yml
+
+- name: Include task to perform post install cleanup of {{ prometheus_software_name_version }}
+  include_tasks: _post_install_cleanup.yml
