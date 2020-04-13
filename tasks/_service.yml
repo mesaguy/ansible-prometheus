@@ -7,6 +7,20 @@
     owner: root
     group: '{{ prometheus_group }}'
 
+- name: Create environment file for {{ prometheus_software_service_name }} service
+  become: true
+  template:
+    dest: '{{ prometheus_etc_dir }}/{{ prometheus_software_service_name }}.env'
+    src: ../templates/daemon-env.j2
+    owner: root
+    group: root
+    mode: '0640'
+  notify:
+    - name: Force systemd to reread configs
+      when: ansible_service_mgr == "systemd"
+    - Restart Prometheus service
+  when: prometheus_software_env_vars is defined and prometheus_software_env_vars
+
 - name: Include task to setup {{ prometheus_software_name_version }} {{ ansible_service_mgr }} service
   include_tasks: '_service_mgr_{{ ansible_service_mgr | regex_replace("^(openrc|upstart)$", "init") }}.yml'
 

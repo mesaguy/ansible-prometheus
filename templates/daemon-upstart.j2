@@ -51,9 +51,9 @@ umask 022
 
 {% if prometheus_software_env_vars is defined and prometheus_software_env_vars %}
 # Custom environmental variables:
-{% for key in prometheus_software_env_vars.keys() -%}
-export {{ key }}="{{ prometheus_software_env_vars[key] }}"
-{% endfor -%}
+set -a
+. "{{ prometheus_etc_dir }}/{{ prometheus_software_service_name }}.env"
+set +a
 {% endif -%}
 
 {% if prometheus_software_prefix_command is defined and prometheus_software_prefix_command -%}
