@@ -5,8 +5,8 @@ To enable [mongodb_exporter by percona](https://github.com/percona/mongodb_expor
 Authentication can be configured using a YAML file or environmental variables using the following syntax:
 
     prometheus_mongodb_exporter_percona_env_vars:
-      MONGODB_URI='mongodb://localhost:27017'
-      HTTP_AUTH='user:password'
+      MONGODB_URI: 'mongodb://mongouser:mongopassword@localhost:27017/authdatabase'
+      HTTP_AUTH: 'user:password'
 
 An array of additional flags to pass to the mongodb_exporter daemon:
 
