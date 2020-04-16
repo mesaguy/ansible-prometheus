@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade redis_exporter_oliver006 from v1.5.2 to v1.5.3
+- Update metadata to include latest master commits
+
 ## [0.11.4] - 2020-04-09
 
 ### Changed
