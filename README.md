@@ -48,10 +48,12 @@ See each exporter's usage page for more details:
 |-----------------------------------------------------------------------------------------------|:-----------------------------------------------------------:|:--------------------:|:---------:|
 |[389ds_exporter_terrycain](https://github.com/terrycain/389ds_exporter)                        | [usage](docs/389ds_exporter_terrycain.md)                   | terrycain            | Yes       |
 |[apache_exporter_lusitaniae](https://github.com/Lusitaniae/apache_exporter)                    | [usage](docs/apache_exporter_lusitaniae.md)                 | Lusitaniae           | Yes       |
+|[aerospike_exporter_alicebob](https://github.com/alicebob/asprom)                              | [usage](docs/aerospike_exporter_alicebob.md)                | alicebob             | Yes       |
 |[bigip_exporter_expressenab](https://github.com/ExpressenAB/bigip_exporter)                    | [usage](docs/bigip_exporter_expressenab.md)                 | ExpressenAB          | Yes       |
 |[bind_exporter_prometheus_community](https://github.com/prometheus-community/bind_exporter)    | [usage](docs/bind_exporter_prometheus_community.md)         | prometheus-community | Yes       |
 |[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)                           | [usage](docs/blackbox_exporter.md)                          | prometheus           | Yes       |
 |[ceph_exporter](https://github.com/digitalocean/ceph_exporter)                                 | [usage](docs/ceph_exporter.md)                              | digitalocean         | Partly    |
+|[clickhouse_exporter_perconalab](https://github.com/Percona-Lab/clickhouse_exporter)           | [usage](docs/clickhouse_exporter_perconalab.md)             | perconalab           | Yes       |
 |[cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter)                       | [usage](docs/cloudwatch_exporter.md)                        | prometheus           | Yes       |
 |[collectd_exporter](https://github.com/prometheus/collectd_exporter)                           | [usage](docs/collectd_exporter.md)                          | prometheus           | Yes       |
 |[consul_exporter](https://github.com/prometheus/consul_exporter)                               | [usage](docs/consul_exporter.md)                            | prometheus           | Yes       |
@@ -77,6 +79,7 @@ See each exporter's usage page for more details:
 |[nvidia_gpu_exporter_mindprince](https://github.com/mindprince/nvidia_gpu_prometheus_exporter) | [usage](docs/nvidia_gpu_exporter_mindprince.md)             | mindprince           | Yes       |
 |[openldap_exporter_tomcz](https://github.com/tomcz/openldap_exporter)                          | [usage](docs/openldap_exporter_tomcz.md)                    | tomcz                | Yes       |
 |[openvpn_exporter_kumina](https://github.com/kumina/openvpn_exporter)                          | [usage](docs/openvpn_exporter_kumina.md)                    | kumina               | Yes       |
+|[phpfpm_exporter_hipages](https://github.com/hipages/php-fpm_exporter)                         | [usage](docs/phpfpm_exporter_hipages.md)                    | hipages              | Yes       |
 |[ping_exporter_czerwonk](https://github.com/czerwonk/ping_exporter)                            | [usage](docs/ping_exporter_czerwonk.md)                     | czerwonk             | Yes       |
 |[postgres_exporter_wrouesnel](https://github.com/wrouesnel/postgres_exporter)                  | [usage](docs/postgres_exporter_wrouesnel.md)                | wrouesnel            | Yes       |
 |[powerdns_exporter_ledgr](https://github.com/ledgr/powerdns_exporter)                          | [usage](docs/powerdns_exporter_ledgr.md)                    | ledgr                | Partly    |

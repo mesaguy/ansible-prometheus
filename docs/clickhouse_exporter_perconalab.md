@@ -1,6 +1,6 @@
 # Clickhouse exporter (Percona-Lab) configuration
 
-To enable [clickhouse_exporter by Percona-Lab](https://github.com//Percona-Lab/clickhouse_exporter) include role task: clickhouse_exporter_perconalab
+To enable [clickhouse_exporter by Percona-Lab](https://github.com/Percona-Lab/clickhouse_exporter) include role task: clickhouse_exporter_perconalab
 
 An array of additional flags to pass to the clickhouse_exporter daemon:
 
