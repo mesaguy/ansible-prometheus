@@ -2,7 +2,7 @@
 - block:
   - name: Include role mesaguy.prometheus setup task
     include_tasks: _setup.yml
-  when: prometheus_setup_task_executed is not defined
+  when: prometheus_setup_task_executed is undefined
 
 - name: Starting nginx_exporter (nginxinc) install
   set_fact:
@@ -12,6 +12,7 @@
     prometheus_software_name: nginx-prometheus-exporter_nginxinc
     prometheus_software_description: 'Prometheus nginx_exporter for NGINX or NGINX Plus'
     prometheus_software_documentation: 'https://github.com/nginxinc/nginx-prometheus-exporter'
+    prometheus_software_service_test: '{{ prometheus_nginx_exporter_nginxinc_service_test | default(true) }}'
 
 - name: Include task to setup {{ prometheus_software_name }} facts
   include_tasks: _setup_software_facts.yml

@@ -2,7 +2,7 @@
 - block:
   - name: Include role mesaguy.prometheus setup task
     include_tasks: _setup.yml
-  when: prometheus_setup_task_executed is not defined
+  when: prometheus_setup_task_executed is undefined
 
 - name: Starting smokeping_exporter (SuperQ) install
   set_fact:

@@ -2,7 +2,7 @@
 - block:
   - name: Include role mesaguy.prometheus setup task
     include_tasks: _setup.yml
-  when: prometheus_setup_task_executed is not defined
+  when: prometheus_setup_task_executed is undefined
 
 - name: Starting snmp_exporter install
   set_fact:
@@ -41,7 +41,7 @@
     state: link
   notify:
     - Restart Prometheus service
-  when: prometheus_snmp_exporter_yml is not defined
+  when: prometheus_snmp_exporter_yml is undefined
 
 - name: Setup {{ prometheus_software_version }} configuration file
   become: true

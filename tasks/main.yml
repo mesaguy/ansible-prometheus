@@ -8,7 +8,7 @@
     - name: Ensure at least one prometheus component has been specified for {{ inventory_hostname_short }}
       fail:
         msg: "No 'prometheus_components' variable (array) has been specified for {{ inventory_hostname_short }}"
-      when: prometheus_components is not defined or not prometheus_components
+      when: prometheus_components is undefined or not prometheus_components
 
     - name: Setup Prometheus ulimits
       include_role:
