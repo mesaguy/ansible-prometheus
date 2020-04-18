@@ -8,13 +8,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Ability to cache software on the Ansible host and push cached software to the remote hosts Ansible is configuring
 - New exporters:
+  - aerospike_exporter_alicebob, thanks [urusha](https://github.com/urusha)!
+  - clickhouse_exporter_perconalab, thanks [urusha](https://github.com/urusha)!
   - dockerhub_exporter_promhippie
   - fping_exporter_schweikert
   - iperf3_exporter_edgard
   - ipmi_exporter_soundcloud
   - nginx_exporter_nginxinc
+  - phpfpm_exporter_hipages, thanks [urusha](https://github.com/urusha)!
   - wireguard_exporter_mdlayher
+
+### Changed
+
+- Service environmental variables are now stored in a file separate from service (system .service files, etc). This is necessary for situations where passwords are stored inside the environmental variables. Improvement by [urusha](https://github.com/urusha).
+- Source builds without Makefiles will now be retried if they fail
+
+### Fixed
+
+- Many Prometheus server options required prefixing their variables with an extra *prometheus_*, this requirement has been removed
+- Specifying a custom software version that wasn't in metadata caused an error in some circumstances
+- Numerous documentation fixes from [urusha](https://github.com/urusha).
 
 ## [0.11.4] - 2020-04-11
 

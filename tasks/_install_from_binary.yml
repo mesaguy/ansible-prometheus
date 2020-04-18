@@ -13,12 +13,14 @@
 - name: Set variables for {{ prometheus_software_name_version }} binary archive file from extended metadata
   set_fact:
     prometheus_software_archive_file: '{{ prometheus_tmp_dir }}/{{ prometheus_software_metadata.name }}'
+    prometheus_software_local_archive_file: '{{ prometheus_local_archive_dir }}/{{ prometheus_software_name }}/{{ prometheus_software_version }}/{{ prometheus_software_metadata.name }}'
   when:
     - prometheus_software_metadata is defined and prometheus_software_metadata | length > 0
 
 - name: Set variables for {{ prometheus_software_name_version }} binary archive file
   set_fact:
     prometheus_software_archive_file: '{{ prometheus_tmp_dir }}/{{ prometheus_software_url | basename }}'
+    prometheus_software_local_archive_file: '{{ prometheus_local_archive_dir }}/{{ prometheus_software_name }}/{{ prometheus_software_version }}/{{ prometheus_software_url | basename }}'
   when:
     - prometheus_software_metadata is undefined or prometheus_software_metadata | length == 0
 
@@ -27,6 +29,23 @@
   stat:
     path: '{{ prometheus_software_binary }}'
   register: prometheus_software_installed
+
+- name: Check {{ prometheus_software_name_version }} local archive existence
+  delegate_to: localhost
+  connection: local
+  run_once: true
+  stat:
+    path: '{{ prometheus_software_local_archive_file }}'
+  register: prometheus_local_archive_present
+  when:
+    - prometheus_local_archive | bool
+    - not prometheus_software_installed.stat.exists
+
+- name: Include task to local_archive directories for {{ prometheus_software_name_version }} installation
+  include_tasks: _setup_local_archive.yml
+  when:
+    - not prometheus_software_installed.stat.exists
+    - prometheus_local_archive | bool
 
 # Download and unarchive seperately as 'get_url' can follow redirects
 # and github uses redirects for some downloads
@@ -48,6 +67,29 @@
   until: prometheus_software_download is succeeded
   when:
     - not prometheus_software_installed.stat.exists
+    - not prometheus_local_archive | bool
+    - not prometheus_disable_metadata
+    - prometheus_software_metadata is defined and prometheus_software_metadata | length > 0
+
+- name: 'Download {{ prometheus_software_name_version }} and validate checksum ({{ prometheus_software_metadata.url }}) to local archive'
+  delegate_to: localhost
+  connection: local
+  run_once: true
+  get_url:
+    url: '{{ prometheus_software_metadata.url }}'
+    checksum: '{{ prometheus_software_metadata.sha256 | default(omit) }}'
+    timeout: 20
+    mode: '0644'
+    dest: '{{ prometheus_software_local_archive_file }}'
+  # Handled downstream:
+  ignore_errors: '{{ prometheus_software_fallback_to_build | bool }}'
+  register: prometheus_software_download
+  retries: 5
+  delay: 10
+  until: prometheus_software_download is succeeded
+  when:
+    - not prometheus_software_installed.stat.exists
+    - prometheus_local_archive | bool and not prometheus_local_archive_present.stat.exists
     - not prometheus_disable_metadata
     - prometheus_software_metadata is defined and prometheus_software_metadata | length > 0
 
@@ -68,7 +110,40 @@
   until: prometheus_software_download is succeeded
   when:
     - not prometheus_software_installed.stat.exists
+    - not prometheus_local_archive | bool
     - (prometheus_disable_metadata or prometheus_software_metadata is undefined or prometheus_software_metadata | length == 0)
+
+- name: 'Download {{ prometheus_software_name_version }} ({{ prometheus_software_url }}) to local archive'
+  delegate_to: localhost
+  connection: local
+  run_once: true
+  get_url:
+    url: '{{ prometheus_software_url }}'
+    timeout: 20
+    mode: '0644'
+    dest: '{{ prometheus_software_local_archive_file }}'
+  # Handled downstream:
+  ignore_errors: '{{ prometheus_software_fallback_to_build | bool }}'
+  register: prometheus_software_download
+  retries: 5
+  delay: 10
+  until: prometheus_software_download is succeeded
+  when:
+    - not prometheus_software_installed.stat.exists
+    - prometheus_local_archive | bool and not prometheus_local_archive_present.stat.exists
+    - (prometheus_disable_metadata or prometheus_software_metadata is undefined or prometheus_software_metadata | length == 0)
+
+- name: Copy locally archived {{ prometheus_software_name_version }} archive to remote host
+  become: true
+  copy:
+    src: '{{ prometheus_software_local_archive_file }}'
+    dest: '{{ prometheus_software_archive_file }}'
+    owner: '{{ prometheus_user }}'
+    group: '{{ prometheus_group }}'
+    mode: '0644'
+  when:
+    - not prometheus_software_installed.stat.exists
+    - prometheus_local_archive | bool
 
 - name: Find {{ prometheus_software_name_version }} archive contents
   command: 'tar -tf {{ prometheus_software_archive_file }}'
@@ -81,7 +156,6 @@
     - not prometheus_software_installed.stat.exists
     - prometheus_software_download is succeeded
     - prometheus_software_archive_file | regex_search('.*(tar.gz)$', ignorecase=True)
-    - prometheus_software_url_unarchive
 
 - name: 'Unarchive {{ prometheus_software_name_version }} ({{ prometheus_software_archive_file }})'
   become: true
@@ -101,25 +175,6 @@
   when:
     - not prometheus_software_installed.stat.exists
     - prometheus_software_download is succeeded
-    - prometheus_software_url_unarchive
-
-- name: 'Copy {{ prometheus_software_name_version }} ({{ prometheus_software_archive_file }})'
-  become: true
-  copy:
-    owner: root
-    group: '{{ prometheus_group }}'
-    src: '{{ prometheus_software_archive_file }}'
-    dest: '{{ prometheus_software_install_dir }}/{{ prometheus_software_binary_name }}'
-    remote_src: true
-  # Handled downstream:
-  ignore_errors: '{{ prometheus_software_fallback_to_build | bool }}'
-  register: prometheus_software_installation
-  notify:
-    - Restart Prometheus service
-  when:
-    - not prometheus_software_installed.stat.exists
-    - prometheus_software_download is succeeded
-    - not prometheus_software_url_unarchive
 
 - name: Remove {{ prometheus_software_name_version }} archive file
   become: true

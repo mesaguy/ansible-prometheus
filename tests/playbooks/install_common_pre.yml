@@ -2,6 +2,7 @@
 - name: Set fact indicating that tests are being run
   set_fact:
     prometheus_software_testing: true
+    prometheus_local_archive: '{{ lookup("env", "PROMETHEUS_LOCAL_ARCHIVE") | bool }}'
 
 - name: Gather Operating System specific variables
   include_vars: '{{ os_var_file }}'

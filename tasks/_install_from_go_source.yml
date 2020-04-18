@@ -31,7 +31,7 @@
 
 - name: Include task to setup environment for compiling go source code
   include_tasks: _install_go_compiler.yml
-  when: prometheus_install_go_compiler_executed is not defined
+  when: prometheus_install_go_compiler_installed is undefined
 
 - name: Gather statistics on the file {{ prometheus_software_binary }}
   stat:

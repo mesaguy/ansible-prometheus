@@ -7,7 +7,11 @@
     - name: Define package manager as setup
       set_fact:
         prometheus_setup_pkg_mgr_executed: true
-  when: prometheus_setup_pkg_mgr_executed is not defined
+  when: prometheus_setup_pkg_mgr_executed is undefined
+
+- name: Set Go facts
+  set_fact:
+    prometheus_go_archive_name: 'go{{ prometheus_go_version }}.{{ prometheus_architecture }}.tar.gz'
 
 - name: Install tools required for building go modules from source
   become: true
@@ -22,7 +26,15 @@
   loop_control:
     loop_var: prometheus_go_tool
 
-- name: Make go compiler directories
+- name: Check Go {{ prometheus_go_version }} existance
+  become: true
+  stat:
+    path: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}/bin/go'
+  register: prometheus_go_installed
+  when:
+    - prometheus_go_installed is undefined
+
+- name: Create Go {{ prometheus_go_version }} directories
   become: true
   file:
     path: '{{ prometheus_go_directory }}'
@@ -35,22 +47,80 @@
   with_items:
     - '{{ prometheus_go_dir }}'
     - '{{ prometheus_go_dir }}/{{ prometheus_go_version }}'
+  when:
+    - not prometheus_go_installed.stat.exists
 
-- name: Download and extract go
+- block:
+    - name: Create local archive directory for Go {{ prometheus_go_version }}
+      delegate_to: localhost
+      connection: local
+      run_once: true
+      file:
+        path: '{{ prometheus_local_archive_dir }}/golang/{{ prometheus_go_version }}'
+        state: directory
+
+    - name: Download Go {{ prometheus_go_version }} to local archive
+      delegate_to: localhost
+      connection: local
+      run_once: true
+      get_url:
+        dest: '{{ prometheus_local_archive_dir }}/golang/{{ prometheus_go_version }}/{{ prometheus_go_archive_name }}'
+        url: 'https://storage.googleapis.com/golang/{{ prometheus_go_archive_name }}'
+      register: prometheus_download
+      retries: 5
+      delay: 10
+      until: prometheus_download is succeeded
+
+    - name: Copy locally archived Go {{ prometheus_go_version }} archive to remote host
+      become: true
+      copy:
+        src: '{{ prometheus_local_archive_dir }}/golang/{{ prometheus_go_version }}/{{ prometheus_go_archive_name }}'
+        dest: '{{ prometheus_tmp_dir }}/{{ prometheus_go_archive_name }}'
+        owner: '{{ prometheus_user }}'
+        group: '{{ prometheus_group }}'
+        mode: '0644'
+
+    - name: Extract Go {{ prometheus_go_version }} on remote host
+      become: true
+      unarchive:
+        extra_opts:
+          - '--strip-components=1'
+        creates: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}/bin/go'
+        src: '{{ prometheus_tmp_dir }}/{{ prometheus_go_archive_name }}'
+        dest: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}'
+        mode: '0755'
+        owner: root
+        group: root
+        remote_src: true
+
+    - name: Remove temporary Go {{ prometheus_go_version }} archive from remote host
+      become: true
+      file:
+        path: '{{ prometheus_tmp_dir }}/{{ prometheus_go_archive_name }}'
+        state: absent
+  when:
+    - prometheus_local_archive | bool
+    - not prometheus_go_installed.stat.exists
+
+- name: Download and extract Go {{ prometheus_go_version }}
   become: true
   unarchive:
-    extra_opts: ['--strip-components=1']
+    extra_opts:
+      - '--strip-components=1'
     creates: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}/bin/go'
+    src: 'https://storage.googleapis.com/golang/{{ prometheus_go_archive_name }}'
     dest: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}'
     mode: '0755'
     owner: root
     group: root
-    src: 'https://storage.googleapis.com/golang/go{{ prometheus_go_version }}.{{ prometheus_architecture }}.tar.gz'
     remote_src: true
   register: prometheus_download
   retries: 5
   delay: 10
   until: prometheus_download is succeeded
+  when:
+    - not prometheus_go_installed.stat.exists
+    - not prometheus_local_archive | bool
 
 - block:
     - name: Find paths under {{ prometheus_go_dir }}, exclude the current installation
@@ -65,7 +135,7 @@
           - '{{ prometheus_go_version }}'
       register: present_go_paths
 
-    - name: Remove orphan go installations under {{ prometheus_go_dir }} in favor of {{ prometheus_go_version }}
+    - name: Remove orphan Go installations under {{ prometheus_go_dir }} in favor of {{ prometheus_go_version }}
       # Remove paths flagged for deletion above
       become: true
       file:
@@ -79,4 +149,4 @@
 
 - name: Define 'install_go_compiler' run as complete
   set_fact:
-    prometheus_install_go_compiler_executed: true
+    prometheus_install_go_compiler_installed: true

@@ -1,4 +1,5 @@
 ---
+
 - name: Make directories for {{ prometheus_software_name_version }} build
   become: true
   file:
@@ -13,6 +14,55 @@
   loop_control:
     loop_var: prometheus_build_directory
 
+- block:
+    - name: Include task to local_archive directories for {{ prometheus_software_name_version }} installation
+      include_tasks: _setup_local_archive.yml
+
+    - name: Set variables for {{ prometheus_software_name_version }} build
+      set_fact:
+        prometheus_software_local_archive_file: '{{ prometheus_local_archive_dir }}/{{ prometheus_software_name }}/{{ prometheus_software_version }}/{{ prometheus_software_src_url | basename }}'
+
+    - name: Download {{ prometheus_software_name_version }} source to local archive
+      delegate_to: localhost
+      connection: local
+      run_once: true
+      get_url:
+        dest: '{{ prometheus_software_local_archive_file }}'
+        url: '{{ prometheus_software_src_url }}'
+      register: prometheus_download
+      retries: 5
+      delay: 10
+      until: prometheus_download is succeeded
+
+    - name: Copy locally archived {{ prometheus_software_name_version }} source archive to remote host
+      become: true
+      copy:
+        src: '{{ prometheus_software_local_archive_file }}'
+        dest: '{{ prometheus_tmp_dir }}/{{ prometheus_software_src_url | basename }}'
+        owner: '{{ prometheus_user }}'
+        group: '{{ prometheus_group }}'
+        mode: '0644'
+
+    - name: Extract {{ prometheus_software_name_version }} source archive on remote host
+      become: true
+      unarchive:
+        extra_opts: '{{ prometheus_software_src_unarchive_opts | default(prometheus_default_src_unarchive_opts) }}'
+        src: '{{ prometheus_tmp_dir }}/{{ prometheus_software_src_url | basename }}'
+        dest: '{{ prometheus_software_src_dir }}'
+        creates: '{{ prometheus_software_src_dir }}/*'
+        owner: '{{ prometheus_user }}'
+        group: '{{ prometheus_group }}'
+        remote_src: true
+
+    - name: Remove temporary {{ prometheus_software_name_version }} source archive from remote host
+      become: true
+      file:
+        path: '{{ prometheus_tmp_dir }}/{{ prometheus_software_src_url | basename }}'
+        state: absent
+  when:
+    - prometheus_software_src_url is match('.*(tar.gz|zip)$')
+    - prometheus_local_archive | bool
+
 - name: Download and extract the {{ prometheus_software_name_version }} project source to {{ prometheus_software_build_dir }}
   become: true
   # Certain versions of ansible break 'become_user' for 'archive' and 'get_url', supposedly fixed in 2.6.3:
@@ -21,16 +71,18 @@
   unarchive:
     extra_opts: '{{ prometheus_software_src_unarchive_opts | default(prometheus_default_src_unarchive_opts) }}'
     creates: '{{ prometheus_software_src_dir }}/*'
+    src: '{{ prometheus_software_src_url }}'
     dest: '{{ prometheus_software_src_dir }}'
     owner: '{{ prometheus_user }}'
     group: '{{ prometheus_group }}'
-    src: '{{ prometheus_software_src_url }}'
     remote_src: true
   register: prometheus_download
   retries: 5
   delay: 10
   until: prometheus_download is succeeded
-  when: prometheus_software_src_url is match('.*(tar.gz|zip)$')
+  when:
+    - prometheus_software_src_url is match('.*(tar.gz|zip)$')
+    - not prometheus_local_archive | bool
 
 - name: Clone the {{ prometheus_software_name_version }} project source from {{ prometheus_software_src_url }} to {{ prometheus_software_src_dir }}
   become: true
@@ -72,6 +124,9 @@
   become: true
   # become_user: '{{ prometheus_user }}'
   shell: '{{ prometheus_software_make_command }}'
+  register: prometheus_software_build
+  retries: 5
+  delay: 10
   args:
     chdir: '{{ prometheus_software_src_dir }}'
     creates: '{{ prometheus_software_name }}'

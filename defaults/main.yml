@@ -37,6 +37,10 @@ prometheus_configure_ulimits: false
 prometheus_ulimit_hard_nofile: 8192
 prometheus_ulimit_soft_nofile: 4096
 
+# Local archive (Ansible host local copies of software archives)
+prometheus_local_archive: false
+prometheus_local_archive_dir: ../archive/prometheus
+
 # Firewall management
 prometheus_manage_client_firewalld: false
 prometheus_manage_client_iptables: false
@@ -58,7 +62,6 @@ prometheus_software_setup_pkg_mgrs:
  - 'Alpine'
  - 'Archlinux'
  - 'Gentoo'
-prometheus_default_url_unarchive: true
 
 # Base directories
 prometheus_etc_dir: '{{ prometheus_root_dir }}/etc'

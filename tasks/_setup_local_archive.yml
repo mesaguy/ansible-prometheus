@@ -1,0 +1,8 @@
+---
+- name: Create local archive directory for {{ prometheus_software_name_version }}
+  delegate_to: localhost
+  connection: local
+  run_once: true
+  file:
+    path: '{{ prometheus_local_archive_dir }}/{{ prometheus_software_name }}/{{ prometheus_software_version }}'
+    state: directory

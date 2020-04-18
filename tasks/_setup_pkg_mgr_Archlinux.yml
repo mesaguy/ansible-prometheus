@@ -12,4 +12,4 @@
   # pacman cache is older than 3 days
   when:
     - not pacman_core_index.stat.exists or
-      60*60*24*3 > (ansible_date_time.epoch | int - pacman_core_index.stat.mtime | int)
+      60*60*24*3 < (ansible_date_time.epoch | int - pacman_core_index.stat.mtime | int)

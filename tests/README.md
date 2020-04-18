@@ -4,7 +4,7 @@
 
 Run standard tests for Archlinux:
 
-- Normal testing: ```PROMETHEUS_DEBUG=true kitchen test archlinux```
+- Normal testing: ```PROMETHEUS_LOCAL_ARCHIVE=true PROMETHEUS_DEBUG=true kitchen test archlinux```
 - Test installations without using metadata (except for version information: ```PROMETHEUS_DISABLE_METADATA=true PROMETHEUS_DEBUG=true kitchen test archlinux```
 - Force all installs to build source: ```KITCHEN_PLAYBOOK=build_all PROMETHEUS_DEBUG=true kitchen test archlinux```
 

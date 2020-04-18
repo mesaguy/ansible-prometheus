@@ -106,7 +106,7 @@ prometheus_script_exporter_adhocteam_cfgs:
 prometheus_grok_exporter_fstab_cfg: '{{ lookup("file", "../tests/files/grok_exporter_fstab.yml") }}'
 prometheus_kafka_exporter_danielqsj_service_test: false
 prometheus_mysqld_exporter_service_test: false
-prometheus_nginx-prometheus-exporter_nginxinc_service_test: false
+prometheus_nginx_exporter_nginxinc_service_test: false
 prometheus_node_exporter_extra_opts:
   - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|run|var/lib/docker/.*)($|/)"'
   - '--collector.systemd'
