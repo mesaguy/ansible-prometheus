@@ -29,12 +29,13 @@ runas_user={% if prometheus_software_runas is defined and prometheus_software_ru
 {% else -%}
 {{ prometheus_user }}
 {% endif -%}
-start_stop_daemon_args="--pidfile ${pidfile}
 {% if prometheus_software_env_vars is defined and prometheus_software_env_vars %}
-{% for key in prometheus_software_env_vars.keys() -%}
-  --env {{ key }}='{{ prometheus_software_env_vars[key] }}'
-{% endfor -%}
-{% endif %}
+# Custom environmental variables:
+set -a
+. "{{ prometheus_etc_dir }}/{{ prometheus_software_service_name }}.env"
+set +a
+{% endif -%}
+start_stop_daemon_args="--pidfile ${pidfile}
   --stdout ${logfile} --stderr ${logfile}
   --user ${runas_user}:{{ prometheus_group }}"
 {% if prometheus_software_config_file is defined and prometheus_software_config_file %}
