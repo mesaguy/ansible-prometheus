@@ -34,7 +34,7 @@ An array of additional flags to pass to the process_exporter daemon:
 
 The version of process_exporter_ncabatoff to install. The default version can be found in the [process_exporter_ncabatoff variables file](../vars/software/process_exporter_ncabatoff.yml) and the default version can be overridden using the following variable:
 
-    prometheus_process_exporter_ncabatoff_version: "1.0.0"
+    prometheus_process_exporter_ncabatoff_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

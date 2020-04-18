@@ -8,7 +8,7 @@ An array of additional flags to pass to the memcached_exporter daemon:
 
 The version of memcached_exporter to install. The default version can be found in the [memcached_exporter variables file](../vars/software/memcached_exporter.yml) and the default version can be overridden using the following variable:
 
-    prometheus_memcached_exporter_version: "1.0.0"
+    prometheus_memcached_exporter_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

@@ -8,7 +8,7 @@ An array of additional flags to pass to the keepalived_exporter daemon (ie):
 
 The version of keepalived_exporter_gen2brain to install. The default version can be found in the [keepalived_exporter_gen2brain variables file](../vars/software/keepalived_exporter_gen2brain.yml) and the default version can be overridden using the following variable:
 
-    prometheus_keepalived_exporter_gen2brain_version: "1.0.0"
+    prometheus_keepalived_exporter_gen2brain_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

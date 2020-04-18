@@ -33,7 +33,7 @@ An array of additional flags to pass to the grok_exporter daemon:
 
 The version of grok_exporter_fstab to install. The default version can be found in the [grok_exporter_fstab variables file](../vars/software/grok_exporter_fstab.yml) and the default version can be overridden using the following variable:
 
-    prometheus_grok_exporter_fstab_version: "1.0.0"
+    prometheus_grok_exporter_fstab_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

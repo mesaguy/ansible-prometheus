@@ -6,7 +6,7 @@ An array of additional flags to pass to the influxdb_exporter daemon:
 
 The version of influxdb_exporter to install. The default version can be found in the [influxdb_exporter variables file](../vars/software/influxdb_exporter.yml) and the default version can be overridden using the following variable:
 
-    prometheus_influxdb_exporter_version: "1.0.0"
+    prometheus_influxdb_exporter_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

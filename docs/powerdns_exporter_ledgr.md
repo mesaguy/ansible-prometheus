@@ -11,7 +11,7 @@ The following options are configurable for the api_url and api_key needed to con
 
 The version of powerdns_exporter_ledgr to install. The default version can be found in the [powerdns_exporter_ledgr variables file](../vars/software/powerdns_exporter_ledgr.yml) and the default version can be overridden using the following variable:
 
-    prometheus_powerdns_exporter_ledgr_version: "1.0.0"
+    prometheus_powerdns_exporter_ledgr_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

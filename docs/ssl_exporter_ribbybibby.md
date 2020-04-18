@@ -8,7 +8,7 @@ An array of additional flags to pass to the ssl_exporter daemon:
 
 The version of ssl_exporter_ribbybibby to install. The default version can be found in the [ssl_exporter_ribbybibby variables file](../vars/software/ssl_exporter_ribbybibby.yml) and the default version can be overridden using the following variable:
 
-    prometheus_ssl_exporter_ribbybibby_version: "1.0.0"
+    prometheus_ssl_exporter_ribbybibby_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

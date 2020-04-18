@@ -14,7 +14,7 @@ An array of additional flags to pass to the couchbase_exporter daemon:
 
 The version of couchbase_exporter_blakelead to install. The default version can be found in the [couchbase_exporter_blakelead variables file](../vars/software/couchbase_exporter_blakelead.yml) and the default version can be overridden using the following variable:
 
-    prometheus_couchbase_exporter_blakelead_version: "1.0.0"
+    prometheus_couchbase_exporter_blakelead_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

@@ -17,7 +17,7 @@ Environmental variables can also be used to configure the bigip_exporter daemon:
 
 The version of bigip_exporter_expressenab to install. The default version can be found in the [bigip_exporter_expressenab variables file](../vars/software/bigip_exporter_expressenab.yml) and the default version can be overridden using the following variable:
 
-    prometheus_bigip_exporter_expressenab_version: "1.0.0"
+    prometheus_bigip_exporter_expressenab_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

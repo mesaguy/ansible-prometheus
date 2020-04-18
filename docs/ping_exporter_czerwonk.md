@@ -16,7 +16,7 @@ An array of additional flags to pass to the ping_exporter daemon (ie):
 
 The version of ping_exporter_czerwonk to install. The default version can be found in the [ping_exporter_czerwonk variables file](../vars/software/ping_exporter_czerwonk.yml) and the default version can be overridden using the following variable:
 
-    prometheus_ping_exporter_czerwonk_version: "1.0.0"
+    prometheus_ping_exporter_czerwonk_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

@@ -16,7 +16,7 @@ An array of additional flags to pass to the zookeeper_exporter daemon:
 
 The version of zookeeper_exporter_infonova to install. The default version can be found in the [zookeeper_exporter_infonova variables file](../vars/software/zookeeper_exporter_infonova.yml) and the default version can be overridden using the following variable:
 
-    prometheus_zookeeper_exporter_infonova_version: "1.0.0"
+    prometheus_zookeeper_exporter_infonova_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

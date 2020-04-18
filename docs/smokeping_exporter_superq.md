@@ -10,7 +10,7 @@ An array of additional flags to pass to the smokeping_exporter daemon. You must 
 
 The version of smokeping_exporter_superq to install. The default version can be found in the [smokeping_exporter_superq variables file](../vars/software/smokeping_exporter_superq.yml) and the default version can be overridden using the following variable:
 
-    prometheus_smokeping_exporter_superq_version: "1.0.0"
+    prometheus_smokeping_exporter_superq_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

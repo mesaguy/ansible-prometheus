@@ -14,7 +14,7 @@ An array of additional flags to pass to the consul_exporter daemon:
 
 The version of consul_exporter to install. The default version can be found in the [consul_exporter variables file](../vars/software/consul_exporter.yml) and the default version can be overridden using the following variable:
 
-    prometheus_consul_exporter_version: "1.0.0"
+    prometheus_consul_exporter_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

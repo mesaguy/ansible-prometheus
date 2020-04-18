@@ -9,7 +9,7 @@ An array of additional flags to pass to the ntp_exporter daemon, the '-ntp.serve
 
 The version of ntp_exporter_sapcc to install. The default version can be found in the [ntp_exporter_sapcc variables file](../vars/software/ntp_exporter_sapcc.yml) and the default version can be overridden using the following variable:
 
-    prometheus_ntp_exporter_sapcc_version: "1.0.0"
+    prometheus_ntp_exporter_sapcc_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

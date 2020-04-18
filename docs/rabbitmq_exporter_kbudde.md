@@ -13,7 +13,7 @@ An array of additional flags to pass to the rabbitmq_exporter daemon:
 
 The version of rabbitmq_exporter_kbudde to install. The default version can be found in the [rabbitmq_exporter_kbudde variables file](../vars/software/rabbitmq_exporter_kbudde.yml) and the default version can be overridden using the following variable:
 
-    prometheus_rabbitmq_exporter_kbudde_version: "1.0.0"
+    prometheus_rabbitmq_exporter_kbudde_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

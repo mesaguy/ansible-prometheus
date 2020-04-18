@@ -8,7 +8,7 @@ An array of additional flags to pass to the clickhouse_exporter daemon:
 
 The version of clickhouse_exporter_perconalab to install. The default version can be found in the [clickhouse_exporter_perconalab variables file](../vars/software/clickhouse_exporter_perconalab.yml) and the default version can be overridden using the following variable:
 
-    prometheus_clickhouse_exporter_perconalab_version: "1.0.0"
+    prometheus_clickhouse_exporter_perconalab_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

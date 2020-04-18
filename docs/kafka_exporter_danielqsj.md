@@ -9,7 +9,7 @@ An array of additional flags to pass to the kafka_exporter daemon (ie):
 
 The version of kafka_exporter_danielqsj to install. The default version can be found in the [kafka_exporter_danielqsj variables file](../vars/software/kafka_exporter_danielqsj.yml) and the default version can be overridden using the following variable:
 
-    prometheus_kafka_exporter_danielqsj_version: "1.0.0"
+    prometheus_kafka_exporter_danielqsj_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

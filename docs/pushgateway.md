@@ -12,7 +12,7 @@ To configure persistence storage configure the following variables with a path f
 
 The version of Pushgateway to install. The default version can be found in the [pushgateway variables file](../vars/software/pushgateway.yml) and the default version can be overridden using the following variable:
 
-    prometheus_pushgateway_version: "1.0.0"
+    prometheus_pushgateway_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 

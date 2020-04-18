@@ -8,7 +8,7 @@ An array of additional flags to pass to the openldap_exporter daemon (ie):
 
 The version of openldap_exporter_tomcz to install. The default version can be found in the [openldap_exporter_tomcz variables file](../vars/software/openldap_exporter_tomcz.yml) and the default version can be overridden using the following variable:
 
-    prometheus_openldap_exporter_tomcz_version: "1.0.0"
+    prometheus_openldap_exporter_tomcz_version: "v1.0.0"
 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 
