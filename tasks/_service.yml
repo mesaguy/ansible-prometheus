@@ -13,11 +13,9 @@
     dest: '{{ prometheus_etc_dir }}/{{ prometheus_software_service_name }}.env'
     src: ../templates/daemon-env.j2
     owner: root
-    group: root
+    group: '{{ prometheus_group }}'
     mode: '0640'
   notify:
-    - name: Force systemd to reread configs
-      when: ansible_service_mgr == "systemd"
     - Restart Prometheus service
   when: prometheus_software_env_vars is defined and prometheus_software_env_vars
 
