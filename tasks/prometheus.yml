@@ -2,7 +2,7 @@
 - block:
   - name: Include role mesaguy.prometheus setup task
     include_tasks: _setup.yml
-  when: prometheus_setup_task_executed is not defined
+  when: prometheus_setup_task_executed is undefined
 
 - name: Starting prometheus install
   set_fact:
@@ -21,6 +21,17 @@
     prometheus_software_supports_reload: true
     # Software has no tgroup name:
     prometheus_prometheus_jobname: ""
+    # The following allow specifying Prometheus service variables without
+    # prefixing with 'prometheus_prometheus_'. _setup_software_facts.yml
+    # prefixes 'prometheus_' to all variables it looks for
+    prometheus_prometheus_env_vars: '{{ lookup("vars", "prometheus_env_vars", default=omit) }}'
+    prometheus_prometheus_extra_opts: '{{ lookup("vars", "prometheus_extra_opts", default=omit) }}'
+    prometheus_prometheus_fallback_to_build: '{{ lookup("vars", "prometheus_fallback_to_build", default=omit) }}'
+    prometheus_prometheus_host: '{{ lookup("vars", "prometheus_host", default=omit) }}'
+    prometheus_prometheus_port: '{{ lookup("vars", "prometheus_port", default=omit) }}'
+    prometheus_prometheus_runas: '{{ lookup("vars", "prometheus_runas", default=omit) }}'
+    prometheus_prometheus_use_prerelease: '{{ lookup("vars", "prometheus_use_prerelease", default=omit) }}'
+    prometheus_prometheus_version: '{{ lookup("vars", "prometheus_version", default=omit) }}'
 
 - name: Include task to setup {{ prometheus_software_name }} facts
   include_tasks: _setup_software_facts.yml
