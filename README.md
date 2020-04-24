@@ -30,7 +30,7 @@ This module is intended to support as many distributions and architectures as po
 |Oracle Linux    |6, 7, 8                                  | x86_64 (amd64)    |
 |Ubuntu          |16.04 through 20.04                      | x86_64 (amd64)    |
 
-### Supported Prometheus software
+### Managed Prometheus software
 The following core Prometheus software is supported in addition to the list of exporters below. This software is fully tested on all supported OS, distributions, and architectures.
 
 | Prometheus software                                       | Usage                                     | Author     | CI tested |
@@ -39,7 +39,7 @@ The following core Prometheus software is supported in addition to the list of e
 |[alertmanager](https://github.com/prometheus/alertmanager) | [usage](docs/alertmanager.md)             | prometheus | Yes       |
 |[push_gateway](https://github.com/prometheus/pushgateway)  | [usage](docs/pushgateway.md)              | prometheus | Yes       |
 
-### Supported exporters
+### Managed exporters
 All exporters are verified to install. Currently select modules receive testing via CI (Continuous Integration) and [Inspec](https://www.inspec.io)
 
 See each exporter's usage page for more details:
@@ -102,7 +102,7 @@ See each exporter's usage page for more details:
 |[wireguard_exporter_mdlayher](https://github.com/mdlayher/wireguard_exporter)                  | [usage](docs/wireguard_exporter_mdlayher.md)                | mdlayher             | Partial   |
 |[zookeeper_exporter_infonova](https://github.com/infonova/zookeeper_exporter)                  | [usage](docs/zookeeper_exporter_infonova.md)                | infonova             | Yes       |
 
-### Supported node_exporter textfiles scripts
+### Managed node_exporter textfiles scripts
 Numerous node_exporter textfiles scripts are supported and can be installed via the following variables. These scripts are installed under '/opt/prometheus/scripts' by default:
 
 | node_exporter textfiles script                                                                                                           | Source                     | Enable variable                           |
