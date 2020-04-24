@@ -4,15 +4,15 @@ defaults:
   tgroup: nginx
 software:
   name: nginxinc/nginx-prometheus-exporter
-  release: v0.6.0
+  release: v0.7.0
   prerelease: null
   url: https://github.com/nginxinc/nginx-prometheus-exporter
   source: https://github.com/nginxinc/nginx-prometheus-exporter.git
-  updated: '2020-04-20T23:31:43.177030'
+  updated: '2020-04-24T04:49:36.440817'
   master:
     commit:
-      sha: 831abae4a75bfc63ab6f4abcae07b2882579090b
-      timestamp: '2020-04-20T21:20:23'
+      sha: 2a584af1fa991b6fbdd9067648d9e0dd873f71c4
+      timestamp: '2020-04-24T00:02:07'
     files: []
   releases:
     - name: v0.6.0
@@ -175,3 +175,23 @@ software:
           size: 233
           sha256: sha256:de76a3a08a39d9d8708dc4f5ddebfc673135a2d87c0cd5affae315bdbc334a9a
           url: https://github.com/nginxinc/nginx-prometheus-exporter/releases/download/v0.1.0/sha256sums.txt
+    - name: v0.7.0
+      commit: null
+      timestamp: '2020-04-23T17:10:50'
+      prerelease: false
+      files:
+        - name: nginx-prometheus-exporter-0.7.0-linux-amd64.tar.gz
+          commit: null
+          size: 5872225
+          sha256: sha256:08a0a054aecedec4aa2772569325a346403d2c1fba6f88739553416c2f4f77e6
+          url: https://github.com/nginxinc/nginx-prometheus-exporter/releases/download/v0.7.0/nginx-prometheus-exporter-0.7.0-linux-amd64.tar.gz
+        - name: nginx-prometheus-exporter-0.7.0-linux-i386.tar.gz
+          commit: null
+          size: 5734205
+          sha256: sha256:7643f8b60f267920ac9299d107d31f30252dda8a461d02d79395d69f2d01bfc6
+          url: https://github.com/nginxinc/nginx-prometheus-exporter/releases/download/v0.7.0/nginx-prometheus-exporter-0.7.0-linux-i386.tar.gz
+        - name: sha256sums.txt
+          commit: null
+          size: 233
+          sha256: sha256:c068bba09862cbe415e0be55431579792192ed17ace3d998a377a2cc1051ef84
+          url: https://github.com/nginxinc/nginx-prometheus-exporter/releases/download/v0.7.0/sha256sums.txt

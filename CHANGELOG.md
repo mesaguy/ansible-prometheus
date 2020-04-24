@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.2] - 2020-04-23
+
+### Changed
+
+- Upgrade couchdb_exporter_gesellix from v27.0.0 v27.1.1
+- Upgrade ipmi_exporter_soundcloud from v1.1.0 to v1.2.0
+- Upgrade mongodb_exporter_percona from v0.10.0 to v0.11.0
+- Upgrade nginx_exporter_nginxinc from v0.6.0 to v0.7.0
+- Upgrade rabbitmq_exporter_kbudde from 0.29.0 to v1.0.0-RC7
+- Update metadata to include latest master commits
+
 ## [0.12.1] - 2020-04-21
 
 ### Changed
