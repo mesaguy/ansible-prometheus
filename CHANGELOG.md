@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.3] - 2020-04-29
+
+### Changed
+
+- Simplify OS architecture variable gathering
+- Upgrade Prometheus (pre-release) from v2.17.0-rc.4 to v2.18.0-rc.0
+- Update apache_exporter_lusitaniae documentation to reflect latest command line argument syntax
+- Update metadata to include latest master commits
+
 ## [0.12.2] - 2020-04-23
 
 ### Changed
