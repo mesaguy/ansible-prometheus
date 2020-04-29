@@ -50,7 +50,7 @@ install:
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
 
 notifications:
-    webhooks: https://galaxy.ansible.com/api/v1/notifications/?branch=master
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/?branch=master
 
 script:
   # Validate README.md URLs
