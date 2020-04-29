@@ -5,7 +5,7 @@ To enable [apache_exporter by Lusitaniae](https://github.com/Lusitaniae/apache_e
 An array of additional flags to pass to the apache_exporter daemon (ie):
 
     prometheus_apache_exporter_lusitaniae_extra_opts:
-      - '-scrape_uri=http://localhost/server-status/?auto'
+      - '--scrape_uri=http://localhost/server-status/?auto'
 
 The version of apache_exporter_lusitaniae to install. The default version can be found in the [apache_exporter_lusitaniae variables file](../vars/software/apache_exporter_lusitaniae.yml) and the default version can be overridden using the following variable:
 
