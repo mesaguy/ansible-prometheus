@@ -1,11 +1,6 @@
 ---
-- name: 'Gather Architecture specific variables'
-  include_vars: '{{ os_arch_var_file }}'
-  loop_control:
-    loop_var: os_arch_var_file
-  with_first_found:
-    - 'os-architecture/{{ ansible_system }}-{{ ansible_architecture }}.yml'
-  tags: os_arch_vars
+- name: Gather Architecture specific variables
+  include_vars: 'os-architecture/{{ ansible_system }}-{{ ansible_architecture }}.yml'
 
 - name: Include role mesaguy.prometheus common task
   include: _common.yml
