@@ -58,7 +58,7 @@
     comment: Prometheus User
     uid: '{{ prometheus_uid | default(omit) }}'
     group: '{{ prometheus_group }}'
-    shell: '{{ prometheus_shell }}'
+    shell: '{{ prometheus_shell | default(omit) }}'
   when: prometheus_manage_user | bool
 
 - name: 'Setup prometheus install root directory: "{{ prometheus_root_dir }}"'
