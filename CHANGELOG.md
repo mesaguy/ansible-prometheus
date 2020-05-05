@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Expand JMX documentation
 - Upgrade Prometheus (pre-release) from v2.18.0-rc.0 to v2.18.0-rc.1
+- Upgrade influxdb_exporter from v0.4.0 to v0.4.1
 - Upgrade redis_exporter_oliver006 from v1.5.3 to v1.6.0
 - Upgrade wireguard_exporter_mdlayher from git master commit ed8c4677b34ff9f4ab456349fff8c4dad1a98f27 to release v0.1.2
 - Update metadata to include latest master commits
