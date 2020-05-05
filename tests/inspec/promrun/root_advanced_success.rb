@@ -2,19 +2,22 @@
 describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_root_advanced.prom') do
   it { should_not exist }
 end
+describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_root_advanced.1.prom') do
+  it { should_not exist }
+end
 describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_root_advanced_verbose.prom') do
   it { should_not exist }
 end
 
 # Creates the prom file
-describe command('sudo promrun -l org=Test -d "RUN OF echo COMMAND" -l env=test -n root_advanced echo -n 123') do
+describe command('sudo promrun -l org=Test -d "RUN OF echo COMMAND" -i 1 -l env=test -n root_advanced echo -n 123') do
   its('exit_status') { should eq 0 }
   its('stderr') { should eq '' }
   its('stdout') { should eq '123' }
 end
 
 # Resulting prom file is as expected
-describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_root_advanced.prom') do
+describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_root_advanced.1.prom') do
   it { should be_file }
   its('content') { should match /# HELP promrun_root_advanced_starttime Start time in Unix time with microseconds./ }
   its('content') { should match /# TYPE promrun_root_advanced_starttime gauge/ }
@@ -90,7 +93,7 @@ describe file('/opt/prometheus/etc/node_exporter_textfiles/promrun_root_advanced
   its('owner') { should eq 'root' }
   its('group') { should eq 'root' }
 end
-describe command('wc -l /opt/prometheus/etc/node_exporter_textfiles/promrun_root_advanced.prom') do
+describe command('wc -l /opt/prometheus/etc/node_exporter_textfiles/promrun_root_advanced.1.prom') do
   its('exit_status') { should eq 0 }
   its('stderr') { should eq '' }
   its('stdout') { should match /^70 / }
@@ -256,6 +259,9 @@ describe command('wc -l /opt/prometheus/etc/node_exporter_textfiles/promrun_root
 end
 
 # Remove prom file
+describe command('sudo rm -f /opt/prometheus/etc/node_exporter_textfiles/promrun_root_advanced.1.prom*') do
+  its('exit_status') { should eq 0 }
+end
 describe command('sudo rm -f /opt/prometheus/etc/node_exporter_textfiles/promrun_root_advanced.prom*') do
   its('exit_status') { should eq 0 }
 end

@@ -2,16 +2,19 @@
 describe file('/opt/prometheus/etc/node_exporter_textfiles/cron_root_advanced.prom') do
   it { should_not exist }
 end
+describe file('/opt/prometheus/etc/node_exporter_textfiles/cron_root_advanced.1.prom') do
+  it { should_not exist }
+end
 
 # Creates the prom file
-describe command('ls > /dev/null ; sudo promcron -l org=Test -d "RUN OF ls COMMAND" -l env=test root_advanced $?') do
+describe command('ls > /dev/null ; sudo promcron -l org=Test -d "RUN OF ls COMMAND" -i 1 -l env=test root_advanced $?') do
   its('exit_status') { should eq 0 }
   its('stderr') { should eq '' }
   its('stdout') { should eq '' }
 end
 
 # Resulting prom file is as expected
-describe file('/opt/prometheus/etc/node_exporter_textfiles/cron_root_advanced.prom') do
+describe file('/opt/prometheus/etc/node_exporter_textfiles/cron_root_advanced.1.prom') do
   it { should be_file }
   its('content') { should match /# HELP cron_root_advanced_endtime Unix time in microseconds./ }
   its('content') { should match /# TYPE cron_root_advanced_endtime gauge/ }

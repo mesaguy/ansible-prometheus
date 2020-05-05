@@ -26,29 +26,31 @@
 
 Help menu (-h):
 
-    Usage: promcron [ -Dhv ] [ -d DESCRIPTION ] [ -l label_name=LABEL_VALUE ]
-                          [ -s USERNAME ] NAME VALUE
+    Usage: promcron.sh [ -Dhv ] [ -d DESCRIPTION ] [ -i IDENTIFIER ]
+                          [ -l label_name=LABEL_VALUE ] [ -s USERNAME ] NAME VALUE
 
     NAME and VALUE are required and must be specified after arguments
 
      Options:
-        -d                         Optional description
+        -d "LONG DESCRIPTION"      Optional description
         -D                         Enable dryrun mode
         -h                         Print usage
+        -i IDENTIFIER              Output identifier, needed when multiple jobs
+                                   have the same name, but have different labels
         -l label_name=label_value  Optionally add specified labels to node_exporter
                                    textfile data (May be specified multiple times)
         -s USERNAME                Optionally Setup textfile directory file
                                    permissions for specified username. Must be run
                                    as root. Run in dryrun mode to inspect changed
-        -t                         Specify a textfiles directory (Defaults
+        -t DIRECTORY               Specify a textfiles directory (Defaults
                                    to: /etc/prometheus/node_exporter_textfiles)
         -v                         Enable verbose mode
 
     Basic example creating /etc/prometheus/node_exporter_textfiles/cron_ls_test.prom:
-    * * * * *    ls ; promcron ls_test $?
+    * * * * *    ls ; promcron.sh ls_test $?
 
     Example with description and custom labels:
-    * * * * *    ls ; promcron -l environment="Production Environment" -l test=true -d "ls command test" ls_test $?
+    * * * * *    ls ; promcron.sh -l environment="Production Environment" -l test=true -d "ls command test" ls_test $?
 
 ## Basic usage
 
@@ -84,6 +86,16 @@ The resulting .prom file is created:
     # HELP cron_daily_delete_app_tmp Process return code.
     # TYPE cron_daily_delete_app_tmp gauge
     cron_daily_delete_app_tmp{environment="production",application="tomcat",user="root",description="Daily job to delete app tmp files older than 1 day",promcron="value"} 0
+
+If one script will be used in numerous ways, each instance can have an identifier set as follows:
+
+    backup host1 ; promcron -i host1 -l backup=host1 backup $?
+    backup host2 ; promcron -i host2 -l backup=host2 backup $?
+
+The following files will result, each with its own labels:
+
+    /opt/prometheus/etc/node_exporter_textfiles/cron_backup.host1.prom
+    /opt/prometheus/etc/node_exporter_textfiles/cron_backup.host2.prom
 
 ## Setup use by non-privileged user
 

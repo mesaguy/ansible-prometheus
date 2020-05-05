@@ -6,7 +6,7 @@
 # Documentation: https://github.com/mesaguy/ansible-prometheus/blob/master/docs/promcron.md
 # Source: https://github.com/mesaguy/ansible-prometheus/tree/master/scripts/promcron.sh
 # License: MIT
-# Version: 1.1 (2020-03-18)
+# Version: 1.2 (2020-05-05)
 
 TEXTFILE_DIRECTORY="/etc/prometheus/node_exporter_textfiles"
 if which sponge > /dev/null 2>&1 ; then
@@ -29,21 +29,23 @@ function add_label () {
 }
 
 function usage () {
-    echo "Usage: $(basename $0) [ -Dhv ] [ -d DESCRIPTION ] [ -l label_name=LABEL_VALUE ]"
-    echo "                      [ -s USERNAME ] NAME VALUE"
+    echo "Usage: $(basename $0) [ -Dhv ] [ -d DESCRIPTION ] [ -i IDENTIFIER ]"
+    echo "                      [ -l label_name=LABEL_VALUE ] [ -s USERNAME ] NAME VALUE"
     echo
     echo NAME and VALUE are required and must be specified after arguments
     echo
     echo " Options:"
-    echo "    -d                         Optional description"
+    echo '    -d "LONG DESCRIPTION"      Optional description'
     echo "    -D                         Enable dryrun mode"
     echo "    -h                         Print usage"
+    echo "    -i IDENTIFIER              Output identifier, needed when multiple jobs"
+    echo "                               have the same name, but have different labels"
     echo "    -l label_name=label_value  Optionally add specified labels to node_exporter"
     echo "                               textfile data (May be specified multiple times)"
     echo "    -s USERNAME                Optionally Setup textfile directory file"
     echo "                               permissions for specified username. Must be run"
     echo "                               as root. Run in dryrun mode to inspect changed"
-    echo "    -t                         Specify a textfiles directory (Defaults"
+    echo "    -t DIRECTORY               Specify a textfiles directory (Defaults"
     echo "                               to: $TEXTFILE_DIRECTORY)"
     echo "    -v                         Enable verbose mode"
     echo
@@ -57,7 +59,7 @@ function usage () {
 }
 
 # read the option and store in the variable, $option
-while getopts "d:Dhl:s:t:v" option; do
+while getopts "d:Dhi:l:s:t:v" option; do
     case ${option} in
         d)
             DESCRIPTION="$OPTARG"
@@ -67,6 +69,9 @@ while getopts "d:Dhl:s:t:v" option; do
             ;;
         h)
             usage
+            ;;
+        i)
+            IDENTIFIER=".${OPTARG}"
             ;;
         l)
             LABELS=$(add_label "$LABELS" "$OPTARG")
@@ -103,7 +108,7 @@ if [ -n "$LABELS" ] ; then
 else
     LABELS="user=\"${USER}\""
 fi
-TEXTFILE_PATH="${TEXTFILE_DIRECTORY}/cron_${NAME}.prom"
+TEXTFILE_PATH="${TEXTFILE_DIRECTORY}/cron_${NAME}${IDENTIFIER}.prom"
 
 if [ -n "$DESCRIPTION" ] ; then
     LABELS="${LABELS},description=\"$DESCRIPTION\""

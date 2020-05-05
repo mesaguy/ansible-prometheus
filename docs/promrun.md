@@ -23,15 +23,18 @@
 
 Help menu (-h):
 
-    Usage: promrun.sh [ -Dhv ] [ -d DESCRIPTION ] [ -l label_name=LABEL_VALUE ]
-                          [ -n NAME ] [ -s USERNAME ] COMMAND
+    Usage: promrun.sh [ -Dhv ] [ -d DESCRIPTION ] [ -i IDENTIFIER ]
+                          [ -l label_name=LABEL_VALUE ] [ -n NAME ]
+                          [ -s USERNAME ] COMMAND
 
     NAME (-n) and COMMAND are required and must be specified after arguments
 
      Options:
-        -d                         Optional description
+        -d "LONG DESCRIPTION"      Optional description
         -D                         Enable dryrun mode
         -h                         Print usage
+        -i IDENTIFIER              Output identifier, needed when multiple jobs
+                                   have the same name, but have different labels
         -l label_name=label_value  Optionally add specified labels to node_exporter
                                    textfile data (May be specified multiple times)
         -n NAME                    Required metric name suffix, all metrics are
@@ -39,7 +42,7 @@ Help menu (-h):
         -s USERNAME                Optionally Setup textfile directory file
                                    permissions for specified username. Must be run
                                    as root. Run in dryrun mode to inspect changed
-        -t                         Specify a textfiles directory (Defaults
+        -t DIRECTORY               Specify a textfiles directory (Defaults
                                    to: /etc/prometheus/node_exporter_textfiles)
         -v                         Enable verbose mode
 
@@ -222,6 +225,16 @@ A script could call promrun numerous times as follows:
 
     promrun -n backup_database ./backup_database
     promrun -n prune_backups ./prune_backups
+
+If one script will be used in numerous ways, each instance can have an identifier set as follows:
+
+    promrun -i host1 -l backup=host1 -n backup ./backup host1
+    promrun -i host2 -l backup=host2 -n backup ./backup host2
+
+The following files will result, each with its own labels:
+
+    /opt/prometheus/etc/node_exporter_textfiles/promrun_backup.host1.prom
+    /opt/prometheus/etc/node_exporter_textfiles/promrun_backup.host2.prom
 
 ## Setup use by non-privileged user
 
