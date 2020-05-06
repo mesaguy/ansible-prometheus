@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.5] - 2020-05-06
+
+### Added
+
+- Add the ability to specify a unique identifier to the .prom files created by promcron and promrun
+
+### Changed
+
+- Upgrade Prometheus from v2.17.2 to v2.18.0
+- Upgrade promcron from v1.1 to v1.2
+- Upgrade promrun from v0.2 to v0.3
+- Update metadata to include latest master commits
+
 ## [0.12.4] - 2020-05-05
 
 ### Changed
