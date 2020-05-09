@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.6] - 2020-05-09
+
+### Changed
+
+- Upgrade Prometheus from v2.18.0 to v2.18.1
+- Upgrade aerospike_exporter_alicebob from v1.9.0 to v1.9.1
+- Update metadata to include latest master commits
+
 ## [0.12.5] - 2020-05-06
 
 ### Added
