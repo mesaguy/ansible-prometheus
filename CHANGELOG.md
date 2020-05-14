@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.7] - 2020-05-14
+
+### Changed
+
+- Upgrade aerospike_exporter_alicebob from v1.9.1 to v1.10.0
+- Upgrade collectd_exporter from v0.4.0 to v0.5.0
+- Upgrade graphite_exporter from v0.7.0 to v0.7.1
+- Upgrade jmx_exporter from v0.12.0 to v0.13.0
+- Upgrade redis_exporter_oliver006 from v1.6.0 to v1.6.1
+- Update metadata to include latest master commits
+
 ## [0.12.6] - 2020-05-09
 
 ### Changed

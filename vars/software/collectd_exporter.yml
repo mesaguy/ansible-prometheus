@@ -4,15 +4,15 @@ defaults:
   tgroup: collectd
 software:
   name: prometheus/collectd_exporter
-  release: v0.4.0
+  release: v0.5.0
   prerelease: 0.1.0
   url: https://github.com/prometheus/collectd_exporter
   source: https://github.com/prometheus/collectd_exporter.git
-  updated: '2020-05-09T01:31:25.727426'
+  updated: '2020-05-14T02:42:44.775339'
   master:
     commit:
-      sha: edc96f4b5d9860e6638dba52ddd0ea5108582cd2
-      timestamp: '2020-05-08T14:08:25'
+      sha: 8e37c190f875eca9b72db522f4acdbb72884225c
+      timestamp: '2020-05-11T13:19:38'
     files: []
   releases:
     - name: v0.4.0
@@ -350,3 +350,163 @@ software:
           size: 2007907
           sha256: sha256:1ba5bc50fc524a2764f907388eb6cb5ed3898c944a12a85e41f3cee8fbf4e087
           url: https://github.com/prometheus/collectd_exporter/releases/download/0.1.0/collectd_exporter-0.1.0.linux-arm.tar.gz
+    - name: v0.5.0
+      commit: null
+      timestamp: '2020-05-11T13:53:46'
+      prerelease: false
+      files:
+        - name: collectd_exporter-0.5.0.aix-ppc64.tar.gz
+          commit: null
+          size: 7027043
+          sha256: sha256:b9c9643fe84398e05abba1bf2b83b01a803d619ef5170ea0216b11c865d6d10b
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.aix-ppc64.tar.gz
+        - name: collectd_exporter-0.5.0.darwin-386.tar.gz
+          commit: null
+          size: 7145734
+          sha256: sha256:ac68a06d14acf2b3a44148c878c47cf6ccb8964cdc8e4bb917473f144ccd6d3e
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.darwin-386.tar.gz
+        - name: collectd_exporter-0.5.0.darwin-amd64.tar.gz
+          commit: null
+          size: 7222719
+          sha256: sha256:442f0896bdb68a06679b81f55cfb6f77d73f777601c203d67f3ac36406dbb410
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.darwin-amd64.tar.gz
+        - name: collectd_exporter-0.5.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 7224760
+          sha256: sha256:02340c15cb87bff058f2b2e4771f1365d5447d0b62254c9061bce034ca6368dd
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.dragonfly-amd64.tar.gz
+        - name: collectd_exporter-0.5.0.freebsd-386.tar.gz
+          commit: null
+          size: 7098305
+          sha256: sha256:eae5b508bea58639da3eac4f2aeeaa0f28edb7bf612492a0ff27d898c66aba9b
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.freebsd-386.tar.gz
+        - name: collectd_exporter-0.5.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 7252094
+          sha256: sha256:ba42f3a9cd2248b3c110c74b2768fbcaf6385c5c615eb1df97c487879b621916
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.freebsd-amd64.tar.gz
+        - name: collectd_exporter-0.5.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 6757710
+          sha256: sha256:41110f1ec3e97ab207b8724c1882ebc768e1ec87a5452872474204eaecdb3e03
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.freebsd-armv6.tar.gz
+        - name: collectd_exporter-0.5.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 6749949
+          sha256: sha256:cc2a51a4680d8ae47aef49d15bbac0d24d6932444f3d8ed9fabdf60e95fa16a7
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.freebsd-armv7.tar.gz
+        - name: collectd_exporter-0.5.0.linux-386.tar.gz
+          commit: null
+          size: 7116198
+          sha256: sha256:4b2ef647a2e64c9807b3204a066686070396ed79352ea83d0211c4f07b9329d1
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.linux-386.tar.gz
+        - name: collectd_exporter-0.5.0.linux-amd64.tar.gz
+          commit: null
+          size: 7253249
+          sha256: sha256:5b906b1ea49c119024350c10b4b8491857a20336a0ffd778a3f10d7536a6d123
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.linux-amd64.tar.gz
+        - name: collectd_exporter-0.5.0.linux-arm64.tar.gz
+          commit: null
+          size: 6779838
+          sha256: sha256:eef28573acb3410137640e80787784027858831bfd8502c5c43df4ca6dc34d45
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.linux-arm64.tar.gz
+        - name: collectd_exporter-0.5.0.linux-armv5.tar.gz
+          commit: null
+          size: 6769757
+          sha256: sha256:28b045fcfbea86bd9a7911b741c654a579abe6a473dba09f1fdf82d8456f63a0
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.linux-armv5.tar.gz
+        - name: collectd_exporter-0.5.0.linux-armv6.tar.gz
+          commit: null
+          size: 6765170
+          sha256: sha256:02ccc1265f4142e87b2d0edbd024fbb046e50536c4bb94117772c530e655937d
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.linux-armv6.tar.gz
+        - name: collectd_exporter-0.5.0.linux-armv7.tar.gz
+          commit: null
+          size: 6758895
+          sha256: sha256:53cea60cd356f76ac3b67a9f0246ffe4a0c43ea5cca2f0d88f944e32a6494cfd
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.linux-armv7.tar.gz
+        - name: collectd_exporter-0.5.0.linux-mips.tar.gz
+          commit: null
+          size: 6786282
+          sha256: sha256:17a120aaa0bbac99b26150729cfbe9f32d9fdd5539e2532bcb8d810cfc465d58
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.linux-mips.tar.gz
+        - name: collectd_exporter-0.5.0.linux-mips64.tar.gz
+          commit: null
+          size: 6907212
+          sha256: sha256:4688f9b3a11c9b912cbe216f3edb3a5a87842d8fa24556c13043daae1aa568d8
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.linux-mips64.tar.gz
+        - name: collectd_exporter-0.5.0.linux-mips64le.tar.gz
+          commit: null
+          size: 6702604
+          sha256: sha256:e38f4a55f7cd93e1fd5f4704feada98702a20c893a3163ff3e7785c14ed74cfd
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.linux-mips64le.tar.gz
+        - name: collectd_exporter-0.5.0.linux-mipsle.tar.gz
+          commit: null
+          size: 6646476
+          sha256: sha256:6c522f63b7b61925725ffd6a3179dff82c8f817cf1aa3965af147a2106cfa065
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.linux-mipsle.tar.gz
+        - name: collectd_exporter-0.5.0.linux-ppc64.tar.gz
+          commit: null
+          size: 6926109
+          sha256: sha256:f8707ec6034c7157a9b0d49e7ecc7dee06dac4e354fbff81381c448a050e50ab
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.linux-ppc64.tar.gz
+        - name: collectd_exporter-0.5.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 6745276
+          sha256: sha256:881eae494b4c01c21741e6c06f5036c84c31fd581b86a22f6fe93317f578db35
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.linux-ppc64le.tar.gz
+        - name: collectd_exporter-0.5.0.linux-s390x.tar.gz
+          commit: null
+          size: 7322175
+          sha256: sha256:81f211a8edfc36d0e51425aa578ed8d84f5e02b2f467fe95c49a5f560972e6d9
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.linux-s390x.tar.gz
+        - name: collectd_exporter-0.5.0.netbsd-386.tar.gz
+          commit: null
+          size: 7076319
+          sha256: sha256:557a15cfbc2d02a5f70ac6f678beaf7ec006e4744dce417f0bd4fd33573637bc
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.netbsd-386.tar.gz
+        - name: collectd_exporter-0.5.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 7224979
+          sha256: sha256:191b58a012d69d74e9f3fd46200c9a633a850a70ea0b82a73b5741967e9440b6
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.netbsd-amd64.tar.gz
+        - name: collectd_exporter-0.5.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 6733539
+          sha256: sha256:6423ae4dcddef07214600b8490873b7b0bc35abad69f55d1fbf719b145125912
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.netbsd-armv6.tar.gz
+        - name: collectd_exporter-0.5.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 6730083
+          sha256: sha256:85ece5a8a00b800ad0ad512a8d6d836c41cdc3ff3f1233bb2267832fd01f5c01
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.netbsd-armv7.tar.gz
+        - name: collectd_exporter-0.5.0.openbsd-386.tar.gz
+          commit: null
+          size: 7072742
+          sha256: sha256:561d9e01b2e853a4165e4dd9d92a85786e31fdb85a917c3507487ec89e3b1210
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.openbsd-386.tar.gz
+        - name: collectd_exporter-0.5.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 7225885
+          sha256: sha256:d83cd69fb60811c07fbf8631e159436aa6500440a772199002c504f1c1c29dc1
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.openbsd-amd64.tar.gz
+        - name: collectd_exporter-0.5.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 6728416
+          sha256: sha256:b91711dd7bc26109ceb02c09d94b5ff277fd50ae5396253dadca67e7cdcd22cd
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.openbsd-armv7.tar.gz
+        - name: collectd_exporter-0.5.0.windows-386.tar.gz
+          commit: null
+          size: 6996088
+          sha256: sha256:882e69d998ecfb3101e3644ca1e01e98d1c988c5b726ae9f18139bb5671e90da
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.windows-386.tar.gz
+        - name: collectd_exporter-0.5.0.windows-amd64.tar.gz
+          commit: null
+          size: 7162942
+          sha256: sha256:f5deac0ea0bc5bc8cf31bf88a7ff22c4f56c69c861be6c7dbc0f0512f8b9d1c1
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/collectd_exporter-0.5.0.windows-amd64.tar.gz
+        - name: sha256sums.txt
+          commit: null
+          size: 3290
+          sha256: sha256:f8565a89f04bd4ea26f66606d497d08d918e1c97eaa0b5edacbbafe15d9b8efd
+          url: https://github.com/prometheus/collectd_exporter/releases/download/v0.5.0/sha256sums.txt
