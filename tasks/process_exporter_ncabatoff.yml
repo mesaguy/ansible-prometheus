@@ -7,6 +7,8 @@
 - name: Starting process_exporter (ncabatoff) install
   set_fact:
     prometheus_exporter: true
+    # 0.7.0 and 0.7.1 don't include precompiled binaries
+    prometheus_software_allow_build_test: true
     prometheus_software_author: ncabatoff
     prometheus_software_binary_name: process-exporter
     prometheus_software_name: process_exporter_ncabatoff
