@@ -6,15 +6,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.9] - 2020-05-28
+
+### Changed
+
+- Upgrade node_exporter v0.18.1 to v1.0.0
+- Upgrade rabbitmq_exporter_kbudde from v1.0.0-RC7 to v1.0.0-RC7.1
+- Upgrade snmp_exporter v0.17.0 to v0.18.0
+- Update metadata to include latest master commits
+
 ## [0.12.8] - 2020-05-25
+
+### Changed
 
 - Upgrade aerospike_exporter_alicebob from v1.10.0 to v1.10.1
 - Upgrade couchdb_exporter_gesellix from v27.1.1 v27.2.0
 - Upgrade node_exporter (pre-release) from v1.0.0-rc.0 to v1.0.0-rc.1
 - Upgrade process_exporter_ncabatoff from v0.6.0 to v0.7.1
 - Update metadata to include latest master commits
-
-### Changed
 
 ## [0.12.7] - 2020-05-14
 
