@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Upgrade node_exporter v0.18.1 to v1.0.0
-- Upgrade rabbitmq_exporter_kbudde from v1.0.0-RC7 to v1.0.0-RC7.1
 - Upgrade snmp_exporter v0.17.0 to v0.18.0
 - Update metadata to include latest master commits
 

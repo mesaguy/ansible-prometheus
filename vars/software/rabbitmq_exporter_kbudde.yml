@@ -4,62 +4,17 @@ defaults:
   tgroup: rabbitmq
 software:
   name: kbudde/rabbitmq_exporter
-  release: v1.0.0-RC7.1
+  release: v1.0.0-RC7
   prerelease: v1.0.0-RC6.1
   url: https://github.com/kbudde/rabbitmq_exporter
   source: https://github.com/kbudde/rabbitmq_exporter.git
-  updated: '2020-05-27T23:20:20.475148'
+  updated: '2020-04-24T04:54:40.855479'
   master:
     commit:
-      sha: da2d5d87a23b64ad73643e118f64adbdfdea8941
-      timestamp: '2020-05-25T20:06:13'
+      sha: 185c9ddb6a2f6600183102dd23ad50972c1f9969
+      timestamp: '2020-04-21T05:14:02'
     files: []
   releases:
-    - name: v1.0.0-RC7.1
-      commit: null
-      timestamp: '2020-05-25T20:08:38'
-      prerelease: false
-      files: []
-    - name: v1.0.0-RC6.1
-      commit: null
-      timestamp: '2019-04-26T19:01:13'
-      prerelease: true
-      files:
-        - name: rabbitmq_exporter-1.0.0-RC6.1.darwin-386.tar.gz
-          commit: null
-          size: 5794593
-          sha256: sha256:0e6647f6d1e659e457564ec940139cf5586dc939bb3b0fca6d4c8e53c840f56d
-          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v1.0.0-RC6.1/rabbitmq_exporter-1.0.0-RC6.1.darwin-386.tar.gz
-        - name: rabbitmq_exporter-1.0.0-RC6.1.darwin-amd64.tar.gz
-          commit: null
-          size: 5914043
-          sha256: sha256:0b8a7d90b894a3ba150dd97d2ebce5b070a757f8b3b487892e692b2f69149540
-          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v1.0.0-RC6.1/rabbitmq_exporter-1.0.0-RC6.1.darwin-amd64.tar.gz
-        - name: rabbitmq_exporter-1.0.0-RC6.1.linux-386.tar.gz
-          commit: null
-          size: 5722711
-          sha256: sha256:253aba995ffe142cb608fce91a124c6f79bfb149541e93dab26dfb549c945e90
-          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v1.0.0-RC6.1/rabbitmq_exporter-1.0.0-RC6.1.linux-386.tar.gz
-        - name: rabbitmq_exporter-1.0.0-RC6.1.linux-amd64.tar.gz
-          commit: null
-          size: 5876323
-          sha256: sha256:d4a60a924bda5235159cad61cf60ec2da209e2ff07f6ddf31745b38b2d4246b2
-          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v1.0.0-RC6.1/rabbitmq_exporter-1.0.0-RC6.1.linux-amd64.tar.gz
-        - name: rabbitmq_exporter-1.0.0-RC6.1.linux-arm64.tar.gz
-          commit: null
-          size: 5491814
-          sha256: sha256:4e89092e4ad6a93670628f7ab5015f9f6e10d8ab5ecb3fc98de2db92332d1802
-          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v1.0.0-RC6.1/rabbitmq_exporter-1.0.0-RC6.1.linux-arm64.tar.gz
-        - name: rabbitmq_exporter-1.0.0-RC6.1.windows-386.tar.gz
-          commit: null
-          size: 5630764
-          sha256: sha256:49a94e12c68afd9353efac09ad06441301145defcf8d03fd29ecc438bd9c788e
-          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v1.0.0-RC6.1/rabbitmq_exporter-1.0.0-RC6.1.windows-386.tar.gz
-        - name: rabbitmq_exporter-1.0.0-RC6.1.windows-amd64.tar.gz
-          commit: null
-          size: 5811868
-          sha256: sha256:6c161413cf85a6159a58ef16003900a1646f9141d8a975cb49e0217f19702c9d
-          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v1.0.0-RC6.1/rabbitmq_exporter-1.0.0-RC6.1.windows-amd64.tar.gz
     - name: v1.0.0-RC7
       commit: null
       timestamp: '2020-04-21T05:15:57'
@@ -100,6 +55,46 @@ software:
           size: 6775732
           sha256: sha256:62cabc721506d755673c3f88812c6e5353f7eb212496eec94e2f7644e49939f4
           url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v1.0.0-RC7/rabbitmq_exporter-1.0.0-RC7.windows-amd64.tar.gz
+    - name: v1.0.0-RC6.1
+      commit: null
+      timestamp: '2019-04-26T19:01:13'
+      prerelease: true
+      files:
+        - name: rabbitmq_exporter-1.0.0-RC6.1.darwin-386.tar.gz
+          commit: null
+          size: 5794593
+          sha256: sha256:0e6647f6d1e659e457564ec940139cf5586dc939bb3b0fca6d4c8e53c840f56d
+          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v1.0.0-RC6.1/rabbitmq_exporter-1.0.0-RC6.1.darwin-386.tar.gz
+        - name: rabbitmq_exporter-1.0.0-RC6.1.darwin-amd64.tar.gz
+          commit: null
+          size: 5914043
+          sha256: sha256:0b8a7d90b894a3ba150dd97d2ebce5b070a757f8b3b487892e692b2f69149540
+          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v1.0.0-RC6.1/rabbitmq_exporter-1.0.0-RC6.1.darwin-amd64.tar.gz
+        - name: rabbitmq_exporter-1.0.0-RC6.1.linux-386.tar.gz
+          commit: null
+          size: 5722711
+          sha256: sha256:253aba995ffe142cb608fce91a124c6f79bfb149541e93dab26dfb549c945e90
+          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v1.0.0-RC6.1/rabbitmq_exporter-1.0.0-RC6.1.linux-386.tar.gz
+        - name: rabbitmq_exporter-1.0.0-RC6.1.linux-amd64.tar.gz
+          commit: null
+          size: 5876323
+          sha256: sha256:d4a60a924bda5235159cad61cf60ec2da209e2ff07f6ddf31745b38b2d4246b2
+          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v1.0.0-RC6.1/rabbitmq_exporter-1.0.0-RC6.1.linux-amd64.tar.gz
+        - name: rabbitmq_exporter-1.0.0-RC6.1.linux-arm64.tar.gz
+          commit: null
+          size: 5491814
+          sha256: sha256:4e89092e4ad6a93670628f7ab5015f9f6e10d8ab5ecb3fc98de2db92332d1802
+          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v1.0.0-RC6.1/rabbitmq_exporter-1.0.0-RC6.1.linux-arm64.tar.gz
+        - name: rabbitmq_exporter-1.0.0-RC6.1.windows-386.tar.gz
+          commit: null
+          size: 5630764
+          sha256: sha256:49a94e12c68afd9353efac09ad06441301145defcf8d03fd29ecc438bd9c788e
+          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v1.0.0-RC6.1/rabbitmq_exporter-1.0.0-RC6.1.windows-386.tar.gz
+        - name: rabbitmq_exporter-1.0.0-RC6.1.windows-amd64.tar.gz
+          commit: null
+          size: 5811868
+          sha256: sha256:6c161413cf85a6159a58ef16003900a1646f9141d8a975cb49e0217f19702c9d
+          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/v1.0.0-RC6.1/rabbitmq_exporter-1.0.0-RC6.1.windows-amd64.tar.gz
     - name: v1.0.0-RC6
       commit:
         sha: c96d056b165b8b220201b456bfbf553bd5ce0668
@@ -598,3 +593,38 @@ software:
           size: 2923629
           sha256: sha256:9e457b1b33a54f14189c2beb8da8b0d57325a6317a640d4063246a2814ad6ce3
           url: https://github.com/kbudde/rabbitmq_exporter/releases/download/0.13.1/rabbitmq_exporter-0.13.1.windows-amd64.tar.gz
+    - name: 0.13.0
+      commit: null
+      timestamp: '2016-07-17T19:48:53'
+      prerelease: false
+      files:
+        - name: rabbitmq_exporter-0.13.0.darwin-386.tar.gz
+          commit: null
+          size: 2726125
+          sha256: sha256:5c5ca6d6e8d1012ec9eb01f7c0a22a643a4468c6656d4a56711990ce1385057b
+          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/0.13.0/rabbitmq_exporter-0.13.0.darwin-386.tar.gz
+        - name: rabbitmq_exporter-0.13.0.darwin-amd64.tar.gz
+          commit: null
+          size: 2918154
+          sha256: sha256:b867843c36ed9cb27dac816de869bae6e34ea0feb214f920270fbfd63f79c5a6
+          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/0.13.0/rabbitmq_exporter-0.13.0.darwin-amd64.tar.gz
+        - name: rabbitmq_exporter-0.13.0.linux-386.tar.gz
+          commit: null
+          size: 2739954
+          sha256: sha256:8ff4f5446f69a15a8442d83c34f5fbd37cc1a1b63b8851a6441765229b110a99
+          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/0.13.0/rabbitmq_exporter-0.13.0.linux-386.tar.gz
+        - name: rabbitmq_exporter-0.13.0.linux-amd64.tar.gz
+          commit: null
+          size: 2938138
+          sha256: sha256:5f7e9f0302fe573dcbd5fc2f11d90fb8fcf3f6991b0ab79864c665b68d9c6938
+          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/0.13.0/rabbitmq_exporter-0.13.0.linux-amd64.tar.gz
+        - name: rabbitmq_exporter-0.13.0.windows-386.tar.gz
+          commit: null
+          size: 2720118
+          sha256: sha256:5ec88956ee3d6aec66fd512d71f3e449c1c0d79886da8b0d9a812e56a1748603
+          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/0.13.0/rabbitmq_exporter-0.13.0.windows-386.tar.gz
+        - name: rabbitmq_exporter-0.13.0.windows-amd64.tar.gz
+          commit: null
+          size: 2923631
+          sha256: sha256:d9c99b53dc0da024feebbca60b583b3fadda112830da190c88e469581335068e
+          url: https://github.com/kbudde/rabbitmq_exporter/releases/download/0.13.0/rabbitmq_exporter-0.13.0.windows-amd64.tar.gz
