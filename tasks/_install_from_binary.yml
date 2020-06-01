@@ -181,4 +181,5 @@
   file:
     path: '{{ prometheus_software_archive_file }}'
     state: absent
-  when: prometheus_software_installation is succeeded
+  when:
+    - not prometheus_software_installed.stat.exists and prometheus_software_installation is succeeded
