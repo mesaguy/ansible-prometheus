@@ -5,14 +5,14 @@ defaults:
 software:
   name: prometheus/alertmanager
   release: v0.20.0
-  prerelease: v0.20.0-rc.0
+  prerelease: v0.21.0-rc.0
   url: https://github.com/prometheus/alertmanager
   source: https://github.com/prometheus/alertmanager.git
-  updated: '2020-05-27T23:20:03.687705'
+  updated: '2020-06-06T01:57:35.084801'
   master:
     commit:
-      sha: 08956d1be38766b9125c38835d720f7abc01cde4
-      timestamp: '2020-05-27T15:15:36'
+      sha: 12da9d6570ce0f487f98eed1be32e9c7e53da6b1
+      timestamp: '2020-06-04T13:24:34'
     files: []
   releases:
     - name: v0.20.0
@@ -155,6 +155,146 @@ software:
           size: 2750
           sha256: sha256:ede041938951fb5ee46cc0bacbfb7824875f731899f9763decd91f5c62fb3ac7
           url: https://github.com/prometheus/alertmanager/releases/download/v0.20.0/sha256sums.txt
+    - name: v0.21.0-rc.0
+      commit: null
+      timestamp: '2020-06-05T11:51:17'
+      prerelease: true
+      files:
+        - name: alertmanager-0.21.0-rc.0.darwin-386.tar.gz
+          commit: null
+          size: 25152332
+          sha256: sha256:e0e9c9bcff0928acd9244966100b6804dcbff5021e498ba15807f6e9201cd9d5
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.darwin-386.tar.gz
+        - name: alertmanager-0.21.0-rc.0.darwin-amd64.tar.gz
+          commit: null
+          size: 25449549
+          sha256: sha256:70094bf3f1c30b499e43dcebc74fc7b880956fc048355941ccba646bc8d6b20a
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.darwin-amd64.tar.gz
+        - name: alertmanager-0.21.0-rc.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 25632041
+          sha256: sha256:5e224b890691c2841cc38a5e5dd4c82f4483aa82dc47adcfeb691260fde4cda9
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.dragonfly-amd64.tar.gz
+        - name: alertmanager-0.21.0-rc.0.freebsd-386.tar.gz
+          commit: null
+          size: 25122970
+          sha256: sha256:e9bad300ab8ae9eb9fcda358e780119f142d88e776765f5211fe100e97c1f508
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.freebsd-386.tar.gz
+        - name: alertmanager-0.21.0-rc.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 25678619
+          sha256: sha256:0666ad8b5986e48a90d290ec521bcce3dbfcf74c0cd0e594cafacbe92880bf46
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.freebsd-amd64.tar.gz
+        - name: alertmanager-0.21.0-rc.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 23981237
+          sha256: sha256:0ec72f1af5010cebc1b091c2549db7ec3e7de16b7fb3751ca42fa73a1831b5b0
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.freebsd-armv6.tar.gz
+        - name: alertmanager-0.21.0-rc.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 23974446
+          sha256: sha256:27c1d2c882fb14d357425c9ab559c7de3416c3d718b9e8510a66acf282960e68
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.freebsd-armv7.tar.gz
+        - name: alertmanager-0.21.0-rc.0.linux-386.tar.gz
+          commit: null
+          size: 25183321
+          sha256: sha256:cbc44fd2928efaf9c5b26900ddb70cbf4d3bd82b07dfd1ec124f953e703aa509
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.linux-386.tar.gz
+        - name: alertmanager-0.21.0-rc.0.linux-amd64.tar.gz
+          commit: null
+          size: 25720659
+          sha256: sha256:af633e0dc299a47540bc021211464cdcaa4bef970df71d9e37dc3e94bb831872
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.linux-amd64.tar.gz
+        - name: alertmanager-0.21.0-rc.0.linux-arm64.tar.gz
+          commit: null
+          size: 24102021
+          sha256: sha256:89e8b234472fd25ccc29a8a0d137a69742440ec62a8781c91b145c4677c2cd5a
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.linux-arm64.tar.gz
+        - name: alertmanager-0.21.0-rc.0.linux-armv5.tar.gz
+          commit: null
+          size: 24026479
+          sha256: sha256:b1c2ae1eb8bdb089c8e16349246712fbe98d815b1a2138ef459e69479670ce44
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.linux-armv5.tar.gz
+        - name: alertmanager-0.21.0-rc.0.linux-armv6.tar.gz
+          commit: null
+          size: 24025370
+          sha256: sha256:86bf1dd439cd793592148a9ea9ab2efd715891cfeea978eb17d02f8096aa3ea8
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.linux-armv6.tar.gz
+        - name: alertmanager-0.21.0-rc.0.linux-armv7.tar.gz
+          commit: null
+          size: 24010914
+          sha256: sha256:fb0a4fc5baae75f44060371224c294fc18c33aba9d607bc78c43b24b0aab026a
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.linux-armv7.tar.gz
+        - name: alertmanager-0.21.0-rc.0.linux-mips64.tar.gz
+          commit: null
+          size: 24384189
+          sha256: sha256:a108e0db2a7d51fb9637c5b053264c179600619e1df6bea304393e4a2849632f
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.linux-mips64.tar.gz
+        - name: alertmanager-0.21.0-rc.0.linux-mips64le.tar.gz
+          commit: null
+          size: 23707379
+          sha256: sha256:7c284e1bd215f3add61ce16732233b0b54d3955aef353adb27f6722eac34b27e
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.linux-mips64le.tar.gz
+        - name: alertmanager-0.21.0-rc.0.linux-ppc64.tar.gz
+          commit: null
+          size: 24605042
+          sha256: sha256:e9fa2d977848bfd6a08b2eaedf83262ef863ffb828102f475152bcad053943ff
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.linux-ppc64.tar.gz
+        - name: alertmanager-0.21.0-rc.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 23945046
+          sha256: sha256:64ba6ba965206fbf5808d59d87e238cf8f3781de4a6e498e72673fb88fee8ed6
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.linux-ppc64le.tar.gz
+        - name: alertmanager-0.21.0-rc.0.linux-s390x.tar.gz
+          commit: null
+          size: 25844484
+          sha256: sha256:e6b346ee5a1ec7acf437cd4083b2a23d8e27de1e2da7947fa098b5c57ca8bc8e
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.linux-s390x.tar.gz
+        - name: alertmanager-0.21.0-rc.0.netbsd-386.tar.gz
+          commit: null
+          size: 25068965
+          sha256: sha256:5964c6fd13544d32999fc2480ec0cbdf34671256ee6f68b4f4e0498cbda3bfc6
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.netbsd-386.tar.gz
+        - name: alertmanager-0.21.0-rc.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 25631409
+          sha256: sha256:02ebec0962fd947256a9fb8580fac494912d9a627796f272774d376150feea3b
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.netbsd-amd64.tar.gz
+        - name: alertmanager-0.21.0-rc.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 23937544
+          sha256: sha256:236531dd72f25db244c9fd22987f6f9637bdebff940fe901e256aaa2997bc857
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.netbsd-armv6.tar.gz
+        - name: alertmanager-0.21.0-rc.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 23928364
+          sha256: sha256:0ef785449f77a58327c8ed8753d2c83db07ab36eb3fa2ed9f9e64fcac906d217
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.netbsd-armv7.tar.gz
+        - name: alertmanager-0.21.0-rc.0.openbsd-386.tar.gz
+          commit: null
+          size: 25055989
+          sha256: sha256:64ed4b53da73b1c00e543cd804b0e688d5485f1c80e5ffd0ccaa6afce567fd81
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.openbsd-386.tar.gz
+        - name: alertmanager-0.21.0-rc.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 25609461
+          sha256: sha256:366c9a6f6db9d8ec2c2b10f7e0bbe7be9253416ef4cebf15071d6943a634446c
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.openbsd-amd64.tar.gz
+        - name: alertmanager-0.21.0-rc.0.windows-386.tar.gz
+          commit: null
+          size: 24791624
+          sha256: sha256:54efd5ea0652fdbe68d9a6326cd37aa60910b3b0926d081cca600637367af877
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.windows-386.tar.gz
+        - name: alertmanager-0.21.0-rc.0.windows-amd64.tar.gz
+          commit: null
+          size: 25389802
+          sha256: sha256:728ae31dfbc6278a5c5ec64fd45006978148a94bd5d3a72718604eaebb891da9
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/alertmanager-0.21.0-rc.0.windows-amd64.tar.gz
+        - name: sha256sums.txt
+          commit: null
+          size: 2880
+          sha256: sha256:e4ce3d2a7f1f32eb6bfbe5de04364d0a7f49ab633f9ada7a2dddbbf48f0cfe65
+          url: https://github.com/prometheus/alertmanager/releases/download/v0.21.0-rc.0/sha256sums.txt
     - name: v0.20.0-rc.0
       commit: null
       timestamp: '2019-11-27T16:05:07'
@@ -2615,138 +2755,3 @@ software:
           size: 2770
           sha256: sha256:2bdc6783dc74b345e694df57bf7743b610515ab8433bee6797e00ef73da1e883
           url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.1/sha256sums.txt
-    - name: v0.15.0-rc.0
-      commit: null
-      timestamp: '2018-02-28T12:38:11'
-      prerelease: true
-      files:
-        - name: alertmanager-0.15.0-rc.0.darwin-386.tar.gz
-          commit: null
-          size: 10599078
-          sha256: sha256:a8da340ddda80fc08fe76f057c16ad33774a8f2c99f68a7494a354065ab07019
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.darwin-386.tar.gz
-        - name: alertmanager-0.15.0-rc.0.darwin-amd64.tar.gz
-          commit: null
-          size: 10970475
-          sha256: sha256:a77ede511cfa57f9c84d37d34f52f1896c3c71fcec2e94a3f5385def822ccc45
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.darwin-amd64.tar.gz
-        - name: alertmanager-0.15.0-rc.0.dragonfly-amd64.tar.gz
-          commit: null
-          size: 10965340
-          sha256: sha256:4ad68565ee3c8fa88a3c428a7e93b5dcfac42a5a39e0808ef2003a8174dfdc43
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.dragonfly-amd64.tar.gz
-        - name: alertmanager-0.15.0-rc.0.freebsd-386.tar.gz
-          commit: null
-          size: 10597939
-          sha256: sha256:1e9761f1b342642d3af95cab0a5908052b3801604e38c375bad1e61a9f843c7a
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.freebsd-386.tar.gz
-        - name: alertmanager-0.15.0-rc.0.freebsd-amd64.tar.gz
-          commit: null
-          size: 10976037
-          sha256: sha256:cf71e6e3fdc8cde08a11e91ae4e73e47fff2338ece4a7130097218c80aa422e4
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.freebsd-amd64.tar.gz
-        - name: alertmanager-0.15.0-rc.0.freebsd-armv6.tar.gz
-          commit: null
-          size: 10369943
-          sha256: sha256:851c6c2dbc30648261632f37c4e31d5e26c56a8a300a01015d22238db41f5a2a
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.freebsd-armv6.tar.gz
-        - name: alertmanager-0.15.0-rc.0.freebsd-armv7.tar.gz
-          commit: null
-          size: 10360944
-          sha256: sha256:047089d43141d7db6d3dfb7d6a14950623e9085eba1c0e102f9ac5fde8c78f28
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.freebsd-armv7.tar.gz
-        - name: alertmanager-0.15.0-rc.0.linux-386.tar.gz
-          commit: null
-          size: 10602180
-          sha256: sha256:cb90456fda6d69c069d39404bcccc47be0d7ee4a7423ec765be420b7b8ebae83
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.linux-386.tar.gz
-        - name: alertmanager-0.15.0-rc.0.linux-amd64.tar.gz
-          commit: null
-          size: 10968437
-          sha256: sha256:668525f7a32b95bced7028602586305727b7a8139495356d1bac4f8d51de9775
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.linux-amd64.tar.gz
-        - name: alertmanager-0.15.0-rc.0.linux-arm64.tar.gz
-          commit: null
-          size: 10308630
-          sha256: sha256:a34d8d65f8d505434c5601b97579dfa0059ba73445613be69b15f0058e2028bd
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.linux-arm64.tar.gz
-        - name: alertmanager-0.15.0-rc.0.linux-armv5.tar.gz
-          commit: null
-          size: 10393191
-          sha256: sha256:31b751e34eadc05d41d960e2881e6ae49798bbe4c91bc228d9913e42d1c52860
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.linux-armv5.tar.gz
-        - name: alertmanager-0.15.0-rc.0.linux-armv6.tar.gz
-          commit: null
-          size: 10344955
-          sha256: sha256:4655cd51e3fb4065a85871ebb307a62d608efc991228114a104fb8e1f79c0298
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.linux-armv6.tar.gz
-        - name: alertmanager-0.15.0-rc.0.linux-armv7.tar.gz
-          commit: null
-          size: 10336209
-          sha256: sha256:927d1d77ed4d4d1385a29cfd0d439cc42622832f3dbd37613c1d0ba9b850115e
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.linux-armv7.tar.gz
-        - name: alertmanager-0.15.0-rc.0.linux-mips64.tar.gz
-          commit: null
-          size: 10333821
-          sha256: sha256:947b794f70181263dcf51fa119970305177e74288409a0f13af717e9cc4260e1
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.linux-mips64.tar.gz
-        - name: alertmanager-0.15.0-rc.0.linux-mips64le.tar.gz
-          commit: null
-          size: 10028378
-          sha256: sha256:2ae990f5e884e826b1bdb28f96e5c5a0b9e7f87a8a33c75ae4cdba6d79b78106
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.linux-mips64le.tar.gz
-        - name: alertmanager-0.15.0-rc.0.linux-ppc64.tar.gz
-          commit: null
-          size: 10534807
-          sha256: sha256:293e1fd8bc62ba225ac7d865651614ad2f21e7f864290027ac195ff6638c64a0
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.linux-ppc64.tar.gz
-        - name: alertmanager-0.15.0-rc.0.linux-ppc64le.tar.gz
-          commit: null
-          size: 10282460
-          sha256: sha256:c57af216009ab57a9a0b2e5de1f9f84982e69a647c76fa0c049346b9fc7aaa5f
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.linux-ppc64le.tar.gz
-        - name: alertmanager-0.15.0-rc.0.netbsd-386.tar.gz
-          commit: null
-          size: 10587007
-          sha256: sha256:d1c5e668de2ae49412748d27e333f1cc51fb21d163a46ef5c34e366f2e89656f
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.netbsd-386.tar.gz
-        - name: alertmanager-0.15.0-rc.0.netbsd-amd64.tar.gz
-          commit: null
-          size: 10964045
-          sha256: sha256:48ba2fe92632e0ae76ce7158729cd60d28e78e8a7df8a47bbcd658cf76fb466a
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.netbsd-amd64.tar.gz
-        - name: alertmanager-0.15.0-rc.0.netbsd-armv6.tar.gz
-          commit: null
-          size: 10360785
-          sha256: sha256:1d0c3bc563eed324ff53d85810867d59b880048a6eddea9e76d0d6dca3ae5e9a
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.netbsd-armv6.tar.gz
-        - name: alertmanager-0.15.0-rc.0.netbsd-armv7.tar.gz
-          commit: null
-          size: 10352919
-          sha256: sha256:762303dcd521cc8ec44e61f70215a1d4b21ce120321dea1396cfb84a6b7d0c5b
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.netbsd-armv7.tar.gz
-        - name: alertmanager-0.15.0-rc.0.openbsd-386.tar.gz
-          commit: null
-          size: 10594493
-          sha256: sha256:907e5a895700c9c37fb2ab5eb1b34798d6cd376cb440d3e6bfa1319497aed606
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.openbsd-386.tar.gz
-        - name: alertmanager-0.15.0-rc.0.openbsd-amd64.tar.gz
-          commit: null
-          size: 10972811
-          sha256: sha256:8982e166a487cd03d8cf15d09e32bfd6a2823e8ca2f8d79737f25afcbf051d16
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.openbsd-amd64.tar.gz
-        - name: alertmanager-0.15.0-rc.0.windows-386.tar.gz
-          commit: null
-          size: 10521237
-          sha256: sha256:84c64019514a1c404bfda67191aca83a1e38fbf0c2711b62496adf5dc5be1391
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.windows-386.tar.gz
-        - name: alertmanager-0.15.0-rc.0.windows-amd64.tar.gz
-          commit: null
-          size: 10913284
-          sha256: sha256:9aadbda64ef167a2fc9c40795f8240c73de9c9be9e267c3a779140b8f8341f31
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.windows-amd64.tar.gz
-        - name: sha256sums.txt
-          commit: null
-          size: 2770
-          sha256: sha256:8433888d093574bd8d4e3fe6cbb2c94b97ffa73b4287a5578007479ab99fa573
-          url: https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/sha256sums.txt

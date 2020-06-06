@@ -4,17 +4,332 @@ defaults:
   tgroup: statsd
 software:
   name: prometheus/statsd_exporter
-  release: v0.15.0
+  release: v0.16.0
   prerelease: v0.9.0-rc3
   url: https://github.com/prometheus/statsd_exporter
   source: https://github.com/prometheus/statsd_exporter.git
-  updated: '2020-05-27T23:20:51.314555'
+  updated: '2020-06-06T02:03:40.522767'
   master:
     commit:
-      sha: 588fde9fc1a5a8c46cc08194129e685a236acc28
-      timestamp: '2020-05-26T06:41:35'
+      sha: 2fc2dcdff6795a1e147b29cd79a5be47151c8962
+      timestamp: '2020-05-29T11:49:41'
     files: []
   releases:
+    - name: v0.16.0
+      commit: null
+      timestamp: '2020-05-29T07:31:56'
+      prerelease: false
+      files:
+        - name: sha256sums.txt
+          commit: null
+          size: 3260
+          sha256: sha256:fef9db2f5eec82254ab53fa03564ef4d2f2e73ab41aa94fd1004923632b31e4c
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/sha256sums.txt
+        - name: statsd_exporter-0.16.0.aix-ppc64.tar.gz
+          commit: null
+          size: 7000593
+          sha256: sha256:da80ac65c284aa879f0267f60f681ca127d13abf7e59201e006b06fc431ef5d6
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.aix-ppc64.tar.gz
+        - name: statsd_exporter-0.16.0.darwin-386.tar.gz
+          commit: null
+          size: 7041105
+          sha256: sha256:32a1f6476bebb78bd8dca251749d54110d2d99a10254d053706394b28eb86a27
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.darwin-386.tar.gz
+        - name: statsd_exporter-0.16.0.darwin-amd64.tar.gz
+          commit: null
+          size: 7165042
+          sha256: sha256:4595b98c7d5cda55df2d7f1dbc45a628f5f77947dfce64791189882fadbe48ac
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.darwin-amd64.tar.gz
+        - name: statsd_exporter-0.16.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 7168275
+          sha256: sha256:0a7db2b168f8c8c96fb2a51a1e9d6162d995a5e1ee01ff3620f8edf64bad7779
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.dragonfly-amd64.tar.gz
+        - name: statsd_exporter-0.16.0.freebsd-386.tar.gz
+          commit: null
+          size: 6997378
+          sha256: sha256:93d4b0235ff59f5686d591086afe7550628133bb8b4fe815fa0dbf8b189e1edb
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.freebsd-386.tar.gz
+        - name: statsd_exporter-0.16.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 7191856
+          sha256: sha256:8b42c2e2ea6e741cbba07c46a8dc44c3017e3017b16d31881590ba0adab35719
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.freebsd-amd64.tar.gz
+        - name: statsd_exporter-0.16.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 6695736
+          sha256: sha256:8ef3ae6727a1e6be7b8a48528823a7c807eb000160f8d4361a8a11bbbb551630
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.freebsd-armv6.tar.gz
+        - name: statsd_exporter-0.16.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 6691830
+          sha256: sha256:3cd0ce137d5e9f919b3bd524eded76785ed2f6f7da1101d78500ffe6116aed11
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.freebsd-armv7.tar.gz
+        - name: statsd_exporter-0.16.0.linux-386.tar.gz
+          commit: null
+          size: 7009659
+          sha256: sha256:5dd811b507073af33f860c52e2a536ea8286685bb4e3d4807f766454248c0823
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.linux-386.tar.gz
+        - name: statsd_exporter-0.16.0.linux-amd64.tar.gz
+          commit: null
+          size: 7195198
+          sha256: sha256:02ba9020d75c56146cdd6d62fb2891e9660c4108fa827cc04314f748ab6756bc
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.linux-amd64.tar.gz
+        - name: statsd_exporter-0.16.0.linux-arm64.tar.gz
+          commit: null
+          size: 6720492
+          sha256: sha256:036b7631e0808a02f2eb6a147e9c542ecdc7a446d2c61673b54ebab21cac51dc
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.linux-arm64.tar.gz
+        - name: statsd_exporter-0.16.0.linux-armv5.tar.gz
+          commit: null
+          size: 6709700
+          sha256: sha256:f7d8d3863cbe921426396153e610f1a2534723dc4a0ab113faadf6c859a0b1c0
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.linux-armv5.tar.gz
+        - name: statsd_exporter-0.16.0.linux-armv6.tar.gz
+          commit: null
+          size: 6700104
+          sha256: sha256:909fd3c5e90e1bef651e5273fb25671a21c7093d770f74c0eea93492fddac494
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.linux-armv6.tar.gz
+        - name: statsd_exporter-0.16.0.linux-armv7.tar.gz
+          commit: null
+          size: 6696824
+          sha256: sha256:8678b10f7c146f08bd7eae8fe55ef5a288d67787376238715d1292bc0c47b758
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.linux-armv7.tar.gz
+        - name: statsd_exporter-0.16.0.linux-mips.tar.gz
+          commit: null
+          size: 6733923
+          sha256: sha256:0c3b0cd8064d03aa906b90f8c261cba9898ceddd4ff852ed116b445785d4dd01
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.linux-mips.tar.gz
+        - name: statsd_exporter-0.16.0.linux-mips64.tar.gz
+          commit: null
+          size: 6822679
+          sha256: sha256:1fe437993d0d4ff6602c9c09fa1ca10e6b1d67ac2bc3aedb8ea9f39514c9ca51
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.linux-mips64.tar.gz
+        - name: statsd_exporter-0.16.0.linux-mips64le.tar.gz
+          commit: null
+          size: 6640031
+          sha256: sha256:593b3223cc8d02aff8bac5df58720f9f2a192d81ba59693bfb9339c140974743
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.linux-mips64le.tar.gz
+        - name: statsd_exporter-0.16.0.linux-mipsle.tar.gz
+          commit: null
+          size: 6599988
+          sha256: sha256:80999e47e481707bd813b965bf691ce5e57aa66dab5e4f0c99d0a844cb824a5c
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.linux-mipsle.tar.gz
+        - name: statsd_exporter-0.16.0.linux-ppc64.tar.gz
+          commit: null
+          size: 6879936
+          sha256: sha256:6ce64a70010635c88471f9a04633926acf39747fc385a5980e1b5451f42007c3
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.linux-ppc64.tar.gz
+        - name: statsd_exporter-0.16.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 6699071
+          sha256: sha256:1ec26a0aa19b254ed2ce4657a08e9ece21a65b4dc25327fd9f267873e3d6d3ee
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.linux-ppc64le.tar.gz
+        - name: statsd_exporter-0.16.0.linux-s390x.tar.gz
+          commit: null
+          size: 7256652
+          sha256: sha256:1cffddd90c6bc712365b153be0a6d8ef658ce4ee7f136305aac568d55844bc50
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.linux-s390x.tar.gz
+        - name: statsd_exporter-0.16.0.netbsd-386.tar.gz
+          commit: null
+          size: 6972070
+          sha256: sha256:a3156c656df9e0e5af14eefc13d0d35bc0b4abc4d6d532b2fe8254d28652f486
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.netbsd-386.tar.gz
+        - name: statsd_exporter-0.16.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 7169094
+          sha256: sha256:ad383e3aa750e77198bf3ca00eb370f3edcc5d3443cc85143db37bec0a075f82
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.netbsd-amd64.tar.gz
+        - name: statsd_exporter-0.16.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 6674009
+          sha256: sha256:6e17c0230f483a819486187668f5e2acb11ae6936f45eb9d084751fdb123cf1a
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.netbsd-armv6.tar.gz
+        - name: statsd_exporter-0.16.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 6671180
+          sha256: sha256:4612830f4e32cf6788af238b9351521cc972bb8c5149f7607fcecc6d42b6db42
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.netbsd-armv7.tar.gz
+        - name: statsd_exporter-0.16.0.openbsd-386.tar.gz
+          commit: null
+          size: 6968057
+          sha256: sha256:71d64e31b948570bc02904846bb4549a9bd974ac52465bfb78472d4dc3b3bba9
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.openbsd-386.tar.gz
+        - name: statsd_exporter-0.16.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 7166503
+          sha256: sha256:fba0f432159357e98bf4578786c2a81e6b1043510050d2b37455fea8eb0c01f6
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.openbsd-amd64.tar.gz
+        - name: statsd_exporter-0.16.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 6666798
+          sha256: sha256:0c765d46e227f10dd83911dda9962d767ee234450f2d3816405bd25904c7eeb0
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.openbsd-armv7.tar.gz
+        - name: statsd_exporter-0.16.0.windows-386.tar.gz
+          commit: null
+          size: 6893131
+          sha256: sha256:78b07a7be2d7b1815c805ef490f38f2d2684d6176d727cd4afbb9cd21e59f080
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.windows-386.tar.gz
+        - name: statsd_exporter-0.16.0.windows-amd64.tar.gz
+          commit: null
+          size: 7103835
+          sha256: sha256:3bc83c9c09bdc914e9521a0b5e9e2993d23188f04b6c8f4e567affb1bb02e26d
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.windows-amd64.tar.gz
+    - name: v0.9.0-rc3
+      commit: null
+      timestamp: '2019-01-10T09:26:24'
+      prerelease: true
+      files:
+        - name: sha256sums.txt
+          commit: null
+          size: 3241
+          sha256: sha256:88456b1e65f071997bb9dde9bad9dfba6cb630c66e8a0e232c04b64039e7af0a
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/sha256sums.txt
+        - name: statsd_exporter-0.9.0-rc3.darwin-386.tar.gz
+          commit: null
+          size: 5800906
+          sha256: sha256:9b918a8728fe51ae2fde3ba2302490ac5fdc24c81711ccac765976457d9f9f5c
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.darwin-386.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.darwin-amd64.tar.gz
+          commit: null
+          size: 5945682
+          sha256: sha256:3e58c019b83b42adb9275096e2f2a7dacd24ca9e22066a2fd5a6c7cd545e38d7
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.darwin-amd64.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.dragonfly-amd64.tar.gz
+          commit: null
+          size: 5915546
+          sha256: sha256:f1683fb4391d6b5445d5640d7bbd47253822ef9b544bb1811260fc9017978c19
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.dragonfly-amd64.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.freebsd-386.tar.gz
+          commit: null
+          size: 5741029
+          sha256: sha256:0278f7518aef783972f362fa89e2783f780e4f363a628020e5e7642e61650d78
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.freebsd-386.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.freebsd-amd64.tar.gz
+          commit: null
+          size: 5932039
+          sha256: sha256:438e2afa84690b7b40e6c5501ee5e83288110b35c3f8495c415cb37baad3ff24
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.freebsd-amd64.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.freebsd-armv6.tar.gz
+          commit: null
+          size: 5479282
+          sha256: sha256:1161f260f6184534eefb3bf1b16f3b8c9d7a56ffaba31fe3102ae64f61dcb69b
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.freebsd-armv6.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.freebsd-armv7.tar.gz
+          commit: null
+          size: 5474255
+          sha256: sha256:bbe60223be8f3dc1d64e3f159a8c57fa8ebe3569cefa8e4d4cee8da3978aa27c
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.freebsd-armv7.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.linux-386.tar.gz
+          commit: null
+          size: 5744198
+          sha256: sha256:bd842e92fa8374c586384a8ac24054947130ef24f4c97579095f85059d193606
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-386.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.linux-amd64.tar.gz
+          commit: null
+          size: 5927867
+          sha256: sha256:9e5c37e8f7c245489e14a2d1fd3b5a9e09595598d70e35abfc1092ad0f5d3631
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-amd64.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.linux-arm64.tar.gz
+          commit: null
+          size: 5484578
+          sha256: sha256:b5734b40200b4f57daf989b8e2522d44156b304074a80d8b63e300eb7f514034
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-arm64.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.linux-armv5.tar.gz
+          commit: null
+          size: 5485512
+          sha256: sha256:ce8d6b57e7e1cd8c816c660c98c602ab6f4f4c4edec5c01b7c2b59f64b20656d
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-armv5.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.linux-armv6.tar.gz
+          commit: null
+          size: 5476752
+          sha256: sha256:105eec79d0c6e9fdfcc494bbec7f6cb50a669620c9f716e1dbc87ce2c62440c7
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-armv6.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.linux-armv7.tar.gz
+          commit: null
+          size: 5472715
+          sha256: sha256:42348d65ebf12acc2ad54a450aca5e149d0fd01e933887e301e7d134a7083769
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-armv7.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.linux-mips.tar.gz
+          commit: null
+          size: 5470582
+          sha256: sha256:c1df917b58aab6920189bedb9169dcd3264bc2ae9eace324edc3f8c67933e8fe
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-mips.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.linux-mips64.tar.gz
+          commit: null
+          size: 5580273
+          sha256: sha256:6b05d963e3c383d452157a8d8b0a2b988936baf78434f101c0c6a58312ff36ea
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-mips64.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.linux-mips64le.tar.gz
+          commit: null
+          size: 5415242
+          sha256: sha256:b750b1f6a58fe9bdce7c8a24c2a4af202bf8684bf02d52be8ab515591137f7f2
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-mips64le.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.linux-mipsle.tar.gz
+          commit: null
+          size: 5344895
+          sha256: sha256:6c253ab47de4671059aef9b978cb7f1fcfdb2d2949f2b48dd7040d9054a0b9f7
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-mipsle.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.linux-ppc64.tar.gz
+          commit: null
+          size: 5641126
+          sha256: sha256:1cceeb13f39bbe6c01c34c1e6e1a4290e06134b664edba86e3de2bb317b18ebf
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-ppc64.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.linux-ppc64le.tar.gz
+          commit: null
+          size: 5496938
+          sha256: sha256:6cc02e481095d2767f0f60896ebac43ebd9441df42e937fd01fc4a17a73701d1
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-ppc64le.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.linux-s390x.tar.gz
+          commit: null
+          size: 6001176
+          sha256: sha256:48e1d0fa057255010daf538bd2379f3d537490096b53edb7116b93eea6a8fc79
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-s390x.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.netbsd-386.tar.gz
+          commit: null
+          size: 5727243
+          sha256: sha256:1183b1b2c9f5757df20d7efd53b79c1d1631d41fc5d6ef96ebf6b92be543082f
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.netbsd-386.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.netbsd-amd64.tar.gz
+          commit: null
+          size: 5915901
+          sha256: sha256:a386bcef81f60b2a83d5da2170c18b995cd731097b10a1f6e87ecdf47054b442
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.netbsd-amd64.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.netbsd-armv6.tar.gz
+          commit: null
+          size: 5466408
+          sha256: sha256:a66fa28b7ed69ad96371f53834f61d6ecdd1af4eb43567b7398507e5c90fbf2b
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.netbsd-armv6.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.netbsd-armv7.tar.gz
+          commit: null
+          size: 5463474
+          sha256: sha256:1a3346d6f071c8b1ecc0c84a75865c13f38987b0033cdbcc45c9ac95ebba9efd
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.netbsd-armv7.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.openbsd-386.tar.gz
+          commit: null
+          size: 5728133
+          sha256: sha256:50a2eaf7fe5f69df012afb51dfed3637aa9542b73613eef6ef4dd59e67442837
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.openbsd-386.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.openbsd-amd64.tar.gz
+          commit: null
+          size: 5920489
+          sha256: sha256:89f592eff4f6171dccdbc9299d0928dcfd69f8ae88980e29c073b048be6a6b25
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.openbsd-amd64.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.openbsd-armv7.tar.gz
+          commit: null
+          size: 5463475
+          sha256: sha256:984c4d7048d11fafcb3ae7561e7c43105eb5615052b6baa5531f2e2c5e68d31b
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.openbsd-armv7.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.windows-386.tar.gz
+          commit: null
+          size: 5618004
+          sha256: sha256:79184707db4a393c7a71c9ae8a8555f63b912ec024fdecb7e0210f6aaaf50a3c
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.windows-386.tar.gz
+        - name: statsd_exporter-0.9.0-rc3.windows-amd64.tar.gz
+          commit: null
+          size: 5823860
+          sha256: sha256:06a239985f0fe00b503b0190e915b1a14b9aca6447f7df786ac9603957c40bfc
+          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.windows-amd64.tar.gz
     - name: v0.15.0
       commit: null
       timestamp: '2020-03-05T09:59:59'
@@ -175,161 +490,6 @@ software:
           size: 7039866
           sha256: sha256:9b671d5a35dd6e3eb24389845ba82646e0db60e4caf67ca5d27c9d278805c364
           url: https://github.com/prometheus/statsd_exporter/releases/download/v0.15.0/statsd_exporter-0.15.0.windows-amd64.tar.gz
-    - name: v0.9.0-rc3
-      commit: null
-      timestamp: '2019-01-10T09:26:24'
-      prerelease: true
-      files:
-        - name: sha256sums.txt
-          commit: null
-          size: 3241
-          sha256: sha256:88456b1e65f071997bb9dde9bad9dfba6cb630c66e8a0e232c04b64039e7af0a
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/sha256sums.txt
-        - name: statsd_exporter-0.9.0-rc3.darwin-386.tar.gz
-          commit: null
-          size: 5800906
-          sha256: sha256:9b918a8728fe51ae2fde3ba2302490ac5fdc24c81711ccac765976457d9f9f5c
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.darwin-386.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.darwin-amd64.tar.gz
-          commit: null
-          size: 5945682
-          sha256: sha256:3e58c019b83b42adb9275096e2f2a7dacd24ca9e22066a2fd5a6c7cd545e38d7
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.darwin-amd64.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.dragonfly-amd64.tar.gz
-          commit: null
-          size: 5915546
-          sha256: sha256:f1683fb4391d6b5445d5640d7bbd47253822ef9b544bb1811260fc9017978c19
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.dragonfly-amd64.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.freebsd-386.tar.gz
-          commit: null
-          size: 5741029
-          sha256: sha256:0278f7518aef783972f362fa89e2783f780e4f363a628020e5e7642e61650d78
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.freebsd-386.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.freebsd-amd64.tar.gz
-          commit: null
-          size: 5932039
-          sha256: sha256:438e2afa84690b7b40e6c5501ee5e83288110b35c3f8495c415cb37baad3ff24
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.freebsd-amd64.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.freebsd-armv6.tar.gz
-          commit: null
-          size: 5479282
-          sha256: sha256:1161f260f6184534eefb3bf1b16f3b8c9d7a56ffaba31fe3102ae64f61dcb69b
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.freebsd-armv6.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.freebsd-armv7.tar.gz
-          commit: null
-          size: 5474255
-          sha256: sha256:bbe60223be8f3dc1d64e3f159a8c57fa8ebe3569cefa8e4d4cee8da3978aa27c
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.freebsd-armv7.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.linux-386.tar.gz
-          commit: null
-          size: 5744198
-          sha256: sha256:bd842e92fa8374c586384a8ac24054947130ef24f4c97579095f85059d193606
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-386.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.linux-amd64.tar.gz
-          commit: null
-          size: 5927867
-          sha256: sha256:9e5c37e8f7c245489e14a2d1fd3b5a9e09595598d70e35abfc1092ad0f5d3631
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-amd64.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.linux-arm64.tar.gz
-          commit: null
-          size: 5484578
-          sha256: sha256:b5734b40200b4f57daf989b8e2522d44156b304074a80d8b63e300eb7f514034
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-arm64.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.linux-armv5.tar.gz
-          commit: null
-          size: 5485512
-          sha256: sha256:ce8d6b57e7e1cd8c816c660c98c602ab6f4f4c4edec5c01b7c2b59f64b20656d
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-armv5.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.linux-armv6.tar.gz
-          commit: null
-          size: 5476752
-          sha256: sha256:105eec79d0c6e9fdfcc494bbec7f6cb50a669620c9f716e1dbc87ce2c62440c7
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-armv6.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.linux-armv7.tar.gz
-          commit: null
-          size: 5472715
-          sha256: sha256:42348d65ebf12acc2ad54a450aca5e149d0fd01e933887e301e7d134a7083769
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-armv7.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.linux-mips.tar.gz
-          commit: null
-          size: 5470582
-          sha256: sha256:c1df917b58aab6920189bedb9169dcd3264bc2ae9eace324edc3f8c67933e8fe
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-mips.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.linux-mips64.tar.gz
-          commit: null
-          size: 5580273
-          sha256: sha256:6b05d963e3c383d452157a8d8b0a2b988936baf78434f101c0c6a58312ff36ea
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-mips64.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.linux-mips64le.tar.gz
-          commit: null
-          size: 5415242
-          sha256: sha256:b750b1f6a58fe9bdce7c8a24c2a4af202bf8684bf02d52be8ab515591137f7f2
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-mips64le.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.linux-mipsle.tar.gz
-          commit: null
-          size: 5344895
-          sha256: sha256:6c253ab47de4671059aef9b978cb7f1fcfdb2d2949f2b48dd7040d9054a0b9f7
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-mipsle.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.linux-ppc64.tar.gz
-          commit: null
-          size: 5641126
-          sha256: sha256:1cceeb13f39bbe6c01c34c1e6e1a4290e06134b664edba86e3de2bb317b18ebf
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-ppc64.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.linux-ppc64le.tar.gz
-          commit: null
-          size: 5496938
-          sha256: sha256:6cc02e481095d2767f0f60896ebac43ebd9441df42e937fd01fc4a17a73701d1
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-ppc64le.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.linux-s390x.tar.gz
-          commit: null
-          size: 6001176
-          sha256: sha256:48e1d0fa057255010daf538bd2379f3d537490096b53edb7116b93eea6a8fc79
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.linux-s390x.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.netbsd-386.tar.gz
-          commit: null
-          size: 5727243
-          sha256: sha256:1183b1b2c9f5757df20d7efd53b79c1d1631d41fc5d6ef96ebf6b92be543082f
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.netbsd-386.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.netbsd-amd64.tar.gz
-          commit: null
-          size: 5915901
-          sha256: sha256:a386bcef81f60b2a83d5da2170c18b995cd731097b10a1f6e87ecdf47054b442
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.netbsd-amd64.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.netbsd-armv6.tar.gz
-          commit: null
-          size: 5466408
-          sha256: sha256:a66fa28b7ed69ad96371f53834f61d6ecdd1af4eb43567b7398507e5c90fbf2b
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.netbsd-armv6.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.netbsd-armv7.tar.gz
-          commit: null
-          size: 5463474
-          sha256: sha256:1a3346d6f071c8b1ecc0c84a75865c13f38987b0033cdbcc45c9ac95ebba9efd
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.netbsd-armv7.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.openbsd-386.tar.gz
-          commit: null
-          size: 5728133
-          sha256: sha256:50a2eaf7fe5f69df012afb51dfed3637aa9542b73613eef6ef4dd59e67442837
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.openbsd-386.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.openbsd-amd64.tar.gz
-          commit: null
-          size: 5920489
-          sha256: sha256:89f592eff4f6171dccdbc9299d0928dcfd69f8ae88980e29c073b048be6a6b25
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.openbsd-amd64.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.openbsd-armv7.tar.gz
-          commit: null
-          size: 5463475
-          sha256: sha256:984c4d7048d11fafcb3ae7561e7c43105eb5615052b6baa5531f2e2c5e68d31b
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.openbsd-armv7.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.windows-386.tar.gz
-          commit: null
-          size: 5618004
-          sha256: sha256:79184707db4a393c7a71c9ae8a8555f63b912ec024fdecb7e0210f6aaaf50a3c
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.windows-386.tar.gz
-        - name: statsd_exporter-0.9.0-rc3.windows-amd64.tar.gz
-          commit: null
-          size: 5823860
-          sha256: sha256:06a239985f0fe00b503b0190e915b1a14b9aca6447f7df786ac9603957c40bfc
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.9.0-rc3/statsd_exporter-0.9.0-rc3.windows-amd64.tar.gz
     - name: v0.14.1
       commit: null
       timestamp: '2020-01-13T12:40:47'
@@ -2694,158 +2854,3 @@ software:
           size: 5591077
           sha256: sha256:2d5e9d0e219cae87126d7a4d59184a4285d97b78422b8b1ccc583ef2baa3fddd
           url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0/statsd_exporter-0.8.0.windows-amd64.tar.gz
-    - name: v0.8.0-rc1
-      commit: null
-      timestamp: '2018-10-10T22:06:58'
-      prerelease: true
-      files:
-        - name: sha256sums.txt
-          commit: null
-          size: 3241
-          sha256: sha256:7f560a4fa2625f51f825db8db43c331a404b6fdba6f26ebb7d0813c99556d66a
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/sha256sums.txt
-        - name: statsd_exporter-0.8.0-rc1.darwin-386.tar.gz
-          commit: null
-          size: 5560341
-          sha256: sha256:f056216ae0ab17c492426989053a950ffbfb3713498b0927ce36c09df6e5c433
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.darwin-386.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.darwin-amd64.tar.gz
-          commit: null
-          size: 5715662
-          sha256: sha256:56da111effb49ba96f319afc6fb6785f546a6370fb09a5b287baee4d8f3f5386
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.darwin-amd64.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.dragonfly-amd64.tar.gz
-          commit: null
-          size: 5689990
-          sha256: sha256:c8fe95def8eb9c1bd7d8793789bd2c1aaf010c56eb7aa8a1252703070f2eb958
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.dragonfly-amd64.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.freebsd-386.tar.gz
-          commit: null
-          size: 5506173
-          sha256: sha256:184c595cf411c11e8405c0a6bc796d1d11dfd47ccca413b8959cf620df4cf65b
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.freebsd-386.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.freebsd-amd64.tar.gz
-          commit: null
-          size: 5705642
-          sha256: sha256:cc5e1d4fb3bbe8e5ae726a7aec8ebfcc5746b073fad8dfbab668be3c689e127d
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.freebsd-amd64.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.freebsd-armv6.tar.gz
-          commit: null
-          size: 5264233
-          sha256: sha256:fe5836b464c3382252c3997eddc0f5c10394d1b001a8cfcd72a227430d4d7d8e
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.freebsd-armv6.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.freebsd-armv7.tar.gz
-          commit: null
-          size: 5261672
-          sha256: sha256:b0dc44c7046bd0af38f1a20236f83806d2e2892679ef0a9aacb94b266ed81015
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.freebsd-armv7.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.linux-386.tar.gz
-          commit: null
-          size: 5499740
-          sha256: sha256:3f206362e3920ee45774508dcb6f61772b72a8e161da6376eefd163b5df027c4
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.linux-386.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.linux-amd64.tar.gz
-          commit: null
-          size: 5689430
-          sha256: sha256:addb0ea08a96ebdff039f8088a099bc4c427f018e40af13d0e2a4349448a4212
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.linux-amd64.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.linux-arm64.tar.gz
-          commit: null
-          size: 5272027
-          sha256: sha256:4c33c1d3f6d6796155ef1cd845b34bdd829a10551936657fc6bcadcdccb51c33
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.linux-arm64.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.linux-armv5.tar.gz
-          commit: null
-          size: 5266091
-          sha256: sha256:8543fb917eb934888a1803a43827f53e0c8c68f02dfa79766ea5ab9b59e16026
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.linux-armv5.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.linux-armv6.tar.gz
-          commit: null
-          size: 5253812
-          sha256: sha256:f1f46c66763ee336e2aec1e829ca4f7f8be3aec2d58aa08f1d17161a4c9f15b8
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.linux-armv6.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.linux-armv7.tar.gz
-          commit: null
-          size: 5249587
-          sha256: sha256:1d040241a59897bd477481fa6ff9d51ee46f0bae7c51a4990b653b995b55f4fd
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.linux-armv7.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.linux-mips.tar.gz
-          commit: null
-          size: 5247765
-          sha256: sha256:c7b2b316592a5e6e7c285c345e77acf864ee9ba29f3f3f08c3d5c68c1600505a
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.linux-mips.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.linux-mips64.tar.gz
-          commit: null
-          size: 5367339
-          sha256: sha256:e6e67bde800fbe31ba364b8f509ce2b6c61acce3e5d6e46bfa83fe15030cc682
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.linux-mips64.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.linux-mips64le.tar.gz
-          commit: null
-          size: 5193617
-          sha256: sha256:fa36626f2de01ef50f2865b35806f240ccdcd601e52f76a99793402864cf547e
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.linux-mips64le.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.linux-mipsle.tar.gz
-          commit: null
-          size: 5127566
-          sha256: sha256:5e4583833a883d2e88051748168629b7a10faeb862614db6e86fd55231cbc210
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.linux-mipsle.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.linux-ppc64.tar.gz
-          commit: null
-          size: 5415963
-          sha256: sha256:5a3e21382b738572fa71b958c006566d3993abada365c704280d203678652a1d
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.linux-ppc64.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.linux-ppc64le.tar.gz
-          commit: null
-          size: 5271923
-          sha256: sha256:366dd5914bb945d172a3ca6dda90ec5d31068ae9e2a32a6b88e42da0e2b88894
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.linux-ppc64le.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.linux-s390x.tar.gz
-          commit: null
-          size: 5748749
-          sha256: sha256:0f06959c320f7067c3346efa93a1fc3bafef01ad6046be600b5947264f22ecbe
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.linux-s390x.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.netbsd-386.tar.gz
-          commit: null
-          size: 5493793
-          sha256: sha256:643ce72b110ec291fd167b9ad4759ed8c9440600087240e953c01964a43f60a0
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.netbsd-386.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.netbsd-amd64.tar.gz
-          commit: null
-          size: 5692731
-          sha256: sha256:980a610bf01969fbeceabe631b637e6fbba254a5bea12613d367f931b4c1a433
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.netbsd-amd64.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.netbsd-armv6.tar.gz
-          commit: null
-          size: 5252507
-          sha256: sha256:23449bcc51f9ca11a08c5820fdead6c5ec54431c496b210cf406db9f4a021022
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.netbsd-armv6.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.netbsd-armv7.tar.gz
-          commit: null
-          size: 5247699
-          sha256: sha256:46f16c2b5875f7fc1c4a9c7e0b85e41a3cb2b754ea3ac977be7e1194f21dd5f4
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.netbsd-armv7.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.openbsd-386.tar.gz
-          commit: null
-          size: 5494621
-          sha256: sha256:2216d712c011e4844caf12226ecc6b329cf89da845f53b068e7ac89b98d4b1b1
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.openbsd-386.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.openbsd-amd64.tar.gz
-          commit: null
-          size: 5692092
-          sha256: sha256:da24123b18167416aefedd37f607811197f2bbae968d6d4693ccd4b1df5322ca
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.openbsd-amd64.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.openbsd-armv7.tar.gz
-          commit: null
-          size: 5248033
-          sha256: sha256:57f73929f18d04044ead9023693022f19f5d9a4b9ed9e67986f4585bfa1a72d8
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.openbsd-armv7.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.windows-386.tar.gz
-          commit: null
-          size: 5382916
-          sha256: sha256:16b4f6d6c2edb2e2309a962473f3d8595e0ced270d9f97246b883ff22e2dcee8
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.windows-386.tar.gz
-        - name: statsd_exporter-0.8.0-rc1.windows-amd64.tar.gz
-          commit: null
-          size: 5591056
-          sha256: sha256:d76b6cc98afe3cdd65c84279bb10cc302ed0272c6bfada552dc45f453255ce82
-          url: https://github.com/prometheus/statsd_exporter/releases/download/v0.8.0-rc1/statsd_exporter-0.8.0-rc1.windows-amd64.tar.gz

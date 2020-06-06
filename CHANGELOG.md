@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.10] - 2020-06-06
+
+### Changed
+
+- Upgrade Go from v1.13.10 to v1.13.12
+- Upgrade Alertmanager (pre-release) from v0.20.0-rc.0 to v0.21.0-rc.0
+- Upgrade Prometheus (pre-release) from v2.18.0-rc.1 to v2.19.0-rc.0
+- Upgrade ntp_exporter_sapcc v1.1.2 to v1.1.3
+- Upgrade smokeping_exporter_superq from v0.1.0 to v0.3.0
+- Upgrade statsd_exporter from v0.15.0 to v0.16.0
+- Update metadata to include latest master commits
+
 ## [0.12.9] - 2020-05-28
 
 ### Changed
