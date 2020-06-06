@@ -6,6 +6,7 @@
 
 - name: Starting smokeping_exporter (SuperQ) install
   set_fact:
+    prometheus_software_allow_build_test: true
     prometheus_exporter: true
     prometheus_software_author: SuperQ
     prometheus_software_binary_name: smokeping_prober
