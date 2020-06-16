@@ -2,7 +2,7 @@
 [![Build Status](https://api.travis-ci.org/mesaguy/ansible-prometheus.svg?branch=master)](https://travis-ci.org/mesaguy/ansible-prometheus) ![Latest tag](https://img.shields.io/github/v/tag/mesaguy/ansible-prometheus) ![Ansible Galaxy](https://img.shields.io/badge/ansible%20galaxy-mesaguy.prometheus-blue.svg?style=flat) ![MIT License](https://img.shields.io/github/license/mesaguy/ansible-prometheus)
 
 
-Installs and manages [Prometheus server](https://prometheus.io), [Alertmanager](https://prometheus.io/docs/alerting/overview/), [PushGateway](https://github.com/prometheus/pushgateway/blob/master/README.md), and numerous [Prometheus exporters](https://prometheus.io/docs/instrumenting/exporters/)
+Installs and manages [Prometheus server](https://prometheus.io), [Alertmanager](https://prometheus.io/docs/alerting/latest/overview/), [PushGateway](https://github.com/prometheus/pushgateway/blob/master/README.md), and numerous [Prometheus exporters](https://prometheus.io/docs/instrumenting/exporters/)
 
 This role was designed to allow adding new exporters with ease. Regular releases ensure it always provides the latest Prometheus software.
 
