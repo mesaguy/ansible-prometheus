@@ -7,6 +7,7 @@
 - name: Starting graphite_exporter install
   set_fact:
     prometheus_exporter: true
+    prometheus_software_allow_build_test: true
     prometheus_software_author: prometheus
     prometheus_software_binary_name: graphite_exporter
     prometheus_software_makefile_make_command: make build
