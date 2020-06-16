@@ -4,15 +4,15 @@ defaults:
   tgroup: graphite
 software:
   name: prometheus/graphite_exporter
-  release: v0.7.1
+  release: v0.8.0
   prerelease: v0.7.0-rc2
   url: https://github.com/prometheus/graphite_exporter
   source: https://github.com/prometheus/graphite_exporter.git
-  updated: '2020-06-06T01:44:21.679708'
+  updated: '2020-06-16T00:38:52.085401'
   master:
     commit:
-      sha: 9f14f6be60be83eecc6a4ef9d1c15c3ef43c1668
-      timestamp: '2020-05-29T06:41:33'
+      sha: ca88ebbc3b4e7c9aaffd748ff0d9df7fa7a8cd10
+      timestamp: '2020-06-12T09:24:53'
     files: []
   releases:
     - name: v0.7.0
@@ -1628,3 +1628,10 @@ software:
           size: 3290
           sha256: sha256:199a1c6464a30b8f337635371f95ee3ff90602cfab1fac70c7730438f0ad715d
           url: https://github.com/prometheus/graphite_exporter/releases/download/v0.7.1/sha256sums.txt
+    - name: v0.8.0
+      commit:
+        sha: ca88ebbc3b4e7c9aaffd748ff0d9df7fa7a8cd10
+        timestamp: '2020-06-12T09:24:53'
+      timestamp: '2020-06-12T09:25:40'
+      prerelease: false
+      files: []

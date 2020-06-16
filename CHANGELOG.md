@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+## [0.12.11] - 2020-06-16
+
+- Upgrade Prometheus from v2.18.1 to v2.19.0
+- Upgrade consul_exporter from v0.6.0 to v0.7.0
+- Upgrade graphite_exporter from v0.7.1 to v0.8.0
+- Upgrade influxdb_exporter from v0.4.1 to v0.4.2
+- Upgrade redis_exporter_oliver006 from v1.6.1 to v1.7.0
+
 ## [0.12.10] - 2020-06-06
 
 ### Changed

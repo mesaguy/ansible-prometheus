@@ -4,15 +4,15 @@ defaults:
   tgroup: influxdb
 software:
   name: prometheus/influxdb_exporter
-  release: v0.4.1
+  release: v0.4.2
   prerelease: null
   url: https://github.com/prometheus/influxdb_exporter
   source: https://github.com/prometheus/influxdb_exporter.git
-  updated: '2020-06-06T01:58:20.962708'
+  updated: '2020-06-16T00:48:49.764529'
   master:
     commit:
-      sha: a268aa3a6c4eeef819c107b57035ed9dda097e29
-      timestamp: '2020-05-29T06:41:29'
+      sha: 7aa2b6f15ab20518ec9056bea5afb88c5555812d
+      timestamp: '2020-06-12T08:19:22'
     files: []
   releases:
     - name: v0.4.0
@@ -797,3 +797,163 @@ software:
           size: 3290
           sha256: sha256:bf395f70558c2397d5e617afed65e070b84f73a25a4b96cfead94ffbdedfb93b
           url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.1/sha256sums.txt
+    - name: v0.4.2
+      commit: null
+      timestamp: '2020-06-12T09:11:12'
+      prerelease: false
+      files:
+        - name: influxdb_exporter-0.4.2.aix-ppc64.tar.gz
+          commit: null
+          size: 6842612
+          sha256: sha256:40c805ad218556279012ee6547f61ce2869b0b401c86e3429c5d5d7982be51be
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.aix-ppc64.tar.gz
+        - name: influxdb_exporter-0.4.2.darwin-386.tar.gz
+          commit: null
+          size: 6965588
+          sha256: sha256:12a8b93dc69143d88b53a9f479e42cc5a29624760dadf44cbb410b9b5af9972a
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.darwin-386.tar.gz
+        - name: influxdb_exporter-0.4.2.darwin-amd64.tar.gz
+          commit: null
+          size: 7035550
+          sha256: sha256:62d1a76e0cb05cd196abb7d8d168b126d6bdfdb0ccc78012620bd65fa4495e5d
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.darwin-amd64.tar.gz
+        - name: influxdb_exporter-0.4.2.dragonfly-amd64.tar.gz
+          commit: null
+          size: 7035983
+          sha256: sha256:4b9efd459d527353adb2692338dccbd9a397892bcca77d82d1965e9fdcc7141b
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.dragonfly-amd64.tar.gz
+        - name: influxdb_exporter-0.4.2.freebsd-386.tar.gz
+          commit: null
+          size: 6922602
+          sha256: sha256:d19be6153ff8d39898ddabaa3b3428da26e57b5f4042bf25b9881c04df7ae49a
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.freebsd-386.tar.gz
+        - name: influxdb_exporter-0.4.2.freebsd-amd64.tar.gz
+          commit: null
+          size: 7059226
+          sha256: sha256:eebd6cbe6d2f6cc103967732f76f0f19b02f460de48ed3dc651e217f19cf4949
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.freebsd-amd64.tar.gz
+        - name: influxdb_exporter-0.4.2.freebsd-armv6.tar.gz
+          commit: null
+          size: 6584867
+          sha256: sha256:d434ec1faf06b5c4418779893a77c23a16c333276deab7ff9533d7b55ab40793
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.freebsd-armv6.tar.gz
+        - name: influxdb_exporter-0.4.2.freebsd-armv7.tar.gz
+          commit: null
+          size: 6579612
+          sha256: sha256:a5c3aa9a039c6589c758f0fcfab34549103f1b4dc4063c0ee786756906c0be08
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.freebsd-armv7.tar.gz
+        - name: influxdb_exporter-0.4.2.linux-386.tar.gz
+          commit: null
+          size: 6938079
+          sha256: sha256:d5e9d15617e1c9b258a9357608a4bf15a448ea22f8d20d048c4b161453c4b6c6
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.linux-386.tar.gz
+        - name: influxdb_exporter-0.4.2.linux-amd64.tar.gz
+          commit: null
+          size: 7066113
+          sha256: sha256:358b3014c250e28ed278aefe734f801b78f2028422f9ad2097ce01814879fbca
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.linux-amd64.tar.gz
+        - name: influxdb_exporter-0.4.2.linux-arm64.tar.gz
+          commit: null
+          size: 6608351
+          sha256: sha256:2fccfe2d12ad4ce6254e4aa5363b42d4b503fa7b0a698eafa9940c28bd0ebaaa
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.linux-arm64.tar.gz
+        - name: influxdb_exporter-0.4.2.linux-armv5.tar.gz
+          commit: null
+          size: 6599585
+          sha256: sha256:e55eb8182d5d8dbae849d469dc6ca5ee59a06dd99b83895a1bce1bdbfe113d4f
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.linux-armv5.tar.gz
+        - name: influxdb_exporter-0.4.2.linux-armv6.tar.gz
+          commit: null
+          size: 6592591
+          sha256: sha256:76091776d6f4b3daf2d6cfa922f41eefcd997d9bacdda5ec3663074aa5a834b3
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.linux-armv6.tar.gz
+        - name: influxdb_exporter-0.4.2.linux-armv7.tar.gz
+          commit: null
+          size: 6590161
+          sha256: sha256:915cce70e68b1bbae1941f077a9295931bc921a5939d5f50432e80110cd79bfb
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.linux-armv7.tar.gz
+        - name: influxdb_exporter-0.4.2.linux-mips.tar.gz
+          commit: null
+          size: 6619107
+          sha256: sha256:621918d33a632af637ea00799480ef9643fbb006677b7a8da55394540b8e9b09
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.linux-mips.tar.gz
+        - name: influxdb_exporter-0.4.2.linux-mips64.tar.gz
+          commit: null
+          size: 6727847
+          sha256: sha256:3696cb88f6c8a196b622d20f3a403c67cf8367b7e2a1e267ae39e3749d1e6c0c
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.linux-mips64.tar.gz
+        - name: influxdb_exporter-0.4.2.linux-mips64le.tar.gz
+          commit: null
+          size: 6542259
+          sha256: sha256:e3c8f2c26b5e8c9d38891dec9c8ae9ef191b4c3fffcc0e7e933f3f5a2b2e8583
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.linux-mips64le.tar.gz
+        - name: influxdb_exporter-0.4.2.linux-mipsle.tar.gz
+          commit: null
+          size: 6480314
+          sha256: sha256:fb1255154a3bd2f612c468d0969d0a54ddfcb734e4af9ab1ebd84cf9a2a2ad23
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.linux-mipsle.tar.gz
+        - name: influxdb_exporter-0.4.2.linux-ppc64.tar.gz
+          commit: null
+          size: 6746351
+          sha256: sha256:9baa82af59124cecfc1018808f295e864d6595079d3c91180141746dc8062363
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.linux-ppc64.tar.gz
+        - name: influxdb_exporter-0.4.2.linux-ppc64le.tar.gz
+          commit: null
+          size: 6571619
+          sha256: sha256:450f507a98b0aa2a0e62de3f2be81999357dd96973a99fce5fea1ce6d40b88c2
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.linux-ppc64le.tar.gz
+        - name: influxdb_exporter-0.4.2.linux-s390x.tar.gz
+          commit: null
+          size: 7137652
+          sha256: sha256:2f47dd67b799a65f2e56bb52f160fc9df0f3172e5d8e489ac8613810dd8f2752
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.linux-s390x.tar.gz
+        - name: influxdb_exporter-0.4.2.netbsd-386.tar.gz
+          commit: null
+          size: 6896839
+          sha256: sha256:cca64090154b4b74f4bd08dc1aca01de2019bef349d9311e94bfce70b3228fc8
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.netbsd-386.tar.gz
+        - name: influxdb_exporter-0.4.2.netbsd-amd64.tar.gz
+          commit: null
+          size: 7033584
+          sha256: sha256:6b545f01711b5827986a0ab32b9b2a54a22a22f45998d5972cdcb577bb00220d
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.netbsd-amd64.tar.gz
+        - name: influxdb_exporter-0.4.2.netbsd-armv6.tar.gz
+          commit: null
+          size: 6561954
+          sha256: sha256:9f4be70ff78a6e939292066d57f56b1243ee9eba74645bf6c5148a36f33963b4
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.netbsd-armv6.tar.gz
+        - name: influxdb_exporter-0.4.2.netbsd-armv7.tar.gz
+          commit: null
+          size: 6558175
+          sha256: sha256:57ed9df7f21f7cc72b02c4714145f798cf8965d568ebfe11f998ed1f47793135
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.netbsd-armv7.tar.gz
+        - name: influxdb_exporter-0.4.2.openbsd-386.tar.gz
+          commit: null
+          size: 6893396
+          sha256: sha256:1b7d0044577e731157535de84fd2a3a68ad22d2e7deb489fc43be6e96bbc81a6
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.openbsd-386.tar.gz
+        - name: influxdb_exporter-0.4.2.openbsd-amd64.tar.gz
+          commit: null
+          size: 7034739
+          sha256: sha256:a0f53172e454efbc853a2ba217908f317798cf0064e4820ba4dcb8ed689d0d27
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.openbsd-amd64.tar.gz
+        - name: influxdb_exporter-0.4.2.openbsd-armv7.tar.gz
+          commit: null
+          size: 6556751
+          sha256: sha256:5ec50a637319b08fcbd501ff2c719f836a52ef4dc684e050c0088e13314d9589
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.openbsd-armv7.tar.gz
+        - name: influxdb_exporter-0.4.2.windows-386.tar.gz
+          commit: null
+          size: 6816609
+          sha256: sha256:774ab6c4c81bf44efb402abda9e4ba0510c1c52f312e6cec9d9f1c18c45bace4
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.windows-386.tar.gz
+        - name: influxdb_exporter-0.4.2.windows-amd64.tar.gz
+          commit: null
+          size: 6972939
+          sha256: sha256:fcfcb63834e46c641cb0995f7a14320db7372abba79c4658c7044995e40efe98
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/influxdb_exporter-0.4.2.windows-amd64.tar.gz
+        - name: sha256sums.txt
+          commit: null
+          size: 3290
+          sha256: sha256:07f8217017057fd0ac3abf5c29b0bf48285c2b346d7fa8dd74fbae2db09bf478
+          url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.4.2/sha256sums.txt
