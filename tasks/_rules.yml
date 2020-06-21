@@ -30,6 +30,7 @@
       find:
         paths: '{{ prometheus_rules_source_dirs }}'
       delegate_to: localhost
+      connection: local
       register: prometheus_local_rules
 
     - name: Find remote Prometheus alert rule files

@@ -117,6 +117,7 @@
 
 - name: Find all prometheus software
   delegate_to: localhost
+  connection: local
   local_action: find paths="{{ lookup('env', 'PWD') }}/tasks" file_type=file excludes='_*.yml,main.yml'
   register: tasks
 

@@ -9,6 +9,7 @@
       loop_control:
         loop_var: prometheus_script_name
       delegate_to: localhost
+      connection: local
       with_items:
         - promcron
         - promrun

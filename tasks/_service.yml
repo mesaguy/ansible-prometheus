@@ -67,6 +67,7 @@
     state: started
     timeout: 45
   delegate_to: '{{ prometheus_server_name }}'
+  connection: local
   loop_control:
     loop_var: prometheus_server_name
   with_items: '{{ prometheus_servers | list }}'
