@@ -74,7 +74,7 @@ script:
 
   # Create kitchen SSH keys to be used by kitchen-docker when
   # building Dockerfiles
-  - if [ "$METADATA_TESTS" != "true" ]; then mkdir -p .kitchen ; fi
+  - if [ "$METADATA_TESTS" != "true" ]; then mkdir -m 0700 -p .kitchen ; fi
   - if [ "$METADATA_TESTS" != "true" ]; then if ! [ -f ".kitchen/docker_id_rsa" ] ; then ssh-keygen -f .kitchen/docker_id_rsa -t rsa -N ''; fi ; fi
 
   # Perform installations, inspec tests, and idempotent tests
