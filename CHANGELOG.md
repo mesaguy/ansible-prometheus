@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.13] - 2020-06-22
+
+### Changed
+
+- Upgrade Prometheus from v2.19.0 to v2.19.1
+- Upgrade blackbox_exporter v0.16.0 to v0.17.0
+- Upgrade haproxy_exporter from v0.10.0 to v0.11.0
+- Upgrade redis_exporter_oliver006 from v1.7.0 to v1.8.0
+- Update metadata to include latest master commits
+
 ## [0.12.12] - 2020-06-18
 
 ### Changed
