@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgrade haproxy_exporter from v0.10.0 to v0.11.0
 - Upgrade redis_exporter_oliver006 from v1.7.0 to v1.8.0
 - Update metadata to include latest master commits
+- Ensure all 'delegate_to: localhost' tasks use a "local" connection
 
 ## [0.12.12] - 2020-06-18
 
