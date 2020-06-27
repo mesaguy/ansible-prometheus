@@ -37,8 +37,8 @@
     content: '{{ prometheus_grok_exporter_fstab_cfg | default(lookup("file", "../files/grok_exporter_fstab.yml")) }}'
     dest: '{{ prometheus_etc_dir }}/grok_exporter_fstab.yml'
     owner: root
-    group: root
-    mode: '0644'
+    group: '{{ prometheus_group }}'
+    mode: '0640'
     backup: true
   notify:
     - Restart Prometheus service

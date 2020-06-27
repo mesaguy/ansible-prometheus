@@ -33,8 +33,8 @@
     content: '{{ prometheus_sql_exporter_free_cfg | default(lookup("file", "../files/sql_exporter_free.yml")) }}'
     dest: '{{ prometheus_etc_dir }}/sql_exporter_free.yml'
     owner: root
-    group: root
-    mode: '0644'
+    group: '{{ prometheus_group }}'
+    mode: '0640'
     backup: true
   notify:
     - Restart Prometheus service
