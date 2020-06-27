@@ -24,11 +24,11 @@ describe file('/opt/prometheus/alertmanager/active/amtool') do
     its('group') { should eq 'prometheus' }
 end
 
-describe command('/opt/prometheus/alertmanager/active/amtool check-config /opt/prometheus/etc/alertmanager.yml') do
+describe command('sudo /opt/prometheus/alertmanager/active/amtool check-config /opt/prometheus/etc/alertmanager.yml') do
   its('exit_status') { should eq 0 }
 end
 
-describe command('/opt/prometheus/alertmanager/active/amtool check-config /opt/prometheus/etc/alertmanager.yml') do
+describe command('sudo /opt/prometheus/alertmanager/active/amtool check-config /opt/prometheus/etc/alertmanager.yml') do
   its('exit_status') { should eq 0 }
 end
 
