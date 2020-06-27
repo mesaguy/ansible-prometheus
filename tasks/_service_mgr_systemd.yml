@@ -6,7 +6,7 @@
     src: ../templates/daemon-systemd.j2
     owner: root
     group: root
-    mode: '0644'
+    mode: '0640'
   notify:
     - Force systemd to reread configs
     - Restart Prometheus service

@@ -37,8 +37,8 @@
     src: '../templates/jmx-config.yml.j2'
     dest: '{{ prometheus_etc_dir }}/{{ prometheus_software_name }}.{{ jmx_instance.key }}.yml'
     owner: root
-    group: root
-    mode: '0644'
+    group: '{{ prometheus_group }}'
+    mode: '0640'
     backup: true
   loop_control:
     loop_var: jmx_instance

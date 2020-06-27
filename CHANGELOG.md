@@ -6,9 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.12.13] - 2020-06-22
-
 ### Changed
+
+- Upgrade Prometheus from v2.19.1 to v2.19.2
+- Upgrade ssl_exporter_ribbybibby from v1.0.1 to v2.0.0
+- Upgrade statsd_exporter from v0.16.0 to v0.17.0
+- Tighten permissions on configuration and service files from world readable to not world readable (Thanks [urusha](https://github.com/urusha) for starting this effort!)
+
+## [0.12.13] - 2020-06-22
 
 - Upgrade Prometheus from v2.19.0 to v2.19.1
 - Upgrade blackbox_exporter v0.16.0 to v0.17.0

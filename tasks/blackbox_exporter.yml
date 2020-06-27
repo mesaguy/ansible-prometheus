@@ -39,8 +39,8 @@
     src: '../templates/blackbox_exporter.yml.j2'
     dest: '{{ prometheus_etc_dir }}/blackbox_exporter.yml'
     owner: root
-    group: root
-    mode: '0644'
+    group: '{{ prometheus_group }}'
+    mode: '0640'
     backup: true
     validate: '{{ prometheus_software_install_dir }}/blackbox_exporter --config.check --config.file %s'
   notify:

@@ -20,8 +20,8 @@
     src: ../templates/generic-config.yml.j2
     dest: '{{ prometheus_software_config_file }}'
     owner: root
-    group: root
-    mode: '0644'
+    group: '{{ prometheus_group }}'
+    mode: '0640'
     backup: true
   notify:
     - Restart Prometheus service
