@@ -94,7 +94,7 @@
     dest: '{{ prometheus_etc_dir }}/prometheus.yml'
     owner: root
     group: '{{ prometheus_group }}'
-    mode: '0644'
+    mode: '0640'
     backup: true
     validate: '{{ prometheus_software_install_dir }}/promtool check config %s'
   notify:

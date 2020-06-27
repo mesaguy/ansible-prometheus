@@ -52,7 +52,7 @@ See each exporter's usage page for more details:
 |[bigip_exporter_expressenab](https://github.com/ExpressenAB/bigip_exporter)                    | [usage](docs/bigip_exporter_expressenab.md)                 | ExpressenAB          | Yes       |
 |[bind_exporter_prometheus_community](https://github.com/prometheus-community/bind_exporter)    | [usage](docs/bind_exporter_prometheus_community.md)         | prometheus-community | Partial   |
 |[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)                           | [usage](docs/blackbox_exporter.md)                          | prometheus           | Yes       |
-|[ceph_exporter](https://github.com/digitalocean/ceph_exporter)                                 | [usage](docs/ceph_exporter.md)                              | digitalocean         | Partial   |
+|[ceph_exporter_digitalocean](https://github.com/digitalocean/ceph_exporter_digitalocean)       | [usage](docs/ceph_exporter_digitalocean.md)                 | digitalocean         | Partial   |
 |[clickhouse_exporter_perconalab](https://github.com/Percona-Lab/clickhouse_exporter)           | [usage](docs/clickhouse_exporter_perconalab.md)             | perconalab           | Yes       |
 |[cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter)                       | [usage](docs/cloudwatch_exporter.md)                        | prometheus           | Partial   |
 |[collectd_exporter](https://github.com/prometheus/collectd_exporter)                           | [usage](docs/collectd_exporter.md)                          | prometheus           | Yes       |
