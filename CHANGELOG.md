@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Upgrade Go from v1.13.12 to v1.13.14
+- Upgrade Prometheus (pre-release) from v2.19.0-rc.0 to v2.20.0-rc.0
+- Upgrade ceph_exporter_digitalocean from 2.0.6-luminous to 2.0.7-luminous
+- grok_exporter_fstab from v1.0.0.RC3 (prerelease) to v1.0.0.RC4 (prerelease)
+- openvpn_exporter_kumina from v0.2.2 to v0.3.0
+- Upgrade redis_exporter_oliver006 from v1.8.0 to v1.9.0
+- Update metadata to include latest master commits
+
+## [0.12.14] - 2020-06-27
+
+### Changed
+
 - Upgrade Prometheus from v2.19.1 to v2.19.2
 - Upgrade ssl_exporter_ribbybibby from v1.0.1 to v2.0.0
 - Upgrade statsd_exporter from v0.16.0 to v0.17.0

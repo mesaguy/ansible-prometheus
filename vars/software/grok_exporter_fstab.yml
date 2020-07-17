@@ -5,16 +5,48 @@ defaults:
 software:
   name: fstab/grok_exporter
   release: v0.2.6
-  prerelease: v1.0.0.RC3
+  prerelease: v1.0.0.RC4
   url: https://github.com/fstab/grok_exporter
   source: https://github.com/fstab/grok_exporter.git
-  updated: '2020-06-16T00:38:31.881228'
+  updated: '2020-07-17T01:32:51.368414'
   master:
     commit:
-      sha: fdcf37e0b5fb2bde909e1c2995243801b9606a84
-      timestamp: '2020-06-12T22:06:58'
+      sha: e898962ddfaad75081899ed6bf13056e224a9a09
+      timestamp: '2020-07-07T22:13:43'
     files: []
   releases:
+    - name: v0.2.6
+      commit:
+        sha: 81c0afe77cc292cf9e162321a455cfc9aee7d19a
+        timestamp: '2018-10-08T19:32:32'
+      timestamp: '2018-10-08T19:32:32'
+      prerelease: false
+      files: []
+    - name: v1.0.0.RC4
+      commit: null
+      timestamp: '2020-07-07T22:07:18'
+      prerelease: true
+      files:
+        - name: grok_exporter-1.0.0.RC4.darwin-amd64.zip
+          commit: null
+          size: 8785277
+          sha256: sha256:56b19c924be6ac51114b56482a2f8a724b81d6c05488777733bc71fa6d317ead
+          url: https://github.com/fstab/grok_exporter/releases/download/v1.0.0.RC4/grok_exporter-1.0.0.RC4.darwin-amd64.zip
+        - name: grok_exporter-1.0.0.RC4.linux-amd64.zip
+          commit: null
+          size: 8007811
+          sha256: sha256:80d3df57d8c460467535e0714f658607c696e35ec00da551c1c440fc325924b2
+          url: https://github.com/fstab/grok_exporter/releases/download/v1.0.0.RC4/grok_exporter-1.0.0.RC4.linux-amd64.zip
+        - name: grok_exporter-1.0.0.RC4.linux-arm32v6.zip
+          commit: null
+          size: 7494893
+          sha256: sha256:423711a5e1f671e5e7f5e335da4bc5cf091a4f2e5703b29b44dc27822ac52a5c
+          url: https://github.com/fstab/grok_exporter/releases/download/v1.0.0.RC4/grok_exporter-1.0.0.RC4.linux-arm32v6.zip
+        - name: grok_exporter-1.0.0.RC4.windows-amd64.zip
+          commit: null
+          size: 8025311
+          sha256: sha256:a5fd4fe38f24e39e5314732a10fd0e3e9f0eb6b9683138c8cfe693b8c3cc380d
+          url: https://github.com/fstab/grok_exporter/releases/download/v1.0.0.RC4/grok_exporter-1.0.0.RC4.windows-amd64.zip
     - name: v1.0.0.RC3
       commit: null
       timestamp: '2020-02-14T22:09:33'
@@ -165,13 +197,6 @@ software:
           size: 6912396
           sha256: sha256:93f8970930fd39c9014a25fb87cfa0623798a5bd415bac905cde7d790c2ea905
           url: https://github.com/fstab/grok_exporter/releases/download/v0.2.7/grok_exporter-0.2.7.windows-amd64.zip
-    - name: v0.2.6
-      commit:
-        sha: 81c0afe77cc292cf9e162321a455cfc9aee7d19a
-        timestamp: '2018-10-08T19:32:32'
-      timestamp: '2018-10-08T19:32:32'
-      prerelease: false
-      files: []
     - name: v0.2.5
       commit: null
       timestamp: '2018-05-31T20:54:01'
@@ -442,23 +467,3 @@ software:
           size: 2826186
           sha256: sha256:ae2f499fa5be32c774e9c84acd4a106e50c682ce4e9f02a31c668c428870e02a
           url: https://github.com/fstab/grok_exporter/releases/download/v0.0.2/grok_exporter-0.0.2.windows-amd64.zip
-    - name: v0.0.1
-      commit: null
-      timestamp: '2016-05-08T19:04:56'
-      prerelease: true
-      files:
-        - name: grok_exporter-0.0.1.darwin-amd64.zip
-          commit: null
-          size: 3503662
-          sha256: sha256:05977a27b7673d8e0b81d79a583b920b5e43d1620ed07b553c738b010e48ac0e
-          url: https://github.com/fstab/grok_exporter/releases/download/v0.0.1/grok_exporter-0.0.1.darwin-amd64.zip
-        - name: grok_exporter-0.0.1.linux-amd64.zip
-          commit: null
-          size: 3222173
-          sha256: sha256:cc6629632d7410f91daeb9b9a93ca0807cb95fc0da5912573bbcdfcf082ff857
-          url: https://github.com/fstab/grok_exporter/releases/download/v0.0.1/grok_exporter-0.0.1.linux-amd64.zip
-        - name: grok_exporter-0.0.1.windows-amd64.zip
-          commit: null
-          size: 2837341
-          sha256: sha256:efd70dd1e2f762da274c6ca83063dc778b487fb89fe3fa72c063078e93091dbd
-          url: https://github.com/fstab/grok_exporter/releases/download/v0.0.1/grok_exporter-0.0.1.windows-amd64.zip
