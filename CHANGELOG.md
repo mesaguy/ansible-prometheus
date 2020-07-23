@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.16] - 2020-07-23
+
+- Upgrade Prometheus from v2.19.2 to v2.20.0
+- Upgrade Prometheus (pre-release) from v2.20.0-rc.0 to v2.20.0-rc.1
+- Upgrade consul_exporter from v0.7.0 to v0.7.1
+- Upgrade graphite_exporter from v0.8.0 to v0.9.0
+- Update metadata to include latest master commits
+
 ## [0.12.15] - 2020-07-17
 
 ### Changed

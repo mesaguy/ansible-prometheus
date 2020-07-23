@@ -4,15 +4,15 @@ defaults:
   tgroup: graphite
 software:
   name: prometheus/graphite_exporter
-  release: v0.8.0
+  release: v0.9.0
   prerelease: v0.7.0-rc2
   url: https://github.com/prometheus/graphite_exporter
   source: https://github.com/prometheus/graphite_exporter.git
-  updated: '2020-07-17T01:33:09.481363'
+  updated: '2020-07-23T01:56:25.003516'
   master:
     commit:
-      sha: e101883dc45108effd67b0f010cf019ebfb137fb
-      timestamp: '2020-07-02T20:19:28'
+      sha: ec2b4bae873fefa693551d410f72b6c9d3c802a9
+      timestamp: '2020-07-21T13:49:43'
     files: []
   releases:
     - name: v0.7.0
@@ -1635,3 +1635,163 @@ software:
       timestamp: '2020-06-12T09:25:40'
       prerelease: false
       files: []
+    - name: v0.9.0
+      commit: null
+      timestamp: '2020-07-21T15:59:53'
+      prerelease: false
+      files:
+        - name: graphite_exporter-0.9.0.aix-ppc64.tar.gz
+          commit: null
+          size: 7556854
+          sha256: sha256:57deb1802157cbe317f62e579af135a015793cd8660363de0cb6bc7015dbeb70
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.aix-ppc64.tar.gz
+        - name: graphite_exporter-0.9.0.darwin-386.tar.gz
+          commit: null
+          size: 7654455
+          sha256: sha256:d3cb5404e5c503ad4f8bb371f232c89a6bf440522c8c9dd0733abf8222cd7952
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.darwin-386.tar.gz
+        - name: graphite_exporter-0.9.0.darwin-amd64.tar.gz
+          commit: null
+          size: 7747412
+          sha256: sha256:eb15815459d2150ea3c6b4cfc5aeb8093e96c7b40caf12e5e8a2879510b259a4
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.darwin-amd64.tar.gz
+        - name: graphite_exporter-0.9.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 7761472
+          sha256: sha256:0a9b7df8f34b24d90f4ed51edb5d51e627c42021cc2604fa3bb0bbf2a995a516
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.dragonfly-amd64.tar.gz
+        - name: graphite_exporter-0.9.0.freebsd-386.tar.gz
+          commit: null
+          size: 7611327
+          sha256: sha256:057b91045f697736fefd78ecc4b46f783f8b7ee225cf7e06b2097c66207ab54b
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.freebsd-386.tar.gz
+        - name: graphite_exporter-0.9.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 7785739
+          sha256: sha256:2b623be3654f32e6f34c832a70cdbdf655b11119deff9610d57cfd60c76d1d5c
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.freebsd-amd64.tar.gz
+        - name: graphite_exporter-0.9.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 7247026
+          sha256: sha256:c95416c5dafc2cedef79f6d205fcddbb68927fe26fafb61b42595bc4e844a040
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.freebsd-armv6.tar.gz
+        - name: graphite_exporter-0.9.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 7243929
+          sha256: sha256:76d05ce788108358d8b942ef313913fd026e6573388ad19b04bb41a3fe82915c
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.freebsd-armv7.tar.gz
+        - name: graphite_exporter-0.9.0.linux-386.tar.gz
+          commit: null
+          size: 7629517
+          sha256: sha256:34b4bf4fd65f17b1cd3a2ab3802dac70a02814a32b840d7724e62a2d0c83697e
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.linux-386.tar.gz
+        - name: graphite_exporter-0.9.0.linux-amd64.tar.gz
+          commit: null
+          size: 7791001
+          sha256: sha256:8da5bf07180f345abbd0e3c5ddf0f2bd319d930b6f9dd0385f4cfebdc6815c86
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.linux-amd64.tar.gz
+        - name: graphite_exporter-0.9.0.linux-arm64.tar.gz
+          commit: null
+          size: 7282259
+          sha256: sha256:3d45c0123d5108ba92e5a674f11e3c2bd8c4e9dbd0fd4d6921e8fc033088743a
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.linux-arm64.tar.gz
+        - name: graphite_exporter-0.9.0.linux-armv5.tar.gz
+          commit: null
+          size: 7263559
+          sha256: sha256:a674e9aca196ecb97c9f38baac3a4a87eca55190c46e074703d2553137b0346d
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.linux-armv5.tar.gz
+        - name: graphite_exporter-0.9.0.linux-armv6.tar.gz
+          commit: null
+          size: 7257552
+          sha256: sha256:7736600eb3c8f013b61802b9bc52af64558365cd86833764682bb1aec20ad0d9
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.linux-armv6.tar.gz
+        - name: graphite_exporter-0.9.0.linux-armv7.tar.gz
+          commit: null
+          size: 7251793
+          sha256: sha256:4c4f411e224840ce86f553abc26d569b57b492ea3a901796e25aa7ea38cb0ebc
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.linux-armv7.tar.gz
+        - name: graphite_exporter-0.9.0.linux-mips.tar.gz
+          commit: null
+          size: 7283456
+          sha256: sha256:75f46d2e21cd02ed53a517d54ff5e3620cd285ec4d74da33b83bdfd6a3175f04
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.linux-mips.tar.gz
+        - name: graphite_exporter-0.9.0.linux-mips64.tar.gz
+          commit: null
+          size: 7409506
+          sha256: sha256:942b12f6ed27c2680306b5e8d49a7078911d3817e093359d0097c1f56479b7ac
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.linux-mips64.tar.gz
+        - name: graphite_exporter-0.9.0.linux-mips64le.tar.gz
+          commit: null
+          size: 7197304
+          sha256: sha256:58fd2a07dd43fb7ab6a70a43ea831b89d2ac4d320eea63aaf529c1cfb519d8e2
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.linux-mips64le.tar.gz
+        - name: graphite_exporter-0.9.0.linux-mipsle.tar.gz
+          commit: null
+          size: 7129391
+          sha256: sha256:21226bf1e2ea42be2571a7e1662ad14b930c37553853c48959479ec30a4c55a2
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.linux-mipsle.tar.gz
+        - name: graphite_exporter-0.9.0.linux-ppc64.tar.gz
+          commit: null
+          size: 7439567
+          sha256: sha256:fbbffc508688bd638aced28fceff04e3792872c1472c4224cf05f18af8449905
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.linux-ppc64.tar.gz
+        - name: graphite_exporter-0.9.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 7246512
+          sha256: sha256:729466d6180d941ac4087cdf479ec812898e63c2d8832d99bd62aa9a96559810
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.linux-ppc64le.tar.gz
+        - name: graphite_exporter-0.9.0.linux-s390x.tar.gz
+          commit: null
+          size: 7856981
+          sha256: sha256:0bab038dd38903fc13b51e48cd388b465c0a6553739eea9ab28af5bbaf724930
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.linux-s390x.tar.gz
+        - name: graphite_exporter-0.9.0.netbsd-386.tar.gz
+          commit: null
+          size: 7588158
+          sha256: sha256:20c79213201bdc9ad245c86f54649c786fd9f87ecd1494d04dcd483db2f0522d
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.netbsd-386.tar.gz
+        - name: graphite_exporter-0.9.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 7753685
+          sha256: sha256:aebc837c4ca93272ff605449e4735a720cf017b75d32b629d2cdbf9c38765296
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.netbsd-amd64.tar.gz
+        - name: graphite_exporter-0.9.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 7224442
+          sha256: sha256:765f76b2adc78bf4f5233d7020297ccb9d2cb9d393dd29026dee3256bfbe4924
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.netbsd-armv6.tar.gz
+        - name: graphite_exporter-0.9.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 7219726
+          sha256: sha256:0ad180f61e671b6e084d78244afa686f1ebecb07039ffed23106917848f553a1
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.netbsd-armv7.tar.gz
+        - name: graphite_exporter-0.9.0.openbsd-386.tar.gz
+          commit: null
+          size: 7586736
+          sha256: sha256:177aceee869958ba5ac970aaaa6490f5f18105f50dd0e72f32fafbb617fb76cb
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.openbsd-386.tar.gz
+        - name: graphite_exporter-0.9.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 7759947
+          sha256: sha256:11aef92e8be136df1742c4c26cfdc9a13545a598267096b73235d4652ef5d85a
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.openbsd-amd64.tar.gz
+        - name: graphite_exporter-0.9.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 7219465
+          sha256: sha256:0fe945138f0b891f5a37d0226252089665a4a623fd1949b55f129c220ebad7d9
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.openbsd-armv7.tar.gz
+        - name: graphite_exporter-0.9.0.windows-386.tar.gz
+          commit: null
+          size: 7516586
+          sha256: sha256:77668d83d6afc98771c91225c374cd388ac4ffbe244a8595a06b761ef23a4676
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.windows-386.tar.gz
+        - name: graphite_exporter-0.9.0.windows-amd64.tar.gz
+          commit: null
+          size: 7700333
+          sha256: sha256:5397bcb3f40b4fd494aa7e608cc9733d04b4faed92d5129793129330aaef41ec
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.windows-amd64.tar.gz
+        - name: sha256sums.txt
+          commit: null
+          size: 3290
+          sha256: sha256:f4aa8f87ff45f60456072bfa19dac4c8ff3e6e5b27bdc0b351a3ef334997b7da
+          url: https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/sha256sums.txt

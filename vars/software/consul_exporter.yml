@@ -4,15 +4,15 @@ defaults:
   tgroup: consul
 software:
   name: prometheus/consul_exporter
-  release: v0.7.0
+  release: v0.7.1
   prerelease: null
   url: https://github.com/prometheus/consul_exporter
   source: https://github.com/prometheus/consul_exporter.git
-  updated: '2020-06-27T03:13:51.248194'
+  updated: '2020-07-23T02:04:03.574197'
   master:
     commit:
-      sha: 3d1ca79a7187a4b70d500084f7ca41aa2f0d6fc0
-      timestamp: '2020-06-23T15:02:51'
+      sha: ae46e2ea980ecf1c961bf332b71160be707b5e98
+      timestamp: '2020-07-21T15:31:46'
     files: []
   releases:
     - name: v0.6.0
@@ -830,3 +830,163 @@ software:
           size: 3230
           sha256: sha256:064239d319f9aa76b2301ef7e182cf2a9da9d9bddb8969336fb3e642d9478ac7
           url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.0/sha256sums.txt
+    - name: v0.7.1
+      commit: null
+      timestamp: '2020-07-21T15:52:05'
+      prerelease: false
+      files:
+        - name: consul_exporter-0.7.1.aix-ppc64.tar.gz
+          commit: null
+          size: 7789219
+          sha256: sha256:e8e3c56088bdb9ce71ed24169fe2a0771e34311999c9b1cc0b2a8ac1995ebb81
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.aix-ppc64.tar.gz
+        - name: consul_exporter-0.7.1.darwin-386.tar.gz
+          commit: null
+          size: 7884842
+          sha256: sha256:df7c086fca7198e9859a6118101d7c269f99c2d68373d7abeb0ee15d7e2a47fc
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.darwin-386.tar.gz
+        - name: consul_exporter-0.7.1.darwin-amd64.tar.gz
+          commit: null
+          size: 7991489
+          sha256: sha256:fe85188cec0445cee79e72456607f781ad964469f5dd59b9ace147f632c391db
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.darwin-amd64.tar.gz
+        - name: consul_exporter-0.7.1.dragonfly-amd64.tar.gz
+          commit: null
+          size: 7994727
+          sha256: sha256:f7b19e43d3a984f4d85a5db688f5e3cd9c1f52e3977200cde5b75f9a92ca1573
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.dragonfly-amd64.tar.gz
+        - name: consul_exporter-0.7.1.freebsd-386.tar.gz
+          commit: null
+          size: 7835180
+          sha256: sha256:9cdd991d53a1cfda836159753134ddfb7e52cd60f4f78812f7d335cf26dccd97
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.freebsd-386.tar.gz
+        - name: consul_exporter-0.7.1.freebsd-amd64.tar.gz
+          commit: null
+          size: 8023334
+          sha256: sha256:ce9e46981a30612e702f795407bd86ec9b500a7bb83ced7ab26115d8126f8336
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.freebsd-amd64.tar.gz
+        - name: consul_exporter-0.7.1.freebsd-armv6.tar.gz
+          commit: null
+          size: 7475767
+          sha256: sha256:cf115876742117c98fff81f95a13eda600bce9436a20ca9b7a4f5d85f2f854d4
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.freebsd-armv6.tar.gz
+        - name: consul_exporter-0.7.1.freebsd-armv7.tar.gz
+          commit: null
+          size: 7471272
+          sha256: sha256:64169b31955c60abfd5003ac8a1972c3dae9eda7f71fa78e7c1b6620594d71f4
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.freebsd-armv7.tar.gz
+        - name: consul_exporter-0.7.1.linux-386.tar.gz
+          commit: null
+          size: 7853262
+          sha256: sha256:dbb7edfd1538ab60250c0e8be0957bda4963387d0e3d81be324ccc02198f3c88
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.linux-386.tar.gz
+        - name: consul_exporter-0.7.1.linux-amd64.tar.gz
+          commit: null
+          size: 8030490
+          sha256: sha256:92ffd37fb5f2350df21e7a688c28e7bb2882c309f613400eafdc411c818ec048
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.linux-amd64.tar.gz
+        - name: consul_exporter-0.7.1.linux-arm64.tar.gz
+          commit: null
+          size: 7508175
+          sha256: sha256:f881880d40f71b11f61e6f3a61f7b256cebc8b20eaeaa81f39db4504c161bcc4
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.linux-arm64.tar.gz
+        - name: consul_exporter-0.7.1.linux-armv5.tar.gz
+          commit: null
+          size: 7491840
+          sha256: sha256:087e32ad768d8ab1b3baf3c831c070af27b47acecaac2eb1af126eaaeae3836c
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.linux-armv5.tar.gz
+        - name: consul_exporter-0.7.1.linux-armv6.tar.gz
+          commit: null
+          size: 7484902
+          sha256: sha256:1d49be1bc3f0d6a7486057e3117dd4c4e1e432749cb13c97f655663af197e01d
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.linux-armv6.tar.gz
+        - name: consul_exporter-0.7.1.linux-armv7.tar.gz
+          commit: null
+          size: 7482214
+          sha256: sha256:87b85b1a792181039069bfddd926cdd90c77b61ef4dbef33326df2d0365f9b85
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.linux-armv7.tar.gz
+        - name: consul_exporter-0.7.1.linux-mips.tar.gz
+          commit: null
+          size: 7501534
+          sha256: sha256:a88969fc7f11164b246695134a0c8f47ecbd0bee9fd828523b97bd4c74856462
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.linux-mips.tar.gz
+        - name: consul_exporter-0.7.1.linux-mips64.tar.gz
+          commit: null
+          size: 7629183
+          sha256: sha256:984ed1a3bae86670a7977b592b30b3b521b8b69156b28f0e0210c6d9172f581c
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.linux-mips64.tar.gz
+        - name: consul_exporter-0.7.1.linux-mips64le.tar.gz
+          commit: null
+          size: 7406572
+          sha256: sha256:4fcca4605401eeaa57d7d6d8613630399b3cdd9d46e2d497243e9589d0d49dc1
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.linux-mips64le.tar.gz
+        - name: consul_exporter-0.7.1.linux-mipsle.tar.gz
+          commit: null
+          size: 7340319
+          sha256: sha256:66d3b306e31696bfc355a4b0e7c783fe136277668516492a9164db4ebcce940e
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.linux-mipsle.tar.gz
+        - name: consul_exporter-0.7.1.linux-ppc64.tar.gz
+          commit: null
+          size: 7674198
+          sha256: sha256:449bc98f4fa71b3aa922cdcaa742a399c39594ba6f66e58303f829707bcc9e7b
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.linux-ppc64.tar.gz
+        - name: consul_exporter-0.7.1.linux-ppc64le.tar.gz
+          commit: null
+          size: 7467318
+          sha256: sha256:202db7f20044be2d78fea43ce35debcc635471e8b2dfa1ee1f6ff3bf08eff6fb
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.linux-ppc64le.tar.gz
+        - name: consul_exporter-0.7.1.linux-s390x.tar.gz
+          commit: null
+          size: 8098694
+          sha256: sha256:684123d6c3aff368e79dfc9b4e65f317f9c6b46b3bd589829be848d654fe2922
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.linux-s390x.tar.gz
+        - name: consul_exporter-0.7.1.netbsd-386.tar.gz
+          commit: null
+          size: 7809799
+          sha256: sha256:7667e57673525e375796af1c5c64301766dd082a834abd0679881a0c131ea38f
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.netbsd-386.tar.gz
+        - name: consul_exporter-0.7.1.netbsd-amd64.tar.gz
+          commit: null
+          size: 7993383
+          sha256: sha256:c4526b644659e4932099924ee33dde906a343ed3bad17f0dd60772e79c1a29f3
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.netbsd-amd64.tar.gz
+        - name: consul_exporter-0.7.1.netbsd-armv6.tar.gz
+          commit: null
+          size: 7452583
+          sha256: sha256:15e136d56b8522d4a6986f8dc249b942f495984d06d77bb2c3b1b9ea78c0077d
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.netbsd-armv6.tar.gz
+        - name: consul_exporter-0.7.1.netbsd-armv7.tar.gz
+          commit: null
+          size: 7450267
+          sha256: sha256:d92b840b14fea3831429d0b1833886c4f2045cdfbc4779fb563b96c8433f0551
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.netbsd-armv7.tar.gz
+        - name: consul_exporter-0.7.1.openbsd-386.tar.gz
+          commit: null
+          size: 7808017
+          sha256: sha256:fb1e06f8d7c9b3be14343d42a69bfd52bf6bff4d127def691d8f9bcaf9701dee
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.openbsd-386.tar.gz
+        - name: consul_exporter-0.7.1.openbsd-amd64.tar.gz
+          commit: null
+          size: 7996259
+          sha256: sha256:8374295c1a7b9da3db7db6c6d5935f2968e5be9f6e8266a3c8492abea18029b7
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.openbsd-amd64.tar.gz
+        - name: consul_exporter-0.7.1.openbsd-armv7.tar.gz
+          commit: null
+          size: 7447098
+          sha256: sha256:1fde708bc3a852d7def1d84d21bfb5a48878000a61ab63edb91ceaca5e6eaa1e
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.openbsd-armv7.tar.gz
+        - name: consul_exporter-0.7.1.windows-386.tar.gz
+          commit: null
+          size: 7767171
+          sha256: sha256:3e4f48815bde26c55968f07aa950aa88f61c9c04280465947a46d57b0e69b117
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.windows-386.tar.gz
+        - name: consul_exporter-0.7.1.windows-amd64.tar.gz
+          commit: null
+          size: 7966928
+          sha256: sha256:d44cdc430116790eb75bcc6a9f23de8bf0fce37174777dc174e879e9fad0f757
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.windows-amd64.tar.gz
+        - name: sha256sums.txt
+          commit: null
+          size: 3230
+          sha256: sha256:fa71e6747bf1e7f0d5e1aaf2bcfec0bd03d35b9daf2d93046aa2cf522eff06ff
+          url: https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/sha256sums.txt
