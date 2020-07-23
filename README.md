@@ -40,7 +40,7 @@ The following core Prometheus software is supported in addition to the list of e
 |[push_gateway](https://github.com/prometheus/pushgateway)  | [usage](docs/pushgateway.md)              | prometheus | Yes       |
 
 ### Managed exporters
-All exporters are verified to install. Currently select modules receive testing via CI (Continuous Integration) and [Inspec](https://www.inspec.io)
+All exporters are verified to install. Currently select modules receive testing via CI (Continuous Integration) and [Inspec](https://github.com/inspec/inspec)
 
 See each exporter's usage page for more details:
 
