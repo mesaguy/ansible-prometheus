@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.17] - 2020-08-01
+
+- Upgrade couchdb_exporter_gesellix from v27.2.0 to v28.0.0
+- Upgrade ipmi_exporter_soundcloud from v1.2.0 to v1.3.0
+- Upgrade memcached_exporter from v0.6.0 to v0.7.0
+- Upgrade yum.sh script to commit: '57d05ce7ab752ec6795b452b1b660b736a32dcd5'
+- Update metadata to include latest master commits
+
 ## [0.12.16] - 2020-07-23
 
 - Upgrade Prometheus from v2.19.2 to v2.20.0
