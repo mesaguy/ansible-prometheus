@@ -4,15 +4,15 @@ defaults:
   tgroup: ntp
 software:
   name: sapcc/ntp_exporter
-  release: v1.1.3
+  release: v2.0.0
   prerelease: null
   url: https://github.com/sapcc/ntp_exporter
   source: https://github.com/sapcc/ntp_exporter.git
-  updated: '2020-06-17T23:52:24.676444'
+  updated: '2020-08-05T23:46:39.469964'
   master:
     commit:
-      sha: 550de036780568ed1a4c73a5588dbb41c3b5193b
-      timestamp: '2020-06-16T09:59:27'
+      sha: 3d020a36c144974b30276261f194f20b6c279fd6
+      timestamp: '2020-08-04T09:56:17'
     files: []
   releases:
     - name: v1.1.1
@@ -44,3 +44,28 @@ software:
       timestamp: '2020-05-28T13:35:30'
       prerelease: false
       files: []
+    - name: v2.0.0
+      commit: null
+      timestamp: '2020-08-04T09:59:00'
+      prerelease: false
+      files:
+        - name: checksums.txt
+          commit: null
+          size: 315
+          sha256: sha256:7a7827a66933eb95fd6b3b08d5a6f22c17b0c68017274f80df1ea60d8995dc53
+          url: https://github.com/sapcc/ntp_exporter/releases/download/v2.0.0/checksums.txt
+        - name: ntp_exporter-2.0.0-darwin-amd64.tar.gz
+          commit: null
+          size: 3900912
+          sha256: sha256:7fec1c80631c4726da998433c83893d01cd786c73b7ac5b8e8e369a8d0d308f1
+          url: https://github.com/sapcc/ntp_exporter/releases/download/v2.0.0/ntp_exporter-2.0.0-darwin-amd64.tar.gz
+        - name: ntp_exporter-2.0.0-linux-amd64.tar.gz
+          commit: null
+          size: 3690928
+          sha256: sha256:1552d073ea7353ef0b5def99974550f77a18d0e9c358147d17c3b764d3ee1d74
+          url: https://github.com/sapcc/ntp_exporter/releases/download/v2.0.0/ntp_exporter-2.0.0-linux-amd64.tar.gz
+        - name: ntp_exporter-2.0.0-windows-amd64.tar.gz
+          commit: null
+          size: 3601181
+          sha256: sha256:ab25dd0f2545542d8290308db92dc547eac47afd50d22c990611f1a5eec1c29c
+          url: https://github.com/sapcc/ntp_exporter/releases/download/v2.0.0/ntp_exporter-2.0.0-windows-amd64.tar.gz

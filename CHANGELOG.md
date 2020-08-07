@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.18] - 2020-08-07
+
+- Upgrade Go from v1.13.14 to v1.13.15
+- Upgrade Prometheus from v2.20.0 to v2.20.1
+- Upgrade digitalocean_exporter_metalmatze from v0.5 to v0.6.0
+- Upgrade ntp_exporter_sapcc v1.1.3 to v2.0.0
+- Upgrade process_exporter_ncabatoff from v0.7.1 to v0.7.2
+- Update metadata to include latest master commits
+
 ## [0.12.17] - 2020-08-01
 
 - Upgrade couchdb_exporter_gesellix from v27.2.0 to v28.0.0
