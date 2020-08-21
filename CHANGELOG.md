@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.19] - 2020-08-21
+- Upgrade mongodb_exporter_percona from v0.11.0 to v0.11.1
+- Upgrade redis_exporter_oliver006 from v1.9.0 to v1.10.0
+- Upgrade squid_exporter_boynux from v1.8.3 to v1.9.1
+- Update metadata to include latest master commits
+
 ## [0.12.18] - 2020-08-07
 
 - Upgrade Go from v1.13.14 to v1.13.15
