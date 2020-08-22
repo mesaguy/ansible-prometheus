@@ -6,10 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.12.19] - 2020-08-21
+- Upgrade influxdb_exporter from v0.4.2 to v0.5.0
 - Upgrade mongodb_exporter_percona from v0.11.0 to v0.11.1
 - Upgrade redis_exporter_oliver006 from v1.9.0 to v1.10.0
 - Upgrade squid_exporter_boynux from v1.8.3 to v1.9.1
+- Upgrade statsd_exporter from v0.17.0 to v0.18.0
+- Upgrade apt.sh script to commit: 'd1d4362f90e5b90fe874b1224a5085b6708d9c1f'
+- Upgrade smartmon.sh script to commit: '98bbe398807585f7c55e2f3441704f0955f9f25e'
+- Upgrade smartmon.py script to commit: 'af894802adb9d08b760321ff79db49034f260d49'
+- Upgrade yum.sh script to commit: '57d05ce7ab752ec6795b452b1b660b736a32dcd5'
 - Update metadata to include latest master commits
 
 ## [0.12.18] - 2020-08-07
