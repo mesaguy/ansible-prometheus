@@ -12,8 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgrade squid_exporter_boynux from v1.8.3 to v1.9.1
 - Upgrade statsd_exporter from v0.17.0 to v0.18.0
 - Upgrade apt.sh script to commit: 'd1d4362f90e5b90fe874b1224a5085b6708d9c1f'
-- Upgrade smartmon.sh script to commit: '98bbe398807585f7c55e2f3441704f0955f9f25e'
+- Upgrade lvm-prom-collector script to commit: 'a5417e40f505e205d6659577e0faa9751165e35d'
 - Upgrade smartmon.py script to commit: 'af894802adb9d08b760321ff79db49034f260d49'
+- Upgrade smartmon.sh script to commit: '98bbe398807585f7c55e2f3441704f0955f9f25e'
 - Upgrade yum.sh script to commit: '57d05ce7ab752ec6795b452b1b660b736a32dcd5'
 - Update metadata to include latest master commits
 
