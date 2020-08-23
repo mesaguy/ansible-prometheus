@@ -15,8 +15,8 @@
     that:
       - '"name" in prometheus_script_cron_job'
       - '"script" in prometheus_script_cron_job'
-      - prometheus_script_cron_job.name != ""
-      - prometheus_script_cron_job.script != ""
+      - prometheus_script_cron_job.name
+      - prometheus_script_cron_job.script
   loop_control:
     loop_var: prometheus_script_cron_job
   with_items: '{{ prometheus_setup_script_crons }}'
