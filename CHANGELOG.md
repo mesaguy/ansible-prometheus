@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.19] - 2020-08-24
+
+### Changed
+
 - Upgrade influxdb_exporter from v0.4.2 to v0.5.0
 - Upgrade mongodb_exporter_percona from v0.11.0 to v0.11.1
 - Upgrade redis_exporter_oliver006 from v1.9.0 to v1.10.0
@@ -20,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.12.18] - 2020-08-07
 
+### Changed
+
 - Upgrade Go from v1.13.14 to v1.13.15
 - Upgrade Prometheus from v2.20.0 to v2.20.1
 - Upgrade digitalocean_exporter_metalmatze from v0.5 to v0.6.0
@@ -29,6 +35,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.12.17] - 2020-08-01
 
+### Changed
+
 - Upgrade couchdb_exporter_gesellix from v27.2.0 to v28.0.0
 - Upgrade ipmi_exporter_soundcloud from v1.2.0 to v1.3.0
 - Upgrade memcached_exporter from v0.6.0 to v0.7.0
@@ -36,6 +44,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update metadata to include latest master commits
 
 ## [0.12.16] - 2020-07-23
+
+### Changed
 
 - Upgrade Prometheus from v2.19.2 to v2.20.0
 - Upgrade Prometheus (pre-release) from v2.20.0-rc.0 to v2.20.0-rc.1
