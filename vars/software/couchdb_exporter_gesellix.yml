@@ -4,17 +4,87 @@ defaults:
   tgroup: couchdb
 software:
   name: gesellix/couchdb-prometheus-exporter
-  release: v28.0.0
+  release: v28.0.2
   prerelease: null
   url: https://github.com/gesellix/couchdb-prometheus-exporter
   source: https://github.com/gesellix/couchdb-prometheus-exporter.git
-  updated: '2020-07-31T23:38:50.954281'
+  updated: '2020-08-30T19:19:52.676263'
   master:
     commit:
-      sha: fc2d4c23f215b6487d0d73db63829ddc1bfef839
-      timestamp: '2020-07-26T18:59:07'
+      sha: 6245b5d41e6f0074bce4f916e4db4ba9d1c7a6f9
+      timestamp: '2020-08-29T10:43:58'
     files: []
   releases:
+    - name: v28.0.2
+      commit: null
+      timestamp: '2020-08-28T06:47:52'
+      prerelease: false
+      files:
+        - name: checksums.txt
+          commit: null
+          size: 603
+          sha256: sha256:e11cdd1437f19039ccea5dfc1961a54b6c440403f9d4b0e7d4c584500ee4adc3
+          url: https://github.com/gesellix/couchdb-prometheus-exporter/releases/download/v28.0.2/checksums.txt
+        - name: couchdb-prometheus-exporter_28.0.2_Darwin_x86_64.tar.gz
+          commit: null
+          size: 4532038
+          sha256: sha256:0e97b9d7c5be51832d366f619a2115874412eda64f6d09c120d5883fa29cf4d9
+          url: https://github.com/gesellix/couchdb-prometheus-exporter/releases/download/v28.0.2/couchdb-prometheus-exporter_28.0.2_Darwin_x86_64.tar.gz
+        - name: couchdb-prometheus-exporter_28.0.2_Linux_arm64.tar.gz
+          commit: null
+          size: 3953824
+          sha256: sha256:8374b2a9ffc06e22e08f3c379e8cb2609ddb0563909acc3d4c3c25a6c8ee2099
+          url: https://github.com/gesellix/couchdb-prometheus-exporter/releases/download/v28.0.2/couchdb-prometheus-exporter_28.0.2_Linux_arm64.tar.gz
+        - name: couchdb-prometheus-exporter_28.0.2_Linux_armv6.tar.gz
+          commit: null
+          size: 4052567
+          sha256: sha256:ca40b3e03c375b0a91b6ab7f79ee78abe50c19959cfae62433d816d97ce5a49f
+          url: https://github.com/gesellix/couchdb-prometheus-exporter/releases/download/v28.0.2/couchdb-prometheus-exporter_28.0.2_Linux_armv6.tar.gz
+        - name: couchdb-prometheus-exporter_28.0.2_Linux_x86_64.tar.gz
+          commit: null
+          size: 4301989
+          sha256: sha256:d594fd8753bda1cfddfe89baa1291ccc472c8860857e58b1f783ac5b1110a5c0
+          url: https://github.com/gesellix/couchdb-prometheus-exporter/releases/download/v28.0.2/couchdb-prometheus-exporter_28.0.2_Linux_x86_64.tar.gz
+        - name: couchdb-prometheus-exporter_28.0.2_Windows_x86_64.zip
+          commit: null
+          size: 4125368
+          sha256: sha256:b1ac3c9b928cc209ec0d5e6e05fc42690ddc206faa9442b3f0475e23717a5321
+          url: https://github.com/gesellix/couchdb-prometheus-exporter/releases/download/v28.0.2/couchdb-prometheus-exporter_28.0.2_Windows_x86_64.zip
+    - name: v28.0.1
+      commit: null
+      timestamp: '2020-08-27T19:58:55'
+      prerelease: false
+      files:
+        - name: checksums.txt
+          commit: null
+          size: 603
+          sha256: sha256:c42181cb0affd79f7a3ea6e8f437f462d9564be5232cc6f70a218d1379059496
+          url: https://github.com/gesellix/couchdb-prometheus-exporter/releases/download/v28.0.1/checksums.txt
+        - name: couchdb-prometheus-exporter_28.0.1_Darwin_x86_64.tar.gz
+          commit: null
+          size: 4532044
+          sha256: sha256:7f8f4699655f2ba34a4ccfa3d51906597544f42abfc4de1625ba7c09386db1e3
+          url: https://github.com/gesellix/couchdb-prometheus-exporter/releases/download/v28.0.1/couchdb-prometheus-exporter_28.0.1_Darwin_x86_64.tar.gz
+        - name: couchdb-prometheus-exporter_28.0.1_Linux_arm64.tar.gz
+          commit: null
+          size: 3953882
+          sha256: sha256:02d6e95324dabb2c768ca39e8a0f00cd66c48a24801f13e31bc6b6f87ef9785c
+          url: https://github.com/gesellix/couchdb-prometheus-exporter/releases/download/v28.0.1/couchdb-prometheus-exporter_28.0.1_Linux_arm64.tar.gz
+        - name: couchdb-prometheus-exporter_28.0.1_Linux_armv6.tar.gz
+          commit: null
+          size: 4052498
+          sha256: sha256:6a7a0f66df30a398cdc2b89894752e694701be9d5f2f49a2f40432d70a6f18f4
+          url: https://github.com/gesellix/couchdb-prometheus-exporter/releases/download/v28.0.1/couchdb-prometheus-exporter_28.0.1_Linux_armv6.tar.gz
+        - name: couchdb-prometheus-exporter_28.0.1_Linux_x86_64.tar.gz
+          commit: null
+          size: 4301645
+          sha256: sha256:e64ce14518d396c4ed3e27d13bc1d44cb63c5ed919c12ca76c81980c9b35982a
+          url: https://github.com/gesellix/couchdb-prometheus-exporter/releases/download/v28.0.1/couchdb-prometheus-exporter_28.0.1_Linux_x86_64.tar.gz
+        - name: couchdb-prometheus-exporter_28.0.1_Windows_x86_64.zip
+          commit: null
+          size: 4125360
+          sha256: sha256:1a5f7448bc24ce6600d9601020658c5c61212c1e8e757c22a18d9b8ce781fbd4
+          url: https://github.com/gesellix/couchdb-prometheus-exporter/releases/download/v28.0.1/couchdb-prometheus-exporter_28.0.1_Windows_x86_64.zip
     - name: v28.0.0
       commit: null
       timestamp: '2020-07-26T19:07:31'
@@ -291,19 +361,5 @@ software:
         sha: c9e7b42c2ee07dfec6ffffa909b9826b615bb5f9
         timestamp: '2020-02-12T20:54:41'
       timestamp: '2020-02-12T20:54:49'
-      prerelease: false
-      files: []
-    - name: 0.27.1
-      commit:
-        sha: bdae46bf8a8cebea44e83d35340594ea43bd5be4
-        timestamp: '2020-02-12T20:49:24'
-      timestamp: '2020-02-12T20:49:32'
-      prerelease: false
-      files: []
-    - name: 0.27.0
-      commit:
-        sha: a81172644f205d25304304600b03e67233af896c
-        timestamp: '2020-02-12T20:44:05'
-      timestamp: '2020-02-12T20:48:01'
       prerelease: false
       files: []

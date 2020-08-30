@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.20] - 2020-08-31
+
+### Changed
+
+- Expand ability to configure ping_exporter_czerwonk and document new configuration options
+- Upgrade Prometheus (pre-release) from v2.20.0-rc.1 to v2.21.0-rc.0
+- Upgrade cloudwatch from v0.8.0 to v0.9.0
+- Upgrade couchdb_exporter_gesellix from v28.0.0 to v28.0.2
+- Upgrade redis_exporter_oliver006 from v1.10.0 to v1.11.1
+- Update metadata to include latest master commits
+
+### Changed
+
 ## [0.12.19] - 2020-08-24
 
 ### Changed
