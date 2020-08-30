@@ -2,9 +2,12 @@
 #
 # Do not edit manually, this file is managed using automation tools
 #
+{% if prometheus_ping_exporter_czerwonk_cfg is defined and "targets" in prometheus_ping_exporter_czerwonk_cfg %}
+  {{ prometheus_ping_exporter_czerwonk_cfg | to_nice_yaml(width=80, indent=2) | indent(2) }}
+{% elif prometheus_ping_exporter_czerwonk_cfg is defined %}
 targets:
-{% if prometheus_ping_exporter_czerwonk_cfg is defined %}
   {{ prometheus_ping_exporter_czerwonk_cfg | to_nice_yaml(width=80, indent=2) | indent(2) }}
 {% else %}
+targets:
   - localhost
 {% endif %}
