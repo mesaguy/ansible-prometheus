@@ -13,5 +13,6 @@
     state: present
   loop_control:
     loop_var: prometheus_software_capability
+  ignore_errors: true
   with_items: '{{ prometheus_software_capabilities[prometheus_software_capabilities_file] }}'
   when: prometheus_software_capabilities_present.rc == 0
