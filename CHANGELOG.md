@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade Prometheus from v2.20.1 to v2.21.0
+- Upgrade Prometheus (pre-release) from v2.21.0-rc.0 to v2.21.0-rc.1
+- Upgrade jmx_exporter from v0.13.0 to v0.14.0
+- Upgrade keepalived_exporter_gen2brain from v0.4.0 to v0.5.0
+- Upgrade ssl_exporter_ribbybibby from v2.0.0 to v2.1.0
+- Update metadata to include latest master commits
+
 ## [0.12.20] - 2020-08-31
 
 ### Changed
