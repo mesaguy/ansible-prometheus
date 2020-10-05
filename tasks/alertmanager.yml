@@ -9,7 +9,7 @@
     prometheus_exporter: false
     prometheus_software_author: prometheus
     prometheus_software_binary_name: alertmanager
-    prometheus_software_config: '{{ prometheus_alertmanager_cfg | default(lookup("file", "../files/defaults/alertmanager.yml") | from_yaml) }}'
+    prometheus_software_config: '{{ prometheus_alertmanager_cfg | default(lookup("file", "files/defaults/alertmanager.yml") | from_yaml) }}'
     prometheus_software_files:
       - alertmanager
       - amtool
@@ -49,7 +49,7 @@
 - name: Setup {{ prometheus_software_name_version }} configuration file
   become: true
   template:
-    src: '../templates/generic-config.yml.j2'
+    src: 'templates/generic-config.yml.j2'
     dest: '{{ prometheus_etc_dir }}/alertmanager.yml'
     owner: root
     group: '{{ prometheus_group }}'

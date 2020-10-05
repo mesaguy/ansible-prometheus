@@ -69,7 +69,7 @@ script:
 
   # Check Ansible Galaxy lint
   - if [ "$METADATA_TESTS" == "true" ]; then git clone https://github.com/ansible/galaxy-lint-rules.git ; fi
-  - if [ "$METADATA_TESTS" == "true" ]; then ansible-lint -r galaxy-lint-rules/rules . ; fi
+  - if [ "$METADATA_TESTS" == "true" ]; then ansible-lint -x 204,305 -r galaxy-lint-rules/rules . ; fi
 
   # Display Ansible version
   - if [ "$METADATA_TESTS" != "true" ]; then ansible --version; fi

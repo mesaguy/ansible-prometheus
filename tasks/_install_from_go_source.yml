@@ -18,6 +18,9 @@
     state: present
   ignore_errors: true
   register: prometheus_build_prerequisite_packages_install
+  retries: 5
+  delay: 10
+  until: prometheus_build_prerequisite_packages_install is succeeded
   when:
     - prometheus_software_build_prerequisites | length > 0
     - '"packages" in prometheus_software_build_prerequisites'

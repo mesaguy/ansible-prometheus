@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Add retries to scripts/sssd_check.sh script
+- Add [iptables_raw module](https://github.com/Nordeus/ansible_iptables_raw) for ansible-lint
 
 ### Changed
 
@@ -24,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update metadata to include latest master commits
 - Disable tests for Ansible run from Python 2.7
 - Run tests using Python 3.8
+- Allow setting of capabilities to fail on Gentoo due to Ansible bug
 
 ## [0.12.21] - 2020-09-17
 

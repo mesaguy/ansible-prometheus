@@ -3,7 +3,7 @@
   become: true
   template:
     dest: '/etc/init.d/{{ prometheus_software_service_name }}'
-    src: '../templates/daemon-{{ ansible_service_mgr }}.j2'
+    src: 'templates/daemon-{{ ansible_service_mgr }}.j2'
     owner: root
     group: root
     mode: '0750'

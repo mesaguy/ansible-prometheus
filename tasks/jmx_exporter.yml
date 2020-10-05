@@ -34,7 +34,7 @@
 - name: Setup {{ prometheus_software_name_version }} configuration files
   become: true
   template:
-    src: '../templates/jmx-config.yml.j2'
+    src: 'templates/jmx-config.yml.j2'
     dest: '{{ prometheus_etc_dir }}/{{ prometheus_software_name }}.{{ jmx_instance.key }}.yml'
     owner: root
     group: '{{ prometheus_group }}'

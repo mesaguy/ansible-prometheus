@@ -10,4 +10,8 @@
   become: true
   apk:
     update_cache: true
+  register: prometheus_apk_update
+  retries: 5
+  delay: 10
+  until: prometheus_apk_update is succeeded
   when: apk_indexes.matched | int == 0

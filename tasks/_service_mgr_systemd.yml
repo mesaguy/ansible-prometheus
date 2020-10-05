@@ -3,7 +3,7 @@
   become: true
   template:
     dest: '/etc/systemd/system/{{ prometheus_software_service_name }}.service'
-    src: ../templates/daemon-systemd.j2
+    src: templates/daemon-systemd.j2
     owner: root
     group: root
     mode: '0640'

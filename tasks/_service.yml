@@ -11,7 +11,7 @@
   become: true
   template:
     dest: '{{ prometheus_etc_dir }}/{{ prometheus_software_service_name }}.env'
-    src: ../templates/daemon-env.j2
+    src: templates/daemon-env.j2
     owner: root
     group: '{{ prometheus_group }}'
     mode: '0640'
@@ -22,16 +22,18 @@
 - name: Include task to setup {{ prometheus_software_name_version }} {{ ansible_service_mgr }} service
   include_tasks: '_service_mgr_{{ ansible_service_mgr | regex_replace("^(openrc|upstart)$", "init") }}.yml'
 
+- name: Set fact to restart {{ prometheus_software_service_name }} service as part of restarting all
+  set_fact:
+    # Dummy fact, really just specifies "notify" to restart the service
+    prometheus_restart_all: true
+  notify:
+    - Restart Prometheus service
+  when:
+    - prometheus_ulimits is defined
+    - prometheus_ulimits is changed
+
 - name: Force all notified handlers to run
   meta: flush_handlers
-
-- name: Restart {{ prometheus_software_service_name }} service as part of restarting all
-  become: true
-  service:
-    state: restarted
-    name: '{{ prometheus_software_service_name }}'
-  when:
-    - prometheus_ulimits is defined and prometheus_ulimits.changed
 
 - name: Enable {{ prometheus_software_service_name }} service
   become: true
