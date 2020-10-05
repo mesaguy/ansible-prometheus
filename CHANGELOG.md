@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Upgrade Go from v1.13.15 to v1.14.9
-- Upgrade couchdb_exporter_gesellix from v28.0.2 to v29.0.0
+- Upgrade couchdb_exporter_gesellix from v28.0.2 to v29.2.0
 - Upgrade digitalocean_exporter_metalmatze from v0.6.0 to v0.6.1
 - Upgrade grok_exporter_fstab from v1.0.0.RC4 (prerelease) to v1.0.0.RC5 (prerelease)
 - Upgrade mongodb_exporter_percona from v0.11.1 to v0.20.0
