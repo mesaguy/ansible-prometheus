@@ -62,7 +62,7 @@ script:
   - if [ "$METADATA_TESTS" == "true" ]; then chmod +x tests/all_software_inspec_tested && ./tests/all_software_inspec_tested ; fi
 
   # Perform ansible-lint checks
-  - if [ "$METADATA_TESTS" == "true" ]; then ansible-lint tasks/* ; fi
+  - if [ "$METADATA_TESTS" == "true" ]; then ansible-lint -x 204 tasks/* ; fi
 
   # Check playbook's syntax
   - if [ "$METADATA_TESTS" == "true" ]; then ansible-playbook -i tests/inventory tests/playbooks/install_all.yml --syntax-check ; fi

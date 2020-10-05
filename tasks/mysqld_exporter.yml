@@ -28,7 +28,7 @@
   include_tasks: _install.yml
 
 - block:
-    - name: Collect "{{ prometheus_user}}" user information
+    - name: Collect "{{ prometheus_user }}" user information
       user:
         name: '{{ prometheus_user }}'
       register: prometheus_user_registered

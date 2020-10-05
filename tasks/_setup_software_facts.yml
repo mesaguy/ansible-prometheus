@@ -70,18 +70,18 @@
   when:
     - prometheus_software_use_prerelease
     - prometheus_software_default_prerelease | default(false)
-    - prometheus_software_version == "" or prometheus_software_default_prerelease is version(prometheus_software_version, 'gt')
+    - prometheus_software_version or prometheus_software_default_prerelease is version(prometheus_software_version, 'gt')
 
 - name: Set {{ prometheus_software_name }} version to git master as last resort
   set_fact:
     prometheus_software_version: '{{ prometheus_software_default_git_master }}'
   when:
-    - prometheus_software_version == ""
+    - prometheus_software_version
 
 - name: Set {{ prometheus_software_name }} architecture facts
   set_fact:
     prometheus_software_architecture: '{{ prometheus_architecture }}'
-  when: prometheus_software_architecture is undefined or prometheus_software_architecture == ""
+  when: prometheus_software_architecture is undefined or not prometheus_software_architecture
 
 - name: Software version and release facts
   debug:
