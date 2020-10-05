@@ -12,7 +12,7 @@
     capability: '{{ prometheus_software_capability }}'
     state: present
   # See: https://github.com/ansible/ansible/issues/18911
-  ignore_errors: '{{ ansible_os_family == "Archlinux" }}'
+  ignore_errors: '{{ ansible_os_family in ["Archlinux", "Gentoo"] }}'
   loop_control:
     loop_var: prometheus_software_capability
   with_items: '{{ prometheus_software_capabilities[prometheus_software_capabilities_file] }}'
