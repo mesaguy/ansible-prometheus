@@ -9,7 +9,7 @@
 # Version: 1.2 (2020-05-05)
 
 {% if prometheus_promcron_ansible_managed | default(false) %}
-TEXTFILE_DIRECTORY="{{ prometheus_node_exporter_textfiles_directory }}"
+TEXTFILE_DIRECTORY="{{ prometheus_node_exporter_textfiles_dir }}"
 HAS_SPONGE="{{ prometheus_sponge_is_installed }}"
 {% else %}
 TEXTFILE_DIRECTORY="/etc/prometheus/node_exporter_textfiles"

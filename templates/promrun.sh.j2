@@ -14,7 +14,7 @@
 {% if prometheus_promrun_ansible_managed | default(false) %}
 HAS_TIME="{{ prometheus_time_is_installed }}"
 GNU_TIME_COMMAND="{{ prometheus_gnu_time_path }}"
-TEXTFILE_DIRECTORY="{{ prometheus_node_exporter_textfiles_directory }}"
+TEXTFILE_DIRECTORY="{{ prometheus_node_exporter_textfiles_dir }}"
 {% else %}
 GNU_TIME_COMMAND=/usr/bin/time
 if which time > /dev/null 2>&1 ; then
