@@ -6,6 +6,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add retries to scripts/sssd_check.sh script
+
+### Changed
+
+- Upgrade Go from v1.13.15 to v1.14.9
+- Upgrade couchdb_exporter_gesellix from v28.0.2 to v29.0.0
+- Upgrade digitalocean_exporter_metalmatze from v0.6.0 to v0.6.1
+- Upgrade grok_exporter_fstab from v1.0.0.RC4 (prerelease) to v1.0.0.RC5 (prerelease)
+- Upgrade mongodb_exporter_percona from v0.11.1 to v0.20.0
+- Upgrade pushgateway from v1.2.0 to v1.3.0
+- Upgrade redis_exporter_oliver006 from v1.11.1 to v1.12.0
+- Upgrade squid_exporter_boynux from v1.9.1 to v1.9.2
+- Upgrade ssl_exporter_ribbybibby from v2.1.0 to v2.1.1
+- Update metadata to include latest master commits
+
+## [0.12.21] - 2020-09-17
+
 ### Changed
 
 - Upgrade Prometheus from v2.20.1 to v2.21.0
