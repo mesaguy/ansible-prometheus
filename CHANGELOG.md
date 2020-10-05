@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgrade squid_exporter_boynux from v1.9.1 to v1.9.2
 - Upgrade ssl_exporter_ribbybibby from v2.1.0 to v2.1.1
 - Update metadata to include latest master commits
+- Disable tests for Ansible run from Python 2.7
 
 ## [0.12.21] - 2020-09-17
 
