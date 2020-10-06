@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.22] - 2020-10-06
+
 ### Added
 
 - Add retries to scripts/sssd_check.sh script
