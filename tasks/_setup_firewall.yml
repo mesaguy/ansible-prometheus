@@ -4,7 +4,7 @@
   firewalld:
     immediate: true
     permanent: true
-    rich_rule: 'rule family={% if prometheus_server_ip | ipv4 != False %}ipv4{% else %}ipv6{% endif %} source address={{ prometheus_server_ip }} port port={{ prometheus_software_instance_port | default(prometheus_software_port, true) }} protocol=tcp accept'
+    rich_rule: 'rule family={% if prometheus_server_ip | not ipv4 %}ipv4{% else %}ipv6{% endif %} source address={{ prometheus_server_ip }} port port={{ prometheus_software_instance_port | default(prometheus_software_port, true) }} protocol=tcp accept'
     state: enabled
     zone: '{{ prometheus_firewalld_zone }}'
   loop_control:
@@ -13,7 +13,7 @@
   when:
     - prometheus_manage_client_firewalld | bool
     - prometheus_software_instance_port | default(prometheus_software_port, true)
-    - prometheus_server_ips|length >= 1
+    - prometheus_server_ips | length >= 1
 
 - name: Allow incoming prometheus server connections to {{ prometheus_software_name }}:{{ prometheus_software_instance_port | default(prometheus_software_port, true) }} via iptables
   become: true
@@ -32,7 +32,7 @@
   when:
     - prometheus_manage_client_iptables | bool
     - prometheus_software_instance_port | default(prometheus_software_port, true)
-    - prometheus_server_ips|length >= 1
+    - prometheus_server_ips | length >= 1
 
 - name: Include task for iptables_raw firewall management
   include_tasks: '_setup_firewall_iptables_raw.yml'

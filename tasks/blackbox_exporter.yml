@@ -36,7 +36,7 @@
 - name: Setup {{ prometheus_software_name_version }} configuration file
   become: true
   template:
-    src: '../templates/blackbox_exporter.yml.j2'
+    src: 'templates/blackbox_exporter.yml.j2'
     dest: '{{ prometheus_etc_dir }}/blackbox_exporter.yml'
     owner: root
     group: '{{ prometheus_group }}'

@@ -8,7 +8,7 @@
   become: true
   template:
     dest: '{{ prometheus_script_directory }}/promcron'
-    src: ../templates/promcron.sh.j2
+    src: templates/promcron.sh.j2
     owner: root
     group: root
     mode: '0555'

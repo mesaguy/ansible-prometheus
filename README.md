@@ -10,7 +10,7 @@ This role can register client exporters with the Prometheus server/s automatical
 
 ## Requirements
 
-- Ansible >= 2.7.0
+- Ansible >= 2.8.0
 - Facts must be gathered (gather_facts: true)
 
 ## Supported Software and Operating Systems

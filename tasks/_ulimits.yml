@@ -8,7 +8,7 @@
     line: '{{ prometheus_ulimit.line }}'
     owner: root
     group: root
-    mode: '0444'
+    mode: 0444
   loop_control:
     loop_var: prometheus_ulimit
   register: prometheus_ulimits

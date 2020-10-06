@@ -23,7 +23,7 @@
   become: true
   template:
     dest: '{{ prometheus_script_directory }}/promrun'
-    src: ../templates/promrun.sh.j2
+    src: templates/promrun.sh.j2
     owner: root
     group: root
     mode: '0555'

@@ -3,8 +3,7 @@ sudo: required
 
 language: python
 python:
-  - '2.7'
-  - '3.6'
+  - '3.8'
 
 services:
   - docker
@@ -14,11 +13,11 @@ rvm:
 
 env:
   - ANSIBLE_VERSION=latest METADATA_TESTS=true
-  - ANSIBLE_VERSION=2.7.0  KITCHEN_PLATFORM=default-ubuntu-1804
-  - ANSIBLE_VERSION=2.7.16 KITCHEN_PLATFORM=default-ubuntu-1804
   - ANSIBLE_VERSION=2.8.0  KITCHEN_PLATFORM=default-ubuntu-1804
-  - ANSIBLE_VERSION=2.8.10 KITCHEN_PLATFORM=default-ubuntu-1804
+  - ANSIBLE_VERSION=2.8.14 KITCHEN_PLATFORM=default-ubuntu-1804
   - ANSIBLE_VERSION=2.9.0  KITCHEN_PLATFORM=default-ubuntu-1804
+  - ANSIBLE_VERSION=2.9.11  KITCHEN_PLATFORM=default-ubuntu-1804
+  - ANSIBLE_VERSION=2.10.0  KITCHEN_PLATFORM=default-ubuntu-1804
   - ANSIBLE_VERSION=latest PROMETHEUS_LOCAL_ARCHIVE=true KITCHEN_PLATFORM=default-archlinux
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-centos-77
   - ANSIBLE_VERSION=latest KITCHEN_PLATFORM=default-centos-81
@@ -43,18 +42,19 @@ install:
   # Install gems
   - bundle install
 
+  # Install Ansible.before processing requirements.txt so other software
+  # doesn't install a conflicting version of "ansible" or "ansible-base"
+  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible ; else pip install ansible==$ANSIBLE_VERSION; fi
+
   # Install eggs
   - pip install -r requirements.txt
-
-  # Install Ansible.
-  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible ; else pip install ansible==$ANSIBLE_VERSION; fi
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/?branch=master
 
 script:
   # Validate README.md URLs
-  - if [ "$METADATA_TESTS" == "true" ]; then awesome_bot --request-delay 1 --skip-save-results --allow-dupe --white-list=localhost --files $(ls *.md docs/*.md tests/*.md | paste -sd "," -) ; fi
+  - if [ "$METADATA_TESTS" == "true" ]; then awesome_bot --request-delay 5 --skip-save-results --allow-dupe --white-list=localhost --files $(ls *.md docs/*.md tests/*.md | paste -sd "," -) ; fi
 
   # Perform yaml lint checks
   - if [ "$METADATA_TESTS" == "true" ]; then yamllint --config-file=tests/yamllint.yml . ; fi
@@ -63,14 +63,14 @@ script:
   - if [ "$METADATA_TESTS" == "true" ]; then chmod +x tests/all_software_inspec_tested && ./tests/all_software_inspec_tested ; fi
 
   # Perform ansible-lint checks
-  - if [ "$METADATA_TESTS" == "true" ]; then ansible-lint tasks/* ; fi
+  - if [ "$METADATA_TESTS" == "true" ]; then ansible-lint -x 204 tasks/* ; fi
 
   # Check playbook's syntax
   - if [ "$METADATA_TESTS" == "true" ]; then ansible-playbook -i tests/inventory tests/playbooks/install_all.yml --syntax-check ; fi
 
   # Check Ansible Galaxy lint
   - if [ "$METADATA_TESTS" == "true" ]; then git clone https://github.com/ansible/galaxy-lint-rules.git ; fi
-  - if [ "$METADATA_TESTS" == "true" ]; then ansible-lint -r galaxy-lint-rules/rules . ; fi
+  - if [ "$METADATA_TESTS" == "true" ]; then ansible-lint -x 204,305 -r galaxy-lint-rules/rules . ; fi
 
   # Display Ansible version
   - if [ "$METADATA_TESTS" != "true" ]; then ansible --version; fi

@@ -8,4 +8,8 @@
   become: true
   portage:
     sync: web
+  register: prometheus_emerge_update
+  retries: 5
+  delay: 10
+  until: prometheus_emerge_update is succeeded
   when: not portage_manifest.stat.exists

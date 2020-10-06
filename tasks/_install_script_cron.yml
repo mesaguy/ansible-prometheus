@@ -75,7 +75,7 @@
     month: '{{ prometheus_script_cron_job.month | default("*") }}'
     weekday: '{{ prometheus_script_cron_job.weekday | default("*") }}'
     minute: '{{ prometheus_script_cron_job.minute | default("*") }}'
-    job: '{{ prometheus_script_directory }}/{{ prometheus_script_cron_job.script }} {% if prometheus_sponge_is_installed | bool %}| sponge{% else %}>{% endif %} {{ prometheus_node_exporter_textfiles_directory }}/{{ prometheus_script_cron_job.name | replace(" ", "_") }}.prom'
+    job: '{{ prometheus_script_directory }}/{{ prometheus_script_cron_job.script }} {% if prometheus_sponge_is_installed | bool %}| sponge{% else %}>{% endif %} {{ prometheus_node_exporter_textfiles_dir }}/{{ prometheus_script_cron_job.name | replace(" ", "_") }}.prom'
   loop_control:
     loop_var: prometheus_script_cron_job
   with_items: '{{ prometheus_setup_script_crons }}'

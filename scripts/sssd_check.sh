@@ -13,6 +13,7 @@
 # License: MIT
 # Version: 0.3 (2020-01-23)
 
+MAX_RETRIES=5
 PROBLEM_COUNT=0
 
 # Set USER variable if undefined
@@ -75,9 +76,12 @@ do
     echo "$ENTRY" | sed -e 's/\(.*\)/sssd_\L\1/' -e 's/:_/ /g'
 done
 
-DOMAIN_LIST=$(timeout 10s sssctl domain-list)
-if [ "$?" -ne "0" ] ; then
-    echo "Error getting domain list, exiting!" >&2
+RETRIES=0
+until [ $RETRIES -eq $MAX_RETRIES ] || DOMAIN_LIST=$(timeout 10s sssctl domain-list) ; do
+        sleep $((RETRIES++))
+done
+if [ $RETRIES -eq $MAX_RETRIES ] ; then
+    echo "Error getting domain list after $MAX_RETRIES retries, exiting!" >&2
     echo sss_check_problems 1
     exit 1
 fi

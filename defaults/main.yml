@@ -2,7 +2,7 @@
 # defaults file for mesaguy.prometheus
 
 # General global configuration
-prometheus_go_version: 1.13.15
+prometheus_go_version: 1.14.9
 prometheus_link_etc: true
 prometheus_link_etc_force: false
 prometheus_purge_orphans: false
@@ -70,7 +70,7 @@ prometheus_go_dir: '{{ prometheus_root_dir }}/go'
 prometheus_log_dir: '/var/log/prometheus'
 prometheus_tmp_dir: '{{ prometheus_root_dir }}/tmp'
 prometheus_var_dir: '{{ prometheus_root_dir }}/var'
-prometheus_node_exporter_textfiles_directory: '{{ prometheus_node_exporter_textfiles_dir | default(prometheus_etc_dir + "/node_exporter_textfiles") }}'
+prometheus_node_exporter_textfiles_dir: '{{ prometheus_node_exporter_textfiles_directory | default(prometheus_etc_dir + "/node_exporter_textfiles") }}'
 prometheus_node_exporter_textfile_purge: false
 prometheus_node_exporter_textfile_max_age: 14d
 
