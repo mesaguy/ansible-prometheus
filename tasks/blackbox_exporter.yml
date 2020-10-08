@@ -40,7 +40,7 @@
     dest: '{{ prometheus_etc_dir }}/blackbox_exporter.yml'
     owner: root
     group: '{{ prometheus_group }}'
-    mode: '0640'
+    mode: 0640
     backup: true
     validate: '{{ prometheus_software_install_dir }}/blackbox_exporter --config.check --config.file %s'
   notify:

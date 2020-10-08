@@ -314,8 +314,8 @@ Local location to find rules files, defaults to empty (disabled):
 
 Ownership and permissions of rules files, defaults:
 
-    prometheus_rules_dir_mode: '0755'
-    prometheus_rules_file_mode: '0644'
+    prometheus_rules_dir_mode: 0755
+    prometheus_rules_file_mode: 0644
     prometheus_rules_group: '{{ prometheus_group }}' # prometheus
     prometheus_rules_owner: '{{ prometheus_user }}'  # prometheus
 

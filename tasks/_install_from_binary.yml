@@ -57,7 +57,7 @@
     timeout: 20
     owner: '{{ prometheus_user }}'
     group: '{{ prometheus_group }}'
-    mode: '0644'
+    mode: 0644
     dest: '{{ prometheus_software_archive_file }}'
   # Handled downstream:
   ignore_errors: '{{ prometheus_software_fallback_to_build | bool }}'
@@ -79,7 +79,7 @@
     url: '{{ prometheus_software_metadata.url }}'
     checksum: '{{ prometheus_software_metadata.sha256 | default(omit) }}'
     timeout: 20
-    mode: '0644'
+    mode: 0644
     dest: '{{ prometheus_software_local_archive_file }}'
   # Handled downstream:
   ignore_errors: '{{ prometheus_software_fallback_to_build | bool }}'
@@ -100,7 +100,7 @@
     timeout: 20
     owner: '{{ prometheus_user }}'
     group: '{{ prometheus_group }}'
-    mode: '0644'
+    mode: 0644
     dest: '{{ prometheus_software_archive_file }}'
   # Handled downstream:
   ignore_errors: '{{ prometheus_software_fallback_to_build | bool }}'
@@ -120,7 +120,7 @@
   get_url:
     url: '{{ prometheus_software_url }}'
     timeout: 20
-    mode: '0644'
+    mode: 0644
     dest: '{{ prometheus_software_local_archive_file }}'
   # Handled downstream:
   ignore_errors: '{{ prometheus_software_fallback_to_build | bool }}'
@@ -140,7 +140,11 @@
     dest: '{{ prometheus_software_archive_file }}'
     owner: '{{ prometheus_user }}'
     group: '{{ prometheus_group }}'
-    mode: '0644'
+    mode: 0644
+  register: prometheus_copy_local_archive_file
+  retries: 5
+  delay: 10
+  until: prometheus_copy_local_archive_file is succeeded
   when:
     - not prometheus_software_installed.stat.exists
     - prometheus_local_archive | bool

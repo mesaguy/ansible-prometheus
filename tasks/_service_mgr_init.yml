@@ -6,6 +6,6 @@
     src: 'templates/daemon-{{ ansible_service_mgr }}.j2'
     owner: root
     group: root
-    mode: '0750'
+    mode: 0750
   notify:
     - Restart Prometheus service

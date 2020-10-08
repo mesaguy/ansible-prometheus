@@ -31,7 +31,7 @@
     state: directory
     owner: '{{ prometheus_user }}'
     group: '{{ prometheus_group }}'
-    mode: '0750'
+    mode: 0750
   when: prometheus_pushgateway_persistence_dir is defined
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }}

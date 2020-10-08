@@ -139,6 +139,6 @@
     dest: /var/log/test.log
     owner: root
     group: root
-    mode: '0644'
+    mode: 0644
     content: "{{ ansible_date_time.iso8601 }} This is a test\n"
     force: false

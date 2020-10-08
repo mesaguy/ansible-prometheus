@@ -6,7 +6,7 @@
     path: '{{ prometheus_install_dir }}'
     owner: root
     group: '{{ prometheus_group }}'
-    mode: '0755'
+    mode: 0755
   with_items:
     - '{{ prometheus_software_root_dir }}'
     - '{{ prometheus_software_install_dir }}'

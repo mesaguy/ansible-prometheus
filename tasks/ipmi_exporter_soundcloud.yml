@@ -33,7 +33,7 @@
     dest: '{{ prometheus_etc_dir }}/ipmi_exporter_soundcloud.yml'
     owner: root
     group: '{{ prometheus_group }}'
-    mode: '0640'
+    mode: 0640
     backup: true
   notify:
     - Restart Prometheus service

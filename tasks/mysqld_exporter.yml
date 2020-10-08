@@ -36,11 +36,11 @@
     - name: Copy {{ prometheus_software_name_version }} credentials to {{ prometheus_user_registered.home }}/.my.cnf
       become: true
       template:
-        src: ../templates/mysqld_exporter-my.cnf.j2
+        src: templates/mysqld_exporter-my.cnf.j2
         dest: '{{ prometheus_user_registered.home }}/.my.cnf'
         owner: '{{ prometheus_user }}'
         group: '{{ prometheus_group }}'
-        mode: '0400'
+        mode: 0400
       notify:
         - Restart Prometheus service
       register: prometheus_mysqld_exporter_credentials

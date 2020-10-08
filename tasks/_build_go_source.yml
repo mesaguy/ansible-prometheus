@@ -5,7 +5,7 @@
   file:
     owner: '{{ prometheus_user }}'
     group: '{{ prometheus_group }}'
-    mode: '0750'
+    mode: 0750
     path: '{{ prometheus_build_directory }}'
     state: directory
   with_items:
@@ -41,7 +41,7 @@
         dest: '{{ prometheus_tmp_dir }}/{{ prometheus_software_src_url | basename }}'
         owner: '{{ prometheus_user }}'
         group: '{{ prometheus_group }}'
-        mode: '0644'
+        mode: 0644
 
     - name: Extract {{ prometheus_software_name_version }} source archive on remote host
       become: true
@@ -106,7 +106,7 @@
 
 - name: Build {{ prometheus_software_name_version }} source code with Makefile
   become: true
-  shell: '{{ prometheus_software_makefile_make_command }}'
+  shell: '{{ prometheus_software_makefile_make_command }}'  # noqa 305
   register: prometheus_software_build
   retries: 5
   delay: 10
@@ -123,7 +123,7 @@
 - name: Build {{ prometheus_software_name_version }} source code without Makefile
   become: true
   # become_user: '{{ prometheus_user }}'
-  shell: '{{ prometheus_software_make_command }}'
+  shell: '{{ prometheus_software_make_command }}'  # noqa 305
   register: prometheus_software_build
   retries: 5
   delay: 10
@@ -142,7 +142,7 @@
     remote_src: true
     src: '{{ prometheus_software_src_dir }}/{{ prometheus_built_file }}'
     dest: '{{ prometheus_software_install_dir }}'
-    mode: '0755'
+    mode: 0755
     owner: root
     group: '{{ prometheus_group }}'
   with_items: '{{ prometheus_software_files | default([prometheus_software_binary_name], true) }}'
@@ -175,6 +175,6 @@
   file:
     path: '{{ prometheus_tmp_dir }}'
     state: directory
-    mode: '0755'
+    mode: 0755
     owner: '{{ prometheus_user }}'
     group: '{{ prometheus_group }}'

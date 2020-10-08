@@ -7,7 +7,7 @@
     dest: '{{ prometheus_managed_tgroup_dir }}/{{ prometheus_client_fqdn }}-{{ prometheus_software_name }}.yml'
     owner: root
     group: '{{ prometheus_group }}'
-    mode: '0644'
+    mode: 0644
   loop_control:
     loop_var: prometheus_server_name
   with_items: '{{ prometheus_servers }}'

@@ -6,7 +6,7 @@
     dest: '{{ prometheus_script.directory | default(prometheus_script_directory) }}/{{ prometheus_script.name }}'
     owner: root
     group: '{{ prometheus_script.group | default(prometheus_group) }}'
-    mode: '0555'
+    mode: 0555
     checksum: '{{ prometheus_script.sha256 }}'
   register: prometheus_download
   retries: 5

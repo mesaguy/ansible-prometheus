@@ -33,10 +33,10 @@
       become: true
       template:
         dest: '{{ prometheus_logrotate_dir }}/prometheus'
-        src: ../templates/logrotate.j2
+        src: templates/logrotate.j2
         owner: root
         group: root
-        mode: '0444'
+        mode: 0444
       when: prometheus_logrotate | bool
 
   when:

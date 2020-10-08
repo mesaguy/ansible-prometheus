@@ -11,7 +11,7 @@
   when: prometheus_capabilites_packages is defined and prometheus_capabilites_packages
 
 - name: Search for 'setcap' capabilities binary
-  shell: which setcap
+  shell: which setcap  # noqa 305
   environment:
     PATH: '/sbin:/usr/sbin:{{ ansible_env.PATH }}'
   ignore_errors: true

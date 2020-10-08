@@ -40,7 +40,7 @@
     path: '{{ prometheus_alertmanager_storage_directory }}'
     owner: '{{ prometheus_user }}'
     group: '{{ prometheus_group }}'
-    mode: '0750'
+    mode: 0750
     state: directory
 
 - name: 'Include task to perform installation of {{ prometheus_software_name_version }}'
@@ -53,7 +53,7 @@
     dest: '{{ prometheus_etc_dir }}/alertmanager.yml'
     owner: root
     group: '{{ prometheus_group }}'
-    mode: '0640'
+    mode: 0640
     backup: true
     validate: '{{ prometheus_software_install_dir }}/amtool check-config %s'
   notify:

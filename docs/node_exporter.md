@@ -61,6 +61,6 @@ Node exporter textfiles scripts will generally need to be run via cron and ideal
           dest: /etc/cron.d/smartmon
           # Requires 'sponge' be installed:
           content: "*/5 * * * * root bash {{ prometheus_script_directory }}/smartmon.sh | sponge {{ prometheus_node_exporter_textfiles_directory }}/smartmon.prom\n"
-          mode: '0555'
+          mode: 0555
           owner: root
           group: root

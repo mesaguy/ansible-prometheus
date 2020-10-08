@@ -39,7 +39,7 @@
   file:
     path: '{{ prometheus_go_directory }}'
     state: directory
-    mode: '0755'
+    mode: 0755
     owner: root
     group: root
   loop_control:
@@ -78,7 +78,11 @@
         dest: '{{ prometheus_tmp_dir }}/{{ prometheus_go_archive_name }}'
         owner: '{{ prometheus_user }}'
         group: '{{ prometheus_group }}'
-        mode: '0644'
+        mode: 0644
+      register: prometheus_copy_local_go_file
+      retries: 5
+      delay: 10
+      until: prometheus_copy_local_go_file is succeeded
 
     - name: Extract Go {{ prometheus_go_version }} on remote host
       become: true
@@ -88,7 +92,7 @@
         creates: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}/bin/go'
         src: '{{ prometheus_tmp_dir }}/{{ prometheus_go_archive_name }}'
         dest: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}'
-        mode: '0755'
+        mode: 0755
         owner: root
         group: root
         remote_src: true
@@ -110,7 +114,7 @@
     creates: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}/bin/go'
     src: 'https://storage.googleapis.com/golang/{{ prometheus_go_archive_name }}'
     dest: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}'
-    mode: '0755'
+    mode: 0755
     owner: root
     group: root
     remote_src: true

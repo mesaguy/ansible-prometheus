@@ -22,7 +22,7 @@
   get_url:
     owner: root
     group: '{{ prometheus_group }}'
-    mode: '0755'
+    mode: 0755
     url: '{{ prometheus_software_url }}'
     checksum: '{{ prometheus_software_metadata.sha256 | default(omit) }}'
     dest: '{{ prometheus_software_install_dir }}/{{ prometheus_software_binary_name }}'
