@@ -1,29 +1,29 @@
 ---
-- name: Allow incoming prometheus server connections to {{ prometheus_software_name }}:{{ prometheus_software_instance_port | default(prometheus_software_port, true) }} via iptables_raw ipv4
+- name: Allow incoming prometheus server connections to {{ prometheus_software_name }}:{{ prometheus_software_port_num }} via iptables_raw ipv4
   become: true
   iptables_raw:
     backup: true
     table: filter
     ipversion: '4'
     weight: 50
-    name: 'allow prometheus {{ prometheus_software_name }} on port {{ prometheus_software_instance_port | default(prometheus_software_port, true) }} from {{ prometheus_server_ip }}'
+    name: 'allow prometheus {{ prometheus_software_name }} on port {{ prometheus_software_port_num }} from {{ prometheus_server_ip }}'
     rules: |
-     -A INPUT -p tcp -s {{ prometheus_server_ip }}/32 -m state --state NEW --dport {{ prometheus_software_instance_port | default(prometheus_software_port, true) }} -j ACCEPT
+     -A INPUT -p tcp -s {{ prometheus_server_ip }}/32 -m state --state NEW --dport {{ prometheus_software_port_num }} -j ACCEPT
   loop_control:
     loop_var: prometheus_server_ip
   with_items: '{{ prometheus_server_ips }}'
   when: prometheus_server_ip|ipv4
 
-- name: Allow incoming prometheus server connections to {{ prometheus_software_name }}:{{ prometheus_software_instance_port | default(prometheus_software_port, true) }} via iptables_raw ipv6
+- name: Allow incoming prometheus server connections to {{ prometheus_software_name }}:{{ prometheus_software_port_num }} via iptables_raw ipv6
   become: true
   iptables_raw:
     backup: true
     table: filter
     ipversion: '6'
     weight: 50
-    name: 'allow prometheus {{ prometheus_software_name }} on port {{ prometheus_software_instance_port | default(prometheus_software_port, true) }} from {{ prometheus_server_ip }}'
+    name: 'allow prometheus {{ prometheus_software_name }} on port {{ prometheus_software_port_num }} from {{ prometheus_server_ip }}'
     rules: |
-     -A INPUT -p tcp -s {{ prometheus_server_ip }} -m state --state NEW --dport {{ prometheus_software_instance_port | default(prometheus_software_port, true) }} -j ACCEPT
+     -A INPUT -p tcp -s {{ prometheus_server_ip }} -m state --state NEW --dport {{ prometheus_software_port_num }} -j ACCEPT
   loop_control:
     loop_var: prometheus_server_ip
   with_items: '{{ prometheus_server_ips }}'

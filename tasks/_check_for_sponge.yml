@@ -7,4 +7,9 @@
 
 - name: Set "sponge" installed fact
   set_fact:
-    prometheus_sponge_is_installed: '{% if prometheus_sponge_installed is defined and "rc" in prometheus_sponge_installed and prometheus_sponge_installed.rc == 0 %}true{% else %}false{% endif %}'
+    prometheus_sponge_is_installed: >-
+        {% if prometheus_sponge_installed is defined and "rc" in prometheus_sponge_installed and prometheus_sponge_installed.rc == 0 %}
+        true
+        {% else %}
+        false
+        {% endif %}

@@ -20,7 +20,8 @@
 
     - name: Set variables for {{ prometheus_software_name_version }} build
       set_fact:
-        prometheus_software_local_archive_file: '{{ prometheus_local_archive_dir }}/{{ prometheus_software_name }}/{{ prometheus_software_version }}/{{ prometheus_software_src_url | basename }}'
+        prometheus_software_local_archive_file: >-
+            {{ prometheus_local_archive_dir }}/{{ prometheus_software_name }}/{{ prometheus_software_version }}/{{ prometheus_software_src_url | basename }}
 
     - name: Download {{ prometheus_software_name_version }} source to local archive
       delegate_to: localhost
@@ -65,9 +66,6 @@
 
 - name: Download and extract the {{ prometheus_software_name_version }} project source to {{ prometheus_software_build_dir }}
   become: true
-  # Certain versions of ansible break 'become_user' for 'archive' and 'get_url', supposedly fixed in 2.6.3:
-  # become_user: '{% if ansible_version.full is version_compare("2.6.0", ">=") and ansible_version.full is version_compare("2.6.2", "<")  %}root{% else %}{{ prometheus_user }}{% endif %}'
-  # become_user: '{{ prometheus_user }}'
   unarchive:
     extra_opts: '{{ prometheus_software_src_unarchive_opts | default(prometheus_default_src_unarchive_opts) }}'
     creates: '{{ prometheus_software_src_dir }}/*'

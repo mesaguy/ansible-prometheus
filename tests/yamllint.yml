@@ -2,11 +2,13 @@
 extends: default
 
 rules:
-  # 80 chars should be enough, but don't fail if a line is longer
+  # Match Ansible Galaxy's expectations
   line-length:
-    max: 384
+    max: 160
     level: warning
 
 ignore: |
+  .travis.yml
   .kitchen/
   venv/
+  vars/

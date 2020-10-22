@@ -24,7 +24,9 @@
 - name: Set {{ prometheus_software_name_version }} facts
   set_fact:
     prometheus_software_opts:
-      - '--listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }} --api-url={{ prometheus_powerdns_exporter_ledgr_api_url }} --api-key={{ prometheus_powerdns_exporter_ledgr_api_key }}'
+      - '--listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
+      - '--api-url={{ prometheus_powerdns_exporter_ledgr_api_url }}'
+      - '--api-key={{ prometheus_powerdns_exporter_ledgr_api_key }}'
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml

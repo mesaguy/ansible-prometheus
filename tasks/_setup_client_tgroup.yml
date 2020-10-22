@@ -39,8 +39,15 @@
         file_type: file
         recurse: false
         patterns: '{{ prometheus_client_fqdn }}-*'
-        # Merge exporter names in 'prometheus_additional_exporters' and 'hostvars[prometheus_client_inventory_hostnam].prometheus_components', then prepend the hostname and append '.yml'
-        excludes: '{{ (prometheus_additional_exporters | default({}) | map(attribute="name") | list + hostvars[prometheus_client_inventory_hostname].prometheus_components) | map("regex_replace", "^", prometheus_client_fqdn + "-") | map("regex_replace", "$", ".yml") | list }}'
+        # Merge exporter names in 'prometheus_additional_exporters' and
+        # 'hostvars[prometheus_client_inventory_hostnam].prometheus_components',
+        # then prepend the hostname and append '.yml'
+        excludes: >
+            {{ (prometheus_additional_exporters | default({}) | map(attribute="name") |
+            list + hostvars[prometheus_client_inventory_hostname].prometheus_components) |
+            map("regex_replace", "^", prometheus_client_fqdn + "-") |
+            map("regex_replace", "$", ".yml") |
+            list }}
       register: host_orphan_tgroup_files
 
     - name: Remove orphan tgroup files

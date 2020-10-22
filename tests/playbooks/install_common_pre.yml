@@ -100,7 +100,10 @@
   delay: 10
   until: prometheus_java_install_alpine_override is succeeded
   when:
-    - prometheus_java_packages is defined and ansible_os_family == 'Alpine' and ansible_distribution_version is version('3.3', '>=') and ansible_distribution_version is version('3.6', '<')
+    - prometheus_java_packages is defined
+    - ansible_os_family == 'Alpine'
+    - ansible_distribution_version is version('3.3', '>=')
+    - ansible_distribution_version is version('3.6', '<')
 
 - name: Install java
   become: true

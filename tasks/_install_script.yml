@@ -1,5 +1,5 @@
 ---
-- name: Download Prometheus script {{ prometheus_script.name }} to {{ prometheus_script.directory | default(prometheus_script_directory) }}/{{ prometheus_script.name }} and verify checksum
+- name: 'Download Prometheus script {{ prometheus_script.name }} to {{ prometheus_script.directory | default(prometheus_script_directory) }}'
   become: true
   get_url:
     url: '{{ prometheus_script.url }}'

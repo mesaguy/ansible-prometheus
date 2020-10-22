@@ -27,7 +27,9 @@
     prometheus_software_opts:
       - '--collector.textfile.directory={{ prometheus_node_exporter_textfiles_dir }}'
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
-    prometheus_software_url: 'https://github.com/{{ prometheus_software_author }}/{{ prometheus_software_name }}/releases/download/{{ prometheus_software_version }}/{{ prometheus_software_name }}-{{ prometheus_software_version | regex_replace("^(v)?") }}.{{ prometheus_software_architecture }}.tar.gz'
+    prometheus_software_url:
+        "https://github.com/{{ prometheus_software_author }}/{{ prometheus_software_name }}/releases/download/{{ prometheus_software_version }}/\
+        {{ prometheus_software_name }}-{{ prometheus_software_version | regex_replace('^(v)?') }}.{{ prometheus_software_architecture }}.tar.gz"
     prometheus_node_exporter_scripts_vars: '{{ prometheus_node_exporter_scripts_root_vars["software"]["master"].files }}'
 
 - name: Include task to create textfiles directory
@@ -49,24 +51,55 @@
 - name: Set node_exporter script facts
   set_fact:
     prometheus_node_exporter_scripts:
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "apt.sh") | list | combine({ "enabled": prometheus_script_apt }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "btrfs_stats.py") | list | combine({ "enabled": prometheus_script_btrfs_stats }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "deleted_libraries.py") | list | combine({ "enabled": prometheus_script_deleted_libraries }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "directory-size.sh") | list | combine({ "enabled": prometheus_script_directory_size }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "inotify-instances") | list | combine({ "enabled": prometheus_script_inotify_instances }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "ipmitool") | list | combine({ "enabled": prometheus_script_ipmitool }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "md_info.sh") | list | combine({ "enabled": prometheus_script_md_info }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "md_info_detail.sh") | list | combine({ "enabled": prometheus_script_md_info_detail }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "mellanox_hca_temp") | list | combine({ "enabled": prometheus_script_mellanox_hca_temp }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "multipathd_info") | list | combine({ "enabled": prometheus_script_multipathd_info }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "ntpd_metrics.py") | list | combine({ "enabled": prometheus_script_ntpd_metrics }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "nvme_metrics.sh") | list | combine({ "enabled": prometheus_script_nvme_metrics }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "pacman.sh") | list | combine({ "enabled": prometheus_script_pacman }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "smartmon.sh") | list | combine({ "enabled": prometheus_script_smartmon }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "smartmon.py") | list | combine({ "enabled": prometheus_script_smartmon_python }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "storcli.py") | list | combine({ "enabled": prometheus_script_storcli }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "tw_cli.py") | list | combine({ "enabled": prometheus_script_tw_cli }) }}'
-      - '{{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "yum.sh") | list | combine({ "enabled": prometheus_script_yum }) }}'
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "apt.sh") | list | combine({ "enabled": prometheus_script_apt }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "btrfs_stats.py") | list |
+          combine({ "enabled": prometheus_script_btrfs_stats }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "deleted_libraries.py") | list |
+          combine({ "enabled": prometheus_script_deleted_libraries }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "directory-size.sh") | list |
+          combine({ "enabled": prometheus_script_directory_size }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "inotify-instances") | list |
+          combine({ "enabled": prometheus_script_inotify_instances }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "ipmitool") | list | combine({ "enabled": prometheus_script_ipmitool }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "md_info.sh") | list |
+          combine({ "enabled": prometheus_script_md_info }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "md_info_detail.sh") | list |
+          combine({ "enabled": prometheus_script_md_info_detail }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "mellanox_hca_temp") | list |
+          combine({ "enabled": prometheus_script_mellanox_hca_temp }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "multipathd_info") | list |
+          combine({ "enabled": prometheus_script_multipathd_info }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "ntpd_metrics.py") | list |
+          combine({ "enabled": prometheus_script_ntpd_metrics }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "nvme_metrics.sh") | list |
+          combine({ "enabled": prometheus_script_nvme_metrics }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "pacman.sh") | list | combine({ "enabled": prometheus_script_pacman }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "smartmon.sh") | list |
+          combine({ "enabled": prometheus_script_smartmon }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "smartmon.py") | list |
+          combine({ "enabled": prometheus_script_smartmon_python }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "storcli.py") | list |
+          combine({ "enabled": prometheus_script_storcli }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "tw_cli.py") | list | combine({ "enabled": prometheus_script_tw_cli }) }}
+      - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "yum.sh") | list | combine({ "enabled": prometheus_script_yum }) }}
 
 - name: Install node_exporter scripts
   include_tasks: _install_script.yml

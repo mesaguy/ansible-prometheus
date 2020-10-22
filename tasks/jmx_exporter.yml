@@ -25,7 +25,9 @@
   set_fact:
     prometheus_software_opts:
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
-    prometheus_software_url: 'https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/{{ prometheus_software_version }}/jmx_prometheus_javaagent-{{ prometheus_software_version | regex_replace("^(v)?") }}.jar'
+    prometheus_software_url:
+        "https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/{{ prometheus_software_version }}/\
+        jmx_prometheus_javaagent-{{ prometheus_software_version | regex_replace('^(v)?') }}.jar"
     prometheus_software_src_dir_suffix: '/src/github.com/{{ prometheus_software_author }}/{{ prometheus_software_name }}'
 
 - name: Install standalone file for {{ prometheus_software_name_version }}
