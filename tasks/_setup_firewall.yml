@@ -5,8 +5,8 @@
     immediate: true
     permanent: true
     rich_rule:
-        "rule family={% if prometheus_server_ip | not ipv4 %}ipv4{% else %}ipv6{% endif %} source address=
-        {{ prometheus_server_ip }} port port={{ prometheus_software_port_num }} protocol=tcp accept"
+      "rule family={% if prometheus_server_ip | not ipv4 %}ipv4{% else %}ipv6{% endif %} source address=
+      {{ prometheus_server_ip }} port port={{ prometheus_software_port_num }} protocol=tcp accept"
     state: enabled
     zone: '{{ prometheus_firewalld_zone }}'
   loop_control:

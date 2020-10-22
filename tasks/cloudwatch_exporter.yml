@@ -30,8 +30,8 @@
     prometheus_software_opts:
       - '{{ prometheus_software_port }} {{ prometheus_etc_dir }}/{{ prometheus_software_name }}.yml'
     prometheus_software_url:
-        "https://search.maven.org/remotecontent?filepath=io/prometheus/cloudwatch/{{ prometheus_software_name }}/{{ prometheus_software_version }}/\
-        {{ prometheus_software_name }}-{{ prometheus_software_version | regex_replace('^(v)?') }}-jar-with-dependencies.jar"
+      "https://search.maven.org/remotecontent?filepath=io/prometheus/cloudwatch/{{ prometheus_software_name }}/{{ prometheus_software_version }}/\
+      {{ prometheus_software_name }}-{{ prometheus_software_version | regex_replace('^(v)?') }}-jar-with-dependencies.jar"
 
 - name: Install standalone file for {{ prometheus_software_name_version }}
   include_tasks: _install_file.yml

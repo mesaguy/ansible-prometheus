@@ -27,8 +27,8 @@
       - '--config.file {{ prometheus_etc_dir }}/snmp_exporter.yml'
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
     prometheus_software_url:
-        "https://github.com/{{ prometheus_software_author }}/{{ prometheus_software_name }}/releases/download/{{ prometheus_software_version }}/\
-        {{ prometheus_software_name }}-{{ prometheus_software_version | regex_replace('^(v)?') }}.{{ prometheus_software_architecture }}.tar.gz"
+      "https://github.com/{{ prometheus_software_author }}/{{ prometheus_software_name }}/releases/download/{{ prometheus_software_version }}/\
+      {{ prometheus_software_name }}-{{ prometheus_software_version | regex_replace('^(v)?') }}.{{ prometheus_software_architecture }}.tar.gz"
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml
@@ -61,7 +61,7 @@
 - name: Set {{ prometheus_software_name_version }} validation command facts
   set_fact:
     prometheus_software_validation_command: >-
-        {{ prometheus_software_install_dir }}/snmp_exporter --dry-run --config.file {{ prometheus_etc_dir }}/snmp_exporter.yml
+      {{ prometheus_software_install_dir }}/snmp_exporter --dry-run --config.file {{ prometheus_etc_dir }}/snmp_exporter.yml
 
 - name: Include task to setup {{ prometheus_software_name_version }} service
   include_tasks: _service.yml
