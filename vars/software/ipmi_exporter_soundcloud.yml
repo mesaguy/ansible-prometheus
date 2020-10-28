@@ -4,15 +4,15 @@ defaults:
   tgroup: ipmi
 software:
   name: soundcloud/ipmi_exporter
-  release: v1.3.0
+  release: v1.3.1
   prerelease: null
   url: https://github.com/soundcloud/ipmi_exporter
   source: https://github.com/soundcloud/ipmi_exporter.git
-  updated: '2020-07-31T23:37:11.469957'
+  updated: '2020-10-28T06:20:04.595788'
   master:
     commit:
-      sha: 15619130279b1704e4e84293c7972609736fa857
-      timestamp: '2020-07-26T15:42:06'
+      sha: 57c0f966d093713e057f076073f19bc2e534c734
+      timestamp: '2020-10-22T16:09:14'
     files: []
   releases:
     - name: v1.1.0
@@ -115,3 +115,28 @@ software:
           size: 7145679
           sha256: sha256:ee4a63163bbce4b51475dc9a87b95faf4763a516d765a14e0a5773a58416d394
           url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.3.0/ipmi_exporter-v1.3.0.linux-arm64.tar.gz
+    - name: v1.3.1
+      commit: null
+      timestamp: '2020-10-22T16:25:21'
+      prerelease: false
+      files:
+        - name: ipmi_exporter-v1.3.1.darwin-amd64.tar.gz
+          commit: null
+          size: 7560686
+          sha256: sha256:505ef1ad72020e72a318ebf0f0ffc6019202c008a1852c0245fc3c4e79b305ea
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.3.1/ipmi_exporter-v1.3.1.darwin-amd64.tar.gz
+        - name: ipmi_exporter-v1.3.1.freebsd-amd64.tar.gz
+          commit: null
+          size: 7652585
+          sha256: sha256:fe1eda9b6a629760063b09719f06c9514f5f6be1cfe5af723371ab693e22b9b2
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.3.1/ipmi_exporter-v1.3.1.freebsd-amd64.tar.gz
+        - name: ipmi_exporter-v1.3.1.linux-amd64.tar.gz
+          commit: null
+          size: 7675362
+          sha256: sha256:03f8a5a90c9f2b5fa9d577ba72e30b7d57c1281ab6ec747345b7de22e8a2b50e
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.3.1/ipmi_exporter-v1.3.1.linux-amd64.tar.gz
+        - name: ipmi_exporter-v1.3.1.linux-arm64.tar.gz
+          commit: null
+          size: 7150143
+          sha256: sha256:3e5d72d41773ac1a35fd8d6c51c09d39f40231a8b5c2b20f0de93203fd719014
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.3.1/ipmi_exporter-v1.3.1.linux-arm64.tar.gz

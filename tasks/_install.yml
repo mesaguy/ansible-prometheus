@@ -22,7 +22,7 @@
   fail:
     msg: 'Failed to install {{ prometheus_software_name_version }} and building from source is disallowed (testing)'
   when:
-    - prometheus_software_testing
+    - prometheus_software_testing | bool
     - not prometheus_always_build_from_source
     - not prometheus_software_installation or prometheus_software_installation is failed
     - not prometheus_software_allow_build_test
