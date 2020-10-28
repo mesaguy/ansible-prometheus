@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.23] - 2020-10-28
+
+### Changed
+
 - Upgrade Go from v1.14.9 to v1.14.10
 - Upgrade Prometheus from v2.21.0 to v2.22.0
 - Upgrade Prometheus (pre-release) from v2.21.0-rc.1 to v2.22.0-rc.0
@@ -13,8 +17,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgrade blackbox_exporter v0.17.0 to v0.18.0
 - Upgrade couchdb_exporter_gesellix from v29.2.0 to v29.3.0
 - Upgrade redis_exporter_oliver006 from v1.12.0 to v1.12.1
-- Wrap lines longer than 160c to pacify Galaxy
 - Update metadata to include latest master commits
+
+### Fixed
+
+- Wrap lines longer than 160c to pacify Galaxy
+- prometheus_node_exporter_textfiles_directory definitions work again
 
 ## [0.12.22] - 2020-10-06
 
