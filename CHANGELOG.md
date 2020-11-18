@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade Go from v1.14.10 to v1.14.12
+- Upgrade Prometheus from v2.22.0 to v2.22.2
+- Upgrade influxdb_exporter from v0.5.0 to v0.6.0
+- Upgrade phpfpm_exporter_hipages from v1.1.1 to v1.2.1
+- Upgrade ping_exporter_czerwon from v0.44 (v0.4.0?) to v0.4.5
+- Upgrade process_exporter_ncabatoff from v0.7.2 to v0.7.5
+- Upgrade redis_exporter_oliver006 from v1.12.1 to v1.13.1
+- Update metadata to include latest master commits
+
 ## [0.12.23] - 2020-10-28
 
 ### Changed
