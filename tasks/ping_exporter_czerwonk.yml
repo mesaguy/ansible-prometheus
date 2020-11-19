@@ -27,7 +27,7 @@
   set_fact:
     prometheus_software_config_name: '{{ prometheus_software_name }}'
     prometheus_software_opts:
-      - '-config.path={{ prometheus_etc_dir }}/{{ prometheus_software_name }}.yml'
+      - '--config.path={{ prometheus_etc_dir }}/{{ prometheus_software_name }}.yml'
       - '--web.listen-address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
     prometheus_software_url:
       "https://github.com/{{ prometheus_software_author }}/{{ prometheus_software_binary_name }}/releases/download/{{ prometheus_software_version }}/\

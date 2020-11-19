@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgrade process_exporter_ncabatoff from v0.7.2 to v0.7.5
 - Upgrade redis_exporter_oliver006 from v1.12.1 to v1.13.1
 - Update metadata to include latest master commits
+- Update ping_exporter_czerwon default options to match new required syntax
 
 ## [0.12.23] - 2020-10-28
 
