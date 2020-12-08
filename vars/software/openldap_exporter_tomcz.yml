@@ -4,15 +4,15 @@ defaults:
   tgroup: openldap
 software:
   name: tomcz/openldap_exporter
-  release: v2.0
+  release: v2.1
   prerelease: null
   url: https://github.com/tomcz/openldap_exporter
   source: https://github.com/tomcz/openldap_exporter.git
-  updated: '2020-11-18T05:24:07.136820'
+  updated: '2020-12-05T01:56:12.115272'
   master:
     commit:
-      sha: 4071d565a0b1e81d0247034844e629ba4408f922
-      timestamp: '2020-11-10T19:04:58'
+      sha: 35ceb1d0f138428970c00f56a640e2db0773bf53
+      timestamp: '2020-12-03T04:29:47'
     files: []
   releases:
     - name: v1.0
@@ -55,3 +55,18 @@ software:
           size: 13655232
           sha256: sha256:fd4fd29bea5390a098cacd05cd8c092c78d8f1e2ffe935742f09c68f9d6d8d88
           url: https://github.com/tomcz/openldap_exporter/releases/download/v2.0/openldap_exporter-linux
+    - name: v2.1
+      commit: null
+      timestamp: '2020-12-03T05:48:32'
+      prerelease: false
+      files:
+        - name: openldap_exporter-darwin
+          commit: null
+          size: 12348484
+          sha256: sha256:1dc24977c65e8b7f1429cf7d00a12044b33206272efb9d97ada2b12f9cc82b02
+          url: https://github.com/tomcz/openldap_exporter/releases/download/v2.1/openldap_exporter-darwin
+        - name: openldap_exporter-linux
+          commit: null
+          size: 12385864
+          sha256: sha256:cefb9ecff0adeb735dbcd6b30d7adb3d83737787b4e87843f830e93d3a3ca4fb
+          url: https://github.com/tomcz/openldap_exporter/releases/download/v2.1/openldap_exporter-linux

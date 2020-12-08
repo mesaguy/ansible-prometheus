@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade Go from v1.14.12 to v1.14.13
+- Upgrade Prometheus from v2.22.2 to v2.23.0
+- Upgrade Prometheus (pre-release) from v2.22.0-rc.0 to v2.23.0-rc.0
+- Upgrade couchdb_exporter_gesellix from v29.3.0 to v29.3.1
+- Upgrade influxdb_exporter from v0.6.0 to v0.7.0
+- Upgrade memcached_exporter from v0.7.0 to v0.8.0
+- Upgrade mongodb_exporter_percona from v0.11.2 to v0.20.1
+- Upgrade openldap_exporter_tomcz from v2.0 to v2.1
+- Upgrade phpfpm_exporter_hipages from v1.2.1 to v2.0.0
+- Upgrade ssl_exporter_ribbybibby from v2.1.1 to v2.2.0
+- Update metadata to include latest master commits
+
 ## [0.12.24] - 2020-11-19
 
 ### Changed

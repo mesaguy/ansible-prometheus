@@ -4,15 +4,15 @@ defaults:
   tgroup: influxdb
 software:
   name: prometheus/influxdb_exporter
-  release: v0.6.0
+  release: v0.7.0
   prerelease: null
   url: https://github.com/prometheus/influxdb_exporter
   source: https://github.com/prometheus/influxdb_exporter.git
-  updated: '2020-11-09T06:08:08.550094'
+  updated: '2020-12-05T01:56:32.168851'
   master:
     commit:
-      sha: 287f3ba7104357125e3b9c792ac9b50c1705de23
-      timestamp: '2020-11-04T17:57:04'
+      sha: a1dc16ad596a990d8854545ea39a57a99a3c7c43
+      timestamp: '2020-12-04T17:15:31'
     files: []
   releases:
     - name: v0.4.0
@@ -1287,3 +1287,10 @@ software:
           size: 3514
           sha256: sha256:9b161c4dc9cea9be8ff812388f6400b397e580c7e59b76b097888a2b08d080a3
           url: https://github.com/prometheus/influxdb_exporter/releases/download/v0.6.0/sha256sums.txt
+    - name: v0.7.0
+      commit:
+        sha: a1dc16ad596a990d8854545ea39a57a99a3c7c43
+        timestamp: '2020-12-04T17:15:31'
+      timestamp: '2020-12-04T17:15:47'
+      prerelease: false
+      files: []
