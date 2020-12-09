@@ -31,8 +31,3 @@ end
 describe port(9216) do
     it { should be_listening }
 end
-
-describe http('http://127.0.0.1:9216/metrics') do
-    its('status') { should cmp 200 }
-    its('body') { should match /^mongodb_exporter_last_scrape_duration_seconds/ }
-end
