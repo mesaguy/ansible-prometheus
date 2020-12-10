@@ -13,7 +13,7 @@
     state: present
   # See: https://github.com/ansible/ansible/issues/18911
   ignore_errors: '{{ ansible_os_family in ["Archlinux", "Gentoo"] }}'
-  changed_when: '{{ ansible_os_family not in ["Archlinux", "Gentoo"] }}'
+  changed_when: false
   loop_control:
     loop_var: prometheus_software_capability
   with_items: '{{ prometheus_software_capabilities[prometheus_software_capabilities_file] }}'
