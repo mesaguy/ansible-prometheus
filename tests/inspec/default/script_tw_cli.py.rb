@@ -4,7 +4,6 @@
 describe file('/opt/prometheus/scripts/tw_cli.py') do
     it { should be_file }
     it { should be_executable }
-    its('content') { should match /Prometheus exporter for 3ware RAID controllers/ }
     its('size') { should > 9000 }
     its('mode') { should cmp '0555' }
     its('owner') { should eq 'root' }

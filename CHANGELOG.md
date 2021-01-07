@@ -6,11 +6,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- lvm-prom-collector from node-exporter textfile collector scripts
+
+### Changed
+
 - Upgrade Prometheus from v2.23.0 to v2.24.0
 - Upgrade Prometheus (pre-release) from v2.23.0-rc.0 to v2.24.0-rc.0
 - Upgrade couchdb_exporter_gesellix from v29.3.1 to v30.0.0
 - Upgrade pushgateway from v1.3.0 to v1.3.1
 - Upgrade redis_exporter_oliver006 from v1.14.0 to v1.15.0
+- Upgrade node-exporter textfile collector scripts to latest versions
+- Update metadata to include latest master commits
+
+### Removed
+
+- Content tests from scripts
 
 ## [0.12.25] - 2020-12-12
 

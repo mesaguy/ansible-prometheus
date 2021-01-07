@@ -68,6 +68,9 @@
       - >
           {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "ipmitool") | list | combine({ "enabled": prometheus_script_ipmitool }) }}
       - >
+          {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "lvm-prom-collector") | list |
+          combine({ "enabled": prometheus_script_lvm_prom_collector }) }}
+      - >
           {{ prometheus_node_exporter_scripts_vars | selectattr("name", "equalto", "md_info.sh") | list |
           combine({ "enabled": prometheus_script_md_info }) }}
       - >

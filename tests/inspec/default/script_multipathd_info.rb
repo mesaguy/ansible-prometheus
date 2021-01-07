@@ -4,7 +4,6 @@
 describe file('/opt/prometheus/scripts/multipathd_info') do
     it { should be_file }
     it { should be_executable }
-    its('content') { should match /Expose device mapper multipathing metrics from multipathd/ }
     its('size') { should > 400 }
     its('mode') { should cmp '0555' }
     its('owner') { should eq 'root' }
