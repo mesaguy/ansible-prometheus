@@ -37,3 +37,7 @@ The version of jmx_exporter to install. The default version can be found in the 
 Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
 
     prometheus_jmx_exporter_use_prerelease: true
+
+The JMX configuration file mode defaults to 0640 and can be customized:
+
+    prometheus_jmx_exporter_cfg_mode: 0644
