@@ -6,6 +6,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Per [urusha](https://github.com/urusha), add option to customize the mode of jmx configuration files via prometheus_jmx_exporter_cfg_mode.
+
+### Changed
+
+- Upgrade node-exporter textfile collector scripts:
+  - apt.sh
+  - mellanox_hca_temp
+  - smartmon.py
+  - storcli.py
+- Upgrade bind_exporter_prometheus_community from v0.3.0 to v0.4.0
+- Upgrade phpfpm_exporter_hipages from v2.0.0 to v2.0.1
+- Upgrade redis_exporter_oliver006 from v1.15.0 to v1.15.1
+- Update metadata to include latest master commits
+
 ## [0.12.26] - 2021-01-08
 
 ### Added
