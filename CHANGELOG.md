@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.27] - 2021-01-16
+
 ### Added
 
 - Per [urusha](https://github.com/urusha), add option to customize the mode of jmx configuration files via prometheus_jmx_exporter_cfg_mode.
