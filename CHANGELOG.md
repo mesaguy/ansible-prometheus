@@ -10,8 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Upgrade Go from v1.14.13 to v1.14.14
 - Upgrade Prometheus from v2.24.0 to v2.24.1
+- Upgrade influxdb_exporter from v0.7.0 to v0.8.0
+- Upgrade node-exporter textfile collector scripts:
+  - btrfs_stats.py
 - Upgrade rabbitmq_exporter_kbudde from v1.0.0-RC7 to v1.0.0-RC8
 - Upgrade rabbitmq_exporter_kbudde prerelease from v1.0.0-RC6.1 to v1.0.0-RC9
+- Upgrade pushgateway from v1.3.1 to v1.4.0
+- Upgrade statsd_exporter from v0.18.0 to v0.19.0
 - Update metadata to include latest master commits
 
 ## [0.12.27] - 2021-01-17
