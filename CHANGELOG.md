@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.28] - 2021-01-25
+
 ### Changed
 
 - Upgrade Go from v1.14.13 to v1.14.14
