@@ -4,15 +4,15 @@ defaults:
   tgroup: cloudwatch
 software:
   name: prometheus/cloudwatch_exporter
-  release: cloudwatch_exporter-0.9.0
+  release: cloudwatch_exporter-0.10.0
   prerelease: cloudwatch_exporter-0.1
   url: https://github.com/prometheus/cloudwatch_exporter
   source: https://github.com/prometheus/cloudwatch_exporter.git
-  updated: '2021-01-03T09:16:34.184081'
+  updated: '2021-02-07T17:04:01.901925'
   master:
     commit:
-      sha: f99487964fdb047f1e84d7d11120b7bb859859aa
-      timestamp: '2020-12-29T17:09:05'
+      sha: 803e5785d1f719b25d7228d42ce27be6bec6a36a
+      timestamp: '2021-02-01T22:02:55'
     files: []
   releases:
     - name: cloudwatch_exporter-0.8.0
@@ -65,5 +65,10 @@ software:
     - name: cloudwatch_exporter-0.9.0
       commit: null
       timestamp: '2020-08-26T12:43:37'
+      prerelease: false
+      files: []
+    - name: cloudwatch_exporter-0.10.0
+      commit: null
+      timestamp: '2021-01-25T16:27:31'
       prerelease: false
       files: []

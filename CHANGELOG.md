@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Upgrade Go from v1.14.14 to v1.14.15
+- Upgrade cloudwatch from v0.9.0 to v0.10.0
+- Upgrade jmx_exporter from v0.14.0 to v0.15.0
+- Upgrade node_exporter v1.0.1 to v1.1.0
+- Upgrade redis_exporter_oliver006 from v1.15.1 to v1.16.0
+- Upgrade smokeping_exporter_superq from v0.3.1 to v0.4.1
+- Upgrade statsd_exporter from v0.19.0 to v0.20.0
+- Update metadata to include latest master commits
+
 ## [0.12.28] - 2021-01-25
 
 ### Changed
