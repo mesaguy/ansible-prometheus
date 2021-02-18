@@ -254,6 +254,11 @@ Name of the Prometheus service and group:
     prometheus_group: prometheus
     prometheus_user: prometheus
 
+Create the Prometheus user and group as system accounts, defaults to 'false':
+
+    prometheus_group_is_system: true
+    prometheus_user_is_system: true
+
 Configure ulimits for 'prometheus' user:
 
     prometheus_configure_ulimits: false
@@ -590,5 +595,4 @@ See the [LICENSE](https://github.com/mesaguy/ansible-prometheus/blob/master/LICE
 
 ## Author Information
 Mesaguy
- - https://mesaguy.com
- - https://github.com/mesaguy/ansible-prometheus
+ - https://github.com/mesaguy
