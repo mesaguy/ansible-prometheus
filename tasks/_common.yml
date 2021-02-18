@@ -48,6 +48,7 @@
   become: true
   group:
     name: '{{ prometheus_group }}'
+    system: '{{ prometheus_group_is_system }}'
     gid: '{{ prometheus_gid | default(omit) }}'
   when: prometheus_manage_group | bool
 
@@ -57,6 +58,7 @@
     name: '{{ prometheus_user }}'
     comment: Prometheus User
     uid: '{{ prometheus_uid | default(omit) }}'
+    system: '{{ prometheus_user_is_system }}'
     group: '{{ prometheus_group }}'
     shell: '{{ prometheus_shell | default(omit) }}'
   when: prometheus_manage_user | bool

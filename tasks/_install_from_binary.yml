@@ -50,7 +50,7 @@
     - not prometheus_software_installed.stat.exists
     - prometheus_local_archive | bool
 
-# Download and unarchive seperately as 'get_url' can follow redirects
+# Download and unarchive separately as 'get_url' can follow redirects
 # and github uses redirects for some downloads
 - name: 'Download {{ prometheus_software_name_version }} and validate checksum ({{ prometheus_software_metadata.url }})'
   become: true

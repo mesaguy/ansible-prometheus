@@ -6,12 +6,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Allow creating "prometheus" user account and group at the system level
+
+### Changed
+
 - Upgrade Go from v1.14.14 to v1.15.8
+- Upgrade Prometheus from v2.24.1 to v2.25.0
+- Upgrade Prometheus (pre-release) from v2.24.0-rc.0 to v2.25.0-rc.0
 - Upgrade cloudwatch from v0.9.0 to v0.10.0
 - Upgrade jmx_exporter from v0.14.0 to v0.15.0
-- Upgrade node_exporter v1.0.1 to v1.1.0
-- Upgrade redis_exporter_oliver006 from v1.15.1 to v1.16.0
+- Upgrade node_exporter v1.0.1 to v1.1.1
+- Upgrade redis_exporter_oliver006 from v1.15.1 to v1.17.0
 - Upgrade smokeping_exporter_superq from v0.3.1 to v0.4.1
+- Upgrade snmp_exporter v0.19.0 to v0.20.0
 - Upgrade statsd_exporter from v0.19.0 to v0.20.0
 - Update metadata to include latest master commits
 
