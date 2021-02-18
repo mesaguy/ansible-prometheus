@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- The postgres_exporter author changed from https://github.com/wrouesnel/postgres_exporter to https://github.com/prometheus-community/postgres_exporter. The exporter variables changed from postgres_exporter_wrouesnel to postgres_exporter_prometheus_community
+- The postgres exporter name changed from postgres_exporter_wrouesnel to postgres_exporter_prometheus_community
 - Upgrade Go from v1.14.14 to v1.15.8
 - Upgrade Prometheus from v2.24.1 to v2.25.0
 - Upgrade Prometheus (pre-release) from v2.24.0-rc.0 to v2.25.0-rc.0
