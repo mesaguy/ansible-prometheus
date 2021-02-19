@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.29] - 2021-02-19
+
 ### Added
 
 - Allow creating "prometheus" user account and group at the system level
@@ -24,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgrade snmp_exporter v0.19.0 to v0.20.0
 - Upgrade statsd_exporter from v0.19.0 to v0.20.0
 - Update metadata to include latest master commits
+- Numerous test changes
 
 ## [0.12.28] - 2021-01-25
 
