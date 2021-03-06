@@ -4,17 +4,197 @@ defaults:
   tgroup: postgres
 software:
   name: wrouesnel/postgres_exporter
-  release: v0.8.0
+  release: v0.9.0
   prerelease: null
   url: https://github.com/prometheus-community/postgres_exporter
   source: https://github.com/prometheus-community/postgres_exporter.git
-  updated: '2021-02-18T04:22:40.130958'
+  updated: '2021-03-06T05:16:08.645955'
   master:
     commit:
-      sha: 8531abac469ebb163ae9e4758e36d2ea9e6a3fcd
-      timestamp: '2021-02-17T14:04:12'
+      sha: 5c660bac37f96cd89ba89769a64f960efb9da9cd
+      timestamp: '2021-03-03T17:01:46'
     files: []
   releases:
+    - name: v0.9.0
+      commit: null
+      timestamp: '2021-03-01T13:21:41'
+      prerelease: false
+      files:
+        - name: postgres_exporter-0.9.0.aix-ppc64.tar.gz
+          commit: null
+          size: 6464940
+          sha256: sha256:8affc7d31b7a6eca25eb559072679c09003ae22a5edb7f1ce2973e7efff4a4e4
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.aix-ppc64.tar.gz
+        - name: postgres_exporter-0.9.0.darwin-amd64.tar.gz
+          commit: null
+          size: 6837509
+          sha256: sha256:4483fe1d41e6f1aae6a562bd75b77522fe1965686b33b4834735b2f648d85e74
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.darwin-amd64.tar.gz
+        - name: postgres_exporter-0.9.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 6908042
+          sha256: sha256:a19669daec458e3d2aee7d8ccba3d93ea997770f484f356896c623a600b845c9
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.dragonfly-amd64.tar.gz
+        - name: postgres_exporter-0.9.0.freebsd-386.tar.gz
+          commit: null
+          size: 6723884
+          sha256: sha256:67bef6ae27405e761b283767799a3c8dc9fcb5f1f0a873e668d41673f838fe0f
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.freebsd-386.tar.gz
+        - name: postgres_exporter-0.9.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 6938664
+          sha256: sha256:25b16c611677b3e82783e5b7b014980e9a6cbafb0dedb496c40587e25eec7f8d
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.freebsd-amd64.tar.gz
+        - name: postgres_exporter-0.9.0.freebsd-arm64.tar.gz
+          commit: null
+          size: 6421480
+          sha256: sha256:e3654d77af26aaa581296a1c12b56c26d03c73f498aa19cac98b7c57e90ea06e
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.freebsd-arm64.tar.gz
+        - name: postgres_exporter-0.9.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 6421733
+          sha256: sha256:b84513d60742d6724dd7a67a9a0ca21548049acbae7527d6b863c34b0b78e213
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.freebsd-armv6.tar.gz
+        - name: postgres_exporter-0.9.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 6414685
+          sha256: sha256:171e86b0d7a2501ff7600833aa9e8187dacbbf447348a2e491980450bc8c11f4
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.freebsd-armv7.tar.gz
+        - name: postgres_exporter-0.9.0.linux-386.tar.gz
+          commit: null
+          size: 6751138
+          sha256: sha256:c5de9dc0a5303446b1c83978c473a1f9099f6241339f5b8f1ee5faf350f039f0
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.linux-386.tar.gz
+        - name: postgres_exporter-0.9.0.linux-amd64.tar.gz
+          commit: null
+          size: 6954762
+          sha256: sha256:ff541bd3ee19c0ae003d71424a75edfcc8695e828dd20d5b4555ce433c89d60b
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.linux-amd64.tar.gz
+        - name: postgres_exporter-0.9.0.linux-arm64.tar.gz
+          commit: null
+          size: 6474600
+          sha256: sha256:d869c16791481dc8475487ad84ae4371a63f9b399898ca1c666eead5cccf7182
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.linux-arm64.tar.gz
+        - name: postgres_exporter-0.9.0.linux-armv5.tar.gz
+          commit: null
+          size: 6441507
+          sha256: sha256:df5c726e130d7bf075aa4f62a6f0cd33ccc353d0284a1031fdfc8d7503d99924
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.linux-armv5.tar.gz
+        - name: postgres_exporter-0.9.0.linux-armv6.tar.gz
+          commit: null
+          size: 6443070
+          sha256: sha256:6807dbd2ad87dc9e472a82d8e1305e5c3b7c9e0f38b997d2ba331a454b387997
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.linux-armv6.tar.gz
+        - name: postgres_exporter-0.9.0.linux-armv7.tar.gz
+          commit: null
+          size: 6438068
+          sha256: sha256:7086d0ebfe0d2a4526f7193d80077005b55e48ed6e7d922ac8bcc12f552f12d1
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.linux-armv7.tar.gz
+        - name: postgres_exporter-0.9.0.linux-mips.tar.gz
+          commit: null
+          size: 6444619
+          sha256: sha256:fccc5003045e82868c448cf07be7b69c77d467c1f716f98baea9fc05f64be089
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.linux-mips.tar.gz
+        - name: postgres_exporter-0.9.0.linux-mips64.tar.gz
+          commit: null
+          size: 6575100
+          sha256: sha256:1bec62fda7d9247ea156be6f4c49b68c2ada85a60c6f608c0e06b63dfc9a8cc8
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.linux-mips64.tar.gz
+        - name: postgres_exporter-0.9.0.linux-mips64le.tar.gz
+          commit: null
+          size: 6368008
+          sha256: sha256:5fbcd78fcea740f4b60bb7e1a83bfc145236a120ae468a26b3008e2bb1906b13
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.linux-mips64le.tar.gz
+        - name: postgres_exporter-0.9.0.linux-mipsle.tar.gz
+          commit: null
+          size: 6296516
+          sha256: sha256:01a1d202cfa9d78fb1157e91886900ea29cd65b534b99be0844c2bd59a251958
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.linux-mipsle.tar.gz
+        - name: postgres_exporter-0.9.0.linux-ppc64.tar.gz
+          commit: null
+          size: 6591058
+          sha256: sha256:eb09e85620e210edec5f0b5d24e2ebf5744831a24bb5fe04d855166ef0639251
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.linux-ppc64.tar.gz
+        - name: postgres_exporter-0.9.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 6410911
+          sha256: sha256:c91f6a69903b11c6e39e8bc623f7374e59b6e04ed981a4b3c832b9a95033976a
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.linux-ppc64le.tar.gz
+        - name: postgres_exporter-0.9.0.linux-s390x.tar.gz
+          commit: null
+          size: 6975224
+          sha256: sha256:a2d9fd48ae946826c5fb9c23408c2e2d253569443c6a0a499f21991d1dec3336
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.linux-s390x.tar.gz
+        - name: postgres_exporter-0.9.0.netbsd-386.tar.gz
+          commit: null
+          size: 6696620
+          sha256: sha256:a87cb39d78c57e818da558f990e1545cf38ac6fea4a156e9086afc24cb6a5ca1
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.netbsd-386.tar.gz
+        - name: postgres_exporter-0.9.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 6906801
+          sha256: sha256:bf6cc1e5a3659240aca134e2bf0db40fcd89822003afc801d0fc478882319d86
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.netbsd-amd64.tar.gz
+        - name: postgres_exporter-0.9.0.netbsd-arm64.tar.gz
+          commit: null
+          size: 6406686
+          sha256: sha256:01b9771b2a36d6941998ce6a023eb5ef0481d680f572d37f35f7609c18c2d2c3
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.netbsd-arm64.tar.gz
+        - name: postgres_exporter-0.9.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 6398397
+          sha256: sha256:ca7376a3df22c86c877275fd1c52e7ac047caadde9511ba2b7ea9d2d71733aa7
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.netbsd-armv6.tar.gz
+        - name: postgres_exporter-0.9.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 6393428
+          sha256: sha256:855a919f5c5fc5e4dde8cd90ed3627ca2e3f729043e0590b5a5b8cfff73f4219
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.netbsd-armv7.tar.gz
+        - name: postgres_exporter-0.9.0.openbsd-386.tar.gz
+          commit: null
+          size: 6696513
+          sha256: sha256:be3636d223bf09f36a9b12b80c3e624921071381066f1be385ee4c57c8846b74
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.openbsd-386.tar.gz
+        - name: postgres_exporter-0.9.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 6908996
+          sha256: sha256:9d16b206faf8cd0b1d56465974b794d60cec4d4585cfcc841324989be11295c8
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.openbsd-amd64.tar.gz
+        - name: postgres_exporter-0.9.0.openbsd-arm64.tar.gz
+          commit: null
+          size: 6404763
+          sha256: sha256:31e4801c05fecf3363c10c74ad9ae3dca98a23bcf3737e6fc54c3ee638495778
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.openbsd-arm64.tar.gz
+        - name: postgres_exporter-0.9.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 6392458
+          sha256: sha256:f78f451651881639e3f4291bdcf58c36b08988cdf7ece7d7679e2b0b0f4a12a6
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.openbsd-armv7.tar.gz
+        - name: postgres_exporter-0.9.0.windows-386.tar.gz
+          commit: null
+          size: 6832594
+          sha256: sha256:5d90e2ebb89aa8f47a6bab281517d045f4a7e133cb03c88e9d4dd626d5f02e4c
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.windows-386.tar.gz
+        - name: postgres_exporter-0.9.0.windows-386.zip
+          commit: null
+          size: 6943093
+          sha256: sha256:44f4721742e2fb7cc1e040f1663483a2d15e63ceec8e66e579ed41d16c4e01cd
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.windows-386.zip
+        - name: postgres_exporter-0.9.0.windows-amd64.tar.gz
+          commit: null
+          size: 6963789
+          sha256: sha256:e6732bf7a78b7dd8b8d1f9c55fc27b27160d840a3da80e57378789a4857a8de2
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.windows-amd64.tar.gz
+        - name: postgres_exporter-0.9.0.windows-amd64.zip
+          commit: null
+          size: 7049026
+          sha256: sha256:ee282195eb9e756c21708d044334c2e47970bdb1c2d64d4b16160149f3ff6c62
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/postgres_exporter-0.9.0.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 3728
+          sha256: sha256:af34dadfee2c49faceeafa648594e090b376e41b4ebd6a2892003d0619f8e59b
+          url: https://github.com/prometheus-community/postgres_exporter/releases/download/v0.9.0/sha256sums.txt
     - name: v0.8.0
       commit: null
       timestamp: '2019-11-25T13:34:34'
@@ -600,13 +780,3 @@ software:
           size: 8664364
           sha256: sha256:7e058280eb58261c2d10ce473071a82f87024796fc951cb9c4b493f93077d717
           url: https://github.com/wrouesnel/postgres_exporter/releases/download/v0.1.1/postgres_exporter
-    - name: v0.1.0
-      commit: null
-      timestamp: '2016-11-17T17:06:34'
-      prerelease: false
-      files:
-        - name: postgres_exporter
-          commit: null
-          size: 8664364
-          sha256: sha256:431ea9807c74470bf9e1896ba402ac8710aa6f5dcdce22acc59f63b28ec2d1d4
-          url: https://github.com/wrouesnel/postgres_exporter/releases/download/v0.1.0/postgres_exporter
