@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.30] - 2021-03-06
+
 - Upgrade ipmi_exporter_soundcloud from v1.3.1 to v1.3.2
 - Upgrade mongodb_exporter_percona from v0.20.1 to v0.20.3
 - Upgrade node_exporter v1.1.1 to v1.1.2
