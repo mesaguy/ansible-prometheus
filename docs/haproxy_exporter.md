@@ -19,9 +19,10 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 910
     prometheus_haproxy_exporter_host: "0.0.0.0"
     prometheus_haproxy_exporter_port: 9101
 
-To gather HAProxy stats via a unix socket, specify the path to the unix socket. Collecting HAProxy stats via the http and unix socket methods are mutually exclusive. It may also be necessary to run the haproxy_exporter as the user haproxy is running as:
+To gather HAProxy stats via a unix socket or non-default uri, specify the path to the unix socket or scrape-uri. Collecting HAProxy stats via the http and unix socket methods are mutually exclusive, scrape-uri overrides socket. It may also be necessary to run the haproxy_exporter as the user haproxy is running as:
 
     prometheus_haproxy_exporter_socket: '/run/haproxy/haproxy.sock'
+    prometheus_haproxy_exporter_scrape_uri: 'http://127.0.0.1:1234/;csv'
     prometheus_haproxy_exporter_runas: haproxy
 
 Enable HAProxy statistics via socket in the HAProxy globals section:
