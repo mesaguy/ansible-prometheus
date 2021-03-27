@@ -6,13 +6,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.31] - 2021-03-15
+
+### Changed
+
+- Upgrade Go from v1.15.8 to v1.15.10
+- Upgrade Prometheus from v2.25.0 to v2.25.1
+- Upgrade redis_exporter_oliver006 from v1.17.1 to v1.18.0
+- Update metadata to include latest master commits
+
+## [0.12.30] - 2021-03-06
+
+### Changed
+
+- Upgrade ipmi_exporter_soundcloud from v1.3.1 to v1.3.2
+- Upgrade mongodb_exporter_percona from v0.20.1 to v0.20.3
+- Upgrade node_exporter v1.1.1 to v1.1.2
+- Upgrade postgres_exporter_wrouesnel from v0.8.0 to v0.9.0
+- Upgrade redis_exporter_oliver006 from v1.17.0 to v1.17.1
+- Update metadata to include latest master commits
+
+## [0.12.29] - 2021-02-19
+
 ### Added
 
 - Allow creating "prometheus" user account and group at the system level
 
 ### Changed
 
-- The postgres_exporter author changed from https://github.com/wrouesnel/postgres_exporter to https://github.com/prometheus-community/postgres_exporter. The exporter variables changed from postgres_exporter_wrouesnel to postgres_exporter_prometheus_community
+- The postgres exporter name changed from postgres_exporter_wrouesnel to postgres_exporter_prometheus_community
 - Upgrade Go from v1.14.14 to v1.15.8
 - Upgrade Prometheus from v2.24.1 to v2.25.0
 - Upgrade Prometheus (pre-release) from v2.24.0-rc.0 to v2.25.0-rc.0
@@ -24,6 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgrade snmp_exporter v0.19.0 to v0.20.0
 - Upgrade statsd_exporter from v0.19.0 to v0.20.0
 - Update metadata to include latest master commits
+- Numerous test changes
 
 ## [0.12.28] - 2021-01-25
 

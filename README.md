@@ -179,7 +179,7 @@ prometheus_components:
  - openvpn_exporter_kumina
  - phpfpm_exporter_hipages
  - ping_exporter_czerwonk
- - postgres_exporter_wrouesnel
+ - postgres_exporter_prometheus_community
  - powerdns_exporter_ledgr
  - process_exporter_ncabatoff
  - proxysql_exporter_percona
