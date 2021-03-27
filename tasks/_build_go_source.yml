@@ -113,7 +113,7 @@
     chdir: '{{ prometheus_software_src_dir }}'
     creates: '{{ prometheus_software_name }}'
   environment:
-    GOPATH: '{{ prometheus_software_build_dir }}'
+    GOPATH: '{{ prometheus_software_build_gopath }}'
     GOROOT: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}'
     PATH: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}/bin:{{ prometheus_software_build_dir }}/bin:{{ ansible_env.PATH }}'
   when: makefile.stat.exists
@@ -129,7 +129,7 @@
     chdir: '{{ prometheus_software_src_dir }}'
     creates: '{{ prometheus_software_name }}'
   environment:
-    GOPATH: '{{ prometheus_software_build_dir }}'
+    GOPATH: '{{ prometheus_software_build_gopath }}'
     GOROOT: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}'
     PATH: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}/bin:{{ prometheus_software_build_dir }}/bin:{{ ansible_env.PATH }}'
   when: not makefile.stat.exists

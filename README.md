@@ -53,7 +53,7 @@ See each exporter's usage page for more details:
 |[bind_exporter_prometheus_community](https://github.com/prometheus-community/bind_exporter)          | [usage](docs/bind_exporter_prometheus_community.md)         | prometheus-community | Partial   |
 |[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)                                 | [usage](docs/blackbox_exporter.md)                          | prometheus           | Yes       |
 |[ceph_exporter_digitalocean](https://github.com/digitalocean/ceph_exporter)                          | [usage](docs/ceph_exporter_digitalocean.md)                 | digitalocean         | Partial   |
-|[clickhouse_exporter_perconalab](https://github.com/Percona-Lab/clickhouse_exporter)                 | [usage](docs/clickhouse_exporter_perconalab.md)             | perconalab           | Yes       |
+|[clickhouse_exporter_clickhouse](https://github.com/ClickHouse/clickhouse_exporter)                 | [usage](docs/clickhouse_exporter_clickhouse.md)             | clickhouse           | Yes       |
 |[cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter)                             | [usage](docs/cloudwatch_exporter.md)                        | prometheus           | Partial   |
 |[collectd_exporter](https://github.com/prometheus/collectd_exporter)                                 | [usage](docs/collectd_exporter.md)                          | prometheus           | Yes       |
 |[consul_exporter](https://github.com/prometheus/consul_exporter)                                     | [usage](docs/consul_exporter.md)                            | prometheus           | Yes       |
@@ -100,7 +100,6 @@ See each exporter's usage page for more details:
 |[ssl_exporter_ribbybibby](https://github.com/ribbybibby/ssl_exporter)                                | [usage](docs/ssl_exporter_ribbybibby.md)                    | ribbybibby           | Yes       |
 |[statsd_exporter](https://github.com/prometheus/statsd_exporter)                                     | [usage](docs/statsd_exporter.md)                            | prometheus           | Yes       |
 |[wireguard_exporter_mdlayher](https://github.com/mdlayher/wireguard_exporter)                        | [usage](docs/wireguard_exporter_mdlayher.md)                | mdlayher             | Partial   |
-|[zookeeper_exporter_infonova](https://github.com/infonova/zookeeper_exporter)                        | [usage](docs/zookeeper_exporter_infonova.md)                | infonova             | Yes       |
 
 ### Managed node_exporter textfiles scripts
 Numerous node_exporter textfiles scripts are supported and can be installed via the following variables. These scripts are installed under '/opt/prometheus/scripts' by default:
@@ -148,7 +147,7 @@ prometheus_components:
  - bind_exporter_prometheus_community
  - blackbox_exporter
  - ceph_exporter_digitalocean
- - clickhouse_exporter_perconalab
+ - clickhouse_exporter_clickhouse
  - cloudwatch_exporter
  - collectd_exporter
  - consul_exporter
@@ -194,7 +193,6 @@ prometheus_components:
  - ssl_exporter_ribbybibby
  - statsd_exporter
  - wireguard_exporter_mdlayher
- - zookeeper_exporter_infonova
 ```
 
 ### Mesaguy script documentation
@@ -574,7 +572,7 @@ Installations are performed using pre-compiled binary files where possible. Wher
 
  1. Installs the tools necessary to compile the binaries
  2. Compiles the binaries
- 3. Installs the binaries in a directory specifying both the version of the Prometheus software and version of go utilized for the installation (ie: /opt/prometheus/exporters/zookeeper_exporter/1.1__go-1.10.3/zookeeper_exporter)
+ 3. Installs the binaries in a directory specifying both the version of the Prometheus software and version of go utilized for the installation (ie: /opt/prometheus/exporters/smokeping_exporter_superq/v0.3.1__go-1.14.14/smokeping_prober)
 
 If a binary fails to install or is unavailable despite the existence of some pre-compiled binaries, then the Prometheus module will still be installed using source code.
 

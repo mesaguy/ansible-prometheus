@@ -11,7 +11,7 @@
     prometheus_software_author: mindprince
     prometheus_software_binary_name: nvidia_gpu_prometheus_exporter
     prometheus_software_officialname: nvidia_gpu_prometheus_exporter
-    prometheus_software_makefile_make_command: 'go get -d && go build'
+    prometheus_software_makefile_make_command: 'go mod init ; go mod tidy ; go mod vendor && go get -d && go build'
     prometheus_software_name: nvidia_gpu_exporter_mindprince
     prometheus_software_description: 'Prometheus nvidia_gpu_exporter (mindprince), exporter of NVIDIA GPU metrics'
     prometheus_software_documentation: 'https://github.com/mindprince/nvidia_gpu_prometheus_exporter'
