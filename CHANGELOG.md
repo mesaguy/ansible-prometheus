@@ -6,9 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- haproxy_exporter enhanced to add scrape_uri support
+
 ### Changed
 
 - Rework building Go source
+- Fixes to templates/cloudwatch_exporter.yml.j2 indentation
 - Use https://github.com/ClickHouse/clickhouse_exporter as the source of clickhouse_exporter. Use of https://github.com/Percona-Lab/clickhouse_exporter is deprecated in favor of the new source
 - Upgrade Go from v1.15.10 to v1.16.2
 - Upgrade Prometheus from v2.25.1 to v2.26.0
