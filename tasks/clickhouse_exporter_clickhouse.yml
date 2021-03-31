@@ -1,19 +1,18 @@
----
 - block:
   - name: Include role mesaguy.prometheus setup task
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is undefined
 
-- name: Starting squid_exporter (boynux) install
+- name: Starting clickhouse_exporter (Clickhouse) install
   set_fact:
     prometheus_exporter: true
     prometheus_software_allow_build_test: true
-    prometheus_software_author: boynux
-    prometheus_software_binary_name: squid-exporter
-    prometheus_software_makefile_make_command: 'go get -d && go build'
-    prometheus_software_name: squid_exporter_boynux
-    prometheus_software_description: 'Prometheus squid_exporter (boynux), exports squid metrics in Prometheus format'
-    prometheus_software_documentation: 'https://github.com/boynux/squid-exporter'
+    prometheus_software_author: Clickhouse
+    prometheus_software_binary_name: clickhouse_exporter
+    prometheus_software_makefile_make_command: 'go mod init ; go mod tidy && go mod vendor && go get -d && go build'
+    prometheus_software_name: clickhouse_exporter_clickhouse
+    prometheus_software_description: 'Prometheus clickhouse_exporter (Clickhouse), exporter for various Clickhouse metrics'
+    prometheus_software_documentation: 'https://github.com/clickhouse/clickhouse_exporter'
 
 - name: Include task to setup {{ prometheus_software_name }} facts
   include_tasks: _setup_software_facts.yml
@@ -21,7 +20,7 @@
 - name: Set {{ prometheus_software_name_version }} facts
   set_fact:
     prometheus_software_opts:
-      - '-listen={{ prometheus_software_host }}:{{ prometheus_software_port }}'
+      - '-telemetry.address={{ prometheus_software_host }}:{{ prometheus_software_port }}'
 
 - name: Include task to perform installation of {{ prometheus_software_name_version }}
   include_tasks: _install.yml

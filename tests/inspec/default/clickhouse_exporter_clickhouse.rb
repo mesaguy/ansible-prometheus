@@ -22,7 +22,7 @@ describe service('clickhouse_exporter_clickhouse') do
     it { should be_running }
 end
 
-describe processes(Regexp.new("^/opt/prometheus/exporters/clickhouse_exporter_clickhouse/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/clickhouse_exporter")) do
+describe processes(Regexp.new("^/opt/prometheus/exporters/clickhouse_exporter_clickhouse/(v)?([0-9.]+|[0-9a-z]+__go-[0-9.]+)/clickhouse_exporter")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }

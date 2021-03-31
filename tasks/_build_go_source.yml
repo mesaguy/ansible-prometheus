@@ -102,6 +102,21 @@
     path: '{{ prometheus_software_src_dir }}/Makefile'
   register: makefile
 
+- name: Prepare {{ prometheus_software_name_version }} source code
+  become: true
+  shell: 'go mod init ; go mod vendor'
+  register: prometheus_software_prepare
+  retries: 5
+  delay: 10
+  until: prometheus_software_prepare is succeeded
+  args:
+    chdir: '{{ prometheus_software_src_dir }}'
+    creates: '{{ prometheus_software_name }}'
+  environment:
+    GOPATH: '{{ prometheus_software_build_gopath }}'
+    GOROOT: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}'
+    PATH: '{{ prometheus_go_dir }}/{{ prometheus_go_version }}/bin:{{ prometheus_software_build_dir }}/bin:{{ ansible_env.PATH }}'
+
 - name: Build {{ prometheus_software_name_version }} source code with Makefile
   become: true
   shell: '{{ prometheus_software_makefile_make_command }}'  # noqa 305

@@ -57,7 +57,7 @@ prometheus_default_src_unarchive_opts:
  - '--strip-components=1'
 prometheus_fallback_to_build: false
 prometheus_java_path: /usr/bin/java
-prometheus_software_make_command: 'go mod init ; go mod tidy && go mod vendor && go get -d && go build'
+prometheus_software_make_command: 'go get -d && go build'
 prometheus_software_makefile_make_command: 'make'
 prometheus_software_opts: []
 prometheus_software_setup_pkg_mgrs:

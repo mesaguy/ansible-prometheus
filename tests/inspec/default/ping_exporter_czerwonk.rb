@@ -34,5 +34,5 @@ end
 
 describe http('http://127.0.0.1:9427/metrics') do
     its('status') { should cmp 200 }
-    its('body') { should match /ping_rtt_best_ms/ }
+    its('body') { should match /ping_rtt_mean_seconds_ms/ }
 end

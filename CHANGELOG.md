@@ -6,6 +6,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Rework building Go source
+- Use https://github.com/ClickHouse/clickhouse_exporter as the source of clickhouse_exporter. Use of https://github.com/Percona-Lab/clickhouse_exporter is deprecated in favor of the new source
+- Upgrade Go from v1.15.10 to v1.16.2
+- Upgrade Prometheus from v2.25.1 to v2.26.0
+- Upgrade Prometheus (pre-release) from v2.25.0-rc.0 to v2.26.0-rc.0
+- Upgrade kafka_exporter_danielqsj from v1.2.0 to v1.3.0
+- Upgrade memcached_exporter from v0.8.0 to v0.9.0
+- Upgrade nginx-prometheus-exporter_nginxinc from v0.8.0 to v0.9.0
+- Upgrade ping_exporter_czerwonk from v0.4.5 to v0.4.7
+- Upgrade redis_exporter_oliver006 from v1.18.0 to v1.20.0
+- Upgrade statsd_exporter from v0.20.0 to v0.20.1
+- Update metadata to include latest master commits
+
+### Removed
+- Remove dockerhub_exporter_promhippie as it is no longer actively maintained
+- Remove zookeeper_exporter_infonova, not actively maintained
+
 ## [0.12.31] - 2021-03-15
 
 ### Changed
