@@ -6,7 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.32] - 2021-04-01
+
 ### Added
+
 - haproxy_exporter enhanced to add scrape_uri support
 
 ### Changed
@@ -26,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update metadata to include latest master commits
 
 ### Removed
+
 - Remove dockerhub_exporter_promhippie as it is no longer actively maintained
 - Remove zookeeper_exporter_infonova, not actively maintained
 
