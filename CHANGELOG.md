@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Upgrade Go from v1.16.2 to v1.16.4
+- Upgrade alertmanager (pre-release) from v0.21.0-rc.0 to v0.22.0-rc.0
+- Upgrade graphite_exporter from v0.9.0 to v0.10.0
+- Upgrade mongodb_exporter_percona from v0.20.3 to v0.20.4
+- Upgrade Prometheus (pre-release) from v2.26.0-rc.0 to v2.27.0-rc.0
+- Upgrade redis_exporter_oliver006 from v1.20.0 to v1.23.1
+- Upgrade smokeping_exporter_superq from v0.4.1 to v0.4.2
+- Upgrade statsd_exporter from v0.20.1 to v0.20.2
+- Update metadata to include latest master commits
+
 ## [0.12.32] - 2021-04-01
 
 ### Added

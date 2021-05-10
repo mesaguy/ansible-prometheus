@@ -4,17 +4,37 @@ defaults:
   tgroup: monogodb
 software:
   name: percona/mongodb_exporter
-  release: v0.20.3
+  release: v0.20.4
   prerelease: null
   url: https://github.com/percona/mongodb_exporter
   source: https://github.com/percona/mongodb_exporter.git
-  updated: '2021-03-27T03:27:42.772936'
+  updated: '2021-05-10T04:00:39.434166'
   master:
     commit:
-      sha: 1b5999182fb88fd2ec7e7b3dc362f0de3237d610
-      timestamp: '2021-03-25T10:14:37'
+      sha: eaf4e224c3a29e2081716e144500ba97fe7f0c60
+      timestamp: '2021-04-28T09:48:42'
     files: []
   releases:
+    - name: v0.20.4
+      commit: null
+      timestamp: '2021-04-09T12:24:31'
+      prerelease: false
+      files:
+        - name: mongodb_exporter-0.20.4.darwin-amd64.tar.gz
+          commit: null
+          size: 5769436
+          sha256: sha256:1e22aa7351987eeb2ebeec489048f4193e36ff8c7cc65d00d0a0fa5b4a409280
+          url: https://github.com/percona/mongodb_exporter/releases/download/v0.20.4/mongodb_exporter-0.20.4.darwin-amd64.tar.gz
+        - name: mongodb_exporter-0.20.4.linux-amd64.tar.gz
+          commit: null
+          size: 5576502
+          sha256: sha256:3780521ae6509eb35b8645d15a1bd395365787f32ad6a2b0871d67d2caac2d4e
+          url: https://github.com/percona/mongodb_exporter/releases/download/v0.20.4/mongodb_exporter-0.20.4.linux-amd64.tar.gz
+        - name: mongodb_exporter_0.20.4_checksums.txt
+          commit: null
+          size: 219
+          sha256: sha256:f0780e16a56efd0f9395232ad8168d555fee5b6ffc72472459e228dc4780e4ee
+          url: https://github.com/percona/mongodb_exporter/releases/download/v0.20.4/mongodb_exporter_0.20.4_checksums.txt
     - name: v0.20.3
       commit:
         sha: 8b80aefd79020034c351243fdf067a7c4c24c61d
@@ -264,23 +284,3 @@ software:
           size: 3925495
           sha256: sha256:1ebec75dd515ff4a8509a5f50d6d3080fd69c50cce8188152619681bf1e1efa6
           url: https://github.com/percona/mongodb_exporter/releases/download/v0.3.1/mongodb_exporter-0.3.1.windows-amd64.tar.gz
-    - name: v0.3.0
-      commit: null
-      timestamp: '2017-07-07T16:20:49'
-      prerelease: false
-      files:
-        - name: mongodb_exporter-0.3.0.darwin-amd64.tar.gz
-          commit: null
-          size: 3797846
-          sha256: sha256:ad51acd10bc6de023bfc1d779d3346dd525be9bde72631ab7e2b115813470510
-          url: https://github.com/percona/mongodb_exporter/releases/download/v0.3.0/mongodb_exporter-0.3.0.darwin-amd64.tar.gz
-        - name: mongodb_exporter-0.3.0.linux-amd64.tar.gz
-          commit: null
-          size: 3767315
-          sha256: sha256:2217b7167fcb365dba9af0a03065de323c5135f534c2e11c4a487e805b14f41a
-          url: https://github.com/percona/mongodb_exporter/releases/download/v0.3.0/mongodb_exporter-0.3.0.linux-amd64.tar.gz
-        - name: mongodb_exporter-0.3.0.windows-amd64.tar.gz
-          commit: null
-          size: 3817097
-          sha256: sha256:83dfc6b17985be860da51449c0700c28129e241a7cce9ff60a3a819fe3e0bb42
-          url: https://github.com/percona/mongodb_exporter/releases/download/v0.3.0/mongodb_exporter-0.3.0.windows-amd64.tar.gz

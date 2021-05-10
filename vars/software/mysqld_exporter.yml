@@ -5,14 +5,14 @@ defaults:
 software:
   name: prometheus/mysqld_exporter
   release: v0.12.1
-  prerelease: 0.6.0
+  prerelease: v0.13.0-rc.0
   url: https://github.com/prometheus/mysqld_exporter
   source: https://github.com/prometheus/mysqld_exporter.git
-  updated: '2021-03-27T03:29:11.877843'
+  updated: '2021-05-10T04:07:32.021908'
   master:
     commit:
-      sha: 3381d9c187b54115e89764de20f5c43bad948ad0
-      timestamp: '2021-03-24T10:06:40'
+      sha: d92905be02a814f6960244ebb375fbf317e8a85e
+      timestamp: '2021-04-28T09:18:14'
     files: []
   releases:
     - name: v0.12.1
@@ -1090,3 +1090,193 @@ software:
           size: 2122176
           sha256: sha256:92efe21d1ef6cbc3f623bee8e469cbc5a94fdec1e04d5d1c0647b6f330b55fd8
           url: https://github.com/prometheus/mysqld_exporter/releases/download/0.1.0/mysqld_exporter-0.1.0.linux-arm.tar.gz
+    - name: v0.13.0-rc.0
+      commit: null
+      timestamp: '2021-04-27T09:20:38'
+      prerelease: true
+      files:
+        - name: mysqld_exporter-0.13.0-rc.0.aix-ppc64.tar.gz
+          commit: null
+          size: 6113659
+          sha256: sha256:21e974713ca1129a0a7994a2206a4ea2a1c1f1bed3f69fec7b122b2d578bbad6
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.aix-ppc64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.darwin-amd64.tar.gz
+          commit: null
+          size: 6614517
+          sha256: sha256:e21529b125ed04c703357a9855c5b047335d8e9ec555d601096c3dcc51f1db1d
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.darwin-amd64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.darwin-arm64.tar.gz
+          commit: null
+          size: 6442779
+          sha256: sha256:d93212e998a8e46845399be3483816025204a6ebd6c09e259faed0835aad5845
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.darwin-arm64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 6686106
+          sha256: sha256:d5ba1663380c27e624004803dae79ccd04b257be010fe8d9ccb473d0e87aedc2
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.dragonfly-amd64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.freebsd-386.tar.gz
+          commit: null
+          size: 6553835
+          sha256: sha256:481711be7488e39d2f2c5dc1da3e2463d68ee779dca10f43196e7ba594050c65
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.freebsd-386.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 6711956
+          sha256: sha256:7536f40d90cad45ee23e2babd833490acdf5abb73b9577f87f1f5a6d7f8377ca
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.freebsd-amd64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.freebsd-arm64.tar.gz
+          commit: null
+          size: 6232736
+          sha256: sha256:0de01184ff5adccbf8f525606c77ea155adf9b12ffcb5dd0e2f41c37a8458d42
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.freebsd-arm64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 6263723
+          sha256: sha256:3b4a91e828ff11d619214a307adb34a562cf90628d39deccbd1880948e1215d9
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.freebsd-armv6.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 6256158
+          sha256: sha256:5edc1d7c6fdb52b47ee19380f071ef6ca524cbf042dc709e730f4fa119441109
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.freebsd-armv7.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.illumos-amd64.tar.gz
+          commit: null
+          size: 6668187
+          sha256: sha256:0608dfc7f94f8aa09337dab33f24c453a739e178be8d508488ac7d37a46c32e7
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.illumos-amd64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.linux-386.tar.gz
+          commit: null
+          size: 6579112
+          sha256: sha256:ca9eb344373f3536feca29d42455f5939b5f0ea420bed63c747ad1a20e2698a4
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.linux-386.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.linux-amd64.tar.gz
+          commit: null
+          size: 6728942
+          sha256: sha256:0d4a7bdf3b78d9d178a8dc8cbfb27171aaf4c2c36603416b4136236c611247c2
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.linux-amd64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.linux-arm64.tar.gz
+          commit: null
+          size: 6279004
+          sha256: sha256:a1ccc8d48979d16f9013193859f3bd53f688e5e91d10e44410cf98a7d15f08a2
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.linux-arm64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.linux-armv5.tar.gz
+          commit: null
+          size: 6295198
+          sha256: sha256:0384bdc3638381268fc13014de16645bbe52e77509633cf1b9e3c7d2bc75e233
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.linux-armv5.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.linux-armv6.tar.gz
+          commit: null
+          size: 6285134
+          sha256: sha256:619819169e961517e14003bc15e4c4379813adc0de26f8ff9e06181b2201733e
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.linux-armv6.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.linux-armv7.tar.gz
+          commit: null
+          size: 6281651
+          sha256: sha256:52368bc908c9a643a1b4b57b8b0007d434a6c591c501bb6b02be9caac188abce
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.linux-armv7.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.linux-mips.tar.gz
+          commit: null
+          size: 6268633
+          sha256: sha256:0446577c04bd62d38be7d98939461c70346394705265ef24de5e20561cfeed6f
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.linux-mips.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.linux-mips64.tar.gz
+          commit: null
+          size: 6370013
+          sha256: sha256:071d0b18b4f8952a77f66e4162e10e1b8cd978d21acbbbdbc4132b20ae045846
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.linux-mips64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.linux-mips64le.tar.gz
+          commit: null
+          size: 6172097
+          sha256: sha256:74509500b0fc3aa673486d502ff8809dea964c0b3ce64ad87b339ae905696f6d
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.linux-mips64le.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.linux-mipsle.tar.gz
+          commit: null
+          size: 6126203
+          sha256: sha256:26e9fa06ce47c540e2e033ef152c53825c615e8dac196f93aef48961819051e6
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.linux-mipsle.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.linux-ppc64.tar.gz
+          commit: null
+          size: 6385170
+          sha256: sha256:4fe8070a0a3ff958398bce13c12abf7e1db71429fd9f0dcd38eb34590b8553b2
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.linux-ppc64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 6202519
+          sha256: sha256:24e538acd6e02b14d16a875e6f191481322f1d54bd465ed7778e73e68374e722
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.linux-ppc64le.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.linux-s390x.tar.gz
+          commit: null
+          size: 6759034
+          sha256: sha256:2b189516008d5ab800711dabe71e51985a38cea620350269117a226418deb1b6
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.linux-s390x.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.netbsd-386.tar.gz
+          commit: null
+          size: 6530663
+          sha256: sha256:0158c32843363023e20402ece41165edbf805d985f4abffbc6a3520d8c42420a
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.netbsd-386.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 6686091
+          sha256: sha256:c5d152a58d9a2ad16b145246f6035941bcd217e93e1cd72077455ae78c8b8ec7
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.netbsd-amd64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.netbsd-arm64.tar.gz
+          commit: null
+          size: 6212247
+          sha256: sha256:6544eab0655b3c8e9b586e2da1aa4eb35d652d5e0f4ce077e20d5a4f1fd47f22
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.netbsd-arm64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 6243045
+          sha256: sha256:f9a1874e0a1b0d1d784dd3fca97e404f6c0bc24506d4155889b59f870bdf8c38
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.netbsd-armv6.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 6236922
+          sha256: sha256:37463291b7574e19bd4a07c505ebd41d9ce5bb5d288c907b1fa338ceb388d536
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.netbsd-armv7.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.openbsd-386.tar.gz
+          commit: null
+          size: 6526338
+          sha256: sha256:0dd19812acba9f14bc65dc27232ff3127d9edc195922f21a0f1cb6d9aefeea65
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.openbsd-386.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 6705181
+          sha256: sha256:733405faa2879cdc08d68df545960da95a172a82508b5b015b793ca313728c1e
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.openbsd-amd64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.openbsd-arm64.tar.gz
+          commit: null
+          size: 6233670
+          sha256: sha256:6a70444f8604c49f26682da15d6c0d8e6422131d27d09d266e69e57efb7749fc
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.openbsd-arm64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 6230413
+          sha256: sha256:51966343f02cd7a1e5ab13bb65eb6590623bb30f4403505b545292673879b468
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.openbsd-armv7.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.windows-386.tar.gz
+          commit: null
+          size: 6774647
+          sha256: sha256:c33ac5ea083d3f5b955f5a1ae52b5099cd469ddde153df1cd9c8d23251abb97f
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.windows-386.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.windows-386.zip
+          commit: null
+          size: 6869048
+          sha256: sha256:6ee56a50c58b8f1fa1a1ba73ed09c9f29880d9d053cd6a8f5ece20ee4cdc4e58
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.windows-386.zip
+        - name: mysqld_exporter-0.13.0-rc.0.windows-amd64.tar.gz
+          commit: null
+          size: 6848153
+          sha256: sha256:ae2c64fdb51a2ba4017762804517bdef891e98fe462e597888494c271ac7220c
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.windows-amd64.tar.gz
+        - name: mysqld_exporter-0.13.0-rc.0.windows-amd64.zip
+          commit: null
+          size: 6918651
+          sha256: sha256:56bffcc55311fda6d425d3c8257dd6760d66cf6c7aa0a522e939441d9dfbe904
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/mysqld_exporter-0.13.0-rc.0.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 4093
+          sha256: sha256:7561999f1901868be226d5df6af5dc15c25cc53b008a282ae2ef91ec3a5cb3bb
+          url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/sha256sums.txt
