@@ -6,8 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.33] - 2021-05-11
+
+### Changed
+
 - Upgrade Go from v1.16.2 to v1.16.4
-- Upgrade alertmanager (pre-release) from v0.21.0-rc.0 to v0.22.0-rc.0
+- Upgrade alertmanager (pre-release) from v0.21.0-rc.0 to v0.22.0-rc.1
+- Upgrade blackbox_exporter v0.18.0 to v0.19.0
 - Upgrade graphite_exporter from v0.9.0 to v0.10.0
 - Upgrade mongodb_exporter_percona from v0.20.3 to v0.20.4
 - Upgrade Prometheus (pre-release) from v2.26.0-rc.0 to v2.27.0-rc.0

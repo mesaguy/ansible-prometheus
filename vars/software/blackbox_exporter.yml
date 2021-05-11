@@ -4,17 +4,207 @@ defaults:
   tgroup: blackbox
 software:
   name: prometheus/blackbox_exporter
-  release: v0.18.0
+  release: v0.19.0
   prerelease: null
   url: https://github.com/prometheus/blackbox_exporter
   source: https://github.com/prometheus/blackbox_exporter.git
-  updated: '2021-05-10T04:04:27.564597'
+  updated: '2021-05-10T22:22:26.876236'
   master:
     commit:
-      sha: 2974c5187ed84bc78c67a398c6ab60d6b4cd9bb8
-      timestamp: '2021-05-08T17:19:22'
+      sha: 236474c2c67c7d9b2b37c00168ab2ed22f66a464
+      timestamp: '2021-05-10T12:59:05'
     files: []
   releases:
+    - name: v0.19.0
+      commit: null
+      timestamp: '2021-05-10T16:29:34'
+      prerelease: false
+      files:
+        - name: blackbox_exporter-0.19.0.aix-ppc64.tar.gz
+          commit: null
+          size: 8063109
+          sha256: sha256:5ba8b508d67df3498c6b040712f26afbbaa37f90eacfb0fe7ea38704fa687ca7
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.aix-ppc64.tar.gz
+        - name: blackbox_exporter-0.19.0.darwin-amd64.tar.gz
+          commit: null
+          size: 8725785
+          sha256: sha256:5ee126d1851d8704583552885c3906f06909f5b30716623abc522d6386d01367
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.darwin-amd64.tar.gz
+        - name: blackbox_exporter-0.19.0.darwin-arm64.tar.gz
+          commit: null
+          size: 8497631
+          sha256: sha256:58e965f2c2196ab12159d5b35b3dd39e128e35d9640782e8ea0bc12d1c3ee9d0
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.darwin-arm64.tar.gz
+        - name: blackbox_exporter-0.19.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 8831614
+          sha256: sha256:c8a88b85ca8e1a1f5154a691b8aa4e5110b166b6e72ab5e29d1304217c9a9c70
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.dragonfly-amd64.tar.gz
+        - name: blackbox_exporter-0.19.0.freebsd-386.tar.gz
+          commit: null
+          size: 8607919
+          sha256: sha256:f68a464764864cacf7eb1b6d5ba005f566ad1193b36e8ca9313a21cde5316178
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.freebsd-386.tar.gz
+        - name: blackbox_exporter-0.19.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 8853342
+          sha256: sha256:ce2ca1cc77f04436fbacbf535ea5ee9e571e3a3ebfd365fe141fe14a427f73e5
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.freebsd-amd64.tar.gz
+        - name: blackbox_exporter-0.19.0.freebsd-arm64.tar.gz
+          commit: null
+          size: 8227350
+          sha256: sha256:286a5ccf7987d20cc0e2a3675fccec9cda19381d0ecff28c64e65e13453efec9
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.freebsd-arm64.tar.gz
+        - name: blackbox_exporter-0.19.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 8233913
+          sha256: sha256:d7bf3b4d78df946eaad60cb3cb0fab59bc25484d19fc924acad940d5b3b6cffa
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.freebsd-armv6.tar.gz
+        - name: blackbox_exporter-0.19.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 8228723
+          sha256: sha256:f59f4fb1176bd500252bdba3234fe428b51adad4dac5801855799ecf4cbdbcd9
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.freebsd-armv7.tar.gz
+        - name: blackbox_exporter-0.19.0.illumos-amd64.tar.gz
+          commit: null
+          size: 8813739
+          sha256: sha256:0acbdebed7565772250e2e5f1800e20cc3f9c9aec69544c4169669fcc999b1a1
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.illumos-amd64.tar.gz
+        - name: blackbox_exporter-0.19.0.linux-386.tar.gz
+          commit: null
+          size: 8640649
+          sha256: sha256:4cc7f829ebab3b83fa8b3e4fc0c519450039073234eb7f5ec576a09ac2cf8c69
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-386.tar.gz
+        - name: blackbox_exporter-0.19.0.linux-amd64.tar.gz
+          commit: null
+          size: 8881739
+          sha256: sha256:af2ae1394c4f9b46962ac1510e1dacac78115c11e625991fb6c54825d2240896
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-amd64.tar.gz
+        - name: blackbox_exporter-0.19.0.linux-arm64.tar.gz
+          commit: null
+          size: 8283123
+          sha256: sha256:94a692f6859b61a0424540ece89f88d4aea9d19b19cd993dfce149e8f4fac715
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-arm64.tar.gz
+        - name: blackbox_exporter-0.19.0.linux-armv5.tar.gz
+          commit: null
+          size: 8280341
+          sha256: sha256:0bacd0a8ad7810f2bd19f17e4998ce44827a9c3077e62dbef86f4383fa9f9bc6
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-armv5.tar.gz
+        - name: blackbox_exporter-0.19.0.linux-armv6.tar.gz
+          commit: null
+          size: 8266129
+          sha256: sha256:fcda0edc417d9d7b372826c464e3e4ce2c7549a6484065887ad849af0ee603c2
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-armv6.tar.gz
+        - name: blackbox_exporter-0.19.0.linux-armv7.tar.gz
+          commit: null
+          size: 8260415
+          sha256: sha256:a5ba9ad67fa500dea69d4ddb0604506caacfd2588a000aadbdd1c5cb2b0939bb
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-armv7.tar.gz
+        - name: blackbox_exporter-0.19.0.linux-mips.tar.gz
+          commit: null
+          size: 8254829
+          sha256: sha256:33c2ff9b20a78eea56fdea399494f63fdf7e6fec81afeb8a082541869e110330
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-mips.tar.gz
+        - name: blackbox_exporter-0.19.0.linux-mips64.tar.gz
+          commit: null
+          size: 8383361
+          sha256: sha256:656fee9bea181590957fbabb40338014cfdfc37b6ad7751e4b599a5c4e195055
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-mips64.tar.gz
+        - name: blackbox_exporter-0.19.0.linux-mips64le.tar.gz
+          commit: null
+          size: 8115126
+          sha256: sha256:3fa02888bd29ab59c3c0b1aec1a33872b1596fd5a26dfb5decf00ce0f6c09870
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-mips64le.tar.gz
+        - name: blackbox_exporter-0.19.0.linux-mipsle.tar.gz
+          commit: null
+          size: 8070029
+          sha256: sha256:5a03bb8c4d2297f886a52ecd25cbae0c922a9dab8311702556d3ed7e3d1710e4
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-mipsle.tar.gz
+        - name: blackbox_exporter-0.19.0.linux-ppc64.tar.gz
+          commit: null
+          size: 8411934
+          sha256: sha256:270d8e9d545e1df3210409c53605f1fd4ec8e639672026882848ec42a1344de3
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-ppc64.tar.gz
+        - name: blackbox_exporter-0.19.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 8167412
+          sha256: sha256:05d17049602cb902f9ab560db53d6b4f84cfae9aa3401014465e89c60369a3c0
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-ppc64le.tar.gz
+        - name: blackbox_exporter-0.19.0.linux-s390x.tar.gz
+          commit: null
+          size: 8874384
+          sha256: sha256:a572df450115afb203dbbfb51c8bb83d85ae9d881902bc2027f93d40b22f4d21
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.linux-s390x.tar.gz
+        - name: blackbox_exporter-0.19.0.netbsd-386.tar.gz
+          commit: null
+          size: 8580639
+          sha256: sha256:1bb6873ccd933ef19597b5b0d996d7aadd568d9fdb03c6bebf1f03d20f3975c5
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.netbsd-386.tar.gz
+        - name: blackbox_exporter-0.19.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 8824075
+          sha256: sha256:8c0166aa7f8f803db7fa7e883096d82e6160de8268fbc117edbd48c1e8530214
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.netbsd-amd64.tar.gz
+        - name: blackbox_exporter-0.19.0.netbsd-arm64.tar.gz
+          commit: null
+          size: 8200277
+          sha256: sha256:969041370ea72fd58c737bfcd0e2a7c9e552909864da038c7bfb2c84cddb0120
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.netbsd-arm64.tar.gz
+        - name: blackbox_exporter-0.19.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 8211279
+          sha256: sha256:15fd8970d0499e8cbe2e04e59cf7d3dbad97c7b74443767249c2a1524a6f7b50
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.netbsd-armv6.tar.gz
+        - name: blackbox_exporter-0.19.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 8205222
+          sha256: sha256:641d924d9db8a840b399f3180349c149348357f047a05dae9ef008ea894a4667
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.netbsd-armv7.tar.gz
+        - name: blackbox_exporter-0.19.0.openbsd-386.tar.gz
+          commit: null
+          size: 8575153
+          sha256: sha256:b699b65c7d3fdf26636a20c1f469fd2a69d264ea104ad8a18d10f114c13c4754
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.openbsd-386.tar.gz
+        - name: blackbox_exporter-0.19.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 8839662
+          sha256: sha256:7c644e9cb7c098d3bbe3308b3aed0905a69daef763adb146ee1c662d81bd49a4
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.openbsd-amd64.tar.gz
+        - name: blackbox_exporter-0.19.0.openbsd-arm64.tar.gz
+          commit: null
+          size: 8220142
+          sha256: sha256:5dd12affdfa3ff7f1d5e488510a7c5a111da5489c68987d8a14589cbada0fada
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.openbsd-arm64.tar.gz
+        - name: blackbox_exporter-0.19.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 8200990
+          sha256: sha256:da022586d0f8c73a8706078df4224070607437811311702f32d54d90eba0b741
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.openbsd-armv7.tar.gz
+        - name: blackbox_exporter-0.19.0.windows-386.tar.gz
+          commit: null
+          size: 8831073
+          sha256: sha256:57b57d3e692a3f2d6dee0b9f4ed5fd1841d6d72365fcd56016b2bde72def1659
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.windows-386.tar.gz
+        - name: blackbox_exporter-0.19.0.windows-386.zip
+          commit: null
+          size: 8953890
+          sha256: sha256:38ab331205988badb45f33a412a3c8f3c58831347ae12a83ef05cbc3f8db0d6a
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.windows-386.zip
+        - name: blackbox_exporter-0.19.0.windows-amd64.tar.gz
+          commit: null
+          size: 8965451
+          sha256: sha256:e4f989566fc0201179e4ed0c9ef0cab7ad83353658c808b0e602ab3d0e6e4f8a
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.windows-amd64.tar.gz
+        - name: blackbox_exporter-0.19.0.windows-amd64.zip
+          commit: null
+          size: 9055471
+          sha256: sha256:11f55179caa2ae8b730bed9b036c77a3c5d8eec23cdc36980eb3cfe379b0c0c7
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/blackbox_exporter-0.19.0.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 3985
+          sha256: sha256:fbd7ff335c8435f4379ed8613a22c9e36a5d23a685b607a8f2f8489eb820d2fd
+          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.19.0/sha256sums.txt
     - name: v0.18.0
       commit: null
       timestamp: '2020-10-12T10:13:15'
@@ -2600,158 +2790,3 @@ software:
           size: 3478107
           sha256: sha256:dc1fe433487a0d742919dd1a443c5ee83fa8e59d7d6e2ad3ba9919af9876d585
           url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.3.0/blackbox_exporter-0.3.0.windows-amd64.tar.gz
-    - name: v0.2.0
-      commit: null
-      timestamp: '2016-07-16T15:34:24'
-      prerelease: false
-      files:
-        - name: blackbox_exporter-0.2.0.darwin-386.tar.gz
-          commit: null
-          size: 3520756
-          sha256: sha256:5394fa9bb9089124b1c816a0962c455d31eed9a45f4f7b33d11699e00cf1aa75
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.darwin-386.tar.gz
-        - name: blackbox_exporter-0.2.0.darwin-amd64.tar.gz
-          commit: null
-          size: 3777538
-          sha256: sha256:336fdb4dde307109a76e8e31ba902892bf5cca6f2f1811678a4007ecd03eb060
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.darwin-amd64.tar.gz
-        - name: blackbox_exporter-0.2.0.dragonfly-amd64.tar.gz
-          commit: null
-          size: 3781264
-          sha256: sha256:90ff3e3214a77a41994ce91bd0b14f3d7dcbc90374e54ba4d3f9337a802c8dc0
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.dragonfly-amd64.tar.gz
-        - name: blackbox_exporter-0.2.0.freebsd-386.tar.gz
-          commit: null
-          size: 3536915
-          sha256: sha256:a4b01e1b4651fcbe1e012e5e359056325b07419dfc4c146865d395b3561a62d9
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.freebsd-386.tar.gz
-        - name: blackbox_exporter-0.2.0.freebsd-amd64.tar.gz
-          commit: null
-          size: 3794073
-          sha256: sha256:e514f6584c9724911f6102bedbe2958c2ab269f8fa6155c2b9345fa7ea1f8248
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.freebsd-amd64.tar.gz
-        - name: blackbox_exporter-0.2.0.freebsd-armv5.tar.gz
-          commit: null
-          size: 3427817
-          sha256: sha256:170671debf381beb22115e7bfa36ddc66bf4f530478ada3469384b2009a98c85
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.freebsd-armv5.tar.gz
-        - name: blackbox_exporter-0.2.0.freebsd-armv6.tar.gz
-          commit: null
-          size: 3406635
-          sha256: sha256:f700ea6032fb81dbd83b4401d3b5b529a333ba75c8a3af46632cb0479fdbe675
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.freebsd-armv6.tar.gz
-        - name: blackbox_exporter-0.2.0.freebsd-armv7.tar.gz
-          commit: null
-          size: 3406719
-          sha256: sha256:1e8b769fa60ba066a648fab4a1d07dff852c087b540b8c98191bf623b5bc25ac
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.freebsd-armv7.tar.gz
-        - name: blackbox_exporter-0.2.0.linux-386.tar.gz
-          commit: null
-          size: 3533639
-          sha256: sha256:d9835668333894466c6409752d4b9ea3f894bd9f009edc0b6f6e3d5e0b4a2471
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.linux-386.tar.gz
-        - name: blackbox_exporter-0.2.0.linux-amd64.tar.gz
-          commit: null
-          size: 3793220
-          sha256: sha256:694d3844e9b77371936144ddbf770afa94fcedc2f3c1c395d2048e32b3f64994
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.linux-amd64.tar.gz
-        - name: blackbox_exporter-0.2.0.linux-arm64.tar.gz
-          commit: null
-          size: 3478317
-          sha256: sha256:d62b59b6299139dc33c7c13f38a60a0ddbd8e677eb92739bc3ffb61219552cd1
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.linux-arm64.tar.gz
-        - name: blackbox_exporter-0.2.0.linux-armv5.tar.gz
-          commit: null
-          size: 3421696
-          sha256: sha256:08d58ff9c8cc8a6e861010d9f2efd36f9c5e2adfdfff3c7b2e437cb1ba4e6197
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.linux-armv5.tar.gz
-        - name: blackbox_exporter-0.2.0.linux-armv6.tar.gz
-          commit: null
-          size: 3401568
-          sha256: sha256:432a6ad8e8254a3674df46b4f0d8a1027d9c24cc46e0c8797575a8c0f04bccff
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.linux-armv6.tar.gz
-        - name: blackbox_exporter-0.2.0.linux-armv7.tar.gz
-          commit: null
-          size: 3399177
-          sha256: sha256:78ee73bc2c422dda833b28841d1502ed698e103caaa558488ce7ffa8342441f5
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.linux-armv7.tar.gz
-        - name: blackbox_exporter-0.2.0.linux-mips64.tar.gz
-          commit: null
-          size: 3463993
-          sha256: sha256:eacea2ec15f0aab1b79ca3066ac8412db4679a030f2c701b7ccfa4e6703312e2
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.linux-mips64.tar.gz
-        - name: blackbox_exporter-0.2.0.linux-mips64le.tar.gz
-          commit: null
-          size: 3315583
-          sha256: sha256:441dc479a9a1a24ae3088a7406643a207fbc50ab3b9c8537b2a31242fff99ecc
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.linux-mips64le.tar.gz
-        - name: blackbox_exporter-0.2.0.linux-ppc64.tar.gz
-          commit: null
-          size: 3586358
-          sha256: sha256:79edd72941afc8da591ec888ffc08adc24b4f1ba7c97073f40037d07bd21cf65
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.linux-ppc64.tar.gz
-        - name: blackbox_exporter-0.2.0.linux-ppc64le.tar.gz
-          commit: null
-          size: 3468366
-          sha256: sha256:72c19608fd2d091c1c2d5c53256d1b41615a37e17f7e91f77b11b0cf91ea3252
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.linux-ppc64le.tar.gz
-        - name: blackbox_exporter-0.2.0.netbsd-386.tar.gz
-          commit: null
-          size: 3521907
-          sha256: sha256:b22eb57ea3acf353ec31f184c403a3cb535e8dd20a50b0d22ee4d90d0bcb263c
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.netbsd-386.tar.gz
-        - name: blackbox_exporter-0.2.0.netbsd-amd64.tar.gz
-          commit: null
-          size: 3778558
-          sha256: sha256:10e4b1e083624d90201005a9af91651333b4b6a54ed1bd103f7de66ae4c1affe
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.netbsd-amd64.tar.gz
-        - name: blackbox_exporter-0.2.0.netbsd-armv5.tar.gz
-          commit: null
-          size: 3414442
-          sha256: sha256:2f1586251930ae244946229815c35cf974920d559520c85ba867b7f01dad30b7
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.netbsd-armv5.tar.gz
-        - name: blackbox_exporter-0.2.0.netbsd-armv6.tar.gz
-          commit: null
-          size: 3393990
-          sha256: sha256:eb3d1c10347ed4546ce5e1b07bc30dbe267b7655640c734cb4ba31c502e5d2d6
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.netbsd-armv6.tar.gz
-        - name: blackbox_exporter-0.2.0.netbsd-armv7.tar.gz
-          commit: null
-          size: 3392990
-          sha256: sha256:0d049665207d1e4489c9d539b7b0a9f3b9ffcf364e83b976953a885388f9a698
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.netbsd-armv7.tar.gz
-        - name: blackbox_exporter-0.2.0.openbsd-386.tar.gz
-          commit: null
-          size: 3523008
-          sha256: sha256:2c1de39368bcafe57368acb5a111c3d39789aa36b1a576a7032d4cebd81543d0
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.openbsd-386.tar.gz
-        - name: blackbox_exporter-0.2.0.openbsd-amd64.tar.gz
-          commit: null
-          size: 3779987
-          sha256: sha256:a873f45f0510806d3a80245a51e1dc376eec126f1cce1ab54131050a112bf9f0
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.openbsd-amd64.tar.gz
-        - name: blackbox_exporter-0.2.0.openbsd-armv5.tar.gz
-          commit: null
-          size: 3417623
-          sha256: sha256:18fead74d03431a0a4f68e37714ae3d172ba64b5a72f82c8e9d0f892c057ff73
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.openbsd-armv5.tar.gz
-        - name: blackbox_exporter-0.2.0.openbsd-armv6.tar.gz
-          commit: null
-          size: 3396512
-          sha256: sha256:4e91462787ff12afc85de9f7a64c341a9530ae3c5fec588376bd9b6e717f5c03
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.openbsd-armv6.tar.gz
-        - name: blackbox_exporter-0.2.0.openbsd-armv7.tar.gz
-          commit: null
-          size: 3396373
-          sha256: sha256:03aabddc6729b58d2f7c2128ad10972fe1b32357b3f5eb4434f89e96a88c4cb9
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.openbsd-armv7.tar.gz
-        - name: blackbox_exporter-0.2.0.windows-386.tar.gz
-          commit: null
-          size: 3477229
-          sha256: sha256:900e4c429ca90650a057e52bf12cff960407ec32a99528827482ea3cdb2c86a8
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.windows-386.tar.gz
-        - name: blackbox_exporter-0.2.0.windows-amd64.tar.gz
-          commit: null
-          size: 3738827
-          sha256: sha256:f1897e4d3bfc226394d65794258101621be1ab2d627686d2da8cacef1bcc81bd
-          url: https://github.com/prometheus/blackbox_exporter/releases/download/v0.2.0/blackbox_exporter-0.2.0.windows-amd64.tar.gz
