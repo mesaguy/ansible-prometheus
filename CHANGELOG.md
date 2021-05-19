@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.35] - 2021-05-19
+
+### Changed
+
+- Upgrade Prometheus from v2.27.0 to v2.27.1
+- Upgrade kafka_exporter_danielqsj from v1.3.0 to v1.3.1
+- Upgrade mongodb_exporter_percona from v0.20.4 to v0.20.5
+- Update metadata to include latest master commits
+
 ## [0.12.34] - 2021-05-16
 
 ### Changed
