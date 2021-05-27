@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.36] - 2021-05-27
+
+- Upgrade alertmanager from v0.21.0 to v0.22.0
+- Upgrade alertmanager (pre-release) from v0.21.0-rc.1 to v0.22.0-rc.2
+- Upgrade mysqld_exporter from v0.12.1 to v0.13.0
+- Update metadata to include latest master commits
+- Use credentials for hub.docker.com
+
 ## [0.12.35] - 2021-05-19
 
 ### Changed

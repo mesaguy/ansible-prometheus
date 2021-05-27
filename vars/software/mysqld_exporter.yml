@@ -4,15 +4,15 @@ defaults:
   tgroup: mysql
 software:
   name: prometheus/mysqld_exporter
-  release: v0.12.1
+  release: v0.13.0
   prerelease: v0.13.0-rc.0
   url: https://github.com/prometheus/mysqld_exporter
   source: https://github.com/prometheus/mysqld_exporter.git
-  updated: '2021-05-19T05:33:33.629841'
+  updated: '2021-05-26T23:57:40.124377'
   master:
     commit:
-      sha: 5e7485cbe0ea4c7b069aad27b010938e4c46d6b7
-      timestamp: '2021-05-18T09:10:22'
+      sha: ad2847c7fa67b9debafccd5a08bacb12fc9031f1
+      timestamp: '2021-05-21T14:14:17'
     files: []
   releases:
     - name: v0.12.1
@@ -1280,3 +1280,10 @@ software:
           size: 4093
           sha256: sha256:7561999f1901868be226d5df6af5dc15c25cc53b008a282ae2ef91ec3a5cb3bb
           url: https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0-rc.0/sha256sums.txt
+    - name: v0.13.0
+      commit:
+        sha: ad2847c7fa67b9debafccd5a08bacb12fc9031f1
+        timestamp: '2021-05-21T14:14:17'
+      timestamp: '2021-05-21T14:15:04'
+      prerelease: false
+      files: []

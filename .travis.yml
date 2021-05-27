@@ -38,6 +38,7 @@ before_install:
   # To pacify CentOS 8.x when running tasks that are delegated to localhost
   - sudo mkdir -p /usr/libexec
   - sudo ln -s /usr/bin/python /usr/libexec/platform-python
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 install:
   # Install gems
