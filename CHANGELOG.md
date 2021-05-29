@@ -6,7 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.37] - 2021-05-29
+
+### Changed
+
+- Upgrade alertmanager from v0.22.0 to v0.22.1
+- Upgrade pushgateway from v1.4.0 to v1.4.1
+- Update metadata to include latest master commits
+
 ## [0.12.36] - 2021-05-27
+
+### Changed
 
 - Upgrade alertmanager from v0.21.0 to v0.22.0
 - Upgrade alertmanager (pre-release) from v0.21.0-rc.1 to v0.22.0-rc.2
