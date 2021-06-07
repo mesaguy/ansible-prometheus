@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.38] - 2021-06-07
+
 ### Changed
 
 - The elasticsearch_exporter name changed from elasticsearch_exporter_justwatchcom to elasticsearch_exporter_prometheus_community
