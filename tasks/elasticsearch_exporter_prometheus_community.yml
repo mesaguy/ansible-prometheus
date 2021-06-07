@@ -4,15 +4,15 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is undefined
 
-- name: Starting elasticsearch_exporter (justwatchcom) install
+- name: Starting elasticsearch_exporter (prometheus_community) install
   set_fact:
     prometheus_exporter: true
-    prometheus_software_author: justwatchcom
+    prometheus_software_author: prometheus_community
     prometheus_software_binary_name: elasticsearch_exporter
     prometheus_software_makefile_make_command: 'go mod tidy; go mod vendor ; go build'
-    prometheus_software_name: elasticsearch_exporter_justwatchcom
-    prometheus_software_description: 'Prometheus elasticsearch_exporter (justwatchcom), exporter for various metrics about ElasticSearch'
-    prometheus_software_documentation: 'https://github.com/justwatchcom/elasticsearch_exporter'
+    prometheus_software_name: elasticsearch_exporter_prometheus_community
+    prometheus_software_description: 'Prometheus elasticsearch_exporter (prometheus_community), exporter for various metrics about ElasticSearch'
+    prometheus_software_documentation: 'https://github.com/prometheus_community/elasticsearch_exporter'
 
 - name: Include task to setup {{ prometheus_software_name }} facts
   include_tasks: _setup_software_facts.yml
