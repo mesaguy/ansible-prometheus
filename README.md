@@ -60,7 +60,7 @@ See each exporter's usage page for more details:
 |[couchbase_exporter_blakelead](https://github.com/blakelead/couchbase_exporter)                               | [usage](docs/couchbase_exporter_blakelead.md)                | leansys-team         | Yes       |
 |[couchdb_exporter_gesellix](https://github.com/gesellix/couchdb-prometheus-exporter)                          | [usage](docs/couchdb_exporter_gesellix.md)                   | gesellix             | Yes       |
 |[digitalocean_exporter_metalmatze](https://github.com/metalmatze/digitalocean_exporter)                       | [usage](docs/digitalocean_exporter_metalmatze.md)            | metalmatze           | Yes       |
-|[elasticsearch_exporter_prometheus_community](https://github.com/prometheus_community/elasticsearch_exporter) | [usage](docs/elasticsearch_exporter_prometheus_community.md) | prometheus_community | Yes       |
+|[elasticsearch_exporter_prometheus_community](https://github.com/prometheus-community/elasticsearch_exporter) | [usage](docs/elasticsearch_exporter_prometheus_community.md) | prometheus_community | Yes       |
 |[fping_exporter_schweikert](https://github.com/schweikert/fping-exporter)                                     | [usage](docs/fping_exporter_schweikert.md)                   | schweikert           | Yes       |
 |[gluster_exporter_ofesseler](https://github.com/ofesseler/gluster_exporter)                                   | [usage](docs/gluster_exporter_ofesseler.md)                  | ofesseler            | Yes       |
 |[graphite_exporter](https://github.com/prometheus/graphite_exporter)                                          | [usage](docs/graphite_exporter.md)                           | prometheus           | Yes       |
