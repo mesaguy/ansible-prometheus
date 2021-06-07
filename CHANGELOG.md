@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Upgrade Go from v1.16.4 to v1.16.5
 - Upgrade alertmanager from v0.22.1 to v0.22.2
 - Upgrade apache_exporter_lusitaniae from v0.8.0 to v0.9.0
 - Upgrade ipmi_exporter_soundcloud from v1.3.2 to v1.4.0
