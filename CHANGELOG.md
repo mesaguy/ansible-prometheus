@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade alertmanager from v0.22.1 to v0.22.2
+- Upgrade apache_exporter_lusitaniae from v0.8.0 to v0.9.0
+- Upgrade ipmi_exporter_soundcloud from v1.3.2 to v1.4.0
+- Upgrade openldap_exporter_tomcz from v2.1 to v2.1.3
+- Upgrade statsd_exporter from v0.20.2 to v0.20.3
+- Update metadata to include latest master commits
+
 ## [0.12.37] - 2021-05-29
 
 ### Changed
