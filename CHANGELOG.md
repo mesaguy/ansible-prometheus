@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade elasticsearch_exporter_prometheus_community from v1.1.0 to v1.2.0
+- Upgrade redis_exporter_oliver006 from v1.23.1 to v1.24.0
+- Upgrade statsd_exporter from v0.20.3 to v0.21.0
+- Update metadata to include latest master commits
+
+### Fixed
+
+- nginx_exporter_nginxinc variables and documentation
+
 ## [0.12.38] - 2021-06-07
 
 ### Changed
