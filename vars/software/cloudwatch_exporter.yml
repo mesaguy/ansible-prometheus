@@ -4,15 +4,15 @@ defaults:
   tgroup: cloudwatch
 software:
   name: prometheus/cloudwatch_exporter
-  release: cloudwatch_exporter-0.10.0
+  release: cloudwatch_exporter-0.11.0
   prerelease: cloudwatch_exporter-0.1
   url: https://github.com/prometheus/cloudwatch_exporter
   source: https://github.com/prometheus/cloudwatch_exporter.git
-  updated: '2021-05-26T22:24:23.067905'
+  updated: '2021-06-20T04:34:19.220157'
   master:
     commit:
-      sha: e9f0c81f6adb9923caa61794ee095a9dc7b04772
-      timestamp: '2021-05-21T16:16:13'
+      sha: a5dddaa12fc37973b4042c6ed820061302fc5abb
+      timestamp: '2021-06-17T12:54:45'
     files: []
   releases:
     - name: cloudwatch_exporter-0.8.0
@@ -72,3 +72,58 @@ software:
       timestamp: '2021-01-25T16:27:31'
       prerelease: false
       files: []
+    - name: cloudwatch_exporter-0.11.0
+      commit: null
+      timestamp: '2021-06-17T16:09:09'
+      prerelease: false
+      files:
+        - name: cloudwatch_exporter-0.11.0-jar-with-dependencies.jar
+          commit: null
+          size: 12944817
+          sha256: sha256:f66ac8fcaf636a339fa4c872eb9479ca541861b44d2f1023d9b27ce2e83f7162
+          url: https://github.com/prometheus/cloudwatch_exporter/releases/download/cloudwatch_exporter-0.11.0/cloudwatch_exporter-0.11.0-jar-with-dependencies.jar
+        - name: cloudwatch_exporter-0.11.0-jar-with-dependencies.jar.asc
+          commit: null
+          size: 873
+          sha256: sha256:f4c37da16be9400d6bdb45e4ca1fa3d61517ff4baaa9a9cdede90331c5801721
+          url: https://github.com/prometheus/cloudwatch_exporter/releases/download/cloudwatch_exporter-0.11.0/cloudwatch_exporter-0.11.0-jar-with-dependencies.jar.asc
+        - name: cloudwatch_exporter-0.11.0-javadoc.jar
+          commit: null
+          size: 149111
+          sha256: sha256:d195cc3853ba84b0dac30ecfc313dca4bbcbb7e0c96b0448bda375291cb90c0b
+          url: https://github.com/prometheus/cloudwatch_exporter/releases/download/cloudwatch_exporter-0.11.0/cloudwatch_exporter-0.11.0-javadoc.jar
+        - name: cloudwatch_exporter-0.11.0-javadoc.jar.asc
+          commit: null
+          size: 873
+          sha256: sha256:296650b272035e629d182b03429bbd82193e36a1d26ae9eb305b156217194d34
+          url: https://github.com/prometheus/cloudwatch_exporter/releases/download/cloudwatch_exporter-0.11.0/cloudwatch_exporter-0.11.0-javadoc.jar.asc
+        - name: cloudwatch_exporter-0.11.0-sources.jar
+          commit: null
+          size: 9692
+          sha256: sha256:3ee0f3bd92c2bba368213a023bc3876d67b3d6ca03abcf2c53f8e5806840aecc
+          url: https://github.com/prometheus/cloudwatch_exporter/releases/download/cloudwatch_exporter-0.11.0/cloudwatch_exporter-0.11.0-sources.jar
+        - name: cloudwatch_exporter-0.11.0-sources.jar.asc
+          commit: null
+          size: 873
+          sha256: sha256:63182982c2609cdb7489988c418e069d19f93c224fddc904a1616469c25394e1
+          url: https://github.com/prometheus/cloudwatch_exporter/releases/download/cloudwatch_exporter-0.11.0/cloudwatch_exporter-0.11.0-sources.jar.asc
+        - name: cloudwatch_exporter-0.11.0.jar
+          commit: null
+          size: 24208
+          sha256: sha256:21552af4c002838d140a4a117dca1fdd3bb2657ec401f2d3b3ba07cc0b81a9b6
+          url: https://github.com/prometheus/cloudwatch_exporter/releases/download/cloudwatch_exporter-0.11.0/cloudwatch_exporter-0.11.0.jar
+        - name: cloudwatch_exporter-0.11.0.jar.asc
+          commit: null
+          size: 873
+          sha256: sha256:c8264e5dba924de96c8342bf2fc3e8508d35286926f902cc07f4e8c244f8142a
+          url: https://github.com/prometheus/cloudwatch_exporter/releases/download/cloudwatch_exporter-0.11.0/cloudwatch_exporter-0.11.0.jar.asc
+        - name: cloudwatch_exporter-0.11.0.pom
+          commit: null
+          size: 8745
+          sha256: sha256:b3bb88a83e3f8099176d0853c62e9f52193fa5d9c72f0093bdd1c6bb39192531
+          url: https://github.com/prometheus/cloudwatch_exporter/releases/download/cloudwatch_exporter-0.11.0/cloudwatch_exporter-0.11.0.pom
+        - name: cloudwatch_exporter-0.11.0.pom.asc
+          commit: null
+          size: 873
+          sha256: sha256:423c853a9a19138ac14c509606893c7e7d7261833bd4e7e20133bcfc57fda3a3
+          url: https://github.com/prometheus/cloudwatch_exporter/releases/download/cloudwatch_exporter-0.11.0/cloudwatch_exporter-0.11.0.pom.asc
