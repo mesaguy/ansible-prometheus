@@ -4,15 +4,15 @@ defaults:
   tgroup: proxysql
 software:
   name: percona/proxysql_exporter
-  release: v1.1.0
+  release: v1.1.1
   prerelease: null
   url: https://github.com/percona/proxysql_exporter
   source: https://github.com/percona/proxysql_exporter.git
-  updated: '2021-06-11T05:45:45.909183'
+  updated: '2021-06-29T05:07:38.745454'
   master:
     commit:
-      sha: 2e0ce248ae8c9330532842c89488950f3ecc1068
-      timestamp: '2021-06-10T06:19:46'
+      sha: af1d3a63da18f3aa8f28ddba735da46f1977c636
+      timestamp: '2021-06-26T02:36:43'
     files: []
   releases:
     - name: v1.1.0
@@ -38,5 +38,35 @@ software:
     - name: v1.0.1
       commit: null
       timestamp: '2017-06-15T11:55:00'
+      prerelease: false
+      files: []
+    - name: v1.1.1
+      commit: null
+      timestamp: '2021-06-26T02:56:29'
+      prerelease: false
+      files:
+        - name: proxysql_exporter_1.1.1_checksums.txt
+          commit: null
+          size: 330
+          sha256: sha256:8fc8bb2ef473b17e22cc9eadbdaeb8c59abf2c1e6f19a28778e7dab43871fc4f
+          url: https://github.com/percona/proxysql_exporter/releases/download/v1.1.1/proxysql_exporter_1.1.1_checksums.txt
+        - name: proxysql_exporter_1.1.1_darwin_amd64.tar.gz
+          commit: null
+          size: 4038509
+          sha256: sha256:39cb2447db22294f360c01017ecb28021857a1b2f36a590169f89c759f0e1c33
+          url: https://github.com/percona/proxysql_exporter/releases/download/v1.1.1/proxysql_exporter_1.1.1_darwin_amd64.tar.gz
+        - name: proxysql_exporter_1.1.1_linux_amd64.tar.gz
+          commit: null
+          size: 3896499
+          sha256: sha256:becc07314bde2c4c4114041d266f21d3bff7759088d7989042fa6fa59286cf4c
+          url: https://github.com/percona/proxysql_exporter/releases/download/v1.1.1/proxysql_exporter_1.1.1_linux_amd64.tar.gz
+        - name: proxysql_exporter_1.1.1_windows_amd64.tar.gz
+          commit: null
+          size: 3941760
+          sha256: sha256:81e7093d3091165521b9182733f961f00f125b08cc89814b8de39dfeac74e085
+          url: https://github.com/percona/proxysql_exporter/releases/download/v1.1.1/proxysql_exporter_1.1.1_windows_amd64.tar.gz
+    - name: v0.3.0
+      commit: null
+      timestamp: '2021-06-26T22:47:53'
       prerelease: false
       files: []

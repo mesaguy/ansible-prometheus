@@ -9,10 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Upgrade Prometheus (pre-release) from v2.27.0-rc.0 to v2.28.0-rc.0
+- Upgrade Prometheus from v2.27.1 to v2.28.0
 - Upgrade cloudwatch from v0.10.0 to v0.11.0
 - Upgrade elasticsearch_exporter_prometheus_community from v1.1.0 to v1.2.0
 - Upgrade openldap_exporter_tomcz from v2.1.3 to v2.1.4
+- Upgrade mongodb_exporter_percona from v0.20.5 to v0.20.6
+- Upgrade proxysql_exporter_percona from v1.1.0 to v1.1.1
 - Upgrade redis_exporter_oliver006 from v1.23.1 to v1.24.0
+- Upgrade ssl_exporter_ribbybibby from v2.2.0 to v2.2.1
 - Upgrade statsd_exporter from v0.20.3 to v0.21.0
 - Update metadata to include latest master commits
 
