@@ -1,0 +1,18 @@
+---
+name: Release
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  release:
+    needs:
+      - kitchen
+      - validate_ansible
+      - validate_urls
+    runs-on: ubuntu-latest
+    steps:
+      - name: galaxy
+        uses: robertdebock/galaxy-action@1.1.0
+        with:
+          galaxy_api_key: ${{ secrets.GALAXY_API_KEY }}

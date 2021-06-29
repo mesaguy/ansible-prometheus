@@ -1,15 +1,19 @@
+---
 name: awesome_bot tests
 on: [push, pull_request]
 jobs:
   validate_urls:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.6 # Not needed with a .ruby-version file
-        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - name: Install ruby and ruby gems
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+          # runs 'bundle install' and caches installed gems automatically
+          bundler-cache: true
 
-    - name: Validate URLs
-      run: bundle exec awesome_bot --request-delay 5 --skip-save-results --allow-dupe --white-list=localhost,127.0.0.1 --files $(ls *.md docs/*.m   d tests/*.md | paste -sd "," -)
+      - name: Validate URLs
+        run: bundle exec awesome_bot --request-delay 5 --skip-save-results --allow-dupe --white-list=localhost,127.0.0.1 --files $(ls *.md docs/*.md tests/*.md | paste -sd "," -)
