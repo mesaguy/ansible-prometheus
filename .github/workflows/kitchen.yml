@@ -1,7 +1,7 @@
 name: kitchen tests
 on: [push, pull_request]
 jobs:
-  test:
+  kitchen:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -13,6 +13,12 @@ jobs:
 
     - name: Set up Python
       uses: actions/setup-python@v2
+
+    - name: Login to Docker Hub
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
     - name: Pacify CentOS 8.x
       run: |
@@ -26,14 +32,8 @@ jobs:
         pipenv install ansible
         pipenv install
 
-    - name: Login to Docker Hub
-      uses: docker/login-action@v1
-      with:
-        username: ${{ secrets.DOCKER_HUB_USERNAME }}
-        password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-
     - name: Run kitchen tests
       run: |
         mkdir -m 0700 -p .kitchen
-        if ! [ -f ".kitchen/docker_id_rsa" ] ; then ssh-keygen -f .kitchen/docker_id_rsa -t rsa -N ''; fi ; fi
+        if ! [ -f ".kitchen/docker_id_rsa" ] ; then ssh-keygen -f .kitchen/docker_id_rsa -t rsa -N ''; fi
         bundle exec kitchen test default-centos-83
