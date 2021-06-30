@@ -45,7 +45,7 @@ jobs:
           if [ "${{ matrix.scenario }}" == "latest" ] ; then
               pipenv install ansible
           else
-              pipenv install ansible==${{ matrix.scenario }}
+              pipenv install ansible==${{ matrix.ansible }}
           fi
           pipenv install
 
