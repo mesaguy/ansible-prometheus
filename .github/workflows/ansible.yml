@@ -29,7 +29,7 @@ jobs:
         run: ansible --version
 
       - name: Run yamllint
-        run: yamllint --config-file=tests/yamllint.yml .
+        run: yamllint --config-file=tests/yamllint.yml meta tasks vars
 
       - name: Check Ansible Galaxy lint
         run: |
