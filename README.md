@@ -1,5 +1,5 @@
 # Ansible Prometheus
-[![Build Status](https://api.travis-ci.com/mesaguy/ansible-prometheus.svg?branch=master)](https://travis-ci.com/mesaguy/ansible-prometheus) ![Latest tag](https://img.shields.io/github/v/tag/mesaguy/ansible-prometheus) ![Ansible Galaxy](https://img.shields.io/badge/ansible%20galaxy-mesaguy.prometheus-blue.svg?style=flat) ![MIT License](https://img.shields.io/github/license/mesaguy/ansible-prometheus)
+![Kitchen tests](https://github.com/mesaguy/ansible-prometheus/actions/workflows/kitchen.yml/badge.svg) ![Validate Ansible](https://github.com/mesaguy/ansible-prometheus/actions/workflows/ansible.yml/badge.svg) ![awesome_bot tests](https://github.com/mesaguy/ansible-prometheus/actions/workflows/awesome_bot.yml/badge.svg) ![Latest tag](https://img.shields.io/github/v/tag/mesaguy/ansible-prometheus) ![Ansible Galaxy](https://img.shields.io/badge/ansible%20galaxy-mesaguy.prometheus-blue.svg?style=flat) ![MIT License](https://img.shields.io/github/license/mesaguy/ansible-prometheus)
 
 
 Installs and manages [Prometheus server](https://prometheus.io), [Alertmanager](https://prometheus.io/docs/alerting/latest/overview/), [PushGateway](https://github.com/prometheus/pushgateway/blob/master/README.md), and numerous [Prometheus exporters](https://prometheus.io/docs/instrumenting/exporters/)
