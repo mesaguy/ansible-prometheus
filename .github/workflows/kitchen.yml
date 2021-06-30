@@ -12,6 +12,7 @@ jobs:
           - 2.9.0
           - 2.9.16
           - 2.10.0
+          - latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -41,7 +42,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pipenv --upgrade-strategy=only-if-needed
-          pipenv install ansible
+          if [ "${{ matrix.scenario }}" == "latest" ] ; then
+              pipenv install ansible
+          else
+              pipenv install ansible==${{ matrix.scenario }}
+          fi
           pipenv install
 
       - name: Run kitchen tests
