@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.40] - 2021-06-30
+
+### Fixed
+
+- Fix installing nginx_exporter_nginxinc binaries
+
 ## [0.12.39] - 2021-06-30
 
 ### Changed
