@@ -31,18 +31,18 @@ jobs:
       - name: Run yamllint
         run: yamllint --config-file=tests/yamllint.yml meta tasks vars
 
-      - name: Check Ansible Galaxy lint
-        run: |
-          git clone https://github.com/ansible/galaxy-lint-rules.git
-          ansible-lint -x 204,305 -r galaxy-lint-rules/rules .
-
       - name: Ensure an inspec test exists for each software installation
         run: |
           chmod +x tests/all_software_inspec_tested
           ./tests/all_software_inspec_tested
 
+      - name: Check Ansible Galaxy lint
+        run: |
+          git clone https://github.com/ansible/galaxy-lint-rules.git
+          pipenv run ansible-lint -x 204,305 -r galaxy-lint-rules/rules .
+
       - name: Check playbook syntax
-        run: ansible-playbook -i tests/inventory tests/playbooks/install_all.yml --syntax-check
+        run: pipenv run ansible-playbook -i tests/inventory tests/playbooks/install_all.yml --syntax-check
 
       - name: Perform ansible-lint checks
-        run: ansible-lint -x 204 tasks/*
+        run: pipenv run ansible-lint -x 204 tasks/*
