@@ -26,7 +26,7 @@ jobs:
           pipenv install
 
       - name: Show ansible version
-        run: ansible --version
+        run: pipenv run ansible --version
 
       - name: Run yamllint
         run: yamllint --config-file=tests/yamllint.yml meta tasks vars

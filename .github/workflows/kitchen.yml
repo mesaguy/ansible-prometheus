@@ -49,6 +49,9 @@ jobs:
           fi
           pipenv install
 
+      - name: Show ansible version
+        run: pipenv run ansible --version
+
       - name: Run kitchen tests
         run: |
           mkdir -m 0700 -p .kitchen
