@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade Prometheus from v2.28.0 to v2.28.1
+- Upgrade jmx_exporter from v0.15.0 to v0.16.1
+- Upgrade node_exporter v1.1.2 to v1.2.0
+- Upgrade postgres_exporter_wrouesnel from v0.9.0 to v0.10.0
+- Upgrade squid_exporter_boynux from v1.9.2 to v1.9.4
+- Update metadata to include latest master commits
+
 ## [0.12.40] - 2021-06-30
 
 ### Fixed
