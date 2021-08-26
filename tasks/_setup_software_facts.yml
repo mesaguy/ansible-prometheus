@@ -117,7 +117,6 @@
 - name: Set {{ prometheus_software_name }} generic facts
   set_fact:
     prometheus_software_build_prerequisites: '{{ prometheus_software_os_options.build_prerequisites | default([]) }}'
-    prometheus_software_env_vars: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_env_vars", default={}) }}'
     prometheus_software_extra_opts: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_extra_opts", default="") }}'
     prometheus_software_fallback_to_build: >-
       {{ lookup("vars", "prometheus_" + prometheus_software_name + "_fallback_to_build", default=prometheus_fallback_to_build) }}
@@ -141,3 +140,8 @@
       {% endif %}"
     prometheus_software_tgroup_jobname: >-
       {{ lookup("vars", "prometheus_" + prometheus_software_name + "_jobname", default=prometheus_software_default_jobname) }}
+
+- name: Set {{ prometheus_software_name }} sensitive facts
+  set_fact:
+    prometheus_software_env_vars: '{{ lookup("vars", "prometheus_" + prometheus_software_name + "_env_vars", default={}) }}'
+  no_log: true
