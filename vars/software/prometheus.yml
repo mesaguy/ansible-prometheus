@@ -17,17 +17,1127 @@ os_options:
         - yarn
 software:
   name: prometheus/prometheus
-  release: v2.28.1
-  prerelease: v2.28.0-rc.0
+  release: v2.29.2
+  prerelease: v2.29.0-rc.2
   url: https://github.com/prometheus/prometheus
   source: https://github.com/prometheus/prometheus.git
-  updated: '2021-07-26T03:38:56.600933'
+  updated: '2021-09-05T23:11:07.685744'
   master:
     commit:
-      sha: 79d354ad2e7c3d510a7811176d5ffcd1b29c8b77
-      timestamp: '2021-07-23T07:46:36'
+      sha: dc586b24952c64ed0abb73cdd55bc81343124695
+      timestamp: '2021-09-04T11:30:08'
     files: []
   releases:
+    - name: v2.29.2
+      commit: null
+      timestamp: '2021-08-27T11:56:34'
+      prerelease: false
+      files:
+        - name: prometheus-2.29.2.darwin-amd64.tar.gz
+          commit: null
+          size: 73308984
+          sha256: sha256:810a94974be44f92d6c3ba1b7604513ef0a2c1a159bd10afc50da25370813302
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.darwin-amd64.tar.gz
+        - name: prometheus-2.29.2.darwin-arm64.tar.gz
+          commit: null
+          size: 72721303
+          sha256: sha256:fc42d62c6b2cb486a14767465c46d72e436ae795be620d01813f20772a264324
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.darwin-arm64.tar.gz
+        - name: prometheus-2.29.2.dragonfly-amd64.tar.gz
+          commit: null
+          size: 73076101
+          sha256: sha256:bb2f52e6d1bd4035679b51b3e1cd02b067cccb867fd596f667f6bd62fcb4bee3
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.dragonfly-amd64.tar.gz
+        - name: prometheus-2.29.2.freebsd-386.tar.gz
+          commit: null
+          size: 69728892
+          sha256: sha256:fc273ea7e3d8e6ff3f5806ccd2be9c6d07ae615d0ccb43c3272d07f4b2603355
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.freebsd-386.tar.gz
+        - name: prometheus-2.29.2.freebsd-amd64.tar.gz
+          commit: null
+          size: 73114747
+          sha256: sha256:6a7adf4add15233972b61486f4366036c1f0539d553782fbc3ffbdb15d55a1de
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.freebsd-amd64.tar.gz
+        - name: prometheus-2.29.2.freebsd-arm64.tar.gz
+          commit: null
+          size: 68482058
+          sha256: sha256:aa9031cfa0ec88d895e9003a6d2ce8d041bc24b24fb054b865b2d1c8bc791f6e
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.freebsd-arm64.tar.gz
+        - name: prometheus-2.29.2.freebsd-armv6.tar.gz
+          commit: null
+          size: 67773676
+          sha256: sha256:9882dbd7f7adf6521e5b90408c1a9fede4ad09b3fee01dea6faf9ca5350de2e4
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.freebsd-armv6.tar.gz
+        - name: prometheus-2.29.2.freebsd-armv7.tar.gz
+          commit: null
+          size: 67750289
+          sha256: sha256:32468c0800baef58807f7b151c7572fee876bbe296302e20ea08a0333055cffe
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.freebsd-armv7.tar.gz
+        - name: prometheus-2.29.2.illumos-amd64.tar.gz
+          commit: null
+          size: 72956761
+          sha256: sha256:b171568308d8aa73d6438886fe1de197ac3f0bae2874e09a833941d96b65435a
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.illumos-amd64.tar.gz
+        - name: prometheus-2.29.2.linux-386.tar.gz
+          commit: null
+          size: 69873760
+          sha256: sha256:7a19cb2e1d70d60857029ff793de375b1d04ffd270d59d82d5dbaa0ff199acf2
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.linux-386.tar.gz
+        - name: prometheus-2.29.2.linux-amd64.tar.gz
+          commit: null
+          size: 73175122
+          sha256: sha256:51500b603a69cf1ea764b59a7456fe0c4164c4574714aca2a2b6b3d4da893348
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.linux-amd64.tar.gz
+        - name: prometheus-2.29.2.linux-arm64.tar.gz
+          commit: null
+          size: 68882972
+          sha256: sha256:c2f1ff7338479ef87d3a94b5ddbf5e431e7de6e326bb23c98616dc2ca395c9a6
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.linux-arm64.tar.gz
+        - name: prometheus-2.29.2.linux-armv5.tar.gz
+          commit: null
+          size: 68029154
+          sha256: sha256:af8692e4f1afc47f28399e187baac347bb6af3caabd5ead27978a9200239a9bf
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.linux-armv5.tar.gz
+        - name: prometheus-2.29.2.linux-armv6.tar.gz
+          commit: null
+          size: 67857448
+          sha256: sha256:3d45075491a149b013a760b22b99ef32fbceec6d7969bb2e5557c2d7af4f15fd
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.linux-armv6.tar.gz
+        - name: prometheus-2.29.2.linux-armv7.tar.gz
+          commit: null
+          size: 67825859
+          sha256: sha256:c4e108c997f9afa0a87b6f075e430c7ff2016adb8bf62a97f927f1840fb70ebd
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.linux-armv7.tar.gz
+        - name: prometheus-2.29.2.linux-mips.tar.gz
+          commit: null
+          size: 66264319
+          sha256: sha256:b5258663c7c3d92ad5117c989b474df61de29f760233a60adf06cb60dd548842
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.linux-mips.tar.gz
+        - name: prometheus-2.29.2.linux-mips64.tar.gz
+          commit: null
+          size: 66857020
+          sha256: sha256:3fc4917fb8ff0371473ca987270c66fc89a450b513af4ff932a24fe34b3cb387
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.linux-mips64.tar.gz
+        - name: prometheus-2.29.2.linux-mips64le.tar.gz
+          commit: null
+          size: 64135754
+          sha256: sha256:87afa73e0e5d3f772eabe874ac0fab29b493654dc7845e69a4c447331bba6cf3
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.linux-mips64le.tar.gz
+        - name: prometheus-2.29.2.linux-mipsle.tar.gz
+          commit: null
+          size: 64355580
+          sha256: sha256:a81c80c1c16ece9f2409ae866ffd7eae180fba732708d4709203271b68eaf5eb
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.linux-mipsle.tar.gz
+        - name: prometheus-2.29.2.linux-ppc64.tar.gz
+          commit: null
+          size: 69838817
+          sha256: sha256:22b133b111626fbbe2c22e0ecf2803b2786ed8d5325a3005e8938c6f8374b39f
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.linux-ppc64.tar.gz
+        - name: prometheus-2.29.2.linux-ppc64le.tar.gz
+          commit: null
+          size: 67037115
+          sha256: sha256:51c977e15dca823dd79da52d0af7182648a7ff5c4c77932540d7905931d073a6
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.linux-ppc64le.tar.gz
+        - name: prometheus-2.29.2.linux-s390x.tar.gz
+          commit: null
+          size: 73601171
+          sha256: sha256:39e5fab1821f11f8a89793013f0392a5da9824f0d19870406422ace510e0f640
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.linux-s390x.tar.gz
+        - name: prometheus-2.29.2.netbsd-386.tar.gz
+          commit: null
+          size: 69680963
+          sha256: sha256:645e143784172c518965721cf067faa4498861d136c8a5e8834627d1fdf401b6
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.netbsd-386.tar.gz
+        - name: prometheus-2.29.2.netbsd-amd64.tar.gz
+          commit: null
+          size: 73047582
+          sha256: sha256:374e37d12b7a791265416693e4ce058400995c0b746e9c23eba672b0f008bfc1
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.netbsd-amd64.tar.gz
+        - name: prometheus-2.29.2.netbsd-arm64.tar.gz
+          commit: null
+          size: 68440902
+          sha256: sha256:334854973a8f7ed65eccaed82e337ecb63fcb94fe9d00d19de66f52bb015e2fc
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.netbsd-arm64.tar.gz
+        - name: prometheus-2.29.2.netbsd-armv6.tar.gz
+          commit: null
+          size: 67729232
+          sha256: sha256:3d2c5c42ca372a317136f96758d8ad635fc60d174c7e6958be4ed9201d0b6199
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.netbsd-armv6.tar.gz
+        - name: prometheus-2.29.2.netbsd-armv7.tar.gz
+          commit: null
+          size: 67705531
+          sha256: sha256:2d5a86ba651b752bafb9c9e2a625d54e7c28805615a66fb4972c5e657b667947
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.netbsd-armv7.tar.gz
+        - name: prometheus-2.29.2.openbsd-386.tar.gz
+          commit: null
+          size: 69664114
+          sha256: sha256:971320e25ec0056a0f1bac83b9313c150ab708513fa52085265a9399cf98b5c1
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.openbsd-386.tar.gz
+        - name: prometheus-2.29.2.openbsd-amd64.tar.gz
+          commit: null
+          size: 73081748
+          sha256: sha256:294260afe9c59afe8dbed062aba1a0863009a9f67b8fac4937d9fc0b18de10a2
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.openbsd-amd64.tar.gz
+        - name: prometheus-2.29.2.openbsd-arm64.tar.gz
+          commit: null
+          size: 68470711
+          sha256: sha256:2914cf1bfcbf4d70838345cc8f333a44fcd99b07189b6a34e9c0c6719b25a695
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.openbsd-arm64.tar.gz
+        - name: prometheus-2.29.2.openbsd-armv7.tar.gz
+          commit: null
+          size: 67689956
+          sha256: sha256:bfc5c375b34c07e847b1ce4b8934079156efbfb0cf0699fa89d3dfa9ddd65b30
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.openbsd-armv7.tar.gz
+        - name: prometheus-2.29.2.windows-386.tar.gz
+          commit: null
+          size: 71611105
+          sha256: sha256:ed557402f6165b1d85d1281af3d156337ef4fb5677a099d897228e08170bc951
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.windows-386.tar.gz
+        - name: prometheus-2.29.2.windows-386.zip
+          commit: null
+          size: 72997871
+          sha256: sha256:0fb5b598ca27a929edd00a942cbcf51ef5350c45ed983b65cc57bad507942ad3
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.windows-386.zip
+        - name: prometheus-2.29.2.windows-amd64.tar.gz
+          commit: null
+          size: 73687819
+          sha256: sha256:924b52ad4f12f8e3b74a8e151c30bc5b7fbb866934c9dfba013509e3f2b38a62
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.windows-amd64.tar.gz
+        - name: prometheus-2.29.2.windows-amd64.zip
+          commit: null
+          size: 74640094
+          sha256: sha256:2d72dc414ed3be8d437486516333f4a10e76a39509d6ccd6a5cc4fcad27d9a47
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/prometheus-2.29.2.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 3632
+          sha256: sha256:97ad3c29f1526e9a4ce4b4b0b421b695dc6b3f618ea78ed6c25c2a75370c0dd9
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.2/sha256sums.txt
+    - name: v2.29.0-rc.2
+      commit: null
+      timestamp: '2021-08-09T09:03:53'
+      prerelease: true
+      files:
+        - name: prometheus-2.29.0-rc.2.darwin-amd64.tar.gz
+          commit: null
+          size: 73281433
+          sha256: sha256:801fccb2a5bb3e7909e49df32d9a510d141b76a67d12583d1f40c5aa6f64facd
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.darwin-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.2.darwin-arm64.tar.gz
+          commit: null
+          size: 72701075
+          sha256: sha256:495bddd158fc44ffc6df224c56640584e2b37e677b7e7f99bc94199eb220fc75
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.darwin-arm64.tar.gz
+        - name: prometheus-2.29.0-rc.2.dragonfly-amd64.tar.gz
+          commit: null
+          size: 73036258
+          sha256: sha256:33dc0ee07a330fc18ad327cd02aad3d771a16bb76fc93bcd01f9fc8f07a77aaa
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.dragonfly-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.2.freebsd-386.tar.gz
+          commit: null
+          size: 69707409
+          sha256: sha256:a7e5c62d3a1b3058747dff9f609d71d663040f81fc2b7aad1036f55e6ec2c5ef
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.freebsd-386.tar.gz
+        - name: prometheus-2.29.0-rc.2.freebsd-amd64.tar.gz
+          commit: null
+          size: 73072812
+          sha256: sha256:882e3dae977599338424ee02167b36c7de76fe41ea45ce883e88d53be7e37ce2
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.freebsd-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.2.freebsd-arm64.tar.gz
+          commit: null
+          size: 68464219
+          sha256: sha256:0a47a0015496511c1231841060a04c08a41a591d3fff21e25b823ebf1e1fd13b
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.freebsd-arm64.tar.gz
+        - name: prometheus-2.29.0-rc.2.freebsd-armv6.tar.gz
+          commit: null
+          size: 67758217
+          sha256: sha256:d3d2a4d807118f9c9ebab1830bb71dd78f0a097f6ccd420885c2e403a4d13354
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.freebsd-armv6.tar.gz
+        - name: prometheus-2.29.0-rc.2.freebsd-armv7.tar.gz
+          commit: null
+          size: 67735466
+          sha256: sha256:33e436df63ed9dadc55f90593bf4886e9ca7bf333232d2dd3b10f7451638403d
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.freebsd-armv7.tar.gz
+        - name: prometheus-2.29.0-rc.2.illumos-amd64.tar.gz
+          commit: null
+          size: 72946191
+          sha256: sha256:a9acfd7ba23ad77307d943fbd2338fd34c1b25c666d97023ee7043833445f1a9
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.illumos-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.2.linux-386.tar.gz
+          commit: null
+          size: 69858195
+          sha256: sha256:33be193f0288e10fafcf97943532c4ef22bd967b78dc04af5e8a13529394b0eb
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.linux-386.tar.gz
+        - name: prometheus-2.29.0-rc.2.linux-amd64.tar.gz
+          commit: null
+          size: 73160087
+          sha256: sha256:2c24f496492f4eaeac068b0b5b0ea8d2b54c03a1c948d424f34a7015fbf1cf94
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.linux-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.2.linux-arm64.tar.gz
+          commit: null
+          size: 68860202
+          sha256: sha256:3fa20d58770b2fb213b639270b6e6c3b81b01fb7fdf93e08b499e76f7c7a4837
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.linux-arm64.tar.gz
+        - name: prometheus-2.29.0-rc.2.linux-armv5.tar.gz
+          commit: null
+          size: 68010586
+          sha256: sha256:5bf5c616d43769c394149a9a1a63c239a013629c0945b07725efa8e9303a71a9
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.linux-armv5.tar.gz
+        - name: prometheus-2.29.0-rc.2.linux-armv6.tar.gz
+          commit: null
+          size: 67843119
+          sha256: sha256:0cb39afba52562dcd82f264eafa03029b6ba8eb96bdb93b214d53da6d4902f56
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.linux-armv6.tar.gz
+        - name: prometheus-2.29.0-rc.2.linux-armv7.tar.gz
+          commit: null
+          size: 67811336
+          sha256: sha256:12ff8b634fa6f8b094dc94c646de42899d3186a2a6de4c3cb8ffdd87e656647c
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.linux-armv7.tar.gz
+        - name: prometheus-2.29.0-rc.2.linux-mips.tar.gz
+          commit: null
+          size: 66257445
+          sha256: sha256:b99ed12ea67db84a0cfa9e1b18d36f31229a426d310219cc840fed87a5b1c5c0
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.linux-mips.tar.gz
+        - name: prometheus-2.29.0-rc.2.linux-mips64.tar.gz
+          commit: null
+          size: 66878128
+          sha256: sha256:db9bbfa07b3e4e0d8f7db591e5c612b29eca4150158c062a68c86c7c92624d3b
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.linux-mips64.tar.gz
+        - name: prometheus-2.29.0-rc.2.linux-mips64le.tar.gz
+          commit: null
+          size: 64120765
+          sha256: sha256:4f612bdf478474e59f67a10e0d8b17713fd12f10856de5f9cb69f9ffa5d51343
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.linux-mips64le.tar.gz
+        - name: prometheus-2.29.0-rc.2.linux-mipsle.tar.gz
+          commit: null
+          size: 64338259
+          sha256: sha256:d0474b2ceb58837efa862bdec96eaea7bec3bb97808d620688026338be911975
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.linux-mipsle.tar.gz
+        - name: prometheus-2.29.0-rc.2.linux-ppc64.tar.gz
+          commit: null
+          size: 69796228
+          sha256: sha256:504b2d61e208a5beb02419ad8b3cff59659c32449b66cd208c962c4314a74576
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.linux-ppc64.tar.gz
+        - name: prometheus-2.29.0-rc.2.linux-ppc64le.tar.gz
+          commit: null
+          size: 67019145
+          sha256: sha256:8ab8bd0b21b721b7991107f3b7f5dde06aed6ad2f32da8b8669cb74825589567
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.linux-ppc64le.tar.gz
+        - name: prometheus-2.29.0-rc.2.linux-s390x.tar.gz
+          commit: null
+          size: 73571422
+          sha256: sha256:b1da256fd60eed0310d715cc4b40797a0402a4af0c06c169cb580d3ee34ed58a
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.linux-s390x.tar.gz
+        - name: prometheus-2.29.0-rc.2.netbsd-386.tar.gz
+          commit: null
+          size: 69652831
+          sha256: sha256:3b1f6ec8574a26ce2aef0ff498b156cbd7630f443dd2f0ca139ca6076e5347bd
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.netbsd-386.tar.gz
+        - name: prometheus-2.29.0-rc.2.netbsd-amd64.tar.gz
+          commit: null
+          size: 73023663
+          sha256: sha256:59c41ee83e7c4c55b50d296dfffc32c82003cea795f7e105fd196610da24fa71
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.netbsd-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.2.netbsd-arm64.tar.gz
+          commit: null
+          size: 68407693
+          sha256: sha256:7bb3a22cf646cd3f20256a25dc117fcca2a21fcff7d0f8a0506ad39b8d371c73
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.netbsd-arm64.tar.gz
+        - name: prometheus-2.29.0-rc.2.netbsd-armv6.tar.gz
+          commit: null
+          size: 67710339
+          sha256: sha256:60395e6fef2e11bb3b952fcf0709988e38e9f0b60309a4767885ecebf28d904a
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.netbsd-armv6.tar.gz
+        - name: prometheus-2.29.0-rc.2.netbsd-armv7.tar.gz
+          commit: null
+          size: 67691164
+          sha256: sha256:7f97b2ba641e4d4c2bcd4ca79c815ae5ac79ca8b205030eb1d04a55362285619
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.netbsd-armv7.tar.gz
+        - name: prometheus-2.29.0-rc.2.openbsd-386.tar.gz
+          commit: null
+          size: 69646833
+          sha256: sha256:275f4f024b04c0828a7230ba171acf056c2ec346a5544bb281b1ce10437f3546
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.openbsd-386.tar.gz
+        - name: prometheus-2.29.0-rc.2.openbsd-amd64.tar.gz
+          commit: null
+          size: 73056131
+          sha256: sha256:78eeeaf5ec8d2c146a4daadc4917abd0598b008451c0b6a34d964538284dea82
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.openbsd-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.2.openbsd-arm64.tar.gz
+          commit: null
+          size: 68449548
+          sha256: sha256:c73c08f6bebd7bbbc56e8ef45f9addbdb736520abea49e666836fd9e2f516e25
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.openbsd-arm64.tar.gz
+        - name: prometheus-2.29.0-rc.2.openbsd-armv7.tar.gz
+          commit: null
+          size: 67679112
+          sha256: sha256:8116fbf596d1864ca62bcbfd913770926f650895130245ec8cc612b6f75a84d6
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.openbsd-armv7.tar.gz
+        - name: prometheus-2.29.0-rc.2.windows-386.tar.gz
+          commit: null
+          size: 71591863
+          sha256: sha256:affb51e9442b262d43fa9bbf3d545896975c5c6b5cca02e5e4695a5384f567fd
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.windows-386.tar.gz
+        - name: prometheus-2.29.0-rc.2.windows-386.zip
+          commit: null
+          size: 72968637
+          sha256: sha256:a2e0663fe9bebe4b41bef8fcee52411b93004ad206646760664df2f4bf3d944f
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.windows-386.zip
+        - name: prometheus-2.29.0-rc.2.windows-amd64.tar.gz
+          commit: null
+          size: 73671404
+          sha256: sha256:5473adc992c0342d7523375a4b3b4b2defca9e94ecc2184d884bec3aa4a46e19
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.windows-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.2.windows-amd64.zip
+          commit: null
+          size: 74626399
+          sha256: sha256:5b3ced8581a16ca8cf2353f53ea317e5f872179b67956e411322e021edfa4ee9
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/prometheus-2.29.0-rc.2.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 3807
+          sha256: sha256:975417cb6b06e17899bfe39d4bbc3a2b839a80ce0a94608c19dd17ab3e0964e1
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.2/sha256sums.txt
+    - name: v2.29.1
+      commit: null
+      timestamp: '2021-08-11T15:24:06'
+      prerelease: false
+      files:
+        - name: prometheus-2.29.1.darwin-amd64.tar.gz
+          commit: null
+          size: 73282122
+          sha256: sha256:ffa4710918f565ebc9c3c9abf834609c103cf9f6aaf0c5af5986b379baa9e74b
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.darwin-amd64.tar.gz
+        - name: prometheus-2.29.1.darwin-arm64.tar.gz
+          commit: null
+          size: 72706744
+          sha256: sha256:c3022f443104ccabd438c311cef5cd68b6b41d375664eb5c33bd0d9bef1119b9
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.darwin-arm64.tar.gz
+        - name: prometheus-2.29.1.dragonfly-amd64.tar.gz
+          commit: null
+          size: 73038183
+          sha256: sha256:9ff786b25feeb6d8f1ab2396d130fb537181730b2d97e1ada15e2096e5688c44
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.dragonfly-amd64.tar.gz
+        - name: prometheus-2.29.1.freebsd-386.tar.gz
+          commit: null
+          size: 69704586
+          sha256: sha256:6fe8c505c0c0ae6fa420a77f1eae0f4a3b1bcdba837200c85e3d60090a168f19
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.freebsd-386.tar.gz
+        - name: prometheus-2.29.1.freebsd-amd64.tar.gz
+          commit: null
+          size: 73080545
+          sha256: sha256:dd9bfdc82804754d35854be187722ed045512832d055454baa685c777c1e6e9e
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.freebsd-amd64.tar.gz
+        - name: prometheus-2.29.1.freebsd-arm64.tar.gz
+          commit: null
+          size: 68456819
+          sha256: sha256:cbaaeaf0030ece854e021a289d539261b9372aed9be61a2ec62fc404393d6820
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.freebsd-arm64.tar.gz
+        - name: prometheus-2.29.1.freebsd-armv6.tar.gz
+          commit: null
+          size: 67757345
+          sha256: sha256:418bd4c15d64ab3368901f5b5059d743cf4076bf3cd18538792a2b89e5f36286
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.freebsd-armv6.tar.gz
+        - name: prometheus-2.29.1.freebsd-armv7.tar.gz
+          commit: null
+          size: 67734667
+          sha256: sha256:f205e55924297605bc7adef34c9267bd1d4ffd4947209daf901de91db58362fc
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.freebsd-armv7.tar.gz
+        - name: prometheus-2.29.1.illumos-amd64.tar.gz
+          commit: null
+          size: 72946098
+          sha256: sha256:00af9a6db7a6ead4e912c6744638b86b125956f927f094cdc211ad7d9f74ac46
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.illumos-amd64.tar.gz
+        - name: prometheus-2.29.1.linux-386.tar.gz
+          commit: null
+          size: 69857092
+          sha256: sha256:3336219f711ddc0d78c6d06bb7fcd2b7f5286ebd8a23ec847a86ff26be7c4a93
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.linux-386.tar.gz
+        - name: prometheus-2.29.1.linux-amd64.tar.gz
+          commit: null
+          size: 73156341
+          sha256: sha256:b85769c7e819ed27e7a09a7a15bdfea06e01484737011677d043b1b85a22f82e
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.linux-amd64.tar.gz
+        - name: prometheus-2.29.1.linux-arm64.tar.gz
+          commit: null
+          size: 68841262
+          sha256: sha256:073dc2d374b13a58a111b609144214946d8bddc0abe91b4b369e4bdb4781d5b8
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.linux-arm64.tar.gz
+        - name: prometheus-2.29.1.linux-armv5.tar.gz
+          commit: null
+          size: 68006670
+          sha256: sha256:a7a3e58749566353e0f8cd49490a58e3c7ad2df234056d3cd938b2883f65634c
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.linux-armv5.tar.gz
+        - name: prometheus-2.29.1.linux-armv6.tar.gz
+          commit: null
+          size: 67844285
+          sha256: sha256:e6ed199a11462d4088ad55d08f6978f63cb9d7f36d0a2ffb050ed6f6475521f6
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.linux-armv6.tar.gz
+        - name: prometheus-2.29.1.linux-armv7.tar.gz
+          commit: null
+          size: 67813830
+          sha256: sha256:121e272755f8e32a813c85c546be404b8fea89ae21ad4bb1b2c5dd23d118cb2f
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.linux-armv7.tar.gz
+        - name: prometheus-2.29.1.linux-mips.tar.gz
+          commit: null
+          size: 66257305
+          sha256: sha256:6e2e8b86932921e7ea39d95aa966af50b88d91f29381de75e9299a688ae550a2
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.linux-mips.tar.gz
+        - name: prometheus-2.29.1.linux-mips64.tar.gz
+          commit: null
+          size: 66857774
+          sha256: sha256:bf1630859e71be6a3889f6b7fc5eb4ae7592b4c1720b3eb7b646bd8f762d6c54
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.linux-mips64.tar.gz
+        - name: prometheus-2.29.1.linux-mips64le.tar.gz
+          commit: null
+          size: 64108161
+          sha256: sha256:a5a47677d1e79ee75dbe296195a48191e6008bb3f02f136aea5bbdf85e7bd66c
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.linux-mips64le.tar.gz
+        - name: prometheus-2.29.1.linux-mipsle.tar.gz
+          commit: null
+          size: 64334157
+          sha256: sha256:8d6a5b616e0471009e333768c4d12a366c1b184df996486ac9351b9609a85754
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.linux-mipsle.tar.gz
+        - name: prometheus-2.29.1.linux-ppc64.tar.gz
+          commit: null
+          size: 69795414
+          sha256: sha256:78df7e0bef823d67c51d4f9ccdae0d558f475130d905a82193564b246d6a18c4
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.linux-ppc64.tar.gz
+        - name: prometheus-2.29.1.linux-ppc64le.tar.gz
+          commit: null
+          size: 67000542
+          sha256: sha256:3faea64b531c57ae9710116ca3ca4ffbf972d244527f2d752a6420a156ebe5e8
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.linux-ppc64le.tar.gz
+        - name: prometheus-2.29.1.linux-s390x.tar.gz
+          commit: null
+          size: 73563308
+          sha256: sha256:eced62a7dcbba6b544f9636769bcec4128468fcb915e11e6559766b5ba356a78
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.linux-s390x.tar.gz
+        - name: prometheus-2.29.1.netbsd-386.tar.gz
+          commit: null
+          size: 69649279
+          sha256: sha256:248ffe12f4b124a606c95df1b0d0776ba0cd10fa37a8dd477196f33c377c138b
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.netbsd-386.tar.gz
+        - name: prometheus-2.29.1.netbsd-amd64.tar.gz
+          commit: null
+          size: 73027248
+          sha256: sha256:8d82af25b040f992a050fcf6abef78255524fdabd680199dfcdc1a8b6b53886c
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.netbsd-amd64.tar.gz
+        - name: prometheus-2.29.1.netbsd-arm64.tar.gz
+          commit: null
+          size: 68406727
+          sha256: sha256:23b50a69bddc9580dcdf4e55d9111565df7a2af0878dbebc531fee1a9cdec85a
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.netbsd-arm64.tar.gz
+        - name: prometheus-2.29.1.netbsd-armv6.tar.gz
+          commit: null
+          size: 67708603
+          sha256: sha256:d0f318e2d9a20b1f6e33dff44d3064bba1cb48f305690ddb335b51665461b3b8
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.netbsd-armv6.tar.gz
+        - name: prometheus-2.29.1.netbsd-armv7.tar.gz
+          commit: null
+          size: 67688834
+          sha256: sha256:671e5757ff99a9889aab0e4aa46e75c7a53403a244adcc832dfde5a9757e6cf6
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.netbsd-armv7.tar.gz
+        - name: prometheus-2.29.1.openbsd-386.tar.gz
+          commit: null
+          size: 69644915
+          sha256: sha256:1d5bdd7a04de06aa472f45548cf3a8ced3905b232235b2022754b7a7b9e149b9
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.openbsd-386.tar.gz
+        - name: prometheus-2.29.1.openbsd-amd64.tar.gz
+          commit: null
+          size: 73059936
+          sha256: sha256:bdecd4e44c96aba5722298cb361a8e1b3c4bfbb1370b920c77f1558530c5a618
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.openbsd-amd64.tar.gz
+        - name: prometheus-2.29.1.openbsd-arm64.tar.gz
+          commit: null
+          size: 68445467
+          sha256: sha256:c3e5af37def2891655c492e2918a66eae6da2d005d9f6359761abcf47b81f413
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.openbsd-arm64.tar.gz
+        - name: prometheus-2.29.1.openbsd-armv7.tar.gz
+          commit: null
+          size: 67683119
+          sha256: sha256:93483821daedd2bb6fe5f2ef4c8302e653540fd5e26389aaf62ebb8b3922e831
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.openbsd-armv7.tar.gz
+        - name: prometheus-2.29.1.windows-386.tar.gz
+          commit: null
+          size: 71583363
+          sha256: sha256:b874442f0acb819af7070d66ed80375d0479440258a956e52f42cef5cf727464
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.windows-386.tar.gz
+        - name: prometheus-2.29.1.windows-386.zip
+          commit: null
+          size: 72966364
+          sha256: sha256:87f94d5cbe1ff12ac07da2894b715fb7dd6e7c5d554d2fdfbdd6e94b267121da
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.windows-386.zip
+        - name: prometheus-2.29.1.windows-amd64.tar.gz
+          commit: null
+          size: 73675269
+          sha256: sha256:77e0ff18ee74a0909fdd6f081249acf394e06353e8fcaf28dd058697c89a6dd6
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.windows-amd64.tar.gz
+        - name: prometheus-2.29.1.windows-amd64.zip
+          commit: null
+          size: 74622621
+          sha256: sha256:d81c4c1a3b424e71c42169e8e187c83ae1c4bb8aa32da5308513887c6251bcaf
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/prometheus-2.29.1.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 3632
+          sha256: sha256:6a5b8342b65b43e69c76e0348d71badb15f079bff051b9bec082ffb5dee7f5d9
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.1/sha256sums.txt
+    - name: v2.29.0
+      commit: null
+      timestamp: '2021-08-11T06:33:21'
+      prerelease: false
+      files:
+        - name: prometheus-2.29.0.darwin-amd64.tar.gz
+          commit: null
+          size: 73286862
+          sha256: sha256:dd2c61543bb2a3d9bc9f4e65936600996a1e075e1fbd3df8eea70dac46dddf18
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.darwin-amd64.tar.gz
+        - name: prometheus-2.29.0.darwin-arm64.tar.gz
+          commit: null
+          size: 72703509
+          sha256: sha256:e6b46c2e6eecad285f6547f0b8399a14d3f16392af51c90c9942cb67be138c4e
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.darwin-arm64.tar.gz
+        - name: prometheus-2.29.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 73042995
+          sha256: sha256:68381b04c260c4c13119cfbe7bc09ff1c465fc861f407c467f4647fe2989dacb
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.dragonfly-amd64.tar.gz
+        - name: prometheus-2.29.0.freebsd-386.tar.gz
+          commit: null
+          size: 69704752
+          sha256: sha256:6fa4785eb4abdc1899a6dfc3a1cce9092d5e54edc03a519864cc8f52c413775b
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.freebsd-386.tar.gz
+        - name: prometheus-2.29.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 73078870
+          sha256: sha256:8f9b679815b6cf2e90c3e93abbdcc530e9c4169178e37aea95b9ea38e8ffc927
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.freebsd-amd64.tar.gz
+        - name: prometheus-2.29.0.freebsd-arm64.tar.gz
+          commit: null
+          size: 68458556
+          sha256: sha256:b07bd0ec43667b0512af2ace007176402dd3684b07656c9fed5f92d15c16f06e
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.freebsd-arm64.tar.gz
+        - name: prometheus-2.29.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 67757165
+          sha256: sha256:a3bb24a776d5938c0b9f7d3260c26d28aa21661915a8e74f22b07138bf076b3b
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.freebsd-armv6.tar.gz
+        - name: prometheus-2.29.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 67736885
+          sha256: sha256:4d2070ecedde579ade2ac1210a45c46665556cdcc68dcec80c2a13114592db8a
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.freebsd-armv7.tar.gz
+        - name: prometheus-2.29.0.illumos-amd64.tar.gz
+          commit: null
+          size: 72943655
+          sha256: sha256:e3a4090777078298e97c05475b1267100bfb75f798eee5b68c69a9715dc51912
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.illumos-amd64.tar.gz
+        - name: prometheus-2.29.0.linux-386.tar.gz
+          commit: null
+          size: 69859728
+          sha256: sha256:52dfdc5ffa55460509f2361a4c423dfd3835a63d68b0f2c8d32b4c27593662a5
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.linux-386.tar.gz
+        - name: prometheus-2.29.0.linux-amd64.tar.gz
+          commit: null
+          size: 73160907
+          sha256: sha256:a7c1bb3def0c4e6d92f29b73fd0a4c48073d9d8b256046f724521f470e69a7a7
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.linux-amd64.tar.gz
+        - name: prometheus-2.29.0.linux-arm64.tar.gz
+          commit: null
+          size: 68858970
+          sha256: sha256:1c2ac3b8aae9e31c76d9ae2366fdeec626ff4b91ac4f4d89fdf3421e22c2695c
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.linux-arm64.tar.gz
+        - name: prometheus-2.29.0.linux-armv5.tar.gz
+          commit: null
+          size: 68012187
+          sha256: sha256:1beb6e9fc8b6748d254990b79234cbad8eac29b6187f6ee45f4dff9e4de1b695
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.linux-armv5.tar.gz
+        - name: prometheus-2.29.0.linux-armv6.tar.gz
+          commit: null
+          size: 67843659
+          sha256: sha256:de333458be6f8a61602215881c21918c4d2ace43b60393263f8ad40630300b48
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.linux-armv6.tar.gz
+        - name: prometheus-2.29.0.linux-armv7.tar.gz
+          commit: null
+          size: 67816397
+          sha256: sha256:a6c5edaff9389cfb47420de324dc1e6c0f646e34ef85046fe245a96d72bd50d4
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.linux-armv7.tar.gz
+        - name: prometheus-2.29.0.linux-mips.tar.gz
+          commit: null
+          size: 66255620
+          sha256: sha256:f434d36b797825a78e2660bcbb52b32e73340eaeb29641143456462be9d7e3b9
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.linux-mips.tar.gz
+        - name: prometheus-2.29.0.linux-mips64.tar.gz
+          commit: null
+          size: 66876579
+          sha256: sha256:56fbe1f205bd8c45e097ca80943cbe64610ecd363ec121a552958ae5b82d502f
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.linux-mips64.tar.gz
+        - name: prometheus-2.29.0.linux-mips64le.tar.gz
+          commit: null
+          size: 64124270
+          sha256: sha256:2182ebedd0709f2099293923709c3852b762eb01ecfce21c68d68e44ae53e6bc
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.linux-mips64le.tar.gz
+        - name: prometheus-2.29.0.linux-mipsle.tar.gz
+          commit: null
+          size: 64335087
+          sha256: sha256:b4f8d34610e9d6f4296e9b8ef9ed918950e667dadcc3e140970cb3fa908a607a
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.linux-mipsle.tar.gz
+        - name: prometheus-2.29.0.linux-ppc64.tar.gz
+          commit: null
+          size: 69794832
+          sha256: sha256:246f8e5d9c443fa94bc26e99c926df3aaddc17623d3dd1765bdcb99e2ff895d8
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.linux-ppc64.tar.gz
+        - name: prometheus-2.29.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 67010581
+          sha256: sha256:62f2f9a9ea9a06bbb8295642a59bd4303e3c41945c3420768e05d1a1819fb26d
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.linux-ppc64le.tar.gz
+        - name: prometheus-2.29.0.linux-s390x.tar.gz
+          commit: null
+          size: 73570132
+          sha256: sha256:216b1294a2179c8f2e51a233582c89b354932ac5017d64077c8779648bdd18ce
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.linux-s390x.tar.gz
+        - name: prometheus-2.29.0.netbsd-386.tar.gz
+          commit: null
+          size: 69649826
+          sha256: sha256:ec8300081d4c51024317d3d6a3ce6757a891f24281a9d840381f13399779c1b7
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.netbsd-386.tar.gz
+        - name: prometheus-2.29.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 73025509
+          sha256: sha256:85e2257be9e7eb2c4f401244e65495e556e8a9e933d1da6c92f00858c72a6f17
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.netbsd-amd64.tar.gz
+        - name: prometheus-2.29.0.netbsd-arm64.tar.gz
+          commit: null
+          size: 68408902
+          sha256: sha256:19cd9273aa642fb2783eba308c53e6c0b879de79fb639b7817538cc9f8de531f
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.netbsd-arm64.tar.gz
+        - name: prometheus-2.29.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 67708711
+          sha256: sha256:2ca15ca015a91b317b2ed14252cf8b8419cae288859e8117fb20690c17275c2c
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.netbsd-armv6.tar.gz
+        - name: prometheus-2.29.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 67693021
+          sha256: sha256:12d0cf0427a22ba4419663540c479263fb97f6d61c551d236aa793f563ef6469
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.netbsd-armv7.tar.gz
+        - name: prometheus-2.29.0.openbsd-386.tar.gz
+          commit: null
+          size: 69644345
+          sha256: sha256:e9ea860bab38c25c88922ae35c64a205887e4c9168a73bde35449f96468ab9fa
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.openbsd-386.tar.gz
+        - name: prometheus-2.29.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 73056850
+          sha256: sha256:c2e44b4aa8cc832f5f3427bb5adb787bde5d7187c566933b43a91f02482000fb
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.openbsd-amd64.tar.gz
+        - name: prometheus-2.29.0.openbsd-arm64.tar.gz
+          commit: null
+          size: 68453839
+          sha256: sha256:05fda9e9c8af9aa36199e5a57499a1f2561ab450dc6525fe2068a5f28a777d79
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.openbsd-arm64.tar.gz
+        - name: prometheus-2.29.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 67681772
+          sha256: sha256:53d69919868f194f003b6a807b24e9993b48b5eb4f3e0d8864e86041249a3cc7
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.openbsd-armv7.tar.gz
+        - name: prometheus-2.29.0.windows-386.tar.gz
+          commit: null
+          size: 71582858
+          sha256: sha256:9ed7794be5e8e7f0f26d68d835a2c3c8d5544918f9adeb6181338c2cc6909e34
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.windows-386.tar.gz
+        - name: prometheus-2.29.0.windows-386.zip
+          commit: null
+          size: 72965812
+          sha256: sha256:dc57ac14afac8d4e62cccc3c3a442b1127d0621b2a2529a261c7b6efa976e604
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.windows-386.zip
+        - name: prometheus-2.29.0.windows-amd64.tar.gz
+          commit: null
+          size: 73678461
+          sha256: sha256:4b98b2b5aa18979e89f4e1bef9144ba2801ccfa910400b3f556c6b2c405492ed
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.windows-amd64.tar.gz
+        - name: prometheus-2.29.0.windows-amd64.zip
+          commit: null
+          size: 74624995
+          sha256: sha256:7bb3a948946ca7196fa7599c6705a48df80407a4f86e97d074b79faf9505570b
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/prometheus-2.29.0.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 3632
+          sha256: sha256:05ede85a0953e033063007487e1d13cf927cfaf24b1aaf1bbf5993160147d216
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0/sha256sums.txt
+    - name: v2.29.0-rc.1
+      commit: null
+      timestamp: '2021-08-04T14:32:50'
+      prerelease: true
+      files:
+        - name: prometheus-2.29.0-rc.1.darwin-amd64.tar.gz
+          commit: null
+          size: 73282740
+          sha256: sha256:f5ab42248f2343cdeaf5ad3c3adc793eabe4131325fbfb246965aacc53182b52
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.darwin-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.1.darwin-arm64.tar.gz
+          commit: null
+          size: 72699847
+          sha256: sha256:15df55dfd69e9713838e91a24be0a75991b6164306d7e7d2c7c37171671536d3
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.darwin-arm64.tar.gz
+        - name: prometheus-2.29.0-rc.1.dragonfly-amd64.tar.gz
+          commit: null
+          size: 73040279
+          sha256: sha256:519e5a7c53d02a0d7c4ffcea39b56ac3a7c5c3a0abb48c53e9a49116828b1c77
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.dragonfly-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.1.freebsd-386.tar.gz
+          commit: null
+          size: 69704570
+          sha256: sha256:e6e06ceeaa7ed222667e09acabe5226fb8a4baf2b397a1ca0658b58ad72a41ae
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.freebsd-386.tar.gz
+        - name: prometheus-2.29.0-rc.1.freebsd-amd64.tar.gz
+          commit: null
+          size: 73094701
+          sha256: sha256:87f40ebb5c674614ac4bda6a32ab4ea0586b68c86b533f56e079be1631257b56
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.freebsd-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.1.freebsd-arm64.tar.gz
+          commit: null
+          size: 68463635
+          sha256: sha256:802b3efd33c990370bfea7306da50033fc04ecbd5fe4c2d5da6b812ab814e5ff
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.freebsd-arm64.tar.gz
+        - name: prometheus-2.29.0-rc.1.freebsd-armv6.tar.gz
+          commit: null
+          size: 67760059
+          sha256: sha256:a99c6681bf52a1f140057a6005439674e12434d435faca441c90a1b7cab5d1fb
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.freebsd-armv6.tar.gz
+        - name: prometheus-2.29.0-rc.1.freebsd-armv7.tar.gz
+          commit: null
+          size: 67738690
+          sha256: sha256:43ef089a888e30b449b4efb0027bc2a4e91d3e1e15630893b63144f4361485d9
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.freebsd-armv7.tar.gz
+        - name: prometheus-2.29.0-rc.1.illumos-amd64.tar.gz
+          commit: null
+          size: 72942854
+          sha256: sha256:d5186711a014ad26b5ee7c9ef58befd3cbc058737bd5bc29c3543c8dac5a297d
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.illumos-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.1.linux-386.tar.gz
+          commit: null
+          size: 69860206
+          sha256: sha256:5586f148147ba473ce461674f1d722e48268b26fa7fdc0d4fbfc3dc0189f74d9
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.linux-386.tar.gz
+        - name: prometheus-2.29.0-rc.1.linux-amd64.tar.gz
+          commit: null
+          size: 73156230
+          sha256: sha256:933666f36f40c7ced8e8b9a1310e04027ac8b4e34521ee56f8e64b66f84b3799
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.linux-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.1.linux-arm64.tar.gz
+          commit: null
+          size: 68866756
+          sha256: sha256:54f259a8f50a2e2d37d5e7fb341f67fc2fbcd6596fa48a050ea55181b9a27940
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.linux-arm64.tar.gz
+        - name: prometheus-2.29.0-rc.1.linux-armv5.tar.gz
+          commit: null
+          size: 68011751
+          sha256: sha256:40a05bda060584484130561337bc69bfb43d64ff030cf4f609159665b49433ec
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.linux-armv5.tar.gz
+        - name: prometheus-2.29.0-rc.1.linux-armv6.tar.gz
+          commit: null
+          size: 67848076
+          sha256: sha256:7543f280477fdcf2841e5543a316b825e67e9876cd8abdbdfcca1c7d869b71f7
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.linux-armv6.tar.gz
+        - name: prometheus-2.29.0-rc.1.linux-armv7.tar.gz
+          commit: null
+          size: 67818070
+          sha256: sha256:7e5c9ec3428b1f2aafc1ba5f2d95237b0ff549c296631fe9b4324072e4bc0e3f
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.linux-armv7.tar.gz
+        - name: prometheus-2.29.0-rc.1.linux-mips.tar.gz
+          commit: null
+          size: 66251574
+          sha256: sha256:82290813abd58b5d79257b03408c27feb1627ca85f5a16e8a80bd9810cddacfe
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.linux-mips.tar.gz
+        - name: prometheus-2.29.0-rc.1.linux-mips64.tar.gz
+          commit: null
+          size: 66871997
+          sha256: sha256:a4081ece42a99550c2c4696dc5a3633dfe9c42bcae9aed62310924a0cd3ff007
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.linux-mips64.tar.gz
+        - name: prometheus-2.29.0-rc.1.linux-mips64le.tar.gz
+          commit: null
+          size: 64106559
+          sha256: sha256:cdd67991d517802f6882405d141ec1efda63bf5444c8faaa13264db8b94227de
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.linux-mips64le.tar.gz
+        - name: prometheus-2.29.0-rc.1.linux-mipsle.tar.gz
+          commit: null
+          size: 64339845
+          sha256: sha256:f26a509f9bf66ca9fc96f112da8c8fac5867e4d67c4edc60931a9cc74fc70e9d
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.linux-mipsle.tar.gz
+        - name: prometheus-2.29.0-rc.1.linux-ppc64.tar.gz
+          commit: null
+          size: 69774675
+          sha256: sha256:76ff0e7277c4f469a3dca9ea49732490111d3e6da2b372a27b594466272d42d3
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.linux-ppc64.tar.gz
+        - name: prometheus-2.29.0-rc.1.linux-ppc64le.tar.gz
+          commit: null
+          size: 67014701
+          sha256: sha256:29e4e5a5ef57b09e45bff04c34ac5a95177430ae4dce0612e0d97900763c3c71
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.linux-ppc64le.tar.gz
+        - name: prometheus-2.29.0-rc.1.linux-s390x.tar.gz
+          commit: null
+          size: 73575658
+          sha256: sha256:1f7688e1ac7a7c5a46f2d630c5c51d587ba331a8ec3019f29672862398c97f90
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.linux-s390x.tar.gz
+        - name: prometheus-2.29.0-rc.1.netbsd-386.tar.gz
+          commit: null
+          size: 69657422
+          sha256: sha256:6c8e96182e4bd7786833e26e41058bc9b2864d91f054941377ae172c006137a4
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.netbsd-386.tar.gz
+        - name: prometheus-2.29.0-rc.1.netbsd-amd64.tar.gz
+          commit: null
+          size: 73035238
+          sha256: sha256:c0aa74a9cfeb6f474957630edd62702000efaaabc37da367dde18fdd23e22a84
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.netbsd-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.1.netbsd-arm64.tar.gz
+          commit: null
+          size: 68415734
+          sha256: sha256:95ffa29c866d3fb615c596e3b1c42dd3dab37ed603f090bdd8406ed0d6f69d80
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.netbsd-arm64.tar.gz
+        - name: prometheus-2.29.0-rc.1.netbsd-armv6.tar.gz
+          commit: null
+          size: 67712093
+          sha256: sha256:37d5ad2506f2a62dc5ae655b0fb33fed4919996c517c5761cf03e852c522a136
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.netbsd-armv6.tar.gz
+        - name: prometheus-2.29.0-rc.1.netbsd-armv7.tar.gz
+          commit: null
+          size: 67693692
+          sha256: sha256:7dfd747c3ce548b5b3316d163589fe5bfb8432898b656bb7bd0a62b47ad06754
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.netbsd-armv7.tar.gz
+        - name: prometheus-2.29.0-rc.1.openbsd-386.tar.gz
+          commit: null
+          size: 69642652
+          sha256: sha256:69467b636727f40ce94fda26e02ae037d674be7e9a6d50472116efcfa14af723
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.openbsd-386.tar.gz
+        - name: prometheus-2.29.0-rc.1.openbsd-amd64.tar.gz
+          commit: null
+          size: 73064611
+          sha256: sha256:536ae3311c91123dfa5bd248ccbbe876322eaf32cb4138f98efe550aa2be6ca1
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.openbsd-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.1.openbsd-arm64.tar.gz
+          commit: null
+          size: 68446057
+          sha256: sha256:6fe6970026bf5f05f6eb6cdab3ad891e3b51c18b4ac64a722742d10bf177eec4
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.openbsd-arm64.tar.gz
+        - name: prometheus-2.29.0-rc.1.openbsd-armv7.tar.gz
+          commit: null
+          size: 67681373
+          sha256: sha256:09073d55ae02e8ea8ee5d7c11b259d2a205f89bc97ffc0251df02007f8ddb901
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.openbsd-armv7.tar.gz
+        - name: prometheus-2.29.0-rc.1.windows-386.tar.gz
+          commit: null
+          size: 71594209
+          sha256: sha256:f9678b2fa91b3aa91eaf53acbe86ba577e192c8a586bb3a5e88fa56566c99c5c
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.windows-386.tar.gz
+        - name: prometheus-2.29.0-rc.1.windows-386.zip
+          commit: null
+          size: 72974157
+          sha256: sha256:183fb97a275eaf8ab458490761f6e3dacec896714a007ac880d3bfc1f815553a
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.windows-386.zip
+        - name: prometheus-2.29.0-rc.1.windows-amd64.tar.gz
+          commit: null
+          size: 73676439
+          sha256: sha256:0fd1ca524b943f4d50861c04d48a727af9b1e8234b90585f1b79a2c8e5ac1eb8
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.windows-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.1.windows-amd64.zip
+          commit: null
+          size: 74626445
+          sha256: sha256:ee5ab26130be35a9a461303f2ecdcd0d5d1786a7b7bb4e08d5e8087cd737a8c3
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/prometheus-2.29.0-rc.1.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 3807
+          sha256: sha256:6bd980501814d3576402f117d2cee5afb72ac3da04400f99eae7c184a635be26
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.1/sha256sums.txt
+    - name: v2.29.0-rc.0
+      commit: null
+      timestamp: '2021-08-02T06:58:37'
+      prerelease: true
+      files:
+        - name: prometheus-2.29.0-rc.0.darwin-amd64.tar.gz
+          commit: null
+          size: 73284455
+          sha256: sha256:d92c3eefa59bf2ed1f5aa0cb3d6c5ac101ebb2d4077ccfbba17735e9d9d7c2a7
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.darwin-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.0.darwin-arm64.tar.gz
+          commit: null
+          size: 72702671
+          sha256: sha256:148e53873e618693cfd5542b5aa1c74bfe3c78288f1a7d9351caf01977faeb9a
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.darwin-arm64.tar.gz
+        - name: prometheus-2.29.0-rc.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 73048123
+          sha256: sha256:cbc05fdde279388bd3c0bf799b570a724f35e61573601a44e69135cfce405935
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.dragonfly-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.0.freebsd-386.tar.gz
+          commit: null
+          size: 69703529
+          sha256: sha256:3ddb32a3270698dc1fbb0dba965f4791bdf471d71f2d1d896f9a21b3bab6022c
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.freebsd-386.tar.gz
+        - name: prometheus-2.29.0-rc.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 73096625
+          sha256: sha256:85c44a35efa590de37080330322d03ca95ff581ee36c6665336f445d8d115b10
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.freebsd-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.0.freebsd-arm64.tar.gz
+          commit: null
+          size: 68461563
+          sha256: sha256:18c955ce1384ed6494e3762a646c81218681d8ea6bc9fcb5b44d9ae456f8cec0
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.freebsd-arm64.tar.gz
+        - name: prometheus-2.29.0-rc.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 67763826
+          sha256: sha256:48bf696d869ac167a3470c4a34b22975052e5b37d6ba00710e12e292e6ee53a9
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.freebsd-armv6.tar.gz
+        - name: prometheus-2.29.0-rc.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 67737923
+          sha256: sha256:d73888a61d12f3e91a3fa31d215b92e4504fead3e0b8d02e0782f860a2008e0e
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.freebsd-armv7.tar.gz
+        - name: prometheus-2.29.0-rc.0.illumos-amd64.tar.gz
+          commit: null
+          size: 72942652
+          sha256: sha256:4abfe46103cdc3082e60e6bdef296fbc038ff0a3f7d830f12e9fe5fa802e39f2
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.illumos-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.0.linux-386.tar.gz
+          commit: null
+          size: 69854553
+          sha256: sha256:5f71e5c9c7954611ce06a86bd3595cc3d99484996a9658822efd5a1e807fa93e
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.linux-386.tar.gz
+        - name: prometheus-2.29.0-rc.0.linux-amd64.tar.gz
+          commit: null
+          size: 73164142
+          sha256: sha256:a370b4526eb13a23540742b660c7af0dfc8fe9ff2fbed3d53cb7ea4387aad6e1
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.linux-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.0.linux-arm64.tar.gz
+          commit: null
+          size: 68869251
+          sha256: sha256:28956bad1d046adb362ba225c8b6af0371c8740ae80fb73dc5c9b033632f85e7
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.linux-arm64.tar.gz
+        - name: prometheus-2.29.0-rc.0.linux-armv5.tar.gz
+          commit: null
+          size: 68012679
+          sha256: sha256:3f281c30dfdef9c6cee6edbe8cb8696ac7dc73b2a8619fbd7f646bdc098369b9
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.linux-armv5.tar.gz
+        - name: prometheus-2.29.0-rc.0.linux-armv6.tar.gz
+          commit: null
+          size: 67844035
+          sha256: sha256:819da26365f83ff520751512f7437a0f1bc2c0621311e3e323ee46b9d40dd415
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.linux-armv6.tar.gz
+        - name: prometheus-2.29.0-rc.0.linux-armv7.tar.gz
+          commit: null
+          size: 67816703
+          sha256: sha256:9c93dce460e8c8fac6587734e3fc7855cde7493a1f30a280fd97d1fb4c933f36
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.linux-armv7.tar.gz
+        - name: prometheus-2.29.0-rc.0.linux-mips.tar.gz
+          commit: null
+          size: 66251523
+          sha256: sha256:0d69b02b9d4df245d26a6e8d8c2976278381e413e30335685fb60bc725783662
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.linux-mips.tar.gz
+        - name: prometheus-2.29.0-rc.0.linux-mips64.tar.gz
+          commit: null
+          size: 66906633
+          sha256: sha256:e21d780970d831815d78f7f300d239d7c6b69c8b5366b33b2a3ffd81f6f267a8
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.linux-mips64.tar.gz
+        - name: prometheus-2.29.0-rc.0.linux-mips64le.tar.gz
+          commit: null
+          size: 64110611
+          sha256: sha256:145833ec8fba8693d18fccc1ebfd88528bcc8d6466afc32de7c074cbf2bf6d41
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.linux-mips64le.tar.gz
+        - name: prometheus-2.29.0-rc.0.linux-mipsle.tar.gz
+          commit: null
+          size: 64341609
+          sha256: sha256:873c4f5ca0f0a93343e7f2df3866c5b698ddc3819846c81e52070a5c2efc21f7
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.linux-mipsle.tar.gz
+        - name: prometheus-2.29.0-rc.0.linux-ppc64.tar.gz
+          commit: null
+          size: 69767529
+          sha256: sha256:ebf95a3f31079b257ec17da4990b1aa4d6615340bc9b532b730c3f710526c492
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.linux-ppc64.tar.gz
+        - name: prometheus-2.29.0-rc.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 67013411
+          sha256: sha256:6cd7f7d5e677f4e3b99897d10d4393692237d3bc0656f47955800b7fef1e2eb1
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.linux-ppc64le.tar.gz
+        - name: prometheus-2.29.0-rc.0.linux-s390x.tar.gz
+          commit: null
+          size: 73577289
+          sha256: sha256:f5c31755967d6675db6aba58a67acb66d4d13e248aef563e41594d34dc231858
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.linux-s390x.tar.gz
+        - name: prometheus-2.29.0-rc.0.netbsd-386.tar.gz
+          commit: null
+          size: 69657380
+          sha256: sha256:44456a6ef6a690710030cea82bdf4b2e759d82ac6dc5778393eac785ae51e022
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.netbsd-386.tar.gz
+        - name: prometheus-2.29.0-rc.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 73044923
+          sha256: sha256:8e90b3e0ed80e656bfa6464122901247ad1d3865f6665334e8bf4aadc2d91668
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.netbsd-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.0.netbsd-arm64.tar.gz
+          commit: null
+          size: 68414559
+          sha256: sha256:42b18c8445606d3ee0ea7e8c8a78213e2a42dc1ed5036fdb8f1c580b1abafd45
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.netbsd-arm64.tar.gz
+        - name: prometheus-2.29.0-rc.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 67710487
+          sha256: sha256:79d340d30c63729d0df19c2cbae017d86034cec1d09aa5501d456000a3d497c0
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.netbsd-armv6.tar.gz
+        - name: prometheus-2.29.0-rc.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 67687597
+          sha256: sha256:af56994bb531d920fef2456827860184d5a3780bc4cb861792787789be3373d0
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.netbsd-armv7.tar.gz
+        - name: prometheus-2.29.0-rc.0.openbsd-386.tar.gz
+          commit: null
+          size: 69642048
+          sha256: sha256:acd3b4b9bc7213c1b15eb853f0600d5e91efb979f7ed6c7a78f48f385d27c65d
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.openbsd-386.tar.gz
+        - name: prometheus-2.29.0-rc.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 73061415
+          sha256: sha256:e01d42639a2e5c515bc3bf623cb09aa0acb10dc668def043cb61a3718a135554
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.openbsd-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.0.openbsd-arm64.tar.gz
+          commit: null
+          size: 68457934
+          sha256: sha256:68a88de4b7b4b02a44075e38ed20cd77da84edf76ba5ceff8653454465e35118
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.openbsd-arm64.tar.gz
+        - name: prometheus-2.29.0-rc.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 67681554
+          sha256: sha256:d3ac9b2cc9eaaf7cf95baa10b0fa5e64cca7d7487df8574be4d1afc76d137b07
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.openbsd-armv7.tar.gz
+        - name: prometheus-2.29.0-rc.0.windows-386.tar.gz
+          commit: null
+          size: 71592046
+          sha256: sha256:1388c533051784e383c995283753523d0c43f6f8cb709583cdd628d63e9da983
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.windows-386.tar.gz
+        - name: prometheus-2.29.0-rc.0.windows-386.zip
+          commit: null
+          size: 72971054
+          sha256: sha256:fe2683c3074954008bedccbe74490644a28bea01147eed0ecf2480e9d8af1bcd
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.windows-386.zip
+        - name: prometheus-2.29.0-rc.0.windows-amd64.tar.gz
+          commit: null
+          size: 73662000
+          sha256: sha256:fd171a33e513ee8cce1c7c0c59c7604a554a51b711d43c2deb6bd000b55d84aa
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.windows-amd64.tar.gz
+        - name: prometheus-2.29.0-rc.0.windows-amd64.zip
+          commit: null
+          size: 74615449
+          sha256: sha256:5f789dfa349ede3cd7074b535ef980dc957e01980259f690c84f10a5e90583af
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/prometheus-2.29.0-rc.0.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 3807
+          sha256: sha256:514b13056af9915560fcb821ba90ffec8e6ecd5e45ac29bd3b73d837fce64495
+          url: https://github.com/prometheus/prometheus/releases/download/v2.29.0-rc.0/sha256sums.txt
     - name: v2.28.1
       commit: null
       timestamp: '2021-07-01T18:19:38'
@@ -213,191 +1323,6 @@ software:
           size: 3632
           sha256: sha256:8faf084b5f026589f459ff08b1561585b792e44d07d0bfda9f1adfbc80b35e13
           url: https://github.com/prometheus/prometheus/releases/download/v2.28.1/sha256sums.txt
-    - name: v2.28.0-rc.0
-      commit: null
-      timestamp: '2021-06-18T11:36:32'
-      prerelease: true
-      files:
-        - name: prometheus-2.28.0-rc.0.darwin-amd64.tar.gz
-          commit: null
-          size: 71242126
-          sha256: sha256:506a2cc794d3adefd81b8f40247bf05cde0058aaf5c0c769185c922395c3fdb0
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.darwin-amd64.tar.gz
-        - name: prometheus-2.28.0-rc.0.darwin-arm64.tar.gz
-          commit: null
-          size: 70563460
-          sha256: sha256:e316644a9827aa022fce8ad51cfec0c6b9fb2b8c969fc44770df9427c80110ee
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.darwin-arm64.tar.gz
-        - name: prometheus-2.28.0-rc.0.dragonfly-amd64.tar.gz
-          commit: null
-          size: 70985907
-          sha256: sha256:889c23cece69678661fdc0b1ade6bf7f5525f8dc89bd746d3c44a49ae25243ad
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.dragonfly-amd64.tar.gz
-        - name: prometheus-2.28.0-rc.0.freebsd-386.tar.gz
-          commit: null
-          size: 67748046
-          sha256: sha256:10a5e67699fdb80f1faa390ab34630e5c5346ead9afab85b82487f3fe049c394
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.freebsd-386.tar.gz
-        - name: prometheus-2.28.0-rc.0.freebsd-amd64.tar.gz
-          commit: null
-          size: 71043470
-          sha256: sha256:f2aecd675dc9247844733589b46d97e7de39490361f60a7b462e5a107374781e
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.freebsd-amd64.tar.gz
-        - name: prometheus-2.28.0-rc.0.freebsd-arm64.tar.gz
-          commit: null
-          size: 66468938
-          sha256: sha256:03fc79ef321e2b58ebf0348cb4d6113948e406f1d1acaa6c8ded2c663dd3a21e
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.freebsd-arm64.tar.gz
-        - name: prometheus-2.28.0-rc.0.freebsd-armv6.tar.gz
-          commit: null
-          size: 65815896
-          sha256: sha256:365a7654b02e8e3b43c045115fa5f4b22e30cb90fc025dceab0456eba59b5179
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.freebsd-armv6.tar.gz
-        - name: prometheus-2.28.0-rc.0.freebsd-armv7.tar.gz
-          commit: null
-          size: 65795295
-          sha256: sha256:8e9737d8f2a7256ff109e29117fb53ef9b51fee506fe01ecaf864492be249349
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.freebsd-armv7.tar.gz
-        - name: prometheus-2.28.0-rc.0.illumos-amd64.tar.gz
-          commit: null
-          size: 70889929
-          sha256: sha256:fef827097343fd9b200b358b10d4840857e84cb6614f945936660c18e79efec1
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.illumos-amd64.tar.gz
-        - name: prometheus-2.28.0-rc.0.linux-386.tar.gz
-          commit: null
-          size: 67893547
-          sha256: sha256:1566561f475bacfbb9ddb11e01fd68cf0a886e9934ee450ce86ccffa6b7d6aa2
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-386.tar.gz
-        - name: prometheus-2.28.0-rc.0.linux-amd64.tar.gz
-          commit: null
-          size: 71093271
-          sha256: sha256:24792ee45f5252237ace2803cc01b5a6287935fee98919a1ff29e6d9ccfb562c
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-amd64.tar.gz
-        - name: prometheus-2.28.0-rc.0.linux-arm64.tar.gz
-          commit: null
-          size: 66880374
-          sha256: sha256:a4464009fb4f6e62384eef761d7ec7d11c5d7d0938094110d23aed6295c57346
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-arm64.tar.gz
-        - name: prometheus-2.28.0-rc.0.linux-armv5.tar.gz
-          commit: null
-          size: 66068662
-          sha256: sha256:e33f86494e84823702f9b586bbd859c87182c92f0e5d419d9bc775315a66a0c7
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-armv5.tar.gz
-        - name: prometheus-2.28.0-rc.0.linux-armv6.tar.gz
-          commit: null
-          size: 65896518
-          sha256: sha256:2421bfc3a733c9937e2fc9a4c5c74b1a1dba3a6f8b88cf73b39410e36ad23647
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-armv6.tar.gz
-        - name: prometheus-2.28.0-rc.0.linux-armv7.tar.gz
-          commit: null
-          size: 65875494
-          sha256: sha256:72a7c1776b2f0a5cdb8b57ce84232c73b3cad5ed8220e65cd656a6a2e4b0f542
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-armv7.tar.gz
-        - name: prometheus-2.28.0-rc.0.linux-mips.tar.gz
-          commit: null
-          size: 64319223
-          sha256: sha256:81ae9f333397ce0bd14e57bd6e938beea7b382229d062b4b37fefc4b2d2305dd
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-mips.tar.gz
-        - name: prometheus-2.28.0-rc.0.linux-mips64.tar.gz
-          commit: null
-          size: 64923040
-          sha256: sha256:eaf0acf73c97cb927167a64c246225cecd4f964165998b7764fa51b2a07b2641
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-mips64.tar.gz
-        - name: prometheus-2.28.0-rc.0.linux-mips64le.tar.gz
-          commit: null
-          size: 62256407
-          sha256: sha256:9d2d7d6b95f2074b8f3145b4593577b75bdeea13ee01e4e1c4cad1440035f618
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-mips64le.tar.gz
-        - name: prometheus-2.28.0-rc.0.linux-mipsle.tar.gz
-          commit: null
-          size: 62474344
-          sha256: sha256:0143ad97b31e3e9b4fda42900b3b5256849a26e0bd656772dde35bcfa84a2761
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-mipsle.tar.gz
-        - name: prometheus-2.28.0-rc.0.linux-ppc64.tar.gz
-          commit: null
-          size: 67795526
-          sha256: sha256:51dfeb61696556bf3de1970233097ba4c36453db586c3963e741c9c4285fe094
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-ppc64.tar.gz
-        - name: prometheus-2.28.0-rc.0.linux-ppc64le.tar.gz
-          commit: null
-          size: 65066497
-          sha256: sha256:8e280551c89903b00ab7be81ea59ec07af3ea5738a7090de198cbe63912ca83f
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-ppc64le.tar.gz
-        - name: prometheus-2.28.0-rc.0.linux-s390x.tar.gz
-          commit: null
-          size: 71472382
-          sha256: sha256:52105fa03aa26e428e905b6afdbd8e3fd2c9a7c651647db589354a2b02abbfff
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-s390x.tar.gz
-        - name: prometheus-2.28.0-rc.0.netbsd-386.tar.gz
-          commit: null
-          size: 67690469
-          sha256: sha256:c07bb62700212736d23e1584226de7d95ea0cdc717162c1f6e9d8d0a66022edf
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.netbsd-386.tar.gz
-        - name: prometheus-2.28.0-rc.0.netbsd-amd64.tar.gz
-          commit: null
-          size: 70971000
-          sha256: sha256:0312fc81594960f268b10784fb6df8fafec3f8cc7e4003d8a4b1dbbbb92014e3
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.netbsd-amd64.tar.gz
-        - name: prometheus-2.28.0-rc.0.netbsd-arm64.tar.gz
-          commit: null
-          size: 66414084
-          sha256: sha256:091711b6156f54ce796d77ee564ba3574ecd51ea305a7e4d6141d6692d5ca374
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.netbsd-arm64.tar.gz
-        - name: prometheus-2.28.0-rc.0.netbsd-armv6.tar.gz
-          commit: null
-          size: 65770301
-          sha256: sha256:136b8e0933c591d6f770f8f74239811cc432369cf47cf10398cc76cdb7326af0
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.netbsd-armv6.tar.gz
-        - name: prometheus-2.28.0-rc.0.netbsd-armv7.tar.gz
-          commit: null
-          size: 65743534
-          sha256: sha256:0503b99b340c2a6450f63321c2506b6ac12db5aee25054ed704207053f94dacc
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.netbsd-armv7.tar.gz
-        - name: prometheus-2.28.0-rc.0.openbsd-386.tar.gz
-          commit: null
-          size: 67682379
-          sha256: sha256:deb3ba5da6891c3de5fda0b2affb57f61dc2deded6d874238496d69eee243e25
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.openbsd-386.tar.gz
-        - name: prometheus-2.28.0-rc.0.openbsd-amd64.tar.gz
-          commit: null
-          size: 71001694
-          sha256: sha256:828ef44740a4614530f3b5d6630ca5c5009b79c0d8ffa328907a83023d2fca73
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.openbsd-amd64.tar.gz
-        - name: prometheus-2.28.0-rc.0.openbsd-arm64.tar.gz
-          commit: null
-          size: 66466675
-          sha256: sha256:eefcfe720d8a12e20f92c23e0e5e001662c9391f240a55716e47bfc2235276d0
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.openbsd-arm64.tar.gz
-        - name: prometheus-2.28.0-rc.0.openbsd-armv7.tar.gz
-          commit: null
-          size: 65733790
-          sha256: sha256:87fa279ca2691c04334c0ccd9abb1ed04140266723db3e7c1077c3a31c677ab8
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.openbsd-armv7.tar.gz
-        - name: prometheus-2.28.0-rc.0.windows-386.tar.gz
-          commit: null
-          size: 69566163
-          sha256: sha256:81c0ba01a3d0bc5092b35afa231825e48c1c448e2827ccae451c87c0503597d9
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.windows-386.tar.gz
-        - name: prometheus-2.28.0-rc.0.windows-386.zip
-          commit: null
-          size: 70887917
-          sha256: sha256:368419d52defcbeeb438c4a7257de75f285dded53d7dd490334d8d173d5012c2
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.windows-386.zip
-        - name: prometheus-2.28.0-rc.0.windows-amd64.tar.gz
-          commit: null
-          size: 71599854
-          sha256: sha256:dee70ceb48f3569e9683fe56274034f4ceb6a556398502b076deb50380838dcb
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.windows-amd64.tar.gz
-        - name: prometheus-2.28.0-rc.0.windows-amd64.zip
-          commit: null
-          size: 72530825
-          sha256: sha256:30bbb8e53246631170d1742bcd5bf74952aed2bbdd5800ce959b015d3c06c630
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.windows-amd64.zip
-        - name: sha256sums.txt
-          commit: null
-          size: 3807
-          sha256: sha256:0705a8daffde3615fa49e6af744003906e3b4adf5c60b5ea23feb6ba6891f1a2
-          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/sha256sums.txt
     - name: v2.28.0
       commit: null
       timestamp: '2021-06-21T17:11:18'
@@ -583,6 +1508,191 @@ software:
           size: 3632
           sha256: sha256:5f332bc59e5c3042ea83ae3ad2f27138869c837bbfd56fd4adf33a2d136ee924
           url: https://github.com/prometheus/prometheus/releases/download/v2.28.0/sha256sums.txt
+    - name: v2.28.0-rc.0
+      commit: null
+      timestamp: '2021-06-18T11:36:32'
+      prerelease: true
+      files:
+        - name: prometheus-2.28.0-rc.0.darwin-amd64.tar.gz
+          commit: null
+          size: 71242126
+          sha256: sha256:506a2cc794d3adefd81b8f40247bf05cde0058aaf5c0c769185c922395c3fdb0
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.darwin-amd64.tar.gz
+        - name: prometheus-2.28.0-rc.0.darwin-arm64.tar.gz
+          commit: null
+          size: 70563460
+          sha256: sha256:e316644a9827aa022fce8ad51cfec0c6b9fb2b8c969fc44770df9427c80110ee
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.darwin-arm64.tar.gz
+        - name: prometheus-2.28.0-rc.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 70985907
+          sha256: sha256:889c23cece69678661fdc0b1ade6bf7f5525f8dc89bd746d3c44a49ae25243ad
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.dragonfly-amd64.tar.gz
+        - name: prometheus-2.28.0-rc.0.freebsd-386.tar.gz
+          commit: null
+          size: 67748046
+          sha256: sha256:10a5e67699fdb80f1faa390ab34630e5c5346ead9afab85b82487f3fe049c394
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.freebsd-386.tar.gz
+        - name: prometheus-2.28.0-rc.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 71043470
+          sha256: sha256:f2aecd675dc9247844733589b46d97e7de39490361f60a7b462e5a107374781e
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.freebsd-amd64.tar.gz
+        - name: prometheus-2.28.0-rc.0.freebsd-arm64.tar.gz
+          commit: null
+          size: 66468938
+          sha256: sha256:03fc79ef321e2b58ebf0348cb4d6113948e406f1d1acaa6c8ded2c663dd3a21e
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.freebsd-arm64.tar.gz
+        - name: prometheus-2.28.0-rc.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 65815896
+          sha256: sha256:365a7654b02e8e3b43c045115fa5f4b22e30cb90fc025dceab0456eba59b5179
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.freebsd-armv6.tar.gz
+        - name: prometheus-2.28.0-rc.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 65795295
+          sha256: sha256:8e9737d8f2a7256ff109e29117fb53ef9b51fee506fe01ecaf864492be249349
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.freebsd-armv7.tar.gz
+        - name: prometheus-2.28.0-rc.0.illumos-amd64.tar.gz
+          commit: null
+          size: 70889929
+          sha256: sha256:fef827097343fd9b200b358b10d4840857e84cb6614f945936660c18e79efec1
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.illumos-amd64.tar.gz
+        - name: prometheus-2.28.0-rc.0.linux-386.tar.gz
+          commit: null
+          size: 67893547
+          sha256: sha256:1566561f475bacfbb9ddb11e01fd68cf0a886e9934ee450ce86ccffa6b7d6aa2
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-386.tar.gz
+        - name: prometheus-2.28.0-rc.0.linux-amd64.tar.gz
+          commit: null
+          size: 71093271
+          sha256: sha256:24792ee45f5252237ace2803cc01b5a6287935fee98919a1ff29e6d9ccfb562c
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-amd64.tar.gz
+        - name: prometheus-2.28.0-rc.0.linux-arm64.tar.gz
+          commit: null
+          size: 66880374
+          sha256: sha256:a4464009fb4f6e62384eef761d7ec7d11c5d7d0938094110d23aed6295c57346
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-arm64.tar.gz
+        - name: prometheus-2.28.0-rc.0.linux-armv5.tar.gz
+          commit: null
+          size: 66068662
+          sha256: sha256:e33f86494e84823702f9b586bbd859c87182c92f0e5d419d9bc775315a66a0c7
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-armv5.tar.gz
+        - name: prometheus-2.28.0-rc.0.linux-armv6.tar.gz
+          commit: null
+          size: 65896518
+          sha256: sha256:2421bfc3a733c9937e2fc9a4c5c74b1a1dba3a6f8b88cf73b39410e36ad23647
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-armv6.tar.gz
+        - name: prometheus-2.28.0-rc.0.linux-armv7.tar.gz
+          commit: null
+          size: 65875494
+          sha256: sha256:72a7c1776b2f0a5cdb8b57ce84232c73b3cad5ed8220e65cd656a6a2e4b0f542
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-armv7.tar.gz
+        - name: prometheus-2.28.0-rc.0.linux-mips.tar.gz
+          commit: null
+          size: 64319223
+          sha256: sha256:81ae9f333397ce0bd14e57bd6e938beea7b382229d062b4b37fefc4b2d2305dd
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-mips.tar.gz
+        - name: prometheus-2.28.0-rc.0.linux-mips64.tar.gz
+          commit: null
+          size: 64923040
+          sha256: sha256:eaf0acf73c97cb927167a64c246225cecd4f964165998b7764fa51b2a07b2641
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-mips64.tar.gz
+        - name: prometheus-2.28.0-rc.0.linux-mips64le.tar.gz
+          commit: null
+          size: 62256407
+          sha256: sha256:9d2d7d6b95f2074b8f3145b4593577b75bdeea13ee01e4e1c4cad1440035f618
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-mips64le.tar.gz
+        - name: prometheus-2.28.0-rc.0.linux-mipsle.tar.gz
+          commit: null
+          size: 62474344
+          sha256: sha256:0143ad97b31e3e9b4fda42900b3b5256849a26e0bd656772dde35bcfa84a2761
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-mipsle.tar.gz
+        - name: prometheus-2.28.0-rc.0.linux-ppc64.tar.gz
+          commit: null
+          size: 67795526
+          sha256: sha256:51dfeb61696556bf3de1970233097ba4c36453db586c3963e741c9c4285fe094
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-ppc64.tar.gz
+        - name: prometheus-2.28.0-rc.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 65066497
+          sha256: sha256:8e280551c89903b00ab7be81ea59ec07af3ea5738a7090de198cbe63912ca83f
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-ppc64le.tar.gz
+        - name: prometheus-2.28.0-rc.0.linux-s390x.tar.gz
+          commit: null
+          size: 71472382
+          sha256: sha256:52105fa03aa26e428e905b6afdbd8e3fd2c9a7c651647db589354a2b02abbfff
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-s390x.tar.gz
+        - name: prometheus-2.28.0-rc.0.netbsd-386.tar.gz
+          commit: null
+          size: 67690469
+          sha256: sha256:c07bb62700212736d23e1584226de7d95ea0cdc717162c1f6e9d8d0a66022edf
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.netbsd-386.tar.gz
+        - name: prometheus-2.28.0-rc.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 70971000
+          sha256: sha256:0312fc81594960f268b10784fb6df8fafec3f8cc7e4003d8a4b1dbbbb92014e3
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.netbsd-amd64.tar.gz
+        - name: prometheus-2.28.0-rc.0.netbsd-arm64.tar.gz
+          commit: null
+          size: 66414084
+          sha256: sha256:091711b6156f54ce796d77ee564ba3574ecd51ea305a7e4d6141d6692d5ca374
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.netbsd-arm64.tar.gz
+        - name: prometheus-2.28.0-rc.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 65770301
+          sha256: sha256:136b8e0933c591d6f770f8f74239811cc432369cf47cf10398cc76cdb7326af0
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.netbsd-armv6.tar.gz
+        - name: prometheus-2.28.0-rc.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 65743534
+          sha256: sha256:0503b99b340c2a6450f63321c2506b6ac12db5aee25054ed704207053f94dacc
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.netbsd-armv7.tar.gz
+        - name: prometheus-2.28.0-rc.0.openbsd-386.tar.gz
+          commit: null
+          size: 67682379
+          sha256: sha256:deb3ba5da6891c3de5fda0b2affb57f61dc2deded6d874238496d69eee243e25
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.openbsd-386.tar.gz
+        - name: prometheus-2.28.0-rc.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 71001694
+          sha256: sha256:828ef44740a4614530f3b5d6630ca5c5009b79c0d8ffa328907a83023d2fca73
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.openbsd-amd64.tar.gz
+        - name: prometheus-2.28.0-rc.0.openbsd-arm64.tar.gz
+          commit: null
+          size: 66466675
+          sha256: sha256:eefcfe720d8a12e20f92c23e0e5e001662c9391f240a55716e47bfc2235276d0
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.openbsd-arm64.tar.gz
+        - name: prometheus-2.28.0-rc.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 65733790
+          sha256: sha256:87fa279ca2691c04334c0ccd9abb1ed04140266723db3e7c1077c3a31c677ab8
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.openbsd-armv7.tar.gz
+        - name: prometheus-2.28.0-rc.0.windows-386.tar.gz
+          commit: null
+          size: 69566163
+          sha256: sha256:81c0ba01a3d0bc5092b35afa231825e48c1c448e2827ccae451c87c0503597d9
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.windows-386.tar.gz
+        - name: prometheus-2.28.0-rc.0.windows-386.zip
+          commit: null
+          size: 70887917
+          sha256: sha256:368419d52defcbeeb438c4a7257de75f285dded53d7dd490334d8d173d5012c2
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.windows-386.zip
+        - name: prometheus-2.28.0-rc.0.windows-amd64.tar.gz
+          commit: null
+          size: 71599854
+          sha256: sha256:dee70ceb48f3569e9683fe56274034f4ceb6a556398502b076deb50380838dcb
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.windows-amd64.tar.gz
+        - name: prometheus-2.28.0-rc.0.windows-amd64.zip
+          commit: null
+          size: 72530825
+          sha256: sha256:30bbb8e53246631170d1742bcd5bf74952aed2bbdd5800ce959b015d3c06c630
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 3807
+          sha256: sha256:0705a8daffde3615fa49e6af744003906e3b4adf5c60b5ea23feb6ba6891f1a2
+          url: https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/sha256sums.txt
     - name: v2.27.1
       commit: null
       timestamp: '2021-05-18T14:45:40'
@@ -2443,883 +3553,3 @@ software:
           size: 2903
           sha256: sha256:73ed45fb7468a8999245109a79eb2cf9dfaa2af28a772ade7be6a796c895a530
           url: https://github.com/prometheus/prometheus/releases/download/v2.24.1/sha256sums.txt
-    - name: v2.24.0
-      commit: null
-      timestamp: '2021-01-06T17:38:01'
-      prerelease: false
-      files:
-        - name: prometheus-2.24.0.darwin-amd64.tar.gz
-          commit: null
-          size: 65552855
-          sha256: sha256:0c631ec66d4abf1be936707dde7b0be37b4e5805fdd21b77093765037dc8e5da
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.darwin-amd64.tar.gz
-        - name: prometheus-2.24.0.dragonfly-amd64.tar.gz
-          commit: null
-          size: 65377803
-          sha256: sha256:fbf48e9f2063ddcd30094b10b799dba7238d8ae44a860b95bf2bfabb41114edb
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.dragonfly-amd64.tar.gz
-        - name: prometheus-2.24.0.freebsd-386.tar.gz
-          commit: null
-          size: 63440099
-          sha256: sha256:04ecd738edcd5b82310a61251769c8a89926dc9b078499b2ee8a4c546e7b78aa
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.freebsd-386.tar.gz
-        - name: prometheus-2.24.0.freebsd-amd64.tar.gz
-          commit: null
-          size: 65441514
-          sha256: sha256:23912892fe50a7f34da820a33c0d79ef309b8687781cbfa0064038db5eecda57
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.freebsd-amd64.tar.gz
-        - name: prometheus-2.24.0.freebsd-armv6.tar.gz
-          commit: null
-          size: 60241611
-          sha256: sha256:9206447001cc24ea62fbaeaf7ba0ebe754ab07d4655ee32e5ecd28257eba4710
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.freebsd-armv6.tar.gz
-        - name: prometheus-2.24.0.freebsd-armv7.tar.gz
-          commit: null
-          size: 60217689
-          sha256: sha256:137c6ec5635968215c1f3dcf48c542d5d35d360df35a2b3e6f70b8bc860968b5
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.freebsd-armv7.tar.gz
-        - name: prometheus-2.24.0.linux-386.tar.gz
-          commit: null
-          size: 63579601
-          sha256: sha256:83b4b6b9d0465d01c2b5d4a9ad836ecf605795877fab4351b81155f74bf7f727
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.linux-386.tar.gz
-        - name: prometheus-2.24.0.linux-amd64.tar.gz
-          commit: null
-          size: 65523079
-          sha256: sha256:e54c37eb30879f5b6416b11a96217a1dfcff65e0eca1ab5ce7b783b940cfe0eb
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.linux-amd64.tar.gz
-        - name: prometheus-2.24.0.linux-arm64.tar.gz
-          commit: null
-          size: 61344507
-          sha256: sha256:275bdb4b84fb79d5930f48d27cf94930dff48047fe6400a3cd5e104957a38624
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.linux-arm64.tar.gz
-        - name: prometheus-2.24.0.linux-armv5.tar.gz
-          commit: null
-          size: 60379470
-          sha256: sha256:3cf37c5b7fcc8826446ad6dc702316a9bafade7ff1d40d65bf8c8bd69cc4e710
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.linux-armv5.tar.gz
-        - name: prometheus-2.24.0.linux-armv6.tar.gz
-          commit: null
-          size: 60329093
-          sha256: sha256:5d639ab4ca71c91700ddf50454ac3a838e13c1d450ff936f959ea7f360efeb4e
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.linux-armv6.tar.gz
-        - name: prometheus-2.24.0.linux-armv7.tar.gz
-          commit: null
-          size: 60309420
-          sha256: sha256:a85ff3242a70f09213c57377c16c5ffd2f20918d9bbb4ca42fd8ff19b6363610
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.linux-armv7.tar.gz
-        - name: prometheus-2.24.0.linux-mips64.tar.gz
-          commit: null
-          size: 60753114
-          sha256: sha256:580401c2a03825c835c662a578bc78eb1ed1685bfd328919591013dda7a84051
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.linux-mips64.tar.gz
-        - name: prometheus-2.24.0.linux-mips64le.tar.gz
-          commit: null
-          size: 58269357
-          sha256: sha256:0a2c7f4357573cb4e3674a40885539b588d6f1cb931b1e17dd2faa7233198341
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.linux-mips64le.tar.gz
-        - name: prometheus-2.24.0.linux-ppc64.tar.gz
-          commit: null
-          size: 62237074
-          sha256: sha256:6f1a74eb2d2298b52a2dda1f5582aff7c4ded1f7a32667bf3e46b5c277328225
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.linux-ppc64.tar.gz
-        - name: prometheus-2.24.0.linux-ppc64le.tar.gz
-          commit: null
-          size: 59879480
-          sha256: sha256:c9b33483a6bf4704ae827e419a76f583013e0aa830eb7fd747410a7be61282cc
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.linux-ppc64le.tar.gz
-        - name: prometheus-2.24.0.linux-s390x.tar.gz
-          commit: null
-          size: 65564989
-          sha256: sha256:02585882b2f7cb308a9d8fc46928e1c0a336b9a5aff18e0a3bed3abb4df3f94e
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.linux-s390x.tar.gz
-        - name: prometheus-2.24.0.netbsd-386.tar.gz
-          commit: null
-          size: 63391090
-          sha256: sha256:701be87c8433be1d790599949048bd1d3a829e7728ea8a816a289fa6e0c8ebec
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.netbsd-386.tar.gz
-        - name: prometheus-2.24.0.netbsd-amd64.tar.gz
-          commit: null
-          size: 65370200
-          sha256: sha256:1d8829626470386c628d8bf719da523ecb2ea4d7657eecbeb4defcfd78fe2fc9
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.netbsd-amd64.tar.gz
-        - name: prometheus-2.24.0.netbsd-armv6.tar.gz
-          commit: null
-          size: 60185698
-          sha256: sha256:52663422c3a34a1f7dabac53bfa4368b99afef0cfee9399a4c101594de95b2e2
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.netbsd-armv6.tar.gz
-        - name: prometheus-2.24.0.netbsd-armv7.tar.gz
-          commit: null
-          size: 60161323
-          sha256: sha256:a94022bbff274b46c8f82ca774a60b0bce44533914b6bcc9b493fc6c9efa88a1
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.netbsd-armv7.tar.gz
-        - name: prometheus-2.24.0.openbsd-386.tar.gz
-          commit: null
-          size: 63380443
-          sha256: sha256:b74bd125a1d07f9dafbf96aebc9e221aa09d7786505fe3f642cab54551ad077d
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.openbsd-386.tar.gz
-        - name: prometheus-2.24.0.openbsd-amd64.tar.gz
-          commit: null
-          size: 65352154
-          sha256: sha256:c5c041701aa0d2c85cfa91dfcdd1ae4d9b3e6b8659d8ffe8f594c3f9b440f816
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.openbsd-amd64.tar.gz
-        - name: prometheus-2.24.0.openbsd-armv7.tar.gz
-          commit: null
-          size: 60147870
-          sha256: sha256:ce855cee94de7e367a32e682e231a024fa558c1d760cbe118ae1668c311ed985
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.openbsd-armv7.tar.gz
-        - name: prometheus-2.24.0.windows-386.tar.gz
-          commit: null
-          size: 64957443
-          sha256: sha256:23de4b41f575aa120e282b0799f19fc7de34095e9d643140a3fdb614371551dd
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.windows-386.tar.gz
-        - name: prometheus-2.24.0.windows-386.zip
-          commit: null
-          size: 66229349
-          sha256: sha256:0c57fad8c70264eda001745e7826d5c18a07ce44f200853cc1990bea0a7b8764
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.windows-386.zip
-        - name: prometheus-2.24.0.windows-amd64.tar.gz
-          commit: null
-          size: 65825127
-          sha256: sha256:df74b5abbf78b4b5f194b67c9696e7c2974ae1288ecaac345838cfa668406be4
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.windows-amd64.tar.gz
-        - name: prometheus-2.24.0.windows-amd64.zip
-          commit: null
-          size: 66771963
-          sha256: sha256:6b4c5cc0eeb9112ade969f6d7f9441ba26e8a5b4c07c3bb905467f6a2db0c532
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/prometheus-2.24.0.windows-amd64.zip
-        - name: sha256sums.txt
-          commit: null
-          size: 2903
-          sha256: sha256:84bb1975246b01e436935829adf3e18fe44b387e7eb4f20037654c3326c933df
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0/sha256sums.txt
-    - name: v2.24.0-rc.0
-      commit: null
-      timestamp: '2020-12-30T17:54:12'
-      prerelease: true
-      files:
-        - name: prometheus-2.24.0-rc.0.darwin-amd64.tar.gz
-          commit: null
-          size: 65563367
-          sha256: sha256:92d37d4cb94e01fb60f09d37c2144567b94f2adf4bcf5b8c581b02fb424cef59
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.darwin-amd64.tar.gz
-        - name: prometheus-2.24.0-rc.0.dragonfly-amd64.tar.gz
-          commit: null
-          size: 65381022
-          sha256: sha256:e2eae82e9cec18c49691394bbc2c0fc8832ae52d4ef42ffe2b1c8702b66f66a6
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.dragonfly-amd64.tar.gz
-        - name: prometheus-2.24.0-rc.0.freebsd-386.tar.gz
-          commit: null
-          size: 63440900
-          sha256: sha256:659ea640a311ee0f9776c48da6220ec23d8a96a8e600f2542defd78b03b7e07d
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.freebsd-386.tar.gz
-        - name: prometheus-2.24.0-rc.0.freebsd-amd64.tar.gz
-          commit: null
-          size: 65436324
-          sha256: sha256:eaa56bc687377b6ef20d384a95d2676f2ae9c2e41157a40e9d832f0a0e258453
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.freebsd-amd64.tar.gz
-        - name: prometheus-2.24.0-rc.0.freebsd-armv6.tar.gz
-          commit: null
-          size: 60245289
-          sha256: sha256:1eb146a0d3a815e24cc56f69a6ed15e5475e84e26a05a3856b8a3fd4ff4c0463
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.freebsd-armv6.tar.gz
-        - name: prometheus-2.24.0-rc.0.freebsd-armv7.tar.gz
-          commit: null
-          size: 60218864
-          sha256: sha256:26e31d37c569e49ab822d7bc6b1c1234cb57f68c514ad0d635f9af71a2a7924d
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.freebsd-armv7.tar.gz
-        - name: prometheus-2.24.0-rc.0.linux-386.tar.gz
-          commit: null
-          size: 63583777
-          sha256: sha256:0097cf1803ae951772a6c0d5241290e9f32430d88f4e227768aaba730473e955
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.linux-386.tar.gz
-        - name: prometheus-2.24.0-rc.0.linux-amd64.tar.gz
-          commit: null
-          size: 65518991
-          sha256: sha256:9f7d512b0d1ceebf5cc4cdc42bc8c6a1e07c9b5f018c6815e69414f08d19b5f0
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.linux-amd64.tar.gz
-        - name: prometheus-2.24.0-rc.0.linux-arm64.tar.gz
-          commit: null
-          size: 61350040
-          sha256: sha256:1865a3799aa56d0598e4e64f9d42dfb6c91a06d1a026d86e3632b5a8c1ba618f
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.linux-arm64.tar.gz
-        - name: prometheus-2.24.0-rc.0.linux-armv5.tar.gz
-          commit: null
-          size: 60373685
-          sha256: sha256:ab698511aa238d879f01fe60e9f4c912d9a5df83c37699cb5a9c609f573b0294
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.linux-armv5.tar.gz
-        - name: prometheus-2.24.0-rc.0.linux-armv6.tar.gz
-          commit: null
-          size: 60320280
-          sha256: sha256:73706220c33bbcb4e8f22a142e6834ee81bbe7768417ec9780e1388b181de992
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.linux-armv6.tar.gz
-        - name: prometheus-2.24.0-rc.0.linux-armv7.tar.gz
-          commit: null
-          size: 60305491
-          sha256: sha256:b5d5dde9ef769569f8b95437c409703b8eba65a7d355c3b2d8cdcac89b21423e
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.linux-armv7.tar.gz
-        - name: prometheus-2.24.0-rc.0.linux-mips64.tar.gz
-          commit: null
-          size: 60772181
-          sha256: sha256:789ffd1895304a5831250822807c26fff46a19b3485aa7bc9718c8cdd9081ab1
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.linux-mips64.tar.gz
-        - name: prometheus-2.24.0-rc.0.linux-mips64le.tar.gz
-          commit: null
-          size: 58281044
-          sha256: sha256:fa8aba3cb8a864be35d02a6d015d3907011ed5a709b393a43bf5c191e6d76037
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.linux-mips64le.tar.gz
-        - name: prometheus-2.24.0-rc.0.linux-ppc64.tar.gz
-          commit: null
-          size: 62235520
-          sha256: sha256:7a6dc4152a44e8a579bca5279e030f90291d9b615e7a624cbce919a8bffe679a
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.linux-ppc64.tar.gz
-        - name: prometheus-2.24.0-rc.0.linux-ppc64le.tar.gz
-          commit: null
-          size: 59883687
-          sha256: sha256:1a52dd52bbf217c16845b3a692ec5bdcafd139f38634ee8383b8ffb01575fa5c
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.linux-ppc64le.tar.gz
-        - name: prometheus-2.24.0-rc.0.linux-s390x.tar.gz
-          commit: null
-          size: 65566437
-          sha256: sha256:0fe0a89c1bff1eb38b266a2800f68735276dff52fcc067fa0d2930736d06694c
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.linux-s390x.tar.gz
-        - name: prometheus-2.24.0-rc.0.netbsd-386.tar.gz
-          commit: null
-          size: 63387524
-          sha256: sha256:5e95cb028ac868c12ead266aaa9bfc0f971f551cc2974fab1a55b08432bfded0
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.netbsd-386.tar.gz
-        - name: prometheus-2.24.0-rc.0.netbsd-amd64.tar.gz
-          commit: null
-          size: 65376416
-          sha256: sha256:8e4c780d87c2c666f2c8b3d819b3869d4b70b5c46b8cb60b942b39874b02de88
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.netbsd-amd64.tar.gz
-        - name: prometheus-2.24.0-rc.0.netbsd-armv6.tar.gz
-          commit: null
-          size: 60187029
-          sha256: sha256:8e6cc258364ebd967c73104ea89f4cd26e7578d74d7c3fefd9c52b37296caf82
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.netbsd-armv6.tar.gz
-        - name: prometheus-2.24.0-rc.0.netbsd-armv7.tar.gz
-          commit: null
-          size: 60158064
-          sha256: sha256:d2fd9e9a26ee0f26eb4b4932fb36579f1122276c2312e3c00d03ef1ccc08329c
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.netbsd-armv7.tar.gz
-        - name: prometheus-2.24.0-rc.0.openbsd-386.tar.gz
-          commit: null
-          size: 63380459
-          sha256: sha256:c488c9b274186753780f26195b68ad615b7229211e9fe10de80710e2dc4deef8
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.openbsd-386.tar.gz
-        - name: prometheus-2.24.0-rc.0.openbsd-amd64.tar.gz
-          commit: null
-          size: 65362822
-          sha256: sha256:32fdc345ba9d3e1590c5d48c3767260cb8148929a557ad32bd44bca46c6a554a
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.openbsd-amd64.tar.gz
-        - name: prometheus-2.24.0-rc.0.openbsd-armv7.tar.gz
-          commit: null
-          size: 60153164
-          sha256: sha256:cb78ef6f44a305edb5feb084dd5ac9505c6aacef6068b47e16fd3eed51d487f5
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.openbsd-armv7.tar.gz
-        - name: prometheus-2.24.0-rc.0.windows-386.tar.gz
-          commit: null
-          size: 64953741
-          sha256: sha256:f79d64d7895fff6093d677969b0436f123fded23f44ae56ad5ef767da84f8a66
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.windows-386.tar.gz
-        - name: prometheus-2.24.0-rc.0.windows-386.zip
-          commit: null
-          size: 66226662
-          sha256: sha256:30354d2d1c150b09bfb27989153d0d998a155006e86a317a3b19769a6f919c53
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.windows-386.zip
-        - name: prometheus-2.24.0-rc.0.windows-amd64.tar.gz
-          commit: null
-          size: 65801543
-          sha256: sha256:34afc540b039d9f9a1073765230ba76d2f32b532bb89f7cf13d1273ae7493ccc
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.windows-amd64.tar.gz
-        - name: prometheus-2.24.0-rc.0.windows-amd64.zip
-          commit: null
-          size: 66744972
-          sha256: sha256:123da10dd168cb8fdbc64fc4ee7af12be995f7b5a1931a5240cd02445c876aa3
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/prometheus-2.24.0-rc.0.windows-amd64.zip
-        - name: sha256sums.txt
-          commit: null
-          size: 3043
-          sha256: sha256:7d31941f3060349936b47f54c6a820806a35a160abd64cdd279c8447d8a4bc6a
-          url: https://github.com/prometheus/prometheus/releases/download/v2.24.0-rc.0/sha256sums.txt
-    - name: v2.23.0
-      commit: null
-      timestamp: '2020-11-26T13:08:00'
-      prerelease: false
-      files:
-        - name: prometheus-2.23.0.darwin-amd64.tar.gz
-          commit: null
-          size: 64358569
-          sha256: sha256:d589a45495cea1aa74bff82335d2145f2d93b8b357c3398739b9139c74dc0cfe
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.darwin-amd64.tar.gz
-        - name: prometheus-2.23.0.dragonfly-amd64.tar.gz
-          commit: null
-          size: 64189910
-          sha256: sha256:9ba95c92a9dd800d4f7d833f701d1f27f9a8f26a1660fa961a046be30f673c9c
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.dragonfly-amd64.tar.gz
-        - name: prometheus-2.23.0.freebsd-386.tar.gz
-          commit: null
-          size: 62259761
-          sha256: sha256:55078ed10f38e113439bf6674decac1e27790584fc55d64a79389dca995656c9
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.freebsd-386.tar.gz
-        - name: prometheus-2.23.0.freebsd-amd64.tar.gz
-          commit: null
-          size: 64225171
-          sha256: sha256:56fbaaf433459daec6396d5219ff03ffafbd70ecd373ea65a1ebb62b00b9dfc1
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.freebsd-amd64.tar.gz
-        - name: prometheus-2.23.0.freebsd-armv6.tar.gz
-          commit: null
-          size: 59132200
-          sha256: sha256:bece5f74bef9755d9a93dc0e2ceee8e9e90fd9ea88b517a0567dd8974d4ec371
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.freebsd-armv6.tar.gz
-        - name: prometheus-2.23.0.freebsd-armv7.tar.gz
-          commit: null
-          size: 59105040
-          sha256: sha256:d85f0012739f13aac159d6ab359a135904bb3a622b0a3fb9394a8ed189a4f3e9
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.freebsd-armv7.tar.gz
-        - name: prometheus-2.23.0.linux-386.tar.gz
-          commit: null
-          size: 62390932
-          sha256: sha256:3f5e5ed69f8c6a38f0faa95737370a32e13fbae786c01254537ab14c44486361
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.linux-386.tar.gz
-        - name: prometheus-2.23.0.linux-amd64.tar.gz
-          commit: null
-          size: 64298432
-          sha256: sha256:0f54cefdb946852947e35d4db8cfce394911ff586486f927c3887db4183cb643
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.linux-amd64.tar.gz
-        - name: prometheus-2.23.0.linux-arm64.tar.gz
-          commit: null
-          size: 60216470
-          sha256: sha256:41b23ecfa9827ad015d3ec856898f2d93cc0887b0443190fbec74dad84d61aa5
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.linux-arm64.tar.gz
-        - name: prometheus-2.23.0.linux-armv5.tar.gz
-          commit: null
-          size: 59256567
-          sha256: sha256:45cabba120fba084a8782a75a467d47493313afb48205c98c1a9d2059c19116b
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.linux-armv5.tar.gz
-        - name: prometheus-2.23.0.linux-armv6.tar.gz
-          commit: null
-          size: 59215483
-          sha256: sha256:4605d376f8fa40cbe50fbe035f99ec413dfeb491faed256f1e7bfd9a53cfad86
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.linux-armv6.tar.gz
-        - name: prometheus-2.23.0.linux-armv7.tar.gz
-          commit: null
-          size: 59186922
-          sha256: sha256:c2f9c0b7f3001cb0d688ada6ed984b131f4d453916f132218e0ca25dfab3185c
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.linux-armv7.tar.gz
-        - name: prometheus-2.23.0.linux-mips64.tar.gz
-          commit: null
-          size: 59605839
-          sha256: sha256:558ce95d654994f59f6efdfa8302337587577fde9ff970ef971537449c90c387
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.linux-mips64.tar.gz
-        - name: prometheus-2.23.0.linux-mips64le.tar.gz
-          commit: null
-          size: 57223384
-          sha256: sha256:edcc54fdc04e091cb7f116019fa514862d2c83031502e139e023103b80da1bb5
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.linux-mips64le.tar.gz
-        - name: prometheus-2.23.0.linux-ppc64.tar.gz
-          commit: null
-          size: 61102348
-          sha256: sha256:450061fa2aa478d31a80f0080a3de96ddb2e6be6c2baf8ae036d6b033aa4ec9a
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.linux-ppc64.tar.gz
-        - name: prometheus-2.23.0.linux-ppc64le.tar.gz
-          commit: null
-          size: 58793114
-          sha256: sha256:3920a2d4c5a2d099b95a4f9e6d3d18df69f0bd6de9b791a0976c5d00dfd45c0c
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.linux-ppc64le.tar.gz
-        - name: prometheus-2.23.0.linux-s390x.tar.gz
-          commit: null
-          size: 64349873
-          sha256: sha256:4c8a19449ed3612a7ba1992270e42cba7d97ccd8a334a6d0f20ac2ad711b5013
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.linux-s390x.tar.gz
-        - name: prometheus-2.23.0.netbsd-386.tar.gz
-          commit: null
-          size: 62193716
-          sha256: sha256:8c56ea99d405f0615c83579fe819144af8a0303a0e81cc9cce3b8ee4fc61c3e2
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.netbsd-386.tar.gz
-        - name: prometheus-2.23.0.netbsd-amd64.tar.gz
-          commit: null
-          size: 64172173
-          sha256: sha256:0d5763f278d6b1bbaa0ca63032154bfc8a6ece77457ce03cdf351a7a1b5b6268
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.netbsd-amd64.tar.gz
-        - name: prometheus-2.23.0.netbsd-armv6.tar.gz
-          commit: null
-          size: 59076235
-          sha256: sha256:96dff7e33919b919f7587e9e7121d07e119cc6dc4334a8a7d0490a4ea520cb48
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.netbsd-armv6.tar.gz
-        - name: prometheus-2.23.0.netbsd-armv7.tar.gz
-          commit: null
-          size: 59058685
-          sha256: sha256:ee9e120cc59a5a0cc2c7013ca2447cdbb88ec164de2263157fac0e1897f4542e
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.netbsd-armv7.tar.gz
-        - name: prometheus-2.23.0.openbsd-386.tar.gz
-          commit: null
-          size: 62178724
-          sha256: sha256:c1694bdfe5391feafedf03203d50dd4a927b51df897d5803a496f7c92cb4d642
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.openbsd-386.tar.gz
-        - name: prometheus-2.23.0.openbsd-amd64.tar.gz
-          commit: null
-          size: 64164102
-          sha256: sha256:a4b5e9d8751b27f99021ea6c44090918deaa3cc98bbcf796c1e96b3f43979a07
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.openbsd-amd64.tar.gz
-        - name: prometheus-2.23.0.openbsd-armv7.tar.gz
-          commit: null
-          size: 59038535
-          sha256: sha256:f96fa9853094e3014fd3a4b2fc3a8d9b93c57c719f11d471e694987047384461
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.openbsd-armv7.tar.gz
-        - name: prometheus-2.23.0.windows-386.tar.gz
-          commit: null
-          size: 63742546
-          sha256: sha256:d330a6683190b431c660d95a1dc1e030a5563d6a26a37c3fb9c3bb47c6522215
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.windows-386.tar.gz
-        - name: prometheus-2.23.0.windows-386.zip
-          commit: null
-          size: 64986462
-          sha256: sha256:df45eb610aac593b3fd5677efcfa768e0de9ca8fc42d29b4bc0309935471be6c
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.windows-386.zip
-        - name: prometheus-2.23.0.windows-amd64.tar.gz
-          commit: null
-          size: 64602325
-          sha256: sha256:303aa700151884158a2254e26a2808a38eb09d557c6a8f06331d60852f06bdfc
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.windows-amd64.tar.gz
-        - name: prometheus-2.23.0.windows-amd64.zip
-          commit: null
-          size: 65526050
-          sha256: sha256:d032e4597c137d8f39effc459a94d533a0c3135ff8ed7eae5b0a7c540b61985c
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/prometheus-2.23.0.windows-amd64.zip
-        - name: sha256sums.txt
-          commit: null
-          size: 2903
-          sha256: sha256:84e73ba790f1975d6c7dd75c0225fab62c51b1a7c42ec93081d5733e13aae923
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0/sha256sums.txt
-    - name: v2.23.0-rc.0
-      commit: null
-      timestamp: '2020-11-23T11:58:57'
-      prerelease: true
-      files:
-        - name: prometheus-2.23.0-rc.0.darwin-amd64.tar.gz
-          commit: null
-          size: 64357244
-          sha256: sha256:5486c1543ac2792653a9d1b98e7a6548579f7293f89534aa792cb66aa0d44999
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.darwin-amd64.tar.gz
-        - name: prometheus-2.23.0-rc.0.dragonfly-amd64.tar.gz
-          commit: null
-          size: 64189613
-          sha256: sha256:6c211c8a91281798a5ad44bcdfb343e68a210190b6e4005b394a5cdde03e9eaa
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.dragonfly-amd64.tar.gz
-        - name: prometheus-2.23.0-rc.0.freebsd-386.tar.gz
-          commit: null
-          size: 62259724
-          sha256: sha256:eaa0020f9ed6924eb9c3276ae8af62d76351998ac357b677d50f2eeea9092727
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.freebsd-386.tar.gz
-        - name: prometheus-2.23.0-rc.0.freebsd-amd64.tar.gz
-          commit: null
-          size: 64228541
-          sha256: sha256:d82f269c095f0d96116b5a510f3f799fed27245731ce8b5ad392b52170e39e29
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.freebsd-amd64.tar.gz
-        - name: prometheus-2.23.0-rc.0.freebsd-armv6.tar.gz
-          commit: null
-          size: 59135382
-          sha256: sha256:f689ccf3ebd2649f8d1336b99067fc883eb71ee02cd198a7938d76e38c5d52fa
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.freebsd-armv6.tar.gz
-        - name: prometheus-2.23.0-rc.0.freebsd-armv7.tar.gz
-          commit: null
-          size: 59108437
-          sha256: sha256:292f0a795e088715014d659549a3f5967d37ea61d6cddb7c208c4a33871c8095
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.freebsd-armv7.tar.gz
-        - name: prometheus-2.23.0-rc.0.linux-386.tar.gz
-          commit: null
-          size: 62388725
-          sha256: sha256:0fd81fd8f552603f948938e74036d3f94bf1668312079ee705b76b728cea2348
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.linux-386.tar.gz
-        - name: prometheus-2.23.0-rc.0.linux-amd64.tar.gz
-          commit: null
-          size: 64298433
-          sha256: sha256:fcf95d30a15734a406e04c7d980bdc6ae4e291f74c5671e2911ad303706e7985
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.linux-amd64.tar.gz
-        - name: prometheus-2.23.0-rc.0.linux-arm64.tar.gz
-          commit: null
-          size: 60217165
-          sha256: sha256:170a7dc9a8de72a10c1120fb1a44622c01625bb1a4cb7061f9f9420807fbbdf5
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.linux-arm64.tar.gz
-        - name: prometheus-2.23.0-rc.0.linux-armv5.tar.gz
-          commit: null
-          size: 59256750
-          sha256: sha256:7d928bf04f28dd33faa2b4b004cfb78448ceb880da26209404f60127ef12aa91
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.linux-armv5.tar.gz
-        - name: prometheus-2.23.0-rc.0.linux-armv6.tar.gz
-          commit: null
-          size: 59211578
-          sha256: sha256:9641faa39b1e8502b1cf59b6fda9abdc666d37709e7960c1e132eae3130adaa2
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.linux-armv6.tar.gz
-        - name: prometheus-2.23.0-rc.0.linux-armv7.tar.gz
-          commit: null
-          size: 59182772
-          sha256: sha256:b8aec148b3a4ae047ec8d53351275cf48cad473b60647dfcdd058caa77e6ad80
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.linux-armv7.tar.gz
-        - name: prometheus-2.23.0-rc.0.linux-mips64.tar.gz
-          commit: null
-          size: 59610126
-          sha256: sha256:cae003d5747c37ab8b8e60a5c5ac206384c11ed73be7de723381997bfbdc2efe
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.linux-mips64.tar.gz
-        - name: prometheus-2.23.0-rc.0.linux-mips64le.tar.gz
-          commit: null
-          size: 57224238
-          sha256: sha256:0d293e8ef7be2d41fab44555891e07f2ae6c6e1e898a16efefd49c5a7ac7968a
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.linux-mips64le.tar.gz
-        - name: prometheus-2.23.0-rc.0.linux-ppc64.tar.gz
-          commit: null
-          size: 61101223
-          sha256: sha256:2bde311b0af15a1434f856303f7fffd46d7fe7e47cddd912310a3ec8bcaf60dd
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.linux-ppc64.tar.gz
-        - name: prometheus-2.23.0-rc.0.linux-ppc64le.tar.gz
-          commit: null
-          size: 58795967
-          sha256: sha256:ebaa9f92b423cc2b5b40130664e8fb68f47f206039240fc5f6d9cf0be8f61f5d
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.linux-ppc64le.tar.gz
-        - name: prometheus-2.23.0-rc.0.linux-s390x.tar.gz
-          commit: null
-          size: 64341659
-          sha256: sha256:d16323d2de4a0f497475cd5360b059a8e47f2f23e5756df607d513c0f34c502b
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.linux-s390x.tar.gz
-        - name: prometheus-2.23.0-rc.0.netbsd-386.tar.gz
-          commit: null
-          size: 62195533
-          sha256: sha256:15167b3c993110ad188849a1c12e2bc605a43770e53a82858b0fc3efb6ef39ca
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.netbsd-386.tar.gz
-        - name: prometheus-2.23.0-rc.0.netbsd-amd64.tar.gz
-          commit: null
-          size: 64170237
-          sha256: sha256:0527189a96e8002f585c2ecd010f0095716b5f42603432990d58824899544527
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.netbsd-amd64.tar.gz
-        - name: prometheus-2.23.0-rc.0.netbsd-armv6.tar.gz
-          commit: null
-          size: 59076806
-          sha256: sha256:8fca8fcf11e71b9d4803365178803d5271359547c962d9849a5c424b9119fc53
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.netbsd-armv6.tar.gz
-        - name: prometheus-2.23.0-rc.0.netbsd-armv7.tar.gz
-          commit: null
-          size: 59060278
-          sha256: sha256:6d5af3c6771e5dcd18ffb08036688355d7b61925a2b34c1c77c166a70e691311
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.netbsd-armv7.tar.gz
-        - name: prometheus-2.23.0-rc.0.openbsd-386.tar.gz
-          commit: null
-          size: 62183427
-          sha256: sha256:8933434a0c46d23b69df67ba83e7f94537c56f419502b5f15a7845f318c8f70a
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.openbsd-386.tar.gz
-        - name: prometheus-2.23.0-rc.0.openbsd-amd64.tar.gz
-          commit: null
-          size: 64162301
-          sha256: sha256:d88cda63cf7575019343cea0bec45caf97e72fbb144c53955a54434e03d32f96
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.openbsd-amd64.tar.gz
-        - name: prometheus-2.23.0-rc.0.openbsd-armv7.tar.gz
-          commit: null
-          size: 59035838
-          sha256: sha256:9afef98e5640bdf8965ea4fb595d5dd1fdd4c16d963e111d05daae54fb8fd357
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.openbsd-armv7.tar.gz
-        - name: prometheus-2.23.0-rc.0.windows-386.tar.gz
-          commit: null
-          size: 63737638
-          sha256: sha256:3908da8a70c79804ef0d3c9200be8861e5d020354ceeb9ff99fb506241796911
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.windows-386.tar.gz
-        - name: prometheus-2.23.0-rc.0.windows-386.zip
-          commit: null
-          size: 64979895
-          sha256: sha256:81c624b0cb8a95b6e8a2afd18b6bec2623593ad253e28635ccf90b6b8238cc33
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.windows-386.zip
-        - name: prometheus-2.23.0-rc.0.windows-amd64.tar.gz
-          commit: null
-          size: 64606579
-          sha256: sha256:3db1f23c53358ce9f4de63d44074a63a5ae26644c78a5ecdf3c71ec565aa8fa2
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.windows-amd64.tar.gz
-        - name: prometheus-2.23.0-rc.0.windows-amd64.zip
-          commit: null
-          size: 65523985
-          sha256: sha256:ac03c40e83111094c487b82151c465a1fce1fdca462ce56d451d6624dbf6c912
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/prometheus-2.23.0-rc.0.windows-amd64.zip
-        - name: sha256sums.txt
-          commit: null
-          size: 3043
-          sha256: sha256:3a76c48a0ddc862d1bfc211f8836290437deff29f37909e4e3b7ea6c88aac3ab
-          url: https://github.com/prometheus/prometheus/releases/download/v2.23.0-rc.0/sha256sums.txt
-    - name: v2.22.2
-      commit: null
-      timestamp: '2020-11-16T15:20:34'
-      prerelease: false
-      files:
-        - name: prometheus-2.22.2.darwin-amd64.tar.gz
-          commit: null
-          size: 64065577
-          sha256: sha256:4dce1443ec6ba0d2abf935271fd09a65d638670b6252473dbefe45851fd0f1e8
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.darwin-amd64.tar.gz
-        - name: prometheus-2.22.2.dragonfly-amd64.tar.gz
-          commit: null
-          size: 63892626
-          sha256: sha256:82396ebf348c1831cc373d099925cfb4fbf6f5bab4307e7019503ebf3b2bf40e
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.dragonfly-amd64.tar.gz
-        - name: prometheus-2.22.2.freebsd-386.tar.gz
-          commit: null
-          size: 62010662
-          sha256: sha256:82578f58b9d5a14123f050aaba4e4fb78b9956b1d10f23976d7a7a141a0438e9
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.freebsd-386.tar.gz
-        - name: prometheus-2.22.2.freebsd-amd64.tar.gz
-          commit: null
-          size: 63967225
-          sha256: sha256:af527f3145c1249b51c7bd7fde81f111be1f450b0707de149c3149536f3fe9c6
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.freebsd-amd64.tar.gz
-        - name: prometheus-2.22.2.freebsd-armv6.tar.gz
-          commit: null
-          size: 58853823
-          sha256: sha256:ddd3abb49119604716b20eacfb080a0fba5b18f9dc1d0d0ba6a27723d001e51d
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.freebsd-armv6.tar.gz
-        - name: prometheus-2.22.2.freebsd-armv7.tar.gz
-          commit: null
-          size: 58834300
-          sha256: sha256:17e13fd7d1a834e604cf2968e71a68c483ced9dc892031c1e9f0646704544210
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.freebsd-armv7.tar.gz
-        - name: prometheus-2.22.2.linux-386.tar.gz
-          commit: null
-          size: 62130507
-          sha256: sha256:858604b7d69217a6bc7203f79b4a2ef7a7baa704230c76417dfe8aa90b633f56
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.linux-386.tar.gz
-        - name: prometheus-2.22.2.linux-amd64.tar.gz
-          commit: null
-          size: 64017057
-          sha256: sha256:acd3189c3f09b3857b6635df327814633939be07d12c4eea8f78c94fe9fd115c
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.linux-amd64.tar.gz
-        - name: prometheus-2.22.2.linux-arm64.tar.gz
-          commit: null
-          size: 59939001
-          sha256: sha256:f54ce0122b68333649565e585893ca344f773e233e36be5db1114201373e352a
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.linux-arm64.tar.gz
-        - name: prometheus-2.22.2.linux-armv5.tar.gz
-          commit: null
-          size: 58976190
-          sha256: sha256:ebc8c11a6b61f9f5a6fdbedce688c9b90fcd6f750c6ad3d745dfdb9ed66f9701
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.linux-armv5.tar.gz
-        - name: prometheus-2.22.2.linux-armv6.tar.gz
-          commit: null
-          size: 58929388
-          sha256: sha256:d60c34afaaa8a9e396ac3deae18281a414b2c5511ab01e4820a7d8ac4b29e88f
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.linux-armv6.tar.gz
-        - name: prometheus-2.22.2.linux-armv7.tar.gz
-          commit: null
-          size: 58905963
-          sha256: sha256:87dba8189c28bb064f48e088820e132f9ec0bcea422e6272aabdf8aea647cc08
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.linux-armv7.tar.gz
-        - name: prometheus-2.22.2.linux-mips64.tar.gz
-          commit: null
-          size: 59344667
-          sha256: sha256:59169e943acf2f5496fe99e16e049877375a79fd515d976ce87bbf83fa7b0fa9
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.linux-mips64.tar.gz
-        - name: prometheus-2.22.2.linux-mips64le.tar.gz
-          commit: null
-          size: 56958709
-          sha256: sha256:4c0d0ec2ba53b65ee9a9b1e47f43db2f258e78790591ded81798ebca25d9c984
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.linux-mips64le.tar.gz
-        - name: prometheus-2.22.2.linux-ppc64.tar.gz
-          commit: null
-          size: 60802941
-          sha256: sha256:cc23752554367dcfdf178c1a44ae6f318679608153ecedef41fca27909f2b9aa
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.linux-ppc64.tar.gz
-        - name: prometheus-2.22.2.linux-ppc64le.tar.gz
-          commit: null
-          size: 58529702
-          sha256: sha256:0fc15ef348f7e7497876b29303cb0e6b7868569e3c238a1aa135c33b7cde3184
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.linux-ppc64le.tar.gz
-        - name: prometheus-2.22.2.linux-s390x.tar.gz
-          commit: null
-          size: 64029797
-          sha256: sha256:9558dad6db6781b49a4ca380240acb2da6ecdd1362cb0b8871ecbe5bd695c71a
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.linux-s390x.tar.gz
-        - name: prometheus-2.22.2.netbsd-386.tar.gz
-          commit: null
-          size: 61948237
-          sha256: sha256:b5b55a10be4e6ac560eb25e2a18f404c6fd3130346eee72e5eb6f132098da9f1
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.netbsd-386.tar.gz
-        - name: prometheus-2.22.2.netbsd-amd64.tar.gz
-          commit: null
-          size: 63891238
-          sha256: sha256:6e7cbe16beb5d1c31ce8e6051b79d603ea6cc8dfcbe7376709e25fc99f45b693
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.netbsd-amd64.tar.gz
-        - name: prometheus-2.22.2.netbsd-armv6.tar.gz
-          commit: null
-          size: 58800664
-          sha256: sha256:5e6e737cd043a41a451fd432cec64feb5c9d0139d317e6fa1b74ab72c76e4660
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.netbsd-armv6.tar.gz
-        - name: prometheus-2.22.2.netbsd-armv7.tar.gz
-          commit: null
-          size: 58779050
-          sha256: sha256:5dd94d5945d245d10af9fedbdea5b4451b865814bb6e16d93111a627a7149949
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.netbsd-armv7.tar.gz
-        - name: prometheus-2.22.2.openbsd-386.tar.gz
-          commit: null
-          size: 61939169
-          sha256: sha256:938ab2590a44499d762d78973a90e7d828fc2ff52bf6dfb5891f8afcea739168
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.openbsd-386.tar.gz
-        - name: prometheus-2.22.2.openbsd-amd64.tar.gz
-          commit: null
-          size: 63864504
-          sha256: sha256:fe766cd4a2a237b9323401a2aecaf284bc1a954f16045aab1f07fe686914bcf9
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.openbsd-amd64.tar.gz
-        - name: prometheus-2.22.2.openbsd-armv7.tar.gz
-          commit: null
-          size: 58768317
-          sha256: sha256:d428bd0fe31450d26ff6cfd9e320e373ec7a637a560b055b155bcbc677a132f9
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.openbsd-armv7.tar.gz
-        - name: prometheus-2.22.2.windows-386.tar.gz
-          commit: null
-          size: 63478231
-          sha256: sha256:22bd70ec31ac6caaa412b79aff571217a3c42378ea30264647d287f14175a071
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.windows-386.tar.gz
-        - name: prometheus-2.22.2.windows-amd64.tar.gz
-          commit: null
-          size: 64303079
-          sha256: sha256:99402be6f1c6f1905c6331af520ddfac2863560f7c9978bea68149c48a543012
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/prometheus-2.22.2.windows-amd64.tar.gz
-        - name: sha256sums.txt
-          commit: null
-          size: 2701
-          sha256: sha256:eb8389f2afdc45468f1f0217853bc6dfe576919993815ee35dd62c76f4fab99e
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.2/sha256sums.txt
-    - name: v2.22.1
-      commit: null
-      timestamp: '2020-11-05T17:03:39'
-      prerelease: false
-      files:
-        - name: prometheus-2.22.1.darwin-amd64.tar.gz
-          commit: null
-          size: 64345276
-          sha256: sha256:924d2fd7804e2f3181ad60be61c3edd8b674ab34cd4d14fc71e7b00a64e3a727
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.darwin-amd64.tar.gz
-        - name: prometheus-2.22.1.dragonfly-amd64.tar.gz
-          commit: null
-          size: 64179154
-          sha256: sha256:23229d689358724282d3b68506ead82b97a45bdfbf101c4291934a526044242f
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.dragonfly-amd64.tar.gz
-        - name: prometheus-2.22.1.freebsd-386.tar.gz
-          commit: null
-          size: 62285591
-          sha256: sha256:b9dc81a7e0567349d5929145758a56f1b60adf0dc2ab2f24910fd4946398f1af
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.freebsd-386.tar.gz
-        - name: prometheus-2.22.1.freebsd-amd64.tar.gz
-          commit: null
-          size: 64239941
-          sha256: sha256:c537c5261cc87273b5a3a374f00826b57dd39cc8857b136ca2d5ff6863350100
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.freebsd-amd64.tar.gz
-        - name: prometheus-2.22.1.freebsd-armv6.tar.gz
-          commit: null
-          size: 59084487
-          sha256: sha256:85eae576da5761ce39f35cbda93153aec4479eaf2c5eab6add4454d30629fd75
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.freebsd-armv6.tar.gz
-        - name: prometheus-2.22.1.freebsd-armv7.tar.gz
-          commit: null
-          size: 59068700
-          sha256: sha256:27b3d99b2339944a889559450315c9e3b7af9f877bc2e08e0ae0290c2987597f
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.freebsd-armv7.tar.gz
-        - name: prometheus-2.22.1.linux-386.tar.gz
-          commit: null
-          size: 62407197
-          sha256: sha256:d740018aa4fd5b58605089bdb06d93d999409f15b5a0714607cb845985836881
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.linux-386.tar.gz
-        - name: prometheus-2.22.1.linux-amd64.tar.gz
-          commit: null
-          size: 64285764
-          sha256: sha256:9001a9cb939e0a6d9f2b67d22506c620bc9457777272fced43274b032ba35f44
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.linux-amd64.tar.gz
-        - name: prometheus-2.22.1.linux-arm64.tar.gz
-          commit: null
-          size: 60179416
-          sha256: sha256:78867bda023b565b3d0effbd3a0871f444efbec2236b51a7b3208bdbaa3c7eef
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.linux-arm64.tar.gz
-        - name: prometheus-2.22.1.linux-armv5.tar.gz
-          commit: null
-          size: 59208551
-          sha256: sha256:83592723352ffa4bd152fd5725c29f966903d524b51a4ca70615640fe7fd620c
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.linux-armv5.tar.gz
-        - name: prometheus-2.22.1.linux-armv6.tar.gz
-          commit: null
-          size: 59161410
-          sha256: sha256:a4593476b6018daeeb6a268bdf5243f35e51147cea345e00f2c5c31a538b011b
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.linux-armv6.tar.gz
-        - name: prometheus-2.22.1.linux-armv7.tar.gz
-          commit: null
-          size: 59135389
-          sha256: sha256:10f2709471a70e1230e8a02e48901c67c8da00d6bb604715a12c735dd99cd3c5
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.linux-armv7.tar.gz
-        - name: prometheus-2.22.1.linux-mips64.tar.gz
-          commit: null
-          size: 59554341
-          sha256: sha256:a2d16aad74f0764ca568565862c4314cae64ea19c1ed3f9c38509dcaa7adc770
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.linux-mips64.tar.gz
-        - name: prometheus-2.22.1.linux-mips64le.tar.gz
-          commit: null
-          size: 57170883
-          sha256: sha256:51fdb2c93a4048f00f0b571f2119f993894f643d292be44f930237c48781dc5f
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.linux-mips64le.tar.gz
-        - name: prometheus-2.22.1.linux-ppc64.tar.gz
-          commit: null
-          size: 61007347
-          sha256: sha256:c4363ceda868498f8b9c80564af8bb4bbd04bd662a583a3880bfb421beaad1ca
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.linux-ppc64.tar.gz
-        - name: prometheus-2.22.1.linux-ppc64le.tar.gz
-          commit: null
-          size: 58745114
-          sha256: sha256:9f1da0955f5c0fa11176f2b087adf00b3ba31e417070882c356fa77c61abc155
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.linux-ppc64le.tar.gz
-        - name: prometheus-2.22.1.linux-s390x.tar.gz
-          commit: null
-          size: 64241720
-          sha256: sha256:1efd168352f4f861a7aca27e138dae85e2c6102d43bbe360e42799f474879a58
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.linux-s390x.tar.gz
-        - name: prometheus-2.22.1.netbsd-386.tar.gz
-          commit: null
-          size: 62227267
-          sha256: sha256:ca5f589c02c10ebc4dcb0d82a404f90fb115c389f3fb06b1cbdb30aa0801e436
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.netbsd-386.tar.gz
-        - name: prometheus-2.22.1.netbsd-amd64.tar.gz
-          commit: null
-          size: 64156638
-          sha256: sha256:616cea56efe42aa9be9dfc9b26df10923e1dcbbef13bca507294c1bb6e146cc7
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.netbsd-amd64.tar.gz
-        - name: prometheus-2.22.1.netbsd-armv6.tar.gz
-          commit: null
-          size: 59030723
-          sha256: sha256:9aeb63589eaa86134d7d9b692491cc6cc077514144a36aa020cf9c589f30ef20
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.netbsd-armv6.tar.gz
-        - name: prometheus-2.22.1.netbsd-armv7.tar.gz
-          commit: null
-          size: 59009532
-          sha256: sha256:848511ac1fc47b79d9f900a74854a609d49a59bcc1c1848d0651c1fae6c88a4f
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.netbsd-armv7.tar.gz
-        - name: prometheus-2.22.1.openbsd-386.tar.gz
-          commit: null
-          size: 62220285
-          sha256: sha256:4db0392fe3b959678a7fbb8274d2f5e77b602ec980c25def54f5fc9ecb8eb72d
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.openbsd-386.tar.gz
-        - name: prometheus-2.22.1.openbsd-amd64.tar.gz
-          commit: null
-          size: 64152800
-          sha256: sha256:a2c7468dcc703108e4b868af66f9ae1422043e7bdb2564022a17d26eda1e4a7e
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.openbsd-amd64.tar.gz
-        - name: prometheus-2.22.1.openbsd-armv7.tar.gz
-          commit: null
-          size: 59001581
-          sha256: sha256:5f191a435b5ea4c64403901a6de9b5d44114a1a017fbc931383e60763ba3035c
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.openbsd-armv7.tar.gz
-        - name: prometheus-2.22.1.windows-386.tar.gz
-          commit: null
-          size: 63754289
-          sha256: sha256:2e6c5deead3c51f2c0e82d6d695145f2fc2612516c5090751964e983754f43b5
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.windows-386.tar.gz
-        - name: prometheus-2.22.1.windows-amd64.tar.gz
-          commit: null
-          size: 64608724
-          sha256: sha256:ef6b4983b5c44ab31823fa9dc392135c1bb2c49e271ac282a458368ef6cbf55b
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.windows-amd64.tar.gz
-        - name: sha256sums.txt
-          commit: null
-          size: 2701
-          sha256: sha256:98451b4ce529855e0ab22ef5afa6251dbc942b60b35c9bcddefeac314bf062a5
-          url: https://github.com/prometheus/prometheus/releases/download/v2.22.1/sha256sums.txt
