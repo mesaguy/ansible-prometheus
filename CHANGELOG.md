@@ -8,10 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Upgrade Prometheus from v2.28.0 to v2.28.1
+- Upgrade Prometheus (pre-release) from v2.28.0-rc.0 to v2.29.0-rc.2
+- Upgrade Prometheus from v2.28.0 to v2.29.2
+- Upgrade alertmanager from v0.22.2 to v0.23.0
+- Upgrade alertmanager (pre-release) from v0.22.0-rc.2 to v0.23.0-rc.0
+- Upgrade apache_exporter_lusitaniae from v0.9.0 to v0.10.0
+- Upgrade graphite_exporter from v0.10.1 to v0.11.0
 - Upgrade jmx_exporter from v0.15.0 to v0.16.1
-- Upgrade node_exporter v1.1.2 to v1.2.0
+- Upgrade mongodb_exporter_percona from v0.20.6 to v0.20.7
+- Upgrade node_exporter v1.1.2 to v1.2.2
 - Upgrade postgres_exporter_wrouesnel from v0.9.0 to v0.10.0
+- Upgrade phpfpm_exporter_hipages from v2.0.2 to v2.0.3
 - Upgrade squid_exporter_boynux from v1.9.2 to v1.9.4
 - Update metadata to include latest master commits
 
