@@ -4,15 +4,15 @@
     include_tasks: _setup.yml
   when: prometheus_setup_task_executed is undefined
 
-- name: Starting ipmi_exporter (soundcloud) install
+- name: Starting ipmi_exporter (prometheus-community) install
   set_fact:
     prometheus_exporter: true
-    prometheus_software_author: soundcloud
+    prometheus_software_author: prometheus-community
     prometheus_software_binary_name: ipmi_exporter
     prometheus_software_makefile_make_command: 'make build'
-    prometheus_software_name: ipmi_exporter_soundcloud
+    prometheus_software_name: ipmi_exporter_prometheus_community
     prometheus_software_description: 'Prometheus ipmi_exporter for exporting IPMI statistics'
-    prometheus_software_documentation: 'https://github.com/soundcloud/ipmi_exporter'
+    prometheus_software_documentation: 'https://github.com/prometheus-community/ipmi_exporter'
 
 - name: Include task to setup {{ prometheus_software_name }} facts
   include_tasks: _setup_software_facts.yml
@@ -29,8 +29,8 @@
 - name: Setup {{ prometheus_software_name_version }} configuration file
   become: true
   copy:
-    content: '{{ prometheus_ipmi_exporter_soundcloud_cfg | default(lookup("file", "../files/ipmi_exporter_soundcloud.yml")) }}'
-    dest: '{{ prometheus_etc_dir }}/ipmi_exporter_soundcloud.yml'
+    content: '{{ prometheus_ipmi_exporter_prometheus_community_cfg | default(lookup("file", "../files/ipmi_exporter_prometheus_community.yml")) }}'
+    dest: '{{ prometheus_etc_dir }}/ipmi_exporter_prometheus_community.yml'
     owner: root
     group: '{{ prometheus_group }}'
     mode: 0640

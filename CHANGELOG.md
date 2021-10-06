@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- The ipmi_exporter name changed from ipmi_exporter_soundcloud to ipmi_exporter_prometheus_community
 - Upgrade Go from v1.16.5 to v1.16.8
 - Upgrade Prometheus (pre-release) from v2.29.0-rc.2 to v2.30.0-rc.0
 - Upgrade Prometheus from v2.29.2 to v2.30.3

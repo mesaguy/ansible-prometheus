@@ -67,7 +67,7 @@ See each exporter's usage page for more details:
 |[grok_exporter_fstab](https://github.com/fstab/grok_exporter)                                                 | [usage](docs/grok_exporter_fstab.md)                         | fstab                | Yes       |
 |[haproxy_exporter](https://github.com/prometheus/haproxy_exporter)                                            | [usage](docs/haproxy_exporter.md)                            | prometheus           | Yes       |
 |[influxdb_exporter](https://github.com/prometheus/influxdb_exporter)                                          | [usage](docs/influxdb_exporter.md)                           | prometheus           | Yes       |
-|[ipmi_exporter_soundcloud](https://github.com/soundcloud/ipmi_exporter)                                       | [usage](docs/ipmi_exporter_soundcloud.md)                    | soundcloud           | Yes       |
+|[ipmi_exporter_prometheus_community](https://github.com/prometheus-community/ipmi_exporter)                   | [usage](docs/ipmi_exporter_prometheus_community.md)          | prometheus-community | Yes       |
 |[iperf3_exporter_edgard](https://github.com/edgard/iperf3_exporter)                                           | [usage](docs/iperf3_exporter_edgard)                         | edgard               | Yes       |
 |[iptables_exporter_retailnext](https://github.com/retailnext/iptables_exporter)                               | [usage](docs/iptables_exporter_retailnext.md)                | retailnext           | Yes       |
 |[jmx_exporter](https://github.com/prometheus/jmx_exporter)                                                    | [usage](docs/jmx_exporter.md)                                | prometheus           | No        |
@@ -161,7 +161,7 @@ prometheus_components:
  - haproxy_exporter
  - influxdb_exporter
  - iperf3_exporter_edgard
- - ipmi_exporter_soundcloud
+ - ipmi_exporter_prometheus_community
  - iptables_exporter_retailnext
  - jmx_exporter
  - kafka_exporter_danielqsj
