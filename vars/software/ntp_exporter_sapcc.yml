@@ -4,15 +4,15 @@ defaults:
   tgroup: ntp
 software:
   name: sapcc/ntp_exporter
-  release: v2.0.0
+  release: v2.0.1
   prerelease: null
   url: https://github.com/sapcc/ntp_exporter
   source: https://github.com/sapcc/ntp_exporter.git
-  updated: '2021-09-05T23:38:14.832774'
+  updated: '2021-10-06T19:03:40.766660'
   master:
     commit:
-      sha: 9c86a43939ec9f983dcd1b075c5a99b354d480c3
-      timestamp: '2021-07-30T10:14:04'
+      sha: af24a4766992abaa4b7d9964c29b7127f1b0e402
+      timestamp: '2021-09-24T09:17:48'
     files: []
   releases:
     - name: v1.1.1
@@ -69,3 +69,28 @@ software:
           size: 3601181
           sha256: sha256:ab25dd0f2545542d8290308db92dc547eac47afd50d22c990611f1a5eec1c29c
           url: https://github.com/sapcc/ntp_exporter/releases/download/v2.0.0/ntp_exporter-2.0.0-windows-amd64.tar.gz
+    - name: v2.0.1
+      commit: null
+      timestamp: '2021-09-24T09:15:59'
+      prerelease: false
+      files:
+        - name: checksums.txt
+          commit: null
+          size: 315
+          sha256: sha256:232e0becec3686859e26e206965da79f07f8a99d4dce0d8d064d6564209e1026
+          url: https://github.com/sapcc/ntp_exporter/releases/download/v2.0.1/checksums.txt
+        - name: ntp_exporter-2.0.1-darwin-amd64.tar.gz
+          commit: null
+          size: 3167459
+          sha256: sha256:650d914c30549200e211fd9805f009398b3b48b400dc6a07c80de5a8b604da30
+          url: https://github.com/sapcc/ntp_exporter/releases/download/v2.0.1/ntp_exporter-2.0.1-darwin-amd64.tar.gz
+        - name: ntp_exporter-2.0.1-linux-amd64.tar.gz
+          commit: null
+          size: 3033335
+          sha256: sha256:1850508a7ab65bfb14e33f647c594d22ec85671e4352157b4c0505bfce35cf0d
+          url: https://github.com/sapcc/ntp_exporter/releases/download/v2.0.1/ntp_exporter-2.0.1-linux-amd64.tar.gz
+        - name: ntp_exporter-2.0.1-windows-amd64.tar.gz
+          commit: null
+          size: 3016791
+          sha256: sha256:b2e0ad7fd814d586ae969d9aabb25c29d807e7d9a9c52fa953d054b3912fe9e0
+          url: https://github.com/sapcc/ntp_exporter/releases/download/v2.0.1/ntp_exporter-2.0.1-windows-amd64.tar.gz

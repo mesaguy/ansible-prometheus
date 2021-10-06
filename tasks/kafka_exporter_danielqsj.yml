@@ -7,7 +7,6 @@
 - name: Starting kafka_exporter (danielqsj) install
   set_fact:
     prometheus_exporter: true
-    prometheus_software_allow_build_test: true
     prometheus_software_author: danielqsj
     prometheus_software_binary_name: kafka_exporter
     prometheus_software_makefile_make_command: 'go mod vendor && make build'

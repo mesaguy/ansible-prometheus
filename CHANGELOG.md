@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade Go from v1.16.5 to v1.16.8
+- Upgrade Prometheus (pre-release) from v2.29.0-rc.2 to v2.30.0-rc.0
+- Upgrade Prometheus from v2.29.2 to v2.30.3
+- Upgrade apache_exporter_lusitaniae from v0.10.0 to v0.10.1
+- Upgrade kafka_exporter_danielqsj from v1.3.1 to v1.4.2
+- Upgrade mongodb_exporter_percona from v0.20.7 to v0.20.8
+- Upgrade ntp_exporter_sapcc v2.0.0 to v2.0.1
+- Upgrade proxysql_exporter_percona from v1.1.1 to v1.1.2
+- Upgrade redis_exporter_oliver006 from v1.27.0 to v1.27.1
+- Upgrade statsd_exporter from v0.22.1 to v0.22.2
+- Update metadata to include latest master commits
+
 ## [0.12.41] - 2021-09-05
 
 ### Changed
