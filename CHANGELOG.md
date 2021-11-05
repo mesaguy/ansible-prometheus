@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.43] - 2021-11-05
+
 ### Changed
 - Upgrade Prometheus (pre-release) from v2.30.0-rc.0 to v2.31.0-rc.1
 - Upgrade Prometheus from v2.30.3 to v2.31.0
