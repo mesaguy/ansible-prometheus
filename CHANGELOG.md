@@ -18,7 +18,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgrade pushgateway from v1.4.1 to v1.4.2
 - Upgrade redis_exporter_oliver006 from v1.27.1 to v1.29.0
 - Upgrade squid_exporter_boynux from v1.9.4 to v1.10.0
-- Upgrade statsd_exporter from v0.22.2 to v0.22.3
 - Update metadata to include latest master commits
 
 ## [0.12.42] - 2021-10-06
