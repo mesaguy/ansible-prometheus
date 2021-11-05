@@ -4,17 +4,722 @@ defaults:
   tgroup: elasticsearch
 software:
   name: justwatchcom/elasticsearch_exporter
-  release: v1.2.1
+  release: v1.3.0
   prerelease: v1.1.0rc1
   url: https://github.com/prometheus-community/elasticsearch_exporter
   source: https://github.com/prometheus-community/elasticsearch_exporter.git
-  updated: '2021-10-06T18:30:12.384377'
+  updated: '2021-11-02T21:33:16.124302'
   master:
     commit:
-      sha: 3d86731efc62755e5b7622b4f75748116d7ab51c
-      timestamp: '2021-10-04T13:59:13'
+      sha: d64ec0968a8844be9d4f7f1399a2b9b08a243611
+      timestamp: '2021-11-02T16:56:46'
     files: []
   releases:
+    - name: v1.3.0
+      commit: null
+      timestamp: '2021-10-21T14:43:42'
+      prerelease: false
+      files:
+        - name: elasticsearch_exporter-1.3.0.aix-ppc64.tar.gz
+          commit: null
+          size: 3584087
+          sha256: sha256:96bd2cd2cdc6416dd513fafed16c16ae2067352b105a8d85efa2b1dec290af71
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.aix-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.darwin-amd64.tar.gz
+          commit: null
+          size: 6566507
+          sha256: sha256:3b37f87b995e11c06b1e0d68f3c3aff05b07d6a51ec3e14f0bd9a7a98ffb391d
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.darwin-arm64.tar.gz
+          commit: null
+          size: 6407414
+          sha256: sha256:00283c8bce7b1bfe0c038caa29664a9b3faf4f3333dc90b26ec59993926f2509
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.darwin-arm64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 3637875
+          sha256: sha256:e4ed6b3e419fd865dd86303c8749fbe299b64bf032a6e625c5750534c6bbddf2
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.dragonfly-amd64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.freebsd-386.tar.gz
+          commit: null
+          size: 3417988
+          sha256: sha256:deb358508d31b8919aae464beff22e7245bbfc415ea6cbb7a9984e62f0e155e6
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.freebsd-386.tar.gz
+        - name: elasticsearch_exporter-1.3.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 3647009
+          sha256: sha256:59014a3c7b2d2b502a3195d705915cd32a57716890daec3a40f133b7ec20b8f2
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.freebsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.freebsd-arm64.tar.gz
+          commit: null
+          size: 3258948
+          sha256: sha256:02d3ec8b0b0c2aa64eda17796275667ea980ccb0450de1bc2d302b4bba1df8b5
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.freebsd-arm64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 3351228
+          sha256: sha256:b75cdcf4cc639de3e2bc6811d80d61de61a0d630f4f2696619813f675a5e665c
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.freebsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.3.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 3346331
+          sha256: sha256:5caf6a6a46dbfe5a49986b8747f81ceca27269372127582267368a37a6f62fcf
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.freebsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.3.0.illumos-amd64.tar.gz
+          commit: null
+          size: 3632311
+          sha256: sha256:f9f0fc2c47c16fecab0e336839fb436a497d8b67ff069e4e387aeee65373ead8
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.illumos-amd64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.linux-386.tar.gz
+          commit: null
+          size: 3415756
+          sha256: sha256:6bdd50df3416e0d468b5a30d5e901fd296fd0975fce050348cc5fe4c24d2ed62
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.linux-386.tar.gz
+        - name: elasticsearch_exporter-1.3.0.linux-amd64.tar.gz
+          commit: null
+          size: 3637393
+          sha256: sha256:793f0bd6e119b69e7e049b1143789a98e575d21e401b9322bbd0c9db5607c2dd
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.linux-amd64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.linux-arm64.tar.gz
+          commit: null
+          size: 3274138
+          sha256: sha256:8c37915b385c74e5ef1871e171bb2f8e8209d3b41cf169c347ccc18293b98bde
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.linux-arm64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.linux-armv5.tar.gz
+          commit: null
+          size: 3353248
+          sha256: sha256:ee4c7909565c5dc388d56ddbf8280b66e789076cbef109845164e0801785bdef
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.linux-armv5.tar.gz
+        - name: elasticsearch_exporter-1.3.0.linux-armv6.tar.gz
+          commit: null
+          size: 3343531
+          sha256: sha256:5b8ea96d17b453aa552d40af9b2a1ac02ec34bd011086de4c7cf6bc82bb6c4de
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.linux-armv6.tar.gz
+        - name: elasticsearch_exporter-1.3.0.linux-armv7.tar.gz
+          commit: null
+          size: 3337728
+          sha256: sha256:2319f74a1557a4bd5cc1b5050bf3e845997722c7e57bbcdae784f081dc0d9d40
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.linux-armv7.tar.gz
+        - name: elasticsearch_exporter-1.3.0.linux-mips.tar.gz
+          commit: null
+          size: 3217038
+          sha256: sha256:e0a62a4e342d6eea768286d7024da217e39ae4b2e9d7407e6357e5c2ed77e883
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.linux-mips.tar.gz
+        - name: elasticsearch_exporter-1.3.0.linux-mips64.tar.gz
+          commit: null
+          size: 3199798
+          sha256: sha256:f8eb51a3d20c47f74a5d764222e53a77d896d88e72dbf075f411c72568467da4
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.linux-mips64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.linux-mips64le.tar.gz
+          commit: null
+          size: 3118700
+          sha256: sha256:3cf021a5f980d041cfb3e5f39316c164891e16de786c6c739039225add3547ed
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.linux-mips64le.tar.gz
+        - name: elasticsearch_exporter-1.3.0.linux-mipsle.tar.gz
+          commit: null
+          size: 3159802
+          sha256: sha256:9ea8460ca09c265dfbbcbbae9e075278469346a31a20a9d93c3be742bc3fad43
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.linux-mipsle.tar.gz
+        - name: elasticsearch_exporter-1.3.0.linux-ppc64.tar.gz
+          commit: null
+          size: 3250787
+          sha256: sha256:056a8aa4d404791bfa96ef3c383dd0f47866c568a3250319c83457a9dcc17fff
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.linux-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 3191080
+          sha256: sha256:a6c71637baaefb5a7b43ef2a25997af2fab73ef266ae5e20219208f8c574703b
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.linux-ppc64le.tar.gz
+        - name: elasticsearch_exporter-1.3.0.linux-s390x.tar.gz
+          commit: null
+          size: 3527221
+          sha256: sha256:2156f7c30b31dd4346d2ab1582c98cdd028a03c18171bd8aadf22b449a8aa21b
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.linux-s390x.tar.gz
+        - name: elasticsearch_exporter-1.3.0.netbsd-386.tar.gz
+          commit: null
+          size: 3409356
+          sha256: sha256:9f05e77c7ad6d0a662c00bbdae9114eb52bec918bdfabc6346747e3b6d76be8d
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.netbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.3.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 3636160
+          sha256: sha256:16112a261a3ebe4f2f3cc290327a415dcc95379d7e57dccb16d3866da910aa3e
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.netbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.netbsd-arm64.tar.gz
+          commit: null
+          size: 3252327
+          sha256: sha256:c10e70ceff562335cb1089f4e795d273b275e7ebc2fb28e69191116fc64cdc90
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.netbsd-arm64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 3342630
+          sha256: sha256:9e7495599463b5a65e6799837656c8dae7cb855ad3367c416557f5fffe744a16
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.netbsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.3.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 3338179
+          sha256: sha256:89ddf10fc2d2ea89eff433e776c4f4bcba7519a9819f8ef59e842621d9d28c48
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.netbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.3.0.openbsd-386.tar.gz
+          commit: null
+          size: 3409823
+          sha256: sha256:bcde6df091b3ad03e208b9281aa607f5ee6e591792b007234aa8c460988b82f1
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.openbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.3.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 3646611
+          sha256: sha256:fbedc6c3fc971312c36f1e4aceaf03d07e8d0e50e6be46689038beacfff2c578
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.openbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.openbsd-arm64.tar.gz
+          commit: null
+          size: 3259262
+          sha256: sha256:c9a0c33b648e76a02f360a163538d4be84a58c5d5150be03119f0e52029e80a0
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.openbsd-arm64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 3338825
+          sha256: sha256:4fc9b922dfe099efa236e331cd0b01599e78f4e7822c9538c063d9ab8848b936
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.openbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.3.0.windows-386.tar.gz
+          commit: null
+          size: 3560607
+          sha256: sha256:4494a11419230fbec3629a05375a2680624302bc31567262f161ea4270d8a90e
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.windows-386.tar.gz
+        - name: elasticsearch_exporter-1.3.0.windows-386.zip
+          commit: null
+          size: 3642338
+          sha256: sha256:512fcdbb691342d348283e455b781cac7a1d5ded0b8998439c5eb05618f04558
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.windows-386.zip
+        - name: elasticsearch_exporter-1.3.0.windows-amd64.tar.gz
+          commit: null
+          size: 3687712
+          sha256: sha256:0c1872d7ff001ed432e40053e3abee325ea5daeb533f05c7f2977b1573d65e26
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.windows-amd64.tar.gz
+        - name: elasticsearch_exporter-1.3.0.windows-amd64.zip
+          commit: null
+          size: 3744808
+          sha256: sha256:f5623b55a22254582896288c806505f3189fb716aafee77404799b6eacf98de9
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/elasticsearch_exporter-1.3.0.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 4129
+          sha256: sha256:6798cc01ab6b31203861f81ef25faf304fcb53eb71562aa8884be6b18f25bf5f
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.3.0/sha256sums.txt
+    - name: v1.1.0rc1
+      commit: null
+      timestamp: '2019-02-27T12:38:29'
+      prerelease: true
+      files:
+        - name: elasticsearch_exporter-1.1.0rc1.darwin-386.tar.gz
+          commit: null
+          size: 3479571
+          sha256: sha256:ee4a36105b6ee06c1d0fbef2ec10260e8f7e8a92515c8adc4f240405594b61c3
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.darwin-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.darwin-amd64.tar.gz
+          commit: null
+          size: 6321703
+          sha256: sha256:5dca23193441a97365355e86d091cc51db8559693f58e6b8e1570de55d002b42
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.dragonfly-amd64.tar.gz
+          commit: null
+          size: 3630995
+          sha256: sha256:d4513a1108eedcdd24719b3493705c377dfec61e700d730edb5329efc167e383
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.dragonfly-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.freebsd-386.tar.gz
+          commit: null
+          size: 3432141
+          sha256: sha256:96e7ef9bfdaa7654ffc8d8ade1f6813487ae2f7d7d679d5462b316d4e950b6a6
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.freebsd-amd64.tar.gz
+          commit: null
+          size: 3640886
+          sha256: sha256:a170bcc442a429e625c1d6b1b6fd62349652f371d3c03611b704f8180f16c9f1
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.freebsd-armv6.tar.gz
+          commit: null
+          size: 3382951
+          sha256: sha256:9d1dbbed53f4f542c882cf8ceb8df03e8998ab4f8fe99d70a702f1da6a181ab8
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.freebsd-armv7.tar.gz
+          commit: null
+          size: 3378893
+          sha256: sha256:475111229391d6b6e61ee5707b63c27b5922d21c9b7a75eaffcb49da2dd9357c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-386.tar.gz
+          commit: null
+          size: 3427986
+          sha256: sha256:d74327b8b94a4fd8483ee3094154713ef720e861c666629208c3ae9ade4af3ab
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-amd64.tar.gz
+          commit: null
+          size: 3630078
+          sha256: sha256:dc1ada86082791e3f322eff745d4fa5617971e8c819e436d869ddac0869c3351
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-arm64.tar.gz
+          commit: null
+          size: 3325427
+          sha256: sha256:9bed98d3781a572bd0d6a943cd876c3abecf9720c15f223f7967ea99768e772c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-arm64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-armv5.tar.gz
+          commit: null
+          size: 3385506
+          sha256: sha256:ce8056b94ad07e43a7ca8845ed2536dae325a2dee56bff1d5452814e930ad16c
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-armv5.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-armv6.tar.gz
+          commit: null
+          size: 3372792
+          sha256: sha256:a4917235d057a53e6b05f297fd10d98aca515ff01c68002912ca2c64b9e798c5
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-armv6.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-armv7.tar.gz
+          commit: null
+          size: 3368404
+          sha256: sha256:142eaafcb65d8b690d219e8a61757fdadf382fc4e87a3e7b4c49554a6515842d
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-armv7.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-mips64.tar.gz
+          commit: null
+          size: 3265000
+          sha256: sha256:cb2fdb2903909c7602e5ee54c20d23bc90da7a5deb32081ca489a5c7b7e16348
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-mips64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-mips64le.tar.gz
+          commit: null
+          size: 3197824
+          sha256: sha256:932916b34a495816b06b6a2087424eb81bc8d11a46cb27bc7e38a2c051b494f8
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-mips64le.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-ppc64.tar.gz
+          commit: null
+          size: 3338309
+          sha256: sha256:d9bc93b109abbef66639b7d18552278fc941cad0c155996a53590872dc382ccf
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.linux-ppc64le.tar.gz
+          commit: null
+          size: 3291954
+          sha256: sha256:9cf7219b1ac82e053c16d3acaf6b2fc431e2ca6496aac83b7435d895792298d6
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-ppc64le.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.netbsd-386.tar.gz
+          commit: null
+          size: 3420941
+          sha256: sha256:5291447dbf65ef334eb93a35bd269b4f9f4d36f6fc905600267c4be362ee0f62
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.netbsd-amd64.tar.gz
+          commit: null
+          size: 3630094
+          sha256: sha256:e8354647730d99bb35d26e38e5cbfc386ce203d595fbeee24156b983ae3b6607
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.netbsd-armv6.tar.gz
+          commit: null
+          size: 3373233
+          sha256: sha256:9aed61d43b8d8639a006d3b80682fadfa2be53857555110c1d3188e4489048d7
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.netbsd-armv7.tar.gz
+          commit: null
+          size: 3369931
+          sha256: sha256:f59e10a05601f03e067195d70c21b3ff92c04dc856e4e91d2caed354b974e343
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.openbsd-386.tar.gz
+          commit: null
+          size: 3422975
+          sha256: sha256:29b84bd6db0a13fe1c3038866e03f624595ae5315a4e3daeb0f91e9ae31ce8c1
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.openbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.openbsd-amd64.tar.gz
+          commit: null
+          size: 3631784
+          sha256: sha256:9cdb27fae217c22bad598f36b86280188e5c868ca96fcc8ab43fa79bf791acce
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.openbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.openbsd-armv7.tar.gz
+          commit: null
+          size: 3371642
+          sha256: sha256:47f1d10c7cc121796271810fa4740fc02596533a9c460936218356cee3d818d8
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.openbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.windows-386.tar.gz
+          commit: null
+          size: 3369866
+          sha256: sha256:56336fda3eeaf20464860f1fd3251b8999db6c83a55e3b6568da1b5fa9b77659
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.windows-386.tar.gz
+        - name: elasticsearch_exporter-1.1.0rc1.windows-amd64.tar.gz
+          commit: null
+          size: 3582296
+          sha256: sha256:dce1bf9216d6f202c945232615566d655bcff4549e5a75212d950efa68afa0e0
+          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.windows-amd64.tar.gz
+    - name: v1.2.1
+      commit: null
+      timestamp: '2021-06-29T14:05:47'
+      prerelease: false
+      files:
+        - name: elasticsearch_exporter-1.2.1.aix-ppc64.tar.gz
+          commit: null
+          size: 3553202
+          sha256: sha256:614b61dff860b9fa32d7cb2c3db4fdee88eccf55ae8f0d42bc643ae2ed263e12
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.aix-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.darwin-amd64.tar.gz
+          commit: null
+          size: 6541039
+          sha256: sha256:1418dbcc4d5801e9c3a7d9209dcce69baf396a65bfc313418cbaf9e1d69c955f
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.darwin-arm64.tar.gz
+          commit: null
+          size: 6371820
+          sha256: sha256:cda7c1b80574d2abed4b340f198625aba4b02630918804200b0c479693813b88
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.darwin-arm64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.dragonfly-amd64.tar.gz
+          commit: null
+          size: 3617294
+          sha256: sha256:8913d43d66542b8f9a80213df2be3d69e041d759d483f842ea020378c488ee15
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.dragonfly-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.freebsd-386.tar.gz
+          commit: null
+          size: 3393520
+          sha256: sha256:4e278f02b02946eeb843893fd9e4a9954ba9ed2ad4af56f5ae69be2a67e80cb7
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.freebsd-386.tar.gz
+        - name: elasticsearch_exporter-1.2.1.freebsd-amd64.tar.gz
+          commit: null
+          size: 3622277
+          sha256: sha256:76fc411f1e4b4fcb18fd4b0af1ff469949b6550cbebc107f2916bab4678a6787
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.freebsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.freebsd-arm64.tar.gz
+          commit: null
+          size: 3239207
+          sha256: sha256:5a3511e89a996bc67889ce48796103a6b1553b3a2c76669ff3a136de48b08291
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.freebsd-arm64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.freebsd-armv6.tar.gz
+          commit: null
+          size: 3330630
+          sha256: sha256:764cc9fd27f8906e6e3313b1a202bc11e7d87932bd1289a11a6a8aa51f3e6932
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.freebsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.2.1.freebsd-armv7.tar.gz
+          commit: null
+          size: 3326778
+          sha256: sha256:7497e44feaf5276be16ab8502fc00ccf8c373519d9cfcb019f3b57778809973e
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.freebsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.2.1.illumos-amd64.tar.gz
+          commit: null
+          size: 3612000
+          sha256: sha256:23c636cf7fbbd32a5737452ed0e9ee6dfb2783da6dca45b6df8c807721eb1082
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.illumos-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.linux-386.tar.gz
+          commit: null
+          size: 3390160
+          sha256: sha256:59896f1f393225e0f7d12e994e2fb8ce1cc936b9527a23b341f9b6d6a35d9d72
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-386.tar.gz
+        - name: elasticsearch_exporter-1.2.1.linux-amd64.tar.gz
+          commit: null
+          size: 3612042
+          sha256: sha256:06ef2140f18f0bb6cd91b63508c81b2ce2971589454add45a1b4163d8320ff1f
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.linux-arm64.tar.gz
+          commit: null
+          size: 3251559
+          sha256: sha256:6fbb0c5e7a28e6f6d0ce13fb9e2b12115eee2d1fbf8bf3ca93c1cc9227f1ec52
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-arm64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.linux-armv5.tar.gz
+          commit: null
+          size: 3330263
+          sha256: sha256:85537949062ff4bfda22efa99b846c799d6b0f01e487d7d73b9487811ccb7e7f
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-armv5.tar.gz
+        - name: elasticsearch_exporter-1.2.1.linux-armv6.tar.gz
+          commit: null
+          size: 3322641
+          sha256: sha256:9ac44cb64ccc90daf4d64f38db0d795681b85b015c540c228df9ed1e9bd4f0dc
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-armv6.tar.gz
+        - name: elasticsearch_exporter-1.2.1.linux-armv7.tar.gz
+          commit: null
+          size: 3318509
+          sha256: sha256:0de0d4d778f1feecc9c361938b257f94979d1168707e3200106a5f3525c0e9c4
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-armv7.tar.gz
+        - name: elasticsearch_exporter-1.2.1.linux-mips.tar.gz
+          commit: null
+          size: 3195657
+          sha256: sha256:9dedf78591d06d3d9531b828665fe473d27782b0d3f1df9e4959e8c06d1b257e
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-mips.tar.gz
+        - name: elasticsearch_exporter-1.2.1.linux-mips64.tar.gz
+          commit: null
+          size: 3176431
+          sha256: sha256:ecde729b36c0d4f81c203ec9d60fc73230750d0120b2f1e5265da92f84d91b40
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-mips64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.linux-mips64le.tar.gz
+          commit: null
+          size: 3098021
+          sha256: sha256:7d0be70eef14a551f24f9ba6b85dae44dba01427436dcd9cae5134e4ff0d45ec
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-mips64le.tar.gz
+        - name: elasticsearch_exporter-1.2.1.linux-mipsle.tar.gz
+          commit: null
+          size: 3138123
+          sha256: sha256:34e1c6555c4ba0ce8626ad62c82c11fc988e29b783e677a88a8ff2bfea9e64f0
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-mipsle.tar.gz
+        - name: elasticsearch_exporter-1.2.1.linux-ppc64.tar.gz
+          commit: null
+          size: 3224911
+          sha256: sha256:05390ac4d38aee83cf9039c4908022056f77b089dd2420e82f93e3bd7f7bdb42
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.linux-ppc64le.tar.gz
+          commit: null
+          size: 3167528
+          sha256: sha256:697e0fbe3345bb34630b947922d97a5a7103b2b50453c0cdc6b3bd1e99c715ab
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-ppc64le.tar.gz
+        - name: elasticsearch_exporter-1.2.1.linux-s390x.tar.gz
+          commit: null
+          size: 3507945
+          sha256: sha256:d960c5545f761d5d716c9cfb50d3fe37ca7d6904f14d4494eb3f106986187d7a
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-s390x.tar.gz
+        - name: elasticsearch_exporter-1.2.1.netbsd-386.tar.gz
+          commit: null
+          size: 3384402
+          sha256: sha256:89a115f8746aef5c0610970dc9d6ba73811162ae6c94f5b420eef0f2d4658a52
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.netbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.2.1.netbsd-amd64.tar.gz
+          commit: null
+          size: 3610918
+          sha256: sha256:6d8c1a79fb59963c8790083c0583681bdefef5bcea944ca8f54145c68fb08ef7
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.netbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.netbsd-arm64.tar.gz
+          commit: null
+          size: 3232465
+          sha256: sha256:5e276d646536309940555450bf8044296d65709b28f023514650bf828d6349b1
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.netbsd-arm64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.netbsd-armv6.tar.gz
+          commit: null
+          size: 3325108
+          sha256: sha256:2d04ec744a638b7397c7dca0abd1eeedddbfb97491e732b87e508e298a465f7f
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.netbsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.2.1.netbsd-armv7.tar.gz
+          commit: null
+          size: 3318500
+          sha256: sha256:28590797ac79779065769d51d8160ad57667aa3ca5e1c8d2c18465243c8e0a83
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.netbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.2.1.openbsd-386.tar.gz
+          commit: null
+          size: 3385811
+          sha256: sha256:41233e7dd46b0589ecc67c165c09afc30bbdb124048e7769831f61f3d09262c1
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.openbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.2.1.openbsd-amd64.tar.gz
+          commit: null
+          size: 3626013
+          sha256: sha256:e3ecaaf7f5a5c8569879913ecd352b496eefa62df7c32ab0aa08dce9838d701d
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.openbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.openbsd-arm64.tar.gz
+          commit: null
+          size: 3241976
+          sha256: sha256:22bfee0ec1a122fb61d62c0ed133eac833a0c92b236e1b05286ad63d396c3815
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.openbsd-arm64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.openbsd-armv7.tar.gz
+          commit: null
+          size: 3320073
+          sha256: sha256:cc7319d8af93f94cec49102a0cc818e0198eb3efdceac4292392c153901a8aae
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.openbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.2.1.windows-386.tar.gz
+          commit: null
+          size: 3535630
+          sha256: sha256:3a8b359425cf15c3cde5bb0149719fb3b920d82805d0d355f4180215ab4c5374
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.windows-386.tar.gz
+        - name: elasticsearch_exporter-1.2.1.windows-386.zip
+          commit: null
+          size: 3616059
+          sha256: sha256:dea127ea4c9f21720d2c5c5c0decd9ca58e7f1b659f5b42012cbb402d657857c
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.windows-386.zip
+        - name: elasticsearch_exporter-1.2.1.windows-amd64.tar.gz
+          commit: null
+          size: 3666940
+          sha256: sha256:51c2bdd9dd1e2f1b4ee24a09890258d84a3d457a37876dc0611a23a17e0484bb
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.windows-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.1.windows-amd64.zip
+          commit: null
+          size: 3726297
+          sha256: sha256:8f7923468c305e9e779e0c946f56148526b8f317d68b09bb61c6f78dd72fbd73
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 4129
+          sha256: sha256:6ce74d47a128c733ac077721bc547f51e9b5521e841da269c8af4c5de82ba699
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/sha256sums.txt
+    - name: v1.2.0
+      commit: null
+      timestamp: '2021-06-10T20:49:44'
+      prerelease: false
+      files:
+        - name: elasticsearch_exporter-1.2.0.aix-ppc64.tar.gz
+          commit: null
+          size: 3553110
+          sha256: sha256:2d57a6ee34a952a026b565644c1e00e2a07ae03d9bc35a14e792a0f71e761ff8
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.aix-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.darwin-amd64.tar.gz
+          commit: null
+          size: 6541156
+          sha256: sha256:6ccbcf684df65f8c18608bafd7e97c7bf43a368ded8d2daf9f4a592de0b57c2f
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.darwin-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.darwin-arm64.tar.gz
+          commit: null
+          size: 6370480
+          sha256: sha256:f304138a25c1a08667168e2d7778abfbc295af5255895dd5b49dba2439bbb0ec
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.darwin-arm64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 3617248
+          sha256: sha256:b5f258cd99312df9900dd51828faebc9a61647c2805c18a412c6995ab41ab67d
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.dragonfly-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.freebsd-386.tar.gz
+          commit: null
+          size: 3393460
+          sha256: sha256:a23663e6b7c5462d5de755db7c305365adfb1b9829d8140e78cc58766b25f947
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.freebsd-386.tar.gz
+        - name: elasticsearch_exporter-1.2.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 3626408
+          sha256: sha256:115c32b3c3f1c9f94c90ed3c44d86a6199d7189011143d48baf4f65de89193e3
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.freebsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.freebsd-arm64.tar.gz
+          commit: null
+          size: 3239171
+          sha256: sha256:26bd60fa4c9094e65008cb97d4b77897c3cf2e8ad149142f11cabcea1fb5dafb
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.freebsd-arm64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 3330591
+          sha256: sha256:ac8725bfff4983217cf95a2932f61efd7d71e0cda419ed3163275dc135f11982
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.freebsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.2.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 3327067
+          sha256: sha256:c036b07c527cde36b4ede5314ab9cec7495150f6fada7cf6a201963e278370dc
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.freebsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.2.0.illumos-amd64.tar.gz
+          commit: null
+          size: 3612106
+          sha256: sha256:297526b8b02aa08449442b194be57e21e6695ae0079ff59fde9c048034426ab3
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.illumos-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.linux-386.tar.gz
+          commit: null
+          size: 3390249
+          sha256: sha256:93053c26781926bb14369099988d4f127ce3bebc13befeaa230b45f78435417e
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-386.tar.gz
+        - name: elasticsearch_exporter-1.2.0.linux-amd64.tar.gz
+          commit: null
+          size: 3612074
+          sha256: sha256:aac3e74301c80376bfd042a681533e8a7e0ae9e4016dd9a69e94716fe19f5602
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.linux-arm64.tar.gz
+          commit: null
+          size: 3251319
+          sha256: sha256:19e6ee2ee6e5b84f94be3a38098850f1eb0ece64e069e07ef49ddb9a7f4f33fb
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-arm64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.linux-armv5.tar.gz
+          commit: null
+          size: 3330703
+          sha256: sha256:82210b2678d51ee2c4d9d34cf81899d76ce2cecb15af1c06acb4f211d3102deb
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-armv5.tar.gz
+        - name: elasticsearch_exporter-1.2.0.linux-armv6.tar.gz
+          commit: null
+          size: 3322949
+          sha256: sha256:10593bebc6d6140e28a0c0bb5e390e9ba71aab532f3fb6e5661706c56edde552
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-armv6.tar.gz
+        - name: elasticsearch_exporter-1.2.0.linux-armv7.tar.gz
+          commit: null
+          size: 3318553
+          sha256: sha256:cece75416f900786fcfe7411d5085a95d9380052c4f2041e8f302fd14b01f155
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-armv7.tar.gz
+        - name: elasticsearch_exporter-1.2.0.linux-mips.tar.gz
+          commit: null
+          size: 3195346
+          sha256: sha256:44cf098b4707f683b99eaf0d0daf82b7193bb9ea1662a0aaffb1ec06b2c8469c
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-mips.tar.gz
+        - name: elasticsearch_exporter-1.2.0.linux-mips64.tar.gz
+          commit: null
+          size: 3177826
+          sha256: sha256:ceadf91302aae53f1a386637f4ba32d5db6a08ab430f8f347ddf99aa4b556605
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-mips64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.linux-mips64le.tar.gz
+          commit: null
+          size: 3097935
+          sha256: sha256:872d7a1f98cd2b94d16b74c2e00bddedc8f4f850fd32ed541ed54f869adbe24c
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-mips64le.tar.gz
+        - name: elasticsearch_exporter-1.2.0.linux-mipsle.tar.gz
+          commit: null
+          size: 3138330
+          sha256: sha256:55a6b250c4a3f51902c33b3c982dd9bdc189477a24e9d21e499cd725dfe8bf93
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-mipsle.tar.gz
+        - name: elasticsearch_exporter-1.2.0.linux-ppc64.tar.gz
+          commit: null
+          size: 3225021
+          sha256: sha256:ca55d3cc70a62bfe31ddaef549518f59a91afaeefcabd9dba37eb0bb21b0e47f
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-ppc64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 3165856
+          sha256: sha256:26a7af225285f0f7ea57f41d705c83c8dea0e0f955d1d0b09c85e87073659af0
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-ppc64le.tar.gz
+        - name: elasticsearch_exporter-1.2.0.linux-s390x.tar.gz
+          commit: null
+          size: 3507813
+          sha256: sha256:77feb157ad8da395b3b7cb0d0514d00524cf68980adc172176dddcfdb1aa599f
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-s390x.tar.gz
+        - name: elasticsearch_exporter-1.2.0.netbsd-386.tar.gz
+          commit: null
+          size: 3384205
+          sha256: sha256:645b299ac426e9e85242379bd0810cefc6095042fe8a18c3b83b631cd960b4f3
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.netbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.2.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 3610475
+          sha256: sha256:dfc72acfe471194c178c2173afd9215200ded63ce05a78175814ce1b4accccb5
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.netbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.netbsd-arm64.tar.gz
+          commit: null
+          size: 3233396
+          sha256: sha256:ac3521d63abc7078370dcff6a3827f0fea406c91a53088671773255cce85518f
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.netbsd-arm64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 3325728
+          sha256: sha256:ab28a84e8f847d3ac6229a35d8eb9d466bb84daa2736a4a2c18dd1ea0e564ac9
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.netbsd-armv6.tar.gz
+        - name: elasticsearch_exporter-1.2.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 3318593
+          sha256: sha256:6de87804af3c69de939ea018c2f8f5186bbf08cbc07cd6df89385b5b67dfbd01
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.netbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.2.0.openbsd-386.tar.gz
+          commit: null
+          size: 3385895
+          sha256: sha256:a7edc555086d393eb5ee3940c464bdf780c1382558d32238df2c1c34bd6ec229
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.openbsd-386.tar.gz
+        - name: elasticsearch_exporter-1.2.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 3626050
+          sha256: sha256:106a3d6b78070dd1ed9fe3d5fcf97d96a5db02e03fa58b855151a54aadcf775f
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.openbsd-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.openbsd-arm64.tar.gz
+          commit: null
+          size: 3242396
+          sha256: sha256:bb5f6dbeb1ba859d1d03c3d94225d5d29084f925be006dfe62b7fead316a600c
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.openbsd-arm64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 3320105
+          sha256: sha256:aa64032e01a32bc0105e0c94b6732026334b2af2799270e931c28c0803d0f5cb
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.openbsd-armv7.tar.gz
+        - name: elasticsearch_exporter-1.2.0.windows-386.tar.gz
+          commit: null
+          size: 3535667
+          sha256: sha256:3c3af5df063627865361e123bc4db6014c0e3f65d628ba43eb1d74024656c0e4
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.windows-386.tar.gz
+        - name: elasticsearch_exporter-1.2.0.windows-386.zip
+          commit: null
+          size: 3616425
+          sha256: sha256:dc35f6065b791a70951e416acab670274565a15704185a269786f78142edf086
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.windows-386.zip
+        - name: elasticsearch_exporter-1.2.0.windows-amd64.tar.gz
+          commit: null
+          size: 3667506
+          sha256: sha256:5607c047480a62fbf3d5b33abc1dff59db47082d980a441f283af8e87e283bdf
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.windows-amd64.tar.gz
+        - name: elasticsearch_exporter-1.2.0.windows-amd64.zip
+          commit: null
+          size: 3726219
+          sha256: sha256:507f4a8adcf4466e46ea6f655eb44e75d45c9cbeb4a03311c045d10a243e4b78
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 4129
+          sha256: sha256:084d982413cd6083bca85134ce626b3d1726186be9728d59395c909ac96c84b7
+          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/sha256sums.txt
     - name: v1.1.0
       commit: null
       timestamp: '2019-08-07T12:58:46'
@@ -155,141 +860,6 @@ software:
           size: 2986
           sha256: sha256:e96f680985322c5f2979d44034c96b98e1b4b1b4286b93c0e849bfc4a77640b4
           url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/sha256sums.txt
-    - name: v1.1.0rc1
-      commit: null
-      timestamp: '2019-02-27T12:38:29'
-      prerelease: true
-      files:
-        - name: elasticsearch_exporter-1.1.0rc1.darwin-386.tar.gz
-          commit: null
-          size: 3479571
-          sha256: sha256:ee4a36105b6ee06c1d0fbef2ec10260e8f7e8a92515c8adc4f240405594b61c3
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.darwin-386.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.darwin-amd64.tar.gz
-          commit: null
-          size: 6321703
-          sha256: sha256:5dca23193441a97365355e86d091cc51db8559693f58e6b8e1570de55d002b42
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.darwin-amd64.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.dragonfly-amd64.tar.gz
-          commit: null
-          size: 3630995
-          sha256: sha256:d4513a1108eedcdd24719b3493705c377dfec61e700d730edb5329efc167e383
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.dragonfly-amd64.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.freebsd-386.tar.gz
-          commit: null
-          size: 3432141
-          sha256: sha256:96e7ef9bfdaa7654ffc8d8ade1f6813487ae2f7d7d679d5462b316d4e950b6a6
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-386.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.freebsd-amd64.tar.gz
-          commit: null
-          size: 3640886
-          sha256: sha256:a170bcc442a429e625c1d6b1b6fd62349652f371d3c03611b704f8180f16c9f1
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-amd64.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.freebsd-armv6.tar.gz
-          commit: null
-          size: 3382951
-          sha256: sha256:9d1dbbed53f4f542c882cf8ceb8df03e8998ab4f8fe99d70a702f1da6a181ab8
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-armv6.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.freebsd-armv7.tar.gz
-          commit: null
-          size: 3378893
-          sha256: sha256:475111229391d6b6e61ee5707b63c27b5922d21c9b7a75eaffcb49da2dd9357c
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.freebsd-armv7.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.linux-386.tar.gz
-          commit: null
-          size: 3427986
-          sha256: sha256:d74327b8b94a4fd8483ee3094154713ef720e861c666629208c3ae9ade4af3ab
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-386.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.linux-amd64.tar.gz
-          commit: null
-          size: 3630078
-          sha256: sha256:dc1ada86082791e3f322eff745d4fa5617971e8c819e436d869ddac0869c3351
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-amd64.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.linux-arm64.tar.gz
-          commit: null
-          size: 3325427
-          sha256: sha256:9bed98d3781a572bd0d6a943cd876c3abecf9720c15f223f7967ea99768e772c
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-arm64.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.linux-armv5.tar.gz
-          commit: null
-          size: 3385506
-          sha256: sha256:ce8056b94ad07e43a7ca8845ed2536dae325a2dee56bff1d5452814e930ad16c
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-armv5.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.linux-armv6.tar.gz
-          commit: null
-          size: 3372792
-          sha256: sha256:a4917235d057a53e6b05f297fd10d98aca515ff01c68002912ca2c64b9e798c5
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-armv6.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.linux-armv7.tar.gz
-          commit: null
-          size: 3368404
-          sha256: sha256:142eaafcb65d8b690d219e8a61757fdadf382fc4e87a3e7b4c49554a6515842d
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-armv7.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.linux-mips64.tar.gz
-          commit: null
-          size: 3265000
-          sha256: sha256:cb2fdb2903909c7602e5ee54c20d23bc90da7a5deb32081ca489a5c7b7e16348
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-mips64.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.linux-mips64le.tar.gz
-          commit: null
-          size: 3197824
-          sha256: sha256:932916b34a495816b06b6a2087424eb81bc8d11a46cb27bc7e38a2c051b494f8
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-mips64le.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.linux-ppc64.tar.gz
-          commit: null
-          size: 3338309
-          sha256: sha256:d9bc93b109abbef66639b7d18552278fc941cad0c155996a53590872dc382ccf
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-ppc64.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.linux-ppc64le.tar.gz
-          commit: null
-          size: 3291954
-          sha256: sha256:9cf7219b1ac82e053c16d3acaf6b2fc431e2ca6496aac83b7435d895792298d6
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.linux-ppc64le.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.netbsd-386.tar.gz
-          commit: null
-          size: 3420941
-          sha256: sha256:5291447dbf65ef334eb93a35bd269b4f9f4d36f6fc905600267c4be362ee0f62
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-386.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.netbsd-amd64.tar.gz
-          commit: null
-          size: 3630094
-          sha256: sha256:e8354647730d99bb35d26e38e5cbfc386ce203d595fbeee24156b983ae3b6607
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-amd64.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.netbsd-armv6.tar.gz
-          commit: null
-          size: 3373233
-          sha256: sha256:9aed61d43b8d8639a006d3b80682fadfa2be53857555110c1d3188e4489048d7
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-armv6.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.netbsd-armv7.tar.gz
-          commit: null
-          size: 3369931
-          sha256: sha256:f59e10a05601f03e067195d70c21b3ff92c04dc856e4e91d2caed354b974e343
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.netbsd-armv7.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.openbsd-386.tar.gz
-          commit: null
-          size: 3422975
-          sha256: sha256:29b84bd6db0a13fe1c3038866e03f624595ae5315a4e3daeb0f91e9ae31ce8c1
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.openbsd-386.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.openbsd-amd64.tar.gz
-          commit: null
-          size: 3631784
-          sha256: sha256:9cdb27fae217c22bad598f36b86280188e5c868ca96fcc8ab43fa79bf791acce
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.openbsd-amd64.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.openbsd-armv7.tar.gz
-          commit: null
-          size: 3371642
-          sha256: sha256:47f1d10c7cc121796271810fa4740fc02596533a9c460936218356cee3d818d8
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.openbsd-armv7.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.windows-386.tar.gz
-          commit: null
-          size: 3369866
-          sha256: sha256:56336fda3eeaf20464860f1fd3251b8999db6c83a55e3b6568da1b5fa9b77659
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.windows-386.tar.gz
-        - name: elasticsearch_exporter-1.1.0rc1.windows-amd64.tar.gz
-          commit: null
-          size: 3582296
-          sha256: sha256:dce1bf9216d6f202c945232615566d655bcff4549e5a75212d950efa68afa0e0
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0rc1/elasticsearch_exporter-1.1.0rc1.windows-amd64.tar.gz
     - name: v1.0.4rc1
       commit: null
       timestamp: '2018-08-17T13:51:57'
@@ -1455,398 +2025,3 @@ software:
           size: 2533084
           sha256: sha256:09b3e5d15b4157f8ceeb38b747a4cda73500cd4c77c02116ca44c179d763c398
           url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.1.1/elasticsearch_exporter-0.1.1.linux-amd64.tar.gz
-    - name: v0.1.0
-      commit: null
-      timestamp: '2015-04-05T18:29:10'
-      prerelease: true
-      files:
-        - name: elasticsearch_exporter-0.1.0.darwin-amd64.tar.gz
-          commit: null
-          size: 2531624
-          sha256: sha256:cdd2e90e89a9a4a7f7f47769a672f109b87676afa2589aac153ec79b76a0d0a5
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.1.0/elasticsearch_exporter-0.1.0.darwin-amd64.tar.gz
-        - name: elasticsearch_exporter-0.1.0.linux-amd64.tar.gz
-          commit: null
-          size: 2533094
-          sha256: sha256:99cb71199508e4ef2a7fa3885ed7fc7896e58aa301f25628fce87ca737a75f0e
-          url: https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v0.1.0/elasticsearch_exporter-0.1.0.linux-amd64.tar.gz
-    - name: v1.2.0
-      commit: null
-      timestamp: '2021-06-10T20:49:44'
-      prerelease: false
-      files:
-        - name: elasticsearch_exporter-1.2.0.aix-ppc64.tar.gz
-          commit: null
-          size: 3553110
-          sha256: sha256:2d57a6ee34a952a026b565644c1e00e2a07ae03d9bc35a14e792a0f71e761ff8
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.aix-ppc64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.darwin-amd64.tar.gz
-          commit: null
-          size: 6541156
-          sha256: sha256:6ccbcf684df65f8c18608bafd7e97c7bf43a368ded8d2daf9f4a592de0b57c2f
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.darwin-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.darwin-arm64.tar.gz
-          commit: null
-          size: 6370480
-          sha256: sha256:f304138a25c1a08667168e2d7778abfbc295af5255895dd5b49dba2439bbb0ec
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.darwin-arm64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.dragonfly-amd64.tar.gz
-          commit: null
-          size: 3617248
-          sha256: sha256:b5f258cd99312df9900dd51828faebc9a61647c2805c18a412c6995ab41ab67d
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.dragonfly-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.freebsd-386.tar.gz
-          commit: null
-          size: 3393460
-          sha256: sha256:a23663e6b7c5462d5de755db7c305365adfb1b9829d8140e78cc58766b25f947
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.freebsd-386.tar.gz
-        - name: elasticsearch_exporter-1.2.0.freebsd-amd64.tar.gz
-          commit: null
-          size: 3626408
-          sha256: sha256:115c32b3c3f1c9f94c90ed3c44d86a6199d7189011143d48baf4f65de89193e3
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.freebsd-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.freebsd-arm64.tar.gz
-          commit: null
-          size: 3239171
-          sha256: sha256:26bd60fa4c9094e65008cb97d4b77897c3cf2e8ad149142f11cabcea1fb5dafb
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.freebsd-arm64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.freebsd-armv6.tar.gz
-          commit: null
-          size: 3330591
-          sha256: sha256:ac8725bfff4983217cf95a2932f61efd7d71e0cda419ed3163275dc135f11982
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.freebsd-armv6.tar.gz
-        - name: elasticsearch_exporter-1.2.0.freebsd-armv7.tar.gz
-          commit: null
-          size: 3327067
-          sha256: sha256:c036b07c527cde36b4ede5314ab9cec7495150f6fada7cf6a201963e278370dc
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.freebsd-armv7.tar.gz
-        - name: elasticsearch_exporter-1.2.0.illumos-amd64.tar.gz
-          commit: null
-          size: 3612106
-          sha256: sha256:297526b8b02aa08449442b194be57e21e6695ae0079ff59fde9c048034426ab3
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.illumos-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.linux-386.tar.gz
-          commit: null
-          size: 3390249
-          sha256: sha256:93053c26781926bb14369099988d4f127ce3bebc13befeaa230b45f78435417e
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-386.tar.gz
-        - name: elasticsearch_exporter-1.2.0.linux-amd64.tar.gz
-          commit: null
-          size: 3612074
-          sha256: sha256:aac3e74301c80376bfd042a681533e8a7e0ae9e4016dd9a69e94716fe19f5602
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.linux-arm64.tar.gz
-          commit: null
-          size: 3251319
-          sha256: sha256:19e6ee2ee6e5b84f94be3a38098850f1eb0ece64e069e07ef49ddb9a7f4f33fb
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-arm64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.linux-armv5.tar.gz
-          commit: null
-          size: 3330703
-          sha256: sha256:82210b2678d51ee2c4d9d34cf81899d76ce2cecb15af1c06acb4f211d3102deb
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-armv5.tar.gz
-        - name: elasticsearch_exporter-1.2.0.linux-armv6.tar.gz
-          commit: null
-          size: 3322949
-          sha256: sha256:10593bebc6d6140e28a0c0bb5e390e9ba71aab532f3fb6e5661706c56edde552
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-armv6.tar.gz
-        - name: elasticsearch_exporter-1.2.0.linux-armv7.tar.gz
-          commit: null
-          size: 3318553
-          sha256: sha256:cece75416f900786fcfe7411d5085a95d9380052c4f2041e8f302fd14b01f155
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-armv7.tar.gz
-        - name: elasticsearch_exporter-1.2.0.linux-mips.tar.gz
-          commit: null
-          size: 3195346
-          sha256: sha256:44cf098b4707f683b99eaf0d0daf82b7193bb9ea1662a0aaffb1ec06b2c8469c
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-mips.tar.gz
-        - name: elasticsearch_exporter-1.2.0.linux-mips64.tar.gz
-          commit: null
-          size: 3177826
-          sha256: sha256:ceadf91302aae53f1a386637f4ba32d5db6a08ab430f8f347ddf99aa4b556605
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-mips64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.linux-mips64le.tar.gz
-          commit: null
-          size: 3097935
-          sha256: sha256:872d7a1f98cd2b94d16b74c2e00bddedc8f4f850fd32ed541ed54f869adbe24c
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-mips64le.tar.gz
-        - name: elasticsearch_exporter-1.2.0.linux-mipsle.tar.gz
-          commit: null
-          size: 3138330
-          sha256: sha256:55a6b250c4a3f51902c33b3c982dd9bdc189477a24e9d21e499cd725dfe8bf93
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-mipsle.tar.gz
-        - name: elasticsearch_exporter-1.2.0.linux-ppc64.tar.gz
-          commit: null
-          size: 3225021
-          sha256: sha256:ca55d3cc70a62bfe31ddaef549518f59a91afaeefcabd9dba37eb0bb21b0e47f
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-ppc64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.linux-ppc64le.tar.gz
-          commit: null
-          size: 3165856
-          sha256: sha256:26a7af225285f0f7ea57f41d705c83c8dea0e0f955d1d0b09c85e87073659af0
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-ppc64le.tar.gz
-        - name: elasticsearch_exporter-1.2.0.linux-s390x.tar.gz
-          commit: null
-          size: 3507813
-          sha256: sha256:77feb157ad8da395b3b7cb0d0514d00524cf68980adc172176dddcfdb1aa599f
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.linux-s390x.tar.gz
-        - name: elasticsearch_exporter-1.2.0.netbsd-386.tar.gz
-          commit: null
-          size: 3384205
-          sha256: sha256:645b299ac426e9e85242379bd0810cefc6095042fe8a18c3b83b631cd960b4f3
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.netbsd-386.tar.gz
-        - name: elasticsearch_exporter-1.2.0.netbsd-amd64.tar.gz
-          commit: null
-          size: 3610475
-          sha256: sha256:dfc72acfe471194c178c2173afd9215200ded63ce05a78175814ce1b4accccb5
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.netbsd-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.netbsd-arm64.tar.gz
-          commit: null
-          size: 3233396
-          sha256: sha256:ac3521d63abc7078370dcff6a3827f0fea406c91a53088671773255cce85518f
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.netbsd-arm64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.netbsd-armv6.tar.gz
-          commit: null
-          size: 3325728
-          sha256: sha256:ab28a84e8f847d3ac6229a35d8eb9d466bb84daa2736a4a2c18dd1ea0e564ac9
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.netbsd-armv6.tar.gz
-        - name: elasticsearch_exporter-1.2.0.netbsd-armv7.tar.gz
-          commit: null
-          size: 3318593
-          sha256: sha256:6de87804af3c69de939ea018c2f8f5186bbf08cbc07cd6df89385b5b67dfbd01
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.netbsd-armv7.tar.gz
-        - name: elasticsearch_exporter-1.2.0.openbsd-386.tar.gz
-          commit: null
-          size: 3385895
-          sha256: sha256:a7edc555086d393eb5ee3940c464bdf780c1382558d32238df2c1c34bd6ec229
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.openbsd-386.tar.gz
-        - name: elasticsearch_exporter-1.2.0.openbsd-amd64.tar.gz
-          commit: null
-          size: 3626050
-          sha256: sha256:106a3d6b78070dd1ed9fe3d5fcf97d96a5db02e03fa58b855151a54aadcf775f
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.openbsd-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.openbsd-arm64.tar.gz
-          commit: null
-          size: 3242396
-          sha256: sha256:bb5f6dbeb1ba859d1d03c3d94225d5d29084f925be006dfe62b7fead316a600c
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.openbsd-arm64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.openbsd-armv7.tar.gz
-          commit: null
-          size: 3320105
-          sha256: sha256:aa64032e01a32bc0105e0c94b6732026334b2af2799270e931c28c0803d0f5cb
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.openbsd-armv7.tar.gz
-        - name: elasticsearch_exporter-1.2.0.windows-386.tar.gz
-          commit: null
-          size: 3535667
-          sha256: sha256:3c3af5df063627865361e123bc4db6014c0e3f65d628ba43eb1d74024656c0e4
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.windows-386.tar.gz
-        - name: elasticsearch_exporter-1.2.0.windows-386.zip
-          commit: null
-          size: 3616425
-          sha256: sha256:dc35f6065b791a70951e416acab670274565a15704185a269786f78142edf086
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.windows-386.zip
-        - name: elasticsearch_exporter-1.2.0.windows-amd64.tar.gz
-          commit: null
-          size: 3667506
-          sha256: sha256:5607c047480a62fbf3d5b33abc1dff59db47082d980a441f283af8e87e283bdf
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.windows-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.0.windows-amd64.zip
-          commit: null
-          size: 3726219
-          sha256: sha256:507f4a8adcf4466e46ea6f655eb44e75d45c9cbeb4a03311c045d10a243e4b78
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/elasticsearch_exporter-1.2.0.windows-amd64.zip
-        - name: sha256sums.txt
-          commit: null
-          size: 4129
-          sha256: sha256:084d982413cd6083bca85134ce626b3d1726186be9728d59395c909ac96c84b7
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.0/sha256sums.txt
-    - name: v1.2.1
-      commit: null
-      timestamp: '2021-06-29T14:05:47'
-      prerelease: false
-      files:
-        - name: elasticsearch_exporter-1.2.1.aix-ppc64.tar.gz
-          commit: null
-          size: 3553202
-          sha256: sha256:614b61dff860b9fa32d7cb2c3db4fdee88eccf55ae8f0d42bc643ae2ed263e12
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.aix-ppc64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.darwin-amd64.tar.gz
-          commit: null
-          size: 6541039
-          sha256: sha256:1418dbcc4d5801e9c3a7d9209dcce69baf396a65bfc313418cbaf9e1d69c955f
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.darwin-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.darwin-arm64.tar.gz
-          commit: null
-          size: 6371820
-          sha256: sha256:cda7c1b80574d2abed4b340f198625aba4b02630918804200b0c479693813b88
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.darwin-arm64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.dragonfly-amd64.tar.gz
-          commit: null
-          size: 3617294
-          sha256: sha256:8913d43d66542b8f9a80213df2be3d69e041d759d483f842ea020378c488ee15
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.dragonfly-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.freebsd-386.tar.gz
-          commit: null
-          size: 3393520
-          sha256: sha256:4e278f02b02946eeb843893fd9e4a9954ba9ed2ad4af56f5ae69be2a67e80cb7
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.freebsd-386.tar.gz
-        - name: elasticsearch_exporter-1.2.1.freebsd-amd64.tar.gz
-          commit: null
-          size: 3622277
-          sha256: sha256:76fc411f1e4b4fcb18fd4b0af1ff469949b6550cbebc107f2916bab4678a6787
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.freebsd-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.freebsd-arm64.tar.gz
-          commit: null
-          size: 3239207
-          sha256: sha256:5a3511e89a996bc67889ce48796103a6b1553b3a2c76669ff3a136de48b08291
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.freebsd-arm64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.freebsd-armv6.tar.gz
-          commit: null
-          size: 3330630
-          sha256: sha256:764cc9fd27f8906e6e3313b1a202bc11e7d87932bd1289a11a6a8aa51f3e6932
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.freebsd-armv6.tar.gz
-        - name: elasticsearch_exporter-1.2.1.freebsd-armv7.tar.gz
-          commit: null
-          size: 3326778
-          sha256: sha256:7497e44feaf5276be16ab8502fc00ccf8c373519d9cfcb019f3b57778809973e
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.freebsd-armv7.tar.gz
-        - name: elasticsearch_exporter-1.2.1.illumos-amd64.tar.gz
-          commit: null
-          size: 3612000
-          sha256: sha256:23c636cf7fbbd32a5737452ed0e9ee6dfb2783da6dca45b6df8c807721eb1082
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.illumos-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.linux-386.tar.gz
-          commit: null
-          size: 3390160
-          sha256: sha256:59896f1f393225e0f7d12e994e2fb8ce1cc936b9527a23b341f9b6d6a35d9d72
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-386.tar.gz
-        - name: elasticsearch_exporter-1.2.1.linux-amd64.tar.gz
-          commit: null
-          size: 3612042
-          sha256: sha256:06ef2140f18f0bb6cd91b63508c81b2ce2971589454add45a1b4163d8320ff1f
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.linux-arm64.tar.gz
-          commit: null
-          size: 3251559
-          sha256: sha256:6fbb0c5e7a28e6f6d0ce13fb9e2b12115eee2d1fbf8bf3ca93c1cc9227f1ec52
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-arm64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.linux-armv5.tar.gz
-          commit: null
-          size: 3330263
-          sha256: sha256:85537949062ff4bfda22efa99b846c799d6b0f01e487d7d73b9487811ccb7e7f
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-armv5.tar.gz
-        - name: elasticsearch_exporter-1.2.1.linux-armv6.tar.gz
-          commit: null
-          size: 3322641
-          sha256: sha256:9ac44cb64ccc90daf4d64f38db0d795681b85b015c540c228df9ed1e9bd4f0dc
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-armv6.tar.gz
-        - name: elasticsearch_exporter-1.2.1.linux-armv7.tar.gz
-          commit: null
-          size: 3318509
-          sha256: sha256:0de0d4d778f1feecc9c361938b257f94979d1168707e3200106a5f3525c0e9c4
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-armv7.tar.gz
-        - name: elasticsearch_exporter-1.2.1.linux-mips.tar.gz
-          commit: null
-          size: 3195657
-          sha256: sha256:9dedf78591d06d3d9531b828665fe473d27782b0d3f1df9e4959e8c06d1b257e
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-mips.tar.gz
-        - name: elasticsearch_exporter-1.2.1.linux-mips64.tar.gz
-          commit: null
-          size: 3176431
-          sha256: sha256:ecde729b36c0d4f81c203ec9d60fc73230750d0120b2f1e5265da92f84d91b40
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-mips64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.linux-mips64le.tar.gz
-          commit: null
-          size: 3098021
-          sha256: sha256:7d0be70eef14a551f24f9ba6b85dae44dba01427436dcd9cae5134e4ff0d45ec
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-mips64le.tar.gz
-        - name: elasticsearch_exporter-1.2.1.linux-mipsle.tar.gz
-          commit: null
-          size: 3138123
-          sha256: sha256:34e1c6555c4ba0ce8626ad62c82c11fc988e29b783e677a88a8ff2bfea9e64f0
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-mipsle.tar.gz
-        - name: elasticsearch_exporter-1.2.1.linux-ppc64.tar.gz
-          commit: null
-          size: 3224911
-          sha256: sha256:05390ac4d38aee83cf9039c4908022056f77b089dd2420e82f93e3bd7f7bdb42
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-ppc64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.linux-ppc64le.tar.gz
-          commit: null
-          size: 3167528
-          sha256: sha256:697e0fbe3345bb34630b947922d97a5a7103b2b50453c0cdc6b3bd1e99c715ab
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-ppc64le.tar.gz
-        - name: elasticsearch_exporter-1.2.1.linux-s390x.tar.gz
-          commit: null
-          size: 3507945
-          sha256: sha256:d960c5545f761d5d716c9cfb50d3fe37ca7d6904f14d4494eb3f106986187d7a
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.linux-s390x.tar.gz
-        - name: elasticsearch_exporter-1.2.1.netbsd-386.tar.gz
-          commit: null
-          size: 3384402
-          sha256: sha256:89a115f8746aef5c0610970dc9d6ba73811162ae6c94f5b420eef0f2d4658a52
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.netbsd-386.tar.gz
-        - name: elasticsearch_exporter-1.2.1.netbsd-amd64.tar.gz
-          commit: null
-          size: 3610918
-          sha256: sha256:6d8c1a79fb59963c8790083c0583681bdefef5bcea944ca8f54145c68fb08ef7
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.netbsd-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.netbsd-arm64.tar.gz
-          commit: null
-          size: 3232465
-          sha256: sha256:5e276d646536309940555450bf8044296d65709b28f023514650bf828d6349b1
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.netbsd-arm64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.netbsd-armv6.tar.gz
-          commit: null
-          size: 3325108
-          sha256: sha256:2d04ec744a638b7397c7dca0abd1eeedddbfb97491e732b87e508e298a465f7f
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.netbsd-armv6.tar.gz
-        - name: elasticsearch_exporter-1.2.1.netbsd-armv7.tar.gz
-          commit: null
-          size: 3318500
-          sha256: sha256:28590797ac79779065769d51d8160ad57667aa3ca5e1c8d2c18465243c8e0a83
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.netbsd-armv7.tar.gz
-        - name: elasticsearch_exporter-1.2.1.openbsd-386.tar.gz
-          commit: null
-          size: 3385811
-          sha256: sha256:41233e7dd46b0589ecc67c165c09afc30bbdb124048e7769831f61f3d09262c1
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.openbsd-386.tar.gz
-        - name: elasticsearch_exporter-1.2.1.openbsd-amd64.tar.gz
-          commit: null
-          size: 3626013
-          sha256: sha256:e3ecaaf7f5a5c8569879913ecd352b496eefa62df7c32ab0aa08dce9838d701d
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.openbsd-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.openbsd-arm64.tar.gz
-          commit: null
-          size: 3241976
-          sha256: sha256:22bfee0ec1a122fb61d62c0ed133eac833a0c92b236e1b05286ad63d396c3815
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.openbsd-arm64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.openbsd-armv7.tar.gz
-          commit: null
-          size: 3320073
-          sha256: sha256:cc7319d8af93f94cec49102a0cc818e0198eb3efdceac4292392c153901a8aae
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.openbsd-armv7.tar.gz
-        - name: elasticsearch_exporter-1.2.1.windows-386.tar.gz
-          commit: null
-          size: 3535630
-          sha256: sha256:3a8b359425cf15c3cde5bb0149719fb3b920d82805d0d355f4180215ab4c5374
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.windows-386.tar.gz
-        - name: elasticsearch_exporter-1.2.1.windows-386.zip
-          commit: null
-          size: 3616059
-          sha256: sha256:dea127ea4c9f21720d2c5c5c0decd9ca58e7f1b659f5b42012cbb402d657857c
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.windows-386.zip
-        - name: elasticsearch_exporter-1.2.1.windows-amd64.tar.gz
-          commit: null
-          size: 3666940
-          sha256: sha256:51c2bdd9dd1e2f1b4ee24a09890258d84a3d457a37876dc0611a23a17e0484bb
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.windows-amd64.tar.gz
-        - name: elasticsearch_exporter-1.2.1.windows-amd64.zip
-          commit: null
-          size: 3726297
-          sha256: sha256:8f7923468c305e9e779e0c946f56148526b8f317d68b09bb61c6f78dd72fbd73
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/elasticsearch_exporter-1.2.1.windows-amd64.zip
-        - name: sha256sums.txt
-          commit: null
-          size: 4129
-          sha256: sha256:6ce74d47a128c733ac077721bc547f51e9b5521e841da269c8af4c5de82ba699
-          url: https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.2.1/sha256sums.txt

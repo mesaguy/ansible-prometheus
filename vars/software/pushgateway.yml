@@ -4,17 +4,232 @@ defaults:
   tgroup: pushgateway
 software:
   name: prometheus/pushgateway
-  release: v1.4.1
+  release: v1.4.2
   prerelease: 0.1.1
   url: https://github.com/prometheus/pushgateway
   source: https://github.com/prometheus/pushgateway.git
-  updated: '2021-09-22T19:53:17.276533'
+  updated: '2021-11-02T21:48:16.463883'
   master:
     commit:
-      sha: 079d8d899a0fc47c3b159df2b3a4ffc555170466
-      timestamp: '2021-09-20T13:28:05'
+      sha: f3032afa9fb027c09a4126b3c75bc1b344f16346
+      timestamp: '2021-11-01T18:59:39'
     files: []
   releases:
+    - name: v1.4.2
+      commit: null
+      timestamp: '2021-10-11T22:12:34'
+      prerelease: false
+      files:
+        - name: pushgateway-1.4.2.aix-ppc64.tar.gz
+          commit: null
+          size: 8510058
+          sha256: sha256:45f81495a5795be165734ce7c56c09d3b1c30b1c2088e626be56ba5925a7caf4
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.aix-ppc64.tar.gz
+        - name: pushgateway-1.4.2.darwin-amd64.tar.gz
+          commit: null
+          size: 9057515
+          sha256: sha256:fcc1638c37637f65488b55aeffc24bfc4c0569d780f3ddda8585dd0375898870
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.darwin-amd64.tar.gz
+        - name: pushgateway-1.4.2.darwin-arm64.tar.gz
+          commit: null
+          size: 8882659
+          sha256: sha256:d3bbd9192cafc0c32c2fc8aec50502608110a036727eeeb639427f6d66d3b69e
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.darwin-arm64.tar.gz
+        - name: pushgateway-1.4.2.dragonfly-amd64.tar.gz
+          commit: null
+          size: 9147441
+          sha256: sha256:c4aa58d4201257214ab8b94c5ecbbf1758d6bf44f670e58e59a6c5b1e65bd01a
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.dragonfly-amd64.tar.gz
+        - name: pushgateway-1.4.2.freebsd-386.tar.gz
+          commit: null
+          size: 8993817
+          sha256: sha256:a474d9c519f1ee78b2685dc78facacd56a095dd278aede35dde55e1629822680
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.freebsd-386.tar.gz
+        - name: pushgateway-1.4.2.freebsd-amd64.tar.gz
+          commit: null
+          size: 9167332
+          sha256: sha256:4808e8c6f8077732a04851d126ef5fa14235f34523a2325d3b4d0b803f2ad5b1
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.freebsd-amd64.tar.gz
+        - name: pushgateway-1.4.2.freebsd-arm64.tar.gz
+          commit: null
+          size: 8623124
+          sha256: sha256:bc0525b08fb432327107010a509f7ec8fbb9a7421fd2a6f91e3b0b10f37f246b
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.freebsd-arm64.tar.gz
+        - name: pushgateway-1.4.2.freebsd-armv6.tar.gz
+          commit: null
+          size: 8674524
+          sha256: sha256:7bdf7fdc255a90cec4aa00373524efcd9a80e5e92cffd727a5828ff9318ce34b
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.freebsd-armv6.tar.gz
+        - name: pushgateway-1.4.2.freebsd-armv7.tar.gz
+          commit: null
+          size: 8669975
+          sha256: sha256:8921b83e18bdf6563211a82e5c6c34d582599c7399b0f4df0de083153c548426
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.freebsd-armv7.tar.gz
+        - name: pushgateway-1.4.2.illumos-amd64.tar.gz
+          commit: null
+          size: 9131208
+          sha256: sha256:2cf60a064f6f2729744f7922774080386aed651cb7dd58e89a6c48b32a3d1399
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.illumos-amd64.tar.gz
+        - name: pushgateway-1.4.2.linux-386.tar.gz
+          commit: null
+          size: 9025762
+          sha256: sha256:8c184aa5366e8b5d72796069986fe2906abf455b9594286be6fc704af743856c
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.linux-386.tar.gz
+        - name: pushgateway-1.4.2.linux-amd64.tar.gz
+          commit: null
+          size: 9189846
+          sha256: sha256:d41df97d93a7564bf8207a8884452eb220d2124d3853682c879907c96b525a6f
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.linux-amd64.tar.gz
+        - name: pushgateway-1.4.2.linux-arm64.tar.gz
+          commit: null
+          size: 8679657
+          sha256: sha256:5eff789501c8075e3090332e937a47b92a663fa5f4543459acad481f91b9c5e4
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.linux-arm64.tar.gz
+        - name: pushgateway-1.4.2.linux-armv5.tar.gz
+          commit: null
+          size: 8717812
+          sha256: sha256:fb9f965d49c6f8bcea1b23bc673b9ef619004aa3b60cf93725967493b0a8790a
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.linux-armv5.tar.gz
+        - name: pushgateway-1.4.2.linux-armv6.tar.gz
+          commit: null
+          size: 8701739
+          sha256: sha256:80e4f9d710635a0735af334a5130349c5c2940ad13b0e9d5d2283a9699d56a7c
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.linux-armv6.tar.gz
+        - name: pushgateway-1.4.2.linux-armv7.tar.gz
+          commit: null
+          size: 8696617
+          sha256: sha256:7d20d62b8b10b832230f3a3f1d86c41adb22c4a0a4d5f1c2b87d60650cb04f3b
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.linux-armv7.tar.gz
+        - name: pushgateway-1.4.2.linux-mips.tar.gz
+          commit: null
+          size: 8680656
+          sha256: sha256:1eea8733201f9945aeaedcb53e7c2b52a159d6a7cf94626cbc730f0dfb0112f2
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.linux-mips.tar.gz
+        - name: pushgateway-1.4.2.linux-mips64.tar.gz
+          commit: null
+          size: 8774115
+          sha256: sha256:968a486f81a0685c233a64ad1b511f08f1cacac242f95fae7f6e0a0a3ae5f8f2
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.linux-mips64.tar.gz
+        - name: pushgateway-1.4.2.linux-mips64le.tar.gz
+          commit: null
+          size: 8550039
+          sha256: sha256:c136c4409d094e85b1714d312057957514446d1853a96d8e3487b67cf8e151df
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.linux-mips64le.tar.gz
+        - name: pushgateway-1.4.2.linux-mipsle.tar.gz
+          commit: null
+          size: 8517262
+          sha256: sha256:cd8fe821cdced3cdfbc88f5e12dafcf50a54e748e809547b5ccfb22ed08285fe
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.linux-mipsle.tar.gz
+        - name: pushgateway-1.4.2.linux-ppc64.tar.gz
+          commit: null
+          size: 8807392
+          sha256: sha256:2b40e1053d9532f9f8f8637905167542748ff032de6c3d1d9e6cb8b7d404f5e0
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.linux-ppc64.tar.gz
+        - name: pushgateway-1.4.2.linux-ppc64le.tar.gz
+          commit: null
+          size: 8594488
+          sha256: sha256:39c0ead11a2d33362ab42140927d711575226f05dcd073e0633779ae7c9365f2
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.linux-ppc64le.tar.gz
+        - name: pushgateway-1.4.2.linux-s390x.tar.gz
+          commit: null
+          size: 9211128
+          sha256: sha256:d82da464347f10fe3d6ffdbd04239c2a06527ab0beefa73d533dac8b6cf9862b
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.linux-s390x.tar.gz
+        - name: pushgateway-1.4.2.netbsd-386.tar.gz
+          commit: null
+          size: 8971050
+          sha256: sha256:ea2ce417dc9cf8eeb512074bc41322a77121fa42c0169165fb9be28e0c0d238d
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.netbsd-386.tar.gz
+        - name: pushgateway-1.4.2.netbsd-amd64.tar.gz
+          commit: null
+          size: 9142997
+          sha256: sha256:eae4576f5d7a4ca3a725252e75400f2675124ac2628ea0fb13519a7eef9e5a13
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.netbsd-amd64.tar.gz
+        - name: pushgateway-1.4.2.netbsd-arm64.tar.gz
+          commit: null
+          size: 8601986
+          sha256: sha256:26cf513ea9049b650d1c27b40d2524321f4b7c740ef131811c7c4b48eb712330
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.netbsd-arm64.tar.gz
+        - name: pushgateway-1.4.2.netbsd-armv6.tar.gz
+          commit: null
+          size: 8650288
+          sha256: sha256:d093306ac093f046dc42af297745e8f19edbd5c1e7ca58a4a0d1b503bc4076f8
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.netbsd-armv6.tar.gz
+        - name: pushgateway-1.4.2.netbsd-armv7.tar.gz
+          commit: null
+          size: 8645852
+          sha256: sha256:b5944c875be2c6f0daf2e4ea1a42778dcb03bb2a79c415e8bb9a0517484eb6e0
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.netbsd-armv7.tar.gz
+        - name: pushgateway-1.4.2.openbsd-386.tar.gz
+          commit: null
+          size: 8966405
+          sha256: sha256:c2910bbdfd7fb94d2da8bbc03e772277ad5ff1ba5b5309eee8878e09ebb46965
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.openbsd-386.tar.gz
+        - name: pushgateway-1.4.2.openbsd-amd64.tar.gz
+          commit: null
+          size: 9158863
+          sha256: sha256:96c5666f38b4d12cae46e79aff3e265b7be532ce7d6e5a20a6934f654502a059
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.openbsd-amd64.tar.gz
+        - name: pushgateway-1.4.2.openbsd-arm64.tar.gz
+          commit: null
+          size: 8629491
+          sha256: sha256:df3eae636326ad3e93057f1431ca1e6a525fa90786cd61018a230a2623f57dcc
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.openbsd-arm64.tar.gz
+        - name: pushgateway-1.4.2.openbsd-armv7.tar.gz
+          commit: null
+          size: 8641016
+          sha256: sha256:0fb277ac8e4c0de5dd4d24dc4a34ea0d60486ca237041101663a1f11a273b9bd
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.openbsd-armv7.tar.gz
+        - name: pushgateway-1.4.2.windows-386.tar.gz
+          commit: null
+          size: 9217039
+          sha256: sha256:7822e13b9a026a25b65c5f54f3e22fb41b23f6d03d13f0f444e090d2c94cc4fa
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.windows-386.tar.gz
+        - name: pushgateway-1.4.2.windows-386.zip
+          commit: null
+          size: 9329701
+          sha256: sha256:541d71dc4cd7113bd4aa16292a5f7542571169d55e8c431a1436e802b8ce35aa
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.windows-386.zip
+        - name: pushgateway-1.4.2.windows-amd64.tar.gz
+          commit: null
+          size: 9305156
+          sha256: sha256:327c629e736d4b667d771e08b74e10e9e98c842e6ecdb36b9d8506a588ce2dc5
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.windows-amd64.tar.gz
+        - name: pushgateway-1.4.2.windows-amd64.zip
+          commit: null
+          size: 9382870
+          sha256: sha256:1e273187c5295136fcd22095023fdb563ab4a4c294894fa83d8217428de9247d
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 3733
+          sha256: sha256:8d25b60f1d3bf145688a7ea69b31d018df41b6c947a4b388a8c158d77bf626ff
+          url: https://github.com/prometheus/pushgateway/releases/download/v1.4.2/sha256sums.txt
+    - name: 0.1.1
+      commit: null
+      timestamp: '2015-05-05T10:43:02'
+      prerelease: true
+      files:
+        - name: pushgateway-0.1.1.darwin-amd64.tar.gz
+          commit: null
+          size: 2768094
+          sha256: sha256:237e4075485b7bfeae20195c3732c7e7a6ef1baf06286f050442d31593208f64
+          url: https://github.com/prometheus/pushgateway/releases/download/0.1.1/pushgateway-0.1.1.darwin-amd64.tar.gz
+        - name: pushgateway-0.1.1.linux-386.tar.gz
+          commit: null
+          size: 2577296
+          sha256: sha256:71a47b994be0b8c9db4d2192d5163152e0b4de8206c823c7df7a6dd6695f6840
+          url: https://github.com/prometheus/pushgateway/releases/download/0.1.1/pushgateway-0.1.1.linux-386.tar.gz
+        - name: pushgateway-0.1.1.linux-amd64.tar.gz
+          commit: null
+          size: 2756681
+          sha256: sha256:4404b383f2fb581ee6ad9fa5b3f054ea030ea2ab420bed6f2fe1df1273a22866
+          url: https://github.com/prometheus/pushgateway/releases/download/0.1.1/pushgateway-0.1.1.linux-amd64.tar.gz
+        - name: pushgateway-0.1.1.linux-arm.tar.gz
+          commit: null
+          size: 2490587
+          sha256: sha256:d2815614ca8246912465ebc9ff435d0041142e91b72865f6e82b9eaf2b573672
+          url: https://github.com/prometheus/pushgateway/releases/download/0.1.1/pushgateway-0.1.1.linux-arm.tar.gz
     - name: v1.4.1
       commit: null
       timestamp: '2021-05-28T15:11:17'
@@ -205,31 +420,6 @@ software:
           size: 3733
           sha256: sha256:a3ed2add996a95445fb6c03eb5268f7e14aac1ed960a0e6d87648960c140f2d4
           url: https://github.com/prometheus/pushgateway/releases/download/v1.4.1/sha256sums.txt
-    - name: 0.1.1
-      commit: null
-      timestamp: '2015-05-05T10:43:02'
-      prerelease: true
-      files:
-        - name: pushgateway-0.1.1.darwin-amd64.tar.gz
-          commit: null
-          size: 2768094
-          sha256: sha256:237e4075485b7bfeae20195c3732c7e7a6ef1baf06286f050442d31593208f64
-          url: https://github.com/prometheus/pushgateway/releases/download/0.1.1/pushgateway-0.1.1.darwin-amd64.tar.gz
-        - name: pushgateway-0.1.1.linux-386.tar.gz
-          commit: null
-          size: 2577296
-          sha256: sha256:71a47b994be0b8c9db4d2192d5163152e0b4de8206c823c7df7a6dd6695f6840
-          url: https://github.com/prometheus/pushgateway/releases/download/0.1.1/pushgateway-0.1.1.linux-386.tar.gz
-        - name: pushgateway-0.1.1.linux-amd64.tar.gz
-          commit: null
-          size: 2756681
-          sha256: sha256:4404b383f2fb581ee6ad9fa5b3f054ea030ea2ab420bed6f2fe1df1273a22866
-          url: https://github.com/prometheus/pushgateway/releases/download/0.1.1/pushgateway-0.1.1.linux-amd64.tar.gz
-        - name: pushgateway-0.1.1.linux-arm.tar.gz
-          commit: null
-          size: 2490587
-          sha256: sha256:d2815614ca8246912465ebc9ff435d0041142e91b72865f6e82b9eaf2b573672
-          url: https://github.com/prometheus/pushgateway/releases/download/0.1.1/pushgateway-0.1.1.linux-arm.tar.gz
     - name: v1.4.0
       commit: null
       timestamp: '2021-01-23T00:57:02'
@@ -2905,158 +3095,3 @@ software:
           size: 2700
           sha256: sha256:125c5506687a7e846af39b221f8124d606efa473e97cde97187324c2ba5e8b40
           url: https://github.com/prometheus/pushgateway/releases/download/v0.4.0/sha256sums.txt
-    - name: v0.3.1
-      commit: null
-      timestamp: '2016-11-03T13:35:00'
-      prerelease: false
-      files:
-        - name: pushgateway-0.3.1.darwin-386.tar.gz
-          commit: null
-          size: 3349414
-          sha256: sha256:576e7ddd62eabb32973dae6fc603d5052810bd6b3cd9dbca4c1f1551fb8b9163
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.darwin-386.tar.gz
-        - name: pushgateway-0.3.1.darwin-amd64.tar.gz
-          commit: null
-          size: 3547561
-          sha256: sha256:9103dd5fdcb6f341d4878478305db8417cdcd60ed0dda37159b9c1aaeec26348
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.darwin-amd64.tar.gz
-        - name: pushgateway-0.3.1.dragonfly-amd64.tar.gz
-          commit: null
-          size: 3534991
-          sha256: sha256:a2da753c5c4ffcf212c362600e8d21863893ab66a9376e1926d8c9c8388abb4e
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.dragonfly-amd64.tar.gz
-        - name: pushgateway-0.3.1.freebsd-386.tar.gz
-          commit: null
-          size: 3336757
-          sha256: sha256:20bafeee108e4716bdd50357d9befcf315d71c4df09fdc5fc711aaa712883b98
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.freebsd-386.tar.gz
-        - name: pushgateway-0.3.1.freebsd-amd64.tar.gz
-          commit: null
-          size: 3537184
-          sha256: sha256:9c28af8709ac132e8c43f73f43513c31ccfe7179047922a71c22a6fea5582183
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.freebsd-amd64.tar.gz
-        - name: pushgateway-0.3.1.freebsd-armv5.tar.gz
-          commit: null
-          size: 3232849
-          sha256: sha256:9102792439eaf2fee57d141a0b98e0adc8eef1a062467b6c0a76865919e6825d
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.freebsd-armv5.tar.gz
-        - name: pushgateway-0.3.1.freebsd-armv6.tar.gz
-          commit: null
-          size: 3215807
-          sha256: sha256:464a4f2b850f05504135150192750401de78e6a0d7910b0ae84ef26a47226024
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.freebsd-armv6.tar.gz
-        - name: pushgateway-0.3.1.freebsd-armv7.tar.gz
-          commit: null
-          size: 3214076
-          sha256: sha256:fb1070b4dee23923842f908a12494a21b3454452263ba3d1efe5c404f6ad5c62
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.freebsd-armv7.tar.gz
-        - name: pushgateway-0.3.1.linux-386.tar.gz
-          commit: null
-          size: 3328967
-          sha256: sha256:c1de56527fa30655a014cca87f04238bfa2723c6c608d458f26da76e7b4f58d8
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.linux-386.tar.gz
-        - name: pushgateway-0.3.1.linux-amd64.tar.gz
-          commit: null
-          size: 3530968
-          sha256: sha256:cfa8938d20c0495fcac007ffe24c6327547483e3090a247bb3f72b37a2584185
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.linux-amd64.tar.gz
-        - name: pushgateway-0.3.1.linux-arm64.tar.gz
-          commit: null
-          size: 3259141
-          sha256: sha256:82c3e15525da13c69e0d2f83aea5a66211f517c8956749694eb49de1ea3f211a
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.linux-arm64.tar.gz
-        - name: pushgateway-0.3.1.linux-armv5.tar.gz
-          commit: null
-          size: 3223094
-          sha256: sha256:26132dc0bf57d48a67db350dc06da1227377e97d25b4b09ef03790401e9da527
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.linux-armv5.tar.gz
-        - name: pushgateway-0.3.1.linux-armv6.tar.gz
-          commit: null
-          size: 3203750
-          sha256: sha256:6056ff47c75652b1f759b507aa1444057855220bdf9cc4bca27205a1e2b52df0
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.linux-armv6.tar.gz
-        - name: pushgateway-0.3.1.linux-armv7.tar.gz
-          commit: null
-          size: 3202627
-          sha256: sha256:277fccb0902f6aee0d3dfc520864941e788d714950357011b00c02b89cfcdd97
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.linux-armv7.tar.gz
-        - name: pushgateway-0.3.1.linux-mips64.tar.gz
-          commit: null
-          size: 3247498
-          sha256: sha256:565ed2d660d20f5ba01e9a846f421354196b86c4e57329679e87af6d5803d094
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.linux-mips64.tar.gz
-        - name: pushgateway-0.3.1.linux-mips64le.tar.gz
-          commit: null
-          size: 3143241
-          sha256: sha256:46960e076cfcea7661ad0915a6b7d67f5a867d700fc8d14adcf1aa53113d7ff9
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.linux-mips64le.tar.gz
-        - name: pushgateway-0.3.1.linux-ppc64.tar.gz
-          commit: null
-          size: 3338350
-          sha256: sha256:c92a95ff36ce4fd85eb2ce5f01f3b3be28fbd7110b0b95f92ed0966b755daeb6
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.linux-ppc64.tar.gz
-        - name: pushgateway-0.3.1.linux-ppc64le.tar.gz
-          commit: null
-          size: 3261486
-          sha256: sha256:501dbaefb9650e66f8daea5291db201dc85813b3c1762d66727ea191d0ca0edb
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.linux-ppc64le.tar.gz
-        - name: pushgateway-0.3.1.netbsd-386.tar.gz
-          commit: null
-          size: 3332532
-          sha256: sha256:7efb3053b490569a9ced6a8c6eebd1fc14748ff50e2ffe894c71b509b2b89cee
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.netbsd-386.tar.gz
-        - name: pushgateway-0.3.1.netbsd-amd64.tar.gz
-          commit: null
-          size: 3532601
-          sha256: sha256:973f8f29b5f75647937d0bd2c39b19278e9dc325273902f2337638872e74e66d
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.netbsd-amd64.tar.gz
-        - name: pushgateway-0.3.1.netbsd-armv5.tar.gz
-          commit: null
-          size: 3229574
-          sha256: sha256:bae03c152f2180a715e367d888c7678b452798b7449aa2a80b82b6c26bacfaef
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.netbsd-armv5.tar.gz
-        - name: pushgateway-0.3.1.netbsd-armv6.tar.gz
-          commit: null
-          size: 3209979
-          sha256: sha256:3aa867b9d5b8af6b7a59c16c4003059747e734c4680916dcfed3ad58635a5b93
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.netbsd-armv6.tar.gz
-        - name: pushgateway-0.3.1.netbsd-armv7.tar.gz
-          commit: null
-          size: 3208703
-          sha256: sha256:3f528f4f3e2a316e53c81703dcc32151b8bf588d5b59dc5c32f1f15f38eb791e
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.netbsd-armv7.tar.gz
-        - name: pushgateway-0.3.1.openbsd-386.tar.gz
-          commit: null
-          size: 3335412
-          sha256: sha256:a2652092d428fdcbdb24c2cf4e016e7794a149ff85c77fb9516021547005c379
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.openbsd-386.tar.gz
-        - name: pushgateway-0.3.1.openbsd-amd64.tar.gz
-          commit: null
-          size: 3534117
-          sha256: sha256:816bb112dd3aaf9aafc047a77b6451bdf053c4a62a17a0f0787df8760da17ae3
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.openbsd-amd64.tar.gz
-        - name: pushgateway-0.3.1.openbsd-armv5.tar.gz
-          commit: null
-          size: 3231817
-          sha256: sha256:dde0f56041b82e9153ae839c096fb2ccc2e1ad928e3a8f34f099d87aa8667eb8
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.openbsd-armv5.tar.gz
-        - name: pushgateway-0.3.1.openbsd-armv6.tar.gz
-          commit: null
-          size: 3212221
-          sha256: sha256:14505150f0ac7c316963ef366e06078ac0ec70b97e7b6801dd0a48977d7127d3
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.openbsd-armv6.tar.gz
-        - name: pushgateway-0.3.1.openbsd-armv7.tar.gz
-          commit: null
-          size: 3211128
-          sha256: sha256:0bb5ef50f0c5efbf8cb4151656babe7fc68a6f4cd446cf4efbc83645afc87a43
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.openbsd-armv7.tar.gz
-        - name: pushgateway-0.3.1.windows-386.tar.gz
-          commit: null
-          size: 3281323
-          sha256: sha256:d45dfa19a2e04c4e7424916f548c60a903cfd368cd51b8c0a159e2b729a3d1db
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.windows-386.tar.gz
-        - name: pushgateway-0.3.1.windows-amd64.tar.gz
-          commit: null
-          size: 3484751
-          sha256: sha256:2d4749dda57792d944afc06b863da0c507016ed7be20338101093397be67ab1f
-          url: https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.windows-amd64.tar.gz

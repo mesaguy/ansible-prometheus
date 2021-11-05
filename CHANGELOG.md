@@ -7,8 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- Upgrade Prometheus (pre-release) from v2.30.0-rc.0 to v2.31.0-rc.1
+- Upgrade Prometheus from v2.30.3 to v2.31.0
+- Upgrade Go from v1.16.8 to v1.16.10
+- Update node-exporter-textfile-collector-scripts
+- Upgrade elasticsearch_exporter_prometheus_community from v1.2.1 to v1.3.0
+- Upgrade mongodb_exporter_percona from v0.20.8 to v0.20.9
+- Upgrade phpfpm_exporter_hipages from v2.0.3 to v2.0.4
+- Upgrade process_exporter_ncabatoff from v0.7.5 to v0.7.9
+- Upgrade pushgateway from v1.4.1 to v1.4.2
+- Upgrade redis_exporter_oliver006 from v1.27.1 to v1.29.0
+- Upgrade squid_exporter_boynux from v1.9.4 to v1.10.0
+- Upgrade statsd_exporter from v0.22.2 to v0.22.3
+- Update metadata to include latest master commits
 
 ## [0.12.42] - 2021-10-06
+
+### Changed
 
 - The ipmi_exporter name changed from ipmi_exporter_soundcloud to ipmi_exporter_prometheus_community
 - Upgrade Go from v1.16.5 to v1.16.8
