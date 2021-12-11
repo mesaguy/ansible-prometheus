@@ -6,9 +6,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade Prometheus (pre-release) from v2.31.0-rc.1 to v2.32.0-rc.1
+- Upgrade Prometheus from v2.31.0 to v2.31.2
+- Upgrade Go from v1.16.10 to v1.16.12
+- Remove powerdns_exporter_ledgr as repo has been deleted by author and PowerDNS has native Prometheus support
+- Upgrade apache_exporter_lusitaniae from v0.10.1 to v0.11.0
+- Upgrade bind_exporter_prometheus_community from v0.4.0 to v0.5.0
+- Upgrade cloudwatch from v0.11.0 to v0.12.1
+- Upgrade graphite_exporter from v0.11.0 to v0.12.0
+- Upgrade haproxy_exporter from v0.12.0 to v0.13.0
+- Upgrade influxdb_exporter from v0.8.0 to v0.8.1
+- Upgrade mongodb_exporter_percona from v0.20.9 to v0.30.0
+- Upgrade node_exporter v1.2.2 to v1.3.1
+- Upgrade ping_exporter_czerwonk from v0.4.7 to v0.4.8
+- Upgrade process_exporter_ncabatoff from v0.7.9 to v0.7.10
+- Upgrade redis_exporter_oliver006 from v1.29.0 to v1.32.0
+- Upgrade statsd_exporter from v0.22.2 to v0.22.4
+
 ## [0.12.43] - 2021-11-05
 
 ### Changed
+
 - Upgrade Prometheus (pre-release) from v2.30.0-rc.0 to v2.31.0-rc.1
 - Upgrade Prometheus from v2.30.3 to v2.31.0
 - Upgrade Go from v1.16.8 to v1.16.10

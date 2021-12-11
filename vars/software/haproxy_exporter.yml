@@ -4,15 +4,15 @@ defaults:
   tgroup: haproxy
 software:
   name: prometheus/haproxy_exporter
-  release: v0.12.0
+  release: v0.13.0
   prerelease: null
   url: https://github.com/prometheus/haproxy_exporter
   source: https://github.com/prometheus/haproxy_exporter.git
-  updated: '2021-11-01T17:25:41.457590'
+  updated: '2021-11-26T20:25:17.370230'
   master:
     commit:
-      sha: b3dd0fef21c4ee55ba53fa1da7e5b4d5cffaabe1
-      timestamp: '2021-10-27T12:05:32'
+      sha: 0e93985ade75e431ec7cba361022571c28f5a893
+      timestamp: '2021-11-26T10:06:30'
     files: []
   releases:
     - name: v0.10.0
@@ -1385,3 +1385,203 @@ software:
           size: 3728
           sha256: sha256:3a7da7a32069e9f16b758173565d83cf708ef9053f9d861fb5dfe8a5517b0747
           url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.12.0/sha256sums.txt
+    - name: v0.13.0
+      commit: null
+      timestamp: '2021-11-26T10:05:59'
+      prerelease: false
+      files:
+        - name: haproxy_exporter-0.13.0.aix-ppc64.tar.gz
+          commit: null
+          size: 6540735
+          sha256: sha256:a2f43bf4b55c5a56757c8e5bf5e7743da76d8bec4934f30fe9ccd2fc58e1a444
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.aix-ppc64.tar.gz
+        - name: haproxy_exporter-0.13.0.darwin-amd64.tar.gz
+          commit: null
+          size: 7223951
+          sha256: sha256:e143e13d23ee86a00231dd90e5bc6a9b0ec350bc9523dad0e3c7779aef2ce058
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.darwin-amd64.tar.gz
+        - name: haproxy_exporter-0.13.0.darwin-arm64.tar.gz
+          commit: null
+          size: 6938582
+          sha256: sha256:47d6d197c78030b039d82034af44bc7041c8e2acf05d91393a90e4c36d1944c1
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.darwin-arm64.tar.gz
+        - name: haproxy_exporter-0.13.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 7221537
+          sha256: sha256:1f93088e5d2bd06be8d4b986708bf9e9c6f8f9f179b8b13e1ef6cc0a80b482ce
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.dragonfly-amd64.tar.gz
+        - name: haproxy_exporter-0.13.0.freebsd-386.tar.gz
+          commit: null
+          size: 6996735
+          sha256: sha256:6c6e00b49d8636436b0e7619ac0f42f01302a08591b45614bb439147a1353a32
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.freebsd-386.tar.gz
+        - name: haproxy_exporter-0.13.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 7249152
+          sha256: sha256:cc7e80c9ac75231723f67a79dbe28fc4633ac7a4ecb7c29c2f0d7adab3758cc3
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.freebsd-amd64.tar.gz
+        - name: haproxy_exporter-0.13.0.freebsd-arm64.tar.gz
+          commit: null
+          size: 6741454
+          sha256: sha256:f6410ca8f4840c6d2c3e94e86d185e1557e4f092133d8e86bfe8263f2422fe44
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.freebsd-arm64.tar.gz
+        - name: haproxy_exporter-0.13.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 6718875
+          sha256: sha256:86f99cf88b88062d6cda47375530f641ecaae56ed864a32dcd5e8750fc494f4e
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.freebsd-armv6.tar.gz
+        - name: haproxy_exporter-0.13.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 6713759
+          sha256: sha256:04b5172e131220b01d6c87f3f2cadfa263c928ae1c4a81d74d373560b197810c
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.freebsd-armv7.tar.gz
+        - name: haproxy_exporter-0.13.0.illumos-amd64.tar.gz
+          commit: null
+          size: 7212175
+          sha256: sha256:042fabeb8b8b193d78c91078b50f92ceafd183e1740f9e1b72f44134cc7afef8
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.illumos-amd64.tar.gz
+        - name: haproxy_exporter-0.13.0.linux-386.tar.gz
+          commit: null
+          size: 7025858
+          sha256: sha256:eee66075e51d046d78b6491c6fa655a709a4329f302afbe8f56b320c19254499
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.linux-386.tar.gz
+        - name: haproxy_exporter-0.13.0.linux-amd64.tar.gz
+          commit: null
+          size: 7359219
+          sha256: sha256:f3ae4f6f84a1194c6361a2f994ff267eb75d5aeb2e2d5cb37c42ff246a47e64b
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.linux-amd64.tar.gz
+        - name: haproxy_exporter-0.13.0.linux-arm64.tar.gz
+          commit: null
+          size: 6772341
+          sha256: sha256:8bcffc1f3709d936a78d032b8d7ccbde50182b6e40d8c48407dd2e7f266bb560
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.linux-arm64.tar.gz
+        - name: haproxy_exporter-0.13.0.linux-armv5.tar.gz
+          commit: null
+          size: 6743180
+          sha256: sha256:81a973be1b365bfb01c15cf4f9c6807d2cec156e163330dbd686b2c919d29e7b
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.linux-armv5.tar.gz
+        - name: haproxy_exporter-0.13.0.linux-armv6.tar.gz
+          commit: null
+          size: 6740386
+          sha256: sha256:227e05fe43f25805c8a2d08f4df0fc741bfe0e810948c8563522d9ba7a1045b5
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.linux-armv6.tar.gz
+        - name: haproxy_exporter-0.13.0.linux-armv7.tar.gz
+          commit: null
+          size: 6736689
+          sha256: sha256:63930f756f0d7a1c12793ca9cb7ee2ea585e63a4c346fc4876031490c85d51ab
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.linux-armv7.tar.gz
+        - name: haproxy_exporter-0.13.0.linux-mips.tar.gz
+          commit: null
+          size: 6706224
+          sha256: sha256:265b366f2239ab00fc56befd5e84a07cb06270887fe4e69ab9cf337f07ed3993
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.linux-mips.tar.gz
+        - name: haproxy_exporter-0.13.0.linux-mips64.tar.gz
+          commit: null
+          size: 6804309
+          sha256: sha256:2d1ebf8e7571982b8c7077c56fe6038de16bb2143abd065aebe178951c341e6c
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.linux-mips64.tar.gz
+        - name: haproxy_exporter-0.13.0.linux-mips64le.tar.gz
+          commit: null
+          size: 6583978
+          sha256: sha256:e0c4ef10865487b63af473616a796b94651e3783b61edc3ef5527b0a65b9e24e
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.linux-mips64le.tar.gz
+        - name: haproxy_exporter-0.13.0.linux-mipsle.tar.gz
+          commit: null
+          size: 6556859
+          sha256: sha256:4f11bc9ce5367c555c03aadb303474b595fe9c171f07f43c6051522597e645e6
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.linux-mipsle.tar.gz
+        - name: haproxy_exporter-0.13.0.linux-ppc64.tar.gz
+          commit: null
+          size: 6824544
+          sha256: sha256:1e9004fa0fc87cd27e3fb41f20a06033bd30cb4a8af66ac98624a3be9d5f7eb0
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.linux-ppc64.tar.gz
+        - name: haproxy_exporter-0.13.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 6639285
+          sha256: sha256:edbd48db7c5e949477054e6dd56ebdb8ae8e9d69ff1d8f1009fbeb42075fd941
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.linux-ppc64le.tar.gz
+        - name: haproxy_exporter-0.13.0.linux-s390x.tar.gz
+          commit: null
+          size: 7177419
+          sha256: sha256:3faaa39fc9762b8a3195cf3edb8da2a7f71a12f655e5bae96cb2719ae222f9dd
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.linux-s390x.tar.gz
+        - name: haproxy_exporter-0.13.0.netbsd-386.tar.gz
+          commit: null
+          size: 6971337
+          sha256: sha256:7a5f07519ecb0611be4b81f2169b20b9470dfcf29ba1772d7dc9c0f92a2553e7
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.netbsd-386.tar.gz
+        - name: haproxy_exporter-0.13.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 7218070
+          sha256: sha256:0b125803d4161b16039a3cf55126e49a31cef8446bd33216d8ca3e1b24a97c2a
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.netbsd-amd64.tar.gz
+        - name: haproxy_exporter-0.13.0.netbsd-arm64.tar.gz
+          commit: null
+          size: 6721379
+          sha256: sha256:8c1bb8a11aaa21fb31c11d06bd0d413a853c8096d1c22d5d6ef1b70bbc9a96d7
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.netbsd-arm64.tar.gz
+        - name: haproxy_exporter-0.13.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 6691084
+          sha256: sha256:28d060e8e7fc505cc7bad6f07a2bc6223c7be4bc6e6444a1708f9df3ad239364
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.netbsd-armv6.tar.gz
+        - name: haproxy_exporter-0.13.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 6687003
+          sha256: sha256:11d7d7c9b128b147839dcc1f2246fa9057e31bf12ec358ab476641289456db68
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.netbsd-armv7.tar.gz
+        - name: haproxy_exporter-0.13.0.openbsd-386.tar.gz
+          commit: null
+          size: 6984618
+          sha256: sha256:648733e5e8005a00065cf49712f424e87a584ca6c715714ef608bbe1ca0c706f
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.openbsd-386.tar.gz
+        - name: haproxy_exporter-0.13.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 7234506
+          sha256: sha256:b2f35fedff8514c43b489360d005dee92475c5be128b6d384aacb842fb9f78a3
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.openbsd-amd64.tar.gz
+        - name: haproxy_exporter-0.13.0.openbsd-arm64.tar.gz
+          commit: null
+          size: 6743808
+          sha256: sha256:6088a37f7653d1208c0e735921467fe141049111069fe690cf5c988bfdf0674e
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.openbsd-arm64.tar.gz
+        - name: haproxy_exporter-0.13.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 6701402
+          sha256: sha256:31829cd10971da04b468a12f7acf4e1f447189e729fd9497526c1d803f34d844
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.openbsd-armv7.tar.gz
+        - name: haproxy_exporter-0.13.0.windows-386.tar.gz
+          commit: null
+          size: 7211287
+          sha256: sha256:9ba36c0ef5f6a4d0e9b88b99ab66c3640c88a2ea29625b53162dd74f5087d3a3
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.windows-386.tar.gz
+        - name: haproxy_exporter-0.13.0.windows-386.zip
+          commit: null
+          size: 7309040
+          sha256: sha256:8104268ed8861717c9d12a118b7b21b63c3a3c85c5106eeb9f15343d1a024ad1
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.windows-386.zip
+        - name: haproxy_exporter-0.13.0.windows-amd64.tar.gz
+          commit: null
+          size: 7454903
+          sha256: sha256:ed8590498e9dfcd48a5a30758982cf5d1fcf8dae5a14975ab2cf2ea26dbcda86
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.windows-amd64.tar.gz
+        - name: haproxy_exporter-0.13.0.windows-amd64.zip
+          commit: null
+          size: 7537419
+          sha256: sha256:093fb114cf5349de2ee60c2012ad124d9ed41656f29a32c37703c1fb5b0365ff
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.windows-amd64.zip
+        - name: haproxy_exporter-0.13.0.windows-arm64.tar.gz
+          commit: null
+          size: 6863960
+          sha256: sha256:3ef2737235fc0f436cc781bddcd1a3f06921a9ed72c0ffc2229b44c2da38376c
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.windows-arm64.tar.gz
+        - name: haproxy_exporter-0.13.0.windows-arm64.zip
+          commit: null
+          size: 6949047
+          sha256: sha256:4206ebe788ecc63566e64e141550c811a98d753c8275d13c35a397f38bd6c610
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/haproxy_exporter-0.13.0.windows-arm64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 4168
+          sha256: sha256:800efb395898b29fe0c2ce1148197effff83fce5baf6769719d63c46d3817502
+          url: https://github.com/prometheus/haproxy_exporter/releases/download/v0.13.0/sha256sums.txt

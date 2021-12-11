@@ -86,7 +86,6 @@ See each exporter's usage page for more details:
 |[phpfpm_exporter_hipages](https://github.com/hipages/php-fpm_exporter)                                        | [usage](docs/phpfpm_exporter_hipages.md)                     | hipages              | Yes       |
 |[ping_exporter_czerwonk](https://github.com/czerwonk/ping_exporter)                                           | [usage](docs/ping_exporter_czerwonk.md)                      | czerwonk             | Yes       |
 |[postgres_exporter_prometheus_community ](https://github.com/prometheus-community/postgres_exporter)          | [usage](docs/postgres_exporter_prometheus_community.md)      | prometheus-community | Yes       |
-|[powerdns_exporter_ledgr](https://github.com/ledgr/powerdns_exporter)                                         | [usage](docs/powerdns_exporter_ledgr.md)                     | ledgr                | Partial   |
 |[process_exporter_ncabatoff](https://github.com/ncabatoff/process-exporter)                                   | [usage](docs/process_exporter_ncabatoff.md)                  | ncabatoff            | Yes       |
 |[proxysql_exporter_percona](https://github.com/percona/proxysql_exporter)                                     | [usage](docs/proxysql_exporter_percona.md)                   | percona              | Yes       |
 |[rabbitmq_exporter_kbudde](https://github.com/kbudde/rabbitmq_exporter)                                       | [usage](docs/rabbitmq_exporter_kbudde.md)                    | kbudde               | Yes       |
@@ -178,7 +177,6 @@ prometheus_components:
  - phpfpm_exporter_hipages
  - ping_exporter_czerwonk
  - postgres_exporter_prometheus_community
- - powerdns_exporter_ledgr
  - process_exporter_ncabatoff
  - proxysql_exporter_percona
  - rabbitmq_exporter_kbudde
