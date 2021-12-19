@@ -285,6 +285,30 @@ platforms:
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /lib/systemd/systemd
 
+  - name: devuan-2
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/devuan-2-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+      run_command: /sbin/init
+
+  - name: devuan-3
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/devuan-3-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+      run_command: /sbin/init
+
+  - name: devuan-4
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/devuan-4-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+      run_command: /sbin/init
+
   - name: fedora-20
     driver_config:
       build_options:

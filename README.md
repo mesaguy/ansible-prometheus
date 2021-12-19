@@ -17,18 +17,19 @@ This role can register client exporters with the Prometheus server/s automatical
 ### Supported Operating Systems, Distributions, and Architectures
 This module is intended to support as many distributions and architectures as possible. The following table specifies which combinations are currently tested. Most exporters will also work on ARM architectures:
 
-| OS             | Release                                 | Architectures     |
-|----------------|-----------------------------------------|-------------------|
-|Alpine          |3.2 through 3.11, edge                   | x86_64 (amd64)    |
-|AmazonLinux     |1 and 2                                  | x86_64 (amd64)    |
-|ArchLinux       |Current                                  | x86_64 (amd64)    |
-|Enterprise Linux|6, 7, 8                                  | x86_64 (amd64)    |
-|Fedora          |20 through 31, rawhide                   | x86_64 (amd64)    |
-|Gentoo (openrc) |Current                                  | x86_64 (amd64)    |
-|Gentoo (systemd)|Current                                  | x86_64 (amd64)    |
-|OpenSUSE        |13.1 through tumbleweed                  | x86_64 (amd64)    |
-|Oracle Linux    |6, 7, 8                                  | x86_64 (amd64)    |
-|Ubuntu          |16.04 through 20.04                      | x86_64 (amd64)    |
+| OS               | Release                 | Architectures  |
+|------------------|-------------------------|----------------|
+| Alpine           | 3.2 through 3.11, edge  | x86_64 (amd64) |
+| AmazonLinux      | 1 and 2                 | x86_64 (amd64) |
+| ArchLinux        | Current                 | x86_64 (amd64) |
+| Devuan           | 2 through 4             | x86_64 (amd64) |
+| Enterprise Linux | 6, 7, 8                 | x86_64 (amd64) |
+| Fedora           | 20 through 31, rawhide  | x86_64 (amd64) |
+| Gentoo (openrc)  | Current                 | x86_64 (amd64) |
+| Gentoo (systemd) | Current                 | x86_64 (amd64) |
+| OpenSUSE         | 13.1 through tumbleweed | x86_64 (amd64) |
+| Oracle Linux     | 6, 7, 8                 | x86_64 (amd64) |
+| Ubuntu           | 16.04 through 20.04     | x86_64 (amd64) |
 
 ### Managed Prometheus software
 The following core Prometheus software is supported in addition to the list of exporters below. This software is fully tested on all supported OS, distributions, and architectures.
