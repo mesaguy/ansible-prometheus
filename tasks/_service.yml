@@ -23,6 +23,7 @@
   notify:
     - Restart Prometheus service
   when: prometheus_software_env_vars is defined and prometheus_software_env_vars
+  no_log: True
 
 - name: Include task to setup {{ prometheus_software_name_version }} {{ ansible_service_mgr }} service
   include_tasks: '_service_mgr_{{ ansible_service_mgr | regex_replace("^(openrc|upstart)$", "init") }}.yml'
