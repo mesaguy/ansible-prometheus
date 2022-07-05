@@ -52,7 +52,7 @@
   include_tasks: '_setup_firewall.yml'
   when:
     - (prometheus_manage_client_firewalld | bool or prometheus_manage_client_iptables | bool or prometheus_manage_client_iptables_raw | bool)
-    - prometheus_software_port_num | bool
+    - (prometheus_software_port_num)
     - prometheus_server_ips|length >= 1
 
 - name: Test that {{ prometheus_software_service_name }} {{ inventory_hostname }}:{{ prometheus_software_port_num }} is accessible (software is running)
@@ -64,7 +64,7 @@
     timeout: 45
   when:
     - prometheus_software_service_test | bool
-    - prometheus_software_port_num | bool
+    - (prometheus_software_port_num)
 
 - name: Test {{ prometheus_software_service_name }} {{ prometheus_testhost }}:{{ prometheus_software_port_num }} is reachable from Prometheus servers
   wait_for:
@@ -79,7 +79,7 @@
   with_items: '{{ prometheus_servers | list }}'
   when:
     - prometheus_software_server_side_connect_test | bool
-    - prometheus_software_port_num | bool
+    - (prometheus_software_port_num)
     - prometheus_servers is defined and prometheus_servers | list
 
 - block:
