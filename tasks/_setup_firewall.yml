@@ -1,7 +1,7 @@
 ---
 - name: Allow incoming prometheus server connections to {{ prometheus_software_name }}:{{ prometheus_software_port_num }} via firewalld
   become: true
-  firewalld:
+  ansible.posix.firewalld:
     immediate: true
     permanent: true
     rich_rule:

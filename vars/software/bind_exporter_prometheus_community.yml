@@ -4,15 +4,15 @@ defaults:
   tgroup: bind
 software:
   name: prometheus-community/bind_exporter
-  release: v0.3.0
+  release: v0.5.0
   prerelease: v0.2.0-dev1
   url: https://github.com/prometheus-community/bind_exporter
   source: https://github.com/prometheus-community/bind_exporter.git
-  updated: '2020-10-16T23:52:47.201872'
+  updated: '2021-12-11T21:49:07.444065'
   master:
     commit:
-      sha: 85c1f83bceb928937e64d11e9c44f9b96f5d714d
-      timestamp: '2020-10-16T18:42:11'
+      sha: 93a6676e010dd22300ccfb49d582bd16907c0f8a
+      timestamp: '2021-11-30T09:09:53'
     files: []
   releases:
     - name: v0.3.0
@@ -192,3 +192,373 @@ software:
           size: 8875476
           sha256: sha256:0429c35273d52a7c6d9cbc1de5f45dc217a457d96c066370999be605eeb1d985
           url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.2.0-dev/bind_exporter
+    - name: v0.4.0
+      commit: null
+      timestamp: '2021-01-15T14:02:07'
+      prerelease: false
+      files:
+        - name: bind_exporter-0.4.0.aix-ppc64.tar.gz
+          commit: null
+          size: 7152674
+          sha256: sha256:c8e7d46ad3dfa4390f2018881541817f7ceecdeb90a385495dca080b15748e2c
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.aix-ppc64.tar.gz
+        - name: bind_exporter-0.4.0.darwin-amd64.tar.gz
+          commit: null
+          size: 7562298
+          sha256: sha256:e8f87d1a2ff5611d4084f2ac46b69ea57ba656459d04e360ac6698dca5f1b235
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.darwin-amd64.tar.gz
+        - name: bind_exporter-0.4.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 7643627
+          sha256: sha256:d018889f75889dc3a0a5b5ecf50bc1d55950caa0998d4ce8d8d9935a16d0f172
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.dragonfly-amd64.tar.gz
+        - name: bind_exporter-0.4.0.freebsd-386.tar.gz
+          commit: null
+          size: 7427215
+          sha256: sha256:9c745260bb48f87e9f91cfe5acd04a52473b6add29caeff1ed695704e5aa7ba3
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.freebsd-386.tar.gz
+        - name: bind_exporter-0.4.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 7669410
+          sha256: sha256:5b8c7ceff3b75b702b6ad2900f018075f4f4036946656456ce588e05b38a0ecb
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.freebsd-amd64.tar.gz
+        - name: bind_exporter-0.4.0.freebsd-arm64.tar.gz
+          commit: null
+          size: 7107313
+          sha256: sha256:d3e8f6c1e55ad48dbe3514857d305babc8fed46f96f585aeeecfb66eb8c756ba
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.freebsd-arm64.tar.gz
+        - name: bind_exporter-0.4.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 7097894
+          sha256: sha256:6b77b5d2e7f9f2a0b4b3c648c42d8d1bf3a0c03d7112312a3118ef2cded57026
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.freebsd-armv6.tar.gz
+        - name: bind_exporter-0.4.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 7091340
+          sha256: sha256:3e5132b63bc40759a439b4087067531aa41e35633b408411d5a4062cd6cf1178
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.freebsd-armv7.tar.gz
+        - name: bind_exporter-0.4.0.linux-386.tar.gz
+          commit: null
+          size: 7456006
+          sha256: sha256:1ef9af0eb3434310abca70f3f45cb31f94406c76b00b8b53632ca11db6317a2e
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.linux-386.tar.gz
+        - name: bind_exporter-0.4.0.linux-amd64.tar.gz
+          commit: null
+          size: 7696807
+          sha256: sha256:4f057ecb5250c935e6e64be23e095fea57a1abe6fafaab8de4d7ce7fdbfbb42a
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.linux-amd64.tar.gz
+        - name: bind_exporter-0.4.0.linux-arm64.tar.gz
+          commit: null
+          size: 7162405
+          sha256: sha256:544ccb576ecf3f15027a5a27a9716fc66a116adf87d66e20aa4373282d38c744
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.linux-arm64.tar.gz
+        - name: bind_exporter-0.4.0.linux-armv5.tar.gz
+          commit: null
+          size: 7122314
+          sha256: sha256:3fd88ca965d481871e8ee373509390a6ae8fae6d8f5ae0ef6a70804e884c60e8
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.linux-armv5.tar.gz
+        - name: bind_exporter-0.4.0.linux-armv6.tar.gz
+          commit: null
+          size: 7121091
+          sha256: sha256:83d5e71418e51b0ad28a1707a2570deea1b510636045343f982021b282a9ab3a
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.linux-armv6.tar.gz
+        - name: bind_exporter-0.4.0.linux-armv7.tar.gz
+          commit: null
+          size: 7116378
+          sha256: sha256:9b865fbe08660ae1eb17f09e4e0a9890b028d7fd750fff8e619d79eae99f84f0
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.linux-armv7.tar.gz
+        - name: bind_exporter-0.4.0.linux-mips.tar.gz
+          commit: null
+          size: 7131511
+          sha256: sha256:abbcbcb28764e9ce89b92cf3a252189b1a25b564c438a77c4d455cfdcb4c27ac
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.linux-mips.tar.gz
+        - name: bind_exporter-0.4.0.linux-mips64.tar.gz
+          commit: null
+          size: 7262164
+          sha256: sha256:ea287dda862b4297824a8494c6d27babc8ffc7f174ae97bb70c0538571a3ecf9
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.linux-mips64.tar.gz
+        - name: bind_exporter-0.4.0.linux-mips64le.tar.gz
+          commit: null
+          size: 7037487
+          sha256: sha256:796659565fccf829be9ffc07f36a0e3c88043dce62c14c3e05882e80b2c757c3
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.linux-mips64le.tar.gz
+        - name: bind_exporter-0.4.0.linux-mipsle.tar.gz
+          commit: null
+          size: 6967285
+          sha256: sha256:6fe44c172a49b9c437c589fd15d62e500439af309b5177c922e92e29a8f88288
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.linux-mipsle.tar.gz
+        - name: bind_exporter-0.4.0.linux-ppc64.tar.gz
+          commit: null
+          size: 7302138
+          sha256: sha256:6efd28b15d3db5292cf8475d99175bc14ce92d12a8981e12b0810c510008b4e2
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.linux-ppc64.tar.gz
+        - name: bind_exporter-0.4.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 7092522
+          sha256: sha256:eeee7fce65f74d64da270f4b1ccda5cbfe5ad3abfedfa22cfe7d9789eff3f5c6
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.linux-ppc64le.tar.gz
+        - name: bind_exporter-0.4.0.linux-s390x.tar.gz
+          commit: null
+          size: 7699764
+          sha256: sha256:def1f005ac1b854736564aaeea368b89ad4a525b90101c683886505b38c58042
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.linux-s390x.tar.gz
+        - name: bind_exporter-0.4.0.netbsd-386.tar.gz
+          commit: null
+          size: 7399920
+          sha256: sha256:2126be3a3442e233e63136aff0ba8ad5c428501e41fcb67656838bc8747905bb
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.netbsd-386.tar.gz
+        - name: bind_exporter-0.4.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 7642095
+          sha256: sha256:ee5720bef998541aac9e4fbd72fde00006e8b5919dd1db5a2e1e2b2852a10a4e
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.netbsd-amd64.tar.gz
+        - name: bind_exporter-0.4.0.netbsd-arm64.tar.gz
+          commit: null
+          size: 7082111
+          sha256: sha256:3ee8973d0d3633dc2297c87e815f3cb8c131cdf214c8b5881ff41a1f77cc6c37
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.netbsd-arm64.tar.gz
+        - name: bind_exporter-0.4.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 7076390
+          sha256: sha256:df94072dcbf2d8a5a0adf7fa3bf84d08669adf9703557143820e029fd999ec84
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.netbsd-armv6.tar.gz
+        - name: bind_exporter-0.4.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 7071006
+          sha256: sha256:e2866210fc27d407e10c69410d1d4d664aa44c177de078ea511b7b45857460da
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.netbsd-armv7.tar.gz
+        - name: bind_exporter-0.4.0.openbsd-386.tar.gz
+          commit: null
+          size: 7397622
+          sha256: sha256:37a496a04a3d468ea17d38754b7d8f0c816fe8153ad132de747f1bf324809276
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.openbsd-386.tar.gz
+        - name: bind_exporter-0.4.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 7647142
+          sha256: sha256:aafebdc7fadd6404d1656fd551a051ab9e25d11387c7d0097988669af7a9bdfe
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.openbsd-amd64.tar.gz
+        - name: bind_exporter-0.4.0.openbsd-arm64.tar.gz
+          commit: null
+          size: 7080579
+          sha256: sha256:5cd8a8428a7f0142c6b84bb48b9f0a42b6160222aaf0eb2a035c3f9b722b0d7d
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.openbsd-arm64.tar.gz
+        - name: bind_exporter-0.4.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 7069293
+          sha256: sha256:22d1ca2d73ad3fd8c1da9bdba24a44e9d6e59d99ff99a3fb1bd0353c51e0801a
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.openbsd-armv7.tar.gz
+        - name: bind_exporter-0.4.0.windows-386.tar.gz
+          commit: null
+          size: 7532855
+          sha256: sha256:d3496a7df02f7ec0175bdafe1db63d7c7360b0bc228715eb6319f5e56b163e69
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.windows-386.tar.gz
+        - name: bind_exporter-0.4.0.windows-386.zip
+          commit: null
+          size: 7651227
+          sha256: sha256:f1cdae3c29e27aad63108a334692abc7251b691afdb898ce050094c7121cb374
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.windows-386.zip
+        - name: bind_exporter-0.4.0.windows-amd64.tar.gz
+          commit: null
+          size: 7681723
+          sha256: sha256:8a821bd0e634b0103cc603b4a29c15daa7b22d0aa9f4d7ceb490f30a438e8516
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.windows-amd64.tar.gz
+        - name: bind_exporter-0.4.0.windows-amd64.zip
+          commit: null
+          size: 7780566
+          sha256: sha256:8ef945dbf9103dc747ccd2aff837497e78d2690b22b7e8f9beb92a0acfdd896e
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/bind_exporter-0.4.0.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 3592
+          sha256: sha256:3c34d5e8a1a9a9ce6f8d6ca7f9623d0ff29e312cfe96e98b5f0e21c7dd18ab2b
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.4.0/sha256sums.txt
+    - name: v0.5.0
+      commit: null
+      timestamp: '2021-11-23T09:13:54'
+      prerelease: false
+      files:
+        - name: bind_exporter-0.5.0.aix-ppc64.tar.gz
+          commit: null
+          size: 6660784
+          sha256: sha256:4d13da9616a0b220f50ce0989b9a3085327d8d6b5215bac928da4d4114287d6f
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.aix-ppc64.tar.gz
+        - name: bind_exporter-0.5.0.darwin-amd64.tar.gz
+          commit: null
+          size: 7351843
+          sha256: sha256:d6bf10bd916c72862df1259a6b6a49c822cca0c634796e3d4e13fb85530db212
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.darwin-amd64.tar.gz
+        - name: bind_exporter-0.5.0.darwin-arm64.tar.gz
+          commit: null
+          size: 7058946
+          sha256: sha256:1c8deed317c80371a98ac1233bef00af2b09e15885f658e8cfa1b0659a11b2b1
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.darwin-arm64.tar.gz
+        - name: bind_exporter-0.5.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 7349444
+          sha256: sha256:fa72ceb262ec7769dc8f4dc02e3565e6cb5f8ee55d35da4d3269c5705c27584a
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.dragonfly-amd64.tar.gz
+        - name: bind_exporter-0.5.0.freebsd-386.tar.gz
+          commit: null
+          size: 7121367
+          sha256: sha256:e2c3e784f6abbe8e84f442f1963f9aa3886b95012f5caaa9cdee05b516d50fbf
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.freebsd-386.tar.gz
+        - name: bind_exporter-0.5.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 7368871
+          sha256: sha256:0481093ff6c91f80de13a8794236650e2643fd6cf6e7d11bbd51683600be3d09
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.freebsd-amd64.tar.gz
+        - name: bind_exporter-0.5.0.freebsd-arm64.tar.gz
+          commit: null
+          size: 6860934
+          sha256: sha256:de303e8547eb2a22f41a4ab82b0e8fe0c97d88ff5615a3677d7a71d6300bd474
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.freebsd-arm64.tar.gz
+        - name: bind_exporter-0.5.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 6837605
+          sha256: sha256:ca97b1a93c836d837155cf0b92da60fd1151528d3b5015c12443ea0f90351676
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.freebsd-armv6.tar.gz
+        - name: bind_exporter-0.5.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 6829644
+          sha256: sha256:d2fe16bd5906a72715684a8a142c7ebc98ce1cd27af696de9ea47080eb8f6a1f
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.freebsd-armv7.tar.gz
+        - name: bind_exporter-0.5.0.illumos-amd64.tar.gz
+          commit: null
+          size: 7335603
+          sha256: sha256:44e33af529aa0d8b4a83619b9d5ff71c264e19eda3aebf070021815caf022b6d
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.illumos-amd64.tar.gz
+        - name: bind_exporter-0.5.0.linux-386.tar.gz
+          commit: null
+          size: 7151695
+          sha256: sha256:3312ff75e72b93ad97c63b6a68aaa7d950c19cf0d5a12c9f0566ce92fd4ce8b8
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.linux-386.tar.gz
+        - name: bind_exporter-0.5.0.linux-amd64.tar.gz
+          commit: null
+          size: 7486497
+          sha256: sha256:c1279ada69396b52f75be4b7233f6310c26785951326485402072bb3e3a94a5b
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.linux-amd64.tar.gz
+        - name: bind_exporter-0.5.0.linux-arm64.tar.gz
+          commit: null
+          size: 6889559
+          sha256: sha256:a6b3b9a5574a9ef826c1e43bd0d09638430721d95867607cea5f1412532c7600
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.linux-arm64.tar.gz
+        - name: bind_exporter-0.5.0.linux-armv5.tar.gz
+          commit: null
+          size: 6861727
+          sha256: sha256:af7a1c7f601f71d88e3ad5ce7d9c50290ec3fc419b731b075db62162c3c0540a
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.linux-armv5.tar.gz
+        - name: bind_exporter-0.5.0.linux-armv6.tar.gz
+          commit: null
+          size: 6862260
+          sha256: sha256:9e4a520d04439691b7d67a22943c1cd679e33624e1166761d924301cf388ebc3
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.linux-armv6.tar.gz
+        - name: bind_exporter-0.5.0.linux-armv7.tar.gz
+          commit: null
+          size: 6855623
+          sha256: sha256:6f3d8d599cadcc502eff2d660a1a30fbec3e19f87a4f5f63f35ae0c12f55ba3a
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.linux-armv7.tar.gz
+        - name: bind_exporter-0.5.0.linux-mips.tar.gz
+          commit: null
+          size: 6822179
+          sha256: sha256:f96013c461eaf44f5b00cc0c3242d7c9608e226ae0294a26291b55e8a9bb2db5
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.linux-mips.tar.gz
+        - name: bind_exporter-0.5.0.linux-mips64.tar.gz
+          commit: null
+          size: 6921812
+          sha256: sha256:45b757936aa349b08d04e23fdff9d7d4c41a52ac6a75744176a01c76154be13d
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.linux-mips64.tar.gz
+        - name: bind_exporter-0.5.0.linux-mips64le.tar.gz
+          commit: null
+          size: 6695312
+          sha256: sha256:44a6fdbe83639738e06b58c9a74151b72dfdce65a28fca96104307bdc0b4a2aa
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.linux-mips64le.tar.gz
+        - name: bind_exporter-0.5.0.linux-mipsle.tar.gz
+          commit: null
+          size: 6669349
+          sha256: sha256:b86228997bb9d6fd35e590b143a52edbaae1b50045c80dae137a9c05f89b12a8
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.linux-mipsle.tar.gz
+        - name: bind_exporter-0.5.0.linux-ppc64.tar.gz
+          commit: null
+          size: 6946011
+          sha256: sha256:19e81cd82498aefefb16729ef8627f3e7beb04ccacf0871505d69fcb3a7db06f
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.linux-ppc64.tar.gz
+        - name: bind_exporter-0.5.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 6756958
+          sha256: sha256:e6d590986c3f5a31ea0ff54258d45ff04700e03af1679fc28ab36fa3f701b0c1
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.linux-ppc64le.tar.gz
+        - name: bind_exporter-0.5.0.linux-s390x.tar.gz
+          commit: null
+          size: 7308786
+          sha256: sha256:e01ae18d23bfcd543e0047f8d6b954b101615a491d3a3c7d1830c2bfa0db5f28
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.linux-s390x.tar.gz
+        - name: bind_exporter-0.5.0.netbsd-386.tar.gz
+          commit: null
+          size: 7097041
+          sha256: sha256:0a91a9dad6c962a5151153e0c188ed1d36a1842f41ba5715ef0868d182f8d34d
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.netbsd-386.tar.gz
+        - name: bind_exporter-0.5.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 7345674
+          sha256: sha256:0d31bed113df59bcd8ef833ad28f7490942e4be67d05804ef64b03a008c4c8f9
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.netbsd-amd64.tar.gz
+        - name: bind_exporter-0.5.0.netbsd-arm64.tar.gz
+          commit: null
+          size: 6841201
+          sha256: sha256:6ee856dfbccc8fd4f4991b4576fe42c4fc8ce4456940d2f0230e44f68c3a4278
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.netbsd-arm64.tar.gz
+        - name: bind_exporter-0.5.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 6813743
+          sha256: sha256:dd02325e6da3f52c21c7111c52ac7d72ddf00b4d08f0668a63270ad8d797db15
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.netbsd-armv6.tar.gz
+        - name: bind_exporter-0.5.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 6808490
+          sha256: sha256:fd303270f6238c52dc482db4ed2812d33947afeb5fda84bcc9d4084556acf522
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.netbsd-armv7.tar.gz
+        - name: bind_exporter-0.5.0.openbsd-386.tar.gz
+          commit: null
+          size: 7105285
+          sha256: sha256:c63f59b4becdae8b2e93a35dff95339648400d8e39bbda9dc10f80696244ce58
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.openbsd-386.tar.gz
+        - name: bind_exporter-0.5.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 7362183
+          sha256: sha256:5442a18f6e8e5deb7671554fa8064d5f183715649a010122f53f1df8c7f1ad38
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.openbsd-amd64.tar.gz
+        - name: bind_exporter-0.5.0.openbsd-arm64.tar.gz
+          commit: null
+          size: 6851862
+          sha256: sha256:d90be1ebd99effed6c45fe3d5f800aa36742fbd4bc7745a41a649dae0b001e4a
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.openbsd-arm64.tar.gz
+        - name: bind_exporter-0.5.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 6822271
+          sha256: sha256:8a154f947e0cd56e5d14e4d41ab5b5c8176283dfa51564de97d7fe927a733eab
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.openbsd-armv7.tar.gz
+        - name: bind_exporter-0.5.0.windows-386.tar.gz
+          commit: null
+          size: 7329899
+          sha256: sha256:7ea62b5ed096c615ee9cc1592d210c1e8b2d42b02d35dda80a37c0a26ce6dafc
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.windows-386.tar.gz
+        - name: bind_exporter-0.5.0.windows-386.zip
+          commit: null
+          size: 7430524
+          sha256: sha256:1fe5000fbdddddd1d04a031d65af401f71bee775d941b97578729af1dcc5f117
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.windows-386.zip
+        - name: bind_exporter-0.5.0.windows-amd64.tar.gz
+          commit: null
+          size: 7586738
+          sha256: sha256:0c5380fd97fafcefc1a5a5c7fa567d4cee4d848a160523a1b345a5fb88354abc
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.windows-amd64.tar.gz
+        - name: bind_exporter-0.5.0.windows-amd64.zip
+          commit: null
+          size: 7671460
+          sha256: sha256:f163b8abd5562ac6c4d38ddc47e98e027bb438ff19a89f9f75b8b2e0db8b436c
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.windows-amd64.zip
+        - name: sha256sums.txt
+          commit: null
+          size: 3805
+          sha256: sha256:bd3582a6e0ce3938b30304f21e1e7c7a68d5103d2084489147f12ac0afeae08b
+          url: https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/sha256sums.txt

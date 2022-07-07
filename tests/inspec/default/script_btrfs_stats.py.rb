@@ -4,7 +4,6 @@
 describe file('/opt/prometheus/scripts/btrfs_stats.py') do
     it { should be_file }
     it { should be_executable }
-    its('content') { should match /Collect per-device btrfs filesystem errors./ }
     its('size') { should > 3000 }
     its('mode') { should cmp '0555' }
     its('owner') { should eq 'root' }

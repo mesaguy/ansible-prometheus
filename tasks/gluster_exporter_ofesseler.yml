@@ -9,7 +9,7 @@
     prometheus_exporter: true
     prometheus_software_author: ofesseler
     prometheus_software_binary_name: gluster_exporter
-    prometheus_software_makefile_make_command: 'go get -d && make promu && make build'
+    prometheus_software_makefile_make_command: 'go mod vendor ; go build'
     prometheus_software_name: gluster_exporter_ofesseler
     prometheus_software_description: Prometheus gluster_exporter (ofesseler), exporter of host statistics
     prometheus_software_documentation: https://github.com/ofesseler/gluster_exporter

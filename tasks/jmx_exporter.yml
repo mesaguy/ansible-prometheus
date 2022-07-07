@@ -40,7 +40,7 @@
     dest: '{{ prometheus_etc_dir }}/{{ prometheus_software_name }}.{{ jmx_instance.key }}.yml'
     owner: root
     group: '{{ prometheus_group }}'
-    mode: 0640
+    mode: '{{ prometheus_jmx_exporter_cfg_mode | default("0640") }}'
     backup: true
   loop_control:
     loop_var: jmx_instance

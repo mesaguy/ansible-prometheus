@@ -4,7 +4,6 @@
 describe file('/opt/prometheus/scripts/nvme_metrics.sh') do
     it { should be_file }
     it { should be_executable }
-    its('content') { should match /The temperature value in JSON is in Kelvin, we want Celsius/ }
     its('size') { should > 3400 }
     its('mode') { should cmp '0555' }
     its('owner') { should eq 'root' }

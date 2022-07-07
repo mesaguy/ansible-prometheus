@@ -71,6 +71,9 @@ COMMAND_UNQUOTED="$DAEMON {{ args | join(' ') | replace ('"', "" ) }}"
 COMMAND="$DAEMON"
 COMMAND_UNQUOTED="$DAEMON"
 {% endif -%}
+{% if ansible_os_family == 'RedHat' -%}
+prog="{{ prometheus_software_name }}"
+{% endif -%}
 {% if installer_instance is defined and installer_instance and installer_instance.name -%}
 export PATH="${PATH:+$PATH:}/usr/sbin:/sbin"
 logfile="{{ prometheus_log_dir }}/{{ prometheus_software_name }}__{{ installer_instance.name }}.log"
@@ -88,7 +91,6 @@ runas_user={% if prometheus_software_runas is defined and prometheus_software_ru
 {% endif -%}
 {% if ansible_os_family == 'RedHat' -%}
 RETVAL=0
-prog="{{ prometheus_software_name }}"
 
 runlevel=$(set -- $(runlevel); eval "echo \$$#" )
 {% if prometheus_software_validation_command is defined and prometheus_software_validation_command %}

@@ -253,6 +253,22 @@ platforms:
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
+  - name: centos-8.2
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/centos-8.2-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+      run_command: /usr/lib/systemd/systemd
+
+  - name: centos-8.3
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/centos-8.3-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+      run_command: /usr/lib/systemd/systemd
+
   - name: debian-9
     driver_config:
       build_options:
@@ -560,5 +576,29 @@ platforms:
       build_options:
         build-arg:
           - DOCKER_IMAGE_NAME=mesaguy/ubuntu-20.04-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+      run_command: /lib/systemd/systemd
+
+  - name: ubuntu-20.10
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/ubuntu-20.10-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+      run_command: /lib/systemd/systemd
+
+  - name: ubuntu-21.04
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/ubuntu-21.04-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+      run_command: /lib/systemd/systemd
+
+  - name: ubuntu-21.10
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/ubuntu-21.10-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /lib/systemd/systemd

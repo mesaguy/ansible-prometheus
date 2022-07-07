@@ -1,6 +1,6 @@
 all:
   hosts:
-    archlinux:
+    debian-10:
       prometheus_components:
         - node_exporter
         - prometheus
@@ -16,4 +16,4 @@ all:
         - node_exporter
   vars:
     prometheus_servers:
-      - archlinux
+      - debian-10

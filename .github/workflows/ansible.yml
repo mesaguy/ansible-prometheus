@@ -1,0 +1,48 @@
+---
+name: Validate Ansible
+on: [push, pull_request]
+jobs:
+  validate_ansible:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install ruby and ruby gems
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+          # runs 'bundle install' and caches installed gems automatically
+          bundler-cache: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pipenv --upgrade-strategy=only-if-needed
+          pipenv install ansible
+          pipenv install
+
+      - name: Show ansible version
+        run: pipenv run ansible --version
+
+      - name: Run yamllint
+        run: yamllint --config-file=tests/yamllint.yml meta tasks vars
+
+      - name: Ensure an inspec test exists for each software installation
+        run: |
+          chmod +x tests/all_software_inspec_tested
+          ./tests/all_software_inspec_tested
+
+      - name: Check Ansible Galaxy lint
+        run: |
+          git clone https://github.com/ansible/galaxy-lint-rules.git
+          pipenv run ansible-lint -x 204,305 -r galaxy-lint-rules/rules .
+
+      - name: Check playbook syntax
+        run: pipenv run ansible-playbook -i tests/inventory tests/playbooks/install_all.yml --syntax-check
+
+      - name: Perform ansible-lint checks
+        run: pipenv run ansible-lint -x 204 tasks/*

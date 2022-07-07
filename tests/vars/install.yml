@@ -111,12 +111,9 @@ prometheus_node_exporter_extra_opts:
   - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|run|var/lib/docker/.*)($|/)"'
   - '--collector.systemd'
   - '--no-collector.zfs'
-prometheus_dockerhub_exporter_promhippie_extra_opts:
-  - '-dockerhub.repo alpine'
 prometheus_nvidia_gpu_exporter_mindprince_service_test: false
 prometheus_script_enable_all: true
 # There are no binaries:
-prometheus_zookeeper_exporter_infonova_fallback_to_build: true
 prometheus_smokeping_exporter_superq_extra_opts:
   - 'localhost'
 prometheus_configure_ulimits: true

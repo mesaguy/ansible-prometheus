@@ -10,7 +10,7 @@
   - name: Create dummy client file for purge to delete
     become: true
     copy:
-      dest: /opt/prometheus/etc/tgroups/archlinux-delete_me.yml
+      dest: /opt/prometheus/etc/tgroups/debian-10-delete_me.yml
       content: 'delete me\n'
 
   - name: Create dummy server file for purge to delete

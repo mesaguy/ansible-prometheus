@@ -1,5 +1,5 @@
 # Ansible Prometheus
-[![Build Status](https://api.travis-ci.org/mesaguy/ansible-prometheus.svg?branch=master)](https://travis-ci.org/mesaguy/ansible-prometheus) ![Latest tag](https://img.shields.io/github/v/tag/mesaguy/ansible-prometheus) ![Ansible Galaxy](https://img.shields.io/badge/ansible%20galaxy-mesaguy.prometheus-blue.svg?style=flat) ![MIT License](https://img.shields.io/github/license/mesaguy/ansible-prometheus)
+![Kitchen tests](https://github.com/mesaguy/ansible-prometheus/actions/workflows/kitchen.yml/badge.svg) ![Validate Ansible](https://github.com/mesaguy/ansible-prometheus/actions/workflows/ansible.yml/badge.svg) ![awesome_bot tests](https://github.com/mesaguy/ansible-prometheus/actions/workflows/awesome_bot.yml/badge.svg) ![Latest tag](https://img.shields.io/github/v/tag/mesaguy/ansible-prometheus) ![Ansible Galaxy](https://img.shields.io/badge/ansible%20galaxy-mesaguy.prometheus-blue.svg?style=flat) ![MIT License](https://img.shields.io/github/license/mesaguy/ansible-prometheus)
 
 
 Installs and manages [Prometheus server](https://prometheus.io), [Alertmanager](https://prometheus.io/docs/alerting/latest/overview/), [PushGateway](https://github.com/prometheus/pushgateway/blob/master/README.md), and numerous [Prometheus exporters](https://prometheus.io/docs/instrumenting/exporters/)
@@ -44,90 +44,88 @@ All exporters are verified to install. Currently select modules receive testing 
 
 See each exporter's usage page for more details:
 
-| Exporter                                                                                      | Usage                                                       | Author               | CI tested |
-|-----------------------------------------------------------------------------------------------|:-----------------------------------------------------------:|:--------------------:|:---------:|
-|[389ds_exporter_terrycain](https://github.com/terrycain/389ds_exporter)                        | [usage](docs/389ds_exporter_terrycain.md)                   | terrycain            | Yes       |
-|[apache_exporter_lusitaniae](https://github.com/Lusitaniae/apache_exporter)                    | [usage](docs/apache_exporter_lusitaniae.md)                 | Lusitaniae           | Yes       |
-|[aerospike_exporter_alicebob](https://github.com/alicebob/asprom)                              | [usage](docs/aerospike_exporter_alicebob.md)                | alicebob             | Yes       |
-|[bigip_exporter_expressenab](https://github.com/ExpressenAB/bigip_exporter)                    | [usage](docs/bigip_exporter_expressenab.md)                 | ExpressenAB          | Yes       |
-|[bind_exporter_prometheus_community](https://github.com/prometheus-community/bind_exporter)    | [usage](docs/bind_exporter_prometheus_community.md)         | prometheus-community | Partial   |
-|[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)                           | [usage](docs/blackbox_exporter.md)                          | prometheus           | Yes       |
-|[ceph_exporter_digitalocean](https://github.com/digitalocean/ceph_exporter)                    | [usage](docs/ceph_exporter_digitalocean.md)                 | digitalocean         | Partial   |
-|[clickhouse_exporter_perconalab](https://github.com/Percona-Lab/clickhouse_exporter)           | [usage](docs/clickhouse_exporter_perconalab.md)             | perconalab           | Yes       |
-|[cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter)                       | [usage](docs/cloudwatch_exporter.md)                        | prometheus           | Partial   |
-|[collectd_exporter](https://github.com/prometheus/collectd_exporter)                           | [usage](docs/collectd_exporter.md)                          | prometheus           | Yes       |
-|[consul_exporter](https://github.com/prometheus/consul_exporter)                               | [usage](docs/consul_exporter.md)                            | prometheus           | Yes       |
-|[couchbase_exporter_blakelead](https://github.com/blakelead/couchbase_exporter)                | [usage](docs/couchbase_exporter_blakelead.md)               | leansys-team         | Yes       |
-|[couchdb_exporter_gesellix](https://github.com/gesellix/couchdb-prometheus-exporter)           | [usage](docs/couchdb_exporter_gesellix.md)                  | gesellix             | Yes       |
-|[digitalocean_exporter_metalmatze](https://github.com/metalmatze/digitalocean_exporter)        | [usage](docs/digitalocean_exporter_metalmatze.md)           | metalmatze           | Yes       |
-|[dockerhub_exporter_promhippie](https://github.com/promhippie/dockerhub_exporter)              | [usage](docs/dockerhub_exporter_promhippie.md)              | promhippie           | Yes       |
-|[elasticsearch_exporter_justwatchcom](https://github.com/justwatchcom/elasticsearch_exporter)  | [usage](docs/elasticsearch_exporter_justwatchcom.md)        | justwatchcom         | Yes       |
-|[fping_exporter_schweikert](https://github.com/schweikert/fping-exporter)                      | [usage](docs/fping_exporter_schweikert.md)                  | schweikert           | Yes       |
-|[gluster_exporter_ofesseler](https://github.com/ofesseler/gluster_exporter)                    | [usage](docs/gluster_exporter_ofesseler.md)                 | ofesseler            | Yes       |
-|[graphite_exporter](https://github.com/prometheus/graphite_exporter)                           | [usage](docs/graphite_exporter.md)                          | prometheus           | Yes       |
-|[grok_exporter_fstab](https://github.com/fstab/grok_exporter)                                  | [usage](docs/grok_exporter_fstab.md)                        | fstab                | Yes       |
-|[haproxy_exporter](https://github.com/prometheus/haproxy_exporter)                             | [usage](docs/haproxy_exporter.md)                           | prometheus           | Yes       |
-|[influxdb_exporter](https://github.com/prometheus/influxdb_exporter)                           | [usage](docs/influxdb_exporter.md)                          | prometheus           | Yes       |
-|[ipmi_exporter_soundcloud](https://github.com/soundcloud/ipmi_exporter)                        | [usage](docs/ipmi_exporter_soundcloud.md)                   | soundcloud           | Yes       |
-|[iperf3_exporter_edgard](https://github.com/edgard/iperf3_exporter)                            | [usage](docs/iperf3_exporter_edgard)                        | edgard               | Yes       |
-|[iptables_exporter_retailnext](https://github.com/retailnext/iptables_exporter)                | [usage](docs/iptables_exporter_retailnext.md)               | retailnext           | Yes       |
-|[jmx_exporter](https://github.com/prometheus/jmx_exporter)                                     | [usage](docs/jmx_exporter.md)                               | prometheus           | No        |
-|[kafka_exporter_danielqsj](https://github.com/danielqsj/kafka_exporter)                        | [usage](docs/kafka_exporter_danielqsj.md)                   | danielqsj            | Partial   |
-|[keepalived_exporter_gen2brain](https://github.com/gen2brain/keepalived_exporter)              | [usage](docs/keepalived_exporter_gen2brain.md)              | gen2brain            | Yes       |
-|[memcached_exporter](https://github.com/prometheus/memcached_exporter)                         | [usage](docs/memcached_exporter.md)                         | prometheus           | Yes       |
-|[mongodb_exporter_percona](https://github.com/percona/mongodb_exporter)                        | [usage](docs/mongodb_exporter_percona.md)                   | percona              | Yes       |
-|[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)                               | [usage](docs/mysqld_exporter.md)                            | prometheus           | Partial   |
-|[nginx_exporter_nginxinc](https://github.com/nginxinc/nginx-prometheus-exporter)               | [usage](docs/nginx_exporter_nginxinc.md)                    | nginxinc             | Partial   |
-|[node_exporter](https://github.com/prometheus/node_exporter)                                   | [usage](docs/node_exporter.md)                              | prometheus           | Yes       |
-|[ntp_exporter_sapcc](https://github.com/sapcc/ntp_exporter)                                    | [usage](docs/ntp_exporter_sapcc.md)                         | sapcc                | Yes       |
-|[nvidia_exporter_bugroger](https://github.com/BugRoger/nvidia-exporter)                        | [usage](docs/nvidia_exporter_bugroger.md)                   | BugRoger             | Partial   |
-|[nvidia_gpu_exporter_mindprince](https://github.com/mindprince/nvidia_gpu_prometheus_exporter) | [usage](docs/nvidia_gpu_exporter_mindprince.md)             | mindprince           | Partial   |
-|[openldap_exporter_tomcz](https://github.com/tomcz/openldap_exporter)                          | [usage](docs/openldap_exporter_tomcz.md)                    | tomcz                | Yes       |
-|[openvpn_exporter_kumina](https://github.com/kumina/openvpn_exporter)                          | [usage](docs/openvpn_exporter_kumina.md)                    | kumina               | Partial   |
-|[phpfpm_exporter_hipages](https://github.com/hipages/php-fpm_exporter)                         | [usage](docs/phpfpm_exporter_hipages.md)                    | hipages              | Yes       |
-|[ping_exporter_czerwonk](https://github.com/czerwonk/ping_exporter)                            | [usage](docs/ping_exporter_czerwonk.md)                     | czerwonk             | Yes       |
-|[postgres_exporter_wrouesnel](https://github.com/wrouesnel/postgres_exporter)                  | [usage](docs/postgres_exporter_wrouesnel.md)                | wrouesnel            | Yes       |
-|[powerdns_exporter_ledgr](https://github.com/ledgr/powerdns_exporter)                          | [usage](docs/powerdns_exporter_ledgr.md)                    | ledgr                | Partial   |
-|[process_exporter_ncabatoff](https://github.com/ncabatoff/process-exporter)                    | [usage](docs/process_exporter_ncabatoff.md)                 | ncabatoff            | Yes       |
-|[proxysql_exporter_percona](https://github.com/percona/proxysql_exporter)                      | [usage](docs/proxysql_exporter_percona.md)                  | percona              | Yes       |
-|[rabbitmq_exporter_kbudde](https://github.com/kbudde/rabbitmq_exporter)                        | [usage](docs/rabbitmq_exporter_kbudde.md)                   | kbudde               | Yes       |
-|[redis_exporter_oliver006](https://github.com/oliver006/redis_exporter)                        | [usage](docs/redis_exporter_oliver006.md)                   | oliver006            | Yes       |
-|[script_exporter_adhocteam](https://github.com/adhocteam/script_exporter)                      | [usage](docs/script_exporter_adhocteam.md)                  | adhocteam            | Yes       |
-|[smokeping_exporter_superq](https://github.com/SuperQ/smokeping_prober)                        | [usage](docs/smokeping_exporter_superq.md)                  | SuperQ               | Yes       |
-|[snmp_exporter](https://github.com/prometheus/snmp_exporter)                                   | [usage](docs/snmp_exporter.md)                              | prometheus           | Yes       |
-|[sql_exporter_free](https://github.com/free/sql_exporter)                                      | [usage](docs/sql_exporter_free.md)                          | free                 | Yes       |
-|[squid_exporter_boynux](https://github.com/boynux/squid-exporter)                              | [usage](docs/squid_exporter_boynux.md)                      | boynux               | Yes       |
-|[ssl_exporter_ribbybibby](https://github.com/ribbybibby/ssl_exporter)                          | [usage](docs/ssl_exporter_ribbybibby.md)                    | ribbybibby           | Yes       |
-|[statsd_exporter](https://github.com/prometheus/statsd_exporter)                               | [usage](docs/statsd_exporter.md)                            | prometheus           | Yes       |
-|[wireguard_exporter_mdlayher](https://github.com/mdlayher/wireguard_exporter)                  | [usage](docs/wireguard_exporter_mdlayher.md)                | mdlayher             | Partial   |
-|[zookeeper_exporter_infonova](https://github.com/infonova/zookeeper_exporter)                  | [usage](docs/zookeeper_exporter_infonova.md)                | infonova             | Yes       |
+| Exporter                                                                                                     | Usage                                                        | Author               | CI tested |
+|--------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------:|:--------------------:|:---------:|
+|[389ds_exporter_terrycain](https://github.com/terrycain/389ds_exporter)                                       | [usage](docs/389ds_exporter_terrycain.md)                    | terrycain            | Yes       |
+|[apache_exporter_lusitaniae](https://github.com/Lusitaniae/apache_exporter)                                   | [usage](docs/apache_exporter_lusitaniae.md)                  | Lusitaniae           | Yes       |
+|[aerospike_exporter_alicebob](https://github.com/alicebob/asprom)                                             | [usage](docs/aerospike_exporter_alicebob.md)                 | alicebob             | Yes       |
+|[bigip_exporter_expressenab](https://github.com/ExpressenAB/bigip_exporter)                                   | [usage](docs/bigip_exporter_expressenab.md)                  | ExpressenAB          | Yes       |
+|[bind_exporter_prometheus_community](https://github.com/prometheus-community/bind_exporter)                   | [usage](docs/bind_exporter_prometheus_community.md)          | prometheus-community | Partial   |
+|[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)                                          | [usage](docs/blackbox_exporter.md)                           | prometheus           | Yes       |
+|[ceph_exporter_digitalocean](https://github.com/digitalocean/ceph_exporter)                                   | [usage](docs/ceph_exporter_digitalocean.md)                  | digitalocean         | Partial   |
+|[clickhouse_exporter_clickhouse](https://github.com/ClickHouse/clickhouse_exporter)                           | [usage](docs/clickhouse_exporter_clickhouse.md)              | clickhouse           | Yes       |
+|[cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter)                                      | [usage](docs/cloudwatch_exporter.md)                         | prometheus           | Partial   |
+|[collectd_exporter](https://github.com/prometheus/collectd_exporter)                                          | [usage](docs/collectd_exporter.md)                           | prometheus           | Yes       |
+|[consul_exporter](https://github.com/prometheus/consul_exporter)                                              | [usage](docs/consul_exporter.md)                             | prometheus           | Yes       |
+|[couchbase_exporter_blakelead](https://github.com/blakelead/couchbase_exporter)                               | [usage](docs/couchbase_exporter_blakelead.md)                | leansys-team         | Yes       |
+|[couchdb_exporter_gesellix](https://github.com/gesellix/couchdb-prometheus-exporter)                          | [usage](docs/couchdb_exporter_gesellix.md)                   | gesellix             | Yes       |
+|[digitalocean_exporter_metalmatze](https://github.com/metalmatze/digitalocean_exporter)                       | [usage](docs/digitalocean_exporter_metalmatze.md)            | metalmatze           | Yes       |
+|[elasticsearch_exporter_prometheus_community](https://github.com/prometheus-community/elasticsearch_exporter) | [usage](docs/elasticsearch_exporter_prometheus_community.md) | prometheus_community | Yes       |
+|[fping_exporter_schweikert](https://github.com/schweikert/fping-exporter)                                     | [usage](docs/fping_exporter_schweikert.md)                   | schweikert           | Yes       |
+|[gluster_exporter_ofesseler](https://github.com/ofesseler/gluster_exporter)                                   | [usage](docs/gluster_exporter_ofesseler.md)                  | ofesseler            | Yes       |
+|[graphite_exporter](https://github.com/prometheus/graphite_exporter)                                          | [usage](docs/graphite_exporter.md)                           | prometheus           | Yes       |
+|[grok_exporter_fstab](https://github.com/fstab/grok_exporter)                                                 | [usage](docs/grok_exporter_fstab.md)                         | fstab                | Yes       |
+|[haproxy_exporter](https://github.com/prometheus/haproxy_exporter)                                            | [usage](docs/haproxy_exporter.md)                            | prometheus           | Yes       |
+|[influxdb_exporter](https://github.com/prometheus/influxdb_exporter)                                          | [usage](docs/influxdb_exporter.md)                           | prometheus           | Yes       |
+|[ipmi_exporter_prometheus_community](https://github.com/prometheus-community/ipmi_exporter)                   | [usage](docs/ipmi_exporter_prometheus_community.md)          | prometheus-community | Yes       |
+|[iperf3_exporter_edgard](https://github.com/edgard/iperf3_exporter)                                           | [usage](docs/iperf3_exporter_edgard)                         | edgard               | Yes       |
+|[iptables_exporter_retailnext](https://github.com/retailnext/iptables_exporter)                               | [usage](docs/iptables_exporter_retailnext.md)                | retailnext           | Yes       |
+|[jmx_exporter](https://github.com/prometheus/jmx_exporter)                                                    | [usage](docs/jmx_exporter.md)                                | prometheus           | No        |
+|[kafka_exporter_danielqsj](https://github.com/danielqsj/kafka_exporter)                                       | [usage](docs/kafka_exporter_danielqsj.md)                    | danielqsj            | Partial   |
+|[keepalived_exporter_gen2brain](https://github.com/gen2brain/keepalived_exporter)                             | [usage](docs/keepalived_exporter_gen2brain.md)               | gen2brain            | Yes       |
+|[memcached_exporter](https://github.com/prometheus/memcached_exporter)                                        | [usage](docs/memcached_exporter.md)                          | prometheus           | Yes       |
+|[mongodb_exporter_percona](https://github.com/percona/mongodb_exporter)                                       | [usage](docs/mongodb_exporter_percona.md)                    | percona              | Yes       |
+|[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)                                              | [usage](docs/mysqld_exporter.md)                             | prometheus           | Partial   |
+|[nginx_exporter_nginxinc](https://github.com/nginxinc/nginx-prometheus-exporter)                              | [usage](docs/nginx_exporter_nginxinc.md)                     | nginxinc             | Partial   |
+|[node_exporter](https://github.com/prometheus/node_exporter)                                                  | [usage](docs/node_exporter.md)                               | prometheus           | Yes       |
+|[ntp_exporter_sapcc](https://github.com/sapcc/ntp_exporter)                                                   | [usage](docs/ntp_exporter_sapcc.md)                          | sapcc                | Yes       |
+|[nvidia_exporter_bugroger](https://github.com/BugRoger/nvidia-exporter)                                       | [usage](docs/nvidia_exporter_bugroger.md)                    | BugRoger             | Partial   |
+|[nvidia_gpu_exporter_mindprince](https://github.com/mindprince/nvidia_gpu_prometheus_exporter)                | [usage](docs/nvidia_gpu_exporter_mindprince.md)              | mindprince           | Partial   |
+|[openldap_exporter_tomcz](https://github.com/tomcz/openldap_exporter)                                         | [usage](docs/openldap_exporter_tomcz.md)                     | tomcz                | Yes       |
+|[openvpn_exporter_kumina](https://github.com/kumina/openvpn_exporter)                                         | [usage](docs/openvpn_exporter_kumina.md)                     | kumina               | Partial   |
+|[phpfpm_exporter_hipages](https://github.com/hipages/php-fpm_exporter)                                        | [usage](docs/phpfpm_exporter_hipages.md)                     | hipages              | Yes       |
+|[ping_exporter_czerwonk](https://github.com/czerwonk/ping_exporter)                                           | [usage](docs/ping_exporter_czerwonk.md)                      | czerwonk             | Yes       |
+|[postgres_exporter_prometheus_community ](https://github.com/prometheus-community/postgres_exporter)          | [usage](docs/postgres_exporter_prometheus_community.md)      | prometheus-community | Yes       |
+|[process_exporter_ncabatoff](https://github.com/ncabatoff/process-exporter)                                   | [usage](docs/process_exporter_ncabatoff.md)                  | ncabatoff            | Yes       |
+|[proxysql_exporter_percona](https://github.com/percona/proxysql_exporter)                                     | [usage](docs/proxysql_exporter_percona.md)                   | percona              | Yes       |
+|[rabbitmq_exporter_kbudde](https://github.com/kbudde/rabbitmq_exporter)                                       | [usage](docs/rabbitmq_exporter_kbudde.md)                    | kbudde               | Yes       |
+|[redis_exporter_oliver006](https://github.com/oliver006/redis_exporter)                                       | [usage](docs/redis_exporter_oliver006.md)                    | oliver006            | Yes       |
+|[script_exporter_adhocteam](https://github.com/adhocteam/script_exporter)                                     | [usage](docs/script_exporter_adhocteam.md)                   | adhocteam            | Yes       |
+|[smokeping_exporter_superq](https://github.com/SuperQ/smokeping_prober)                                       | [usage](docs/smokeping_exporter_superq.md)                   | SuperQ               | Yes       |
+|[snmp_exporter](https://github.com/prometheus/snmp_exporter)                                                  | [usage](docs/snmp_exporter.md)                               | prometheus           | Yes       |
+|[sql_exporter_free](https://github.com/free/sql_exporter)                                                     | [usage](docs/sql_exporter_free.md)                           | free                 | Yes       |
+|[squid_exporter_boynux](https://github.com/boynux/squid-exporter)                                             | [usage](docs/squid_exporter_boynux.md)                       | boynux               | Yes       |
+|[ssl_exporter_ribbybibby](https://github.com/ribbybibby/ssl_exporter)                                         | [usage](docs/ssl_exporter_ribbybibby.md)                     | ribbybibby           | Yes       |
+|[statsd_exporter](https://github.com/prometheus/statsd_exporter)                                              | [usage](docs/statsd_exporter.md)                             | prometheus           | Yes       |
+|[wireguard_exporter_mdlayher](https://github.com/mdlayher/wireguard_exporter)                                 | [usage](docs/wireguard_exporter_mdlayher.md)                 | mdlayher             | Partial   |
 
 ### Managed node_exporter textfiles scripts
 Numerous node_exporter textfiles scripts are supported and can be installed via the following variables. These scripts are installed under '/opt/prometheus/scripts' by default:
 
 | node_exporter textfiles script                                                                                                           | Source                     | Enable variable                           |
-|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|-------------------------------------------|
-|[apt.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/apt.sh)                             | node_exporter examples     | prometheus_script_apt: true               |
-|[btrfs_stats.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/btrfs_stats.py)             | node_exporter examples     | prometheus_script_btrfs_stats: true       |
-|[deleted_libraries.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/deleted_libraries.py) | node_exporter examples     | prometheus_script_deleted_libraries: true |
-|[directory-size.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/directory-size.sh)       | node_exporter examples     | prometheus_script_directory_size: true    |
-|[inotify-instances](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/inotify-instances)       | node_exporter examples     | prometheus_script_inotify_instances: true |
-|[ipmitool](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ipmitool)                         | node_exporter examples     | prometheus_script_ipmitool: true          |
-|[md_info.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/md_info.sh)                     | node_exporter examples     | prometheus_script_md_info: true           |
-|[md_info_detail.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/md_info_detail.sh)       | node_exporter examples     | prometheus_script_md_info_detail: true    |
-|[mellanox_hca_temp](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/mellanox_hca_temp)       | node_exporter examples     | prometheus_script_mellanox_hca_temp: true |
-|[multipathd_info](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/multipathd_info)           | node_exporter examples     | prometheus_script_multipathd_info: true   |
-|[ntpd_metrics.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ntpd_metrics.py)           | node_exporter examples     | prometheus_script_ntpd_metrics: true      |
-|[nvme_metrics.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/nvme_metrics.sh)           | node_exporter examples     | prometheus_script_nvme_metrics: true      |
-|[pacman.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/pacman.sh)                       | node_exporter examples     | prometheus_script_pacman: true            |
-|[promcron.sh](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promcron.sh)                                              | mesaguy/ansible-prometheus | prometheus_script_promcron: true          |
-|[promrun.sh](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promrun.sh)                                                | mesaguy/ansible-prometheus | prometheus_script_promrun: true           |
-|[smartmon.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.py)                   | node_exporter examples     | prometheus_script_smartmon_python: true   |
-|[smartmon.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.sh)                   | node_exporter examples     | prometheus_script_smartmon: true          |
-|[sssd_check.sh](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/sssd_check.sh)                                          | mesaguy/ansible-prometheus | prometheus_script_sssd_check: true        |
-|[storcli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/storcli.py)                     | node_exporter examples     | prometheus_script_storcli: true           |
-|[tw_cli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/tw_cli.py)                       | node_exporter examples     | prometheus_script_tw_cli: true            |
-|[yum.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/yum.sh)                             | node_exporter examples     | prometheus_script_yum: true               |
+|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|--------------------------------------------|
+|[apt.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/apt.sh)                             | node_exporter examples     | prometheus_script_apt: true                |
+|[btrfs_stats.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/btrfs_stats.py)             | node_exporter examples     | prometheus_script_btrfs_stats: true        |
+|[deleted_libraries.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/deleted_libraries.py) | node_exporter examples     | prometheus_script_deleted_libraries: true  |
+|[directory-size.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/directory-size.sh)       | node_exporter examples     | prometheus_script_directory_size: true     |
+|[inotify-instances](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/inotify-instances)       | node_exporter examples     | prometheus_script_inotify_instances: true  |
+|[ipmitool](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ipmitool)                         | node_exporter examples     | prometheus_script_ipmitool: true           |
+|[lvm-prom-collector](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/lvm-prom-collector)     | node_exporter examples     | prometheus_script_lvm_prom_collector: true |
+|[md_info.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/md_info.sh)                     | node_exporter examples     | prometheus_script_md_info: true            |
+|[md_info_detail.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/md_info_detail.sh)       | node_exporter examples     | prometheus_script_md_info_detail: true     |
+|[mellanox_hca_temp](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/mellanox_hca_temp)       | node_exporter examples     | prometheus_script_mellanox_hca_temp: true  |
+|[multipathd_info](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/multipathd_info)           | node_exporter examples     | prometheus_script_multipathd_info: true    |
+|[ntpd_metrics.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ntpd_metrics.py)           | node_exporter examples     | prometheus_script_ntpd_metrics: true       |
+|[nvme_metrics.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/nvme_metrics.sh)           | node_exporter examples     | prometheus_script_nvme_metrics: true       |
+|[pacman.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/pacman.sh)                       | node_exporter examples     | prometheus_script_pacman: true             |
+|[promcron.sh](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promcron.sh)                                              | mesaguy/ansible-prometheus | prometheus_script_promcron: true           |
+|[promrun.sh](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promrun.sh)                                                | mesaguy/ansible-prometheus | prometheus_script_promrun: true            |
+|[smartmon.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.py)                   | node_exporter examples     | prometheus_script_smartmon_python: true    |
+|[smartmon.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.sh)                   | node_exporter examples     | prometheus_script_smartmon: true           |
+|[sssd_check.sh](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/sssd_check.sh)                                          | mesaguy/ansible-prometheus | prometheus_script_sssd_check: true         |
+|[storcli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/storcli.py)                     | node_exporter examples     | prometheus_script_storcli: true            |
+|[tw_cli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/tw_cli.py)                       | node_exporter examples     | prometheus_script_tw_cli: true             |
+|[yum.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/yum.sh)                             | node_exporter examples     | prometheus_script_yum: true                |
 
 ## Role Variables
 A 'prometheus_components' array variable is used to specify the Prometheus software to install. This example installs all supported prometheus_components:
@@ -147,15 +145,14 @@ prometheus_components:
  - bind_exporter_prometheus_community
  - blackbox_exporter
  - ceph_exporter_digitalocean
- - clickhouse_exporter_perconalab
+ - clickhouse_exporter_clickhouse
  - cloudwatch_exporter
  - collectd_exporter
  - consul_exporter
  - couchbase_exporter_blakelead
  - couchdb_exporter_gesellix
  - digitalocean_exporter_metalmatze
- - dockerhub_exporter_promhippie
- - elasticsearch_exporter_justwatchcom
+ - elasticsearch_exporter_prometheus_community
  - fping_exporter_schweikert
  - gluster exporter_ofesseler
  - graphite_exporter
@@ -163,7 +160,7 @@ prometheus_components:
  - haproxy_exporter
  - influxdb_exporter
  - iperf3_exporter_edgard
- - ipmi_exporter_soundcloud
+ - ipmi_exporter_prometheus_community
  - iptables_exporter_retailnext
  - jmx_exporter
  - kafka_exporter_danielqsj
@@ -179,8 +176,7 @@ prometheus_components:
  - openvpn_exporter_kumina
  - phpfpm_exporter_hipages
  - ping_exporter_czerwonk
- - postgres_exporter_wrouesnel
- - powerdns_exporter_ledgr
+ - postgres_exporter_prometheus_community
  - process_exporter_ncabatoff
  - proxysql_exporter_percona
  - rabbitmq_exporter_kbudde
@@ -193,7 +189,6 @@ prometheus_components:
  - ssl_exporter_ribbybibby
  - statsd_exporter
  - wireguard_exporter_mdlayher
- - zookeeper_exporter_infonova
 ```
 
 ### Mesaguy script documentation
@@ -252,6 +247,11 @@ Name of the Prometheus service and group:
 
     prometheus_group: prometheus
     prometheus_user: prometheus
+
+Create the Prometheus user and group as system accounts, defaults to 'false':
+
+    prometheus_group_is_system: true
+    prometheus_user_is_system: true
 
 Configure ulimits for 'prometheus' user:
 
@@ -568,7 +568,7 @@ Installations are performed using pre-compiled binary files where possible. Wher
 
  1. Installs the tools necessary to compile the binaries
  2. Compiles the binaries
- 3. Installs the binaries in a directory specifying both the version of the Prometheus software and version of go utilized for the installation (ie: /opt/prometheus/exporters/zookeeper_exporter/1.1__go-1.10.3/zookeeper_exporter)
+ 3. Installs the binaries in a directory specifying both the version of the Prometheus software and version of go utilized for the installation (ie: /opt/prometheus/exporters/smokeping_exporter_superq/v0.3.1__go-1.14.14/smokeping_prober)
 
 If a binary fails to install or is unavailable despite the existence of some pre-compiled binaries, then the Prometheus module will still be installed using source code.
 
@@ -589,5 +589,4 @@ See the [LICENSE](https://github.com/mesaguy/ansible-prometheus/blob/master/LICE
 
 ## Author Information
 Mesaguy
- - https://mesaguy.com
- - https://github.com/mesaguy/ansible-prometheus
+ - https://github.com/mesaguy

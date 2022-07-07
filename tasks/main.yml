@@ -1,8 +1,4 @@
 ---
-- name: Set global facts to be used inside and outside of role
-  set_fact:
-    prometheus_node_exporter_textfiles_dir: '{{ prometheus_node_exporter_textfiles_directory }}'
-
 - block:
     - name: Ensure at least one prometheus component has been specified for {{ inventory_hostname_short }}
       fail:

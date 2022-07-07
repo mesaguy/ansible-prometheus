@@ -6,6 +6,291 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.44] - 2021-12-12
+
+### Changed
+
+- Upgrade Prometheus (pre-release) from v2.31.0-rc.1 to v2.32.0-rc.1
+- Upgrade Prometheus from v2.31.0 to v2.31.2
+- Upgrade Go from v1.16.10 to v1.16.12
+- Remove powerdns_exporter_ledgr as repo has been deleted by author and PowerDNS has native Prometheus support
+- Upgrade apache_exporter_lusitaniae from v0.10.1 to v0.11.0
+- Upgrade bind_exporter_prometheus_community from v0.4.0 to v0.5.0
+- Upgrade cloudwatch from v0.11.0 to v0.12.1
+- Upgrade graphite_exporter from v0.11.0 to v0.12.0
+- Upgrade haproxy_exporter from v0.12.0 to v0.13.0
+- Upgrade influxdb_exporter from v0.8.0 to v0.8.1
+- Upgrade mongodb_exporter_percona from v0.20.9 to v0.30.0
+- Upgrade node_exporter v1.2.2 to v1.3.1
+- Upgrade ping_exporter_czerwonk from v0.4.7 to v0.4.8
+- Upgrade process_exporter_ncabatoff from v0.7.9 to v0.7.10
+- Upgrade redis_exporter_oliver006 from v1.29.0 to v1.32.0
+- Upgrade statsd_exporter from v0.22.2 to v0.22.4
+
+## [0.12.43] - 2021-11-05
+
+### Changed
+
+- Upgrade Prometheus (pre-release) from v2.30.0-rc.0 to v2.31.0-rc.1
+- Upgrade Prometheus from v2.30.3 to v2.31.0
+- Upgrade Go from v1.16.8 to v1.16.10
+- Update node-exporter-textfile-collector-scripts
+- Upgrade elasticsearch_exporter_prometheus_community from v1.2.1 to v1.3.0
+- Upgrade mongodb_exporter_percona from v0.20.8 to v0.20.9
+- Upgrade phpfpm_exporter_hipages from v2.0.3 to v2.0.4
+- Upgrade process_exporter_ncabatoff from v0.7.5 to v0.7.9
+- Upgrade pushgateway from v1.4.1 to v1.4.2
+- Upgrade redis_exporter_oliver006 from v1.27.1 to v1.29.0
+- Upgrade squid_exporter_boynux from v1.9.4 to v1.10.0
+- Update metadata to include latest master commits
+
+## [0.12.42] - 2021-10-06
+
+### Changed
+
+- The ipmi_exporter name changed from ipmi_exporter_soundcloud to ipmi_exporter_prometheus_community
+- Upgrade Go from v1.16.5 to v1.16.8
+- Upgrade Prometheus (pre-release) from v2.29.0-rc.2 to v2.30.0-rc.0
+- Upgrade Prometheus from v2.29.2 to v2.30.3
+- Upgrade apache_exporter_lusitaniae from v0.10.0 to v0.10.1
+- Upgrade kafka_exporter_danielqsj from v1.3.1 to v1.4.2
+- Upgrade mongodb_exporter_percona from v0.20.7 to v0.20.8
+- Upgrade ntp_exporter_sapcc v2.0.0 to v2.0.1
+- Upgrade proxysql_exporter_percona from v1.1.1 to v1.1.2
+- Upgrade redis_exporter_oliver006 from v1.27.0 to v1.27.1
+- Upgrade statsd_exporter from v0.22.1 to v0.22.2
+- Update metadata to include latest master commits
+
+## [0.12.41] - 2021-09-05
+
+### Changed
+
+- Upgrade Prometheus (pre-release) from v2.28.0-rc.0 to v2.29.0-rc.2
+- Upgrade Prometheus from v2.28.0 to v2.29.2
+- Upgrade alertmanager from v0.22.2 to v0.23.0
+- Upgrade alertmanager (pre-release) from v0.22.0-rc.2 to v0.23.0-rc.0
+- Upgrade apache_exporter_lusitaniae from v0.9.0 to v0.10.0
+- Upgrade graphite_exporter from v0.10.1 to v0.11.0
+- Upgrade jmx_exporter from v0.15.0 to v0.16.1
+- Upgrade mongodb_exporter_percona from v0.20.6 to v0.20.7
+- Upgrade node_exporter v1.1.2 to v1.2.2
+- Upgrade postgres_exporter_wrouesnel from v0.9.0 to v0.10.0
+- Upgrade phpfpm_exporter_hipages from v2.0.2 to v2.0.3
+- Upgrade squid_exporter_boynux from v1.9.2 to v1.9.4
+- Update metadata to include latest master commits
+
+## [0.12.40] - 2021-06-30
+
+### Fixed
+
+- Fix installing nginx_exporter_nginxinc binaries
+
+## [0.12.39] - 2021-06-30
+
+### Changed
+
+- Upgrade Prometheus (pre-release) from v2.27.0-rc.0 to v2.28.0-rc.0
+- Upgrade Prometheus from v2.27.1 to v2.28.0
+- Upgrade cloudwatch from v0.10.0 to v0.11.0
+- Upgrade elasticsearch_exporter_prometheus_community from v1.1.0 to v1.2.1
+- Upgrade openldap_exporter_tomcz from v2.1.3 to v2.1.4
+- Upgrade mongodb_exporter_percona from v0.20.5 to v0.20.6
+- Upgrade proxysql_exporter_percona from v1.1.0 to v1.1.1
+- Upgrade redis_exporter_oliver006 from v1.23.1 to v1.24.0
+- Upgrade ssl_exporter_ribbybibby from v2.2.0 to v2.2.1
+- Upgrade statsd_exporter from v0.20.3 to v0.21.0
+- Update metadata to include latest master commits
+- Migrate from TravisCI to Github Actions for testing
+
+### Fixed
+
+- nginx_exporter_nginxinc variables and documentation
+
+## [0.12.38] - 2021-06-07
+
+### Changed
+
+- The elasticsearch_exporter name changed from elasticsearch_exporter_justwatchcom to elasticsearch_exporter_prometheus_community
+- Upgrade Go from v1.16.4 to v1.16.5
+- Upgrade alertmanager from v0.22.1 to v0.22.2
+- Upgrade apache_exporter_lusitaniae from v0.8.0 to v0.9.0
+- Upgrade ipmi_exporter_soundcloud from v1.3.2 to v1.4.0
+- Upgrade openldap_exporter_tomcz from v2.1 to v2.1.3
+- Upgrade statsd_exporter from v0.20.2 to v0.20.3
+- Update metadata to include latest master commits
+
+## [0.12.37] - 2021-05-29
+
+### Changed
+
+- Upgrade alertmanager from v0.22.0 to v0.22.1
+- Upgrade pushgateway from v1.4.0 to v1.4.1
+- Update metadata to include latest master commits
+
+## [0.12.36] - 2021-05-27
+
+### Changed
+
+- Upgrade alertmanager from v0.21.0 to v0.22.0
+- Upgrade alertmanager (pre-release) from v0.21.0-rc.1 to v0.22.0-rc.2
+- Upgrade mysqld_exporter from v0.12.1 to v0.13.0
+- Update metadata to include latest master commits
+- Use credentials for hub.docker.com
+
+## [0.12.35] - 2021-05-19
+
+### Changed
+
+- Upgrade Prometheus from v2.27.0 to v2.27.1
+- Upgrade kafka_exporter_danielqsj from v1.3.0 to v1.3.1
+- Upgrade mongodb_exporter_percona from v0.20.4 to v0.20.5
+- Update metadata to include latest master commits
+
+## [0.12.34] - 2021-05-16
+
+### Changed
+
+- Upgrade Prometheus from v2.26.0 to v2.27.0
+- Upgrade graphite_exporter from v0.10.0 to v0.10.1
+- Update metadata to include latest master commits
+
+## [0.12.33] - 2021-05-11
+
+### Changed
+
+- Upgrade Go from v1.16.2 to v1.16.4
+- Upgrade alertmanager (pre-release) from v0.21.0-rc.0 to v0.22.0-rc.1
+- Upgrade blackbox_exporter v0.18.0 to v0.19.0
+- Upgrade graphite_exporter from v0.9.0 to v0.10.0
+- Upgrade mongodb_exporter_percona from v0.20.3 to v0.20.4
+- Upgrade Prometheus (pre-release) from v2.26.0-rc.0 to v2.27.0-rc.0
+- Upgrade redis_exporter_oliver006 from v1.20.0 to v1.23.1
+- Upgrade smokeping_exporter_superq from v0.4.1 to v0.4.2
+- Upgrade statsd_exporter from v0.20.1 to v0.20.2
+- Update metadata to include latest master commits
+
+## [0.12.32] - 2021-04-01
+
+### Added
+
+- haproxy_exporter enhanced to add scrape_uri support
+
+### Changed
+
+- Rework building Go source
+- Fixes to templates/cloudwatch_exporter.yml.j2 indentation
+- Use https://github.com/ClickHouse/clickhouse_exporter as the source of clickhouse_exporter. Use of https://github.com/Percona-Lab/clickhouse_exporter is deprecated in favor of the new source
+- Upgrade Go from v1.15.10 to v1.16.2
+- Upgrade Prometheus from v2.25.1 to v2.26.0
+- Upgrade Prometheus (pre-release) from v2.25.0-rc.0 to v2.26.0-rc.0
+- Upgrade kafka_exporter_danielqsj from v1.2.0 to v1.3.0
+- Upgrade memcached_exporter from v0.8.0 to v0.9.0
+- Upgrade nginx-prometheus-exporter_nginxinc from v0.8.0 to v0.9.0
+- Upgrade ping_exporter_czerwonk from v0.4.5 to v0.4.7
+- Upgrade redis_exporter_oliver006 from v1.18.0 to v1.20.0
+- Upgrade statsd_exporter from v0.20.0 to v0.20.1
+- Update metadata to include latest master commits
+
+### Removed
+
+- Remove dockerhub_exporter_promhippie as it is no longer actively maintained
+- Remove zookeeper_exporter_infonova, not actively maintained
+
+## [0.12.31] - 2021-03-15
+
+### Changed
+
+- Upgrade Go from v1.15.8 to v1.15.10
+- Upgrade Prometheus from v2.25.0 to v2.25.1
+- Upgrade redis_exporter_oliver006 from v1.17.1 to v1.18.0
+- Update metadata to include latest master commits
+
+## [0.12.30] - 2021-03-06
+
+### Changed
+
+- Upgrade ipmi_exporter_soundcloud from v1.3.1 to v1.3.2
+- Upgrade mongodb_exporter_percona from v0.20.1 to v0.20.3
+- Upgrade node_exporter v1.1.1 to v1.1.2
+- Upgrade postgres_exporter_wrouesnel from v0.8.0 to v0.9.0
+- Upgrade redis_exporter_oliver006 from v1.17.0 to v1.17.1
+- Update metadata to include latest master commits
+
+## [0.12.29] - 2021-02-19
+
+### Added
+
+- Allow creating "prometheus" user account and group at the system level
+
+### Changed
+
+- The postgres exporter name changed from postgres_exporter_wrouesnel to postgres_exporter_prometheus_community
+- Upgrade Go from v1.14.14 to v1.15.8
+- Upgrade Prometheus from v2.24.1 to v2.25.0
+- Upgrade Prometheus (pre-release) from v2.24.0-rc.0 to v2.25.0-rc.0
+- Upgrade cloudwatch from v0.9.0 to v0.10.0
+- Upgrade jmx_exporter from v0.14.0 to v0.15.0
+- Upgrade node_exporter v1.0.1 to v1.1.1
+- Upgrade redis_exporter_oliver006 from v1.15.1 to v1.17.0
+- Upgrade smokeping_exporter_superq from v0.3.1 to v0.4.1
+- Upgrade snmp_exporter v0.19.0 to v0.20.0
+- Upgrade statsd_exporter from v0.19.0 to v0.20.0
+- Update metadata to include latest master commits
+- Numerous test changes
+
+## [0.12.28] - 2021-01-25
+
+### Changed
+
+- Upgrade Go from v1.14.13 to v1.14.14
+- Upgrade Prometheus from v2.24.0 to v2.24.1
+- Upgrade influxdb_exporter from v0.7.0 to v0.8.0
+- Upgrade node-exporter textfile collector scripts:
+  - btrfs_stats.py
+- Upgrade rabbitmq_exporter_kbudde from v1.0.0-RC7 to v1.0.0-RC8
+- Upgrade rabbitmq_exporter_kbudde prerelease from v1.0.0-RC6.1 to v1.0.0-RC9
+- Upgrade pushgateway from v1.3.1 to v1.4.0
+- Upgrade statsd_exporter from v0.18.0 to v0.19.0
+- Update metadata to include latest master commits
+
+## [0.12.27] - 2021-01-17
+
+### Added
+
+- Per [urusha](https://github.com/urusha), add option to customize the mode of jmx configuration files via prometheus_jmx_exporter_cfg_mode.
+
+### Changed
+
+- Upgrade node-exporter textfile collector scripts:
+  - apt.sh
+  - mellanox_hca_temp
+  - smartmon.py
+  - storcli.py
+- Upgrade bind_exporter_prometheus_community from v0.3.0 to v0.4.0
+- Upgrade phpfpm_exporter_hipages from v2.0.0 to v2.0.1
+- Upgrade redis_exporter_oliver006 from v1.15.0 to v1.15.1
+- Update metadata to include latest master commits
+
+## [0.12.26] - 2021-01-08
+
+### Added
+
+- lvm-prom-collector from node-exporter textfile collector scripts
+
+### Changed
+
+- Upgrade Prometheus from v2.23.0 to v2.24.0
+- Upgrade Prometheus (pre-release) from v2.23.0-rc.0 to v2.24.0-rc.0
+- Upgrade couchdb_exporter_gesellix from v29.3.1 to v30.0.0
+- Upgrade pushgateway from v1.3.0 to v1.3.1
+- Upgrade redis_exporter_oliver006 from v1.14.0 to v1.15.0
+- Upgrade node-exporter textfile collector scripts to latest versions
+- Update metadata to include latest master commits
+
+### Removed
+
+- Content tests from scripts
+
 ## [0.12.25] - 2020-12-12
 
 ### Changed

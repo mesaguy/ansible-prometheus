@@ -1,0 +1,59 @@
+---
+name: Kitchen tests
+on: [push, pull_request]
+jobs:
+  kitchen:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ansible:
+          - 2.8.0
+          - 2.8.18
+          - 2.9.0
+          - 2.9.16
+          - 2.10.0
+          - latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install ruby and ruby gems
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+          # runs 'bundle install' and caches installed gems automatically
+          bundler-cache: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
+      - name: Pacify CentOS 8.x
+        run: |
+          sudo mkdir -p /usr/libexec
+          sudo ln -s /usr/bin/python /usr/libexec/platform-python
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pipenv --upgrade-strategy=only-if-needed
+          if [ "${{ matrix.ansible }}" == "latest" ] ; then
+              pipenv install ansible
+          else
+              pipenv install ansible==${{ matrix.ansible }}
+          fi
+          pipenv install
+
+      - name: Show ansible version
+        run: pipenv run ansible --version
+
+      - name: Run kitchen tests
+        run: |
+          mkdir -m 0700 -p .kitchen
+          if ! [ -f ".kitchen/docker_id_rsa" ] ; then ssh-keygen -f .kitchen/docker_id_rsa -t rsa -N ''; fi
+          bundle exec kitchen test default-centos-83
