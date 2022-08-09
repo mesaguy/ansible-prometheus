@@ -1,7 +1,7 @@
 ---
 - name: 'Set {{ prometheus_software_name_version }} installation core facts'
   set_fact:
-    prometheus_software_command_args: '{{ prometheus_software_opts }} + {{ prometheus_software_extra_opts | default([], true) }}'
+    prometheus_software_command_args: '{{ prometheus_software_opts + (prometheus_software_extra_opts | default([], true)) }}'
     prometheus_software_root_dir:
       "{% if prometheus_exporter is defined and not prometheus_exporter %}\
       {{ prometheus_root_dir }}/{{ prometheus_software_name }}\
