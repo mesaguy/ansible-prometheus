@@ -154,9 +154,6 @@
 
 - name: Find {{ prometheus_software_name_version }} archive contents
   command: 'tar -tf {{ prometheus_software_archive_file }}'
-  args:
-    # Do not warn that we are running the tar command directly
-    warn: false
   register: prometheus_software_archive_contents
   changed_when: false
   when:
