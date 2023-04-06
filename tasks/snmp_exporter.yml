@@ -47,7 +47,7 @@
 
 - name: Setup {{ prometheus_software_version }} configuration file
   become: true
-  copy:
+  template:
     src: '{{ prometheus_snmp_exporter_yml }}'
     dest: '{{ prometheus_etc_dir }}/snmp_exporter.yml'
     owner: root
